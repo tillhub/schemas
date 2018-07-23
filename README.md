@@ -1,4 +1,4 @@
-# Tillhub API Schemas
+# Tillhub API Schemas [![CircleCI](https://circleci.com/gh/tillhub/schemas/tree/master.svg?style=svg)](https://circleci.com/gh/tillhub/schemas/tree/master)
 
 > All Tillhub API OpenAPI 3 compatible JSON Schemas.
 
