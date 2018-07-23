@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/tillhub/schemas/compare/v1.0.2...v1.0.3) (2018-07-23)
+
+
+### Bug Fixes
+
+* **build:** fixes npm build ([61c67b1](https://github.com/tillhub/schemas/commit/61c67b1))
+
 ## [1.0.2](https://github.com/tillhub/schemas/compare/v1.0.1...v1.0.2) (2018-07-23)
 
 
