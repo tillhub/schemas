@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/tillhub/schemas/compare/v1.0.3...v1.0.4) (2018-07-23)
+
+
+### Bug Fixes
+
+* **build:** removes extraneous publish ([e34b03c](https://github.com/tillhub/schemas/commit/e34b03c))
+
 ## [1.0.3](https://github.com/tillhub/schemas/compare/v1.0.2...v1.0.3) (2018-07-23)
 
 
