@@ -5,7 +5,7 @@
 ## Getting Started
 
 ```bash
-npm i @tillhub/schemas
+npm install @tillhub/schemas
 ```
 
 Use this library to pre-validate request objects. This will always be up-to-date and versioned, since the Tillhub API uses this library as well.
