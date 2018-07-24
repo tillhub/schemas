@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/tillhub/schemas/compare/v1.1.0...v1.1.1) (2018-07-24)
+
+
+### Bug Fixes
+
+* do not alias ([9a64ccb](https://github.com/tillhub/schemas/commit/9a64ccb))
+
 # [1.1.0](https://github.com/tillhub/schemas/compare/v1.0.4...v1.1.0) (2018-07-24)
 
 
