@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/tillhub/schemas/compare/v1.2.0...v1.3.0) (2018-07-24)
+
+
+### Features
+
+* adds vouchers ([01aad6e](https://github.com/tillhub/schemas/commit/01aad6e))
+
 # [1.2.0](https://github.com/tillhub/schemas/compare/v1.1.1...v1.2.0) (2018-07-24)
 
 
