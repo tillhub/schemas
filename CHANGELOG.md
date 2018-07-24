@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/tillhub/schemas/compare/v1.3.1...v1.4.0) (2018-07-24)
+
+
+### Features
+
+* adds client ids ([87a153c](https://github.com/tillhub/schemas/commit/87a153c))
+
 ## [1.3.1](https://github.com/tillhub/schemas/compare/v1.3.0...v1.3.1) (2018-07-24)
 
 
