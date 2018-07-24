@@ -1,3 +1,12 @@
+# [1.1.0](https://github.com/tillhub/schemas/compare/v1.0.4...v1.1.0) (2018-07-24)
+
+
+### Features
+
+* aliases carts to be carts create ([49eb3d1](https://github.com/tillhub/schemas/commit/49eb3d1))
+* aliases products to be products create ([92bc838](https://github.com/tillhub/schemas/commit/92bc838))
+* exposes products v1 ([feb7561](https://github.com/tillhub/schemas/commit/feb7561))
+
 ## [1.0.4](https://github.com/tillhub/schemas/compare/v1.0.3...v1.0.4) (2018-07-23)
 
 
