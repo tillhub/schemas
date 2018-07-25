@@ -1,3 +1,16 @@
+# [2.0.0](https://github.com/tillhub/schemas/compare/v1.4.2...v2.0.0) (2018-07-25)
+
+
+### Features
+
+* **schemas:** adds static json in dist ([e6e1378](https://github.com/tillhub/schemas/commit/e6e1378))
+* **schemas:** move to exposing request and response ([afbefb9](https://github.com/tillhub/schemas/commit/afbefb9))
+
+
+### BREAKING CHANGES
+
+* **schemas:** bumps previous commit, as now request and response are separated
+
 ## [1.4.2](https://github.com/tillhub/schemas/compare/v1.4.1...v1.4.2) (2018-07-25)
 
 
