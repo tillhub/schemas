@@ -11,7 +11,7 @@
     "tdd:all": "NODE_ENV=test DEBUG=api:* nodemon --exec nodemon test/tdd-runner.js test/**/*.spec.js",
     "lint": "eslint .",
     "semantic-release": "semantic-release",
-    "precommit": "git add -A",
+    "precommit": "npm run lint && git add -A",
     "commit": "npm run precommit && git-cz",
     "preversion": "npm run lint && npm test && npm run docs:md && git add -A .",
     "postversion": "TAG=$(echo $(git describe --tags $(git rev-list --tags --max-count=1))) && git tag -a $TAG $TAG -f -m \"$(git log `git describe --tags --abbrev=0 HEAD^`..HEAD --oneline)\" && git push && git push --tags && npm run clean",
