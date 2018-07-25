@@ -1,3 +1,15 @@
+# [2.1.0](https://github.com/tillhub/schemas/compare/v2.0.1...v2.1.0) (2018-07-25)
+
+
+### Bug Fixes
+
+* **schemas:** fixes linting ([1bac8c2](https://github.com/tillhub/schemas/commit/1bac8c2))
+
+
+### Features
+
+* **schemas:** add client_id and group to disocunts ([0dcf5c4](https://github.com/tillhub/schemas/commit/0dcf5c4))
+
 ## [2.0.1](https://github.com/tillhub/schemas/compare/v2.0.0...v2.0.1) (2018-07-25)
 
 

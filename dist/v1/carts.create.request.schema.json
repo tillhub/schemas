@@ -295,6 +295,19 @@
                         "value"
                       ]
                     },
+                    "client_id": {
+                      "type": "string",
+                      "maxLength": 128
+                    },
+                    "group": {
+                      "type": "string",
+                      "enum": [
+                        "customer",
+                        "staff",
+                        "cart",
+                        "product_set"
+                      ]
+                    },
                     "name": {
                       "type": "string",
                       "minLength": 1,
@@ -468,6 +481,19 @@
                       "enum": [
                         "percentage",
                         "value"
+                      ]
+                    },
+                    "client_id": {
+                      "type": "string",
+                      "maxLength": 128
+                    },
+                    "group": {
+                      "type": "string",
+                      "enum": [
+                        "customer",
+                        "staff",
+                        "cart",
+                        "product_set"
                       ]
                     },
                     "name": {
