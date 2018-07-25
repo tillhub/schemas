@@ -1,3 +1,10 @@
+## [1.4.2](https://github.com/tillhub/schemas/compare/v1.4.1...v1.4.2) (2018-07-25)
+
+
+### Bug Fixes
+
+* **schemas:** fixes carts to be less strict ([194e1c0](https://github.com/tillhub/schemas/commit/194e1c0))
+
 ## [1.4.1](https://github.com/tillhub/schemas/compare/v1.4.0...v1.4.1) (2018-07-25)
 
 
