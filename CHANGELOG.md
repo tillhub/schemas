@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/tillhub/schemas/compare/v2.0.0...v2.0.1) (2018-07-25)
+
+
+### Bug Fixes
+
+* **build:** fixes build from non-publishable commits ([191d189](https://github.com/tillhub/schemas/commit/191d189))
+
 # [2.0.0](https://github.com/tillhub/schemas/compare/v1.4.2...v2.0.0) (2018-07-25)
 
 
