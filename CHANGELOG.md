@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/tillhub/schemas/compare/v1.4.0...v1.4.1) (2018-07-25)
+
+
+### Bug Fixes
+
+* **schema:** fixes internal cart ([9abe62a](https://github.com/tillhub/schemas/commit/9abe62a))
+
 # [1.4.0](https://github.com/tillhub/schemas/compare/v1.3.1...v1.4.0) (2018-07-24)
 
 
