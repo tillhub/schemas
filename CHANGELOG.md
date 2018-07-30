@@ -1,3 +1,10 @@
+# [2.3.0](https://github.com/tillhub/schemas/compare/v2.2.0...v2.3.0) (2018-07-30)
+
+
+### Features
+
+* **schemas:** adds delivery notes schema ([b6ad4ac](https://github.com/tillhub/schemas/commit/b6ad4ac))
+
 # [2.2.0](https://github.com/tillhub/schemas/compare/v2.1.0...v2.2.0) (2018-07-30)
 
 
