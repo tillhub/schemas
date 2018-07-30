@@ -262,6 +262,10 @@
                 "minlength": 1,
                 "maxLength": 128
               },
+              "position": {
+                "type": "number",
+                "minimum": 0
+              },
               "comments": {
                 "anyOf": [
                   {
@@ -348,6 +352,10 @@
             "additionalProperties": false,
             "type": "object",
             "properties": {
+              "position": {
+                "type": "number",
+                "minimum": 0
+              },
               "product": {
                 "type": "string"
               },
@@ -449,6 +457,10 @@
                 "type": "string",
                 "minlength": 1,
                 "maxLength": 128
+              },
+              "position": {
+                "type": "number",
+                "minimum": 0
               },
               "comments": {
                 "anyOf": [

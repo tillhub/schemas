@@ -1,3 +1,10 @@
+# [2.2.0](https://github.com/tillhub/schemas/compare/v2.1.0...v2.2.0) (2018-07-30)
+
+
+### Features
+
+* **schemas:** adds option position property ([049fb8f](https://github.com/tillhub/schemas/commit/049fb8f))
+
 # [2.1.0](https://github.com/tillhub/schemas/compare/v2.0.1...v2.1.0) (2018-07-25)
 
 
