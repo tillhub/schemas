@@ -216,8 +216,13 @@
           "name",
           "comments",
           "discounts",
+          "currency",
           "amount",
-          "currency"
+          "amount_total",
+          "tax_amount",
+          "tax_amount_total",
+          "discount_amount",
+          "discount_amount_total"
         ],
         "properties": {
           "product": {
@@ -279,6 +284,49 @@
                 "type": "number"
               }
             }
+          },
+          "amount_total": {
+            "description": "the currency / amount object combination is the Tillhub Money object.",
+            "type": "object",
+            "additionalProperties": false,
+            "anyOf": [
+              {
+                "required": [
+                  "net",
+                  "gross"
+                ]
+              },
+              {
+                "required": [
+                  "net"
+                ]
+              },
+              {
+                "required": [
+                  "gross"
+                ]
+              }
+            ],
+            "properties": {
+              "net": {
+                "type": "number"
+              },
+              "gross": {
+                "type": "number"
+              }
+            }
+          },
+          "tax_amount": {
+            "type": "number"
+          },
+          "tax_amount_total": {
+            "type": "number"
+          },
+          "discount_amount": {
+            "type": "number"
+          },
+          "discount_amount_total": {
+            "type": "number"
           },
           "name": {
             "type": "string",
