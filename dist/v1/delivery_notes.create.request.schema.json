@@ -18,6 +18,17 @@
         }
       ]
     },
+    "invoiced_at": {
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "date-time"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "done_at": {
       "oneOf": [
         {
@@ -157,6 +168,17 @@
         {
           "type": "string",
           "maxLength": 512
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "barcode": {
+      "oneOf": [
+        {
+          "type": "string",
+          "maxLength": 128
         },
         {
           "type": "null"

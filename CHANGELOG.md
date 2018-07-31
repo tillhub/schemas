@@ -1,3 +1,10 @@
+## [2.3.2](https://github.com/tillhub/schemas/compare/v2.3.1...v2.3.2) (2018-07-31)
+
+
+### Bug Fixes
+
+* **schemas:** adds barcode and invoiced at on delivery notes v1 ([2fa0019](https://github.com/tillhub/schemas/commit/2fa0019))
+
 ## [2.3.1](https://github.com/tillhub/schemas/compare/v2.3.0...v2.3.1) (2018-07-31)
 
 
