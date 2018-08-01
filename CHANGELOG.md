@@ -1,3 +1,10 @@
+## [2.3.3](https://github.com/tillhub/schemas/compare/v2.3.2...v2.3.3) (2018-08-01)
+
+
+### Bug Fixes
+
+* **schemas:** fixes docs and also missed deployment ([59ffa57](https://github.com/tillhub/schemas/commit/59ffa57))
+
 ## [2.3.2](https://github.com/tillhub/schemas/compare/v2.3.1...v2.3.2) (2018-07-31)
 
 

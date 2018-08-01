@@ -289,14 +289,37 @@
                     "amount": {
                       "type": "number"
                     },
+                    "amount_total": {
+                      "type": "number"
+                    },
                     "order_index": {
                       "type": "integer"
                     },
-                    "type": {
+                    "currency": {
                       "type": "string",
-                      "enum": [
-                        "percentage",
-                        "value"
+                      "minLength": 3,
+                      "maxLength": 3
+                    },
+                    "value": {
+                      "oneOf": [
+                        {
+                          "type": "number"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "rate": {
+                      "oneOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0,
+                          "maximum": 1
+                        },
+                        {
+                          "type": "null"
+                        }
                       ]
                     },
                     "client_id": {
@@ -319,9 +342,12 @@
                     }
                   },
                   "required": [
-                    "type",
                     "amount",
-                    "name"
+                    "amount_total",
+                    "currency",
+                    "name",
+                    "value",
+                    "rate"
                   ]
                 }
               },
@@ -485,14 +511,37 @@
                     "amount": {
                       "type": "number"
                     },
+                    "amount_total": {
+                      "type": "number"
+                    },
                     "order_index": {
                       "type": "integer"
                     },
-                    "type": {
+                    "currency": {
                       "type": "string",
-                      "enum": [
-                        "percentage",
-                        "value"
+                      "minLength": 3,
+                      "maxLength": 3
+                    },
+                    "value": {
+                      "oneOf": [
+                        {
+                          "type": "number"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "rate": {
+                      "oneOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0,
+                          "maximum": 1
+                        },
+                        {
+                          "type": "null"
+                        }
                       ]
                     },
                     "client_id": {
@@ -515,9 +564,12 @@
                     }
                   },
                   "required": [
-                    "type",
                     "amount",
-                    "name"
+                    "amount_total",
+                    "currency",
+                    "name",
+                    "value",
+                    "rate"
                   ]
                 }
               },
