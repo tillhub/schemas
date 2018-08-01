@@ -1,3 +1,10 @@
+## [2.3.5](https://github.com/tillhub/schemas/compare/v2.3.4...v2.3.5) (2018-08-01)
+
+
+### Bug Fixes
+
+* **hosting:** fixes redirect to actually show content ([2a1390c](https://github.com/tillhub/schemas/commit/2a1390c))
+
 ## [2.3.4](https://github.com/tillhub/schemas/compare/v2.3.3...v2.3.4) (2018-08-01)
 
 
