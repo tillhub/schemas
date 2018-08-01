@@ -6,5 +6,12 @@
       "**/.*",
       "**/node_modules/**"
     ]
-  }
+  },
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/index.json",
+      "type": 301
+    }
+  ]
 }
