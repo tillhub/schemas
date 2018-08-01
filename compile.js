@@ -64,4 +64,6 @@ module.exports = (schemas) => {
   })
 }
 
-module.exports(allSchemas)
+if (require.main === module) {
+  module.exports(allSchemas)
+}
