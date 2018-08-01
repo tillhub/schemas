@@ -1,3 +1,11 @@
+## [2.3.4](https://github.com/tillhub/schemas/compare/v2.3.3...v2.3.4) (2018-08-01)
+
+
+### Bug Fixes
+
+* adds mssing changes; adds compile index.json ([9265e32](https://github.com/tillhub/schemas/commit/9265e32))
+* checks for main ([051f25f](https://github.com/tillhub/schemas/commit/051f25f))
+
 ## [2.3.3](https://github.com/tillhub/schemas/compare/v2.3.2...v2.3.3) (2018-08-01)
 
 
