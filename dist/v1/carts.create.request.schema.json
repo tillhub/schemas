@@ -85,6 +85,18 @@
         }
       ]
     },
+    "custom_id": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minlength": 1,
+          "maxLength": 128
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "client_id": {
       "oneOf": [
         {

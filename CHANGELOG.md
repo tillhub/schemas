@@ -1,3 +1,15 @@
+# [2.4.0](https://github.com/tillhub/schemas/compare/v2.3.5...v2.4.0) (2018-08-06)
+
+
+### Bug Fixes
+
+* **hosting:** fixes redirect prop ([d989e70](https://github.com/tillhub/schemas/commit/d989e70))
+
+
+### Features
+
+* **schemas:** adds custom id props ([77f10e9](https://github.com/tillhub/schemas/commit/77f10e9))
+
 ## [2.3.5](https://github.com/tillhub/schemas/compare/v2.3.4...v2.3.5) (2018-08-01)
 
 
