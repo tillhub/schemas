@@ -1,3 +1,15 @@
+# [2.5.0](https://github.com/tillhub/schemas/compare/v2.4.0...v2.5.0) (2018-08-16)
+
+
+### Bug Fixes
+
+* do not require amount and amount total ([0a4e8b9](https://github.com/tillhub/schemas/commit/0a4e8b9))
+
+
+### Features
+
+* **schemas:** accept discounts in cart of ids ([d2ab5cd](https://github.com/tillhub/schemas/commit/d2ab5cd))
+
 # [2.4.0](https://github.com/tillhub/schemas/compare/v2.3.5...v2.4.0) (2018-08-06)
 
 
