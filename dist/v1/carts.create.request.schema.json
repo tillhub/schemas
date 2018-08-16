@@ -353,11 +353,21 @@
                       "maxLength": 128
                     }
                   },
-                  "required": [
-                    "currency",
-                    "name",
-                    "value",
-                    "rate"
+                  "anyOf": [
+                    {
+                      "required": [
+                        "currency",
+                        "name",
+                        "value"
+                      ]
+                    },
+                    {
+                      "required": [
+                        "currency",
+                        "name",
+                        "rate"
+                      ]
+                    }
                   ]
                 }
               },
@@ -467,11 +477,21 @@
                       "maxLength": 128
                     }
                   },
-                  "required": [
-                    "currency",
-                    "name",
-                    "value",
-                    "rate"
+                  "anyOf": [
+                    {
+                      "required": [
+                        "currency",
+                        "name",
+                        "value"
+                      ]
+                    },
+                    {
+                      "required": [
+                        "currency",
+                        "name",
+                        "rate"
+                      ]
+                    }
                   ]
                 }
               }
@@ -641,11 +661,21 @@
                       "maxLength": 128
                     }
                   },
-                  "required": [
-                    "currency",
-                    "name",
-                    "value",
-                    "rate"
+                  "anyOf": [
+                    {
+                      "required": [
+                        "currency",
+                        "name",
+                        "value"
+                      ]
+                    },
+                    {
+                      "required": [
+                        "currency",
+                        "name",
+                        "rate"
+                      ]
+                    }
                   ]
                 }
               },

@@ -1,3 +1,10 @@
+## [2.5.1](https://github.com/tillhub/schemas/compare/v2.5.0...v2.5.1) (2018-08-16)
+
+
+### Bug Fixes
+
+* **schemas:** should require either rate or value ([99e75b6](https://github.com/tillhub/schemas/commit/99e75b6))
+
 # [2.5.0](https://github.com/tillhub/schemas/compare/v2.4.0...v2.5.0) (2018-08-16)
 
 
