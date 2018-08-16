@@ -1,5 +1,6 @@
 [
   "/index.json",
   "/carts.create.request.schema.json",
-  "/delivery_notes.create.request.schema.json"
+  "/delivery_notes.create.request.schema.json",
+  "/products.create.request.schema.json"
 ]
