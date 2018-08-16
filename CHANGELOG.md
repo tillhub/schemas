@@ -1,3 +1,15 @@
+# [2.6.0](https://github.com/tillhub/schemas/compare/v2.5.1...v2.6.0) (2018-08-16)
+
+
+### Bug Fixes
+
+* schemas ([05302b3](https://github.com/tillhub/schemas/commit/05302b3))
+
+
+### Features
+
+* add customers schema ([9f730e6](https://github.com/tillhub/schemas/commit/9f730e6))
+
 ## [2.5.1](https://github.com/tillhub/schemas/compare/v2.5.0...v2.5.1) (2018-08-16)
 
 
