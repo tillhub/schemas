@@ -1,3 +1,10 @@
+## [2.8.1](https://github.com/tillhub/schemas/compare/v2.8.0...v2.8.1) (2018-08-17)
+
+
+### Bug Fixes
+
+* **schemas:** fixes ref to delivery items ([5fcdcfe](https://github.com/tillhub/schemas/commit/5fcdcfe))
+
 # [2.8.0](https://github.com/tillhub/schemas/compare/v2.7.0...v2.8.0) (2018-08-17)
 
 
