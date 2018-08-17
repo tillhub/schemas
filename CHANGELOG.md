@@ -1,3 +1,10 @@
+# [2.8.0](https://github.com/tillhub/schemas/compare/v2.7.0...v2.8.0) (2018-08-17)
+
+
+### Features
+
+* **schemas:** split cart item discounts for external consumers ([3d58888](https://github.com/tillhub/schemas/commit/3d58888))
+
 # [2.7.0](https://github.com/tillhub/schemas/compare/v2.6.0...v2.7.0) (2018-08-17)
 
 
