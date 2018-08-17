@@ -1,3 +1,10 @@
+# [2.7.0](https://github.com/tillhub/schemas/compare/v2.6.0...v2.7.0) (2018-08-17)
+
+
+### Features
+
+* **schemas:** adds deliveries ([d05f45a](https://github.com/tillhub/schemas/commit/d05f45a))
+
 # [2.6.0](https://github.com/tillhub/schemas/compare/v2.5.1...v2.6.0) (2018-08-16)
 
 
