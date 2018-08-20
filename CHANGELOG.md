@@ -1,3 +1,10 @@
+# [2.9.0](https://github.com/tillhub/schemas/compare/v2.8.1...v2.9.0) (2018-08-20)
+
+
+### Features
+
+* add delivery update schemas ([a379901](https://github.com/tillhub/schemas/commit/a379901))
+
 ## [2.8.1](https://github.com/tillhub/schemas/compare/v2.8.0...v2.8.1) (2018-08-17)
 
 

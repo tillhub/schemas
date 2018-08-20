@@ -2,6 +2,8 @@
   "/index.json",
   "/customers.create.request.schema.json",
   "/deliveries.create.request.schema.json",
+  "/deliveries.items.update.request.schema.json",
+  "/deliveries.update.request.schema.json",
   "/carts.create.request.schema.json",
   "/delivery_notes.create.request.schema.json",
   "/products.create.request.schema.json"

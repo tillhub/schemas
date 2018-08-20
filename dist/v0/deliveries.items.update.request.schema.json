@@ -1,0 +1,45 @@
+{
+  "$id": "https://schemas.tillhub.com/v0/deliveries.items.update.request.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [],
+  "properties": {
+    "position": {
+      "type": "number",
+      "minimum": 0
+    },
+    "product": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "qty": {
+      "type": "number"
+    },
+    "stock": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "stock_location": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "added_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "comments": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4096
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "minProperties": 1
+}
