@@ -1,3 +1,15 @@
+# [2.11.0](https://github.com/tillhub/schemas/compare/v2.10.0...v2.11.0) (2018-08-20)
+
+
+### Bug Fixes
+
+* fixes uid format on internal from/to pairs ([13bb901](https://github.com/tillhub/schemas/commit/13bb901))
+
+
+### Features
+
+* adds from/to to orders ([b5374c2](https://github.com/tillhub/schemas/commit/b5374c2))
+
 # [2.10.0](https://github.com/tillhub/schemas/compare/v2.9.0...v2.10.0) (2018-08-20)
 
 

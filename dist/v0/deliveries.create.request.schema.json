@@ -121,8 +121,7 @@
       "oneOf": [
         {
           "type": "string",
-          "minLength": 1,
-          "maxLength": 4096
+          "format": "uuid"
         },
         {
           "type": "null"
@@ -134,8 +133,7 @@
       "oneOf": [
         {
           "type": "string",
-          "minLength": 1,
-          "maxLength": 4096
+          "format": "uuid"
         },
         {
           "type": "null"
