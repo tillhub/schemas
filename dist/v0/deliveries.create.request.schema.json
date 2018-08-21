@@ -397,6 +397,19 @@
     "issuer": {
       "type": "object"
     },
+    "stock_mode": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "string",
+          "enum": [
+            "never_out_of_stock"
+          ]
+        }
+      ]
+    },
     "items": {
       "tpye": "array",
       "minItems": 1,

@@ -1,3 +1,10 @@
+# [2.12.0](https://github.com/tillhub/schemas/compare/v2.11.0...v2.12.0) (2018-08-21)
+
+
+### Features
+
+* **schemas:** adds never out of stock mode to deliveries ([da2175e](https://github.com/tillhub/schemas/commit/da2175e))
+
 # [2.11.0](https://github.com/tillhub/schemas/compare/v2.10.0...v2.11.0) (2018-08-20)
 
 
