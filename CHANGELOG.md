@@ -1,3 +1,10 @@
+# [2.16.0](https://github.com/tillhub/schemas/compare/v2.15.0...v2.16.0) (2018-08-22)
+
+
+### Features
+
+* **schemas:** adds validation for taa and account format ([c1d04aa](https://github.com/tillhub/schemas/commit/c1d04aa))
+
 # [2.15.0](https://github.com/tillhub/schemas/compare/v2.14.0...v2.15.0) (2018-08-22)
 
 

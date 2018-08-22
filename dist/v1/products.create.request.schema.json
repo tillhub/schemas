@@ -323,7 +323,8 @@
       ]
     },
     "tax": {
-      "type": "string"
+      "type": "string",
+      "format": "uuid"
     },
     "taxes_options": {
       "anyOf": [
@@ -360,7 +361,7 @@
     },
     "account": {
       "type": "string",
-      "maxLength": 128
+      "format": "uuid"
     },
     "vat_class": {
       "anyOf": [
