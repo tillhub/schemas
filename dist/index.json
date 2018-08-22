@@ -1,6 +1,7 @@
 [
   "/index.json",
   "/branches.create.request.schema.json",
+  "/branches.update.request.schema.json",
   "/customers.create.request.schema.json",
   "/deliveries.create.request.schema.json",
   "/deliveries.items.update.request.schema.json",
