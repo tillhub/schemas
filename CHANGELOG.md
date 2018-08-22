@@ -1,3 +1,10 @@
+# [2.15.0](https://github.com/tillhub/schemas/compare/v2.14.0...v2.15.0) (2018-08-22)
+
+
+### Features
+
+* **schemas:** adds delegated to ([37e122e](https://github.com/tillhub/schemas/commit/37e122e))
+
 # [2.14.0](https://github.com/tillhub/schemas/compare/v2.13.0...v2.14.0) (2018-08-22)
 
 
