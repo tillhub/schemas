@@ -23,6 +23,16 @@ console.log(createCartSchema)
 // }
 ```
 
+## Contributing
+
+Contributions are welcome in the case of falsy information. Those schemas are used as internaly driven data logic and quality.
+
+Contributors should commit only via the following command. Deployment and change tracking is automatised by the underlying semantic-release implementation.
+
+```bash
+npm run commit
+```
+
 ## License
 
 Apache-2.0
