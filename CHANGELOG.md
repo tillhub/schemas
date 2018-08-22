@@ -1,3 +1,15 @@
+# [2.17.0](https://github.com/tillhub/schemas/compare/v2.16.0...v2.17.0) (2018-08-22)
+
+
+### Bug Fixes
+
+* fixes ref to branches request ([e6deb5b](https://github.com/tillhub/schemas/commit/e6deb5b))
+
+
+### Features
+
+* **schemas:** adds branches ([47240e4](https://github.com/tillhub/schemas/commit/47240e4))
+
 # [2.16.0](https://github.com/tillhub/schemas/compare/v2.15.0...v2.16.0) (2018-08-22)
 
 
