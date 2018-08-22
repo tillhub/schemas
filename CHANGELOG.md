@@ -1,3 +1,10 @@
+# [2.14.0](https://github.com/tillhub/schemas/compare/v2.13.0...v2.14.0) (2018-08-22)
+
+
+### Features
+
+* allow direction ([5175407](https://github.com/tillhub/schemas/commit/5175407))
+
 # [2.13.0](https://github.com/tillhub/schemas/compare/v2.12.0...v2.13.0) (2018-08-22)
 
 
