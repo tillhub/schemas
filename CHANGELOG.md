@@ -1,3 +1,10 @@
+# [2.13.0](https://github.com/tillhub/schemas/compare/v2.12.0...v2.13.0) (2018-08-22)
+
+
+### Features
+
+* Export items create schema ([020f1e7](https://github.com/tillhub/schemas/commit/020f1e7))
+
 # [2.12.0](https://github.com/tillhub/schemas/compare/v2.11.0...v2.12.0) (2018-08-21)
 
 
