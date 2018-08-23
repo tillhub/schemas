@@ -81,4 +81,3 @@ coverage.lcov
 *.flamegraph
 traces/
 docs
-dist
