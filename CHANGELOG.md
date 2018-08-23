@@ -1,3 +1,11 @@
+# [2.19.0](https://github.com/tillhub/schemas/compare/v2.18.0...v2.19.0) (2018-08-23)
+
+
+### Features
+
+* **deps:** updates deps; triggers release ([00a903e](https://github.com/tillhub/schemas/commit/00a903e))
+* **schemas:** adds clients ([b7bdcf9](https://github.com/tillhub/schemas/commit/b7bdcf9))
+
 # [2.18.0](https://github.com/tillhub/schemas/compare/v2.17.0...v2.18.0) (2018-08-22)
 
 
