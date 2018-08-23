@@ -1,3 +1,10 @@
+# [2.20.0](https://github.com/tillhub/schemas/compare/v2.19.0...v2.20.0) (2018-08-23)
+
+
+### Features
+
+* adds pdfs ([9c28569](https://github.com/tillhub/schemas/commit/9c28569))
+
 # [2.19.0](https://github.com/tillhub/schemas/compare/v2.18.0...v2.19.0) (2018-08-23)
 
 
