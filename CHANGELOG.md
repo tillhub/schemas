@@ -1,3 +1,10 @@
+## [2.21.2](https://github.com/tillhub/schemas/compare/v2.21.1...v2.21.2) (2018-08-23)
+
+
+### Bug Fixes
+
+* **schemas:** fixes ref to deliveries; allows null ([439447e](https://github.com/tillhub/schemas/commit/439447e))
+
 ## [2.21.1](https://github.com/tillhub/schemas/compare/v2.21.0...v2.21.1) (2018-08-23)
 
 
