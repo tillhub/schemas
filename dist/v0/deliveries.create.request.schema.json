@@ -141,10 +141,8 @@
       ]
     },
     "recipient": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "address": {
+      "oneOf": [
+        {
           "type": "object",
           "additionalProperties": false,
           "properties": {
@@ -254,13 +252,15 @@
             "country",
             "type"
           ]
+        },
+        {
+          "type": "null"
         }
-      }
+      ]
     },
     "sender": {
-      "type": "object",
-      "properties": {
-        "address": {
+      "oneOf": [
+        {
           "type": "object",
           "additionalProperties": false,
           "properties": {
@@ -370,8 +370,11 @@
             "country",
             "type"
           ]
+        },
+        {
+          "type": "null"
         }
-      }
+      ]
     },
     "metadata": {
       "type": "object"

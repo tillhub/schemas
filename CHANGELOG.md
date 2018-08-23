@@ -1,3 +1,11 @@
+# [2.21.0](https://github.com/tillhub/schemas/compare/v2.20.0...v2.21.0) (2018-08-23)
+
+
+### Features
+
+* **schemas:** adds barcode to clients ([b92c2d5](https://github.com/tillhub/schemas/commit/b92c2d5))
+* **schemas:** allows address to be null ([b6299f8](https://github.com/tillhub/schemas/commit/b6299f8))
+
 # [2.20.0](https://github.com/tillhub/schemas/compare/v2.19.0...v2.20.0) (2018-08-23)
 
 

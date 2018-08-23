@@ -121,6 +121,18 @@
       "minLength": 1,
       "maxLength": 64
     },
+    "barcode": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 64
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "addresses": {
       "anyOf": [
         {
