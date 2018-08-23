@@ -231,6 +231,7 @@
                 {
                   "type": "string",
                   "enum": [
+                    "local",
                     "delivery",
                     "billing"
                   ]
@@ -349,6 +350,7 @@
                 {
                   "type": "string",
                   "enum": [
+                    "local",
                     "delivery",
                     "billing"
                   ]

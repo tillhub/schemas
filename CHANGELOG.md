@@ -1,3 +1,11 @@
+## [2.21.1](https://github.com/tillhub/schemas/compare/v2.21.0...v2.21.1) (2018-08-23)
+
+
+### Bug Fixes
+
+* **schemas:** fixes ref to template ([d54610e](https://github.com/tillhub/schemas/commit/d54610e))
+* **schemas:** includes local address ([8b3ffb8](https://github.com/tillhub/schemas/commit/8b3ffb8))
+
 # [2.21.0](https://github.com/tillhub/schemas/compare/v2.20.0...v2.21.0) (2018-08-23)
 
 
