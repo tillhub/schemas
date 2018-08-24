@@ -429,7 +429,7 @@
             "open",
             "in_progress",
             "dispatched",
-            "received",
+            "delivered",
             "revoked"
           ]
         }

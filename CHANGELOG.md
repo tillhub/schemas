@@ -1,3 +1,10 @@
+## [2.24.2](https://github.com/tillhub/schemas/compare/v2.24.1...v2.24.2) (2018-08-24)
+
+
+### Bug Fixes
+
+* **schemas:** fixes deliverd state ([a833ed1](https://github.com/tillhub/schemas/commit/a833ed1))
+
 ## [2.24.1](https://github.com/tillhub/schemas/compare/v2.24.0...v2.24.1) (2018-08-24)
 
 
