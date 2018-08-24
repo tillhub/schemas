@@ -1,3 +1,11 @@
+## [2.25.1](https://github.com/tillhub/schemas/compare/v2.25.0...v2.25.1) (2018-08-24)
+
+
+### Bug Fixes
+
+* **schemas:** actually adds recipient logo ([decc28e](https://github.com/tillhub/schemas/commit/decc28e))
+* **schemas:** fixes any of ([f9f7496](https://github.com/tillhub/schemas/commit/f9f7496))
+
 # [2.25.0](https://github.com/tillhub/schemas/compare/v2.24.2...v2.25.0) (2018-08-24)
 
 

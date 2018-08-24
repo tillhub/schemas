@@ -28,7 +28,7 @@
       ]
     },
     "img_url": {
-      "anyof": [
+      "anyOf": [
         {
           "type": "string"
         },
@@ -38,7 +38,18 @@
       ]
     },
     "logo": {
-      "anyof": [
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "url"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "logo_recipient": {
+      "anyOf": [
         {
           "type": "string",
           "format": "url"
