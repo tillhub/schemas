@@ -1,3 +1,10 @@
+# [2.22.0](https://github.com/tillhub/schemas/compare/v2.21.2...v2.22.0) (2018-08-24)
+
+
+### Features
+
+* **schemas:** adds phone number ([557e70a](https://github.com/tillhub/schemas/commit/557e70a))
+
 ## [2.21.2](https://github.com/tillhub/schemas/compare/v2.21.1...v2.21.2) (2018-08-23)
 
 
