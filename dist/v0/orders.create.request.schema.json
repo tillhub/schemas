@@ -443,6 +443,26 @@
           }
         }
       }
+    },
+    "issuer": {
+      "type": "object",
+      "maxProperties": 10
+    },
+    "status": {
+      "default": "open",
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "string",
+          "enum": [
+            "open",
+            "in_progress",
+            "finalized"
+          ]
+        }
+      ]
     }
   }
 }

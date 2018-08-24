@@ -400,7 +400,8 @@
       }
     },
     "issuer": {
-      "type": "object"
+      "type": "object",
+      "maxProperties": 10
     },
     "stock_mode": {
       "oneOf": [
@@ -411,6 +412,24 @@
           "type": "string",
           "enum": [
             "never_out_of_stock"
+          ]
+        }
+      ]
+    },
+    "status": {
+      "default": "open",
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "string",
+          "enum": [
+            "open",
+            "in_progress",
+            "dispatched",
+            "received",
+            "revoked"
           ]
         }
       ]
@@ -436,6 +455,16 @@
           },
           "qty": {
             "type": "number"
+          },
+          "qty_picked": {
+            "oneOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ]
           },
           "stock": {
             "type": "string",

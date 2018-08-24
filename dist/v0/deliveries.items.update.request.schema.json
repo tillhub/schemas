@@ -16,6 +16,16 @@
     "qty": {
       "type": "number"
     },
+    "qty_picked": {
+      "oneOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "stock": {
       "type": "string",
       "format": "uuid"

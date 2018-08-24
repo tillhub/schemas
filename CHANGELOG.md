@@ -1,3 +1,10 @@
+# [2.24.0](https://github.com/tillhub/schemas/compare/v2.23.0...v2.24.0) (2018-08-24)
+
+
+### Features
+
+* **schemas:** adds qty picked and statuses ([c846ed2](https://github.com/tillhub/schemas/commit/c846ed2))
+
 # [2.23.0](https://github.com/tillhub/schemas/compare/v2.22.0...v2.23.0) (2018-08-24)
 
 
