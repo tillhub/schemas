@@ -1,3 +1,10 @@
+## [2.24.1](https://github.com/tillhub/schemas/compare/v2.24.0...v2.24.1) (2018-08-24)
+
+
+### Bug Fixes
+
+* **schemas:** fix missing addtional check ([2bf76f2](https://github.com/tillhub/schemas/commit/2bf76f2))
+
 # [2.24.0](https://github.com/tillhub/schemas/compare/v2.23.0...v2.24.0) (2018-08-24)
 
 
