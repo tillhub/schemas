@@ -1,3 +1,10 @@
+# [2.23.0](https://github.com/tillhub/schemas/compare/v2.22.0...v2.23.0) (2018-08-24)
+
+
+### Features
+
+* **schemas:** adds logo ([dc03be1](https://github.com/tillhub/schemas/commit/dc03be1))
+
 # [2.22.0](https://github.com/tillhub/schemas/compare/v2.21.2...v2.22.0) (2018-08-24)
 
 
