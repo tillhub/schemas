@@ -1,3 +1,10 @@
+# [2.25.0](https://github.com/tillhub/schemas/compare/v2.24.2...v2.25.0) (2018-08-24)
+
+
+### Features
+
+* **schemas:** adds recipient logo ([e065188](https://github.com/tillhub/schemas/commit/e065188))
+
 ## [2.24.2](https://github.com/tillhub/schemas/compare/v2.24.1...v2.24.2) (2018-08-24)
 
 

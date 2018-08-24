@@ -48,17 +48,6 @@
         }
       ]
     },
-    "logo_recipient": {
-      "anyof": [
-        {
-          "type": "string",
-          "format": "url"
-        },
-        {
-          "type": "null"
-        }
-      ]
-    },
     "sender": {
       "oneOf": [
         {
