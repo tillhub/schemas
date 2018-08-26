@@ -200,6 +200,16 @@
         }
       ]
     },
+    "stock_maximum": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "stockable": {
       "anyOf": [
         {
