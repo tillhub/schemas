@@ -1,3 +1,10 @@
+# [2.27.0](https://github.com/tillhub/schemas/compare/v2.26.0...v2.27.0) (2018-08-26)
+
+
+### Features
+
+* **schemas:** adds base product; adds update product ([476c0d8](https://github.com/tillhub/schemas/commit/476c0d8))
+
 # [2.26.0](https://github.com/tillhub/schemas/compare/v2.25.1...v2.26.0) (2018-08-26)
 
 
