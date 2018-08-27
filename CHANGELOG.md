@@ -1,3 +1,10 @@
+# [2.28.0](https://github.com/tillhub/schemas/compare/v2.27.0...v2.28.0) (2018-08-27)
+
+
+### Features
+
+* **schemas:** adds proxy mode ([e1542da](https://github.com/tillhub/schemas/commit/e1542da))
+
 # [2.27.0](https://github.com/tillhub/schemas/compare/v2.26.0...v2.27.0) (2018-08-26)
 
 

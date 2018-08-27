@@ -3,6 +3,12 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "additionalProperties": false,
   "type": "object",
+  "required": [
+    "name",
+    "account",
+    "tax",
+    "type"
+  ],
   "properties": {
     "name": {
       "description": "Product name",
@@ -511,11 +517,5 @@
         }
       ]
     }
-  },
-  "required": [
-    "name",
-    "account",
-    "tax",
-    "type"
-  ]
+  }
 }

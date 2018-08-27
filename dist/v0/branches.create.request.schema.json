@@ -2,6 +2,9 @@
   "$id": "https://schemas.tillhub.com/v0/branches.create.request.schema.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "additionalProperties": false,
+  "required": [
+    "name"
+  ],
   "properties": {
     "name": {
       "description": "any arbitrary name for a branch that can be displayed in applications.",
@@ -334,8 +337,5 @@
       ]
     }
   },
-  "type": "object",
-  "required": [
-    "name"
-  ]
+  "type": "object"
 }

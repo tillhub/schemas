@@ -92,6 +92,16 @@
         "address": {
           "type": "object",
           "additionalProperties": false,
+          "required": [
+            "lines",
+            "street",
+            "street_number",
+            "locality",
+            "region",
+            "postal_code",
+            "country",
+            "type"
+          ],
           "properties": {
             "lines": {
               "oneOf": [
@@ -189,17 +199,7 @@
                 }
               ]
             }
-          },
-          "required": [
-            "lines",
-            "street",
-            "street_number",
-            "locality",
-            "region",
-            "postal_code",
-            "country",
-            "type"
-          ]
+          }
         }
       }
     },
@@ -209,6 +209,16 @@
         "address": {
           "type": "object",
           "additionalProperties": false,
+          "required": [
+            "lines",
+            "street",
+            "street_number",
+            "locality",
+            "region",
+            "postal_code",
+            "country",
+            "type"
+          ],
           "properties": {
             "lines": {
               "oneOf": [
@@ -306,17 +316,7 @@
                 }
               ]
             }
-          },
-          "required": [
-            "lines",
-            "street",
-            "street_number",
-            "locality",
-            "region",
-            "postal_code",
-            "country",
-            "type"
-          ]
+          }
         }
       }
     },

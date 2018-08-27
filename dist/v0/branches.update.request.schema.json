@@ -3,6 +3,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "additionalProperties": false,
   "type": "object",
+  "required": [],
   "properties": {
     "name": {
       "description": "any arbitrary name for a branch that can be displayed in applications.",
@@ -334,6 +335,5 @@
         }
       ]
     }
-  },
-  "required": []
+  }
 }

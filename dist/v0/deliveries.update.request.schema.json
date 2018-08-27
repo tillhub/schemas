@@ -145,6 +145,16 @@
         {
           "type": "object",
           "additionalProperties": false,
+          "required": [
+            "lines",
+            "street",
+            "street_number",
+            "locality",
+            "region",
+            "postal_code",
+            "country",
+            "type"
+          ],
           "properties": {
             "lines": {
               "oneOf": [
@@ -242,17 +252,7 @@
                 }
               ]
             }
-          },
-          "required": [
-            "lines",
-            "street",
-            "street_number",
-            "locality",
-            "region",
-            "postal_code",
-            "country",
-            "type"
-          ]
+          }
         },
         {
           "type": "null"
@@ -264,6 +264,16 @@
         {
           "type": "object",
           "additionalProperties": false,
+          "required": [
+            "lines",
+            "street",
+            "street_number",
+            "locality",
+            "region",
+            "postal_code",
+            "country",
+            "type"
+          ],
           "properties": {
             "lines": {
               "oneOf": [
@@ -361,17 +371,7 @@
                 }
               ]
             }
-          },
-          "required": [
-            "lines",
-            "street",
-            "street_number",
-            "locality",
-            "region",
-            "postal_code",
-            "country",
-            "type"
-          ]
+          }
         },
         {
           "type": "null"
@@ -411,7 +411,8 @@
         {
           "type": "string",
           "enum": [
-            "never_out_of_stock"
+            "never_out_of_stock",
+            "proxy"
           ]
         }
       ]

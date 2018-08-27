@@ -3,6 +3,10 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "additionalProperties": false,
   "type": "object",
+  "required": [
+    "items",
+    "delivery"
+  ],
   "properties": {
     "delivery": {
       "additionalProperties": false,
@@ -64,6 +68,16 @@
         {
           "type": "object",
           "additionalProperties": false,
+          "required": [
+            "lines",
+            "street",
+            "street_number",
+            "locality",
+            "region",
+            "postal_code",
+            "country",
+            "type"
+          ],
           "properties": {
             "lines": {
               "oneOf": [
@@ -161,17 +175,7 @@
                 }
               ]
             }
-          },
-          "required": [
-            "lines",
-            "street",
-            "street_number",
-            "locality",
-            "region",
-            "postal_code",
-            "country",
-            "type"
-          ]
+          }
         },
         {
           "type": "null"
@@ -211,6 +215,16 @@
         {
           "type": "object",
           "additionalProperties": false,
+          "required": [
+            "lines",
+            "street",
+            "street_number",
+            "locality",
+            "region",
+            "postal_code",
+            "country",
+            "type"
+          ],
           "properties": {
             "lines": {
               "oneOf": [
@@ -308,17 +322,7 @@
                 }
               ]
             }
-          },
-          "required": [
-            "lines",
-            "street",
-            "street_number",
-            "locality",
-            "region",
-            "postal_code",
-            "country",
-            "type"
-          ]
+          }
         },
         {
           "type": "null"
@@ -383,9 +387,5 @@
         }
       ]
     }
-  },
-  "required": [
-    "items",
-    "delivery"
-  ]
+  }
 }

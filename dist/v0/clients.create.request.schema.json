@@ -3,6 +3,9 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "additionalProperties": false,
   "type": "object",
+  "required": [
+    "name"
+  ],
   "properties": {
     "name": {
       "anyOf": [
@@ -256,8 +259,5 @@
         }
       ]
     }
-  },
-  "required": [
-    "name"
-  ]
+  }
 }
