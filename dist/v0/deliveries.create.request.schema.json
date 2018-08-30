@@ -437,70 +437,62 @@
       ]
     },
     "items": {
-      "oneOf": [
-        {
-          "tpye": "array",
-          "minItems": 1,
-          "items": {
-            "type": "object",
-            "additionalProperties": false,
-            "required": [
-              "product",
-              "qty"
-            ],
-            "properties": {
-              "position": {
-                "type": "number",
-                "minimum": 0
-              },
-              "product": {
-                "type": "string",
-                "format": "uuid"
-              },
-              "qty": {
+      "tpye": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "product",
+          "qty"
+        ],
+        "properties": {
+          "position": {
+            "type": "number",
+            "minimum": 0
+          },
+          "product": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "qty": {
+            "type": "number"
+          },
+          "qty_picked": {
+            "oneOf": [
+              {
                 "type": "number"
               },
-              "qty_picked": {
-                "oneOf": [
-                  {
-                    "type": "number"
-                  },
-                  {
-                    "type": "null"
-                  }
-                ]
-              },
-              "stock": {
-                "type": "string",
-                "format": "uuid"
-              },
-              "stock_location": {
-                "type": "string",
-                "format": "uuid"
-              },
-              "added_at": {
-                "type": "string",
-                "format": "date-time"
-              },
-              "comments": {
-                "oneOf": [
-                  {
-                    "type": "string",
-                    "minLength": 1,
-                    "maxLength": 4096
-                  },
-                  {
-                    "type": "null"
-                  }
-                ]
+              {
+                "type": "null"
               }
-            }
+            ]
+          },
+          "stock": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "stock_location": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "added_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "comments": {
+            "oneOf": [
+              {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 4096
+              },
+              {
+                "type": "null"
+              }
+            ]
           }
-        },
-        {
-          "type": null
         }
-      ]
+      }
     }
   }
 }

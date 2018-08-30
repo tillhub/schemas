@@ -1,3 +1,10 @@
+## [2.29.1](https://github.com/tillhub/schemas/compare/v2.29.0...v2.29.1) (2018-08-30)
+
+
+### Bug Fixes
+
+* **schemas:** pushes back null type, allows no items ([f10b0a2](https://github.com/tillhub/schemas/commit/f10b0a2))
+
 # [2.29.0](https://github.com/tillhub/schemas/compare/v2.28.0...v2.29.0) (2018-08-30)
 
 
