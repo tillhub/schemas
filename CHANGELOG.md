@@ -1,3 +1,15 @@
+# [2.30.0](https://github.com/tillhub/schemas/compare/v2.29.1...v2.30.0) (2018-09-05)
+
+
+### Bug Fixes
+
+* **schema:** correct schema name ([90d0013](https://github.com/tillhub/schemas/commit/90d0013))
+
+
+### Features
+
+* **schemas:** add configurations schema and patch feature ([f5d4ed9](https://github.com/tillhub/schemas/commit/f5d4ed9))
+
 ## [2.29.1](https://github.com/tillhub/schemas/compare/v2.29.0...v2.29.1) (2018-08-30)
 
 
