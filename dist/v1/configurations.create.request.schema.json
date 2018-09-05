@@ -1,0 +1,417 @@
+{
+  "$id": "https://schemas.tillhub.com/v1/configurations.create.request.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "type": "object",
+  "properties": {
+    "vouchers": {
+      "type": "object"
+    },
+    "scan_prefixes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "maxLength": 64
+          },
+          "action": {
+            "type": "string",
+            "maxLength": 32
+          },
+          "prefix": {
+            "type": "string",
+            "maxLength": 16
+          },
+          "display_name": {
+            "type": "string",
+            "maxLength": 64
+          },
+          "system": {
+            "type": "object"
+          },
+          "product": {
+            "type": "object"
+          }
+        }
+      }
+    },
+    "voucher_actions": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "settings": {
+      "type": "object",
+      "properties": {
+        "language": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 5
+        },
+        "default_currency": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 3
+        }
+      }
+    },
+    "hooks": {
+      "type": "array",
+      "items": {
+        "additionalProperties": false,
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 64
+          },
+          "endpoint": {
+            "type": "string",
+            "format": "uri"
+          },
+          "auth": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 512
+          },
+          "merchant_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 512
+          },
+          "models": {
+            "type": "array",
+            "items": {
+              "additionalProperties": false,
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "enum": [
+                    "transactions",
+                    "customers"
+                  ]
+                },
+                "direction": {
+                  "type": "string",
+                  "enum": [
+                    "duplex",
+                    "read",
+                    "write"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "themes": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "defaults": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "logos": {
+              "type": "object"
+            },
+            "colors": {
+              "type": "object"
+            }
+          },
+          "required": [
+            "logos",
+            "colors"
+          ]
+        },
+        "ios": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "colors": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "background": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "background"
+              ]
+            }
+          },
+          "required": [
+            "colors"
+          ]
+        },
+        "dashboard": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "logos": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "top_left": {
+                  "oneOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              },
+              "required": [
+                "top_left"
+              ]
+            },
+            "colors": {
+              "type": "object"
+            }
+          },
+          "required": [
+            "logos",
+            "colors"
+          ]
+        }
+      },
+      "required": [
+        "defaults",
+        "ios",
+        "dashboard"
+      ]
+    },
+    "name": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "string",
+          "maxLength": 32
+        }
+      ]
+    },
+    "client_id": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "string",
+          "maxLength": 64
+        }
+      ]
+    },
+    "metadata": {
+      "type": "object"
+    },
+    "registers": {
+      "type": "object"
+    },
+    "branches": {
+      "type": "object"
+    },
+    "owner": {
+      "type": "string",
+      "maxLength": 64
+    },
+    "franchise": {
+      "type": "object"
+    },
+    "staff": {
+      "type": "object"
+    },
+    "financials": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "features": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "stock": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "transactions": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "products": {
+      "type": "object"
+    },
+    "customers": {
+      "type": "object"
+    },
+    "saved_cart": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "crm": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "datev": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "label_printer": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "delivery_note": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "shore": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "togo": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "receipts": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "orders": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "carts": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "tips": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "emails": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "level": {
+      "type": "string",
+      "default": "client_account",
+      "enum": [
+        "client_account",
+        "registers",
+        "branches"
+      ]
+    }
+  },
+  "required": [
+    "name",
+    "vouchers",
+    "scan_prefixes",
+    "voucher_actions",
+    "settings"
+  ]
+}

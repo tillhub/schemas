@@ -1,3 +1,10 @@
+## [2.30.1](https://github.com/tillhub/schemas/compare/v2.30.0...v2.30.1) (2018-09-05)
+
+
+### Bug Fixes
+
+* **schemas:** export configurations and helpers ([76578d3](https://github.com/tillhub/schemas/commit/76578d3))
+
 # [2.30.0](https://github.com/tillhub/schemas/compare/v2.29.1...v2.30.0) (2018-09-05)
 
 
