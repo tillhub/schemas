@@ -1,3 +1,10 @@
+# [2.31.0](https://github.com/tillhub/schemas/compare/v2.30.1...v2.31.0) (2018-09-07)
+
+
+### Features
+
+* **schemas:** adds taxes schema ([5a280ae](https://github.com/tillhub/schemas/commit/5a280ae))
+
 ## [2.30.1](https://github.com/tillhub/schemas/compare/v2.30.0...v2.30.1) (2018-09-05)
 
 

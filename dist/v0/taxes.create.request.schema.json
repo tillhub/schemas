@@ -1,0 +1,55 @@
+{
+  "$id": "https://schemas.tillhub.com/v0/taxes.create.request.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "anyOf": [
+    {
+      "required": [
+        "name",
+        "type",
+        "rate"
+      ]
+    },
+    {
+      "required": [
+        "name",
+        "type",
+        "percentage"
+      ]
+    }
+  ],
+  "properties": {
+    "name": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "vat"
+      ]
+    },
+    "account": {
+      "type": "string"
+    },
+    "rate": {
+      "type": "number",
+      "minimum": 0
+    },
+    "percentage": {
+      "type": "number",
+      "minimum": 0
+    },
+    "is_fixed": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "type": "object"
+}

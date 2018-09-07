@@ -10,6 +10,8 @@
   "/deliveries.update.request.schema.json",
   "/orders.create.request.schema.json",
   "/pdfs.templates.deliveries.create.schema.json",
+  "/taxes.create.request.schema.json",
+  "/taxes.update.request.schema.json",
   "/vouchers.create.schema.json",
   "/carts.create.request.schema.json",
   "/configurations.create.request.schema.json",
