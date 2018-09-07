@@ -89,7 +89,7 @@
       "oneOf": [
         {
           "type": "string",
-          "minlength": 1,
+          "minLength": 1,
           "maxLength": 128
         },
         {
@@ -225,7 +225,7 @@
               },
               "custom_id": {
                 "type": "string",
-                "minlength": 1,
+                "minLength": 1,
                 "maxLength": 128
               },
               "currency": {
@@ -457,7 +457,7 @@
               },
               "name": {
                 "type": "string",
-                "minlength": 1,
+                "minLength": 1,
                 "maxLength": 128
               },
               "position": {
@@ -744,7 +744,7 @@
                 "oneOf": [
                   {
                     "type": "string",
-                    "minlength": 1,
+                    "minLength": 1,
                     "maxLength": 128
                   },
                   {
@@ -795,7 +795,7 @@
               },
               "name": {
                 "type": "string",
-                "minlength": 1,
+                "minLength": 1,
                 "maxLength": 128
               },
               "position": {
