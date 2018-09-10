@@ -78,7 +78,9 @@
     "tape-nock": "^1.6.0",
     "validate-commit-msg": "^2.14.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "ajv": "^6.5.3"
+  },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
