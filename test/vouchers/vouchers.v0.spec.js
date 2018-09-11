@@ -14,7 +14,7 @@ test('Vouchers: patch schema validation', function (t) {
   t.plan(2)
   const patchRequest = require('../../lib/v0/vouchers').patch
   const { valid, error } = validate(patchRequest)
-  t.ok(valid, 'update schema is valid')
+  t.ok(valid, 'patch schema is valid')
   t.error(error, 'should not get any error')
   t.end()
 })
