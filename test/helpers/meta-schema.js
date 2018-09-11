@@ -74,6 +74,9 @@ module.exports = {
       type: 'boolean',
       'default': false
     },
+    example: {
+      type: ['string', 'object']
+    },
     examples: {
       type: 'array',
       items: true
