@@ -14,7 +14,14 @@
       "format": "uuid"
     },
     "qty": {
-      "type": "number"
+      "oneOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "qty_picked": {
       "oneOf": [

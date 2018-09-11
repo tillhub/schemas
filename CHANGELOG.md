@@ -1,3 +1,10 @@
+# [2.32.0](https://github.com/tillhub/schemas/compare/v2.31.0...v2.32.0) (2018-09-11)
+
+
+### Features
+
+* Make "qty" optional in delivery items creation ([534d587](https://github.com/tillhub/schemas/commit/534d587))
+
 # [2.31.0](https://github.com/tillhub/schemas/compare/v2.30.1...v2.31.0) (2018-09-07)
 
 
