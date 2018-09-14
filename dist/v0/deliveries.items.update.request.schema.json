@@ -3,13 +3,16 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
   "additionalProperties": false,
-  "required": [],
   "properties": {
     "position": {
       "type": "number",
       "minimum": 0
     },
     "product": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "delivery": {
       "type": "string",
       "format": "uuid"
     },
@@ -58,5 +61,6 @@
       ]
     }
   },
+  "required": [],
   "minProperties": 1
 }

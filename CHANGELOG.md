@@ -1,3 +1,10 @@
+# [2.34.0](https://github.com/tillhub/schemas/compare/v2.33.2...v2.34.0) (2018-09-14)
+
+
+### Features
+
+* Fix schemas for create delivery and create delivery_items ([6930828](https://github.com/tillhub/schemas/commit/6930828))
+
 ## [2.33.2](https://github.com/tillhub/schemas/compare/v2.33.1...v2.33.2) (2018-09-14)
 
 

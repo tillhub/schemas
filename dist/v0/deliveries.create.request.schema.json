@@ -438,18 +438,24 @@
     },
     "items": {
       "type": "array",
+      "minLength": 1,
       "items": {
-        "type": "object",
-        "additionalProperties": false,
+        "minProperties": 1,
         "required": [
           "product"
         ],
+        "type": "object",
+        "additionalProperties": false,
         "properties": {
           "position": {
             "type": "number",
             "minimum": 0
           },
           "product": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "delivery": {
             "type": "string",
             "format": "uuid"
           },
