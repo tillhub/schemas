@@ -62,7 +62,7 @@
       ]
     },
     "from": {
-      "descrption": "from which Tillhub resource, that is able to handle stock, a delivery is coming from. E.g. branch, warehouse, shelve, client",
+      "description": "from which Tillhub resource, that is able to handle stock, a delivery is coming from. E.g. branch, warehouse, shelve, client",
       "oneOf": [
         {
           "type": "string",
@@ -74,7 +74,7 @@
       ]
     },
     "to": {
-      "descrption": "from which Tillhub resource, that is able to handle stock, a delivery is going to. E.g. branch, warehouse, shelve, client",
+      "description": "from which Tillhub resource, that is able to handle stock, a delivery is going to. E.g. branch, warehouse, shelve, client",
       "oneOf": [
         {
           "type": "string",

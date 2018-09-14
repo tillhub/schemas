@@ -20,12 +20,12 @@
       ]
     },
     "open": {
-      "desciption": "the 'open' status flag",
+      "description": "the 'open' status flag",
       "type": "boolean",
       "default": "true"
     },
     "deleted": {
-      "desciption": "the 'deleted' status flag",
+      "description": "the 'deleted' status flag",
       "type": "boolean",
       "default": "false"
     },
@@ -41,22 +41,22 @@
       ]
     },
     "received": {
-      "desciption": "the 'received' status flag",
+      "description": "the 'received' status flag",
       "type": "boolean",
       "default": "false"
     },
     "delivered": {
-      "desciption": "the 'delivered' status flag",
+      "description": "the 'delivered' status flag",
       "type": "boolean",
       "default": "false"
     },
     "dispatched": {
-      "desciption": "the 'delivered' status flag",
+      "description": "the 'delivered' status flag",
       "type": "boolean",
       "default": "false"
     },
     "revoked": {
-      "desciption": "the 'revoked' status flag",
+      "description": "the 'revoked' status flag",
       "type": "boolean",
       "default": "false"
     },
@@ -118,7 +118,7 @@
       ]
     },
     "from": {
-      "descrption": "from which Tillhub resource, that is able to handle stock, a delivery is coming from. E.g. branch, warehouse, shelve, client",
+      "description": "from which Tillhub resource, that is able to handle stock, a delivery is coming from. E.g. branch, warehouse, shelve, client",
       "oneOf": [
         {
           "type": "string",
@@ -130,7 +130,7 @@
       ]
     },
     "to": {
-      "descrption": "from which Tillhub resource, that is able to handle stock, a delivery is going to. E.g. branch, warehouse, shelve, client",
+      "description": "from which Tillhub resource, that is able to handle stock, a delivery is going to. E.g. branch, warehouse, shelve, client",
       "oneOf": [
         {
           "type": "string",
@@ -437,7 +437,7 @@
       ]
     },
     "items": {
-      "tpye": "array",
+      "type": "array",
       "items": {
         "type": "object",
         "additionalProperties": false,

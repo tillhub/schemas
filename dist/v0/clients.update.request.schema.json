@@ -142,7 +142,7 @@
           "maxItems": 3,
           "items": {
             "type": "object",
-            "additonalProperties": false,
+            "additionalProperties": false,
             "properties": {
               "lines": {
                 "oneOf": [
