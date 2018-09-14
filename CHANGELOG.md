@@ -1,3 +1,10 @@
+## [2.33.2](https://github.com/tillhub/schemas/compare/v2.33.1...v2.33.2) (2018-09-14)
+
+
+### Bug Fixes
+
+* Revert "fix: Fix schema for create delivery items" ([462c5e3](https://github.com/tillhub/schemas/commit/462c5e3))
+
 ## [2.33.1](https://github.com/tillhub/schemas/compare/v2.33.0...v2.33.1) (2018-09-14)
 
 
