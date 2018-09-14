@@ -1,3 +1,10 @@
+## [2.33.1](https://github.com/tillhub/schemas/compare/v2.33.0...v2.33.1) (2018-09-14)
+
+
+### Bug Fixes
+
+* Fix schema for create delivery items ([3918a58](https://github.com/tillhub/schemas/commit/3918a58))
+
 # [2.33.0](https://github.com/tillhub/schemas/compare/v2.32.0...v2.33.0) (2018-09-14)
 
 
