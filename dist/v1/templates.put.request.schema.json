@@ -56,8 +56,7 @@
                   "additionalProperties": false,
                   "properties": {
                     "enabled": {
-                      "type": "boolean",
-                      "default": true
+                      "type": "boolean"
                     }
                   }
                 },
@@ -66,8 +65,7 @@
                   "additionalProperties": false,
                   "properties": {
                     "enabled": {
-                      "type": "boolean",
-                      "default": true
+                      "type": "boolean"
                     }
                   }
                 }
