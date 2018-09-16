@@ -1,3 +1,10 @@
+## [2.35.1](https://github.com/tillhub/schemas/compare/v2.35.0...v2.35.1) (2018-09-16)
+
+
+### Bug Fixes
+
+* **schemas:** fixes name of template create ([23f2222](https://github.com/tillhub/schemas/commit/23f2222))
+
 # [2.35.0](https://github.com/tillhub/schemas/compare/v2.34.0...v2.35.0) (2018-09-16)
 
 
