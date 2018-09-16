@@ -1,3 +1,10 @@
+## [2.35.2](https://github.com/tillhub/schemas/compare/v2.35.1...v2.35.2) (2018-09-16)
+
+
+### Bug Fixes
+
+* **schemas:** fixes ref in templates ([50fd18b](https://github.com/tillhub/schemas/commit/50fd18b))
+
 ## [2.35.1](https://github.com/tillhub/schemas/compare/v2.35.0...v2.35.1) (2018-09-16)
 
 
