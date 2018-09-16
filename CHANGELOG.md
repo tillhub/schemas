@@ -1,3 +1,10 @@
+# [2.35.0](https://github.com/tillhub/schemas/compare/v2.34.0...v2.35.0) (2018-09-16)
+
+
+### Features
+
+* **schemas:** adds templates v1 ([3d38dcb](https://github.com/tillhub/schemas/commit/3d38dcb))
+
 # [2.34.0](https://github.com/tillhub/schemas/compare/v2.33.2...v2.34.0) (2018-09-14)
 
 
