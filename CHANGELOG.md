@@ -1,3 +1,10 @@
+## [2.35.5](https://github.com/tillhub/schemas/compare/v2.35.4...v2.35.5) (2018-09-17)
+
+
+### Bug Fixes
+
+* reverts minlength on delivery notes for production ([1189e9e](https://github.com/tillhub/schemas/commit/1189e9e))
+
 ## [2.35.4](https://github.com/tillhub/schemas/compare/v2.35.3...v2.35.4) (2018-09-17)
 
 
