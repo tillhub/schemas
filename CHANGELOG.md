@@ -1,3 +1,10 @@
+## [2.35.4](https://github.com/tillhub/schemas/compare/v2.35.3...v2.35.4) (2018-09-17)
+
+
+### Bug Fixes
+
+* reverts minlength in production ([251d990](https://github.com/tillhub/schemas/commit/251d990))
+
 ## [2.35.3](https://github.com/tillhub/schemas/compare/v2.35.2...v2.35.3) (2018-09-16)
 
 

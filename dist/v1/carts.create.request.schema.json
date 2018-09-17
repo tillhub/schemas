@@ -89,7 +89,6 @@
       "oneOf": [
         {
           "type": "string",
-          "minLength": 1,
           "maxLength": 128
         },
         {
@@ -225,7 +224,6 @@
               },
               "custom_id": {
                 "type": "string",
-                "minLength": 1,
                 "maxLength": 128
               },
               "currency": {
@@ -744,7 +742,6 @@
                 "oneOf": [
                   {
                     "type": "string",
-                    "minLength": 1,
                     "maxLength": 128
                   },
                   {
