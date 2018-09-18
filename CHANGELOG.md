@@ -1,3 +1,10 @@
+# [2.36.0](https://github.com/tillhub/schemas/compare/v2.35.5...v2.36.0) (2018-09-18)
+
+
+### Features
+
+* adds configurations users ([388af0c](https://github.com/tillhub/schemas/commit/388af0c))
+
 ## [2.35.5](https://github.com/tillhub/schemas/compare/v2.35.4...v2.35.5) (2018-09-17)
 
 
