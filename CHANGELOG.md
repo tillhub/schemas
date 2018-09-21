@@ -1,3 +1,10 @@
+# [2.39.0](https://github.com/tillhub/schemas/compare/v2.38.0...v2.39.0) (2018-09-21)
+
+
+### Features
+
+* add company property to sender ([#10](https://github.com/tillhub/schemas/issues/10)) ([172f3b4](https://github.com/tillhub/schemas/commit/172f3b4))
+
 # [2.38.0](https://github.com/tillhub/schemas/compare/v2.37.0...v2.38.0) (2018-09-21)
 
 
