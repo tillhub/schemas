@@ -1,7 +1,8 @@
 [
   "/index.json",
-  "/branches.create.request.schema.json",
+  "/patch.request.schema.json",
   "/branches.update.request.schema.json",
+  "/branches.create.request.schema.json",
   "/clients.create.request.schema.json",
   "/clients.update.request.schema.json",
   "/customers.create.request.schema.json",

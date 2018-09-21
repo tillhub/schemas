@@ -1,3 +1,10 @@
+# [2.37.0](https://github.com/tillhub/schemas/compare/v2.36.0...v2.37.0) (2018-09-21)
+
+
+### Features
+
+* create pdf invoice schema ([#8](https://github.com/tillhub/schemas/issues/8)) ([6e10219](https://github.com/tillhub/schemas/commit/6e10219))
+
 # [2.36.0](https://github.com/tillhub/schemas/compare/v2.35.5...v2.36.0) (2018-09-18)
 
 
