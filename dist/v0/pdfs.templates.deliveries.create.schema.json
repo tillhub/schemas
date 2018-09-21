@@ -39,38 +39,26 @@
               "type": "null"
             }
           ]
+        },
+        "transaction_number": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
         }
       },
       "required": [
         "id"
       ]
     },
-    "img_url": {
+    "template": {
       "anyOf": [
         {
-          "type": "string"
-        },
-        {
-          "type": "null"
-        }
-      ]
-    },
-    "logo": {
-      "anyOf": [
-        {
-          "type": "string",
-          "format": "url"
-        },
-        {
-          "type": "null"
-        }
-      ]
-    },
-    "logo_recipient": {
-      "anyOf": [
-        {
-          "type": "string",
-          "format": "url"
+          "type": "object"
         },
         {
           "type": "null"
@@ -206,34 +194,6 @@
         }
       ]
     },
-    "addressee": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "firstname": {
-          "oneOf": [
-            {
-              "type": "string",
-              "minLength": 1
-            },
-            {
-              "type": "null"
-            }
-          ]
-        },
-        "lastname": {
-          "oneOf": [
-            {
-              "type": "string",
-              "minLength": 1
-            },
-            {
-              "type": "null"
-            }
-          ]
-        }
-      }
-    },
     "recipient": {
       "oneOf": [
         {
@@ -353,24 +313,6 @@
         }
       ]
     },
-    "contact": {
-      "oneOf": [
-        {
-          "type": "object",
-          "additionalProperties": false,
-          "properties": {
-            "phone": {
-              "type": "string",
-              "minLength": 1,
-              "maxLength": 128
-            }
-          }
-        },
-        {
-          "type": "null"
-        }
-      ]
-    },
     "items": {
       "type": "array",
       "minItems": 1,
@@ -384,39 +326,6 @@
       "items": {
         "type": "object"
       }
-    },
-    "text": {
-      "oneOf": [
-        {
-          "type": "string",
-          "minLength": 1
-        },
-        {
-          "type": "null"
-        }
-      ]
-    },
-    "from": {
-      "oneOf": [
-        {
-          "type": "string",
-          "format": "uuid"
-        },
-        {
-          "type": "null"
-        }
-      ]
-    },
-    "to": {
-      "oneOf": [
-        {
-          "type": "string",
-          "format": "uuid"
-        },
-        {
-          "type": "null"
-        }
-      ]
     }
   }
 }

@@ -1,3 +1,10 @@
+# [2.38.0](https://github.com/tillhub/schemas/compare/v2.37.0...v2.38.0) (2018-09-21)
+
+
+### Features
+
+* **schemas:** apply template to invoice pdf ([#9](https://github.com/tillhub/schemas/issues/9)) ([e8c9e95](https://github.com/tillhub/schemas/commit/e8c9e95))
+
 # [2.37.0](https://github.com/tillhub/schemas/compare/v2.36.0...v2.37.0) (2018-09-21)
 
 
