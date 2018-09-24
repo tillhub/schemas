@@ -1,3 +1,10 @@
+## [2.39.1](https://github.com/tillhub/schemas/compare/v2.39.0...v2.39.1) (2018-09-24)
+
+
+### Bug Fixes
+
+* **schemas:** correct invoices schema ID ([2ee0f14](https://github.com/tillhub/schemas/commit/2ee0f14))
+
 # [2.39.0](https://github.com/tillhub/schemas/compare/v2.38.0...v2.39.0) (2018-09-21)
 
 
