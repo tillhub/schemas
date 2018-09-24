@@ -1,3 +1,10 @@
+## [2.39.2](https://github.com/tillhub/schemas/compare/v2.39.1...v2.39.2) (2018-09-24)
+
+
+### Bug Fixes
+
+* **schemas:** create schema for delivery note pdf ([edea3b3](https://github.com/tillhub/schemas/commit/edea3b3))
+
 ## [2.39.1](https://github.com/tillhub/schemas/compare/v2.39.0...v2.39.1) (2018-09-24)
 
 
