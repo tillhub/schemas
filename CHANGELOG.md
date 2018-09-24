@@ -1,3 +1,10 @@
+# [2.40.0](https://github.com/tillhub/schemas/compare/v2.39.1...v2.40.0) (2018-09-24)
+
+
+### Features
+
+* **schemas:** create schema for delivery notes pdf ([545e88e](https://github.com/tillhub/schemas/commit/545e88e))
+
 ## [2.39.1](https://github.com/tillhub/schemas/compare/v2.39.0...v2.39.1) (2018-09-24)
 
 
