@@ -1,3 +1,10 @@
+## [2.42.3](https://github.com/tillhub/schemas/compare/v2.42.2...v2.42.3) (2018-09-26)
+
+
+### Bug Fixes
+
+* Add case insensitivity to pattern check ([1f0c1d2](https://github.com/tillhub/schemas/commit/1f0c1d2))
+
 ## [2.42.2](https://github.com/tillhub/schemas/compare/v2.42.1...v2.42.2) (2018-09-26)
 
 

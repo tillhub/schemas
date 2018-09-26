@@ -75,7 +75,7 @@
                   },
                   "font_color": {
                     "type": "string",
-                    "pattern": "^#[0-9a-f]{3,6}$"
+                    "pattern": "^#[0-9a-fA-F]{3,6}$"
                   },
                   "font": {
                     "type": "string",
@@ -362,7 +362,7 @@
                 },
                 "font_color": {
                   "type": "string",
-                  "pattern": "^#[0-9a-f]{3,6}$"
+                  "pattern": "^#[0-9a-fA-F]{3,6}$"
                 },
                 "font": {
                   "type": "string",
@@ -465,7 +465,7 @@
                   },
                   "font_color": {
                     "type": "string",
-                    "pattern": "^#[0-9a-f]{3,6}$"
+                    "pattern": "^#[0-9a-fA-F]{3,6}$"
                   },
                   "font": {
                     "type": "string",
@@ -752,7 +752,7 @@
                 },
                 "font_color": {
                   "type": "string",
-                  "pattern": "^#[0-9a-f]{3,6}$"
+                  "pattern": "^#[0-9a-fA-F]{3,6}$"
                 },
                 "font": {
                   "type": "string",
