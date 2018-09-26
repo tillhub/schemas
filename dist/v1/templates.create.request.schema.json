@@ -89,6 +89,9 @@
                       "A4",
                       "letter"
                     ]
+                  },
+                  "map": {
+                    "type": "object"
                   }
                 }
               },
@@ -376,6 +379,9 @@
                     "A4",
                     "letter"
                   ]
+                },
+                "map": {
+                  "type": "object"
                 }
               }
             },
@@ -479,6 +485,9 @@
                       "A4",
                       "letter"
                     ]
+                  },
+                  "map": {
+                    "type": "object"
                   }
                 }
               },
@@ -766,6 +775,9 @@
                     "A4",
                     "letter"
                   ]
+                },
+                "map": {
+                  "type": "object"
                 }
               }
             },

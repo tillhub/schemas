@@ -1,3 +1,10 @@
+## [2.42.4](https://github.com/tillhub/schemas/compare/v2.42.3...v2.42.4) (2018-09-26)
+
+
+### Bug Fixes
+
+* Try fix broken map prop in templates ([063cd23](https://github.com/tillhub/schemas/commit/063cd23))
+
 ## [2.42.3](https://github.com/tillhub/schemas/compare/v2.42.2...v2.42.3) (2018-09-26)
 
 
