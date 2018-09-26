@@ -1,15 +1,15 @@
 {
   "$id": "https://schemas.tillhub.com/v1/templates.create.request.schema.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "additionalProperties": false,
-  "type": "object",
-  "required": [
-    "type",
-    "options"
-  ],
-  "properties": {
-    "oneOf": [
-      {
+  "oneOf": [
+    {
+      "additionalProperties": false,
+      "type": "object",
+      "required": [
+        "type",
+        "options"
+      ],
+      "properties": {
         "name": {
           "oneOf": [
             {
@@ -21,82 +21,6 @@
               "type": "null"
             }
           ]
-        },
-        "options": {
-          "oneOf": [
-            {
-              "additionalProperties": false,
-              "type": "object",
-              "properties": {
-                "title": {
-                  "type": "string",
-                  "maxLength": 32
-                },
-                "logo": {
-                  "type": "string",
-                  "format": "url"
-                },
-                "main_text": {
-                  "type": "string",
-                  "maxLength": 4096
-                },
-                "attention": {
-                  "type": "string",
-                  "maxLength": 16
-                },
-                "addresses": {
-                  "type": "object",
-                  "additionalProperties": false,
-                  "properties": {
-                    "self": {
-                      "type": "object",
-                      "additionalProperties": false,
-                      "properties": {
-                        "enabled": {
-                          "type": "boolean"
-                        }
-                      }
-                    },
-                    "local": {
-                      "type": "object",
-                      "additionalProperties": false,
-                      "properties": {
-                        "enabled": {
-                          "type": "boolean"
-                        }
-                      }
-                    }
-                  }
-                },
-                "font_color": {
-                  "type": "string",
-                  "pattern": "/^#[0-9a-f]{3,6}$/i"
-                },
-                "font": {
-                  "type": "string",
-                  "enum": [
-                    "Open Sans"
-                  ]
-                },
-                "paper_size": {
-                  "type": "string",
-                  "enum": [
-                    "A4",
-                    "letter"
-                  ]
-                }
-              }
-            },
-            {
-              "type": "null"
-            }
-          ]
-        },
-        "active": {
-          "type": "boolean"
-        },
-        "deleted": {
-          "type": "boolean"
         },
         "type": {
           "type": "string",
@@ -389,20 +313,6 @@
               }
             }
           }
-        }
-      },
-      {
-        "name": {
-          "oneOf": [
-            {
-              "type": "string",
-              "minLength": 1,
-              "maxLength": 64
-            },
-            {
-              "type": "null"
-            }
-          ]
         },
         "options": {
           "oneOf": [
@@ -479,6 +389,28 @@
         },
         "deleted": {
           "type": "boolean"
+        }
+      }
+    },
+    {
+      "additionalProperties": false,
+      "type": "object",
+      "required": [
+        "type",
+        "options"
+      ],
+      "properties": {
+        "name": {
+          "oneOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 64
+            },
+            {
+              "type": "null"
+            }
+          ]
         },
         "type": {
           "type": "string",
@@ -771,8 +703,84 @@
               }
             }
           }
+        },
+        "options": {
+          "oneOf": [
+            {
+              "additionalProperties": false,
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "maxLength": 32
+                },
+                "logo": {
+                  "type": "string",
+                  "format": "url"
+                },
+                "main_text": {
+                  "type": "string",
+                  "maxLength": 4096
+                },
+                "attention": {
+                  "type": "string",
+                  "maxLength": 16
+                },
+                "addresses": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "self": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "enabled": {
+                          "type": "boolean"
+                        }
+                      }
+                    },
+                    "local": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "enabled": {
+                          "type": "boolean"
+                        }
+                      }
+                    }
+                  }
+                },
+                "font_color": {
+                  "type": "string",
+                  "pattern": "/^#[0-9a-f]{3,6}$/i"
+                },
+                "font": {
+                  "type": "string",
+                  "enum": [
+                    "Open Sans"
+                  ]
+                },
+                "paper_size": {
+                  "type": "string",
+                  "enum": [
+                    "A4",
+                    "letter"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "active": {
+          "type": "boolean"
+        },
+        "deleted": {
+          "type": "boolean"
         }
       }
-    ]
-  }
+    }
+  ]
 }

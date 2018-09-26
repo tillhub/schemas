@@ -17,6 +17,14 @@
         }
       ]
     },
+    "type": {
+      "type": "string",
+      "enum": [
+        "invoice_v1",
+        "delivery_notes_v1",
+        "full_receipt_v1"
+      ]
+    },
     "options": {
       "oneOf": [
         {

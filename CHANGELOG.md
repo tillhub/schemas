@@ -1,3 +1,10 @@
+## [2.42.1](https://github.com/tillhub/schemas/compare/v2.42.0...v2.42.1) (2018-09-26)
+
+
+### Bug Fixes
+
+* fixes variadic templates schema ([a2d1cad](https://github.com/tillhub/schemas/commit/a2d1cad))
+
 # [2.42.0](https://github.com/tillhub/schemas/compare/v2.41.0...v2.42.0) (2018-09-26)
 
 
