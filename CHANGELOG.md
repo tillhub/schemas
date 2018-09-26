@@ -1,3 +1,10 @@
+# [2.41.0](https://github.com/tillhub/schemas/compare/v2.40.0...v2.41.0) (2018-09-26)
+
+
+### Features
+
+* Add ‘map’ prop to template options ([86dd5a8](https://github.com/tillhub/schemas/commit/86dd5a8))
+
 # [2.40.0](https://github.com/tillhub/schemas/compare/v2.39.1...v2.40.0) (2018-09-24)
 
 
