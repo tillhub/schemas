@@ -87,9 +87,6 @@
                 "A4",
                 "letter"
               ]
-            },
-            "map": {
-              "type": "object"
             }
           }
         },

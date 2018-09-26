@@ -1,3 +1,10 @@
+## [2.42.5](https://github.com/tillhub/schemas/compare/v2.42.4...v2.42.5) (2018-09-26)
+
+
+### Bug Fixes
+
+* Try fix broken property map in templates ([38228e6](https://github.com/tillhub/schemas/commit/38228e6))
+
 ## [2.42.4](https://github.com/tillhub/schemas/compare/v2.42.3...v2.42.4) (2018-09-26)
 
 

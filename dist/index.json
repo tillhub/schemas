@@ -23,8 +23,8 @@
   "/configurations.users.create.request.schema.json",
   "/delivery_notes.create.request.schema.json",
   "/helpers.patch.request.schema.json",
+  "/products.create.request.schema.json",
   "/products.update.request.schema.json",
   "/templates.create.request.schema.json",
-  "/templates.put.request.schema.json",
-  "/products.create.request.schema.json"
+  "/templates.put.request.schema.json"
 ]
