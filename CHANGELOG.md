@@ -1,3 +1,10 @@
+# [2.42.0](https://github.com/tillhub/schemas/compare/v2.41.0...v2.42.0) (2018-09-26)
+
+
+### Features
+
+* Add different types for template create request object ([54cda83](https://github.com/tillhub/schemas/commit/54cda83))
+
 # [2.41.0](https://github.com/tillhub/schemas/compare/v2.40.0...v2.41.0) (2018-09-26)
 
 
