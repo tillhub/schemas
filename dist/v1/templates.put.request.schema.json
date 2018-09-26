@@ -73,7 +73,7 @@
             },
             "font_color": {
               "type": "string",
-              "pattern": "/^#[0-9a-f]{3,6}$/i"
+              "pattern": "^#[0-9a-f]{3,6}$"
             },
             "font": {
               "type": "string",

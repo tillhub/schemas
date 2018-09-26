@@ -1,3 +1,10 @@
+## [2.42.2](https://github.com/tillhub/schemas/compare/v2.42.1...v2.42.2) (2018-09-26)
+
+
+### Bug Fixes
+
+* Fix regexp in pattern check ([5533460](https://github.com/tillhub/schemas/commit/5533460))
+
 ## [2.42.1](https://github.com/tillhub/schemas/compare/v2.42.0...v2.42.1) (2018-09-26)
 
 
