@@ -22,17 +22,17 @@
             }
           ]
         },
-        "type": {
-          "type": "string",
-          "enum": [
-            "invoice_v1"
-          ]
-        },
         "active": {
           "type": "boolean"
         },
         "deleted": {
           "type": "boolean"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "invoice_v1"
+          ]
         },
         "options": {
           "type": "object",
@@ -338,17 +338,17 @@
             }
           ]
         },
-        "type": {
-          "type": "string",
-          "enum": [
-            "delivery_note_v1"
-          ]
-        },
         "active": {
           "type": "boolean"
         },
         "deleted": {
           "type": "boolean"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "delivery_note_v1"
+          ]
         },
         "options": {
           "type": "object",
