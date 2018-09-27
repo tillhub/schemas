@@ -1,3 +1,10 @@
+## [2.42.6](https://github.com/tillhub/schemas/compare/v2.42.5...v2.42.6) (2018-09-27)
+
+
+### Bug Fixes
+
+* Fix templates create request object ([51de809](https://github.com/tillhub/schemas/commit/51de809))
+
 ## [2.42.5](https://github.com/tillhub/schemas/compare/v2.42.4...v2.42.5) (2018-09-26)
 
 
