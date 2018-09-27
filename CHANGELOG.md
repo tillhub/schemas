@@ -1,3 +1,10 @@
+## [2.42.7](https://github.com/tillhub/schemas/compare/v2.42.6...v2.42.7) (2018-09-27)
+
+
+### Bug Fixes
+
+* Disallow additional props in templates options ([31b226b](https://github.com/tillhub/schemas/commit/31b226b))
+
 ## [2.42.6](https://github.com/tillhub/schemas/compare/v2.42.5...v2.42.6) (2018-09-27)
 
 
