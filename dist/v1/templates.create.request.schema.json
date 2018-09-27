@@ -36,7 +36,68 @@
         },
         "options": {
           "type": "object",
+          "additionalProperties": false,
           "properties": {
+            "title": {
+              "type": "string",
+              "maxLength": 32
+            },
+            "logo": {
+              "type": "string",
+              "format": "url"
+            },
+            "main_text": {
+              "type": "string",
+              "maxLength": 4096
+            },
+            "attention": {
+              "type": "string",
+              "maxLength": 16
+            },
+            "addresses": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "self": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "enabled": {
+                      "type": "boolean"
+                    }
+                  }
+                },
+                "local": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "enabled": {
+                      "type": "boolean"
+                    }
+                  }
+                }
+              }
+            },
+            "font_color": {
+              "type": "string",
+              "pattern": "^#[0-9a-fA-F]{3,6}$"
+            },
+            "font": {
+              "type": "string",
+              "enum": [
+                "Open Sans"
+              ]
+            },
+            "paper_size": {
+              "type": "string",
+              "enum": [
+                "A4",
+                "letter"
+              ]
+            },
+            "row_highlight": {
+              "type": "boolean"
+            },
             "map": {
               "type": "object",
               "additionalProperties": false,
@@ -291,7 +352,68 @@
         },
         "options": {
           "type": "object",
+          "additionalProperties": false,
           "properties": {
+            "title": {
+              "type": "string",
+              "maxLength": 32
+            },
+            "logo": {
+              "type": "string",
+              "format": "url"
+            },
+            "main_text": {
+              "type": "string",
+              "maxLength": 4096
+            },
+            "attention": {
+              "type": "string",
+              "maxLength": 16
+            },
+            "addresses": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "self": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "enabled": {
+                      "type": "boolean"
+                    }
+                  }
+                },
+                "local": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "enabled": {
+                      "type": "boolean"
+                    }
+                  }
+                }
+              }
+            },
+            "font_color": {
+              "type": "string",
+              "pattern": "^#[0-9a-fA-F]{3,6}$"
+            },
+            "font": {
+              "type": "string",
+              "enum": [
+                "Open Sans"
+              ]
+            },
+            "paper_size": {
+              "type": "string",
+              "enum": [
+                "A4",
+                "letter"
+              ]
+            },
+            "row_highlight": {
+              "type": "boolean"
+            },
             "map": {
               "type": "object",
               "additionalProperties": false,
