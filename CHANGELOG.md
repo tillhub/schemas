@@ -1,3 +1,10 @@
+## [2.42.9](https://github.com/tillhub/schemas/compare/v2.42.8...v2.42.9) (2018-09-28)
+
+
+### Bug Fixes
+
+* Fix templates delivery_note create ([520de32](https://github.com/tillhub/schemas/commit/520de32))
+
 ## [2.42.8](https://github.com/tillhub/schemas/compare/v2.42.7...v2.42.8) (2018-09-27)
 
 
