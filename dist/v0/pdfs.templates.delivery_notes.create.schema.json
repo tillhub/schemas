@@ -317,6 +317,16 @@
       "items": {
         "type": "object"
       }
+    },
+    "email": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
     }
   }
 }

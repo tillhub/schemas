@@ -1,3 +1,10 @@
+# [2.43.0](https://github.com/tillhub/schemas/compare/v2.42.9...v2.43.0) (2018-10-09)
+
+
+### Features
+
+* **schemas:** add email field to invoice and delivery note create ([741a00e](https://github.com/tillhub/schemas/commit/741a00e))
+
 ## [2.42.9](https://github.com/tillhub/schemas/compare/v2.42.8...v2.42.9) (2018-09-28)
 
 
