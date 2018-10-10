@@ -1,3 +1,10 @@
+# [2.44.0](https://github.com/tillhub/schemas/compare/v2.43.0...v2.44.0) (2018-10-10)
+
+
+### Features
+
+* **schemas:** adds delivery note updates ([3109a3e](https://github.com/tillhub/schemas/commit/3109a3e))
+
 # [2.43.0](https://github.com/tillhub/schemas/compare/v2.42.9...v2.43.0) (2018-10-09)
 
 
