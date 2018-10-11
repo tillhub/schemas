@@ -1,3 +1,10 @@
+# [2.46.0](https://github.com/tillhub/schemas/compare/v2.45.0...v2.46.0) (2018-10-11)
+
+
+### Features
+
+* Add more fonts to template options ([af19190](https://github.com/tillhub/schemas/commit/af19190))
+
 # [2.45.0](https://github.com/tillhub/schemas/compare/v2.44.0...v2.45.0) (2018-10-11)
 
 

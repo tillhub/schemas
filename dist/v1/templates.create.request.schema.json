@@ -85,7 +85,9 @@
             "font": {
               "type": "string",
               "enum": [
-                "Open Sans"
+                "Open Sans",
+                "arial",
+                "monospace"
               ]
             },
             "paper_size": {
@@ -401,7 +403,9 @@
             "font": {
               "type": "string",
               "enum": [
-                "Open Sans"
+                "Open Sans",
+                "arial",
+                "monospace"
               ]
             },
             "paper_size": {
