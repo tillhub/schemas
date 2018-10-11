@@ -1,3 +1,10 @@
+# [2.45.0](https://github.com/tillhub/schemas/compare/v2.44.0...v2.45.0) (2018-10-11)
+
+
+### Features
+
+* **schemas:** adds dispatched at ([2941cad](https://github.com/tillhub/schemas/commit/2941cad))
+
 # [2.44.0](https://github.com/tillhub/schemas/compare/v2.43.0...v2.44.0) (2018-10-10)
 
 

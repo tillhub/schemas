@@ -27,6 +27,17 @@
         }
       ]
     },
+    "dispatched_at": {
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "date-time"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "done_at": {
       "oneOf": [
         {
