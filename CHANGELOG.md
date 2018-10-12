@@ -1,3 +1,10 @@
+## [2.48.1](https://github.com/tillhub/schemas/compare/v2.48.0...v2.48.1) (2018-10-12)
+
+
+### Bug Fixes
+
+* Fix invoices create request schema ([8d0a0d3](https://github.com/tillhub/schemas/commit/8d0a0d3))
+
 # [2.48.0](https://github.com/tillhub/schemas/compare/v2.47.0...v2.48.0) (2018-10-12)
 
 

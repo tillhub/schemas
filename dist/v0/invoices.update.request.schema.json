@@ -165,7 +165,8 @@
     "origins": {
       "oneOf": [
         {
-          "type": "object"
+          "type": "array",
+          "minItems": 1
         },
         {
           "type": "null"
@@ -175,7 +176,8 @@
     "related_to": {
       "oneOf": [
         {
-          "type": "object"
+          "type": "array",
+          "minItems": 1
         },
         {
           "type": "null"
@@ -185,7 +187,8 @@
     "depends_on": {
       "oneOf": [
         {
-          "type": "object"
+          "type": "array",
+          "minItems": 1
         },
         {
           "type": "null"

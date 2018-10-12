@@ -5,8 +5,8 @@
   "/branches.update.request.schema.json",
   "/clients.create.request.schema.json",
   "/clients.update.request.schema.json",
-  "/customers.create.request.schema.json",
   "/deliveries.create.request.schema.json",
+  "/customers.create.request.schema.json",
   "/deliveries.items.update.request.schema.json",
   "/deliveries.update.request.schema.json",
   "/invoices.create.request.schema.json",
@@ -22,7 +22,6 @@
   "/carts.create.request.schema.json",
   "/configurations.create.request.schema.json",
   "/configurations.patch.request.schema.json",
-  "/configurations.update.request.schema.json",
   "/configurations.users.create.request.schema.json",
   "/delivery_notes.create.request.schema.json",
   "/delivery_notes.update.request.schema.json",
@@ -30,5 +29,6 @@
   "/products.create.request.schema.json",
   "/products.update.request.schema.json",
   "/templates.create.request.schema.json",
-  "/templates.put.request.schema.json"
+  "/templates.put.request.schema.json",
+  "/configurations.update.request.schema.json"
 ]
