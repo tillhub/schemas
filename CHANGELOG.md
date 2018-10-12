@@ -1,3 +1,10 @@
+# [2.48.0](https://github.com/tillhub/schemas/compare/v2.47.0...v2.48.0) (2018-10-12)
+
+
+### Features
+
+* Add v0 invoices schemas ([062b498](https://github.com/tillhub/schemas/commit/062b498))
+
 # [2.47.0](https://github.com/tillhub/schemas/compare/v2.46.0...v2.47.0) (2018-10-12)
 
 
