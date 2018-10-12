@@ -27,3 +27,12 @@ test('PDFs: create delivery notes schema validation', function (t) {
   t.error(error, 'should not get any error')
   t.end()
 })
+
+test('PDFs: create full receipts schema validation', function (t) {
+  t.plan(2)
+  const createRequest = require('../../lib/v0/pdfs').templates.full_receipts.create.request
+  const { valid, error } = validate(createRequest)
+  t.ok(valid, 'create schema is valid')
+  t.error(error, 'should not get any error')
+  t.end()
+})
