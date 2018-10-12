@@ -1,3 +1,12 @@
+# [2.47.0](https://github.com/tillhub/schemas/compare/v2.46.0...v2.47.0) (2018-10-12)
+
+
+### Features
+
+* **schemas:** add firstname and lastname for invoice and delivery notes recipient ([52a1746](https://github.com/tillhub/schemas/commit/52a1746))
+* **schemas:** add full receipts pdf schema ([38e1cfd](https://github.com/tillhub/schemas/commit/38e1cfd))
+* **schemas:** add test for full receipts schemas ([243dba5](https://github.com/tillhub/schemas/commit/243dba5))
+
 # [2.46.0](https://github.com/tillhub/schemas/compare/v2.45.0...v2.46.0) (2018-10-11)
 
 
