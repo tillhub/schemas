@@ -104,36 +104,6 @@
               "type": "object",
               "additionalProperties": false,
               "properties": {
-                "product_number": {
-                  "type": "object",
-                  "additionalProperties": false,
-                  "properties": {
-                    "default": {
-                      "oneOf": [
-                        {
-                          "type": "string"
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ]
-                    },
-                    "custom": {
-                      "oneOf": [
-                        {
-                          "type": "string"
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ]
-                    },
-                    "show": {
-                      "type": "boolean",
-                      "default": true
-                    }
-                  }
-                },
                 "product_name": {
                   "type": "object",
                   "additionalProperties": false,
@@ -224,7 +194,7 @@
                     }
                   }
                 },
-                "article_price": {
+                "discount": {
                   "type": "object",
                   "additionalProperties": false,
                   "properties": {
@@ -254,7 +224,7 @@
                     }
                   }
                 },
-                "discounts": {
+                "unit_price_exclude_vat": {
                   "type": "object",
                   "additionalProperties": false,
                   "properties": {
@@ -284,7 +254,67 @@
                     }
                   }
                 },
-                "selling_price_total": {
+                "unit_price_include_vat": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "default": {
+                      "oneOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "custom": {
+                      "oneOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "show": {
+                      "type": "boolean",
+                      "default": true
+                    }
+                  }
+                },
+                "total_price_include_vat": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "default": {
+                      "oneOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "custom": {
+                      "oneOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "show": {
+                      "type": "boolean",
+                      "default": true
+                    }
+                  }
+                },
+                "currency": {
                   "type": "object",
                   "additionalProperties": false,
                   "properties": {
@@ -422,7 +452,7 @@
               "type": "object",
               "additionalProperties": false,
               "properties": {
-                "product": {
+                "product_name": {
                   "type": "object",
                   "additionalProperties": false,
                   "properties": {
@@ -452,7 +482,7 @@
                     }
                   }
                 },
-                "name": {
+                "vat_percentage": {
                   "type": "object",
                   "additionalProperties": false,
                   "properties": {
@@ -482,7 +512,7 @@
                     }
                   }
                 },
-                "vat_rate": {
+                "quantity": {
                   "type": "object",
                   "additionalProperties": false,
                   "properties": {
@@ -512,7 +542,7 @@
                     }
                   }
                 },
-                "qty": {
+                "discount": {
                   "type": "object",
                   "additionalProperties": false,
                   "properties": {
@@ -542,7 +572,7 @@
                     }
                   }
                 },
-                "discount_amount": {
+                "unit_price_exclude_vat": {
                   "type": "object",
                   "additionalProperties": false,
                   "properties": {
@@ -572,7 +602,7 @@
                     }
                   }
                 },
-                "net": {
+                "unit_price_include_vat": {
                   "type": "object",
                   "additionalProperties": false,
                   "properties": {
@@ -602,7 +632,37 @@
                     }
                   }
                 },
-                "gross": {
+                "total_price_include_vat": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "default": {
+                      "oneOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "custom": {
+                      "oneOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "show": {
+                      "type": "boolean",
+                      "default": true
+                    }
+                  }
+                },
+                "currency": {
                   "type": "object",
                   "additionalProperties": false,
                   "properties": {

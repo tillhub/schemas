@@ -1,3 +1,10 @@
+# [2.49.0](https://github.com/tillhub/schemas/compare/v2.48.1...v2.49.0) (2018-10-15)
+
+
+### Features
+
+* Update templates options map according to new headers ([27f0293](https://github.com/tillhub/schemas/commit/27f0293))
+
 ## [2.48.1](https://github.com/tillhub/schemas/compare/v2.48.0...v2.48.1) (2018-10-12)
 
 
