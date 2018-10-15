@@ -29,12 +29,6 @@
               "type": "null"
             }
           ]
-        },
-        "custom_id": {
-          "type": "string"
-        },
-        "client_id": {
-          "type": "string"
         }
       },
       "required": [

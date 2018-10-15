@@ -1,3 +1,10 @@
+## [2.49.1](https://github.com/tillhub/schemas/compare/v2.49.0...v2.49.1) (2018-10-15)
+
+
+### Bug Fixes
+
+* **schemas:** remove unused data fields ([ce948c3](https://github.com/tillhub/schemas/commit/ce948c3))
+
 # [2.49.0](https://github.com/tillhub/schemas/compare/v2.48.1...v2.49.0) (2018-10-15)
 
 
