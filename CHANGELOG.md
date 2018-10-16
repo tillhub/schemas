@@ -1,3 +1,10 @@
+# [2.50.0](https://github.com/tillhub/schemas/compare/v2.49.1...v2.50.0) (2018-10-16)
+
+
+### Features
+
+* Update templates options map with summary items headers ([8723cb2](https://github.com/tillhub/schemas/commit/8723cb2))
+
 ## [2.49.1](https://github.com/tillhub/schemas/compare/v2.49.0...v2.49.1) (2018-10-15)
 
 
