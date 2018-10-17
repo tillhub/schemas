@@ -1,3 +1,10 @@
+# [2.51.0](https://github.com/tillhub/schemas/compare/v2.50.0...v2.51.0) (2018-10-17)
+
+
+### Features
+
+* **schemas:** deformatize logo image ([aa7e28d](https://github.com/tillhub/schemas/commit/aa7e28d))
+
 # [2.50.0](https://github.com/tillhub/schemas/compare/v2.49.1...v2.50.0) (2018-10-16)
 
 

@@ -43,8 +43,7 @@
               "maxLength": 32
             },
             "logo": {
-              "type": "string",
-              "format": "url"
+              "type": "string"
             },
             "main_text": {
               "type": "string",
@@ -481,8 +480,7 @@
               "maxLength": 32
             },
             "logo": {
-              "type": "string",
-              "format": "url"
+              "type": "string"
             },
             "main_text": {
               "type": "string",
