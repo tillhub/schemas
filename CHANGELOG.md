@@ -1,3 +1,10 @@
+## [2.51.2](https://github.com/tillhub/schemas/compare/v2.51.1...v2.51.2) (2018-10-17)
+
+
+### Bug Fixes
+
+* **schemas:** allow type number ([24e1756](https://github.com/tillhub/schemas/commit/24e1756))
+
 ## [2.51.1](https://github.com/tillhub/schemas/compare/v2.51.0...v2.51.1) (2018-10-17)
 
 
