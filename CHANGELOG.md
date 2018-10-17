@@ -1,3 +1,10 @@
+# [2.52.0](https://github.com/tillhub/schemas/compare/v2.51.2...v2.52.0) (2018-10-17)
+
+
+### Features
+
+* **temapltes:** Update templates ([dba4e0b](https://github.com/tillhub/schemas/commit/dba4e0b))
+
 ## [2.51.2](https://github.com/tillhub/schemas/compare/v2.51.1...v2.51.2) (2018-10-17)
 
 
