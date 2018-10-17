@@ -1,3 +1,10 @@
+## [2.51.1](https://github.com/tillhub/schemas/compare/v2.51.0...v2.51.1) (2018-10-17)
+
+
+### Bug Fixes
+
+* **schemas:** change transaction number data type ([9028b10](https://github.com/tillhub/schemas/commit/9028b10))
+
 # [2.51.0](https://github.com/tillhub/schemas/compare/v2.50.0...v2.51.0) (2018-10-17)
 
 

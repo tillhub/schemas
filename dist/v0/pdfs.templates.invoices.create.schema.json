@@ -33,7 +33,7 @@
         "transaction_number": {
           "anyOf": [
             {
-              "type": "number"
+              "type": "string"
             },
             {
               "type": "null"
