@@ -1,3 +1,16 @@
+# [2.54.0](https://github.com/tillhub/schemas/compare/v2.53.0...v2.54.0) (2018-10-18)
+
+
+### Bug Fixes
+
+* **schemas:** fixes example ([ce9cf52](https://github.com/tillhub/schemas/commit/ce9cf52))
+
+
+### Features
+
+* **schemas:** adds currency formatting ([16fc1ee](https://github.com/tillhub/schemas/commit/16fc1ee))
+* **schemas:** adds trailer text ([177d2d4](https://github.com/tillhub/schemas/commit/177d2d4))
+
 # [2.53.0](https://github.com/tillhub/schemas/compare/v2.52.0...v2.53.0) (2018-10-18)
 
 
