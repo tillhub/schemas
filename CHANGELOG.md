@@ -1,3 +1,10 @@
+# [2.53.0](https://github.com/tillhub/schemas/compare/v2.52.0...v2.53.0) (2018-10-18)
+
+
+### Features
+
+* **templates:** Change name of template options prop ([82a0175](https://github.com/tillhub/schemas/commit/82a0175))
+
 # [2.52.0](https://github.com/tillhub/schemas/compare/v2.51.2...v2.52.0) (2018-10-17)
 
 

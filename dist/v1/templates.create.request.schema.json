@@ -1357,7 +1357,7 @@
                 }
               }
             },
-            "date_and_location": {
+            "location_and_date": {
               "type": "string",
               "maxLength": 32
             },
