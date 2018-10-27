@@ -1,3 +1,10 @@
+# [2.55.0](https://github.com/tillhub/schemas/compare/v2.54.0...v2.55.0) (2018-10-27)
+
+
+### Features
+
+* **schemas:** adds full patch schema ([09f3ff7](https://github.com/tillhub/schemas/commit/09f3ff7))
+
 # [2.54.0](https://github.com/tillhub/schemas/compare/v2.53.0...v2.54.0) (2018-10-18)
 
 
