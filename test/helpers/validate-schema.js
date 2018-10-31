@@ -1,5 +1,5 @@
-const metaSchema = require('./meta-schema')
 const Ajv = require('ajv')
+const metaSchema = require('./meta-schema')
 const ajv = new Ajv()
 
 module.exports = (object) => {

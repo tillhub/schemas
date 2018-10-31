@@ -1,7 +1,7 @@
-const allSchemas = require('./lib')
 const url = require('url')
 const fs = require('fs')
 const path = require('path')
+const allSchemas = require('./lib')
 
 function iterate (obj) {
   for (var property in obj) {
