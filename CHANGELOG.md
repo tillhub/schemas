@@ -1,3 +1,10 @@
+# [2.57.0](https://github.com/tillhub/schemas/compare/v2.56.0...v2.57.0) (2018-10-31)
+
+
+### Features
+
+* **schemas:** adds taxes configuration ([1285b35](https://github.com/tillhub/schemas/commit/1285b35))
+
 # [2.56.0](https://github.com/tillhub/schemas/compare/v2.55.0...v2.56.0) (2018-10-31)
 
 
