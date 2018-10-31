@@ -1,3 +1,10 @@
+# [2.56.0](https://github.com/tillhub/schemas/compare/v2.55.0...v2.56.0) (2018-10-31)
+
+
+### Features
+
+* **templates:** Increase allowed string length ([b0a23c4](https://github.com/tillhub/schemas/commit/b0a23c4))
+
 # [2.55.0](https://github.com/tillhub/schemas/compare/v2.54.0...v2.55.0) (2018-10-27)
 
 

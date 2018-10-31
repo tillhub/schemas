@@ -54,7 +54,7 @@
             },
             "attention": {
               "type": "string",
-              "maxLength": 16
+              "maxLength": 128
             },
             "addresses": {
               "type": "object",
@@ -575,7 +575,7 @@
             },
             "attention": {
               "type": "string",
-              "maxLength": 16
+              "maxLength": 128
             },
             "addresses": {
               "type": "object",
@@ -1096,7 +1096,7 @@
             },
             "attention": {
               "type": "string",
-              "maxLength": 16
+              "maxLength": 128
             },
             "addresses": {
               "type": "object",
@@ -1571,7 +1571,7 @@
             },
             "amount_received": {
               "type": "string",
-              "maxLength": 32
+              "maxLength": 128
             }
           }
         }
