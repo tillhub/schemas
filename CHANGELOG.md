@@ -1,3 +1,10 @@
+# [2.59.0](https://github.com/tillhub/schemas/compare/v2.58.0...v2.59.0) (2018-11-05)
+
+
+### Features
+
+* **schemas:** adds transaction status ([ea4f2d0](https://github.com/tillhub/schemas/commit/ea4f2d0))
+
 # [2.58.0](https://github.com/tillhub/schemas/compare/v2.57.0...v2.58.0) (2018-11-05)
 
 
