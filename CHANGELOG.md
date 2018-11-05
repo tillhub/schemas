@@ -1,3 +1,10 @@
+# [2.58.0](https://github.com/tillhub/schemas/compare/v2.57.0...v2.58.0) (2018-11-05)
+
+
+### Features
+
+* **schemas:** adds transactions v1 ([d48eb38](https://github.com/tillhub/schemas/commit/d48eb38))
+
 # [2.57.0](https://github.com/tillhub/schemas/compare/v2.56.0...v2.57.0) (2018-10-31)
 
 
