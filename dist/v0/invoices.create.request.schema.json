@@ -244,6 +244,17 @@
           "type": "null"
         }
       ]
+    },
+    "location": {
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "uuid"
+        },
+        {
+          "type": "null"
+        }
+      ]
     }
   }
 }

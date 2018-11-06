@@ -1,3 +1,10 @@
+# [2.61.0](https://github.com/tillhub/schemas/compare/v2.60.0...v2.61.0) (2018-11-06)
+
+
+### Features
+
+* **invoices:** Add location prop ([e71cb59](https://github.com/tillhub/schemas/commit/e71cb59))
+
 # [2.60.0](https://github.com/tillhub/schemas/compare/v2.59.0...v2.60.0) (2018-11-06)
 
 
