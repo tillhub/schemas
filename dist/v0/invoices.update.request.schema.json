@@ -233,6 +233,17 @@
           "type": "null"
         }
       ]
+    },
+    "transaction": {
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "uuid"
+        },
+        {
+          "type": "null"
+        }
+      ]
     }
   }
 }

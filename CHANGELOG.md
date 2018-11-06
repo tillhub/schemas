@@ -1,3 +1,10 @@
+# [2.60.0](https://github.com/tillhub/schemas/compare/v2.59.0...v2.60.0) (2018-11-06)
+
+
+### Features
+
+* **invoices:** Add transaction prop ([72af8e2](https://github.com/tillhub/schemas/commit/72af8e2))
+
 # [2.59.0](https://github.com/tillhub/schemas/compare/v2.58.0...v2.59.0) (2018-11-05)
 
 
