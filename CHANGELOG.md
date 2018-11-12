@@ -1,3 +1,10 @@
+# [2.62.0](https://github.com/tillhub/schemas/compare/v2.61.0...v2.62.0) (2018-11-12)
+
+
+### Features
+
+* **schemas:** adds analytics ([7f18002](https://github.com/tillhub/schemas/commit/7f18002))
+
 # [2.61.0](https://github.com/tillhub/schemas/compare/v2.60.0...v2.61.0) (2018-11-06)
 
 
