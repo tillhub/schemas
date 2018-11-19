@@ -1,3 +1,10 @@
+# [2.63.0](https://github.com/tillhub/schemas/compare/v2.62.0...v2.63.0) (2018-11-19)
+
+
+### Features
+
+* **schemas:** adds external targets ([408b74d](https://github.com/tillhub/schemas/commit/408b74d))
+
 # [2.62.0](https://github.com/tillhub/schemas/compare/v2.61.0...v2.62.0) (2018-11-12)
 
 
