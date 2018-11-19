@@ -1,3 +1,10 @@
+# [2.64.0](https://github.com/tillhub/schemas/compare/v2.63.0...v2.64.0) (2018-11-19)
+
+
+### Features
+
+* **invoices:** Disallow status to be null ([0b378d2](https://github.com/tillhub/schemas/commit/0b378d2))
+
 # [2.63.0](https://github.com/tillhub/schemas/compare/v2.62.0...v2.63.0) (2018-11-19)
 
 
