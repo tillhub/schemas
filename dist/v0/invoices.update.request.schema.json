@@ -92,18 +92,11 @@
       ]
     },
     "status": {
-      "oneOf": [
-        {
-          "type": "null"
-        },
-        {
-          "type": "string",
-          "enum": [
-            "paid",
-            "overdue",
-            "issued"
-          ]
-        }
+      "type": "string",
+      "enum": [
+        "paid",
+        "overdue",
+        "issued"
       ]
     },
     "archived": {
