@@ -1,3 +1,10 @@
+# [2.65.0](https://github.com/tillhub/schemas/compare/v2.64.0...v2.65.0) (2018-11-20)
+
+
+### Features
+
+* **schemas:** aligns tax and account model ([2048e10](https://github.com/tillhub/schemas/commit/2048e10))
+
 # [2.64.0](https://github.com/tillhub/schemas/compare/v2.63.0...v2.64.0) (2018-11-19)
 
 

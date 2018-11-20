@@ -29,6 +29,17 @@
         }
       ]
     },
+    "fa_account_number": {
+      "anyOf": [
+        {
+          "type": "string",
+          "maxLength": 128
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "type": {
       "type": "string",
       "enum": [
