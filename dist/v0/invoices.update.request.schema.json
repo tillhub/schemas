@@ -248,6 +248,33 @@
           "type": "null"
         }
       ]
+    },
+    "paid": {
+      "type": "boolean"
+    },
+    "paid_at": {
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "date-time"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "payment_reference": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "printed": {
+      "type": "boolean"
     }
   }
 }

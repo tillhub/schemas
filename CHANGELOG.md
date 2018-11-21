@@ -1,3 +1,10 @@
+# [2.66.0](https://github.com/tillhub/schemas/compare/v2.65.0...v2.66.0) (2018-11-21)
+
+
+### Features
+
+* **invoices:** Add properties to invoices base ([e1e7d74](https://github.com/tillhub/schemas/commit/e1e7d74))
+
 # [2.65.0](https://github.com/tillhub/schemas/compare/v2.64.0...v2.65.0) (2018-11-20)
 
 
