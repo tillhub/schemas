@@ -1,3 +1,10 @@
+# [2.67.0](https://github.com/tillhub/schemas/compare/v2.66.0...v2.67.0) (2018-11-25)
+
+
+### Features
+
+* **schemas:** allow for external source name ([3a783e9](https://github.com/tillhub/schemas/commit/3a783e9))
+
 # [2.66.0](https://github.com/tillhub/schemas/compare/v2.65.0...v2.66.0) (2018-11-21)
 
 
