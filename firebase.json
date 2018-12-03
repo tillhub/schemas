@@ -12,6 +12,17 @@
         "destination": "/index.json",
         "type": 301
       }
+    ],
+    "headers": [
+      {
+        "source": "**/*.@(json)",
+        "headers": [
+          {
+            "key": "Access-Control-Allow-Origin",
+            "value": "*"
+          }
+        ]
+      }
     ]
   }
 }
