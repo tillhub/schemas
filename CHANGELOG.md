@@ -1,3 +1,10 @@
+# [2.69.0](https://github.com/tillhub/schemas/compare/v2.68.0...v2.69.0) (2018-12-03)
+
+
+### Features
+
+* cache json responses ([f588d78](https://github.com/tillhub/schemas/commit/f588d78))
+
 # [2.68.0](https://github.com/tillhub/schemas/compare/v2.67.0...v2.68.0) (2018-12-03)
 
 
