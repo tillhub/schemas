@@ -150,10 +150,17 @@
             "description": "The supported transaction types",
             "enum": [
               "sale",
-              "cancellation",
+              "sale_cancel",
               "invoice",
-              "exapense",
-              "deposit"
+              "invoice_cancel",
+              "expense",
+              "expense_cancel",
+              "deposit",
+              "deposit_cancel",
+              "bank_deposit",
+              "bank_deposit_cancel",
+              "bank_expense",
+              "bank_expense_cancel"
             ]
           },
           "client_id": {
@@ -206,6 +213,20 @@
                 "format": "uuid",
                 "example": "9d110eb2-2245-4e14-9574-49b502f3a9b3",
                 "description": "The Tillhub register location ID."
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "client": {
+            "oneOf": [
+              {
+                "type": "string",
+                "format": "uuid",
+                "example": "cd110eb2-2245-4e14-9574-49b502f3a9b3",
+                "description": "(MANDANT) The Tillhub client location ID."
               },
               {
                 "type": "null"
@@ -896,7 +917,71 @@
                       "type": "array",
                       "items": {
                         "type": "object",
-                        "description": "Any applied discounts as they happened at transaction creation time."
+                        "description": "Any applied discounts as they happened at transaction creation time.",
+                        "properties": {
+                          "amount": {
+                            "type": "number"
+                          },
+                          "amount_total": {
+                            "type": "number"
+                          },
+                          "order_index": {
+                            "type": "integer"
+                          },
+                          "currency": {
+                            "type": "string",
+                            "minLength": 3,
+                            "maxLength": 3
+                          },
+                          "value": {
+                            "oneOf": [
+                              {
+                                "type": "number"
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          },
+                          "rate": {
+                            "oneOf": [
+                              {
+                                "type": "number",
+                                "minimum": 0,
+                                "maximum": 1
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          },
+                          "client_id": {
+                            "type": "string",
+                            "maxLength": 128
+                          },
+                          "group": {
+                            "type": "string",
+                            "enum": [
+                              "customer",
+                              "staff",
+                              "cart",
+                              "product_set"
+                            ]
+                          },
+                          "name": {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 128
+                          }
+                        },
+                        "required": [
+                          "amount",
+                          "amount_total",
+                          "currency",
+                          "name",
+                          "value",
+                          "rate"
+                        ]
                       }
                     },
                     {

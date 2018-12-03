@@ -1,3 +1,24 @@
+# [2.69.0](https://github.com/tillhub/schemas/compare/v2.68.0...v2.69.0) (2018-12-03)
+
+
+### Features
+
+* cache json responses ([f588d78](https://github.com/tillhub/schemas/commit/f588d78))
+
+# [2.68.0](https://github.com/tillhub/schemas/compare/v2.67.0...v2.68.0) (2018-12-03)
+
+
+### Bug Fixes
+
+* **schemas:** fixes prop level in config ([3e4ef75](https://github.com/tillhub/schemas/commit/3e4ef75))
+
+
+### Features
+
+* add note requirements ([a3b85bf](https://github.com/tillhub/schemas/commit/a3b85bf))
+* adds cors headers to json ([84dd6cc](https://github.com/tillhub/schemas/commit/84dd6cc))
+* adds discounts to cart items ([29ed9c6](https://github.com/tillhub/schemas/commit/29ed9c6)), closes [#15](https://github.com/tillhub/schemas/issues/15)
+
 # [2.67.0](https://github.com/tillhub/schemas/compare/v2.66.0...v2.67.0) (2018-11-25)
 
 
