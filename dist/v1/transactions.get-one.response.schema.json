@@ -752,7 +752,7 @@
                   ]
                 },
                 "vat_rate": {
-                  "type": "string",
+                  "type": "number",
                   "description": "The VAT rate of this item. E.g. 0.19 for 19% German VAT. If no VAT applies, set to 0.",
                   "example": "0.19",
                   "minimum": 0,
