@@ -206,6 +206,19 @@
             ],
             "default": null
           },
+          "branch_custom_id": {
+            "oneOf": [
+              {
+                "type": "string",
+                "example": "5",
+                "description": "The Tillhub branch number."
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
           "register": {
             "oneOf": [
               {
@@ -213,6 +226,19 @@
                 "format": "uuid",
                 "example": "9d110eb2-2245-4e14-9574-49b502f3a9b3",
                 "description": "The Tillhub register location ID."
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "register_custom_id": {
+            "oneOf": [
+              {
+                "type": "string",
+                "example": "7",
+                "description": "The Tillhub register number."
               },
               {
                 "type": "null"
@@ -234,13 +260,26 @@
             ],
             "default": null
           },
+          "client_custom_id": {
+            "oneOf": [
+              {
+                "type": "string",
+                "example": "101",
+                "description": "(MANDANT) The Tillhub client number."
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
           "staff": {
             "oneOf": [
               {
                 "type": "string",
                 "format": "uuid",
                 "example": "b3465a62-62e9-46de-9df7-4d3009c46068",
-                "description": "The Tillhub staff resource ID, that has generated this transaction."
+                "description": "The Tillhub staff resource ID, that has generated this transaction. (used by temp staff)"
               },
               {
                 "type": "null"
@@ -270,6 +309,136 @@
                 "maxLength": 64,
                 "example": "ec1b41af291c4b9483d8adb4e80ac92f",
                 "description": "The Tillhub POS client ID, that was generated upon install, that has generated this transaction."
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "context": {
+            "oneOf": [
+              {
+                "type": "object",
+                "description": "Any additional flat values.",
+                "properties": {
+                  "title": {
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "example": "Random 3.",
+                        "maxLength": 1024,
+                        "description": "Any arbitrary title."
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
+                  "counters": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "description": "Transaction specific counters.",
+                        "properties": {
+                          "signing_error": {
+                            "type": "number",
+                            "example": 2,
+                            "description": "Number of failed signing attempts in a row."
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
+                  "register": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "description": "Register face values.",
+                        "properties": {
+                          "display": {
+                            "type": "string",
+                            "example": "Front Register 2"
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
+                  "branch": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "description": "Branch face values.",
+                        "properties": {
+                          "display": {
+                            "type": "string",
+                            "example": "WAX Berlin 2"
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
+                  "cashier_staff": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "description": "Cashier face values.",
+                        "properties": {
+                          "number": {
+                            "type": "string",
+                            "example": "005"
+                          },
+                          "display": {
+                            "type": "string",
+                            "example": "Chantal Kowalski"
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
+                  "customer": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "description": "Customer face values.",
+                        "properties": {
+                          "number": {
+                            "type": "string",
+                            "example": "004310981002"
+                          },
+                          "display": {
+                            "type": "string",
+                            "example": "Alexander von Müller"
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  }
+                },
+                "required": [
+                  "cashier_staff"
+                ]
               },
               {
                 "type": "null"
@@ -468,24 +637,30 @@
             "oneOf": [
               {
                 "type": "array",
-                "description": "A list of Tillhub resources that caused this transaction, e.g. a stored cart",
+                "description": "A list of Tillhub resources that caused this transaction, e.g. a stored cart or multiple delivery notes",
                 "items": {
-                  "type": "object"
-                }
-              },
-              {
-                "type": "null"
-              }
-            ],
-            "default": null
-          },
-          "related_to": {
-            "oneOf": [
-              {
-                "type": "array",
-                "description": "A list of Tillhub resources that this transaction is related to, e.g. an invoice object that tracks the lifetime of that invoice",
-                "items": {
-                  "type": "object"
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "type",
+                    "id"
+                  ],
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "description": "The type of reference",
+                      "enum": [
+                        "checked_out_delivery_note",
+                        "checked_out_saved_cart"
+                      ]
+                    },
+                    "id": {
+                      "type": "string",
+                      "format": "uuid",
+                      "example": "f2ac2cae-97ff-42a1-967b-0a35222ab6d1",
+                      "description": "A Tillhub cart or delivery note that this reference links to."
+                    }
+                  }
                 }
               },
               {
@@ -500,7 +675,67 @@
                 "type": "array",
                 "description": "A list of Tillhub resources that this transaction directly depends on, e.g. a refund for a previous sale",
                 "items": {
-                  "type": "object"
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "type",
+                    "id"
+                  ],
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "description": "The type of reference",
+                      "enum": [
+                        "cancelled_sale",
+                        "refunded_sale",
+                        "cancelled_expense",
+                        "cancelled_deposit",
+                        "cancelled_bank_expense",
+                        "cancelled_bank_deposit"
+                      ]
+                    },
+                    "id": {
+                      "type": "string",
+                      "format": "uuid",
+                      "example": "f2ac2cae-97ff-42a1-967b-0a35222ab6d1",
+                      "description": "A Tillhub transaction that this reference links to."
+                    }
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "related_to": {
+            "oneOf": [
+              {
+                "type": "array",
+                "description": "A list of Tillhub resources that this transaction is related to, e.g. an invoice object that tracks the lifetime of that invoice",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "type",
+                    "id"
+                  ],
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "description": "The type of reference",
+                      "enum": [
+                        "invoice"
+                      ]
+                    },
+                    "id": {
+                      "type": "string",
+                      "format": "uuid",
+                      "example": "f2ac2cae-97ff-42a1-967b-0a35222ab6d1",
+                      "description": "A Tillhub resource that this reference links to."
+                    }
+                  }
                 }
               },
               {
@@ -678,6 +913,21 @@
                     }
                   }
                 },
+                "client_id": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "example": "d0d40841-b1a7-438a-9d1e-2bfec590d2e3",
+                      "minLength": 6,
+                      "maxLength": 64,
+                      "description": "A implementer defined identifier. This can be used for local resource matching and has no business implication."
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null
+                },
                 "type": {
                   "type": "string",
                   "description": "The type of item.",
@@ -685,6 +935,7 @@
                     "item",
                     "refund",
                     "discount",
+                    "expense",
                     "tip"
                   ]
                 },
@@ -852,21 +1103,6 @@
                     }
                   ]
                 },
-                "client_id": {
-                  "oneOf": [
-                    {
-                      "type": "string",
-                      "example": "d0d40841-b1a7-438a-9d1e-2bfec590d2e3",
-                      "minLength": 6,
-                      "maxLength": 64,
-                      "description": "A implementer defined identifier. This can be used for local resource matching and has no business implication."
-                    },
-                    {
-                      "type": "null"
-                    }
-                  ],
-                  "default": null
-                },
                 "product_group": {
                   "default": null,
                   "oneOf": [
@@ -1013,24 +1249,30 @@
                   "oneOf": [
                     {
                       "type": "array",
-                      "description": "A list of Tillhub resources that caused this transaction, e.g. a stored cart",
+                      "description": "A list of Tillhub resources that caused this transaction, e.g. a stored cart or multiple delivery notes",
                       "items": {
-                        "type": "object"
-                      }
-                    },
-                    {
-                      "type": "null"
-                    }
-                  ],
-                  "default": null
-                },
-                "related_to": {
-                  "oneOf": [
-                    {
-                      "type": "array",
-                      "description": "A list of Tillhub resources that this transaction is related to, e.g. an invoice object that tracks the lifetime of that invoice",
-                      "items": {
-                        "type": "object"
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "type",
+                          "id"
+                        ],
+                        "properties": {
+                          "type": {
+                            "type": "string",
+                            "description": "The type of reference",
+                            "enum": [
+                              "checked_out_delivery_note",
+                              "checked_out_saved_cart"
+                            ]
+                          },
+                          "id": {
+                            "type": "string",
+                            "format": "uuid",
+                            "example": "f2ac2cae-97ff-42a1-967b-0a35222ab6d1",
+                            "description": "A Tillhub cart or delivery note that this reference links to."
+                          }
+                        }
                       }
                     },
                     {
@@ -1045,8 +1287,211 @@
                       "type": "array",
                       "description": "A list of Tillhub resources that this transaction directly depends on, e.g. a refund for a previous sale",
                       "items": {
-                        "type": "object"
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "type",
+                          "id"
+                        ],
+                        "properties": {
+                          "type": {
+                            "type": "string",
+                            "description": "The type of reference",
+                            "enum": [
+                              "cancelled_sale",
+                              "refunded_sale",
+                              "cancelled_expense",
+                              "cancelled_deposit",
+                              "cancelled_bank_expense",
+                              "cancelled_bank_deposit"
+                            ]
+                          },
+                          "id": {
+                            "type": "string",
+                            "format": "uuid",
+                            "example": "f2ac2cae-97ff-42a1-967b-0a35222ab6d1",
+                            "description": "A Tillhub transaction that this reference links to."
+                          }
+                        }
                       }
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null
+                },
+                "related_to": {
+                  "oneOf": [
+                    {
+                      "type": "array",
+                      "description": "A list of Tillhub resources that this transaction is related to, e.g. an invoice object that tracks the lifetime of that invoice",
+                      "items": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "type",
+                          "id"
+                        ],
+                        "properties": {
+                          "type": {
+                            "type": "string",
+                            "description": "The type of reference",
+                            "enum": [
+                              "invoice"
+                            ]
+                          },
+                          "id": {
+                            "type": "string",
+                            "format": "uuid",
+                            "example": "f2ac2cae-97ff-42a1-967b-0a35222ab6d1",
+                            "description": "A Tillhub resource that this reference links to."
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null
+                },
+                "context": {
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "description": "Any additional flat values.",
+                      "properties": {
+                        "title": {
+                          "oneOf": [
+                            {
+                              "type": "string",
+                              "example": "Random 3.",
+                              "maxLength": 1024,
+                              "description": "Any arbitrary title."
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ],
+                          "default": null
+                        },
+                        "account": {
+                          "oneOf": [
+                            {
+                              "type": "object",
+                              "description": "Account face values.",
+                              "properties": {
+                                "number": {
+                                  "type": "string",
+                                  "example": "1009"
+                                }
+                              }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ],
+                          "default": null
+                        },
+                        "product": {
+                          "oneOf": [
+                            {
+                              "type": "object",
+                              "description": "Product face values.",
+                              "properties": {
+                                "number": {
+                                  "type": "string",
+                                  "example": "0032039845"
+                                },
+                                "display": {
+                                  "type": "string",
+                                  "example": "Another product string"
+                                }
+                              }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ],
+                          "default": null
+                        },
+                        "product_group": {
+                          "oneOf": [
+                            {
+                              "type": "object",
+                              "description": "Product face values.",
+                              "properties": {
+                                "number": {
+                                  "type": "string",
+                                  "example": "0032039845"
+                                },
+                                "display": {
+                                  "type": "string",
+                                  "example": "Waxing HIM"
+                                }
+                              }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ],
+                          "default": null
+                        },
+                        "taxes": {
+                          "oneOf": [
+                            {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "description": "Tax face values.",
+                                "properties": {
+                                  "account": {
+                                    "type": "string",
+                                    "example": "440165"
+                                  },
+                                  "display": {
+                                    "default": null,
+                                    "type": "string",
+                                    "example": "Another tax"
+                                  }
+                                }
+                              }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ],
+                          "default": []
+                        },
+                        "salesman_staff": {
+                          "oneOf": [
+                            {
+                              "type": "object",
+                              "description": "Salesman face values.",
+                              "properties": {
+                                "number": {
+                                  "type": "string",
+                                  "example": "012"
+                                },
+                                "display": {
+                                  "type": "string",
+                                  "example": "Cindy Schmidt"
+                                }
+                              }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ],
+                          "default": null
+                        }
+                      },
+                      "required": [
+                        "account",
+                        "product",
+                        "taxes"
+                      ]
                     },
                     {
                       "type": "null"
@@ -1137,6 +1582,120 @@
                   "maximum": 1000000,
                   "multipleOf": 0.01
                 },
+                "voucher": {
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "description": "The effective voucher delta record for this item (thus reversable if needed)",
+                        "additionalProperties": false,
+                        "required": [
+                          "client_id",
+                          "source_id",
+                          "api",
+                          "delta_amount",
+                          "delta_currency",
+                          "system",
+                          "type",
+                          "status"
+                        ],
+                        "properties": {
+                          "client_id": {
+                            "type": "string",
+                            "example": "d0d40841-b1a7-438a-9d1e-2bfec590d2e3",
+                            "minLength": 6,
+                            "maxLength": 64,
+                            "description": "A implementer defined identifier. This can be used for local resource matching and has no business implication. TO BE DEPRECTAED."
+                          },
+                          "source_id": {
+                            "type": "string",
+                            "example": "d0d40841-b1a7-438a-9d1e-2bfec590d2e3",
+                            "minLength": 6,
+                            "maxLength": 64,
+                            "description": "The Tillhub or Fleurop Id of the source voucher."
+                          },
+                          "api": {
+                            "type": "string",
+                            "enum": [
+                              "fleurop-voucher-api",
+                              "tillhub-voucher-api"
+                            ]
+                          },
+                          "delta_amount": {
+                            "description": "The effective change in the value of the voucher.",
+                            "type": "number",
+                            "minimum": -1000000,
+                            "maximum": 1000000,
+                            "multipleOf": 0.01
+                          },
+                          "delta_currency": {
+                            "type": "string",
+                            "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                            "example": "EUR",
+                            "minLength": 3,
+                            "maxLength": 3
+                          },
+                          "barcode": {
+                            "default": null,
+                            "type": "string",
+                            "minLength": 3,
+                            "maxLength": 128,
+                            "description": "Voucher EAN."
+                          },
+                          "code": {
+                            "default": null,
+                            "type": "string",
+                            "minLength": 3,
+                            "maxLength": 128,
+                            "description": "Voucher number."
+                          },
+                          "system": {
+                            "default": null,
+                            "type": "string",
+                            "minLength": 3,
+                            "maxLength": 128,
+                            "description": "Identifier for the voucher system."
+                          },
+                          "title": {
+                            "default": null,
+                            "description": "Title of the source voucher."
+                          },
+                          "type": {
+                            "type": "string",
+                            "description": "Mainly legacy support for Fleurop flows.",
+                            "enum": [
+                              "undefined",
+                              "fleuropRedeem",
+                              "fleuropSellOrRecharge",
+                              "ownBrandedRecharge",
+                              "ownBrandedRedeem",
+                              "externalSellAndActivate",
+                              "tillhubSell",
+                              "tillhubRecharge",
+                              "tillhubRedeem"
+                            ]
+                          },
+                          "status": {
+                            "type": "string",
+                            "description": "Client side recorded booking state of the delta operation.",
+                            "enum": [
+                              "unknown",
+                              "pending",
+                              "locked",
+                              "succeed",
+                              "failed",
+                              "scheduled"
+                            ]
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null
+                },
                 "insert_id": {
                   "type": "number",
                   "example": "128",
@@ -1213,15 +1772,34 @@
                   "example": "2018-11-04T23:18:43.075Z",
                   "description": "The server creation time of this transaction."
                 },
+                "client_id": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "example": "d0d40841-b1a7-438a-9d1e-2bfec590d2e3",
+                      "minLength": 6,
+                      "maxLength": 64,
+                      "description": "A implementer defined identifier. This can be used for local resource matching and has no business implication."
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null
+                },
                 "type": {
                   "type": "string",
                   "description": "",
                   "enum": [
                     "card",
                     "cash",
+                    "expense",
+                    "voucher",
+                    "custom",
                     "card_opi",
                     "card_concardis",
-                    "voucher"
+                    "card_adyen",
+                    "card_tim"
                   ]
                 },
                 "payment_option": {
@@ -1304,6 +1882,15 @@
                   "multipleOf": 0.01,
                   "default": null
                 },
+                "amount_change": {
+                  "description": "The cash amount that was handed back from the cashier as change.",
+                  "example": "49.98",
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1000000,
+                  "multipleOf": 0.01,
+                  "default": null
+                },
                 "custom_id": {
                   "default": null,
                   "oneOf": [
@@ -1371,14 +1958,61 @@
                     }
                   ]
                 },
-                "client_id": {
+                "account_change": {
+                  "default": null,
                   "oneOf": [
                     {
                       "type": "string",
-                      "example": "d0d40841-b1a7-438a-9d1e-2bfec590d2e3",
-                      "minLength": 6,
-                      "maxLength": 64,
-                      "description": "A implementer defined identifier. This can be used for local resource matching and has no business implication."
+                      "description": "The applicable Tillhub account for the cash payment type used for change.",
+                      "example": "a5380b42-6025-49de-bb1d-c9357df96506"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "context": {
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "description": "Any additional flat values.",
+                      "properties": {
+                        "title": {
+                          "oneOf": [
+                            {
+                              "type": "string",
+                              "example": "Random 3.",
+                              "maxLength": 1024,
+                              "description": "Any arbitrary title."
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ],
+                          "default": null
+                        },
+                        "account": {
+                          "oneOf": [
+                            {
+                              "type": "object",
+                              "description": "Account face values.",
+                              "properties": {
+                                "number": {
+                                  "type": "string",
+                                  "example": "1009"
+                                }
+                              }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ],
+                          "default": null
+                        }
+                      },
+                      "required": [
+                        "account"
+                      ]
                     },
                     {
                       "type": "null"
@@ -1404,24 +2038,30 @@
                   "oneOf": [
                     {
                       "type": "array",
-                      "description": "A list of Tillhub resources that caused this transaction, e.g. a stored cart",
+                      "description": "A list of Tillhub resources that caused this transaction, e.g. a stored cart or multiple delivery notes",
                       "items": {
-                        "type": "object"
-                      }
-                    },
-                    {
-                      "type": "null"
-                    }
-                  ],
-                  "default": null
-                },
-                "related_to": {
-                  "oneOf": [
-                    {
-                      "type": "array",
-                      "description": "A list of Tillhub resources that this transaction is related to, e.g. an invoice object that tracks the lifetime of that invoice",
-                      "items": {
-                        "type": "object"
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "type",
+                          "id"
+                        ],
+                        "properties": {
+                          "type": {
+                            "type": "string",
+                            "description": "The type of reference",
+                            "enum": [
+                              "checked_out_delivery_note",
+                              "checked_out_saved_cart"
+                            ]
+                          },
+                          "id": {
+                            "type": "string",
+                            "format": "uuid",
+                            "example": "f2ac2cae-97ff-42a1-967b-0a35222ab6d1",
+                            "description": "A Tillhub cart or delivery note that this reference links to."
+                          }
+                        }
                       }
                     },
                     {
@@ -1436,7 +2076,67 @@
                       "type": "array",
                       "description": "A list of Tillhub resources that this transaction directly depends on, e.g. a refund for a previous sale",
                       "items": {
-                        "type": "object"
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "type",
+                          "id"
+                        ],
+                        "properties": {
+                          "type": {
+                            "type": "string",
+                            "description": "The type of reference",
+                            "enum": [
+                              "cancelled_sale",
+                              "refunded_sale",
+                              "cancelled_expense",
+                              "cancelled_deposit",
+                              "cancelled_bank_expense",
+                              "cancelled_bank_deposit"
+                            ]
+                          },
+                          "id": {
+                            "type": "string",
+                            "format": "uuid",
+                            "example": "f2ac2cae-97ff-42a1-967b-0a35222ab6d1",
+                            "description": "A Tillhub transaction that this reference links to."
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null
+                },
+                "related_to": {
+                  "oneOf": [
+                    {
+                      "type": "array",
+                      "description": "A list of Tillhub resources that this transaction is related to, e.g. an invoice object that tracks the lifetime of that invoice",
+                      "items": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "type",
+                          "id"
+                        ],
+                        "properties": {
+                          "type": {
+                            "type": "string",
+                            "description": "The type of reference",
+                            "enum": [
+                              "invoice"
+                            ]
+                          },
+                          "id": {
+                            "type": "string",
+                            "format": "uuid",
+                            "example": "f2ac2cae-97ff-42a1-967b-0a35222ab6d1",
+                            "description": "A Tillhub resource that this reference links to."
+                          }
+                        }
                       }
                     },
                     {
@@ -1451,7 +2151,7 @@
                       "type": "string",
                       "example": "823742686434462376376376473647346",
                       "maxLength": 128,
-                      "description": "Any identifier a user wants to store in the transaction system. E.g. an ID in a thirdy party ERP."
+                      "description": "Any identifier a user wants to store in the transaction system. E.g. an ID in a third party ERP."
                     },
                     {
                       "type": "null"
@@ -1477,6 +2177,216 @@
                     {
                       "type": "object",
                       "description": "A container for storing arbitrary metadata. This might be altered by API."
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null
+                },
+                "voucher": {
+                  "description": "If a voucher was used for this payment - addtional information will be stored here.",
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "description": "The effective voucher delta record for this item (thus reversable if needed)",
+                        "additionalProperties": false,
+                        "required": [
+                          "client_id",
+                          "source_id",
+                          "api",
+                          "delta_amount",
+                          "delta_currency",
+                          "system",
+                          "type",
+                          "status"
+                        ],
+                        "properties": {
+                          "client_id": {
+                            "type": "string",
+                            "example": "d0d40841-b1a7-438a-9d1e-2bfec590d2e3",
+                            "minLength": 6,
+                            "maxLength": 64,
+                            "description": "A implementer defined identifier. This can be used for local resource matching and has no business implication. TO BE DEPRECTAED."
+                          },
+                          "source_id": {
+                            "type": "string",
+                            "example": "d0d40841-b1a7-438a-9d1e-2bfec590d2e3",
+                            "minLength": 6,
+                            "maxLength": 64,
+                            "description": "The Tillhub or Fleurop Id of the source voucher."
+                          },
+                          "api": {
+                            "type": "string",
+                            "enum": [
+                              "fleurop-voucher-api",
+                              "tillhub-voucher-api"
+                            ]
+                          },
+                          "delta_amount": {
+                            "description": "The effective change in the value of the voucher.",
+                            "type": "number",
+                            "minimum": -1000000,
+                            "maximum": 1000000,
+                            "multipleOf": 0.01
+                          },
+                          "delta_currency": {
+                            "type": "string",
+                            "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                            "example": "EUR",
+                            "minLength": 3,
+                            "maxLength": 3
+                          },
+                          "barcode": {
+                            "default": null,
+                            "type": "string",
+                            "minLength": 3,
+                            "maxLength": 128,
+                            "description": "Voucher EAN."
+                          },
+                          "code": {
+                            "default": null,
+                            "type": "string",
+                            "minLength": 3,
+                            "maxLength": 128,
+                            "description": "Voucher number."
+                          },
+                          "system": {
+                            "default": null,
+                            "type": "string",
+                            "minLength": 3,
+                            "maxLength": 128,
+                            "description": "Identifier for the voucher system."
+                          },
+                          "title": {
+                            "default": null,
+                            "description": "Title of the source voucher."
+                          },
+                          "type": {
+                            "type": "string",
+                            "description": "Mainly legacy support for Fleurop flows.",
+                            "enum": [
+                              "undefined",
+                              "fleuropRedeem",
+                              "fleuropSellOrRecharge",
+                              "ownBrandedRecharge",
+                              "ownBrandedRedeem",
+                              "externalSellAndActivate",
+                              "tillhubSell",
+                              "tillhubRecharge",
+                              "tillhubRedeem"
+                            ]
+                          },
+                          "status": {
+                            "type": "string",
+                            "description": "Client side recorded booking state of the delta operation.",
+                            "enum": [
+                              "unknown",
+                              "pending",
+                              "locked",
+                              "succeed",
+                              "failed",
+                              "scheduled"
+                            ]
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null
+                },
+                "terminal": {
+                  "description": "If a terminal was used for this payment - addtional information will be stored here. NULL together with a card type indicates a disconnected terminal payment.",
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "description": "The effective voucher delta record for this item (thus reversable if needed)",
+                        "additionalProperties": false,
+                        "required": [
+                          "device_id",
+                          "transaction_id",
+                          "api",
+                          "card_circuit",
+                          "card_pan",
+                          "raw_response"
+                        ],
+                        "properties": {
+                          "device_id": {
+                            "type": "string",
+                            "example": "51098708",
+                            "minLength": 4,
+                            "maxLength": 64,
+                            "description": "The Id of the terminal used. Style differs by Terminal-API-type."
+                          },
+                          "transaction_id": {
+                            "type": "string",
+                            "example": "d0d40841-b1a7-438a-9d1e-2bfec590d2e3",
+                            "minLength": 4,
+                            "maxLength": 64,
+                            "description": "The Id assigned by the terminal for this transaction."
+                          },
+                          "api": {
+                            "type": "string",
+                            "enum": [
+                              "adyen",
+                              "concardis",
+                              "opi",
+                              "tim"
+                            ]
+                          },
+                          "card_circuit": {
+                            "default": null,
+                            "type": "string",
+                            "minLength": 3,
+                            "maxLength": 128,
+                            "description": "The detected card circuit as reposrted by the terminal (VISA, MasterCard, GiroCard etc.)"
+                          },
+                          "card_pan": {
+                            "default": null,
+                            "type": "string",
+                            "minLength": 3,
+                            "maxLength": 128,
+                            "description": "The cards primary account number. *** on merchant receipts."
+                          },
+                          "receipts": {
+                            "description": "The receipt texts reported by the terminal.",
+                            "type": "array",
+                            "default": null,
+                            "items": {
+                              "type": "object",
+                              "additionalProperties": false,
+                              "required": [
+                                "type",
+                                "text"
+                              ],
+                              "properties": {
+                                "type": {
+                                  "type": "string",
+                                  "enum": [
+                                    "customer",
+                                    "merchant"
+                                  ]
+                                },
+                                "text": {
+                                  "type": "string",
+                                  "maxLength": 16384
+                                }
+                              }
+                            }
+                          },
+                          "raw_response": {
+                            "default": null,
+                            "description": "The raw response of the terminal for finalizing the card payment. Might contain additional information.",
+                            "type": "string",
+                            "maxLength": 16384
+                          }
+                        }
+                      }
                     },
                     {
                       "type": "null"
