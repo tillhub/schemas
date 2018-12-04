@@ -1,3 +1,10 @@
+## [2.69.1](https://github.com/tillhub/schemas/compare/v2.69.0...v2.69.1) (2018-12-03)
+
+
+### Bug Fixes
+
+* fixes vat rate type ([177913b](https://github.com/tillhub/schemas/commit/177913b))
+
 # [2.69.0](https://github.com/tillhub/schemas/compare/v2.68.0...v2.69.0) (2018-12-03)
 
 
