@@ -651,6 +651,7 @@
                 "description": "A list of Tillhub resources that this transaction directly depends on, e.g. a refund for a previous sale",
                 "items": {
                   "type": "object",
+                  "description": "Reference to the same type of object (e.g. transaction to pervious transaction)",
                   "additionalProperties": false,
                   "required": [
                     "type",
@@ -674,6 +675,17 @@
                       "format": "uuid",
                       "example": "f2ac2cae-97ff-42a1-967b-0a35222ab6d1",
                       "description": "A Tillhub transaction that this reference links to."
+                    },
+                    "custom_id": {
+                      "type": "string",
+                      "example": "278",
+                      "description": "The custom_id of a Tillhub transaction that this reference links to."
+                    },
+                    "date": {
+                      "type": "string",
+                      "format": "date-time",
+                      "example": "2018-01-29T14:55:05.000Z",
+                      "description": "The date of a Tillhub transaction that this reference links to."
                     }
                   }
                 }
@@ -1052,18 +1064,51 @@
                   ],
                   "default": null
                 },
-                "tax": {
-                  "default": null,
+                "taxes": {
                   "oneOf": [
                     {
-                      "type": "string",
-                      "description": "The applicable Tillhub tax resource with tax accounts.",
-                      "example": "a3be1e02-7983-4cba-b7b8-94453c0536ef"
+                      "type": "array",
+                      "items": {
+                        "oneOf": [
+                          {
+                            "type": "object",
+                            "description": "The applicable Tillhub tax resource.",
+                            "properties": {
+                              "tax": {
+                                "description": "The applicable Tillhub tax resource with tax accounts.",
+                                "type": "string",
+                                "example": "a3be1e02-7983-4cba-b7b8-94453c0536ef"
+                              },
+                              "order_index": {
+                                "description": "Position of the specific tax.",
+                                "type": "integer",
+                                "example": 0
+                              },
+                              "account": {
+                                "description": "Custom number identifier.",
+                                "type": "string",
+                                "example": "440165"
+                              },
+                              "display": {
+                                "description": "Custom description.",
+                                "default": null,
+                                "type": "string",
+                                "example": "Another tax"
+                              }
+                            }
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ],
+                        "default": null
+                      }
                     },
                     {
                       "type": "null"
                     }
-                  ]
+                  ],
+                  "default": []
                 },
                 "account": {
                   "default": null,
@@ -1263,6 +1308,7 @@
                       "description": "A list of Tillhub resources that this transaction directly depends on, e.g. a refund for a previous sale",
                       "items": {
                         "type": "object",
+                        "description": "Reference to the same type of object (e.g. transaction to pervious transaction)",
                         "additionalProperties": false,
                         "required": [
                           "type",
@@ -1286,6 +1332,17 @@
                             "format": "uuid",
                             "example": "f2ac2cae-97ff-42a1-967b-0a35222ab6d1",
                             "description": "A Tillhub transaction that this reference links to."
+                          },
+                          "custom_id": {
+                            "type": "string",
+                            "example": "278",
+                            "description": "The custom_id of a Tillhub transaction that this reference links to."
+                          },
+                          "date": {
+                            "type": "string",
+                            "format": "date-time",
+                            "example": "2018-01-29T14:55:05.000Z",
+                            "description": "The date of a Tillhub transaction that this reference links to."
                           }
                         }
                       }
@@ -1413,38 +1470,16 @@
                           ],
                           "default": null
                         },
-                        "taxes": {
-                          "oneOf": [
-                            {
-                              "type": "array",
-                              "items": {
-                                "type": "object",
-                                "description": "Tax face values.",
-                                "properties": {
-                                  "account": {
-                                    "type": "string",
-                                    "example": "440165"
-                                  },
-                                  "display": {
-                                    "default": null,
-                                    "type": "string",
-                                    "example": "Another tax"
-                                  }
-                                }
-                              }
-                            },
-                            {
-                              "type": "null"
-                            }
-                          ],
-                          "default": []
-                        },
                         "salesman_staff": {
                           "oneOf": [
                             {
                               "type": "object",
                               "description": "Salesman face values.",
                               "properties": {
+                                "owner": {
+                                  "type": "boolean",
+                                  "example": true
+                                },
                                 "number": {
                                   "type": "string",
                                   "example": "012"
@@ -1464,8 +1499,7 @@
                       },
                       "required": [
                         "account",
-                        "product",
-                        "taxes"
+                        "product"
                       ]
                     },
                     {
@@ -1629,11 +1663,19 @@
                             "type": "string",
                             "minLength": 3,
                             "maxLength": 128,
-                            "description": "Identifier for the voucher system."
+                            "description": "Identifier for the voucher system. (Also known as User)"
                           },
                           "title": {
                             "default": null,
+                            "type": "string",
+                            "maxLength": 256,
                             "description": "Title of the source voucher."
+                          },
+                          "message": {
+                            "default": null,
+                            "type": "string",
+                            "maxLength": 2048,
+                            "description": "Messages from voucher processing."
                           },
                           "type": {
                             "type": "string",
@@ -1771,6 +1813,7 @@
                     "expense",
                     "voucher",
                     "custom",
+                    "invoice",
                     "card_opi",
                     "card_concardis",
                     "card_adyen",
@@ -2052,6 +2095,7 @@
                       "description": "A list of Tillhub resources that this transaction directly depends on, e.g. a refund for a previous sale",
                       "items": {
                         "type": "object",
+                        "description": "Reference to the same type of object (e.g. transaction to pervious transaction)",
                         "additionalProperties": false,
                         "required": [
                           "type",
@@ -2075,6 +2119,17 @@
                             "format": "uuid",
                             "example": "f2ac2cae-97ff-42a1-967b-0a35222ab6d1",
                             "description": "A Tillhub transaction that this reference links to."
+                          },
+                          "custom_id": {
+                            "type": "string",
+                            "example": "278",
+                            "description": "The custom_id of a Tillhub transaction that this reference links to."
+                          },
+                          "date": {
+                            "type": "string",
+                            "format": "date-time",
+                            "example": "2018-01-29T14:55:05.000Z",
+                            "description": "The date of a Tillhub transaction that this reference links to."
                           }
                         }
                       }
@@ -2232,11 +2287,19 @@
                             "type": "string",
                             "minLength": 3,
                             "maxLength": 128,
-                            "description": "Identifier for the voucher system."
+                            "description": "Identifier for the voucher system. (Also known as User)"
                           },
                           "title": {
                             "default": null,
+                            "type": "string",
+                            "maxLength": 256,
                             "description": "Title of the source voucher."
+                          },
+                          "message": {
+                            "default": null,
+                            "type": "string",
+                            "maxLength": 2048,
+                            "description": "Messages from voucher processing."
                           },
                           "type": {
                             "type": "string",
