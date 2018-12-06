@@ -43,6 +43,19 @@
         }
       ]
     },
+    "amount_issued_at": {
+      "description": "decimal type",
+      "example": "10.99",
+      "anyOf": [
+        {
+          "type": "number",
+          "minimum": 0
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "amount_cents": {
       "description": "",
       "anyOf": [

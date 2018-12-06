@@ -1,3 +1,10 @@
+## [2.69.4](https://github.com/tillhub/schemas/compare/v2.69.3...v2.69.4) (2018-12-06)
+
+
+### Bug Fixes
+
+* **vouchers:** adds amount_issued_at ([4b1d2d4](https://github.com/tillhub/schemas/commit/4b1d2d4))
+
 ## [2.69.3](https://github.com/tillhub/schemas/compare/v2.69.2...v2.69.3) (2018-12-06)
 
 
