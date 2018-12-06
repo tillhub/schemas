@@ -320,6 +320,7 @@
             "oneOf": [
               {
                 "type": "object",
+                "additionalProperties": false,
                 "description": "Any additional flat values.",
                 "properties": {
                   "title": {
@@ -340,6 +341,7 @@
                     "oneOf": [
                       {
                         "type": "object",
+                        "additionalProperties": false,
                         "description": "Transaction specific counters.",
                         "properties": {
                           "signing_error": {
@@ -359,6 +361,7 @@
                     "oneOf": [
                       {
                         "type": "object",
+                        "additionalProperties": false,
                         "description": "Register face values.",
                         "properties": {
                           "display": {
@@ -377,6 +380,7 @@
                     "oneOf": [
                       {
                         "type": "object",
+                        "additionalProperties": false,
                         "description": "Branch face values.",
                         "properties": {
                           "display": {
@@ -395,6 +399,7 @@
                     "oneOf": [
                       {
                         "type": "object",
+                        "additionalProperties": false,
                         "description": "Cashier face values.",
                         "properties": {
                           "number": {
@@ -417,9 +422,10 @@
                     "oneOf": [
                       {
                         "type": "object",
+                        "additionalProperties": false,
                         "description": "Customer face values.",
                         "properties": {
-                          "number": {
+                          "custom_id": {
                             "type": "string",
                             "example": "004310981002"
                           },
@@ -435,10 +441,7 @@
                     ],
                     "default": null
                   }
-                },
-                "required": [
-                  "cashier_staff"
-                ]
+                }
               },
               {
                 "type": "null"
@@ -640,6 +643,7 @@
                 "description": "A list of Tillhub resources that caused this transaction, e.g. a stored cart or multiple delivery notes",
                 "items": {
                   "type": "object",
+                  "description": "Reference to a similar type of object (e.g. transaction to cart)",
                   "additionalProperties": false,
                   "required": [
                     "type",
@@ -659,6 +663,17 @@
                       "format": "uuid",
                       "example": "f2ac2cae-97ff-42a1-967b-0a35222ab6d1",
                       "description": "A Tillhub cart or delivery note that this reference links to."
+                    },
+                    "custom_id": {
+                      "type": "string",
+                      "example": "278",
+                      "description": "The custom_id of a Tillhub transaction that this reference links to."
+                    },
+                    "date": {
+                      "type": "string",
+                      "format": "date-time",
+                      "example": "2018-01-29T14:55:05.000Z",
+                      "description": "The date of a Tillhub transaction that this reference links to."
                     }
                   }
                 }
@@ -728,6 +743,7 @@
                 "description": "A list of Tillhub resources that this transaction is related to, e.g. an invoice object that tracks the lifetime of that invoice",
                 "items": {
                   "type": "object",
+                  "description": "Reference to a very different type of object (e.g. transaction to invoice)",
                   "additionalProperties": false,
                   "required": [
                     "type",
@@ -1109,6 +1125,14 @@
                                 "type": "integer",
                                 "example": 0
                               },
+                              "rate": {
+                                "type": "number",
+                                "description": "The rate of this tax.",
+                                "example": "0.21",
+                                "minimum": 0,
+                                "maximum": 1,
+                                "multipleOf": 0.001
+                              },
                               "account": {
                                 "description": "Custom number identifier.",
                                 "type": "string",
@@ -1140,7 +1164,8 @@
                   "oneOf": [
                     {
                       "type": "string",
-                      "description": "The applicable Tillhub (revenue) account.",
+                      "format": "uuid",
+                      "description": "The applicable Tillhub (revenue or EXPENSE) account.",
                       "example": "a5380b42-6025-49de-bb1d-c9357df96506"
                     },
                     {
@@ -1198,16 +1223,27 @@
                       "type": "array",
                       "items": {
                         "type": "object",
+                        "additionalProperties": false,
                         "description": "Any applied discounts as they happened at transaction creation time.",
                         "properties": {
                           "amount": {
-                            "type": "number"
+                            "description": "The effective amount for this discount per single item",
+                            "type": "number",
+                            "minimum": -1000000,
+                            "maximum": 1000000,
+                            "multipleOf": 0.01
                           },
                           "amount_total": {
-                            "type": "number"
+                            "description": "The effective amount for this discount per qty items",
+                            "type": "number",
+                            "minimum": -1000000,
+                            "maximum": 1000000,
+                            "multipleOf": 0.01
                           },
                           "order_index": {
-                            "type": "integer"
+                            "type": "integer",
+                            "minimum": 0,
+                            "maximum": 100
                           },
                           "currency": {
                             "type": "string",
@@ -1215,9 +1251,13 @@
                             "maxLength": 3
                           },
                           "value": {
+                            "description": "The absolut reduction via this voucher",
                             "oneOf": [
                               {
-                                "type": "number"
+                                "type": "number",
+                                "minimum": -1000000,
+                                "maximum": 1000000,
+                                "multipleOf": 0.01
                               },
                               {
                                 "type": "null"
@@ -1225,11 +1265,13 @@
                             ]
                           },
                           "rate": {
+                            "description": "The relative reduction via this voucher",
                             "oneOf": [
                               {
                                 "type": "number",
                                 "minimum": 0,
-                                "maximum": 1
+                                "maximum": 1,
+                                "multipleOf": 0.001
                               },
                               {
                                 "type": "null"
@@ -1237,6 +1279,7 @@
                             ]
                           },
                           "client_id": {
+                            "description": "Client id to map this object back",
                             "type": "string",
                             "maxLength": 128
                           },
@@ -1297,6 +1340,7 @@
                       "description": "A list of Tillhub resources that caused this transaction, e.g. a stored cart or multiple delivery notes",
                       "items": {
                         "type": "object",
+                        "description": "Reference to a similar type of object (e.g. transaction to cart)",
                         "additionalProperties": false,
                         "required": [
                           "type",
@@ -1316,6 +1360,17 @@
                             "format": "uuid",
                             "example": "f2ac2cae-97ff-42a1-967b-0a35222ab6d1",
                             "description": "A Tillhub cart or delivery note that this reference links to."
+                          },
+                          "custom_id": {
+                            "type": "string",
+                            "example": "278",
+                            "description": "The custom_id of a Tillhub transaction that this reference links to."
+                          },
+                          "date": {
+                            "type": "string",
+                            "format": "date-time",
+                            "example": "2018-01-29T14:55:05.000Z",
+                            "description": "The date of a Tillhub transaction that this reference links to."
                           }
                         }
                       }
@@ -1385,6 +1440,7 @@
                       "description": "A list of Tillhub resources that this transaction is related to, e.g. an invoice object that tracks the lifetime of that invoice",
                       "items": {
                         "type": "object",
+                        "description": "Reference to a very different type of object (e.g. transaction to invoice)",
                         "additionalProperties": false,
                         "required": [
                           "type",
@@ -1440,8 +1496,14 @@
                               "description": "Account face values.",
                               "properties": {
                                 "number": {
+                                  "description": "Account number.",
                                   "type": "string",
-                                  "example": "1009"
+                                  "example": "1776"
+                                },
+                                "display": {
+                                  "description": "Account description.",
+                                  "type": "string",
+                                  "example": "Warenerlöse 7 %"
                                 }
                               }
                             },
@@ -1623,16 +1685,6 @@
                       "properties": {
                         "description": "The effective voucher delta record for this item (thus reversable if needed)",
                         "additionalProperties": false,
-                        "required": [
-                          "client_id",
-                          "source_id",
-                          "api",
-                          "delta_amount",
-                          "delta_currency",
-                          "system",
-                          "type",
-                          "status"
-                        ],
                         "properties": {
                           "client_id": {
                             "type": "string",
@@ -1674,7 +1726,7 @@
                             "type": "string",
                             "minLength": 3,
                             "maxLength": 128,
-                            "description": "Voucher EAN."
+                            "description": "Voucher EAN or similar."
                           },
                           "code": {
                             "default": null,
@@ -1729,7 +1781,17 @@
                               "scheduled"
                             ]
                           }
-                        }
+                        },
+                        "required": [
+                          "client_id",
+                          "source_id",
+                          "api",
+                          "delta_amount",
+                          "delta_currency",
+                          "system",
+                          "type",
+                          "status"
+                        ]
                       }
                     },
                     {
@@ -1814,6 +1876,7 @@
                   "example": "2018-11-04T23:18:43.075Z",
                   "description": "The server creation time of this transaction."
                 },
+                "additionalProperties": false,
                 "client_id": {
                   "oneOf": [
                     {
@@ -2084,6 +2147,7 @@
                       "description": "A list of Tillhub resources that caused this transaction, e.g. a stored cart or multiple delivery notes",
                       "items": {
                         "type": "object",
+                        "description": "Reference to a similar type of object (e.g. transaction to cart)",
                         "additionalProperties": false,
                         "required": [
                           "type",
@@ -2103,6 +2167,17 @@
                             "format": "uuid",
                             "example": "f2ac2cae-97ff-42a1-967b-0a35222ab6d1",
                             "description": "A Tillhub cart or delivery note that this reference links to."
+                          },
+                          "custom_id": {
+                            "type": "string",
+                            "example": "278",
+                            "description": "The custom_id of a Tillhub transaction that this reference links to."
+                          },
+                          "date": {
+                            "type": "string",
+                            "format": "date-time",
+                            "example": "2018-01-29T14:55:05.000Z",
+                            "description": "The date of a Tillhub transaction that this reference links to."
                           }
                         }
                       }
@@ -2172,6 +2247,7 @@
                       "description": "A list of Tillhub resources that this transaction is related to, e.g. an invoice object that tracks the lifetime of that invoice",
                       "items": {
                         "type": "object",
+                        "description": "Reference to a very different type of object (e.g. transaction to invoice)",
                         "additionalProperties": false,
                         "required": [
                           "type",
@@ -2247,16 +2323,6 @@
                       "properties": {
                         "description": "The effective voucher delta record for this item (thus reversable if needed)",
                         "additionalProperties": false,
-                        "required": [
-                          "client_id",
-                          "source_id",
-                          "api",
-                          "delta_amount",
-                          "delta_currency",
-                          "system",
-                          "type",
-                          "status"
-                        ],
                         "properties": {
                           "client_id": {
                             "type": "string",
@@ -2298,7 +2364,7 @@
                             "type": "string",
                             "minLength": 3,
                             "maxLength": 128,
-                            "description": "Voucher EAN."
+                            "description": "Voucher EAN or similar."
                           },
                           "code": {
                             "default": null,
@@ -2353,7 +2419,17 @@
                               "scheduled"
                             ]
                           }
-                        }
+                        },
+                        "required": [
+                          "client_id",
+                          "source_id",
+                          "api",
+                          "delta_amount",
+                          "delta_currency",
+                          "system",
+                          "type",
+                          "status"
+                        ]
                       }
                     },
                     {
