@@ -1,3 +1,10 @@
+## [2.69.5](https://github.com/tillhub/schemas/compare/v2.69.4...v2.69.5) (2018-12-06)
+
+
+### Bug Fixes
+
+* **vouchers:** allow voucher comment to be null ([ae0f800](https://github.com/tillhub/schemas/commit/ae0f800))
+
 ## [2.69.4](https://github.com/tillhub/schemas/compare/v2.69.3...v2.69.4) (2018-12-06)
 
 
