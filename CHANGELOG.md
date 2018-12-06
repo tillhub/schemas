@@ -1,3 +1,10 @@
+## [2.69.3](https://github.com/tillhub/schemas/compare/v2.69.2...v2.69.3) (2018-12-06)
+
+
+### Bug Fixes
+
+* **vouchers:** allow sending empty array in regions ([2c03669](https://github.com/tillhub/schemas/commit/2c03669))
+
 ## [2.69.2](https://github.com/tillhub/schemas/compare/v2.69.1...v2.69.2) (2018-12-06)
 
 
