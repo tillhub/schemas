@@ -128,9 +128,16 @@
       ]
     },
     "expires_at": {
-      "description": "",
-      "type": "string",
-      "format": "date-time"
+      "oneOf": [
+        {
+          "description": "",
+          "type": "string",
+          "format": "date-time"
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "barcodes": {
       "description": "",

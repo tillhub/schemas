@@ -1,3 +1,10 @@
+## [2.69.6](https://github.com/tillhub/schemas/compare/v2.69.5...v2.69.6) (2018-12-06)
+
+
+### Bug Fixes
+
+* **vouchers:** aloow expires at to be null ([a9cbedf](https://github.com/tillhub/schemas/commit/a9cbedf))
+
 ## [2.69.5](https://github.com/tillhub/schemas/compare/v2.69.4...v2.69.5) (2018-12-06)
 
 
