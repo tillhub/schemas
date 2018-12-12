@@ -1,3 +1,10 @@
+## [2.70.3](https://github.com/tillhub/schemas/compare/v2.70.2...v2.70.3) (2018-12-12)
+
+
+### Bug Fixes
+
+* **schemas:** revert tip total renaming ([c45f61d](https://github.com/tillhub/schemas/commit/c45f61d))
+
 ## [2.70.2](https://github.com/tillhub/schemas/compare/v2.70.1...v2.70.2) (2018-12-12)
 
 

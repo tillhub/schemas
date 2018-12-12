@@ -1681,7 +1681,7 @@
             "maximum": 1000000,
             "multipleOf": 0.01
           },
-          "amount_tip": {
+          "tip_total": {
             "description": "The included tip amount.",
             "type": "number",
             "minimum": -1000000,
