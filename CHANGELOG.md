@@ -1,3 +1,10 @@
+# [2.71.0](https://github.com/tillhub/schemas/compare/v2.70.4...v2.71.0) (2018-12-12)
+
+
+### Features
+
+* **schemas:** loosen internal cart matching ([dd91fcc](https://github.com/tillhub/schemas/commit/dd91fcc))
+
 ## [2.70.4](https://github.com/tillhub/schemas/compare/v2.70.3...v2.70.4) (2018-12-12)
 
 
