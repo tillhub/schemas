@@ -1937,38 +1937,66 @@
                   "multipleOf": 0.01
                 },
                 "tip_total": {
-                  "description": "The included tip amount.",
-                  "type": "number",
-                  "minimum": -1000000,
-                  "maximum": 1000000,
-                  "multipleOf": 0.01,
+                  "oneOf": [
+                    {
+                      "description": "The included tip amount.",
+                      "type": "number",
+                      "minimum": -1000000,
+                      "maximum": 1000000,
+                      "multipleOf": 0.01
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
                   "default": null
                 },
                 "amount_given": {
-                  "description": "The actual over the counter money flow: regardles what needs to be payed e.g. 49.98, but the customer has given. This is usually of interest in cash payments, or when when customers gave fewer amount than they ought to pay.",
-                  "example": "50.00",
-                  "type": "number",
-                  "minimum": -1000000,
-                  "maximum": 1000000,
-                  "multipleOf": 0.01,
+                  "oneOf": [
+                    {
+                      "description": "The actual over the counter money flow: regardles what needs to be payed e.g. 49.98, but the customer has given. This is usually of interest in cash payments, or when when customers gave fewer amount than they ought to pay.",
+                      "example": "50.00",
+                      "type": "number",
+                      "minimum": -1000000,
+                      "maximum": 1000000,
+                      "multipleOf": 0.01
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
                   "default": null
                 },
                 "amount_requested": {
-                  "description": "The amount that was requested by the POS e.g. 49.98, regardless of what was given e.g. 50.00. Hence the rest is change or tip. This is usually of interest in cash payments.",
-                  "example": "49.98",
-                  "type": "number",
-                  "minimum": -1000000,
-                  "maximum": 1000000,
-                  "multipleOf": 0.01,
+                  "oneOf": [
+                    {
+                      "description": "The amount that was requested by the POS e.g. 49.98, regardless of what was given e.g. 50.00. Hence the rest is change or tip. This is usually of interest in cash payments.",
+                      "example": "49.98",
+                      "type": "number",
+                      "minimum": -1000000,
+                      "maximum": 1000000,
+                      "multipleOf": 0.01
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
                   "default": null
                 },
                 "amount_change": {
-                  "description": "The cash amount that was handed back from the cashier as change.",
-                  "example": "49.98",
-                  "type": "number",
-                  "minimum": 0,
-                  "maximum": 1000000,
-                  "multipleOf": 0.01,
+                  "oneOf": [
+                    {
+                      "description": "The cash amount that was handed back from the cashier as change.",
+                      "example": "49.98",
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 1000000,
+                      "multipleOf": 0.01
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
                   "default": null
                 },
                 "custom_id": {

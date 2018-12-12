@@ -1,3 +1,10 @@
+## [2.70.4](https://github.com/tillhub/schemas/compare/v2.70.3...v2.70.4) (2018-12-12)
+
+
+### Bug Fixes
+
+* **schemas:** must allow nulls ([d5fcf58](https://github.com/tillhub/schemas/commit/d5fcf58))
+
 ## [2.70.3](https://github.com/tillhub/schemas/compare/v2.70.2...v2.70.3) (2018-12-12)
 
 
