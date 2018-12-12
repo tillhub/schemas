@@ -941,6 +941,7 @@
                     }
                   }
                 },
+                "additionalProperties": false,
                 "client_id": {
                   "oneOf": [
                     {
@@ -1962,8 +1963,8 @@
                   "maximum": 1000000,
                   "multipleOf": 0.01
                 },
-                "tip_total": {
-                  "description": "The payed amount total.",
+                "amount_tip": {
+                  "description": "The included tip amount.",
                   "type": "number",
                   "minimum": -1000000,
                   "maximum": 1000000,
@@ -2081,6 +2082,7 @@
                   "oneOf": [
                     {
                       "type": "object",
+                      "additionalProperties": false,
                       "description": "Any additional flat values.",
                       "properties": {
                         "title": {
@@ -2101,6 +2103,7 @@
                           "oneOf": [
                             {
                               "type": "object",
+                              "additionalProperties": false,
                               "description": "Account face values.",
                               "properties": {
                                 "number": {
@@ -2597,6 +2600,19 @@
                     "format": "date-time",
                     "example": "2018-11-04T23:18:43.075Z",
                     "description": "The actual time a dsipatchable transaction was dispatched, e.g. an invoice has been sent and results in an oblicgation from that time on."
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "printed_at": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "format": "date-time",
+                    "example": "2018-11-04T23:18:43.075Z",
+                    "description": "The first time any document was printed (also plain text receipts - to mark subsequent prints as copy)."
                   },
                   {
                     "type": "null"

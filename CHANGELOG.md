@@ -1,3 +1,10 @@
+# [2.70.0](https://github.com/tillhub/schemas/compare/v2.69.6...v2.70.0) (2018-12-12)
+
+
+### Features
+
+* adds prod compatible tx props ([4eed233](https://github.com/tillhub/schemas/commit/4eed233))
+
 ## [2.69.6](https://github.com/tillhub/schemas/compare/v2.69.5...v2.69.6) (2018-12-06)
 
 
