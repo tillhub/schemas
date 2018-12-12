@@ -1,3 +1,10 @@
+## [2.70.2](https://github.com/tillhub/schemas/compare/v2.70.1...v2.70.2) (2018-12-12)
+
+
+### Bug Fixes
+
+* **schemas:** move voucher prop on payments to payments.context ([0abe544](https://github.com/tillhub/schemas/commit/0abe544))
+
 ## [2.70.1](https://github.com/tillhub/schemas/compare/v2.70.0...v2.70.1) (2018-12-12)
 
 
