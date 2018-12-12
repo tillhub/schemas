@@ -1,3 +1,10 @@
+# [2.73.0](https://github.com/tillhub/schemas/compare/v2.72.0...v2.73.0) (2018-12-12)
+
+
+### Features
+
+* **schemas:** de-nullify amount given ([8dae57e](https://github.com/tillhub/schemas/commit/8dae57e))
+
 # [2.72.0](https://github.com/tillhub/schemas/compare/v2.71.0...v2.72.0) (2018-12-12)
 
 

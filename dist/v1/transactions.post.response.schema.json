@@ -1952,20 +1952,12 @@
                   "default": null
                 },
                 "amount_given": {
-                  "oneOf": [
-                    {
-                      "description": "The actual over the counter money flow: regardles what needs to be payed e.g. 49.98, but the customer has given. This is usually of interest in cash payments, or when when customers gave fewer amount than they ought to pay.",
-                      "example": "50.00",
-                      "type": "number",
-                      "minimum": -1000000,
-                      "maximum": 1000000,
-                      "multipleOf": 0.01
-                    },
-                    {
-                      "type": "null"
-                    }
-                  ],
-                  "default": null
+                  "description": "The actual over the counter money flow: regardles what needs to be payed e.g. 49.98, but the customer has given. This is usually of interest in cash payments, or when when customers gave fewer amount than they ought to pay.",
+                  "example": "50.00",
+                  "type": "number",
+                  "minimum": -1000000,
+                  "maximum": 1000000,
+                  "multipleOf": 0.01
                 },
                 "amount_requested": {
                   "oneOf": [
