@@ -1,3 +1,10 @@
+# [2.72.0](https://github.com/tillhub/schemas/compare/v2.71.0...v2.72.0) (2018-12-12)
+
+
+### Features
+
+* **schemas:** loosen cart attributes requirement ([64dafe7](https://github.com/tillhub/schemas/commit/64dafe7))
+
 # [2.71.0](https://github.com/tillhub/schemas/compare/v2.70.4...v2.71.0) (2018-12-12)
 
 

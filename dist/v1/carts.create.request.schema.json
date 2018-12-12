@@ -210,7 +210,6 @@
               "qty",
               "custom_id",
               "vat_rate",
-              "attributes",
               "salesman_staff",
               "tax",
               "account",
@@ -392,6 +391,7 @@
                 }
               },
               "attributes": {
+                "default": null,
                 "anyOf": [
                   {
                     "type": "object"
