@@ -1,3 +1,10 @@
+# [2.76.0](https://github.com/tillhub/schemas/compare/v2.75.0...v2.76.0) (2018-12-13)
+
+
+### Features
+
+* **schemas:** carts: allow 300 items ([ea034dd](https://github.com/tillhub/schemas/commit/ea034dd))
+
 # [2.75.0](https://github.com/tillhub/schemas/compare/v2.74.0...v2.75.0) (2018-12-13)
 
 
