@@ -1,3 +1,10 @@
+# [2.74.0](https://github.com/tillhub/schemas/compare/v2.73.0...v2.74.0) (2018-12-13)
+
+
+### Features
+
+* **schemas:** loosen customers names length ([34ff7b7](https://github.com/tillhub/schemas/commit/34ff7b7))
+
 # [2.73.0](https://github.com/tillhub/schemas/compare/v2.72.0...v2.73.0) (2018-12-12)
 
 

@@ -20,8 +20,7 @@
       "anyOf": [
         {
           "type": "string",
-          "maxLength": 32,
-          "minLength": 1
+          "maxLength": 128
         },
         {
           "type": "null"
@@ -32,8 +31,7 @@
       "anyOf": [
         {
           "type": "string",
-          "maxLength": 32,
-          "minLength": 1
+          "maxLength": 128
         },
         {
           "type": "null"
