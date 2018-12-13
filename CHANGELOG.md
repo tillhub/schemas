@@ -1,3 +1,94 @@
+# [2.73.0](https://github.com/tillhub/schemas/compare/v2.72.0...v2.73.0) (2018-12-12)
+
+
+### Features
+
+* **schemas:** de-nullify amount given ([8dae57e](https://github.com/tillhub/schemas/commit/8dae57e))
+
+# [2.72.0](https://github.com/tillhub/schemas/compare/v2.71.0...v2.72.0) (2018-12-12)
+
+
+### Features
+
+* **schemas:** loosen cart attributes requirement ([64dafe7](https://github.com/tillhub/schemas/commit/64dafe7))
+
+# [2.71.0](https://github.com/tillhub/schemas/compare/v2.70.4...v2.71.0) (2018-12-12)
+
+
+### Features
+
+* **schemas:** loosen internal cart matching ([dd91fcc](https://github.com/tillhub/schemas/commit/dd91fcc))
+
+## [2.70.4](https://github.com/tillhub/schemas/compare/v2.70.3...v2.70.4) (2018-12-12)
+
+
+### Bug Fixes
+
+* **schemas:** must allow nulls ([d5fcf58](https://github.com/tillhub/schemas/commit/d5fcf58))
+
+## [2.70.3](https://github.com/tillhub/schemas/compare/v2.70.2...v2.70.3) (2018-12-12)
+
+
+### Bug Fixes
+
+* **schemas:** revert tip total renaming ([c45f61d](https://github.com/tillhub/schemas/commit/c45f61d))
+
+## [2.70.2](https://github.com/tillhub/schemas/compare/v2.70.1...v2.70.2) (2018-12-12)
+
+
+### Bug Fixes
+
+* **schemas:** move voucher prop on payments to payments.context ([0abe544](https://github.com/tillhub/schemas/commit/0abe544))
+
+## [2.70.1](https://github.com/tillhub/schemas/compare/v2.70.0...v2.70.1) (2018-12-12)
+
+
+### Bug Fixes
+
+* **schemas:** fixes tx schema on metaschema ([7506818](https://github.com/tillhub/schemas/commit/7506818))
+
+# [2.70.0](https://github.com/tillhub/schemas/compare/v2.69.6...v2.70.0) (2018-12-12)
+
+
+### Features
+
+* adds prod compatible tx props ([4eed233](https://github.com/tillhub/schemas/commit/4eed233))
+
+## [2.69.6](https://github.com/tillhub/schemas/compare/v2.69.5...v2.69.6) (2018-12-06)
+
+
+### Bug Fixes
+
+* **vouchers:** aloow expires at to be null ([a9cbedf](https://github.com/tillhub/schemas/commit/a9cbedf))
+
+## [2.69.5](https://github.com/tillhub/schemas/compare/v2.69.4...v2.69.5) (2018-12-06)
+
+
+### Bug Fixes
+
+* **vouchers:** allow voucher comment to be null ([ae0f800](https://github.com/tillhub/schemas/commit/ae0f800))
+
+## [2.69.4](https://github.com/tillhub/schemas/compare/v2.69.3...v2.69.4) (2018-12-06)
+
+
+### Bug Fixes
+
+* **vouchers:** adds amount_issued_at ([4b1d2d4](https://github.com/tillhub/schemas/commit/4b1d2d4))
+
+## [2.69.3](https://github.com/tillhub/schemas/compare/v2.69.2...v2.69.3) (2018-12-06)
+
+
+### Bug Fixes
+
+* **vouchers:** allow sending empty array in regions ([2c03669](https://github.com/tillhub/schemas/commit/2c03669))
+
+## [2.69.2](https://github.com/tillhub/schemas/compare/v2.69.1...v2.69.2) (2018-12-06)
+
+
+### Bug Fixes
+
+* **vouchers:** fixes regions limitation ([1d7a779](https://github.com/tillhub/schemas/commit/1d7a779))
+
 ## [2.69.1](https://github.com/tillhub/schemas/compare/v2.69.0...v2.69.1) (2018-12-03)
 
 

@@ -206,6 +206,207 @@
             "additionalProperties": false,
             "type": "object",
             "required": [
+              "product",
+              "qty",
+              "custom_id",
+              "vat_rate",
+              "salesman_staff",
+              "tax",
+              "account",
+              "product_group",
+              "name",
+              "discounts",
+              "amount",
+              "currency"
+            ],
+            "properties": {
+              "product": {
+                "type": "string",
+                "format": "uuid"
+              },
+              "qty": {
+                "type": "number"
+              },
+              "custom_id": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "maxLength": 128
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "vat_rate": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              },
+              "currency": {
+                "type": "string",
+                "minLength": 3,
+                "maxLength": 3
+              },
+              "amount": {
+                "description": "the currency / amount object combination is the Tillhub Money object.",
+                "type": "object",
+                "additionalProperties": false,
+                "anyOf": [
+                  {
+                    "required": [
+                      "net",
+                      "gross"
+                    ]
+                  },
+                  {
+                    "required": [
+                      "net"
+                    ]
+                  },
+                  {
+                    "required": [
+                      "gross"
+                    ]
+                  }
+                ],
+                "properties": {
+                  "net": {
+                    "type": "number"
+                  },
+                  "gross": {
+                    "type": "number"
+                  }
+                }
+              },
+              "name": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 128
+              },
+              "position": {
+                "type": "number",
+                "minimum": 0
+              },
+              "comments": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "maxLength": 4096
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null
+              },
+              "client_id": {
+                "type": "string",
+                "maxLength": 128
+              },
+              "salesman_staff": {
+                "type": "string",
+                "format": "uuid"
+              },
+              "tax": {
+                "type": "string",
+                "format": "uuid"
+              },
+              "account": {
+                "type": "string",
+                "format": "uuid"
+              },
+              "product_group": {
+                "type": "string",
+                "format": "uuid"
+              },
+              "discounts": {
+                "type": "array",
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "amount": {
+                      "type": "number"
+                    },
+                    "amount_total": {
+                      "type": "number"
+                    },
+                    "order_index": {
+                      "type": "integer"
+                    },
+                    "currency": {
+                      "type": "string",
+                      "minLength": 3,
+                      "maxLength": 3
+                    },
+                    "value": {
+                      "oneOf": [
+                        {
+                          "type": "number"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "rate": {
+                      "oneOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0,
+                          "maximum": 1
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "client_id": {
+                      "type": "string",
+                      "maxLength": 128
+                    },
+                    "group": {
+                      "type": "string",
+                      "enum": [
+                        "customer",
+                        "staff",
+                        "cart",
+                        "product_set"
+                      ]
+                    },
+                    "name": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 128
+                    }
+                  },
+                  "required": [
+                    "amount",
+                    "amount_total",
+                    "currency",
+                    "name",
+                    "value",
+                    "rate"
+                  ]
+                }
+              },
+              "attributes": {
+                "default": null,
+                "anyOf": [
+                  {
+                    "type": "object"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "additionalProperties": false,
+            "type": "object",
+            "required": [
               "custom_id",
               "qty",
               "name",
@@ -471,7 +672,8 @@
                   {
                     "type": "null"
                   }
-                ]
+                ],
+                "default": null
               },
               "client_id": {
                 "type": "string",
@@ -708,207 +910,6 @@
                     }
                   ]
                 }
-              }
-            }
-          },
-          {
-            "additionalProperties": false,
-            "type": "object",
-            "required": [
-              "product",
-              "qty",
-              "custom_id",
-              "vat_rate",
-              "attributes",
-              "salesman_staff",
-              "tax",
-              "account",
-              "product_group",
-              "name",
-              "comments",
-              "discounts",
-              "amount",
-              "currency"
-            ],
-            "properties": {
-              "product": {
-                "type": "string",
-                "format": "uuid"
-              },
-              "qty": {
-                "type": "number"
-              },
-              "custom_id": {
-                "oneOf": [
-                  {
-                    "type": "string",
-                    "maxLength": 128
-                  },
-                  {
-                    "type": "null"
-                  }
-                ]
-              },
-              "vat_rate": {
-                "type": "number",
-                "minimum": 0,
-                "maximum": 1
-              },
-              "currency": {
-                "type": "string",
-                "minLength": 3,
-                "maxLength": 3
-              },
-              "amount": {
-                "description": "the currency / amount object combination is the Tillhub Money object.",
-                "type": "object",
-                "additionalProperties": false,
-                "anyOf": [
-                  {
-                    "required": [
-                      "net",
-                      "gross"
-                    ]
-                  },
-                  {
-                    "required": [
-                      "net"
-                    ]
-                  },
-                  {
-                    "required": [
-                      "gross"
-                    ]
-                  }
-                ],
-                "properties": {
-                  "net": {
-                    "type": "number"
-                  },
-                  "gross": {
-                    "type": "number"
-                  }
-                }
-              },
-              "name": {
-                "type": "string",
-                "minLength": 1,
-                "maxLength": 128
-              },
-              "position": {
-                "type": "number",
-                "minimum": 0
-              },
-              "comments": {
-                "anyOf": [
-                  {
-                    "type": "string",
-                    "maxLength": 4096
-                  },
-                  {
-                    "type": "null"
-                  }
-                ]
-              },
-              "client_id": {
-                "type": "string",
-                "maxLength": 128
-              },
-              "salesman_staff": {
-                "type": "string",
-                "format": "uuid"
-              },
-              "tax": {
-                "type": "string",
-                "format": "uuid"
-              },
-              "account": {
-                "type": "string",
-                "format": "uuid"
-              },
-              "product_group": {
-                "type": "string",
-                "format": "uuid"
-              },
-              "discounts": {
-                "type": "array",
-                "items": {
-                  "additionalProperties": false,
-                  "properties": {
-                    "amount": {
-                      "type": "number"
-                    },
-                    "amount_total": {
-                      "type": "number"
-                    },
-                    "order_index": {
-                      "type": "integer"
-                    },
-                    "currency": {
-                      "type": "string",
-                      "minLength": 3,
-                      "maxLength": 3
-                    },
-                    "value": {
-                      "oneOf": [
-                        {
-                          "type": "number"
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ]
-                    },
-                    "rate": {
-                      "oneOf": [
-                        {
-                          "type": "number",
-                          "minimum": 0,
-                          "maximum": 1
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ]
-                    },
-                    "client_id": {
-                      "type": "string",
-                      "maxLength": 128
-                    },
-                    "group": {
-                      "type": "string",
-                      "enum": [
-                        "customer",
-                        "staff",
-                        "cart",
-                        "product_set"
-                      ]
-                    },
-                    "name": {
-                      "type": "string",
-                      "minLength": 1,
-                      "maxLength": 128
-                    }
-                  },
-                  "required": [
-                    "amount",
-                    "amount_total",
-                    "currency",
-                    "name",
-                    "value",
-                    "rate"
-                  ]
-                }
-              },
-              "attributes": {
-                "anyOf": [
-                  {
-                    "type": "object"
-                  },
-                  {
-                    "type": "null"
-                  }
-                ]
               }
             }
           }

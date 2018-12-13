@@ -321,7 +321,7 @@
                         "properties": {
                           "signing_error": {
                             "type": "number",
-                            "example": 2,
+                            "example": "2",
                             "description": "Number of failed signing attempts in a row."
                           }
                         }
@@ -916,6 +916,7 @@
                     }
                   }
                 },
+                "additionalProperties": false,
                 "client_id": {
                   "oneOf": [
                     {
@@ -1098,7 +1099,7 @@
                               "order_index": {
                                 "description": "Position of the specific tax.",
                                 "type": "integer",
-                                "example": 0
+                                "example": "0"
                               },
                               "rate": {
                                 "type": "number",
@@ -1540,7 +1541,7 @@
                               "properties": {
                                 "owner": {
                                   "type": "boolean",
-                                  "example": true
+                                  "example": "true"
                                 },
                                 "number": {
                                   "type": "string",
@@ -1551,6 +1552,126 @@
                                   "example": "Cindy Schmidt"
                                 }
                               }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ],
+                          "default": null
+                        },
+                        "voucher": {
+                          "oneOf": [
+                            {
+                              "description": "The effective voucher delta record for this item (thus reversable if needed)",
+                              "additionalProperties": false,
+                              "type": "object",
+                              "properties": {
+                                "client_id": {
+                                  "type": "string",
+                                  "example": "d0d40841-b1a7-438a-9d1e-2bfec590d2e3",
+                                  "minLength": 6,
+                                  "maxLength": 64,
+                                  "description": "A implementer defined identifier. This can be used for local resource matching and has no business implication. TO BE DEPRECTAED."
+                                },
+                                "source_id": {
+                                  "type": "string",
+                                  "example": "d0d40841-b1a7-438a-9d1e-2bfec590d2e3",
+                                  "minLength": 6,
+                                  "maxLength": 64,
+                                  "description": "The Tillhub or Fleurop Id of the source voucher."
+                                },
+                                "api": {
+                                  "type": "string",
+                                  "enum": [
+                                    "fleurop-voucher-api",
+                                    "tillhub-voucher-api"
+                                  ]
+                                },
+                                "delta_amount": {
+                                  "description": "The effective change in the value of the voucher.",
+                                  "type": "number",
+                                  "minimum": -1000000,
+                                  "maximum": 1000000,
+                                  "multipleOf": 0.01
+                                },
+                                "delta_currency": {
+                                  "type": "string",
+                                  "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                                  "example": "EUR",
+                                  "minLength": 3,
+                                  "maxLength": 3
+                                },
+                                "barcode": {
+                                  "default": null,
+                                  "type": "string",
+                                  "minLength": 3,
+                                  "maxLength": 128,
+                                  "description": "Voucher EAN or similar."
+                                },
+                                "code": {
+                                  "default": null,
+                                  "type": "string",
+                                  "minLength": 3,
+                                  "maxLength": 128,
+                                  "description": "Voucher number."
+                                },
+                                "system": {
+                                  "default": null,
+                                  "type": "string",
+                                  "minLength": 3,
+                                  "maxLength": 128,
+                                  "description": "Identifier for the voucher system. (Also known as User)"
+                                },
+                                "title": {
+                                  "default": null,
+                                  "type": "string",
+                                  "maxLength": 256,
+                                  "description": "Title of the source voucher."
+                                },
+                                "message": {
+                                  "default": null,
+                                  "type": "string",
+                                  "maxLength": 2048,
+                                  "description": "Messages from voucher processing."
+                                },
+                                "type": {
+                                  "type": "string",
+                                  "description": "Mainly legacy support for Fleurop flows.",
+                                  "enum": [
+                                    "undefined",
+                                    "fleuropRedeem",
+                                    "fleuropSellOrRecharge",
+                                    "ownBrandedRecharge",
+                                    "ownBrandedRedeem",
+                                    "externalSellAndActivate",
+                                    "tillhubSell",
+                                    "tillhubRecharge",
+                                    "tillhubRedeem"
+                                  ]
+                                },
+                                "status": {
+                                  "type": "string",
+                                  "description": "Client side recorded booking state of the delta operation.",
+                                  "enum": [
+                                    "unknown",
+                                    "pending",
+                                    "locked",
+                                    "succeed",
+                                    "failed",
+                                    "scheduled"
+                                  ]
+                                }
+                              },
+                              "required": [
+                                "client_id",
+                                "source_id",
+                                "api",
+                                "delta_amount",
+                                "delta_currency",
+                                "system",
+                                "type",
+                                "status"
+                              ]
                             },
                             {
                               "type": "null"
@@ -1652,128 +1773,6 @@
                   "minimum": -1000000,
                   "maximum": 1000000,
                   "multipleOf": 0.01
-                },
-                "voucher": {
-                  "oneOf": [
-                    {
-                      "type": "object",
-                      "properties": {
-                        "description": "The effective voucher delta record for this item (thus reversable if needed)",
-                        "additionalProperties": false,
-                        "properties": {
-                          "client_id": {
-                            "type": "string",
-                            "example": "d0d40841-b1a7-438a-9d1e-2bfec590d2e3",
-                            "minLength": 6,
-                            "maxLength": 64,
-                            "description": "A implementer defined identifier. This can be used for local resource matching and has no business implication. TO BE DEPRECTAED."
-                          },
-                          "source_id": {
-                            "type": "string",
-                            "example": "d0d40841-b1a7-438a-9d1e-2bfec590d2e3",
-                            "minLength": 6,
-                            "maxLength": 64,
-                            "description": "The Tillhub or Fleurop Id of the source voucher."
-                          },
-                          "api": {
-                            "type": "string",
-                            "enum": [
-                              "fleurop-voucher-api",
-                              "tillhub-voucher-api"
-                            ]
-                          },
-                          "delta_amount": {
-                            "description": "The effective change in the value of the voucher.",
-                            "type": "number",
-                            "minimum": -1000000,
-                            "maximum": 1000000,
-                            "multipleOf": 0.01
-                          },
-                          "delta_currency": {
-                            "type": "string",
-                            "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
-                            "example": "EUR",
-                            "minLength": 3,
-                            "maxLength": 3
-                          },
-                          "barcode": {
-                            "default": null,
-                            "type": "string",
-                            "minLength": 3,
-                            "maxLength": 128,
-                            "description": "Voucher EAN or similar."
-                          },
-                          "code": {
-                            "default": null,
-                            "type": "string",
-                            "minLength": 3,
-                            "maxLength": 128,
-                            "description": "Voucher number."
-                          },
-                          "system": {
-                            "default": null,
-                            "type": "string",
-                            "minLength": 3,
-                            "maxLength": 128,
-                            "description": "Identifier for the voucher system. (Also known as User)"
-                          },
-                          "title": {
-                            "default": null,
-                            "type": "string",
-                            "maxLength": 256,
-                            "description": "Title of the source voucher."
-                          },
-                          "message": {
-                            "default": null,
-                            "type": "string",
-                            "maxLength": 2048,
-                            "description": "Messages from voucher processing."
-                          },
-                          "type": {
-                            "type": "string",
-                            "description": "Mainly legacy support for Fleurop flows.",
-                            "enum": [
-                              "undefined",
-                              "fleuropRedeem",
-                              "fleuropSellOrRecharge",
-                              "ownBrandedRecharge",
-                              "ownBrandedRedeem",
-                              "externalSellAndActivate",
-                              "tillhubSell",
-                              "tillhubRecharge",
-                              "tillhubRedeem"
-                            ]
-                          },
-                          "status": {
-                            "type": "string",
-                            "description": "Client side recorded booking state of the delta operation.",
-                            "enum": [
-                              "unknown",
-                              "pending",
-                              "locked",
-                              "succeed",
-                              "failed",
-                              "scheduled"
-                            ]
-                          }
-                        },
-                        "required": [
-                          "client_id",
-                          "source_id",
-                          "api",
-                          "delta_amount",
-                          "delta_currency",
-                          "system",
-                          "type",
-                          "status"
-                        ]
-                      }
-                    },
-                    {
-                      "type": "null"
-                    }
-                  ],
-                  "default": null
                 },
                 "insert_id": {
                   "type": "number",
@@ -1938,11 +1937,18 @@
                   "multipleOf": 0.01
                 },
                 "tip_total": {
-                  "description": "The payed amount total.",
-                  "type": "number",
-                  "minimum": -1000000,
-                  "maximum": 1000000,
-                  "multipleOf": 0.01,
+                  "oneOf": [
+                    {
+                      "description": "The included tip amount.",
+                      "type": "number",
+                      "minimum": -1000000,
+                      "maximum": 1000000,
+                      "multipleOf": 0.01
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
                   "default": null
                 },
                 "amount_given": {
@@ -1951,25 +1957,38 @@
                   "type": "number",
                   "minimum": -1000000,
                   "maximum": 1000000,
-                  "multipleOf": 0.01,
-                  "default": null
+                  "multipleOf": 0.01
                 },
                 "amount_requested": {
-                  "description": "The amount that was requested by the POS e.g. 49.98, regardless of what was given e.g. 50.00. Hence the rest is change or tip. This is usually of interest in cash payments.",
-                  "example": "49.98",
-                  "type": "number",
-                  "minimum": -1000000,
-                  "maximum": 1000000,
-                  "multipleOf": 0.01,
+                  "oneOf": [
+                    {
+                      "description": "The amount that was requested by the POS e.g. 49.98, regardless of what was given e.g. 50.00. Hence the rest is change or tip. This is usually of interest in cash payments.",
+                      "example": "49.98",
+                      "type": "number",
+                      "minimum": -1000000,
+                      "maximum": 1000000,
+                      "multipleOf": 0.01
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
                   "default": null
                 },
                 "amount_change": {
-                  "description": "The cash amount that was handed back from the cashier as change.",
-                  "example": "49.98",
-                  "type": "number",
-                  "minimum": 0,
-                  "maximum": 1000000,
-                  "multipleOf": 0.01,
+                  "oneOf": [
+                    {
+                      "description": "The cash amount that was handed back from the cashier as change.",
+                      "example": "49.98",
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 1000000,
+                      "multipleOf": 0.01
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
                   "default": null
                 },
                 "custom_id": {
@@ -2056,6 +2075,7 @@
                   "oneOf": [
                     {
                       "type": "object",
+                      "additionalProperties": false,
                       "description": "Any additional flat values.",
                       "properties": {
                         "title": {
@@ -2076,6 +2096,7 @@
                           "oneOf": [
                             {
                               "type": "object",
+                              "additionalProperties": false,
                               "description": "Account face values.",
                               "properties": {
                                 "number": {
@@ -2083,6 +2104,219 @@
                                   "example": "1009"
                                 }
                               }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ],
+                          "default": null
+                        },
+                        "terminal": {
+                          "description": "If a terminal was used for this payment - addtional information will be stored here. NULL together with a card type indicates a disconnected terminal payment.",
+                          "oneOf": [
+                            {
+                              "type": "object",
+                              "description": "The effective voucher delta record for this item (thus reversable if needed)",
+                              "additionalProperties": false,
+                              "required": [
+                                "device_id",
+                                "transaction_id",
+                                "api",
+                                "card_circuit",
+                                "card_pan",
+                                "raw_response"
+                              ],
+                              "properties": {
+                                "device_id": {
+                                  "type": "string",
+                                  "example": "51098708",
+                                  "minLength": 4,
+                                  "maxLength": 64,
+                                  "description": "The Id of the terminal used. Style differs by Terminal-API-type."
+                                },
+                                "transaction_id": {
+                                  "type": "string",
+                                  "example": "d0d40841-b1a7-438a-9d1e-2bfec590d2e3",
+                                  "minLength": 4,
+                                  "maxLength": 64,
+                                  "description": "The Id assigned by the terminal for this transaction."
+                                },
+                                "api": {
+                                  "type": "string",
+                                  "enum": [
+                                    "adyen",
+                                    "concardis",
+                                    "opi",
+                                    "tim"
+                                  ]
+                                },
+                                "card_circuit": {
+                                  "default": null,
+                                  "type": "string",
+                                  "minLength": 3,
+                                  "maxLength": 128,
+                                  "description": "The detected card circuit as reposrted by the terminal (VISA, MasterCard, GiroCard etc.)"
+                                },
+                                "card_pan": {
+                                  "default": null,
+                                  "type": "string",
+                                  "minLength": 3,
+                                  "maxLength": 128,
+                                  "description": "The cards primary account number. *** on merchant receipts."
+                                },
+                                "receipts": {
+                                  "description": "The receipt texts reported by the terminal.",
+                                  "type": "array",
+                                  "default": null,
+                                  "items": {
+                                    "type": "object",
+                                    "additionalProperties": false,
+                                    "required": [
+                                      "type",
+                                      "text"
+                                    ],
+                                    "properties": {
+                                      "type": {
+                                        "type": "string",
+                                        "enum": [
+                                          "customer",
+                                          "merchant"
+                                        ]
+                                      },
+                                      "text": {
+                                        "type": "string",
+                                        "maxLength": 16384
+                                      }
+                                    }
+                                  }
+                                },
+                                "raw_response": {
+                                  "default": null,
+                                  "description": "The raw response of the terminal for finalizing the card payment. Might contain additional information.",
+                                  "type": "string",
+                                  "maxLength": 16384
+                                }
+                              }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "voucher": {
+                          "description": "If a voucher was used for this payment - addtional information will be stored here.",
+                          "oneOf": [
+                            {
+                              "description": "The effective voucher delta record for this item (thus reversable if needed)",
+                              "additionalProperties": false,
+                              "type": "object",
+                              "properties": {
+                                "client_id": {
+                                  "type": "string",
+                                  "example": "d0d40841-b1a7-438a-9d1e-2bfec590d2e3",
+                                  "minLength": 6,
+                                  "maxLength": 64,
+                                  "description": "A implementer defined identifier. This can be used for local resource matching and has no business implication. TO BE DEPRECTAED."
+                                },
+                                "source_id": {
+                                  "type": "string",
+                                  "example": "d0d40841-b1a7-438a-9d1e-2bfec590d2e3",
+                                  "minLength": 6,
+                                  "maxLength": 64,
+                                  "description": "The Tillhub or Fleurop Id of the source voucher."
+                                },
+                                "api": {
+                                  "type": "string",
+                                  "enum": [
+                                    "fleurop-voucher-api",
+                                    "tillhub-voucher-api"
+                                  ]
+                                },
+                                "delta_amount": {
+                                  "description": "The effective change in the value of the voucher.",
+                                  "type": "number",
+                                  "minimum": -1000000,
+                                  "maximum": 1000000,
+                                  "multipleOf": 0.01
+                                },
+                                "delta_currency": {
+                                  "type": "string",
+                                  "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                                  "example": "EUR",
+                                  "minLength": 3,
+                                  "maxLength": 3
+                                },
+                                "barcode": {
+                                  "default": null,
+                                  "type": "string",
+                                  "minLength": 3,
+                                  "maxLength": 128,
+                                  "description": "Voucher EAN or similar."
+                                },
+                                "code": {
+                                  "default": null,
+                                  "type": "string",
+                                  "minLength": 3,
+                                  "maxLength": 128,
+                                  "description": "Voucher number."
+                                },
+                                "system": {
+                                  "default": null,
+                                  "type": "string",
+                                  "minLength": 3,
+                                  "maxLength": 128,
+                                  "description": "Identifier for the voucher system. (Also known as User)"
+                                },
+                                "title": {
+                                  "default": null,
+                                  "type": "string",
+                                  "maxLength": 256,
+                                  "description": "Title of the source voucher."
+                                },
+                                "message": {
+                                  "default": null,
+                                  "type": "string",
+                                  "maxLength": 2048,
+                                  "description": "Messages from voucher processing."
+                                },
+                                "type": {
+                                  "type": "string",
+                                  "description": "Mainly legacy support for Fleurop flows.",
+                                  "enum": [
+                                    "undefined",
+                                    "fleuropRedeem",
+                                    "fleuropSellOrRecharge",
+                                    "ownBrandedRecharge",
+                                    "ownBrandedRedeem",
+                                    "externalSellAndActivate",
+                                    "tillhubSell",
+                                    "tillhubRecharge",
+                                    "tillhubRedeem"
+                                  ]
+                                },
+                                "status": {
+                                  "type": "string",
+                                  "description": "Client side recorded booking state of the delta operation.",
+                                  "enum": [
+                                    "unknown",
+                                    "pending",
+                                    "locked",
+                                    "succeed",
+                                    "failed",
+                                    "scheduled"
+                                  ]
+                                }
+                              },
+                              "required": [
+                                "client_id",
+                                "source_id",
+                                "api",
+                                "delta_amount",
+                                "delta_currency",
+                                "system",
+                                "type",
+                                "status"
+                              ]
                             },
                             {
                               "type": "null"
@@ -2290,224 +2524,6 @@
                   ],
                   "default": null
                 },
-                "voucher": {
-                  "description": "If a voucher was used for this payment - addtional information will be stored here.",
-                  "oneOf": [
-                    {
-                      "type": "object",
-                      "properties": {
-                        "description": "The effective voucher delta record for this item (thus reversable if needed)",
-                        "additionalProperties": false,
-                        "properties": {
-                          "client_id": {
-                            "type": "string",
-                            "example": "d0d40841-b1a7-438a-9d1e-2bfec590d2e3",
-                            "minLength": 6,
-                            "maxLength": 64,
-                            "description": "A implementer defined identifier. This can be used for local resource matching and has no business implication. TO BE DEPRECTAED."
-                          },
-                          "source_id": {
-                            "type": "string",
-                            "example": "d0d40841-b1a7-438a-9d1e-2bfec590d2e3",
-                            "minLength": 6,
-                            "maxLength": 64,
-                            "description": "The Tillhub or Fleurop Id of the source voucher."
-                          },
-                          "api": {
-                            "type": "string",
-                            "enum": [
-                              "fleurop-voucher-api",
-                              "tillhub-voucher-api"
-                            ]
-                          },
-                          "delta_amount": {
-                            "description": "The effective change in the value of the voucher.",
-                            "type": "number",
-                            "minimum": -1000000,
-                            "maximum": 1000000,
-                            "multipleOf": 0.01
-                          },
-                          "delta_currency": {
-                            "type": "string",
-                            "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
-                            "example": "EUR",
-                            "minLength": 3,
-                            "maxLength": 3
-                          },
-                          "barcode": {
-                            "default": null,
-                            "type": "string",
-                            "minLength": 3,
-                            "maxLength": 128,
-                            "description": "Voucher EAN or similar."
-                          },
-                          "code": {
-                            "default": null,
-                            "type": "string",
-                            "minLength": 3,
-                            "maxLength": 128,
-                            "description": "Voucher number."
-                          },
-                          "system": {
-                            "default": null,
-                            "type": "string",
-                            "minLength": 3,
-                            "maxLength": 128,
-                            "description": "Identifier for the voucher system. (Also known as User)"
-                          },
-                          "title": {
-                            "default": null,
-                            "type": "string",
-                            "maxLength": 256,
-                            "description": "Title of the source voucher."
-                          },
-                          "message": {
-                            "default": null,
-                            "type": "string",
-                            "maxLength": 2048,
-                            "description": "Messages from voucher processing."
-                          },
-                          "type": {
-                            "type": "string",
-                            "description": "Mainly legacy support for Fleurop flows.",
-                            "enum": [
-                              "undefined",
-                              "fleuropRedeem",
-                              "fleuropSellOrRecharge",
-                              "ownBrandedRecharge",
-                              "ownBrandedRedeem",
-                              "externalSellAndActivate",
-                              "tillhubSell",
-                              "tillhubRecharge",
-                              "tillhubRedeem"
-                            ]
-                          },
-                          "status": {
-                            "type": "string",
-                            "description": "Client side recorded booking state of the delta operation.",
-                            "enum": [
-                              "unknown",
-                              "pending",
-                              "locked",
-                              "succeed",
-                              "failed",
-                              "scheduled"
-                            ]
-                          }
-                        },
-                        "required": [
-                          "client_id",
-                          "source_id",
-                          "api",
-                          "delta_amount",
-                          "delta_currency",
-                          "system",
-                          "type",
-                          "status"
-                        ]
-                      }
-                    },
-                    {
-                      "type": "null"
-                    }
-                  ],
-                  "default": null
-                },
-                "terminal": {
-                  "description": "If a terminal was used for this payment - addtional information will be stored here. NULL together with a card type indicates a disconnected terminal payment.",
-                  "oneOf": [
-                    {
-                      "type": "object",
-                      "properties": {
-                        "description": "The effective voucher delta record for this item (thus reversable if needed)",
-                        "additionalProperties": false,
-                        "required": [
-                          "device_id",
-                          "transaction_id",
-                          "api",
-                          "card_circuit",
-                          "card_pan",
-                          "raw_response"
-                        ],
-                        "properties": {
-                          "device_id": {
-                            "type": "string",
-                            "example": "51098708",
-                            "minLength": 4,
-                            "maxLength": 64,
-                            "description": "The Id of the terminal used. Style differs by Terminal-API-type."
-                          },
-                          "transaction_id": {
-                            "type": "string",
-                            "example": "d0d40841-b1a7-438a-9d1e-2bfec590d2e3",
-                            "minLength": 4,
-                            "maxLength": 64,
-                            "description": "The Id assigned by the terminal for this transaction."
-                          },
-                          "api": {
-                            "type": "string",
-                            "enum": [
-                              "adyen",
-                              "concardis",
-                              "opi",
-                              "tim"
-                            ]
-                          },
-                          "card_circuit": {
-                            "default": null,
-                            "type": "string",
-                            "minLength": 3,
-                            "maxLength": 128,
-                            "description": "The detected card circuit as reposrted by the terminal (VISA, MasterCard, GiroCard etc.)"
-                          },
-                          "card_pan": {
-                            "default": null,
-                            "type": "string",
-                            "minLength": 3,
-                            "maxLength": 128,
-                            "description": "The cards primary account number. *** on merchant receipts."
-                          },
-                          "receipts": {
-                            "description": "The receipt texts reported by the terminal.",
-                            "type": "array",
-                            "default": null,
-                            "items": {
-                              "type": "object",
-                              "additionalProperties": false,
-                              "required": [
-                                "type",
-                                "text"
-                              ],
-                              "properties": {
-                                "type": {
-                                  "type": "string",
-                                  "enum": [
-                                    "customer",
-                                    "merchant"
-                                  ]
-                                },
-                                "text": {
-                                  "type": "string",
-                                  "maxLength": 16384
-                                }
-                              }
-                            }
-                          },
-                          "raw_response": {
-                            "default": null,
-                            "description": "The raw response of the terminal for finalizing the card payment. Might contain additional information.",
-                            "type": "string",
-                            "maxLength": 16384
-                          }
-                        }
-                      }
-                    },
-                    {
-                      "type": "null"
-                    }
-                  ],
-                  "default": null
-                },
                 "insert_id": {
                   "type": "number",
                   "example": "128",
@@ -2572,6 +2588,19 @@
                     "format": "date-time",
                     "example": "2018-11-04T23:18:43.075Z",
                     "description": "The actual time a dsipatchable transaction was dispatched, e.g. an invoice has been sent and results in an oblicgation from that time on."
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "printed_at": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "format": "date-time",
+                    "example": "2018-11-04T23:18:43.075Z",
+                    "description": "The first time any document was printed (also plain text receipts - to mark subsequent prints as copy)."
                   },
                   {
                     "type": "null"
