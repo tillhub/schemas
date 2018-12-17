@@ -152,6 +152,7 @@
             "footer_contents": {
               "type": "array",
               "default": null,
+              "maxItems": 3,
               "items": {
                 "type": "object",
                 "additionalProperties": false,
@@ -713,6 +714,7 @@
             "footer_contents": {
               "type": "array",
               "default": null,
+              "maxItems": 3,
               "items": {
                 "type": "object",
                 "additionalProperties": false,
@@ -1274,6 +1276,7 @@
             "footer_contents": {
               "type": "array",
               "default": null,
+              "maxItems": 3,
               "items": {
                 "type": "object",
                 "additionalProperties": false,
