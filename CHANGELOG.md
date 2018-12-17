@@ -1,3 +1,17 @@
+# [2.78.0](https://github.com/tillhub/schemas/compare/v2.77.0...v2.78.0) (2018-12-17)
+
+
+### Features
+
+* **schemas:** limit footer cotents to 3 ([20ec101](https://github.com/tillhub/schemas/commit/20ec101))
+
+# [2.77.0](https://github.com/tillhub/schemas/compare/v2.76.0...v2.77.0) (2018-12-17)
+
+
+### Features
+
+* **schemas:** adds footer contents ([a875c3f](https://github.com/tillhub/schemas/commit/a875c3f))
+
 # [2.76.0](https://github.com/tillhub/schemas/compare/v2.75.0...v2.76.0) (2018-12-13)
 
 
