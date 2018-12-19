@@ -1,3 +1,10 @@
+## [2.79.1](https://github.com/tillhub/schemas/compare/v2.79.0...v2.79.1) (2018-12-19)
+
+
+### Bug Fixes
+
+* aligns embedded object namings, adds bounds ([f2b8025](https://github.com/tillhub/schemas/commit/f2b8025))
+
 # [2.79.0](https://github.com/tillhub/schemas/compare/v2.78.0...v2.79.0) (2018-12-18)
 
 
