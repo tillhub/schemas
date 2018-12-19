@@ -273,7 +273,7 @@
                   "additionalProperties": false,
                   "description": "Cashier face values.",
                   "properties": {
-                    "number": {
+                    "custom_id": {
                       "type": "string",
                       "example": "005"
                     },
@@ -550,8 +550,7 @@
             "description": "Reference to a similar type of object (e.g. transaction to cart)",
             "additionalProperties": false,
             "required": [
-              "type",
-              "id"
+              "type"
             ],
             "properties": {
               "type": {
@@ -563,15 +562,31 @@
                 ]
               },
               "id": {
-                "type": "string",
-                "format": "uuid",
-                "example": "f2ac2cae-97ff-42a1-967b-0a35222ab6d1",
-                "description": "A Tillhub cart or delivery note that this reference links to."
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "format": "uuid",
+                    "example": "f2ac2cae-97ff-42a1-967b-0a35222ab6d1",
+                    "description": "A Tillhub transaction that this reference links to."
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null
               },
               "custom_id": {
-                "type": "string",
-                "example": "278",
-                "description": "The custom_id of a Tillhub transaction that this reference links to."
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "example": "278",
+                    "description": "The custom_id of a Tillhub transaction that this reference links to."
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null
               },
               "date": {
                 "type": "string",
@@ -598,8 +613,7 @@
             "description": "Reference to the same type of object (e.g. transaction to pervious transaction)",
             "additionalProperties": false,
             "required": [
-              "type",
-              "id"
+              "type"
             ],
             "properties": {
               "type": {
@@ -615,15 +629,31 @@
                 ]
               },
               "id": {
-                "type": "string",
-                "format": "uuid",
-                "example": "f2ac2cae-97ff-42a1-967b-0a35222ab6d1",
-                "description": "A Tillhub transaction that this reference links to."
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "format": "uuid",
+                    "example": "f2ac2cae-97ff-42a1-967b-0a35222ab6d1",
+                    "description": "A Tillhub transaction that this reference links to."
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null
               },
               "custom_id": {
-                "type": "string",
-                "example": "278",
-                "description": "The custom_id of a Tillhub transaction that this reference links to."
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "example": "278",
+                    "description": "The custom_id of a Tillhub transaction that this reference links to."
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null
               },
               "date": {
                 "type": "string",
@@ -807,6 +837,7 @@
             "maxLength": 3
           },
           "product": {
+            "default": null,
             "oneOf": [
               {
                 "type": "string",
@@ -826,6 +857,20 @@
                 "type": "string",
                 "description": "Any custom ID, e.g. a product number",
                 "example": "AKI-1234566"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "tax": {
+            "default": null,
+            "oneOf": [
+              {
+                "type": "string",
+                "format": "uuid",
+                "example": "9d110eb2-2245-4e14-9574-49b502f3a9b3",
+                "description": "If a single tax applies (normally VAT) - the applicable Tillhub tax resource with tax accounts."
               },
               {
                 "type": "null"
@@ -897,10 +942,12 @@
                           "type": "string",
                           "example": "a3be1e02-7983-4cba-b7b8-94453c0536ef"
                         },
-                        "order_index": {
+                        "position": {
                           "description": "Position of the specific tax.",
                           "type": "integer",
-                          "example": "0"
+                          "minimum": 0,
+                          "maximum": 30,
+                          "example": "1"
                         },
                         "rate": {
                           "type": "number",
@@ -910,16 +957,31 @@
                           "maximum": 1,
                           "multipleOf": 0.001
                         },
-                        "account": {
-                          "description": "Custom number identifier.",
-                          "type": "string",
-                          "example": "440165"
+                        "custom_id": {
+                          "default": null,
+                          "oneOf": [
+                            {
+                              "description": "Custom tax account number identifier.",
+                              "type": "string",
+                              "example": "440165"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
                         },
                         "display": {
-                          "description": "Custom description.",
                           "default": null,
-                          "type": "string",
-                          "example": "Another tax"
+                          "oneOf": [
+                            {
+                              "description": "Custom tax account description.",
+                              "type": "string",
+                              "example": "Another tax"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
                         }
                       }
                     },
@@ -1120,8 +1182,7 @@
                   "description": "Reference to a similar type of object (e.g. transaction to cart)",
                   "additionalProperties": false,
                   "required": [
-                    "type",
-                    "id"
+                    "type"
                   ],
                   "properties": {
                     "type": {
@@ -1133,15 +1194,31 @@
                       ]
                     },
                     "id": {
-                      "type": "string",
-                      "format": "uuid",
-                      "example": "f2ac2cae-97ff-42a1-967b-0a35222ab6d1",
-                      "description": "A Tillhub cart or delivery note that this reference links to."
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "format": "uuid",
+                          "example": "f2ac2cae-97ff-42a1-967b-0a35222ab6d1",
+                          "description": "A Tillhub transaction that this reference links to."
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "default": null
                     },
                     "custom_id": {
-                      "type": "string",
-                      "example": "278",
-                      "description": "The custom_id of a Tillhub transaction that this reference links to."
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "example": "278",
+                          "description": "The custom_id of a Tillhub transaction that this reference links to."
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "default": null
                     },
                     "date": {
                       "type": "string",
@@ -1168,8 +1245,7 @@
                   "description": "Reference to the same type of object (e.g. transaction to pervious transaction)",
                   "additionalProperties": false,
                   "required": [
-                    "type",
-                    "id"
+                    "type"
                   ],
                   "properties": {
                     "type": {
@@ -1185,15 +1261,31 @@
                       ]
                     },
                     "id": {
-                      "type": "string",
-                      "format": "uuid",
-                      "example": "f2ac2cae-97ff-42a1-967b-0a35222ab6d1",
-                      "description": "A Tillhub transaction that this reference links to."
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "format": "uuid",
+                          "example": "f2ac2cae-97ff-42a1-967b-0a35222ab6d1",
+                          "description": "A Tillhub transaction that this reference links to."
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "default": null
                     },
                     "custom_id": {
-                      "type": "string",
-                      "example": "278",
-                      "description": "The custom_id of a Tillhub transaction that this reference links to."
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "example": "278",
+                          "description": "The custom_id of a Tillhub transaction that this reference links to."
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "default": null
                     },
                     "date": {
                       "type": "string",
@@ -1272,7 +1364,7 @@
                         "type": "object",
                         "description": "Account face values.",
                         "properties": {
-                          "number": {
+                          "custom_id": {
                             "description": "Account number.",
                             "type": "string",
                             "example": "1776"
@@ -1290,13 +1382,38 @@
                     ],
                     "default": null
                   },
+                  "tax": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "description": "In case of a single tax (usually VAT) - the tax account face values.",
+                        "properties": {
+                          "custom_id": {
+                            "description": "Custom number identifier.",
+                            "type": "string",
+                            "example": "440165"
+                          },
+                          "display": {
+                            "description": "Custom description.",
+                            "default": null,
+                            "type": "string",
+                            "example": "Another tax"
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
                   "product": {
                     "oneOf": [
                       {
                         "type": "object",
                         "description": "Product face values.",
                         "properties": {
-                          "number": {
+                          "custom_id": {
                             "type": "string",
                             "example": "0032039845"
                           },
@@ -1318,7 +1435,7 @@
                         "type": "object",
                         "description": "Product face values.",
                         "properties": {
-                          "number": {
+                          "custom_id": {
                             "type": "string",
                             "example": "0032039845"
                           },
@@ -1344,7 +1461,7 @@
                             "type": "boolean",
                             "example": "true"
                           },
-                          "number": {
+                          "custom_id": {
                             "type": "string",
                             "example": "012"
                           },
@@ -1482,8 +1599,7 @@
                   }
                 },
                 "required": [
-                  "account",
-                  "product"
+                  "account"
                 ]
               },
               {
@@ -1646,10 +1762,10 @@
             "oneOf": [
               {
                 "type": "number",
-                "description": "The position description of the payment item. E.g. positon 1 (2, 3 etc.) in the cart.",
-                "example": "1",
-                "maximum": 32767,
-                "minimum": 0
+                "description": "The position of the payment item. E.g. positon 1 (2, 3 etc.) in the transaction.",
+                "minimum": 0,
+                "maximum": 300,
+                "example": "1"
               },
               {
                 "type": "null"
@@ -1844,7 +1960,7 @@
                         "additionalProperties": false,
                         "description": "Account face values.",
                         "properties": {
-                          "number": {
+                          "custom_id": {
                             "type": "string",
                             "example": "1009"
                           }
@@ -2069,10 +2185,7 @@
                     ],
                     "default": null
                   }
-                },
-                "required": [
-                  "account"
-                ]
+                }
               },
               {
                 "type": "null"
@@ -2104,8 +2217,7 @@
                   "description": "Reference to a similar type of object (e.g. transaction to cart)",
                   "additionalProperties": false,
                   "required": [
-                    "type",
-                    "id"
+                    "type"
                   ],
                   "properties": {
                     "type": {
@@ -2117,15 +2229,31 @@
                       ]
                     },
                     "id": {
-                      "type": "string",
-                      "format": "uuid",
-                      "example": "f2ac2cae-97ff-42a1-967b-0a35222ab6d1",
-                      "description": "A Tillhub cart or delivery note that this reference links to."
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "format": "uuid",
+                          "example": "f2ac2cae-97ff-42a1-967b-0a35222ab6d1",
+                          "description": "A Tillhub transaction that this reference links to."
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "default": null
                     },
                     "custom_id": {
-                      "type": "string",
-                      "example": "278",
-                      "description": "The custom_id of a Tillhub transaction that this reference links to."
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "example": "278",
+                          "description": "The custom_id of a Tillhub transaction that this reference links to."
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "default": null
                     },
                     "date": {
                       "type": "string",
@@ -2152,8 +2280,7 @@
                   "description": "Reference to the same type of object (e.g. transaction to pervious transaction)",
                   "additionalProperties": false,
                   "required": [
-                    "type",
-                    "id"
+                    "type"
                   ],
                   "properties": {
                     "type": {
@@ -2169,15 +2296,31 @@
                       ]
                     },
                     "id": {
-                      "type": "string",
-                      "format": "uuid",
-                      "example": "f2ac2cae-97ff-42a1-967b-0a35222ab6d1",
-                      "description": "A Tillhub transaction that this reference links to."
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "format": "uuid",
+                          "example": "f2ac2cae-97ff-42a1-967b-0a35222ab6d1",
+                          "description": "A Tillhub transaction that this reference links to."
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "default": null
                     },
                     "custom_id": {
-                      "type": "string",
-                      "example": "278",
-                      "description": "The custom_id of a Tillhub transaction that this reference links to."
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "example": "278",
+                          "description": "The custom_id of a Tillhub transaction that this reference links to."
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "default": null
                     },
                     "date": {
                       "type": "string",
