@@ -1,3 +1,10 @@
+## [2.79.2](https://github.com/tillhub/schemas/compare/v2.79.1...v2.79.2) (2018-12-20)
+
+
+### Bug Fixes
+
+* aligns with some old data and short strings ([2208627](https://github.com/tillhub/schemas/commit/2208627))
+
 ## [2.79.1](https://github.com/tillhub/schemas/compare/v2.79.0...v2.79.1) (2018-12-19)
 
 

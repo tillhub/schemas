@@ -323,6 +323,20 @@
                 "additionalProperties": false,
                 "description": "Any additional flat values.",
                 "properties": {
+                  "guid": {
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "example": "00000016000120181122163945117",
+                        "maxLength": 128,
+                        "description": "Old school transaction custom ID."
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
                   "title": {
                     "oneOf": [
                       {
@@ -2294,7 +2308,7 @@
                                 "card_circuit": {
                                   "default": null,
                                   "type": "string",
-                                  "minLength": 3,
+                                  "minLength": 1,
                                   "maxLength": 128,
                                   "description": "The detected card circuit as reposrted by the terminal (VISA, MasterCard, GiroCard etc.)"
                                 },
