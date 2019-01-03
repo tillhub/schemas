@@ -1,3 +1,10 @@
+## [2.80.1](https://github.com/tillhub/schemas/compare/v2.80.0...v2.80.1) (2019-01-03)
+
+
+### Bug Fixes
+
+* **taxes:** remove millis, as it is unsupported legacy ([743786e](https://github.com/tillhub/schemas/commit/743786e))
+
 # [2.80.0](https://github.com/tillhub/schemas/compare/v2.79.2...v2.80.0) (2019-01-03)
 
 
