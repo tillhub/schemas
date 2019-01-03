@@ -1,3 +1,10 @@
+# [2.80.0](https://github.com/tillhub/schemas/compare/v2.79.2...v2.80.0) (2019-01-03)
+
+
+### Features
+
+* **taxes:** allow millis ([af27e95](https://github.com/tillhub/schemas/commit/af27e95))
+
 ## [2.79.2](https://github.com/tillhub/schemas/compare/v2.79.1...v2.79.2) (2018-12-20)
 
 
