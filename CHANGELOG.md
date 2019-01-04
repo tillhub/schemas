@@ -1,3 +1,10 @@
+# [2.81.0](https://github.com/tillhub/schemas/compare/v2.80.1...v2.81.0) (2019-01-04)
+
+
+### Features
+
+* allow sending empty array for addresses ([bdecb4d](https://github.com/tillhub/schemas/commit/bdecb4d))
+
 ## [2.80.1](https://github.com/tillhub/schemas/compare/v2.80.0...v2.80.1) (2019-01-03)
 
 
