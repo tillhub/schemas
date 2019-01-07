@@ -1,3 +1,10 @@
+# [2.82.0](https://github.com/tillhub/schemas/compare/v2.81.0...v2.82.0) (2019-01-07)
+
+
+### Features
+
+* **templates:** adds comments ([8b65282](https://github.com/tillhub/schemas/commit/8b65282))
+
 # [2.81.0](https://github.com/tillhub/schemas/compare/v2.80.1...v2.81.0) (2019-01-04)
 
 
