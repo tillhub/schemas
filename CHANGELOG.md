@@ -1,3 +1,11 @@
+# [2.83.0](https://github.com/tillhub/schemas/compare/v2.82.0...v2.83.0) (2019-01-08)
+
+
+### Features
+
+* **customers:** Add prop to customers and allow company name to be null ([ec9b64a](https://github.com/tillhub/schemas/commit/ec9b64a))
+* **customers:** add schema for updating customers ([df8a58d](https://github.com/tillhub/schemas/commit/df8a58d))
+
 # [2.82.0](https://github.com/tillhub/schemas/compare/v2.81.0...v2.82.0) (2019-01-07)
 
 
