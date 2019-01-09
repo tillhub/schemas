@@ -414,6 +414,16 @@
         }
       ]
     },
+    "communications": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
     "level": {
       "type": "string",
       "default": "client_account",
@@ -534,6 +544,19 @@
           }
         }
       }
+    },
+    "deliveries": {
+      "type": "object"
+    },
+    "validations": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object"
+        }
+      ]
     }
   },
   "required": []
