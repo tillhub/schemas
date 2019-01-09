@@ -1,3 +1,15 @@
+# [2.85.0](https://github.com/tillhub/schemas/compare/v2.84.1...v2.85.0) (2019-01-09)
+
+
+### Bug Fixes
+
+* **configurations:** rename scan prefixes ([91d92cc](https://github.com/tillhub/schemas/commit/91d92cc))
+
+
+### Features
+
+* **configurations:** make request nullable ([9c19bb5](https://github.com/tillhub/schemas/commit/9c19bb5))
+
 ## [2.84.1](https://github.com/tillhub/schemas/compare/v2.84.0...v2.84.1) (2019-01-09)
 
 

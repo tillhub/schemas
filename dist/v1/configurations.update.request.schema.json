@@ -4,9 +4,6 @@
   "additionalProperties": false,
   "type": "object",
   "properties": {
-    "id": {
-      "type": "string"
-    },
     "configurations": {
       "description": "Unused legacy property.",
       "oneOf": [
@@ -19,58 +16,86 @@
       ]
     },
     "vouchers": {
-      "type": "object"
+      "oneOf": [
+        {
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "scan_prefixes": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "maxLength": 64
-          },
-          "action": {
-            "type": "string",
-            "maxLength": 32
-          },
-          "prefix": {
-            "type": "string",
-            "maxLength": 16
-          },
-          "display_name": {
-            "type": "string",
-            "maxLength": 64
-          },
-          "system": {
-            "type": "object"
-          },
-          "product": {
-            "type": "object"
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "maxLength": 64
+              },
+              "action": {
+                "type": "string",
+                "maxLength": 32
+              },
+              "prefix": {
+                "type": "string",
+                "maxLength": 16
+              },
+              "display_name": {
+                "type": "string",
+                "maxLength": 64
+              },
+              "system": {
+                "type": "object"
+              },
+              "product": {
+                "type": "object"
+              }
+            }
           }
         }
-      }
+      ]
     },
     "voucher_actions": {
-      "type": "array",
-      "items": {
-        "type": "object"
-      }
+      "oneOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "settings": {
-      "type": "object",
-      "properties": {
-        "language": {
-          "type": "string",
-          "minLength": 1,
-          "maxLength": 5
+      "oneOf": [
+        {
+          "type": "null"
         },
-        "default_currency": {
-          "type": "string",
-          "minLength": 3,
-          "maxLength": 3
+        {
+          "type": "object",
+          "properties": {
+            "language": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 5
+            },
+            "default_currency": {
+              "type": "string",
+              "minLength": 3,
+              "maxLength": 3
+            }
+          }
         }
-      }
+      ]
     },
     "hooks": {
       "type": "array",
@@ -227,23 +252,58 @@
       ]
     },
     "metadata": {
-      "type": "object"
+      "oneOf": [
+        {
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "registers": {
-      "type": "object"
+      "oneOf": [
+        {
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "branches": {
-      "type": "object"
+      "oneOf": [
+        {
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "owner": {
       "type": "string",
       "maxLength": 64
     },
     "franchise": {
-      "type": "object"
+      "oneOf": [
+        {
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "staff": {
-      "type": "object"
+      "oneOf": [
+        {
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "financials": {
       "anyOf": [
@@ -300,10 +360,24 @@
       ]
     },
     "products": {
-      "type": "object"
+      "oneOf": [
+        {
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "customers": {
-      "type": "object"
+      "oneOf": [
+        {
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "saved_cart": {
       "anyOf": [
