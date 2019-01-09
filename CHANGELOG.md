@@ -1,3 +1,10 @@
+# [2.86.0](https://github.com/tillhub/schemas/compare/v2.85.0...v2.86.0) (2019-01-09)
+
+
+### Features
+
+* **configurations:** allow for integrations ([e418a4e](https://github.com/tillhub/schemas/commit/e418a4e))
+
 # [2.85.0](https://github.com/tillhub/schemas/compare/v2.84.1...v2.85.0) (2019-01-09)
 
 
