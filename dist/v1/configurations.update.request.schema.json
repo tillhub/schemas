@@ -7,6 +7,17 @@
     "id": {
       "type": "string"
     },
+    "configurations": {
+      "description": "Unused legacy property.",
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
     "vouchers": {
       "type": "object"
     },

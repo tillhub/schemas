@@ -1,3 +1,10 @@
+## [2.84.1](https://github.com/tillhub/schemas/compare/v2.84.0...v2.84.1) (2019-01-09)
+
+
+### Bug Fixes
+
+* **cuonfigurations:** adds legacy config prop ([22aff88](https://github.com/tillhub/schemas/commit/22aff88))
+
 # [2.84.0](https://github.com/tillhub/schemas/compare/v2.83.0...v2.84.0) (2019-01-09)
 
 
