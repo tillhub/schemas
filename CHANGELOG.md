@@ -1,3 +1,10 @@
+# [2.87.0](https://github.com/tillhub/schemas/compare/v2.86.0...v2.87.0) (2019-01-10)
+
+
+### Features
+
+* **configurations:** adds definitions for customers and franchise prop ([71dca56](https://github.com/tillhub/schemas/commit/71dca56))
+
 # [2.86.0](https://github.com/tillhub/schemas/compare/v2.85.0...v2.86.0) (2019-01-09)
 
 
