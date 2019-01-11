@@ -710,6 +710,19 @@
                   "type": "number"
                 }
               }
+            },
+            "sender": {
+              "type": "object",
+              "properties": {
+                "email": {
+                  "type": "string",
+                  "format": "email"
+                },
+                "name": {
+                  "type": "string",
+                  "maxLength": 128
+                }
+              }
             }
           }
         }

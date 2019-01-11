@@ -1,3 +1,10 @@
+# [2.91.0](https://github.com/tillhub/schemas/compare/v2.90.0...v2.91.0) (2019-01-11)
+
+
+### Features
+
+* **configurations:** adds sender name and email ([b3b5606](https://github.com/tillhub/schemas/commit/b3b5606))
+
 # [2.90.0](https://github.com/tillhub/schemas/compare/v2.89.0...v2.90.0) (2019-01-11)
 
 
