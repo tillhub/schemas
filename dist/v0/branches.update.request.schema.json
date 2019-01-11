@@ -333,6 +333,28 @@
           "type": "null"
         }
       ]
+    },
+    "timezone_default": {
+      "description": "An IANA timezone that will be used to display local timezones in documents and UI. Validation for the timezone will happen in memory of the server, but not on that schema.",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "currency_default": {
+      "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this branch.",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
     }
   }
 }

@@ -1,3 +1,11 @@
+# [2.88.0](https://github.com/tillhub/schemas/compare/v2.87.0...v2.88.0) (2019-01-11)
+
+
+### Features
+
+* **branches:** adds timezone and currency to branch ([b189184](https://github.com/tillhub/schemas/commit/b189184))
+* **common:** adds timezones ([6126dc8](https://github.com/tillhub/schemas/commit/6126dc8))
+
 # [2.87.0](https://github.com/tillhub/schemas/compare/v2.86.0...v2.87.0) (2019-01-10)
 
 
