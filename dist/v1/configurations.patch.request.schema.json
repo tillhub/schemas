@@ -690,41 +690,48 @@
       "type": "object",
       "properties": {
         "mailjet": {
-          "type": "object",
-          "additionalProperties": false,
-          "properties": {
-            "key": {
-              "type": "string",
-              "minLength": 1,
-              "maxLength": 256
+          "oneOf": [
+            {
+              "type": "null"
             },
-            "secret": {
-              "type": "string",
-              "minLength": 1,
-              "maxLength": 256
-            },
-            "templates": {
+            {
               "type": "object",
+              "additionalProperties": false,
               "properties": {
-                "generic": {
-                  "type": "number"
-                }
-              }
-            },
-            "sender": {
-              "type": "object",
-              "properties": {
-                "email": {
+                "key": {
                   "type": "string",
-                  "format": "email"
+                  "minLength": 1,
+                  "maxLength": 256
                 },
-                "name": {
+                "secret": {
                   "type": "string",
-                  "maxLength": 128
+                  "minLength": 1,
+                  "maxLength": 256
+                },
+                "templates": {
+                  "type": "object",
+                  "properties": {
+                    "generic": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "sender": {
+                  "type": "object",
+                  "properties": {
+                    "email": {
+                      "type": "string",
+                      "format": "email"
+                    },
+                    "name": {
+                      "type": "string",
+                      "maxLength": 128
+                    }
+                  }
                 }
               }
             }
-          }
+          ]
         }
       }
     }

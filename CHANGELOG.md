@@ -1,3 +1,10 @@
+# [2.92.0](https://github.com/tillhub/schemas/compare/v2.91.0...v2.92.0) (2019-01-11)
+
+
+### Features
+
+* **configurations:** allows nulling mailjet ([3906439](https://github.com/tillhub/schemas/commit/3906439))
+
 # [2.91.0](https://github.com/tillhub/schemas/compare/v2.90.0...v2.91.0) (2019-01-11)
 
 
