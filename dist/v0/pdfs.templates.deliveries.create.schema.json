@@ -25,6 +25,17 @@
         },
         "dispatched_token": {
           "type": "string"
+        },
+        "timezone": {
+          "description": "IANA timezone.",
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "string"
+            }
+          ]
         }
       },
       "required": [
