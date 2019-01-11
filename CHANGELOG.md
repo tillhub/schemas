@@ -1,3 +1,10 @@
+# [2.89.0](https://github.com/tillhub/schemas/compare/v2.88.0...v2.89.0) (2019-01-11)
+
+
+### Features
+
+* adds common currencies ([12d385d](https://github.com/tillhub/schemas/commit/12d385d))
+
 # [2.88.0](https://github.com/tillhub/schemas/compare/v2.87.0...v2.88.0) (2019-01-11)
 
 
