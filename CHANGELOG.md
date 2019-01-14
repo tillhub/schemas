@@ -1,3 +1,10 @@
+# [2.93.0](https://github.com/tillhub/schemas/compare/v2.92.0...v2.93.0) (2019-01-14)
+
+
+### Features
+
+* **images:** allow more generated props ([cb4e5d7](https://github.com/tillhub/schemas/commit/cb4e5d7))
+
 # [2.92.0](https://github.com/tillhub/schemas/compare/v2.91.0...v2.92.0) (2019-01-11)
 
 

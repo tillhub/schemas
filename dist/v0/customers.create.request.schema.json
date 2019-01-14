@@ -191,7 +191,7 @@
       "anyOf": [
         {
           "type": "object",
-          "additionalProperties": false,
+          "additionalProperties": true,
           "properties": {
             "1x": {
               "type": "string",

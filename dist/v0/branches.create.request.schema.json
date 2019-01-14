@@ -126,13 +126,25 @@
       "anyOf": [
         {
           "type": "object",
-          "additionalProperties": false,
+          "additionalProperties": true,
           "properties": {
             "1x": {
               "type": "string",
               "format": "uri"
             },
+            "2x": {
+              "type": "string",
+              "format": "uri"
+            },
+            "3x": {
+              "type": "string",
+              "format": "uri"
+            },
             "avatar": {
+              "type": "string",
+              "format": "uri"
+            },
+            "original": {
               "type": "string",
               "format": "uri"
             }
