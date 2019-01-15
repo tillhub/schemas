@@ -1,3 +1,10 @@
+# [2.94.0](https://github.com/tillhub/schemas/compare/v2.93.0...v2.94.0) (2019-01-15)
+
+
+### Features
+
+* **config:** adds custom dashboards ([acee80a](https://github.com/tillhub/schemas/commit/acee80a))
+
 # [2.93.0](https://github.com/tillhub/schemas/compare/v2.92.0...v2.93.0) (2019-01-14)
 
 
