@@ -1,3 +1,136 @@
+# [2.94.0](https://github.com/tillhub/schemas/compare/v2.93.0...v2.94.0) (2019-01-15)
+
+
+### Features
+
+* **config:** adds custom dashboards ([acee80a](https://github.com/tillhub/schemas/commit/acee80a))
+
+# [2.93.0](https://github.com/tillhub/schemas/compare/v2.92.0...v2.93.0) (2019-01-14)
+
+
+### Features
+
+* **images:** allow more generated props ([cb4e5d7](https://github.com/tillhub/schemas/commit/cb4e5d7))
+
+# [2.92.0](https://github.com/tillhub/schemas/compare/v2.91.0...v2.92.0) (2019-01-11)
+
+
+### Features
+
+* **configurations:** allows nulling mailjet ([3906439](https://github.com/tillhub/schemas/commit/3906439))
+
+# [2.91.0](https://github.com/tillhub/schemas/compare/v2.90.0...v2.91.0) (2019-01-11)
+
+
+### Features
+
+* **configurations:** adds sender name and email ([b3b5606](https://github.com/tillhub/schemas/commit/b3b5606))
+
+# [2.90.0](https://github.com/tillhub/schemas/compare/v2.89.0...v2.90.0) (2019-01-11)
+
+
+### Features
+
+* **pdfs:** allow for timezone in item metadata ([ea9f950](https://github.com/tillhub/schemas/commit/ea9f950))
+
+# [2.89.0](https://github.com/tillhub/schemas/compare/v2.88.0...v2.89.0) (2019-01-11)
+
+
+### Features
+
+* adds common currencies ([12d385d](https://github.com/tillhub/schemas/commit/12d385d))
+
+# [2.88.0](https://github.com/tillhub/schemas/compare/v2.87.0...v2.88.0) (2019-01-11)
+
+
+### Features
+
+* **branches:** adds timezone and currency to branch ([b189184](https://github.com/tillhub/schemas/commit/b189184))
+* **common:** adds timezones ([6126dc8](https://github.com/tillhub/schemas/commit/6126dc8))
+
+# [2.87.0](https://github.com/tillhub/schemas/compare/v2.86.0...v2.87.0) (2019-01-10)
+
+
+### Features
+
+* **configurations:** adds definitions for customers and franchise prop ([71dca56](https://github.com/tillhub/schemas/commit/71dca56))
+
+# [2.86.0](https://github.com/tillhub/schemas/compare/v2.85.0...v2.86.0) (2019-01-09)
+
+
+### Features
+
+* **configurations:** allow for integrations ([e418a4e](https://github.com/tillhub/schemas/commit/e418a4e))
+
+# [2.85.0](https://github.com/tillhub/schemas/compare/v2.84.1...v2.85.0) (2019-01-09)
+
+
+### Bug Fixes
+
+* **configurations:** rename scan prefixes ([91d92cc](https://github.com/tillhub/schemas/commit/91d92cc))
+
+
+### Features
+
+* **configurations:** make request nullable ([9c19bb5](https://github.com/tillhub/schemas/commit/9c19bb5))
+
+## [2.84.1](https://github.com/tillhub/schemas/compare/v2.84.0...v2.84.1) (2019-01-09)
+
+
+### Bug Fixes
+
+* **cuonfigurations:** adds legacy config prop ([22aff88](https://github.com/tillhub/schemas/commit/22aff88))
+
+# [2.84.0](https://github.com/tillhub/schemas/compare/v2.83.0...v2.84.0) (2019-01-09)
+
+
+### Features
+
+* **configurations:** adds missing properties ([fcd47c0](https://github.com/tillhub/schemas/commit/fcd47c0))
+
+# [2.83.0](https://github.com/tillhub/schemas/compare/v2.82.0...v2.83.0) (2019-01-08)
+
+
+### Features
+
+* **customers:** Add prop to customers and allow company name to be null ([ec9b64a](https://github.com/tillhub/schemas/commit/ec9b64a))
+* **customers:** add schema for updating customers ([df8a58d](https://github.com/tillhub/schemas/commit/df8a58d))
+
+# [2.82.0](https://github.com/tillhub/schemas/compare/v2.81.0...v2.82.0) (2019-01-07)
+
+
+### Features
+
+* **templates:** adds comments ([8b65282](https://github.com/tillhub/schemas/commit/8b65282))
+
+# [2.81.0](https://github.com/tillhub/schemas/compare/v2.80.1...v2.81.0) (2019-01-04)
+
+
+### Features
+
+* allow sending empty array for addresses ([bdecb4d](https://github.com/tillhub/schemas/commit/bdecb4d))
+
+## [2.80.1](https://github.com/tillhub/schemas/compare/v2.80.0...v2.80.1) (2019-01-03)
+
+
+### Bug Fixes
+
+* **taxes:** remove millis, as it is unsupported legacy ([743786e](https://github.com/tillhub/schemas/commit/743786e))
+
+# [2.80.0](https://github.com/tillhub/schemas/compare/v2.79.2...v2.80.0) (2019-01-03)
+
+
+### Features
+
+* **taxes:** allow millis ([af27e95](https://github.com/tillhub/schemas/commit/af27e95))
+
+## [2.79.2](https://github.com/tillhub/schemas/compare/v2.79.1...v2.79.2) (2018-12-20)
+
+
+### Bug Fixes
+
+* aligns with some old data and short strings ([2208627](https://github.com/tillhub/schemas/commit/2208627))
+
 ## [2.79.1](https://github.com/tillhub/schemas/compare/v2.79.0...v2.79.1) (2018-12-19)
 
 

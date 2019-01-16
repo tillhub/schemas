@@ -4,59 +4,98 @@
   "additionalProperties": false,
   "type": "object",
   "properties": {
+    "configurations": {
+      "description": "Unused legacy property.",
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
     "vouchers": {
-      "type": "object"
+      "oneOf": [
+        {
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "scan_prefixes": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "maxLength": 64
-          },
-          "action": {
-            "type": "string",
-            "maxLength": 32
-          },
-          "prefix": {
-            "type": "string",
-            "maxLength": 16
-          },
-          "display_name": {
-            "type": "string",
-            "maxLength": 64
-          },
-          "system": {
-            "type": "object"
-          },
-          "product": {
-            "type": "object"
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "maxLength": 64
+              },
+              "action": {
+                "type": "string",
+                "maxLength": 32
+              },
+              "prefix": {
+                "type": "string",
+                "maxLength": 16
+              },
+              "display_name": {
+                "type": "string",
+                "maxLength": 64
+              },
+              "system": {
+                "type": "object"
+              },
+              "product": {
+                "type": "object"
+              }
+            }
           }
         }
-      }
+      ]
     },
     "voucher_actions": {
-      "type": "array",
-      "items": {
-        "type": "object"
-      }
+      "oneOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "settings": {
-      "type": "object",
-      "properties": {
-        "language": {
-          "type": "string",
-          "minLength": 1,
-          "maxLength": 5
+      "oneOf": [
+        {
+          "type": "null"
         },
-        "default_currency": {
-          "type": "string",
-          "minLength": 3,
-          "maxLength": 3
+        {
+          "type": "object",
+          "properties": {
+            "language": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 5
+            },
+            "default_currency": {
+              "type": "string",
+              "minLength": 3,
+              "maxLength": 3
+            }
+          }
         }
-      }
+      ]
     },
     "hooks": {
       "type": "array",
@@ -213,23 +252,71 @@
       ]
     },
     "metadata": {
-      "type": "object"
+      "oneOf": [
+        {
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "registers": {
-      "type": "object"
+      "oneOf": [
+        {
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "branches": {
-      "type": "object"
+      "oneOf": [
+        {
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "owner": {
       "type": "string",
       "maxLength": 64
     },
     "franchise": {
-      "type": "object"
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "country": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 10
+            },
+            "franchise_id": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 10
+            }
+          }
+        }
+      ]
     },
     "staff": {
-      "type": "object"
+      "oneOf": [
+        {
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "financials": {
       "anyOf": [
@@ -286,10 +373,54 @@
       ]
     },
     "products": {
-      "type": "object"
+      "oneOf": [
+        {
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "customers": {
-      "type": "object"
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "customer_number_template": {
+              "description": "A Tillhub string pattern that allows for parameterized customer number generation",
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "string",
+                  "minLength": 4,
+                  "maxLength": 512
+                }
+              ]
+            },
+            "generate_customer_number": {
+              "description": "The toggle to opt-in or -out of the customer number generation. Send this as query parameter on creation: ?generate_customer_number=true",
+              "type": "boolean",
+              "default": "false"
+            },
+            "customer_number_type": {
+              "type": "string",
+              "enum": [
+                "franchise"
+              ]
+            },
+            "auto_customer_number_enabled": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        }
+      ]
     },
     "saved_cart": {
       "anyOf": [
@@ -402,6 +533,16 @@
       ]
     },
     "emails": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "communications": {
       "anyOf": [
         {
           "type": "null"
@@ -529,6 +670,107 @@
               }
             }
           }
+        }
+      }
+    },
+    "custom_dashboards": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "enabled": {
+              "type": "boolean",
+              "default": false
+            },
+            "dashboards": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "enabled": {
+                    "type": "boolean",
+                    "default": false
+                  },
+                  "name": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 64
+                  },
+                  "url": {
+                    "type": "string",
+                    "format": "uri"
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "deliveries": {
+      "type": "object"
+    },
+    "validations": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "integrations": {
+      "type": "object",
+      "properties": {
+        "mailjet": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "key": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 256
+                },
+                "secret": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 256
+                },
+                "templates": {
+                  "type": "object",
+                  "properties": {
+                    "generic": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "sender": {
+                  "type": "object",
+                  "properties": {
+                    "email": {
+                      "type": "string",
+                      "format": "email"
+                    },
+                    "name": {
+                      "type": "string",
+                      "maxLength": 128
+                    }
+                  }
+                }
+              }
+            }
+          ]
         }
       }
     }

@@ -1,5 +1,5 @@
 {
-  "$id": "https://schemas.tillhub.com/v0/customers.create.request.schema.json",
+  "$id": "https://schemas.tillhub.com/v0/customers.update.request.schema.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "additionalProperties": false,
   "type": "object",
@@ -553,17 +553,5 @@
       ]
     }
   },
-  "anyOf": [
-    {
-      "required": [
-        "firstname"
-      ]
-    },
-    {
-      "required": [
-        "lastname"
-      ]
-    }
-  ],
   "required": []
 }

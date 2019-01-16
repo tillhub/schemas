@@ -42,6 +42,17 @@
               "type": "null"
             }
           ]
+        },
+        "timezone": {
+          "description": "IANA timezone.",
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "string"
+            }
+          ]
         }
       },
       "required": [

@@ -557,6 +557,36 @@
                       "default": true
                     }
                   }
+                },
+                "comments": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "default": {
+                      "oneOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "custom": {
+                      "oneOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "show": {
+                      "type": "boolean",
+                      "default": false
+                    }
+                  }
                 }
               }
             }
@@ -1119,6 +1149,36 @@
                       "default": true
                     }
                   }
+                },
+                "comments": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "default": {
+                      "oneOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "custom": {
+                      "oneOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "show": {
+                      "type": "boolean",
+                      "default": false
+                    }
+                  }
                 }
               }
             }
@@ -1679,6 +1739,36 @@
                     "show": {
                       "type": "boolean",
                       "default": true
+                    }
+                  }
+                },
+                "comments": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "default": {
+                      "oneOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "custom": {
+                      "oneOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "show": {
+                      "type": "boolean",
+                      "default": false
                     }
                   }
                 }
