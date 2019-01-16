@@ -1,0 +1,1503 @@
+{
+  "$id": "https://schemas.tillhub.com/v1/balances.get-one.response.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "msg": {
+      "type": "string",
+      "minLength": 1,
+      "example": "Queried transactions sucessefully.",
+      "description": "Any English sentence, meant as information for developers and implementers. Avoid displaying this to the users and especially do not expect thos messages to stay stable."
+    },
+    "msg_localised": {
+      "type": "string",
+      "minLength": 1,
+      "example": "Queried transactions sucessefully.",
+      "description": "Optional localised message that can be displayed to the user if existing. The language can be set by in the request or will fallback to English."
+    },
+    "request": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Information about the request itself.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "The request uuid that can be used to identify and trace API calls.",
+          "format": "uuid"
+        },
+        "host": {
+          "type": "string",
+          "minLength": 1,
+          "example": "https://api.tillhub.com",
+          "description": "Server host and protocol from which request was handled."
+        }
+      }
+    },
+    "count": {
+      "type": "number",
+      "description": "the length of the results array.",
+      "example": 1
+    },
+    "results": {
+      "type": "array",
+      "description": "The envelope of items, that are usually objects. We are generally sending back arrays even if there was just one requested resource.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "account",
+          "account_change",
+          "payment_option",
+          "type",
+          "name",
+          "currency",
+          "amount_total",
+          "amount_tip",
+          "amount_change",
+          "amount_counted",
+          "amount_discrepancy"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "860defb8-5598-421d-9da4-f0826e767536",
+            "format": "uuid",
+            "description": "The uuid v4 that is generated on the API when a transaction is received. This id can be used for idempotency"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2018-11-04T23:18:43.075Z",
+            "description": "The server creation time of this transaction."
+          },
+          "channel": {
+            "type": "string",
+            "example": "api",
+            "description": "The channel of which this transaction originated from. Usually this is the API, but may be experimental implementations of other channels.",
+            "enum": [
+              "api",
+              "blockchain"
+            ]
+          },
+          "client_account": {
+            "type": "string",
+            "minLength": 32,
+            "maxLength": 36,
+            "example": "061f91a3-eba2-40b8-9a76-115189d6741e",
+            "description": "The Tillhub client account ID. Note: this will usually be a uuid v4, however you might receive a capitalised dash-stripped version of it, if you hold a legsacy account."
+          },
+          "date_opening": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2018-01-29T14:55:05.000Z",
+            "description": "A user defined [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) compliant date e.g. 2018-01-29T14:55:05.000Z. This is used to track local client time as oppsed to `created_at`, which is the time the server has received it. This is necessary for e.g. offline client, and is valid time in fiscal reports."
+          },
+          "date_closing": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2018-01-29T14:55:05.000Z",
+            "description": "A user defined [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) compliant date e.g. 2018-01-29T14:55:05.000Z. This is used to track local client time as oppsed to `created_at`, which is the time the server has received it. This is necessary for e.g. offline client, and is valid time in fiscal reports."
+          },
+          "client_id": {
+            "oneOf": [
+              {
+                "type": "string",
+                "example": "d0d40841-b1a7-438a-9d1e-2bfec590d2e3",
+                "minLength": 6,
+                "maxLength": 64,
+                "description": "A implementer defined identifier. This can be used for local resource matching and has no business implication."
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "custom_id": {
+            "oneOf": [
+              {
+                "type": "string",
+                "example": "Balance Nr.7",
+                "maxLength": 128,
+                "description": "Any string that a user wants to store to identify a balance, or wants to make it human readable."
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "branch": {
+            "type": "string",
+            "format": "uuid",
+            "example": "f2ac2cae-97ff-42a1-967b-0a35222ab6d1",
+            "description": "The Tillhub branch location ID."
+          },
+          "branch_custom_id": {
+            "oneOf": [
+              {
+                "type": "string",
+                "example": "5",
+                "description": "The Tillhub branch number."
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "register": {
+            "type": "string",
+            "format": "uuid",
+            "example": "9d110eb2-2245-4e14-9574-49b502f3a9b3",
+            "description": "The Tillhub register location ID."
+          },
+          "register_custom_id": {
+            "oneOf": [
+              {
+                "type": "string",
+                "example": "7",
+                "description": "The Tillhub register number."
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "client": {
+            "oneOf": [
+              {
+                "type": "string",
+                "format": "uuid",
+                "example": "cd110eb2-2245-4e14-9574-49b502f3a9b3",
+                "description": "(MANDANT) The Tillhub client location ID."
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "client_custom_id": {
+            "oneOf": [
+              {
+                "type": "string",
+                "example": "101",
+                "description": "(MANDANT) The Tillhub client number."
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "staff": {
+            "oneOf": [
+              {
+                "type": "string",
+                "format": "uuid",
+                "example": "b3465a62-62e9-46de-9df7-4d3009c46068",
+                "description": "The Tillhub staff resource ID, that has conducted this balance. (used by temp staff)"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "cashier_staff": {
+            "oneOf": [
+              {
+                "type": "string",
+                "format": "uuid",
+                "example": "378a5f19-44c6-4ed1-9ad1-45ec103f1414",
+                "description": "The Tillhub staff (as cashier) resource ID, that has conducted this balance."
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "device": {
+            "oneOf": [
+              {
+                "type": "string",
+                "minLength": 6,
+                "maxLength": 64,
+                "example": "ec1b41af291c4b9483d8adb4e80ac92f",
+                "description": "The Tillhub POS client ID, that was generated upon install, that has conducted this balance."
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "context": {
+            "oneOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "description": "Any additional flat values.",
+                "properties": {
+                  "register": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "description": "Register face values.",
+                        "properties": {
+                          "display": {
+                            "type": "string",
+                            "example": "Front Register 2"
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
+                  "branch": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "description": "Branch face values.",
+                        "properties": {
+                          "display": {
+                            "type": "string",
+                            "example": "WAX Berlin 2"
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
+                  "cashier_staff": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "description": "Cashier face values.",
+                        "properties": {
+                          "number": {
+                            "type": "string",
+                            "example": "005"
+                          },
+                          "display": {
+                            "type": "string",
+                            "example": "Chantal Kowalski"
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "balance_last": {
+            "oneOf": [
+              {
+                "type": "string",
+                "format": "uuid",
+                "example": "9d20d799-b6e0-46a0-9e48-7ca372af13d4",
+                "description": "The Tillhub balance resource ID of the last balance."
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "balance_custom_id_last": {
+            "oneOf": [
+              {
+                "type": "string",
+                "example": "12",
+                "description": "The last balance's `custom_id`, that usually fiscally referred to as the balance number."
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "comments": {
+            "oneOf": [
+              {
+                "type": "string",
+                "example": "Daily balance by cashier",
+                "maxLength": 8192,
+                "description": "Any arbitrary comment."
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "metadata": {
+            "oneOf": [
+              {
+                "type": "object",
+                "description": "A container for storing arbitrary metadata. This might be altered by API."
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "receipts": {
+            "type": "array",
+            "example": "[\"07457072-8b94-4461-806d-baaf6eeea010\"]",
+            "description": "A list of embeddable receipts.",
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string",
+                  "format": "uuid",
+                  "description": "Unembedded Tillhub receipt resource IDs"
+                }
+              },
+              {
+                "items": {
+                  "type": "object",
+                  "description": "Embedded Tillhub receipt resources"
+                }
+              }
+            ],
+            "default": []
+          },
+          "location": {
+            "oneOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "example": "{ \"lat\": 52.5065133, \"lng\": 13.1445545}",
+                "description": "Geospatial data of this transaction",
+                "required": [
+                  "lat",
+                  "lng"
+                ],
+                "properties": {
+                  "lat": {
+                    "type": "number"
+                  },
+                  "lng": {
+                    "type": "number"
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "totals": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "description": "Daily totals by currency",
+              "additionalProperties": false,
+              "type": "object",
+              "required": [
+                "currency",
+                "amount_cash_begin",
+                "amount_cash_calculated",
+                "amount_cash_counted",
+                "amount_revenue_cash",
+                "amount_revenue_total",
+                "amount_tips_cash",
+                "amount_tips_total",
+                "amount_expenses",
+                "amount_taxes"
+              ],
+              "properties": {
+                "client_id": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "example": "d0d40841-b1a7-438a-9d1e-2bfec590d2e3",
+                      "minLength": 6,
+                      "maxLength": 64,
+                      "description": "A implementer defined identifier. This can be used for local resource matching and has no business implication."
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null
+                },
+                "currency": {
+                  "type": "string",
+                  "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                  "example": "EUR",
+                  "minLength": 3,
+                  "maxLength": 3
+                },
+                "amount_cash_begin": {
+                  "default": 0,
+                  "description": "The cash amount in the register at date_opening.",
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1000000,
+                  "multipleOf": 0.01
+                },
+                "amount_cash_calculated": {
+                  "default": 0,
+                  "description": "The calculated cash amount in the register at date_closing.",
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1000000,
+                  "multipleOf": 0.01
+                },
+                "amount_cash_counted": {
+                  "default": 0,
+                  "description": "The counted cash amount in the register at date_closing.",
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1000000,
+                  "multipleOf": 0.01
+                },
+                "amount_revenue_cash": {
+                  "default": 0,
+                  "description": "The cash revenue.",
+                  "type": "number",
+                  "minimum": -1000000,
+                  "maximum": 1000000,
+                  "multipleOf": 0.01
+                },
+                "amount_revenue_total": {
+                  "default": 0,
+                  "description": "The total revenue.",
+                  "type": "number",
+                  "minimum": -1000000,
+                  "maximum": 1000000,
+                  "multipleOf": 0.01
+                },
+                "amount_tips_cash": {
+                  "default": 0,
+                  "description": "The amount of cash tips.",
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1000000,
+                  "multipleOf": 0.01
+                },
+                "amount_tips_total": {
+                  "default": 0,
+                  "description": "The total amount of tips.",
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1000000,
+                  "multipleOf": 0.01
+                },
+                "amount_expenses": {
+                  "default": 0,
+                  "description": "The total sum of expenses/deposits/bank transfers.",
+                  "type": "number",
+                  "minimum": -1000000,
+                  "maximum": 1000000,
+                  "multipleOf": 0.01
+                },
+                "amount_taxes": {
+                  "default": 0,
+                  "description": "The total sum of taxes.",
+                  "type": "number",
+                  "minimum": -1000000,
+                  "maximum": 1000000,
+                  "multipleOf": 0.01
+                }
+              }
+            }
+          },
+          "revenues": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "description": "Revenues grouped by revenue accounts (and currencies if neccessary)",
+              "additionalProperties": false,
+              "type": "object",
+              "required": [
+                "account",
+                "name",
+                "currency",
+                "amount"
+              ],
+              "properties": {
+                "client_id": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "example": "d0d40841-b1a7-438a-9d1e-2bfec590d2e3",
+                      "minLength": 6,
+                      "maxLength": 64,
+                      "description": "A implementer defined identifier. This can be used for local resource matching and has no business implication."
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null
+                },
+                "account": {
+                  "default": null,
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "description": "The applicable Tillhub account e.g for this payment type.",
+                      "example": "a5380b42-6025-49de-bb1d-c9357df96506"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "name": {
+                  "type": "string",
+                  "description": "The nomenclature for this item, which is fiscally required.",
+                  "example": "Erlöskonto Gebrauchtwaren"
+                },
+                "currency": {
+                  "type": "string",
+                  "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                  "example": "EUR",
+                  "minLength": 3,
+                  "maxLength": 3
+                },
+                "amount": {
+                  "example": "27633.02",
+                  "description": "The calculated amount by summing all revenues of that type included in that balance.",
+                  "type": "number",
+                  "minimum": -1000000,
+                  "maximum": 1000000,
+                  "multipleOf": 0.01
+                },
+                "context": {
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "description": "Any additional flat values.",
+                      "properties": {
+                        "account": {
+                          "oneOf": [
+                            {
+                              "type": "object",
+                              "description": "Account face values.",
+                              "properties": {
+                                "number": {
+                                  "description": "Account number.",
+                                  "type": "string",
+                                  "example": "1776"
+                                },
+                                "display": {
+                                  "description": "Account description.",
+                                  "type": "string",
+                                  "example": "Warenerlöse 7 %"
+                                }
+                              }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ],
+                          "default": null
+                        }
+                      },
+                      "required": [
+                        "account",
+                        "product"
+                      ]
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null
+                },
+                "metadata": {
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "description": "A container for storing arbitrary metadata. This might be altered by API."
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null
+                }
+              }
+            }
+          },
+          "payments": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "description": "Payments grouped by payment options (and currencies if neccessary - and, if indicated by e.g. card cisrcuits).",
+              "additionalProperties": false,
+              "type": "object",
+              "required": [
+                "account",
+                "account_change",
+                "payment_option",
+                "type",
+                "name",
+                "currency",
+                "amount_total",
+                "amount_tip",
+                "amount_change",
+                "amount_counted",
+                "amount_discrepancy"
+              ],
+              "properties": {
+                "client_id": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "example": "d0d40841-b1a7-438a-9d1e-2bfec590d2e3",
+                      "minLength": 6,
+                      "maxLength": 64,
+                      "description": "A implementer defined identifier. This can be used for local resource matching and has no business implication."
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null
+                },
+                "payment_option": {
+                  "default": null,
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "format": "uuid",
+                      "description": "The Tillhub payment option resource reference ID.",
+                      "example": "bd7d8a90-83d1-4d53-8659-b205b409d6e1"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "account": {
+                  "default": null,
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "description": "The applicable Tillhub account e.g for this payment type.",
+                      "example": "a5380b42-6025-49de-bb1d-c9357df96506"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "account_change": {
+                  "default": null,
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "description": "The applicable Tillhub account for the cash payment type used for change.",
+                      "example": "a5380b42-6025-49de-bb1d-c9357df96506"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "cost_center": {
+                  "default": null,
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "description": "Any external reference to a cost center e.g. in enterprise environments.",
+                      "example": "CORP-123"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "name": {
+                  "type": "string",
+                  "description": "The nomenclature for this item, which is fiscally required.",
+                  "example": "Kartenzahlung Online"
+                },
+                "currency": {
+                  "type": "string",
+                  "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                  "example": "EUR",
+                  "minLength": 3,
+                  "maxLength": 3
+                },
+                "type": {
+                  "type": "string",
+                  "description": "The payment option used as key",
+                  "enum": [
+                    "card",
+                    "cash",
+                    "expense",
+                    "voucher",
+                    "custom",
+                    "invoice",
+                    "card_opi",
+                    "card_concardis",
+                    "card_adyen",
+                    "card_tim"
+                  ]
+                },
+                "grouped_by": {
+                  "default": null,
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "description": "Beyond payment option - payment options are further grouped by e.g. certain card circuits.",
+                      "properties": {
+                        "type": {
+                          "type": "string",
+                          "description": "The payment field used as a secondary grouping key",
+                          "enum": [
+                            "card_circuits",
+                            "custom"
+                          ]
+                        },
+                        "values": {
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "additionalProperties": false,
+                            "description": "A card circuit that is part of this grouping.",
+                            "example": "Masrer Card"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "amount_calculated": {
+                  "example": "27633.02",
+                  "description": "The calculated amount by summing all payments of that type included in that balance.",
+                  "type": "number",
+                  "minimum": -1000000,
+                  "maximum": 1000000,
+                  "multipleOf": 0.01
+                },
+                "amount_tip": {
+                  "example": "921.45",
+                  "description": "The (in amount_calculated) included tip amount.",
+                  "type": "number",
+                  "minimum": -1000000,
+                  "maximum": 1000000,
+                  "multipleOf": 0.01,
+                  "default": null
+                },
+                "amount_counted": {
+                  "example": "27628.11",
+                  "description": "The reported amount (by counting cash or accessing an external reference, e.g. terminal balance report).",
+                  "type": "number",
+                  "minimum": -1000000,
+                  "maximum": 1000000,
+                  "multipleOf": 0.01,
+                  "default": null
+                },
+                "amount_discrepancy": {
+                  "description": "The discrepancy between amount_calculated and amount_counted.",
+                  "example": "-4.91",
+                  "type": "number",
+                  "minimum": -1000000,
+                  "maximum": 1000000,
+                  "multipleOf": 0.01,
+                  "default": null
+                },
+                "amount_change": {
+                  "description": "The cash amount that was handed back from the cashier as change for all payments included.",
+                  "example": "49.98",
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1000000,
+                  "multipleOf": 0.01,
+                  "default": null
+                },
+                "context": {
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "description": "Any additional flat values.",
+                      "properties": {
+                        "account": {
+                          "oneOf": [
+                            {
+                              "type": "object",
+                              "description": "Account face values.",
+                              "properties": {
+                                "number": {
+                                  "description": "Account number.",
+                                  "type": "string",
+                                  "example": "1776"
+                                },
+                                "display": {
+                                  "description": "Account description.",
+                                  "type": "string",
+                                  "example": "Konto Kartenzahlungen"
+                                }
+                              }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ],
+                          "default": null
+                        },
+                        "account_change": {
+                          "oneOf": [
+                            {
+                              "type": "object",
+                              "description": "Change account face values.",
+                              "properties": {
+                                "number": {
+                                  "description": "Account number.",
+                                  "type": "string",
+                                  "example": "1002"
+                                },
+                                "display": {
+                                  "description": "Account description.",
+                                  "type": "string",
+                                  "example": "Wechselgeld"
+                                }
+                              }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ],
+                          "default": null
+                        }
+                      },
+                      "required": [
+                        "account"
+                      ]
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null
+                },
+                "metadata": {
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "description": "A container for storing arbitrary metadata. This might be altered by API."
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null
+                }
+              }
+            }
+          },
+          "taxes": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "description": "Taxes grouped by tax accounts (and currencies if neccessary)",
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "account",
+                "name",
+                "currency",
+                "amount"
+              ],
+              "properties": {
+                "client_id": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "example": "d0d40841-b1a7-438a-9d1e-2bfec590d2e3",
+                      "minLength": 6,
+                      "maxLength": 64,
+                      "description": "A implementer defined identifier. This can be used for local resource matching and has no business implication."
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null
+                },
+                "account": {
+                  "default": null,
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "description": "The applicable Tillhub account e.g for this payment type.",
+                      "example": "a5380b42-6025-49de-bb1d-c9357df96506"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "vat_rate": {
+                  "type": "number",
+                  "description": "The VAT rate of this group. E.g. 0.19 for 19% German VAT.",
+                  "example": "0.19",
+                  "minimum": 0,
+                  "maximum": 1,
+                  "multipleOf": 0.001
+                },
+                "name": {
+                  "type": "string",
+                  "description": "The nomenclature for this item, which is fiscally required.",
+                  "example": "Mehrwertsteuer ermäßigt."
+                },
+                "currency": {
+                  "type": "string",
+                  "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                  "example": "EUR",
+                  "minLength": 3,
+                  "maxLength": 3
+                },
+                "amount": {
+                  "example": "633.41",
+                  "description": "The calculated amount by summing all taxes of that type included in that balance.",
+                  "type": "number",
+                  "minimum": -1000000,
+                  "maximum": 1000000,
+                  "multipleOf": 0.01
+                },
+                "custom_id": {
+                  "default": null,
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "description": "Any custom ID.",
+                      "example": "1234566"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "context": {
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "description": "Any additional flat values.",
+                      "properties": {
+                        "account": {
+                          "oneOf": [
+                            {
+                              "type": "object",
+                              "description": "Account face values.",
+                              "properties": {
+                                "number": {
+                                  "description": "Account number.",
+                                  "type": "string",
+                                  "example": "1776"
+                                },
+                                "display": {
+                                  "description": "Account description.",
+                                  "type": "string",
+                                  "example": "Warenerlöse 7 %"
+                                }
+                              }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ],
+                          "default": null
+                        }
+                      },
+                      "required": [
+                        "account",
+                        "product"
+                      ]
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null
+                },
+                "metadata": {
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "description": "A container for storing arbitrary metadata. This might be altered by API."
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null
+                }
+              }
+            }
+          },
+          "tips": {
+            "type": "array",
+            "items": {
+              "description": "Tips grouped by staff, account and tax (and currencies if neccessary)",
+              "additionalProperties": false,
+              "type": "object",
+              "required": [
+                "staff",
+                "account",
+                "tax",
+                "product",
+                "currency",
+                "amount"
+              ],
+              "properties": {
+                "client_id": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "example": "d0d40841-b1a7-438a-9d1e-2bfec590d2e3",
+                      "minLength": 6,
+                      "maxLength": 64,
+                      "description": "A implementer defined identifier. This can be used for local resource matching and has no business implication."
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null
+                },
+                "staff": {
+                  "default": null,
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "description": "The applicable Tillhub stuff for this tip configuration.",
+                      "example": "a5380b42-6025-49de-bb1d-c9357df96506"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "account": {
+                  "default": null,
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "description": "The applicable Tillhub revenue account for this tip configuration.",
+                      "example": "a5380b42-6025-49de-bb1d-c9357df96506"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "tax": {
+                  "default": null,
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "description": "The applicable Tillhub tax account for this tip configuration.",
+                      "example": "a5380b42-6025-49de-bb1d-c9357df96506"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "vat_rate": {
+                  "type": "number",
+                  "description": "The VAT rate of this group. E.g. 0.19 for 19% German VAT.",
+                  "example": "0.19",
+                  "minimum": 0,
+                  "maximum": 1,
+                  "multipleOf": 0.001
+                },
+                "product": {
+                  "default": null,
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "description": "The applicable Tillhub product for this tip configuration.",
+                      "example": "a5380b42-6025-49de-bb1d-c9357df96506"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "currency": {
+                  "type": "string",
+                  "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                  "example": "EUR",
+                  "minLength": 3,
+                  "maxLength": 3
+                },
+                "amount": {
+                  "example": "133.41",
+                  "description": "The amount by summing all tips for that configuration in that balance.",
+                  "type": "number",
+                  "minimum": -1000000,
+                  "maximum": 1000000,
+                  "multipleOf": 0.01
+                },
+                "custom_id": {
+                  "default": null,
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "description": "Any custom ID.",
+                      "example": "1234566"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "branch": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "format": "uuid",
+                      "example": "f2ac2cae-97ff-42a1-967b-0a35222ab6d1",
+                      "description": "The Tillhub branch location ID. If none is specified we will use the one from the transaction."
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null
+                },
+                "register": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "format": "uuid",
+                      "example": "9d110eb2-2245-4e14-9574-49b502f3a9b3",
+                      "description": "The Tillhub register location ID. If none is specified we will use the one from the transaction."
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null
+                },
+                "context": {
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "description": "Any additional flat values.",
+                      "properties": {
+                        "account": {
+                          "oneOf": [
+                            {
+                              "type": "object",
+                              "description": "Account face values.",
+                              "properties": {
+                                "number": {
+                                  "description": "Account number.",
+                                  "type": "string",
+                                  "example": "1776"
+                                },
+                                "display": {
+                                  "description": "Account description.",
+                                  "type": "string",
+                                  "example": "Warenerlöse 7 %"
+                                }
+                              }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ],
+                          "default": null
+                        },
+                        "tax": {
+                          "oneOf": [
+                            {
+                              "type": "object",
+                              "description": "Tax face values.",
+                              "properties": {
+                                "number": {
+                                  "description": "Account number.",
+                                  "type": "string",
+                                  "example": "2006"
+                                },
+                                "display": {
+                                  "description": "Account description.",
+                                  "type": "string",
+                                  "example": "Mehrwertsteuer ermäßigt"
+                                }
+                              }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ],
+                          "default": null
+                        },
+                        "product": {
+                          "oneOf": [
+                            {
+                              "type": "object",
+                              "description": "Product face values.",
+                              "properties": {
+                                "number": {
+                                  "type": "string",
+                                  "example": "0032039845"
+                                },
+                                "display": {
+                                  "type": "string",
+                                  "example": "Another product string"
+                                }
+                              }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ],
+                          "default": null
+                        },
+                        "product_group": {
+                          "oneOf": [
+                            {
+                              "type": "object",
+                              "description": "Product face values.",
+                              "properties": {
+                                "number": {
+                                  "type": "string",
+                                  "example": "0032039845"
+                                },
+                                "display": {
+                                  "type": "string",
+                                  "example": "Waxing HIM"
+                                }
+                              }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ],
+                          "default": null
+                        },
+                        "staff": {
+                          "oneOf": [
+                            {
+                              "type": "object",
+                              "description": "Salesman face values.",
+                              "properties": {
+                                "owner": {
+                                  "type": "boolean",
+                                  "example": "true"
+                                },
+                                "number": {
+                                  "type": "string",
+                                  "example": "012"
+                                },
+                                "display": {
+                                  "type": "string",
+                                  "example": "Cindy Schmidt"
+                                }
+                              }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ],
+                          "default": null
+                        }
+                      },
+                      "required": [
+                        "account",
+                        "tax",
+                        "product",
+                        "staff"
+                      ]
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null
+                },
+                "metadata": {
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "description": "A container for storing arbitrary metadata. This might be altered by API."
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null
+                }
+              }
+            }
+          },
+          "cash_units": {
+            "type": "array",
+            "items": {
+              "description": "Payments grouped by payment options (and currencies if neccessary - and, if indicated by e.g. card cisrcuits).",
+              "additionalProperties": false,
+              "type": "object",
+              "required": [
+                "currency",
+                "units"
+              ],
+              "properties": {
+                "client_id": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "example": "d0d40841-b1a7-438a-9d1e-2bfec590d2e3",
+                      "minLength": 6,
+                      "maxLength": 64,
+                      "description": "A implementer defined identifier. This can be used for local resource matching and has no business implication."
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null
+                },
+                "currency": {
+                  "type": "string",
+                  "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                  "example": "EUR",
+                  "minLength": 3,
+                  "maxLength": 3
+                },
+                "units": {
+                  "type": "array",
+                  "additionalProperties": false,
+                  "description": "units.",
+                  "items": {
+                    "type": "object",
+                    "description": "Cash unit details pre e.g. 7 pieces of 10 Cents coins.",
+                    "properties": {
+                      "somename": {
+                        "type": "string",
+                        "description": "The payment option used as key",
+                        "example": "coin",
+                        "enum": [
+                          "bill",
+                          "coin"
+                        ]
+                      },
+                      "qty": {
+                        "default": null,
+                        "oneOf": [
+                          {
+                            "type": "number",
+                            "description": "The quantity of this unit.",
+                            "example": "7",
+                            "minimum": 0,
+                            "maximum": 32767,
+                            "multipleOf": 1
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "value": {
+                        "example": "0.10",
+                        "description": "The amount by summing all tips for that configuration in that balance.",
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1000000,
+                        "multipleOf": 0.01
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "insert_id": {
+            "type": "number",
+            "example": "128",
+            "description": "The sequential database insert ID. Consecutiveness is not guaranteed."
+          },
+          "hashes": {
+            "type": "object",
+            "description": "Hashes to check consistency of the data fields of this transactions that are hashable.",
+            "properties": {
+              "sha512_v0": {
+                "type": "string",
+                "minLength": 512,
+                "maxLength": 512,
+                "description": "The v0 implementation of the balance hash "
+              }
+            }
+          },
+          "self": {
+            "type": "object",
+            "description": "All references to this balance",
+            "properties": {
+              "uri": {
+                "type": "string",
+                "format": "url"
+              },
+              "block_balance": {
+                "type": "string",
+                "maxLength": 512,
+                "default": null
+              }
+            }
+          },
+          "block": {
+            "type": "object",
+            "description": "The block this balance is stored in and it's references.",
+            "properties": {
+              "id": {
+                "type": "string",
+                "description": "The actual block."
+              },
+              "previous": {
+                "type": "string",
+                "description": "The previous block."
+              },
+              "balance": {
+                "type": "string",
+                "description": "The block balance id."
+              }
+            }
+          },
+          "previous": {
+            "type": "string",
+            "format": "uuid",
+            "example": "05321210-4546-400d-b70b-e059fef52fc4",
+            "description": "The previous balnance on the server. Consecutiveness is server only. Stale offline balances are not accommodated here."
+          }
+        }
+      }
+    }
+  }
+}
