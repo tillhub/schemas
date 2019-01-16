@@ -1,3 +1,10 @@
+# [2.96.0](https://github.com/tillhub/schemas/compare/v2.95.0...v2.96.0) (2019-01-16)
+
+
+### Features
+
+* **balances:** expose balances schemas ([f15bf0d](https://github.com/tillhub/schemas/commit/f15bf0d))
+
 # [2.95.0](https://github.com/tillhub/schemas/compare/v2.94.0...v2.95.0) (2019-01-16)
 
 
