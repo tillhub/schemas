@@ -1358,7 +1358,6 @@
               "properties": {
                 "somename": {
                   "type": "string",
-                  "description": "The payment option used as key",
                   "example": "coin",
                   "enum": [
                     "bill",

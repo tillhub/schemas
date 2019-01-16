@@ -1403,7 +1403,6 @@
                     "properties": {
                       "somename": {
                         "type": "string",
-                        "description": "The payment option used as key",
                         "example": "coin",
                         "enum": [
                           "bill",
@@ -1474,7 +1473,7 @@
           },
           "block": {
             "type": "object",
-            "description": "The block this balance is stored in and it's references.",
+            "description": "The block this balance is stored in and its references.",
             "properties": {
               "id": {
                 "type": "string",
@@ -1494,7 +1493,7 @@
             "type": "string",
             "format": "uuid",
             "example": "05321210-4546-400d-b70b-e059fef52fc4",
-            "description": "The previous balnance on the server. Consecutiveness is server only. Stale offline balances are not accommodated here."
+            "description": "The previous balance on the server. Consecutiveness is server only. Stale offline balances are not accommodated here."
           }
         }
       }

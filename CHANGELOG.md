@@ -1,3 +1,10 @@
+# [2.95.0](https://github.com/tillhub/schemas/compare/v2.94.0...v2.95.0) (2019-01-16)
+
+
+### Features
+
+* **balances:** adds balances schemas ([2a1031e](https://github.com/tillhub/schemas/commit/2a1031e))
+
 # [2.94.0](https://github.com/tillhub/schemas/compare/v2.93.0...v2.94.0) (2019-01-15)
 
 
