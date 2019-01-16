@@ -1,3 +1,10 @@
+# [2.97.0](https://github.com/tillhub/schemas/compare/v2.96.0...v2.97.0) (2019-01-16)
+
+
+### Features
+
+* **balances:** add missing prop to payments ([2e11314](https://github.com/tillhub/schemas/commit/2e11314))
+
 # [2.96.0](https://github.com/tillhub/schemas/compare/v2.95.0...v2.96.0) (2019-01-16)
 
 
