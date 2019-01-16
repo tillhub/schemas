@@ -617,7 +617,7 @@
           "type",
           "name",
           "currency",
-          "amount_total",
+          "amount_calculated",
           "amount_tip",
           "amount_change",
           "amount_counted",
