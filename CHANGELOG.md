@@ -1,3 +1,10 @@
+## [2.99.1](https://github.com/tillhub/schemas/compare/v2.99.0...v2.99.1) (2019-01-17)
+
+
+### Bug Fixes
+
+* **registers:** fixed notification access when using lib ([3d6b27f](https://github.com/tillhub/schemas/commit/3d6b27f))
+
 # [2.99.0](https://github.com/tillhub/schemas/compare/v2.98.1...v2.99.0) (2019-01-17)
 
 
