@@ -1,3 +1,10 @@
+# [2.99.0](https://github.com/tillhub/schemas/compare/v2.98.1...v2.99.0) (2019-01-17)
+
+
+### Features
+
+* **registers:** added notification schema ([8ed48f5](https://github.com/tillhub/schemas/commit/8ed48f5))
+
 ## [2.98.1](https://github.com/tillhub/schemas/compare/v2.98.0...v2.98.1) (2019-01-17)
 
 
