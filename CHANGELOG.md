@@ -1,3 +1,10 @@
+# [2.98.0](https://github.com/tillhub/schemas/compare/v2.97.0...v2.98.0) (2019-01-17)
+
+
+### Features
+
+* **registers:** added registers v1 schema ([44d44c6](https://github.com/tillhub/schemas/commit/44d44c6))
+
 # [2.97.0](https://github.com/tillhub/schemas/compare/v2.96.0...v2.97.0) (2019-01-16)
 
 
