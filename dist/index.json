@@ -17,6 +17,8 @@
   "/helpers.patch.request.schema.json",
   "/products.create.request.schema.json",
   "/products.update.request.schema.json",
+  "/registers.create.request.schema.json",
+  "/registers.update.request.schema.json",
   "/templates.create.request.schema.json",
   "/templates.put.request.schema.json",
   "/transactions.create.request.schema.json",
