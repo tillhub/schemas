@@ -1,3 +1,10 @@
+## [2.99.2](https://github.com/tillhub/schemas/compare/v2.99.1...v2.99.2) (2019-01-17)
+
+
+### Bug Fixes
+
+* **registers:** removed register_id & client_id being required in initial create ([0fe9535](https://github.com/tillhub/schemas/commit/0fe9535))
+
 ## [2.99.1](https://github.com/tillhub/schemas/compare/v2.99.0...v2.99.1) (2019-01-17)
 
 

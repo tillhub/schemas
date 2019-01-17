@@ -4,9 +4,7 @@
   "additionalProperties": false,
   "type": "object",
   "required": [
-    "aps",
-    "register_id",
-    "client_id"
+    "aps"
   ],
   "properties": {
     "aps": {
