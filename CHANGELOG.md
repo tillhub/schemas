@@ -1,3 +1,10 @@
+## [2.98.1](https://github.com/tillhub/schemas/compare/v2.98.0...v2.98.1) (2019-01-17)
+
+
+### Bug Fixes
+
+* **registers:** changed type of network property ([2b4d209](https://github.com/tillhub/schemas/commit/2b4d209))
+
 # [2.98.0](https://github.com/tillhub/schemas/compare/v2.97.0...v2.98.0) (2019-01-17)
 
 
