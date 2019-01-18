@@ -232,6 +232,10 @@
                 }
               ],
               "default": null
+            },
+            "statistics": {
+              "type": "number",
+              "description": "number of transactions with type \"sale\""
             }
           }
         },
@@ -369,7 +373,6 @@
     },
     "totals": {
       "type": "array",
-      "minItems": 1,
       "items": {
         "description": "Daily totals by currency",
         "additionalProperties": false,
@@ -486,7 +489,6 @@
     },
     "revenues": {
       "type": "array",
-      "minItems": 1,
       "items": {
         "description": "Revenues grouped by revenue accounts (and currencies if neccessary)",
         "additionalProperties": false,
@@ -605,7 +607,6 @@
     },
     "payments": {
       "type": "array",
-      "minItems": 1,
       "items": {
         "description": "Payments grouped by payment options (and currencies if neccessary - and, if indicated by e.g. card cisrcuits).",
         "additionalProperties": false,
@@ -878,7 +879,6 @@
     },
     "taxes": {
       "type": "array",
-      "minItems": 1,
       "items": {
         "description": "Taxes grouped by tax accounts (and currencies if neccessary)",
         "type": "object",
