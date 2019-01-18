@@ -1,3 +1,10 @@
+## [2.102.2](https://github.com/tillhub/schemas/compare/v2.102.1...v2.102.2) (2019-01-18)
+
+
+### Bug Fixes
+
+* **registers/notification:** added default value for `apn` & `content-available` ([926cac7](https://github.com/tillhub/schemas/commit/926cac7))
+
 ## [2.102.1](https://github.com/tillhub/schemas/compare/v2.102.0...v2.102.1) (2019-01-18)
 
 
