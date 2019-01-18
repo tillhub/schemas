@@ -1,3 +1,10 @@
+# [2.100.0](https://github.com/tillhub/schemas/compare/v2.99.2...v2.100.0) (2019-01-18)
+
+
+### Features
+
+* **registers/notification:** added ui field ([ac7bbc6](https://github.com/tillhub/schemas/commit/ac7bbc6))
+
 ## [2.99.2](https://github.com/tillhub/schemas/compare/v2.99.1...v2.99.2) (2019-01-17)
 
 
