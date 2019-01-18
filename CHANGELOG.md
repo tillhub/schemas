@@ -1,3 +1,10 @@
+# [2.102.0](https://github.com/tillhub/schemas/compare/v2.101.0...v2.102.0) (2019-01-18)
+
+
+### Features
+
+* **balances:** fix statistics type and properties ([c3bfb08](https://github.com/tillhub/schemas/commit/c3bfb08))
+
 # [2.101.0](https://github.com/tillhub/schemas/compare/v2.100.0...v2.101.0) (2019-01-18)
 
 
