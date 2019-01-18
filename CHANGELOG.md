@@ -1,3 +1,10 @@
+## [2.102.1](https://github.com/tillhub/schemas/compare/v2.102.0...v2.102.1) (2019-01-18)
+
+
+### Bug Fixes
+
+* **balances:** fix property name ([9c9d3cb](https://github.com/tillhub/schemas/commit/9c9d3cb))
+
 # [2.102.0](https://github.com/tillhub/schemas/compare/v2.101.0...v2.102.0) (2019-01-18)
 
 
