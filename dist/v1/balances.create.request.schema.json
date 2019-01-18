@@ -234,8 +234,22 @@
               "default": null
             },
             "statistics": {
-              "type": "number",
-              "description": "number of transactions with type \"sale\""
+              "oneOf": [
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "description": "Count of transactions of type \"sales\"",
+                  "properties": {
+                    "sales_count": {
+                      "type": "number",
+                      "example": "43"
+                    }
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
             }
           }
         },
