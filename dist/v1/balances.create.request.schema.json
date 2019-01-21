@@ -542,9 +542,17 @@
             ]
           },
           "name": {
-            "type": "string",
-            "description": "The nomenclature for this item, which is fiscally required.",
-            "example": "Erlöskonto Gebrauchtwaren"
+            "default": null,
+            "oneOf": [
+              {
+                "type": "string",
+                "description": "The nomenclature for this item, which is fiscally required.",
+                "example": "Erlöskonto Gebrauchtwaren"
+              },
+              {
+                "type": "null"
+              }
+            ]
           },
           "currency": {
             "type": "string",
@@ -704,9 +712,17 @@
             ]
           },
           "name": {
-            "type": "string",
-            "description": "The nomenclature for this item, which is fiscally required.",
-            "example": "Kartenzahlung Online"
+            "default": null,
+            "oneOf": [
+              {
+                "type": "string",
+                "description": "The nomenclature for this item, which is fiscally required.",
+                "example": "Kartenzahlung Online"
+              },
+              {
+                "type": "null"
+              }
+            ]
           },
           "currency": {
             "type": "string",
@@ -936,9 +952,17 @@
             "multipleOf": 0.001
           },
           "name": {
-            "type": "string",
-            "description": "The nomenclature for this item, which is fiscally required.",
-            "example": "Mehrwertsteuer ermäßigt."
+            "default": null,
+            "oneOf": [
+              {
+                "type": "string",
+                "description": "The nomenclature for this item, which is fiscally required.",
+                "example": "Mehrwertsteuer ermäßigt."
+              },
+              {
+                "type": "null"
+              }
+            ]
           },
           "currency": {
             "type": "string",
