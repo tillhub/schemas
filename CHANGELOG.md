@@ -1,3 +1,10 @@
+# [2.106.0](https://github.com/tillhub/schemas/compare/v2.105.0...v2.106.0) (2019-01-21)
+
+
+### Features
+
+* **configurations:** customers: allow default_branch to be null ([b46b25f](https://github.com/tillhub/schemas/commit/b46b25f))
+
 # [2.105.0](https://github.com/tillhub/schemas/compare/v2.104.0...v2.105.0) (2019-01-21)
 
 
