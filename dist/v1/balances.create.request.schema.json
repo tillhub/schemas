@@ -509,7 +509,6 @@
         "type": "object",
         "required": [
           "account",
-          "name",
           "currency",
           "amount"
         ],
@@ -626,11 +625,8 @@
         "additionalProperties": false,
         "type": "object",
         "required": [
-          "account",
-          "account_change",
           "payment_option",
           "type",
-          "name",
           "currency",
           "amount_calculated",
           "amount_tip",
@@ -899,7 +895,6 @@
         "additionalProperties": false,
         "required": [
           "account",
-          "name",
           "currency",
           "amount"
         ],
@@ -1040,7 +1035,6 @@
           "staff",
           "account",
           "tax",
-          "product",
           "currency",
           "amount"
         ],

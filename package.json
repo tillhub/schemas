@@ -28,6 +28,12 @@
     "schemas"
   ],
   "author": "Robert Jefe Lindstaedt <robert.lindstaedt@gmail.com>",
+  "contributors": [
+    {
+      "name": "Quynh To Tuan",
+      "email": "quynh.totuan@gmail.com"
+    }
+  ],
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/tillhub/schemas/issues"
