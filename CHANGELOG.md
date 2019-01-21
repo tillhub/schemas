@@ -1,3 +1,10 @@
+# [2.103.0](https://github.com/tillhub/schemas/compare/v2.102.2...v2.103.0) (2019-01-21)
+
+
+### Features
+
+* **general:** Add contributors to package ([0ae3a96](https://github.com/tillhub/schemas/commit/0ae3a96))
+
 ## [2.102.2](https://github.com/tillhub/schemas/compare/v2.102.1...v2.102.2) (2019-01-18)
 
 
