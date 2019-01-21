@@ -1,3 +1,10 @@
+# [2.104.0](https://github.com/tillhub/schemas/compare/v2.103.0...v2.104.0) (2019-01-21)
+
+
+### Features
+
+* **registers:** adds attached devices to registers ([4c1fe62](https://github.com/tillhub/schemas/commit/4c1fe62))
+
 # [2.103.0](https://github.com/tillhub/schemas/compare/v2.102.2...v2.103.0) (2019-01-21)
 
 
