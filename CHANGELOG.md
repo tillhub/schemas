@@ -1,3 +1,10 @@
+# [2.105.0](https://github.com/tillhub/schemas/compare/v2.104.0...v2.105.0) (2019-01-21)
+
+
+### Features
+
+* **configurations:** add customer-per-branch properties ([a62f1d6](https://github.com/tillhub/schemas/commit/a62f1d6))
+
 # [2.104.0](https://github.com/tillhub/schemas/compare/v2.103.0...v2.104.0) (2019-01-21)
 
 
