@@ -1,3 +1,10 @@
+# [2.107.0](https://github.com/tillhub/schemas/compare/v2.106.0...v2.107.0) (2019-01-21)
+
+
+### Features
+
+* **balances:** allow some props to be null ([19d2462](https://github.com/tillhub/schemas/commit/19d2462))
+
 # [2.106.0](https://github.com/tillhub/schemas/compare/v2.105.0...v2.106.0) (2019-01-21)
 
 
