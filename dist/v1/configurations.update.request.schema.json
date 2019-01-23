@@ -295,14 +295,42 @@
           "additionalProperties": false,
           "properties": {
             "country": {
-              "type": "string",
-              "minLength": 1,
-              "maxLength": 10
+              "oneOf": [
+                {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 10
+                },
+                {
+                  "type": "null"
+                }
+              ]
             },
             "franchise_id": {
-              "type": "string",
-              "minLength": 1,
-              "maxLength": 10
+              "description": "The custom franchise ID that e.g. will be used during customer number generation",
+              "oneOf": [
+                {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 10
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "id": {
+              "description": "DEPRECATED: the legacy format for franchise ID",
+              "oneOf": [
+                {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 10
+                },
+                {
+                  "type": "null"
+                }
+              ]
             }
           }
         }

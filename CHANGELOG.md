@@ -1,3 +1,10 @@
+## [2.107.1](https://github.com/tillhub/schemas/compare/v2.107.0...v2.107.1) (2019-01-23)
+
+
+### Bug Fixes
+
+* **configurations:** adds legacy franchise id ([4bdd62f](https://github.com/tillhub/schemas/commit/4bdd62f))
+
 # [2.107.0](https://github.com/tillhub/schemas/compare/v2.106.0...v2.107.0) (2019-01-21)
 
 
