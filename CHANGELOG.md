@@ -1,3 +1,10 @@
+# [2.108.0](https://github.com/tillhub/schemas/compare/v2.107.1...v2.108.0) (2019-01-25)
+
+
+### Features
+
+* **templates:** added `date_format` option ([a442f22](https://github.com/tillhub/schemas/commit/a442f22))
+
 ## [2.107.1](https://github.com/tillhub/schemas/compare/v2.107.0...v2.107.1) (2019-01-23)
 
 

@@ -603,7 +603,7 @@
                 "type": "array",
                 "items": {
                   "type": "object",
-                  "description": "Any applied discounts as they happened at transaction creation time."
+                  "description": "Total sum per currency of applied discounts as they happened at transaction creation time."
                 }
               },
               {

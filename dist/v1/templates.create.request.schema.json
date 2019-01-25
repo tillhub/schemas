@@ -225,6 +225,10 @@
               "type": "string",
               "maxLength": 32
             },
+            "date_format": {
+              "type": "string",
+              "maxLength": 32
+            },
             "map": {
               "type": "object",
               "additionalProperties": false,
@@ -818,6 +822,10 @@
               "type": "string",
               "maxLength": 32
             },
+            "date_format": {
+              "type": "string",
+              "maxLength": 32
+            },
             "map": {
               "type": "object",
               "additionalProperties": false,
@@ -1408,6 +1416,10 @@
               "maxLength": 32
             },
             "date_of_delivery_title": {
+              "type": "string",
+              "maxLength": 32
+            },
+            "date_format": {
               "type": "string",
               "maxLength": 32
             },
