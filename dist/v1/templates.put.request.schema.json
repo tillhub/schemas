@@ -228,6 +228,15 @@
               "type": "string",
               "maxLength": 32
             },
+            "show_cashier": {
+              "type": "boolean"
+            },
+            "show_attention": {
+              "type": "boolean"
+            },
+            "show_main_text": {
+              "type": "boolean"
+            },
             "map": {
               "type": "object",
               "additionalProperties": false,
@@ -824,6 +833,15 @@
               "type": "string",
               "maxLength": 32
             },
+            "show_cashier": {
+              "type": "boolean"
+            },
+            "show_attention": {
+              "type": "boolean"
+            },
+            "show_main_text": {
+              "type": "boolean"
+            },
             "map": {
               "type": "object",
               "additionalProperties": false,
@@ -1419,6 +1437,15 @@
             "date_format": {
               "type": "string",
               "maxLength": 32
+            },
+            "show_cashier": {
+              "type": "boolean"
+            },
+            "show_attention": {
+              "type": "boolean"
+            },
+            "show_main_text": {
+              "type": "boolean"
             },
             "map": {
               "type": "object",

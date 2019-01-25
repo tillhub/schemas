@@ -1,3 +1,10 @@
+# [2.109.0](https://github.com/tillhub/schemas/compare/v2.108.0...v2.109.0) (2019-01-25)
+
+
+### Features
+
+* **templates:** added `show_cashier`, `show_attention`, `show_main_text` ([cb87da4](https://github.com/tillhub/schemas/commit/cb87da4))
+
 # [2.108.0](https://github.com/tillhub/schemas/compare/v2.107.1...v2.108.0) (2019-01-25)
 
 
