@@ -1,3 +1,10 @@
+## [2.110.1](https://github.com/tillhub/schemas/compare/v2.110.0...v2.110.1) (2019-01-29)
+
+
+### Bug Fixes
+
+* **schema:** fixes id name of schema ([1ce1cd7](https://github.com/tillhub/schemas/commit/1ce1cd7))
+
 # [2.110.0](https://github.com/tillhub/schemas/compare/v2.109.0...v2.110.0) (2019-01-29)
 
 
