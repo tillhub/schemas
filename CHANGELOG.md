@@ -1,3 +1,10 @@
+# [2.110.0](https://github.com/tillhub/schemas/compare/v2.109.0...v2.110.0) (2019-01-29)
+
+
+### Features
+
+* adds stock ([e80c9a3](https://github.com/tillhub/schemas/commit/e80c9a3))
+
 # [2.109.0](https://github.com/tillhub/schemas/compare/v2.108.0...v2.109.0) (2019-01-25)
 
 
