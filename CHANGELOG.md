@@ -1,3 +1,11 @@
+# [2.111.0](https://github.com/tillhub/schemas/compare/v2.110.1...v2.111.0) (2019-01-31)
+
+
+### Features
+
+* **dev:** allow default on oneOf ([768f3f7](https://github.com/tillhub/schemas/commit/768f3f7))
+* **products:** allow product images ([b7d8b77](https://github.com/tillhub/schemas/commit/b7d8b77))
+
 ## [2.110.1](https://github.com/tillhub/schemas/compare/v2.110.0...v2.110.1) (2019-01-29)
 
 
