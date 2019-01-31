@@ -459,7 +459,7 @@
       ]
     },
     "images": {
-      "anyOf": [
+      "oneOf": [
         {
           "type": "object",
           "additionalProperties": false,
@@ -512,7 +512,7 @@
               ],
               "default": null
             },
-            "lia_1x ": {
+            "lia_1x": {
               "oneOf": [
                 {
                   "type": "string",
@@ -524,7 +524,7 @@
               ],
               "default": null
             },
-            "lia_2x ": {
+            "lia_2x": {
               "oneOf": [
                 {
                   "type": "string",
@@ -536,7 +536,7 @@
               ],
               "default": null
             },
-            "lia_3x ": {
+            "lia_3x": {
               "oneOf": [
                 {
                   "type": "string",
@@ -548,7 +548,7 @@
               ],
               "default": null
             },
-            "square_1x ": {
+            "square_1x": {
               "oneOf": [
                 {
                   "type": "string",
@@ -560,7 +560,7 @@
               ],
               "default": null
             },
-            "square_2x ": {
+            "square_2x": {
               "oneOf": [
                 {
                   "type": "string",
@@ -572,7 +572,7 @@
               ],
               "default": null
             },
-            "square_3x ": {
+            "square_3x": {
               "oneOf": [
                 {
                   "type": "string",

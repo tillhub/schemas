@@ -1,3 +1,10 @@
+## [2.112.1](https://github.com/tillhub/schemas/compare/v2.112.0...v2.112.1) (2019-01-31)
+
+
+### Bug Fixes
+
+* **products:** fixes wrong type inference ([cfb161e](https://github.com/tillhub/schemas/commit/cfb161e))
+
 # [2.112.0](https://github.com/tillhub/schemas/compare/v2.111.0...v2.112.0) (2019-01-31)
 
 
