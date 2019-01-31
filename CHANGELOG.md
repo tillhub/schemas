@@ -1,3 +1,10 @@
+# [2.112.0](https://github.com/tillhub/schemas/compare/v2.111.0...v2.112.0) (2019-01-31)
+
+
+### Features
+
+* allow setting payments and balances config ([5230f40](https://github.com/tillhub/schemas/commit/5230f40))
+
 # [2.111.0](https://github.com/tillhub/schemas/compare/v2.110.1...v2.111.0) (2019-01-31)
 
 
