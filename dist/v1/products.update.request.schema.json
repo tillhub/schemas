@@ -7,12 +7,14 @@
   "properties": {
     "name": {
       "description": "Product name",
-      "type": "string"
+      "type": "string",
+      "maxLength": 512
     },
     "description": {
       "anyOf": [
         {
-          "type": "string"
+          "type": "string",
+          "maxLength": 16384
         },
         {
           "type": "null"
@@ -593,7 +595,8 @@
     "summary": {
       "anyOf": [
         {
-          "type": "string"
+          "type": "string",
+          "maxLength": 1024
         },
         {
           "type": "null"

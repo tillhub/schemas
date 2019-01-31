@@ -1,3 +1,11 @@
+# [2.113.0](https://github.com/tillhub/schemas/compare/v2.112.1...v2.113.0) (2019-01-31)
+
+
+### Features
+
+* **products:** limit name length ([04abb59](https://github.com/tillhub/schemas/commit/04abb59))
+* **products:** limit text lengths ([dfda0a9](https://github.com/tillhub/schemas/commit/dfda0a9))
+
 ## [2.112.1](https://github.com/tillhub/schemas/compare/v2.112.0...v2.112.1) (2019-01-31)
 
 
