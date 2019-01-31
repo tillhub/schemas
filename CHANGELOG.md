@@ -1,3 +1,10 @@
+# [2.114.0](https://github.com/tillhub/schemas/compare/v2.113.0...v2.114.0) (2019-01-31)
+
+
+### Features
+
+* **transactions_v1:** Add summary_items ([aca4585](https://github.com/tillhub/schemas/commit/aca4585))
+
 # [2.113.0](https://github.com/tillhub/schemas/compare/v2.112.1...v2.113.0) (2019-01-31)
 
 
