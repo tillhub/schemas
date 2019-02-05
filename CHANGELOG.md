@@ -1,3 +1,10 @@
+## [2.115.1](https://github.com/tillhub/schemas/compare/v2.115.0...v2.115.1) (2019-02-05)
+
+
+### Bug Fixes
+
+* **products:** allow null branches ([8a810c8](https://github.com/tillhub/schemas/commit/8a810c8))
+
 # [2.115.0](https://github.com/tillhub/schemas/compare/v2.114.1...v2.115.0) (2019-02-05)
 
 

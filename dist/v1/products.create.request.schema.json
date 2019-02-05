@@ -93,8 +93,15 @@
                 "type": "object",
                 "properties": {
                   "branch": {
-                    "type": "string",
-                    "format": "uuid"
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
                   },
                   "prices": {
                     "type": "array",
