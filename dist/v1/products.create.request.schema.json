@@ -12,12 +12,14 @@
   "properties": {
     "name": {
       "description": "Product name",
-      "type": "string"
+      "type": "string",
+      "maxLength": 512
     },
     "description": {
       "anyOf": [
         {
-          "type": "string"
+          "type": "string",
+          "maxLength": 16384
         },
         {
           "type": "null"
@@ -459,14 +461,130 @@
       ]
     },
     "images": {
-      "anyOf": [
+      "oneOf": [
         {
           "type": "object",
           "additionalProperties": false,
           "properties": {
+            "original": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "format": "uri"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null
+            },
             "1x": {
-              "type": "string",
-              "format": "uri"
+              "oneOf": [
+                {
+                  "type": "string",
+                  "format": "uri"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null
+            },
+            "2x": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "format": "uri"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null
+            },
+            "3x": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "format": "uri"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null
+            },
+            "lia_1x": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "format": "uri"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null
+            },
+            "lia_2x": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "format": "uri"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null
+            },
+            "lia_3x": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "format": "uri"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null
+            },
+            "square_1x": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "format": "uri"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null
+            },
+            "square_2x": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "format": "uri"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null
+            },
+            "square_3x": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "format": "uri"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null
             },
             "avatar": {
               "type": "string",
@@ -482,7 +600,8 @@
     "summary": {
       "anyOf": [
         {
-          "type": "string"
+          "type": "string",
+          "maxLength": 1024
         },
         {
           "type": "null"

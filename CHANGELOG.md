@@ -1,3 +1,75 @@
+# [2.114.0](https://github.com/tillhub/schemas/compare/v2.113.0...v2.114.0) (2019-01-31)
+
+
+### Features
+
+* **transactions_v1:** Add summary_items ([aca4585](https://github.com/tillhub/schemas/commit/aca4585))
+
+# [2.113.0](https://github.com/tillhub/schemas/compare/v2.112.1...v2.113.0) (2019-01-31)
+
+
+### Features
+
+* **products:** limit name length ([04abb59](https://github.com/tillhub/schemas/commit/04abb59))
+* **products:** limit text lengths ([dfda0a9](https://github.com/tillhub/schemas/commit/dfda0a9))
+
+## [2.112.1](https://github.com/tillhub/schemas/compare/v2.112.0...v2.112.1) (2019-01-31)
+
+
+### Bug Fixes
+
+* **products:** fixes wrong type inference ([cfb161e](https://github.com/tillhub/schemas/commit/cfb161e))
+
+# [2.112.0](https://github.com/tillhub/schemas/compare/v2.111.0...v2.112.0) (2019-01-31)
+
+
+### Features
+
+* allow setting payments and balances config ([5230f40](https://github.com/tillhub/schemas/commit/5230f40))
+
+# [2.111.0](https://github.com/tillhub/schemas/compare/v2.110.1...v2.111.0) (2019-01-31)
+
+
+### Features
+
+* **dev:** allow default on oneOf ([768f3f7](https://github.com/tillhub/schemas/commit/768f3f7))
+* **products:** allow product images ([b7d8b77](https://github.com/tillhub/schemas/commit/b7d8b77))
+
+## [2.110.1](https://github.com/tillhub/schemas/compare/v2.110.0...v2.110.1) (2019-01-29)
+
+
+### Bug Fixes
+
+* **schema:** fixes id name of schema ([1ce1cd7](https://github.com/tillhub/schemas/commit/1ce1cd7))
+
+# [2.110.0](https://github.com/tillhub/schemas/compare/v2.109.0...v2.110.0) (2019-01-29)
+
+
+### Features
+
+* adds stock ([e80c9a3](https://github.com/tillhub/schemas/commit/e80c9a3))
+
+# [2.109.0](https://github.com/tillhub/schemas/compare/v2.108.0...v2.109.0) (2019-01-25)
+
+
+### Features
+
+* **templates:** added `show_cashier`, `show_attention`, `show_main_text` ([cb87da4](https://github.com/tillhub/schemas/commit/cb87da4))
+
+# [2.108.0](https://github.com/tillhub/schemas/compare/v2.107.1...v2.108.0) (2019-01-25)
+
+
+### Features
+
+* **templates:** added `date_format` option ([a442f22](https://github.com/tillhub/schemas/commit/a442f22))
+
+## [2.107.1](https://github.com/tillhub/schemas/compare/v2.107.0...v2.107.1) (2019-01-23)
+
+
+### Bug Fixes
+
+* **configurations:** adds legacy franchise id ([4bdd62f](https://github.com/tillhub/schemas/commit/4bdd62f))
+
 # [2.107.0](https://github.com/tillhub/schemas/compare/v2.106.0...v2.107.0) (2019-01-21)
 
 

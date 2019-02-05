@@ -603,7 +603,7 @@
                 "type": "array",
                 "items": {
                   "type": "object",
-                  "description": "Any applied discounts as they happened at transaction creation time."
+                  "description": "Total sum per currency of applied discounts as they happened at transaction creation time."
                 }
               },
               {
@@ -816,6 +816,64 @@
               }
             ],
             "default": null
+          },
+          "summary_items": {
+            "oneOf": [
+              {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "currency": {
+                      "type": "string",
+                      "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                      "example": "",
+                      "minLength": 3,
+                      "maxLength": 3
+                    },
+                    "amount_total_gross": {
+                      "description": "The payable net amount total, after decrementing applicable discounts etc. This value needs to be lower than or equal to the respective unti amount.",
+                      "type": "number",
+                      "minimum": -1000000,
+                      "maximum": 1000000,
+                      "multipleOf": 0.01
+                    },
+                    "amount_total_net": {
+                      "description": "The payable net amount total, after decrementing applicable discounts etc. This value needs to be lower than or equal to the respective unti amount.",
+                      "type": "number",
+                      "minimum": -1000000,
+                      "maximum": 1000000,
+                      "multipleOf": 0.01
+                    },
+                    "discount_amount_total": {
+                      "default": 0,
+                      "description": "The total discount amount.",
+                      "type": "number",
+                      "minimum": -1000000,
+                      "maximum": 1000000,
+                      "multipleOf": 0.01
+                    },
+                    "tip_amount_total": {
+                      "description": "The total tip amount.",
+                      "type": "number",
+                      "minimum": -1000000,
+                      "maximum": 1000000,
+                      "multipleOf": 0.01
+                    },
+                    "tax_amount_total": {
+                      "description": "The total tax amount.",
+                      "type": "number",
+                      "minimum": -1000000,
+                      "maximum": 1000000,
+                      "multipleOf": 0.01
+                    }
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
           },
           "insert_id": {
             "type": "number",
