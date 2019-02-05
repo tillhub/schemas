@@ -1,3 +1,10 @@
+# [2.116.0](https://github.com/tillhub/schemas/compare/v2.115.2...v2.116.0) (2019-02-05)
+
+
+### Features
+
+* **products:** adds cost and margin ([3813f82](https://github.com/tillhub/schemas/commit/3813f82))
+
 ## [2.115.2](https://github.com/tillhub/schemas/compare/v2.115.1...v2.115.2) (2019-02-05)
 
 
