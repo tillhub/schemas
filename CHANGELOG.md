@@ -1,3 +1,12 @@
+# [2.115.0](https://github.com/tillhub/schemas/compare/v2.114.1...v2.115.0) (2019-02-05)
+
+
+### Features
+
+* **products:** adds conveniece IDs for soft. clients and TH clients ([285f886](https://github.com/tillhub/schemas/commit/285f886))
+* **products:** adds more strongly price constraints ([ea15f68](https://github.com/tillhub/schemas/commit/ea15f68))
+* **products:** adds stock features, annotations, no-accounting support, codes ([4494440](https://github.com/tillhub/schemas/commit/4494440))
+
 ## [2.114.1](https://github.com/tillhub/schemas/compare/v2.114.0...v2.114.1) (2019-02-05)
 
 

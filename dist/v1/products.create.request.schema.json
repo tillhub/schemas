@@ -15,8 +15,21 @@
       "type": "string",
       "maxLength": 512
     },
+    "summary": {
+      "description": "Short summary of the product",
+      "oneOf": [
+        {
+          "type": "string",
+          "maxLength": 1024
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "description": {
-      "anyOf": [
+      "description": "Long description of a product",
+      "oneOf": [
         {
           "type": "string",
           "maxLength": 16384
@@ -27,6 +40,7 @@
       ]
     },
     "attributes": {
+      "description": "Arbitrary attributes a product has, that will be displayed in e.g. a sale",
       "anyOf": [
         {
           "type": "object"
@@ -91,21 +105,35 @@
                           "type": "object",
                           "properties": {
                             "net": {
-                              "type": "number"
+                              "example": "27633.02",
+                              "type": "number",
+                              "minimum": 0,
+                              "maximum": 1000000,
+                              "multipleOf": 0.01
                             },
                             "gross": {
-                              "type": "number"
+                              "example": "27633.02",
+                              "type": "number",
+                              "minimum": 0,
+                              "maximum": 1000000,
+                              "multipleOf": 0.01
                             }
                           }
                         },
                         "currency": {
-                          "type": "string"
+                          "type": "string",
+                          "minLength": 3,
+                          "maxLength": 3
                         },
                         "percentage": {
                           "type": "number"
                         },
                         "purchase_price": {
-                          "type": "number"
+                          "example": "27633.02",
+                          "type": "number",
+                          "minimum": 0,
+                          "maximum": 1000000,
+                          "multipleOf": 0.01
                         }
                       }
                     }
@@ -130,10 +158,18 @@
                           "type": "object",
                           "properties": {
                             "net": {
-                              "type": "number"
+                              "example": "27633.02",
+                              "type": "number",
+                              "minimum": 0,
+                              "maximum": 1000000,
+                              "multipleOf": 0.01
                             },
                             "gross": {
-                              "type": "number"
+                              "example": "27633.02",
+                              "type": "number",
+                              "minimum": 0,
+                              "maximum": 1000000,
+                              "multipleOf": 0.01
                             }
                           }
                         },
@@ -144,7 +180,11 @@
                           "type": "number"
                         },
                         "purchase_price": {
-                          "type": "number"
+                          "example": "27633.02",
+                          "type": "number",
+                          "minimum": 0,
+                          "maximum": 1000000,
+                          "multipleOf": 0.01
                         }
                       }
                     }
@@ -161,10 +201,18 @@
                     "type": "object",
                     "properties": {
                       "net": {
-                        "type": "number"
+                        "example": "27633.02",
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1000000,
+                        "multipleOf": 0.01
                       },
                       "gross": {
-                        "type": "number"
+                        "example": "27633.02",
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1000000,
+                        "multipleOf": 0.01
                       }
                     }
                   },
@@ -175,7 +223,11 @@
                     "type": "number"
                   },
                   "purchase_price": {
-                    "type": "number"
+                    "example": "27633.02",
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1000000,
+                    "multipleOf": 0.01
                   }
                 }
               }
@@ -201,7 +253,7 @@
       ]
     },
     "sku": {
-      "anyOf": [
+      "oneOf": [
         {
           "type": "string"
         },
@@ -211,9 +263,9 @@
       ]
     },
     "stock_minimum": {
-      "anyOf": [
+      "oneOf": [
         {
-          "type": "integer"
+          "type": "number"
         },
         {
           "type": "null"
@@ -221,9 +273,32 @@
       ]
     },
     "stock_maximum": {
-      "anyOf": [
+      "description": "The maximum resulting qty a location should have after a reorder",
+      "oneOf": [
         {
-          "type": "integer"
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "reorder_point": {
+      "description": "The stock level that triggers a reorder",
+      "oneOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "reorder_qty": {
+      "description": "The default qty on any reorder",
+      "oneOf": [
+        {
+          "type": "number"
         },
         {
           "type": "null"
@@ -231,7 +306,7 @@
       ]
     },
     "stockable": {
-      "anyOf": [
+      "oneOf": [
         {
           "type": "boolean"
         },
@@ -281,6 +356,7 @@
       ]
     },
     "custom_ids": {
+      "description": "DEPRECATED",
       "anyOf": [
         {
           "type": "object"
@@ -354,8 +430,15 @@
       ]
     },
     "tax": {
-      "type": "string",
-      "format": "uuid"
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "uuid"
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "taxes_options": {
       "anyOf": [
@@ -391,8 +474,15 @@
       ]
     },
     "account": {
-      "type": "string",
-      "format": "uuid"
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "uuid"
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "vat_class": {
       "anyOf": [
@@ -609,17 +699,6 @@
         }
       ]
     },
-    "summary": {
-      "anyOf": [
-        {
-          "type": "string",
-          "maxLength": 1024
-        },
-        {
-          "type": "null"
-        }
-      ]
-    },
     "insert_id": {
       "type": "integer"
     },
@@ -647,6 +726,108 @@
           "type": "null"
         }
       ]
+    },
+    "client_id": {
+      "description": "A client definable ID for the purpose of syncing to a client or used in analytics for e.g. transactions that created a product offline and done transactions offline before they received a backend ID.",
+      "oneOf": [
+        {
+          "type": "string",
+          "maxLength": 128
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "external_reference_id": {
+      "description": "A caller defined custom ID for the purpose of syncing from external resources, or to use in analytics.",
+      "oneOf": [
+        {
+          "type": "string",
+          "maxLength": 128
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "codes": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "qr": {
+          "oneOf": [
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "caption": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "maxLength": 16384
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "code128": {
+          "oneOf": [
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "caption": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "maxLength": 512
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "aztec": {
+          "oneOf": [
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "caption": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "maxLength": 512
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
     }
   }
 }
