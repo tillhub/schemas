@@ -768,6 +768,26 @@
         }
       ]
     },
+    "payments": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "balances": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
     "integrations": {
       "type": "object",
       "properties": {
