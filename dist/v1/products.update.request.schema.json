@@ -73,25 +73,37 @@
               "items": {
                 "type": "object",
                 "properties": {
-                  "amount": {
-                    "type": "object",
-                    "properties": {
-                      "net": {
-                        "type": "number"
-                      },
-                      "gross": {
-                        "type": "number"
+                  "branch": {
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  "prices": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "amount": {
+                          "type": "object",
+                          "properties": {
+                            "net": {
+                              "type": "number"
+                            },
+                            "gross": {
+                              "type": "number"
+                            }
+                          }
+                        },
+                        "currency": {
+                          "type": "string"
+                        },
+                        "percentage": {
+                          "type": "number"
+                        },
+                        "purchase_price": {
+                          "type": "number"
+                        }
                       }
                     }
-                  },
-                  "currency": {
-                    "type": "string"
-                  },
-                  "percentage": {
-                    "type": "number"
-                  },
-                  "purchase_price": {
-                    "type": "number"
                   }
                 }
               }

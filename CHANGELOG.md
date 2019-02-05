@@ -1,3 +1,10 @@
+## [2.114.1](https://github.com/tillhub/schemas/compare/v2.114.0...v2.114.1) (2019-02-05)
+
+
+### Bug Fixes
+
+* **products:** aligns actual model ([3152e92](https://github.com/tillhub/schemas/commit/3152e92))
+
 # [2.114.0](https://github.com/tillhub/schemas/compare/v2.113.0...v2.114.0) (2019-01-31)
 
 

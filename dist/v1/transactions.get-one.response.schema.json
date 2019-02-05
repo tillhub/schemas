@@ -157,9 +157,23 @@
             "oneOf": [
               {
                 "type": "string",
-                "example": "Sale Nr.1",
+                "example": "Sale Nr.5",
                 "maxLength": 128,
                 "description": "Any string that a user wants to store to identify a transaction, or wants to make it human readable."
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "custom_id_last": {
+            "oneOf": [
+              {
+                "type": "string",
+                "example": "Sale Nr.4",
+                "maxLength": 128,
+                "description": "Any string that a user wants to store to identify a previous transaction."
               },
               {
                 "type": "null"
@@ -2337,6 +2351,13 @@
                                     "opi",
                                     "tim"
                                   ]
+                                },
+                                "payment_provider": {
+                                  "default": null,
+                                  "type": "string",
+                                  "minLength": 1,
+                                  "maxLength": 128,
+                                  "description": "The payment provider (e.g. Elavon)"
                                 },
                                 "card_circuit": {
                                   "default": null,
