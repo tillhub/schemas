@@ -1,3 +1,10 @@
+# [2.117.0](https://github.com/tillhub/schemas/compare/v2.116.0...v2.117.0) (2019-02-06)
+
+
+### Features
+
+* adds email configuration ([703329f](https://github.com/tillhub/schemas/commit/703329f))
+
 # [2.116.0](https://github.com/tillhub/schemas/compare/v2.115.2...v2.116.0) (2019-02-05)
 
 

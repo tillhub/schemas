@@ -372,6 +372,16 @@
           "type": "null"
         }
       ]
+    },
+    "email_configuration": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object"
+        }
+      ]
     }
   }
 }
