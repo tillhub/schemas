@@ -317,8 +317,15 @@
                 "format": "uuid"
               },
               "product_group": {
-                "type": "string",
-                "format": "uuid"
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
               },
               "discounts": {
                 "type": "array",
@@ -692,8 +699,15 @@
                 "format": "uuid"
               },
               "product_group": {
-                "type": "string",
-                "format": "uuid"
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
               }
             }
           },

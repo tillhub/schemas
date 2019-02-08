@@ -1,3 +1,11 @@
+# [2.118.0](https://github.com/tillhub/schemas/compare/v2.117.0...v2.118.0) (2019-02-08)
+
+
+### Features
+
+* **carts:** make product group nullable ([72c883d](https://github.com/tillhub/schemas/commit/72c883d))
+* **devlivery_notes:** adds refunded at ([82f4bca](https://github.com/tillhub/schemas/commit/82f4bca))
+
 # [2.117.0](https://github.com/tillhub/schemas/compare/v2.116.0...v2.117.0) (2019-02-06)
 
 
