@@ -1,3 +1,10 @@
+# [2.119.0](https://github.com/tillhub/schemas/compare/v2.118.0...v2.119.0) (2019-02-10)
+
+
+### Features
+
+* **schemas:** adds payment options ([17c3535](https://github.com/tillhub/schemas/commit/17c3535))
+
 # [2.118.0](https://github.com/tillhub/schemas/compare/v2.117.0...v2.118.0) (2019-02-08)
 
 
