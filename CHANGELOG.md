@@ -1,3 +1,10 @@
+## [2.119.1](https://github.com/tillhub/schemas/compare/v2.119.0...v2.119.1) (2019-02-10)
+
+
+### Bug Fixes
+
+* fixes missing schema exposition ([0e721f6](https://github.com/tillhub/schemas/commit/0e721f6))
+
 # [2.119.0](https://github.com/tillhub/schemas/compare/v2.118.0...v2.119.0) (2019-02-10)
 
 
