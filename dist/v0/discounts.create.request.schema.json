@@ -1,0 +1,69 @@
+{
+  "$id": "https://schemas.tillhub.com/v0/discounts.create.request.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "required": [
+    "group",
+    "type",
+    "amount"
+  ],
+  "properties": {
+    "amount": {
+      "type": "number",
+      "minimum": 0
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "percentage",
+        "value"
+      ]
+    },
+    "account": {
+      "anyOf": [
+        {
+          "type": "string",
+          "maxLength": 128
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "name": {
+      "anyOf": [
+        {
+          "type": "string",
+          "maxLength": 64
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "group": {
+      "type": "string",
+      "enum": [
+        "cart",
+        "customer"
+      ]
+    },
+    "active": {
+      "type": "boolean"
+    },
+    "deleted": {
+      "type": "boolean"
+    },
+    "constraints": {
+      "oneOf": [
+        {
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "type": "object"
+}

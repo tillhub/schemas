@@ -1,3 +1,12 @@
+# [2.120.0](https://github.com/tillhub/schemas/compare/v2.119.1...v2.120.0) (2019-02-11)
+
+
+### Features
+
+* **customers:** adds gender ([0c505e1](https://github.com/tillhub/schemas/commit/0c505e1))
+* **discounts:** adds constraints ([baeb0fb](https://github.com/tillhub/schemas/commit/baeb0fb))
+* **schemas:** adds discounts ([fe5c2bb](https://github.com/tillhub/schemas/commit/fe5c2bb))
+
 ## [2.119.1](https://github.com/tillhub/schemas/compare/v2.119.0...v2.119.1) (2019-02-10)
 
 

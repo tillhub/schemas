@@ -565,6 +565,21 @@
           "type": "null"
         }
       ]
+    },
+    "gender": {
+      "oneOf": [
+        {
+          "type": "string",
+          "enum": [
+            "male",
+            "female",
+            "diverse"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
     }
   },
   "anyOf": [
