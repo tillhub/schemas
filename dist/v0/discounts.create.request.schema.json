@@ -72,6 +72,10 @@
                       "type": "object",
                       "additionalProperties": false,
                       "properties": {
+                        "enabled": {
+                          "type": "boolean",
+                          "default": true
+                        },
                         "monday": {
                           "type": "object",
                           "additionalProperties": false,

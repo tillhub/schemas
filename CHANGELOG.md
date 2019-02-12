@@ -1,3 +1,10 @@
+# [2.122.0](https://github.com/tillhub/schemas/compare/v2.121.0...v2.122.0) (2019-02-12)
+
+
+### Features
+
+* **discounts:** adds day of week enabled ([90733fe](https://github.com/tillhub/schemas/commit/90733fe))
+
 # [2.121.0](https://github.com/tillhub/schemas/compare/v2.120.0...v2.121.0) (2019-02-12)
 
 
