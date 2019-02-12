@@ -57,7 +57,245 @@
     "constraints": {
       "oneOf": [
         {
-          "type": "object"
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "time": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "scheduled": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "day_of_week": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "monday": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "slots": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "additionalProperties": false,
+                                "properties": {
+                                  "enabled": {
+                                    "type": "boolean",
+                                    "default": true
+                                  },
+                                  "start": {
+                                    "type": "string",
+                                    "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                  },
+                                  "end": {
+                                    "type": "string",
+                                    "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "tuesday": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "slots": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "additionalProperties": false,
+                                "properties": {
+                                  "enabled": {
+                                    "type": "boolean",
+                                    "default": true
+                                  },
+                                  "start": {
+                                    "type": "string",
+                                    "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                  },
+                                  "end": {
+                                    "type": "string",
+                                    "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "wednesday": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "slots": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "additionalProperties": false,
+                                "properties": {
+                                  "enabled": {
+                                    "type": "boolean",
+                                    "default": true
+                                  },
+                                  "start": {
+                                    "type": "string",
+                                    "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                  },
+                                  "end": {
+                                    "type": "string",
+                                    "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "thursday": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "slots": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "additionalProperties": false,
+                                "properties": {
+                                  "enabled": {
+                                    "type": "boolean",
+                                    "default": true
+                                  },
+                                  "start": {
+                                    "type": "string",
+                                    "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                  },
+                                  "end": {
+                                    "type": "string",
+                                    "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "friday": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "slots": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "additionalProperties": false,
+                                "properties": {
+                                  "enabled": {
+                                    "type": "boolean",
+                                    "default": true
+                                  },
+                                  "start": {
+                                    "type": "string",
+                                    "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                  },
+                                  "end": {
+                                    "type": "string",
+                                    "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "saturday": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "slots": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "additionalProperties": false,
+                                "properties": {
+                                  "enabled": {
+                                    "type": "boolean",
+                                    "default": true
+                                  },
+                                  "start": {
+                                    "type": "string",
+                                    "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                  },
+                                  "end": {
+                                    "type": "string",
+                                    "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "sunday": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "slots": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "additionalProperties": false,
+                                "properties": {
+                                  "enabled": {
+                                    "type": "boolean",
+                                    "default": true
+                                  },
+                                  "start": {
+                                    "type": "string",
+                                    "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                  },
+                                  "end": {
+                                    "type": "string",
+                                    "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "date_range": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "enabled": {
+                          "type": "boolean",
+                          "default": true
+                        },
+                        "start": {
+                          "type": "string",
+                          "format": "date-time"
+                        },
+                        "end": {
+                          "type": "string",
+                          "format": "date-time"
+                        },
+                        "tz": {
+                          "oneOf": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
         },
         {
           "type": "null"

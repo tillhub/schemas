@@ -1,3 +1,10 @@
+# [2.121.0](https://github.com/tillhub/schemas/compare/v2.120.0...v2.121.0) (2019-02-12)
+
+
+### Features
+
+* **discounts:** adds discounts constraints definition ([a866b25](https://github.com/tillhub/schemas/commit/a866b25))
+
 # [2.120.0](https://github.com/tillhub/schemas/compare/v2.119.1...v2.120.0) (2019-02-11)
 
 
