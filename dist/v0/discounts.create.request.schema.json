@@ -9,14 +9,84 @@
   ],
   "properties": {
     "amount": {
+      "description": "DEPRECATED: use value or rate in order to avoid polymorphism",
       "type": "number",
       "minimum": 0
+    },
+    "currency": {
+      "description": "The currency selector for a discount. NOTE: currency will be enforced soon if value is set",
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 3
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "value": {
+      "description": "The absolut reduction via this voucher",
+      "oneOf": [
+        {
+          "type": "number",
+          "minimum": -1000000,
+          "maximum": 1000000,
+          "multipleOf": 0.01
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "rate": {
+      "description": "The relative reduction via this voucher",
+      "oneOf": [
+        {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "multipleOf": 0.001
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "type": {
       "type": "string",
       "enum": [
         "percentage",
         "value"
+      ]
+    },
+    "behaviors": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "cart": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "per_item",
+                    "per_cart"
+                  ],
+                  "default": "each_item"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "null"
+        }
       ]
     },
     "account": {

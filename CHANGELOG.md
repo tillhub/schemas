@@ -1,3 +1,10 @@
+# [2.123.0](https://github.com/tillhub/schemas/compare/v2.122.0...v2.123.0) (2019-02-15)
+
+
+### Features
+
+* **discounts:** adds behaviours, normalises amounts ([8172b3b](https://github.com/tillhub/schemas/commit/8172b3b))
+
 # [2.122.0](https://github.com/tillhub/schemas/compare/v2.121.0...v2.122.0) (2019-02-12)
 
 
