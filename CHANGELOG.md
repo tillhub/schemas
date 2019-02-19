@@ -1,3 +1,11 @@
+# [2.124.0](https://github.com/tillhub/schemas/compare/v2.123.0...v2.124.0) (2019-02-19)
+
+
+### Features
+
+* **staff, customers, branches:** updated images in schema ([6cc3ac3](https://github.com/tillhub/schemas/commit/6cc3ac3))
+* added image schemas to lib and added test ([15186e6](https://github.com/tillhub/schemas/commit/15186e6))
+
 # [2.123.0](https://github.com/tillhub/schemas/compare/v2.122.0...v2.123.0) (2019-02-15)
 
 
