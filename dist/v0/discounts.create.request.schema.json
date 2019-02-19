@@ -75,7 +75,7 @@
                     "per_item",
                     "per_cart"
                   ],
-                  "default": "each_item"
+                  "default": "per_item"
                 },
                 {
                   "type": "null"
