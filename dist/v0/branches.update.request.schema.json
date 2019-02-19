@@ -127,6 +127,18 @@
           "type": "object",
           "additionalProperties": true,
           "properties": {
+            "original": {
+              "type": "string",
+              "format": "uri"
+            },
+            "gallery": {
+              "type": "string",
+              "format": "uri"
+            },
+            "avatar": {
+              "type": "string",
+              "format": "uri"
+            },
             "1x": {
               "type": "string",
               "format": "uri"
@@ -136,14 +148,6 @@
               "format": "uri"
             },
             "3x": {
-              "type": "string",
-              "format": "uri"
-            },
-            "avatar": {
-              "type": "string",
-              "format": "uri"
-            },
-            "original": {
               "type": "string",
               "format": "uri"
             }
