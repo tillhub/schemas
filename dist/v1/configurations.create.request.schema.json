@@ -5,7 +5,7 @@
   "type": "object",
   "properties": {
     "configurations": {
-      "description": "Unused legacy property.",
+      "description": "DEPRECATED: Unused legacy property.",
       "oneOf": [
         {
           "type": "null"
@@ -92,6 +92,32 @@
               "type": "string",
               "minLength": 3,
               "maxLength": 3
+            },
+            "sync": {
+              "description": "Drives in-app syncing behaviour.",
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "product": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "limit": {
+                      "description": "Initial page size for syncing with GET all calls. In-app default is 500. Set this if you run into timeouts.",
+                      "oneOf": [
+                        {
+                          "type": "integer",
+                          "minimum": 1,
+                          "maximum": 1000
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
             }
           }
         }

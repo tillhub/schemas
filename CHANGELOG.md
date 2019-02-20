@@ -1,3 +1,10 @@
+# [2.125.0](https://github.com/tillhub/schemas/compare/v2.124.0...v2.125.0) (2019-02-20)
+
+
+### Features
+
+* **configurations:** add syncing config ([30d3b7a](https://github.com/tillhub/schemas/commit/30d3b7a))
+
 # [2.124.0](https://github.com/tillhub/schemas/compare/v2.123.0...v2.124.0) (2019-02-19)
 
 
