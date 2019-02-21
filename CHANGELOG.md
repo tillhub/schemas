@@ -1,3 +1,15 @@
+# [2.126.0](https://github.com/tillhub/schemas/compare/v2.125.0...v2.126.0) (2019-02-21)
+
+
+### Bug Fixes
+
+* **discounts:** fixes invalid null ref ([5cc547f](https://github.com/tillhub/schemas/commit/5cc547f))
+
+
+### Features
+
+* **discounts:** allow null dates in constraints ([82309e3](https://github.com/tillhub/schemas/commit/82309e3))
+
 # [2.125.0](https://github.com/tillhub/schemas/compare/v2.124.0...v2.125.0) (2019-02-20)
 
 

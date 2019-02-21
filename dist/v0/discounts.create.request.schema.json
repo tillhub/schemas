@@ -161,12 +161,26 @@
                                     "default": true
                                   },
                                   "start": {
-                                    "type": "string",
-                                    "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                    "oneOf": [
+                                      {
+                                        "type": "string",
+                                        "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
                                   },
                                   "end": {
-                                    "type": "string",
-                                    "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                    "oneOf": [
+                                      {
+                                        "type": "string",
+                                        "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
                                   }
                                 }
                               }
@@ -188,12 +202,26 @@
                                     "default": true
                                   },
                                   "start": {
-                                    "type": "string",
-                                    "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                    "oneOf": [
+                                      {
+                                        "type": "string",
+                                        "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
                                   },
                                   "end": {
-                                    "type": "string",
-                                    "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                    "oneOf": [
+                                      {
+                                        "type": "string",
+                                        "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
                                   }
                                 }
                               }
@@ -215,12 +243,26 @@
                                     "default": true
                                   },
                                   "start": {
-                                    "type": "string",
-                                    "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                    "oneOf": [
+                                      {
+                                        "type": "string",
+                                        "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
                                   },
                                   "end": {
-                                    "type": "string",
-                                    "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                    "oneOf": [
+                                      {
+                                        "type": "string",
+                                        "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
                                   }
                                 }
                               }
@@ -242,12 +284,26 @@
                                     "default": true
                                   },
                                   "start": {
-                                    "type": "string",
-                                    "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                    "oneOf": [
+                                      {
+                                        "type": "string",
+                                        "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
                                   },
                                   "end": {
-                                    "type": "string",
-                                    "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                    "oneOf": [
+                                      {
+                                        "type": "string",
+                                        "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
                                   }
                                 }
                               }
@@ -269,12 +325,26 @@
                                     "default": true
                                   },
                                   "start": {
-                                    "type": "string",
-                                    "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                    "oneOf": [
+                                      {
+                                        "type": "string",
+                                        "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
                                   },
                                   "end": {
-                                    "type": "string",
-                                    "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                    "oneOf": [
+                                      {
+                                        "type": "string",
+                                        "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
                                   }
                                 }
                               }
@@ -296,12 +366,26 @@
                                     "default": true
                                   },
                                   "start": {
-                                    "type": "string",
-                                    "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                    "oneOf": [
+                                      {
+                                        "type": "string",
+                                        "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
                                   },
                                   "end": {
-                                    "type": "string",
-                                    "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                    "oneOf": [
+                                      {
+                                        "type": "string",
+                                        "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
                                   }
                                 }
                               }
@@ -323,12 +407,26 @@
                                     "default": true
                                   },
                                   "start": {
-                                    "type": "string",
-                                    "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                    "oneOf": [
+                                      {
+                                        "type": "string",
+                                        "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
                                   },
                                   "end": {
-                                    "type": "string",
-                                    "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                    "oneOf": [
+                                      {
+                                        "type": "string",
+                                        "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
                                   }
                                 }
                               }
@@ -346,12 +444,26 @@
                           "default": true
                         },
                         "start": {
-                          "type": "string",
-                          "format": "date-time"
+                          "oneOf": [
+                            {
+                              "type": "string",
+                              "format": "date-time"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
                         },
                         "end": {
-                          "type": "string",
-                          "format": "date-time"
+                          "oneOf": [
+                            {
+                              "type": "string",
+                              "format": "date-time"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
                         },
                         "tz": {
                           "oneOf": [
