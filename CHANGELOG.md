@@ -1,3 +1,10 @@
+# [2.127.0](https://github.com/tillhub/schemas/compare/v2.126.0...v2.127.0) (2019-02-21)
+
+
+### Features
+
+* **discounts:** enable date range to have enabled or disabled dates ([03c701f](https://github.com/tillhub/schemas/commit/03c701f))
+
 # [2.126.0](https://github.com/tillhub/schemas/compare/v2.125.0...v2.126.0) (2019-02-21)
 
 
