@@ -1,3 +1,10 @@
+# [2.128.0](https://github.com/tillhub/schemas/compare/v2.127.0...v2.128.0) (2019-02-25)
+
+
+### Features
+
+* **products:** make discountable or not ([7007dcd](https://github.com/tillhub/schemas/commit/7007dcd))
+
 # [2.127.0](https://github.com/tillhub/schemas/compare/v2.126.0...v2.127.0) (2019-02-21)
 
 
