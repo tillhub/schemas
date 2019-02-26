@@ -1,3 +1,10 @@
+# [2.129.0](https://github.com/tillhub/schemas/compare/v2.128.0...v2.129.0) (2019-02-26)
+
+
+### Features
+
+* **customers:** customer gender - unspecified/null by default (diverse is redundant) ([7993998](https://github.com/tillhub/schemas/commit/7993998))
+
 # [2.128.0](https://github.com/tillhub/schemas/compare/v2.127.0...v2.128.0) (2019-02-25)
 
 
