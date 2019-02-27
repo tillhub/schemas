@@ -1,3 +1,15 @@
+# [2.130.0](https://github.com/tillhub/schemas/compare/v2.129.0...v2.130.0) (2019-02-27)
+
+
+### Bug Fixes
+
+* **branches:** extend external custom id max length ([31583a8](https://github.com/tillhub/schemas/commit/31583a8))
+
+
+### Features
+
+* **branches:** add external custom id ([34acd58](https://github.com/tillhub/schemas/commit/34acd58))
+
 # [2.129.0](https://github.com/tillhub/schemas/compare/v2.128.0...v2.129.0) (2019-02-26)
 
 
