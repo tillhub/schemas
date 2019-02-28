@@ -611,8 +611,7 @@
           "type": "string",
           "enum": [
             "male",
-            "female",
-            "diverse"
+            "female"
           ]
         },
         {

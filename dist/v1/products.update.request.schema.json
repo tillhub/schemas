@@ -354,6 +354,16 @@
         }
       ]
     },
+    "discountable": {
+      "oneOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "metadata": {
       "anyOf": [
         {
