@@ -905,6 +905,20 @@
                       "minimum": -1000000,
                       "maximum": 1000000,
                       "multipleOf": 0.01
+                    },
+                    "change_amount_total": {
+                      "description": "The total cash change amount.",
+                      "type": "number",
+                      "minimum": -1000000,
+                      "maximum": 1000000,
+                      "multipleOf": 0.01
+                    },
+                    "sub_total": {
+                      "description": "The payable amount before decrementing applicable discounts. Net or Gross based on tax scheme. ",
+                      "type": "number",
+                      "minimum": -1000000,
+                      "maximum": 1000000,
+                      "multipleOf": 0.01
                     }
                   }
                 }

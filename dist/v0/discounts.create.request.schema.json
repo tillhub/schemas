@@ -67,6 +67,22 @@
           "type": "object",
           "additionalProperties": false,
           "properties": {
+            "display": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "show_inactive": {
+                      "type": "boolean"
+                    }
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
             "cart": {
               "oneOf": [
                 {
