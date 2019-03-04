@@ -1,3 +1,10 @@
+## [2.132.1](https://github.com/tillhub/schemas/compare/v2.132.0...v2.132.1) (2019-03-04)
+
+
+### Bug Fixes
+
+* **messages:** expose messages schemas ([1c370a9](https://github.com/tillhub/schemas/commit/1c370a9))
+
 # [2.132.0](https://github.com/tillhub/schemas/compare/v2.131.0...v2.132.0) (2019-03-04)
 
 
