@@ -1,3 +1,10 @@
+# [2.131.0](https://github.com/tillhub/schemas/compare/v2.130.0...v2.131.0) (2019-03-04)
+
+
+### Features
+
+* **tx, discounts, carts:** misc additions ([d4c23b8](https://github.com/tillhub/schemas/commit/d4c23b8))
+
 # [2.130.0](https://github.com/tillhub/schemas/compare/v2.129.0...v2.130.0) (2019-02-27)
 
 
