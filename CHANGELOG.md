@@ -1,3 +1,15 @@
+# [2.132.0](https://github.com/tillhub/schemas/compare/v2.131.0...v2.132.0) (2019-03-04)
+
+
+### Bug Fixes
+
+* **messages:** remove required prop for update ([47c50e2](https://github.com/tillhub/schemas/commit/47c50e2))
+
+
+### Features
+
+* **messages:** add create and update messages schemas ([66edb90](https://github.com/tillhub/schemas/commit/66edb90))
+
 # [2.131.0](https://github.com/tillhub/schemas/compare/v2.130.0...v2.131.0) (2019-03-04)
 
 
