@@ -1,3 +1,10 @@
+## [2.134.3](https://github.com/tillhub/schemas/compare/v2.134.2...v2.134.3) (2019-03-06)
+
+
+### Bug Fixes
+
+* **configurations:** have even deeper nesting for audits ([0a6c95f](https://github.com/tillhub/schemas/commit/0a6c95f))
+
 ## [2.134.2](https://github.com/tillhub/schemas/compare/v2.134.1...v2.134.2) (2019-03-06)
 
 
