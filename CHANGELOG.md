@@ -1,3 +1,10 @@
+# [2.133.0](https://github.com/tillhub/schemas/compare/v2.132.1...v2.133.0) (2019-03-06)
+
+
+### Features
+
+* added favourites ([1b60d05](https://github.com/tillhub/schemas/commit/1b60d05))
+
 ## [2.132.1](https://github.com/tillhub/schemas/compare/v2.132.0...v2.132.1) (2019-03-04)
 
 
