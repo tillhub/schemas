@@ -1,3 +1,10 @@
+## [2.134.1](https://github.com/tillhub/schemas/compare/v2.134.0...v2.134.1) (2019-03-06)
+
+
+### Bug Fixes
+
+* **configurations:** must allow for audit actions ([2183ce9](https://github.com/tillhub/schemas/commit/2183ce9))
+
 # [2.134.0](https://github.com/tillhub/schemas/compare/v2.133.0...v2.134.0) (2019-03-06)
 
 
