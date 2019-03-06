@@ -1,3 +1,10 @@
+## [2.134.2](https://github.com/tillhub/schemas/compare/v2.134.1...v2.134.2) (2019-03-06)
+
+
+### Bug Fixes
+
+* **configurations:** specify resource even more specifically ([4830a90](https://github.com/tillhub/schemas/commit/4830a90))
+
 ## [2.134.1](https://github.com/tillhub/schemas/compare/v2.134.0...v2.134.1) (2019-03-06)
 
 
