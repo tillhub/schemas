@@ -1,3 +1,15 @@
+# [2.134.0](https://github.com/tillhub/schemas/compare/v2.133.0...v2.134.0) (2019-03-06)
+
+
+### Bug Fixes
+
+* **configurations:** fixes items type ([3509b00](https://github.com/tillhub/schemas/commit/3509b00))
+
+
+### Features
+
+* **configurations:** adds types ([800dc1f](https://github.com/tillhub/schemas/commit/800dc1f))
+
 # [2.133.0](https://github.com/tillhub/schemas/compare/v2.132.1...v2.133.0) (2019-03-06)
 
 
