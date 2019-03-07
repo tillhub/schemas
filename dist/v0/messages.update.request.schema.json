@@ -134,6 +134,9 @@
           "type": "null"
         }
       ]
+    },
+    "counter": {
+      "type": "number"
     }
   },
   "type": "object"

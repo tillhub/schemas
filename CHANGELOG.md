@@ -1,3 +1,10 @@
+# [2.135.0](https://github.com/tillhub/schemas/compare/v2.134.4...v2.135.0) (2019-03-07)
+
+
+### Features
+
+* **messages:** add counter property ([7f38e55](https://github.com/tillhub/schemas/commit/7f38e55))
+
 ## [2.134.4](https://github.com/tillhub/schemas/compare/v2.134.3...v2.134.4) (2019-03-07)
 
 
