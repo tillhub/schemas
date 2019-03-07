@@ -690,21 +690,8 @@
                   "type": {
                     "type": "string",
                     "enum": [
-                      "tillhub-analytics-api",
-                      "tillhub-audits-api",
-                      "tillhub-audits-api:audits.actions:type:carts.item.remove"
+                      "tillhub-analytics-api"
                     ]
-                  },
-                  "types": {
-                    "type": "array",
-                    "items": {
-                      "type": "string",
-                      "enum": [
-                        "tillhub-analytics-api",
-                        "tillhub-audits-api",
-                        "tillhub-audits-api:audits.actions:type:carts.item.remove"
-                      ]
-                    }
                   },
                   "enabled": {
                     "type": "boolean",
@@ -750,21 +737,8 @@
                   "type": {
                     "type": "string",
                     "enum": [
-                      "tillhub-analytics-api",
-                      "tillhub-audits-api",
-                      "tillhub-audits-api:audits.actions:type:carts.item.remove"
+                      "tillhub-analytics-api"
                     ]
-                  },
-                  "types": {
-                    "type": "array",
-                    "items": {
-                      "type": "string",
-                      "enum": [
-                        "tillhub-analytics-api",
-                        "tillhub-audits-api",
-                        "tillhub-audits-api:audits.actions:type:carts.item.remove"
-                      ]
-                    }
                   },
                   "enabled": {
                     "type": "boolean",

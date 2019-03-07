@@ -1,3 +1,10 @@
+## [2.134.4](https://github.com/tillhub/schemas/compare/v2.134.3...v2.134.4) (2019-03-07)
+
+
+### Bug Fixes
+
+* **configurations:** remove delegated analytics types in favour for user scopes ([f154557](https://github.com/tillhub/schemas/commit/f154557))
+
 ## [2.134.3](https://github.com/tillhub/schemas/compare/v2.134.2...v2.134.3) (2019-03-06)
 
 
