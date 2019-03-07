@@ -1,3 +1,10 @@
+# [2.136.0](https://github.com/tillhub/schemas/compare/v2.135.0...v2.136.0) (2019-03-07)
+
+
+### Features
+
+* **configurations:** adds discounts ([74b99af](https://github.com/tillhub/schemas/commit/74b99af))
+
 # [2.135.0](https://github.com/tillhub/schemas/compare/v2.134.4...v2.135.0) (2019-03-07)
 
 
