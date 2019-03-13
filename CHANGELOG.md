@@ -1,3 +1,10 @@
+# [2.138.0](https://github.com/tillhub/schemas/compare/v2.137.0...v2.138.0) (2019-03-13)
+
+
+### Features
+
+* **configurations_v1:** add receipts schema ([62de2f1](https://github.com/tillhub/schemas/commit/62de2f1))
+
 # [2.137.0](https://github.com/tillhub/schemas/compare/v2.136.0...v2.137.0) (2019-03-13)
 
 
