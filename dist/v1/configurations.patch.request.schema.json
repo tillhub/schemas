@@ -118,6 +118,11 @@
                   }
                 }
               }
+            },
+            "support": {
+              "description": "Decides whether or not the support team is allowed to access the account this configuration belongs to.",
+              "type": "boolean",
+              "default": true
             }
           }
         }

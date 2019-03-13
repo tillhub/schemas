@@ -1,3 +1,10 @@
+# [2.137.0](https://github.com/tillhub/schemas/compare/v2.136.0...v2.137.0) (2019-03-13)
+
+
+### Features
+
+* added `support` property to settings ([2d2e6d7](https://github.com/tillhub/schemas/commit/2d2e6d7))
+
 # [2.136.0](https://github.com/tillhub/schemas/compare/v2.135.0...v2.136.0) (2019-03-07)
 
 
