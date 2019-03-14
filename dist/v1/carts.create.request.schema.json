@@ -305,8 +305,15 @@
                 "maxLength": 128
               },
               "salesman_staff": {
-                "type": "string",
-                "format": "uuid"
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
               },
               "tax": {
                 "type": "string",
@@ -713,8 +720,15 @@
                 "maxLength": 128
               },
               "salesman_staff": {
-                "type": "string",
-                "format": "uuid"
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
               },
               "tax": {
                 "type": "string",

@@ -1,3 +1,10 @@
+# [2.139.0](https://github.com/tillhub/schemas/compare/v2.138.0...v2.139.0) (2019-03-14)
+
+
+### Features
+
+* **carts:** allow salesman_staff to be null ([fd2a66c](https://github.com/tillhub/schemas/commit/fd2a66c))
+
 # [2.138.0](https://github.com/tillhub/schemas/compare/v2.137.0...v2.138.0) (2019-03-13)
 
 
