@@ -1427,13 +1427,55 @@
                               "customer",
                               "staff",
                               "cart",
-                              "product_set"
+                              "product_set",
+                              "sconto"
                             ]
                           },
                           "name": {
                             "type": "string",
                             "minLength": 1,
                             "maxLength": 128
+                          },
+                          "source_id": {
+                            "description": "The Tillhub discount resource (if available)",
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "format": "uuid"
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          },
+                          "assignment_id": {
+                            "description": "Identification of the client process that created this discount",
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "maxLength": 128
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          },
+                          "assignment_source": {
+                            "description": "Identification of the client source of the process that created this discount",
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "enum": [
+                                  "cart",
+                                  "item",
+                                  "customer",
+                                  "sconto"
+                                ]
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
                           }
                         },
                         "required": [

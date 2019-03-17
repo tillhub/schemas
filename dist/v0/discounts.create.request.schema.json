@@ -41,7 +41,7 @@
       ]
     },
     "rate": {
-      "description": "The relative reduction via this voucher",
+      "description": "Relative value of this discount.",
       "oneOf": [
         {
           "type": "number",

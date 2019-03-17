@@ -1,36 +1,134 @@
 {
-  "$id": "https://schemas.tillhub.com/v0/discounts.update.request.schema.json",
+  "$id": "https://schemas.tillhub.com/v1/discounts.update.request.schema.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "additionalProperties": false,
   "type": "object",
+  "additionalProperties": false,
   "required": [],
   "properties": {
-    "amount": {
-      "description": "DEPRECATED: use value or rate in order to avoid polymorphism",
-      "type": "number",
-      "minimum": 0
-    },
-    "currency": {
-      "description": "The currency selector for a discount. NOTE: currency will be enforced soon if value is set",
+    "name": {
       "oneOf": [
         {
           "type": "string",
-          "minLength": 3,
-          "maxLength": 3
+          "maxLength": 128
         },
         {
           "type": "null"
         }
       ]
     },
-    "value": {
-      "description": "The absolut reduction via this voucher",
+    "summary": {
       "oneOf": [
         {
-          "type": "number",
-          "minimum": -1000000,
-          "maximum": 1000000,
-          "multipleOf": 0.01
+          "type": "string",
+          "maxLength": 512
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "description": {
+      "oneOf": [
+        {
+          "type": "string",
+          "maxLength": 16384
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "instructions": {
+      "oneOf": [
+        {
+          "type": "string",
+          "maxLength": 16384
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "active": {
+      "type": "boolean",
+      "default": true
+    },
+    "deleted": {
+      "type": "boolean",
+      "default": false
+    },
+    "type": {
+      "type": "string",
+      "description": "General type of this discount, which drives general client behaviour.",
+      "enum": [
+        "customer",
+        "product",
+        "cart"
+      ]
+    },
+    "allocation_method": {
+      "description": "Decide how to allocate the discountable amount within the cart. Types override the allocation method in the following cases e.g \"product\". If a product is not discountable the allocation method will be skipped for this item.",
+      "oneOf": [
+        {
+          "type": "string",
+          "enum": [
+            "each",
+            "cart"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "value_type": {
+      "type": "string",
+      "description": "Value types allow setting value (requires value to be set) or rate (requires rate to be set) discounts values.",
+      "enum": [
+        "rate",
+        "value"
+      ]
+    },
+    "value": {
+      "description": "Numeric value of this discount.",
+      "oneOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "amount",
+              "currency"
+            ],
+            "properties": {
+              "amount": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "net": {
+                    "example": "27633.02",
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1000000,
+                    "multipleOf": 0.01
+                  },
+                  "gross": {
+                    "example": "27633.02",
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1000000,
+                    "multipleOf": 0.01
+                  }
+                }
+              },
+              "currency": {
+                "type": "string",
+                "minLength": 3,
+                "maxLength": 3
+              }
+            }
+          }
         },
         {
           "type": "null"
@@ -51,11 +149,19 @@
         }
       ]
     },
-    "type": {
-      "type": "string",
-      "enum": [
-        "percentage",
-        "value"
+    "predicates": {
+      "description": "Custom predicates that will check whether this discount applies.",
+      "example": "[\"product.id <> '8fb902c2-7114-43c4-89ea-624bf1841dbf'\"]",
+      "oneOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        {
+          "type": "null"
+        }
       ]
     },
     "behaviors": {
@@ -101,41 +207,6 @@
           "type": "null"
         }
       ]
-    },
-    "account": {
-      "anyOf": [
-        {
-          "type": "string",
-          "maxLength": 128
-        },
-        {
-          "type": "null"
-        }
-      ]
-    },
-    "name": {
-      "anyOf": [
-        {
-          "type": "string",
-          "maxLength": 64
-        },
-        {
-          "type": "null"
-        }
-      ]
-    },
-    "group": {
-      "type": "string",
-      "enum": [
-        "cart",
-        "customer"
-      ]
-    },
-    "active": {
-      "type": "boolean"
-    },
-    "deleted": {
-      "type": "boolean"
     },
     "constraints": {
       "oneOf": [

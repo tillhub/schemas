@@ -385,7 +385,49 @@
                         "customer",
                         "staff",
                         "cart",
-                        "product_set"
+                        "product_set",
+                        "sconto"
+                      ]
+                    },
+                    "source_id": {
+                      "description": "The Tillhub discount resource (if available)",
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "format": "uuid"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "assignment_id": {
+                      "description": "Identification of the process that created this discount",
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "maxLength": 128
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "assignment_source": {
+                      "description": "Identification of the source of the process that created this discount",
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "enum": [
+                            "cart",
+                            "item",
+                            "customer",
+                            "sconto"
+                          ]
+                        },
+                        {
+                          "type": "null"
+                        }
                       ]
                     },
                     "name": {
@@ -603,32 +645,6 @@
                         "client_id": {
                           "type": "string",
                           "maxLength": 128
-                        },
-                        "source_id": {
-                          "description": "The Tillhub discount resource (if available)",
-                          "oneOf": [
-                            {
-                              "type": "string",
-                              "format": "uuid"
-                            },
-                            {
-                              "type": "null"
-                            }
-                          ]
-                        },
-                        "assignment_id": {
-                          "description": "Identification of the process that created this discount",
-                          "type": "string",
-                          "maxLength": 128
-                        },
-                        "assignment_source": {
-                          "description": "Identification of the source of the process that created this discount",
-                          "type": "string",
-                          "enum": [
-                            "cart",
-                            "item",
-                            "customer"
-                          ]
                         },
                         "group": {
                           "type": "string",
@@ -900,32 +916,6 @@
                         "client_id": {
                           "type": "string",
                           "maxLength": 128
-                        },
-                        "source_id": {
-                          "description": "The Tillhub discount resource (if available)",
-                          "oneOf": [
-                            {
-                              "type": "string",
-                              "format": "uuid"
-                            },
-                            {
-                              "type": "null"
-                            }
-                          ]
-                        },
-                        "assignment_id": {
-                          "description": "Identification of the process that created this discount",
-                          "type": "string",
-                          "maxLength": 128
-                        },
-                        "assignment_source": {
-                          "description": "Identification of the source of the process that created this discount",
-                          "type": "string",
-                          "enum": [
-                            "cart",
-                            "item",
-                            "customer"
-                          ]
                         },
                         "group": {
                           "type": "string",

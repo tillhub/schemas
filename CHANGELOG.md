@@ -1,3 +1,10 @@
+# [2.140.0](https://github.com/tillhub/schemas/compare/v2.139.0...v2.140.0) (2019-03-17)
+
+
+### Features
+
+* **discounts:** adds v1 ([0c5f3dc](https://github.com/tillhub/schemas/commit/0c5f3dc))
+
 # [2.139.0](https://github.com/tillhub/schemas/compare/v2.138.0...v2.139.0) (2019-03-14)
 
 
