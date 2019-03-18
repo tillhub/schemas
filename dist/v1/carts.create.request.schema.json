@@ -224,6 +224,16 @@
                 "type": "string",
                 "format": "uuid"
               },
+              "discountable": {
+                "oneOf": [
+                  {
+                    "type": "boolean"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
               "qty": {
                 "type": "number"
               },
@@ -475,6 +485,16 @@
               "product": {
                 "type": "string",
                 "format": "uuid"
+              },
+              "discountable": {
+                "oneOf": [
+                  {
+                    "type": "boolean"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
               },
               "qty": {
                 "type": "number"
@@ -779,6 +799,16 @@
               "position": {
                 "type": "number",
                 "minimum": 0
+              },
+              "discountable": {
+                "oneOf": [
+                  {
+                    "type": "boolean"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
               },
               "product": {
                 "type": "string"
