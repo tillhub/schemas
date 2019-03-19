@@ -1,3 +1,10 @@
+# [2.142.0](https://github.com/tillhub/schemas/compare/v2.141.0...v2.142.0) (2019-03-19)
+
+
+### Features
+
+* **carts:** potentially persist discountability of items in carts ([96050a4](https://github.com/tillhub/schemas/commit/96050a4))
+
 # [2.141.0](https://github.com/tillhub/schemas/compare/v2.140.0...v2.141.0) (2019-03-19)
 
 
