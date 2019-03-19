@@ -1,3 +1,10 @@
+# [2.141.0](https://github.com/tillhub/schemas/compare/v2.140.0...v2.141.0) (2019-03-19)
+
+
+### Features
+
+* **staffs gender:** gender added to staffs ([9a1a7d7](https://github.com/tillhub/schemas/commit/9a1a7d7))
+
 # [2.140.0](https://github.com/tillhub/schemas/compare/v2.139.0...v2.140.0) (2019-03-17)
 
 
