@@ -146,6 +146,20 @@
         }
       ]
     },
+    "gender": {
+      "oneOf": [
+        {
+          "type": "string",
+          "enum": [
+            "male",
+            "female"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "images": {
       "description": "A Tillhub image object with URLs to display images this for staff.",
       "anyOf": [
