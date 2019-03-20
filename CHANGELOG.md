@@ -1,3 +1,10 @@
+# [2.143.0](https://github.com/tillhub/schemas/compare/v2.142.0...v2.143.0) (2019-03-20)
+
+
+### Features
+
+* **configuration/customers:** added custom_export flag on configurations ([01e7f64](https://github.com/tillhub/schemas/commit/01e7f64))
+
 # [2.142.0](https://github.com/tillhub/schemas/compare/v2.141.0...v2.142.0) (2019-03-19)
 
 

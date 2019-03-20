@@ -568,6 +568,10 @@
                   "type": "null"
                 }
               ]
+            },
+            "custom_export": {
+              "type": "boolean",
+              "default": false
             }
           }
         }
