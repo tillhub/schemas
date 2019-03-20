@@ -364,6 +364,11 @@
         }
       ]
     },
+    "linkable": {
+      "description": "Define whether a product should be linkable. NOTE: this will replace the type \"linked\"",
+      "type": "boolean",
+      "default": false
+    },
     "metadata": {
       "anyOf": [
         {
