@@ -128,25 +128,50 @@
                           "maxLength": 3
                         },
                         "percentage": {
+                          "description": "DEPRECATED",
                           "type": "number"
                         },
                         "purchase_price": {
-                          "example": "27633.02",
-                          "type": "number",
-                          "minimum": 0,
-                          "maximum": 1000000,
-                          "multipleOf": 0.01
+                          "description": "Define the opportunity cost or calculatory base price of this product and currency.",
+                          "oneOf": [
+                            {
+                              "example": "27633.02",
+                              "type": "number",
+                              "minimum": 0,
+                              "maximum": 1000000,
+                              "multipleOf": 0.01
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
                         },
                         "cost": {
-                          "example": "27633.02",
-                          "type": "number",
-                          "minimum": 0,
-                          "maximum": 1000000,
-                          "multipleOf": 0.01
+                          "description": "Define additional cost.",
+                          "oneOf": [
+                            {
+                              "example": "27633.02",
+                              "type": "number",
+                              "minimum": 0,
+                              "maximum": 1000000,
+                              "multipleOf": 0.01
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
                         },
                         "margin": {
-                          "type": "number",
-                          "multipleOf": 0.0001
+                          "description": "Add a margin to pruchase_price and cost to result in net.",
+                          "oneOf": [
+                            {
+                              "type": "number",
+                              "multipleOf": 0.0001
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
                         }
                       }
                     }
@@ -192,25 +217,50 @@
                           "maxLength": 3
                         },
                         "percentage": {
+                          "description": "DEPRECATED",
                           "type": "number"
                         },
                         "purchase_price": {
-                          "example": "27633.02",
-                          "type": "number",
-                          "minimum": 0,
-                          "maximum": 1000000,
-                          "multipleOf": 0.01
+                          "description": "Define the opportunity cost or calculatory base price of this product and currency.",
+                          "oneOf": [
+                            {
+                              "example": "27633.02",
+                              "type": "number",
+                              "minimum": 0,
+                              "maximum": 1000000,
+                              "multipleOf": 0.01
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
                         },
                         "cost": {
-                          "example": "27633.02",
-                          "type": "number",
-                          "minimum": 0,
-                          "maximum": 1000000,
-                          "multipleOf": 0.01
+                          "description": "Define additional cost.",
+                          "oneOf": [
+                            {
+                              "example": "27633.02",
+                              "type": "number",
+                              "minimum": 0,
+                              "maximum": 1000000,
+                              "multipleOf": 0.01
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
                         },
                         "margin": {
-                          "type": "number",
-                          "multipleOf": 0.0001
+                          "description": "Add a margin to pruchase_price and cost to result in net.",
+                          "oneOf": [
+                            {
+                              "type": "number",
+                              "multipleOf": 0.0001
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
                         }
                       }
                     }
@@ -248,25 +298,50 @@
                     "maxLength": 3
                   },
                   "percentage": {
+                    "description": "DEPRECATED",
                     "type": "number"
                   },
                   "purchase_price": {
-                    "example": "27633.02",
-                    "type": "number",
-                    "minimum": 0,
-                    "maximum": 1000000,
-                    "multipleOf": 0.01
+                    "description": "Define the opportunity cost or calculatory base price of this product and currency.",
+                    "oneOf": [
+                      {
+                        "example": "27633.02",
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1000000,
+                        "multipleOf": 0.01
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
                   },
                   "cost": {
-                    "example": "27633.02",
-                    "type": "number",
-                    "minimum": 0,
-                    "maximum": 1000000,
-                    "multipleOf": 0.01
+                    "description": "Define additional cost.",
+                    "oneOf": [
+                      {
+                        "example": "27633.02",
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1000000,
+                        "multipleOf": 0.01
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
                   },
                   "margin": {
-                    "type": "number",
-                    "multipleOf": 0.0001
+                    "description": "Add a margin to pruchase_price and cost to result in net.",
+                    "oneOf": [
+                      {
+                        "type": "number",
+                        "multipleOf": 0.0001
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
                   }
                 }
               }
@@ -345,6 +420,7 @@
       ]
     },
     "stockable": {
+      "description": "Define whether to keep track of stock of this product.",
       "oneOf": [
         {
           "type": "boolean"
@@ -355,6 +431,7 @@
       ]
     },
     "discountable": {
+      "description": "Define whether this product can receive a discount during a sale.",
       "oneOf": [
         {
           "type": "boolean"

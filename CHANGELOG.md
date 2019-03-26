@@ -1,3 +1,10 @@
+# [2.145.0](https://github.com/tillhub/schemas/compare/v2.144.0...v2.145.0) (2019-03-26)
+
+
+### Features
+
+* **products:** allow null secondary prices ([1ccd21f](https://github.com/tillhub/schemas/commit/1ccd21f))
+
 # [2.144.0](https://github.com/tillhub/schemas/compare/v2.143.0...v2.144.0) (2019-03-20)
 
 
