@@ -1,3 +1,17 @@
+# [2.145.0](https://github.com/tillhub/schemas/compare/v2.144.0...v2.145.0) (2019-03-26)
+
+
+### Features
+
+* **products:** allow null secondary prices ([1ccd21f](https://github.com/tillhub/schemas/commit/1ccd21f))
+
+# [2.144.0](https://github.com/tillhub/schemas/compare/v2.143.0...v2.144.0) (2019-03-20)
+
+
+### Features
+
+* **products:** adds linkable flag ([c14f965](https://github.com/tillhub/schemas/commit/c14f965))
+
 # [2.143.0](https://github.com/tillhub/schemas/compare/v2.142.0...v2.143.0) (2019-03-20)
 
 
