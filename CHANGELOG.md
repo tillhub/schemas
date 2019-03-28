@@ -1,3 +1,10 @@
+# [2.146.0](https://github.com/tillhub/schemas/compare/v2.145.0...v2.146.0) (2019-03-28)
+
+
+### Features
+
+* **configurations.devices:** added terminal apis to configurations ([#48](https://github.com/tillhub/schemas/issues/48)) ([94e57ac](https://github.com/tillhub/schemas/commit/94e57ac))
+
 # [2.145.0](https://github.com/tillhub/schemas/compare/v2.144.0...v2.145.0) (2019-03-26)
 
 
