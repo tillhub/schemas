@@ -1,3 +1,10 @@
+# [2.147.0](https://github.com/tillhub/schemas/compare/v2.146.0...v2.147.0) (2019-04-03)
+
+
+### Features
+
+* adds functions api ([cf168f2](https://github.com/tillhub/schemas/commit/cf168f2))
+
 # [2.146.0](https://github.com/tillhub/schemas/compare/v2.145.0...v2.146.0) (2019-03-28)
 
 

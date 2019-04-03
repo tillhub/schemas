@@ -62,7 +62,7 @@
                   "maximum": 25
                 },
                 "function_payload": {
-                  "OneOf": [
+                  "oneOf": [
                     {
                       "type": "object"
                     },
