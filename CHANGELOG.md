@@ -1,3 +1,10 @@
+# [2.148.0](https://github.com/tillhub/schemas/compare/v2.147.0...v2.148.0) (2019-04-03)
+
+
+### Features
+
+* **functions:** add string payload ([9ce0b66](https://github.com/tillhub/schemas/commit/9ce0b66))
+
 # [2.147.0](https://github.com/tillhub/schemas/compare/v2.146.0...v2.147.0) (2019-04-03)
 
 
