@@ -119,10 +119,102 @@
                 }
               }
             },
+            "search": {
+              "description": "Limits in-app searches.",
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "product": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "limit": {
+                      "description": "Limits product search results to a maximum of N",
+                      "oneOf": [
+                        {
+                          "type": "integer",
+                          "minimum": 1,
+                          "maximum": 20
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "dashboard": {
+              "description": "Dashboard settings (overrides client defaults, client defaults are set differently also for white label apps).",
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "url": {
+                  "description": "URL of this account's perferred LEGACY dashboard",
+                  "type": "string"
+                },
+                "url_new": {
+                  "description": "URL of this account's perferred NEW dashboard",
+                  "type": "string"
+                },
+                "auth": {
+                  "description": " -- client has implemented this but is not using it, please provide a proper description --",
+                  "type": "string"
+                }
+              }
+            },
+            "help_center": {
+              "description": "Help-Center settings (overrides client defaults).",
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "url": {
+                  "description": "URL of this account's perferred help center",
+                  "type": "string"
+                }
+              }
+            },
             "support": {
               "description": "Decides whether or not the support team is allowed to access the account this configuration belongs to.",
               "type": "boolean",
               "default": true
+            },
+            "buttons": {
+              "description": "Action (checkout) buttons configuration.",
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "show_always": {
+                    "type": "boolean",
+                    "default": true
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "condition": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "tax": {
+                          "description": "Tax account this butten will select when available on a per-item base and if default == FALSE.",
+                          "type": "string",
+                          "format": "uuid"
+                        },
+                        "default": {
+                          "description": "If TRUE the default behavior of the checkout button (without additional logic) will be used.",
+                          "type": "boolean",
+                          "default": false
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             }
           }
         }
