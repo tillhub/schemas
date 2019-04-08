@@ -1,3 +1,10 @@
+## [2.148.1](https://github.com/tillhub/schemas/compare/v2.148.0...v2.148.1) (2019-04-08)
+
+
+### Bug Fixes
+
+* **Documenting existing behavior:** added buttons and dashboard configurations ([7c1c346](https://github.com/tillhub/schemas/commit/7c1c346))
+
 # [2.148.0](https://github.com/tillhub/schemas/compare/v2.147.0...v2.148.0) (2019-04-03)
 
 
