@@ -1,3 +1,10 @@
+# [2.149.0](https://github.com/tillhub/schemas/compare/v2.148.1...v2.149.0) (2019-04-08)
+
+
+### Features
+
+* **carts LPS:** LPS flag and instant checkout of carts ([#46](https://github.com/tillhub/schemas/issues/46)) ([b840e8d](https://github.com/tillhub/schemas/commit/b840e8d))
+
 ## [2.148.1](https://github.com/tillhub/schemas/compare/v2.148.0...v2.148.1) (2019-04-08)
 
 
