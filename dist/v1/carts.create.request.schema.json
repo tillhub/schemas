@@ -468,13 +468,35 @@
                       "maxLength": 128
                     }
                   },
-                  "required": [
-                    "amount",
-                    "amount_total",
-                    "currency",
-                    "name",
-                    "value",
-                    "rate"
+                  "anyOf": [
+                    {
+                      "required": [
+                        "amount",
+                        "amount_total",
+                        "currency",
+                        "name",
+                        "value"
+                      ]
+                    },
+                    {
+                      "required": [
+                        "amount",
+                        "amount_total",
+                        "currency",
+                        "name",
+                        "rate"
+                      ]
+                    },
+                    {
+                      "required": [
+                        "amount",
+                        "amount_total",
+                        "currency",
+                        "name",
+                        "value",
+                        "rate"
+                      ]
+                    }
                   ]
                 }
               },

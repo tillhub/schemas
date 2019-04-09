@@ -1,3 +1,10 @@
+# [2.150.0](https://github.com/tillhub/schemas/compare/v2.149.0...v2.150.0) (2019-04-09)
+
+
+### Features
+
+* **carts_v1:** make rate and value no required in internal discounts ([a72b549](https://github.com/tillhub/schemas/commit/a72b549))
+
 # [2.149.0](https://github.com/tillhub/schemas/compare/v2.148.1...v2.149.0) (2019-04-08)
 
 
