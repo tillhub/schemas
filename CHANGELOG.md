@@ -1,3 +1,10 @@
+# [2.151.0](https://github.com/tillhub/schemas/compare/v2.150.0...v2.151.0) (2019-04-11)
+
+
+### Features
+
+* **products_v1:** add stock_mode and stock_configuration_location ([fafa9e3](https://github.com/tillhub/schemas/commit/fafa9e3))
+
 # [2.150.0](https://github.com/tillhub/schemas/compare/v2.149.0...v2.150.0) (2019-04-09)
 
 
