@@ -1038,61 +1038,64 @@
     "stock_configuration_location": {
       "oneOf": [
         {
-          "type": "object",
-          "additionalProperties": false,
-          "properties": {
-            "location": {
-              "oneOf": [
-                {
-                  "description": "Alphanumerical uuid of the location, e.g. branch or warehouse",
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ]
-            },
-            "stockable": {
-              "oneOf": [
-                {
-                  "type": "boolean"
-                },
-                {
-                  "type": "null"
-                }
-              ]
-            },
-            "stock_minimum": {
-              "oneOf": [
-                {
-                  "type": "number"
-                },
-                {
-                  "type": "null"
-                }
-              ]
-            },
-            "reorder_qty": {
-              "oneOf": [
-                {
-                  "description": "The amount/quantity that should be used in a reorder",
-                  "type": "number"
-                },
-                {
-                  "type": "null"
-                }
-              ]
-            },
-            "reorder_point": {
-              "oneOf": [
-                {
-                  "description": "Threshold at which a reorder should be triggered",
-                  "type": "number"
-                },
-                {
-                  "type": "null"
-                }
-              ]
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "location": {
+                "oneOf": [
+                  {
+                    "description": "Alphanumerical uuid of the location, e.g. branch or warehouse",
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "stockable": {
+                "oneOf": [
+                  {
+                    "type": "boolean"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "stock_minimum": {
+                "oneOf": [
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "reorder_qty": {
+                "oneOf": [
+                  {
+                    "description": "The amount/quantity that should be used in a reorder",
+                    "type": "number"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "reorder_point": {
+                "oneOf": [
+                  {
+                    "description": "Threshold at which a reorder should be triggered",
+                    "type": "number"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
             }
           }
         },
