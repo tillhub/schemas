@@ -1,3 +1,10 @@
+# [2.152.0](https://github.com/tillhub/schemas/compare/v2.151.0...v2.152.0) (2019-04-12)
+
+
+### Features
+
+* updated v1 products base ([e4180a2](https://github.com/tillhub/schemas/commit/e4180a2))
+
 # [2.151.0](https://github.com/tillhub/schemas/compare/v2.150.0...v2.151.0) (2019-04-11)
 
 

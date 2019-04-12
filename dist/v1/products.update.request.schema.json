@@ -664,9 +664,22 @@
       ]
     },
     "manufacturer": {
-      "anyOf": [
+      "oneOf": [
         {
-          "type": "object"
+          "type": "object",
+          "properties": {
+            "iln": {
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": ""
+            }
+          }
         },
         {
           "type": "null"
@@ -674,9 +687,36 @@
       ]
     },
     "supplier": {
-      "anyOf": [
+      "oneOf": [
         {
-          "type": "object"
+          "type": "object",
+          "properties": {
+            "sku": {
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": ""
+            }
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "locations": {
+      "oneOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uuid"
+          }
         },
         {
           "type": "null"

@@ -180,6 +180,33 @@
               "type": "boolean",
               "default": true
             },
+            "expenses": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "drawer_open": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "enum": [
+                            "entry",
+                            "booking"
+                          ]
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
             "buttons": {
               "description": "Action (checkout) buttons configuration.",
               "type": "array",
@@ -591,12 +618,31 @@
       ]
     },
     "transactions": {
-      "anyOf": [
+      "oneOf": [
         {
-          "type": "null"
+          "type": "object",
+          "properties": {
+            "signing": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "fiskaltrust"
+                  ]
+                },
+                "resource_type": {
+                  "type": "string",
+                  "enum": [
+                    "branches"
+                  ]
+                }
+              }
+            }
+          }
         },
         {
-          "type": "object"
+          "type": "null"
         }
       ]
     },
