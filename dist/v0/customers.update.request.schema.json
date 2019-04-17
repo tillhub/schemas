@@ -532,6 +532,7 @@
                     "type": "string",
                     "enum": [
                       "percent",
+                      "percentage",
                       "value"
                     ]
                   },

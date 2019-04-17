@@ -1,3 +1,10 @@
+# [2.154.0](https://github.com/tillhub/schemas/compare/v2.153.0...v2.154.0) (2019-04-17)
+
+
+### Features
+
+* **customers:** add new allowed type to customer-discounts ([61d1574](https://github.com/tillhub/schemas/commit/61d1574))
+
 # [2.153.0](https://github.com/tillhub/schemas/compare/v2.152.0...v2.153.0) (2019-04-12)
 
 
