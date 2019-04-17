@@ -542,6 +542,9 @@
                       "cart",
                       "customer"
                     ]
+                  },
+                  "name": {
+                    "type": "string"
                   }
                 },
                 "required": [

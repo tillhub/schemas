@@ -1,3 +1,10 @@
+# [2.155.0](https://github.com/tillhub/schemas/compare/v2.154.0...v2.155.0) (2019-04-17)
+
+
+### Features
+
+* **customers:** Add property "name" to customer-discounts ([0272550](https://github.com/tillhub/schemas/commit/0272550))
+
 # [2.154.0](https://github.com/tillhub/schemas/compare/v2.153.0...v2.154.0) (2019-04-17)
 
 
