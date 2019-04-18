@@ -1,3 +1,10 @@
+# [2.156.0](https://github.com/tillhub/schemas/compare/v2.155.0...v2.156.0) (2019-04-18)
+
+
+### Features
+
+* **vouchers:** update issuer in base ([556dc96](https://github.com/tillhub/schemas/commit/556dc96))
+
 # [2.155.0](https://github.com/tillhub/schemas/compare/v2.154.0...v2.155.0) (2019-04-17)
 
 

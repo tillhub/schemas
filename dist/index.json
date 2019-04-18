@@ -1,7 +1,7 @@
 [
   "/index.json",
-  "/patch.request.schema.json",
   "/currency.available.schema.json",
+  "/patch.request.schema.json",
   "/timezone.schema.json",
   "/balances.create.request.schema.json",
   "/balances.get-all.response.schema.json",
@@ -16,8 +16,8 @@
   "/delivery_notes.update.request.schema.json",
   "/discounts.create.request.schema.json",
   "/discounts.create.response.schema.json",
-  "/helpers.patch.request.schema.json",
   "/discounts.update.request.schema.json",
+  "/helpers.patch.request.schema.json",
   "/products.create.request.schema.json",
   "/products.update.request.schema.json",
   "/registers.create.request.schema.json",
@@ -49,9 +49,9 @@
   "/invoices.create.request.schema.json",
   "/invoices.update.request.schema.json",
   "/messages.create.request.schema.json",
+  "/messages.update.request.schema.json",
   "/orders.create.request.schema.json",
   "/payment_options.create.request.schema.json",
-  "/messages.update.request.schema.json",
   "/payment_options.update.request.schema.json",
   "/pdfs.templates.deliveries.create.schema.json",
   "/pdfs.templates.delivery_notes.create.schema.json",
@@ -64,6 +64,6 @@
   "/stock.update.request.schema.json",
   "/taxes.create.request.schema.json",
   "/taxes.update.request.schema.json",
-  "/vouchers.create.schema.json",
-  "/vouchers.patch.schema.json"
+  "/vouchers.patch.schema.json",
+  "/vouchers.create.schema.json"
 ]

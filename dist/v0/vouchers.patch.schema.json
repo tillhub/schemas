@@ -89,8 +89,49 @@
       "type": "object"
     },
     "metadata": {
-      "description": "",
-      "type": "object"
+      "oneOf": [
+        {
+          "type": "object",
+          "description": "",
+          "properties": {
+            "issuer": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "oneOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "client": {
+                      "oneOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "issuable": {
       "description": "",
@@ -101,8 +142,15 @@
       "type": "boolean"
     },
     "issuer": {
-      "description": "",
-      "type": "string"
+      "oneOf": [
+        {
+          "description": "defualt issuer",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "customer": {
       "description": "",
