@@ -1,3 +1,10 @@
+# [2.159.0](https://github.com/tillhub/schemas/compare/v2.158.1...v2.159.0) (2019-04-22)
+
+
+### Features
+
+* **devices:** add cfd content configuration] ([9919a72](https://github.com/tillhub/schemas/commit/9919a72))
+
 ## [2.158.1](https://github.com/tillhub/schemas/compare/v2.158.0...v2.158.1) (2019-04-22)
 
 

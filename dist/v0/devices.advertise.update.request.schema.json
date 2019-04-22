@@ -96,6 +96,58 @@
           "type": "null"
         }
       ]
+    },
+    "contents": {
+      "oneOf": [
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "enum": [
+                  "cfd"
+                ]
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "idle": {
+                "oneOf": [
+                  {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "uuid"
+                    }
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "welcome": {
+                "oneOf": [
+                  {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "uuid"
+                    }
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            }
+          },
+          "type": "object",
+          "additionalProperties": false
+        },
+        {
+          "type": "null"
+        }
+      ]
     }
   }
 }
