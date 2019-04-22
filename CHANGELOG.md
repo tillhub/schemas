@@ -1,3 +1,10 @@
+## [2.158.1](https://github.com/tillhub/schemas/compare/v2.158.0...v2.158.1) (2019-04-22)
+
+
+### Bug Fixes
+
+* **devices:** fix invalid schema ref ([14ac958](https://github.com/tillhub/schemas/commit/14ac958))
+
 # [2.158.0](https://github.com/tillhub/schemas/compare/v2.157.1...v2.158.0) (2019-04-22)
 
 
