@@ -1,3 +1,10 @@
+# [2.157.0](https://github.com/tillhub/schemas/compare/v2.156.0...v2.157.0) (2019-04-22)
+
+
+### Features
+
+* adds contents ([725fd2a](https://github.com/tillhub/schemas/commit/725fd2a))
+
 # [2.156.0](https://github.com/tillhub/schemas/compare/v2.155.0...v2.156.0) (2019-04-18)
 
 

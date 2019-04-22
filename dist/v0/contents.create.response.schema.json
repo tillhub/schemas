@@ -1,0 +1,151 @@
+{
+  "$id": "https://schemas.tillhub.com/v0/contents.create.response.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": true,
+  "type": "object",
+  "required": [
+    "id"
+  ],
+  "properties": {
+    "name": {
+      "description": "any arbitrary name for a content item that can be displayed in applications.",
+      "oneOf": [
+        {
+          "type": "string",
+          "maxLength": 128,
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "video",
+        "image",
+        "text",
+        "transition"
+      ]
+    },
+    "payload": {
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "uri"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "content_configuration": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "max_duration": {
+              "description": "show this content a maximumn of seconds",
+              "oneOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "min_duration": {
+              "description": "show this content a minimum of seconds",
+              "oneOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "preset": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "if": {
+                    "properties": {
+                      "type": {
+                        "enum": [
+                          "transition"
+                        ]
+                      }
+                    }
+                  },
+                  "then": {
+                    "enum": [
+                      ""
+                    ]
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "payload_configuration": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "auth": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {}
+            }
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "active": {
+      "description": "Soft disable or enabled this item.",
+      "type": "boolean",
+      "default": true
+    },
+    "deleted": {
+      "description": "Soft delete this item.",
+      "type": "boolean",
+      "default": false
+    },
+    "metadata": {
+      "oneOf": [
+        {
+          "description": "Arbitrary user defined data.",
+          "type": "object",
+          "maxProperties": 10
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}
