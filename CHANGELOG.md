@@ -1,3 +1,10 @@
+## [2.159.4](https://github.com/tillhub/schemas/compare/v2.159.3...v2.159.4) (2019-04-22)
+
+
+### Bug Fixes
+
+* **devices:** fix bind ref ([22a0a8a](https://github.com/tillhub/schemas/commit/22a0a8a))
+
 ## [2.159.3](https://github.com/tillhub/schemas/compare/v2.159.2...v2.159.3) (2019-04-22)
 
 
