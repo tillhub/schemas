@@ -155,7 +155,14 @@
       "format": "date-time"
     },
     "client_account": {
-      "type": "string"
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "token": {
       "oneOf": [

@@ -1,3 +1,10 @@
+## [2.159.3](https://github.com/tillhub/schemas/compare/v2.159.2...v2.159.3) (2019-04-22)
+
+
+### Bug Fixes
+
+* **devices:** be more permissive on advertising ([ff74153](https://github.com/tillhub/schemas/commit/ff74153))
+
 ## [2.159.2](https://github.com/tillhub/schemas/compare/v2.159.1...v2.159.2) (2019-04-22)
 
 
