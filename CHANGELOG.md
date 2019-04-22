@@ -1,3 +1,10 @@
+## [2.157.1](https://github.com/tillhub/schemas/compare/v2.157.0...v2.157.1) (2019-04-22)
+
+
+### Bug Fixes
+
+* fix stray lint issue, fix missing client account ([204d7ff](https://github.com/tillhub/schemas/commit/204d7ff))
+
 # [2.157.0](https://github.com/tillhub/schemas/compare/v2.156.0...v2.157.0) (2019-04-22)
 
 

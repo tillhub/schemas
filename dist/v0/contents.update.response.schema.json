@@ -146,6 +146,9 @@
     "created_at": {
       "type": "string",
       "format": "date-time"
+    },
+    "client_account": {
+      "type": "string"
     }
   }
 }
