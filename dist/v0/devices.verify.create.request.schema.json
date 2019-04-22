@@ -1,0 +1,14 @@
+{
+  "$id": "https://schemas.tillhub.com/v0/devices.verify.create.request.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "type": "object",
+  "required": [
+    "token"
+  ],
+  "properties": {
+    "token": {
+      "type": "string"
+    }
+  }
+}

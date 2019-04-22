@@ -1,3 +1,10 @@
+# [2.158.0](https://github.com/tillhub/schemas/compare/v2.157.1...v2.158.0) (2019-04-22)
+
+
+### Features
+
+* adds devices ([8335f0d](https://github.com/tillhub/schemas/commit/8335f0d))
+
 ## [2.157.1](https://github.com/tillhub/schemas/compare/v2.157.0...v2.157.1) (2019-04-22)
 
 
