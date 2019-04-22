@@ -8,8 +8,14 @@
   ],
   "properties": {
     "client_id": {
-      "type": "string",
-      "format": "uuid"
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "device_id": {
       "type": "string",
