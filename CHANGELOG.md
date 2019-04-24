@@ -1,3 +1,10 @@
+# [2.160.0](https://github.com/tillhub/schemas/compare/v2.159.4...v2.160.0) (2019-04-24)
+
+
+### Features
+
+* **tags:** create schema for new tags table ([0e8fe8a](https://github.com/tillhub/schemas/commit/0e8fe8a))
+
 ## [2.159.4](https://github.com/tillhub/schemas/compare/v2.159.3...v2.159.4) (2019-04-22)
 
 
