@@ -65,8 +65,10 @@
       ]
     },
     "deleted": {
-      "type": "boolean",
-      "default": false
+      "type": "boolean"
+    },
+    "active": {
+      "type": "boolean"
     },
     "id": {
       "type": "string",

@@ -1,3 +1,10 @@
+# [2.162.0](https://github.com/tillhub/schemas/compare/v2.161.0...v2.162.0) (2019-04-25)
+
+
+### Features
+
+* **reasons:** add property to reasons schema ([f3922f2](https://github.com/tillhub/schemas/commit/f3922f2))
+
 # [2.161.0](https://github.com/tillhub/schemas/compare/v2.160.1...v2.161.0) (2019-04-25)
 
 
