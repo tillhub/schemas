@@ -514,16 +514,37 @@
             "format": "uuid"
           },
           "tax": {
-            "type": "string",
-            "format": "uuid"
+            "oneOf": [
+              {
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ]
           },
           "account": {
-            "type": "string",
-            "format": "uuid"
+            "oneOf": [
+              {
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ]
           },
           "product_group": {
-            "type": "string",
-            "format": "uuid"
+            "oneOf": [
+              {
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ]
           },
           "attributes": {
             "anyOf": [

@@ -1,3 +1,10 @@
+# [2.163.0](https://github.com/tillhub/schemas/compare/v2.162.0...v2.163.0) (2019-04-25)
+
+
+### Features
+
+* **delivery_notes:** allow looser master data types ([6c50b7e](https://github.com/tillhub/schemas/commit/6c50b7e))
+
 # [2.162.0](https://github.com/tillhub/schemas/compare/v2.161.0...v2.162.0) (2019-04-25)
 
 
