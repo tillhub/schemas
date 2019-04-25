@@ -1,3 +1,10 @@
+## [2.160.1](https://github.com/tillhub/schemas/compare/v2.160.0...v2.160.1) (2019-04-25)
+
+
+### Bug Fixes
+
+* **devices:** add remaining content types ([1db7d75](https://github.com/tillhub/schemas/commit/1db7d75))
+
 # [2.160.0](https://github.com/tillhub/schemas/compare/v2.159.4...v2.160.0) (2019-04-24)
 
 
