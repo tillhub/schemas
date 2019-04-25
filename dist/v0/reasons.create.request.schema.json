@@ -1,0 +1,71 @@
+{
+  "$id": "https://schemas.tillhub.com/v0/reasons.create.request.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "type": "object",
+  "required": [
+    "reason"
+  ],
+  "properties": {
+    "reason": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "description": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4096
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "behavior": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "stock": {
+              "type": "string",
+              "enum": [
+                "restock"
+              ]
+            },
+            "stock_location": {
+              "type": "string",
+              "enum": [
+                "current"
+              ]
+            },
+            "navigation": {
+              "type": "string",
+              "enum": [
+                "payment_view",
+                "carts",
+                "ask"
+              ]
+            }
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "deleted": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

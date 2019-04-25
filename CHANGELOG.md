@@ -1,3 +1,10 @@
+# [2.161.0](https://github.com/tillhub/schemas/compare/v2.160.1...v2.161.0) (2019-04-25)
+
+
+### Features
+
+* **reasons:** Add new schemas for 'reasons' ([2213dba](https://github.com/tillhub/schemas/commit/2213dba))
+
 ## [2.160.1](https://github.com/tillhub/schemas/compare/v2.160.0...v2.160.1) (2019-04-25)
 
 
