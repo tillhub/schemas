@@ -150,6 +150,15 @@
               "type": "object",
               "additionalProperties": false,
               "properties": {
+                "availability": {
+                  "type": "string",
+                  "enum": [
+                    "legacy",
+                    "new",
+                    "both"
+                  ],
+                  "default": "legacy"
+                },
                 "url": {
                   "description": "URL of this account's perferred LEGACY dashboard",
                   "type": "string"
@@ -159,8 +168,15 @@
                   "type": "string"
                 },
                 "auth": {
-                  "description": " -- client has implemented this but is not using it, please provide a proper description --",
-                  "type": "string"
+                  "description": " -- client reads but does not use this, please provide a proper description --",
+                  "oneOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
                 }
               }
             },

@@ -1,3 +1,15 @@
+# [2.164.0](https://github.com/tillhub/schemas/compare/v2.163.1...v2.164.0) (2019-04-29)
+
+
+### Bug Fixes
+
+* **Configurations.settings.dashboard.auth:** made configurations.settings.dashboard.auth nullable ([413beb3](https://github.com/tillhub/schemas/commit/413beb3))
+
+
+### Features
+
+* **configurations.settings.dashboard:** dasboard availability configuration ([c107dea](https://github.com/tillhub/schemas/commit/c107dea))
+
 ## [2.163.1](https://github.com/tillhub/schemas/compare/v2.163.0...v2.163.1) (2019-04-29)
 
 
