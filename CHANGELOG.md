@@ -1,3 +1,10 @@
+## [2.163.1](https://github.com/tillhub/schemas/compare/v2.163.0...v2.163.1) (2019-04-29)
+
+
+### Bug Fixes
+
+* **tags:** correct typo ([8f80573](https://github.com/tillhub/schemas/commit/8f80573))
+
 # [2.163.0](https://github.com/tillhub/schemas/compare/v2.162.0...v2.163.0) (2019-04-25)
 
 

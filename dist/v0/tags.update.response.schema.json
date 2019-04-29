@@ -17,7 +17,7 @@
         }
       ]
     },
-    "updated_id": {
+    "update_id": {
       "oneOf": [
         {
           "type": "integer"
