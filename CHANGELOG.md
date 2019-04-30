@@ -1,3 +1,10 @@
+# [2.166.0](https://github.com/tillhub/schemas/compare/v2.165.0...v2.166.0) (2019-04-30)
+
+
+### Features
+
+* **Custom Functions:** Schemas for custom payload and adtional fields added ([#50](https://github.com/tillhub/schemas/issues/50)) ([9f8c733](https://github.com/tillhub/schemas/commit/9f8c733))
+
 # [2.165.0](https://github.com/tillhub/schemas/compare/v2.164.0...v2.165.0) (2019-04-30)
 
 
