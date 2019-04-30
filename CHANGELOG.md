@@ -1,3 +1,10 @@
+# [2.165.0](https://github.com/tillhub/schemas/compare/v2.164.0...v2.165.0) (2019-04-30)
+
+
+### Features
+
+* **contents:** add `start_time` as content config option ([c2f4b76](https://github.com/tillhub/schemas/commit/c2f4b76))
+
 # [2.164.0](https://github.com/tillhub/schemas/compare/v2.163.1...v2.164.0) (2019-04-29)
 
 

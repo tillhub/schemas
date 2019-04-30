@@ -66,6 +66,17 @@
                 }
               ]
             },
+            "start_time": {
+              "description": "show/play this content, starting from this timestamp (in seconds)",
+              "oneOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
             "preset": {
               "oneOf": [
                 {
