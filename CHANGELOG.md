@@ -1,3 +1,10 @@
+# [2.167.0](https://github.com/tillhub/schemas/compare/v2.166.0...v2.167.0) (2019-05-02)
+
+
+### Features
+
+* **contents:** be more permissive on payload types ([96bbea0](https://github.com/tillhub/schemas/commit/96bbea0))
+
 # [2.166.0](https://github.com/tillhub/schemas/compare/v2.165.0...v2.166.0) (2019-04-30)
 
 

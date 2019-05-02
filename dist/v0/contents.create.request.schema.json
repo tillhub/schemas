@@ -30,10 +30,15 @@
       ]
     },
     "payload": {
-      "oneOf": [
+      "description": "Permissive content schema, based on 'type', that allows for URIs as much as for arbitrary text or markdown.",
+      "anyOf": [
         {
           "type": "string",
           "format": "uri"
+        },
+        {
+          "type": "string",
+          "maxLength": 65536
         },
         {
           "type": "null"
