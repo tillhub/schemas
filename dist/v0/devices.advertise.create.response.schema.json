@@ -26,6 +26,10 @@
       "type": "string",
       "format": "uuid"
     },
+    "register": {
+      "type": "string",
+      "format": "uuid"
+    },
     "device_configuration": {
       "type": "object",
       "properties": {

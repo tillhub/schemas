@@ -1,3 +1,10 @@
+# [2.169.0](https://github.com/tillhub/schemas/compare/v2.168.0...v2.169.0) (2019-05-05)
+
+
+### Features
+
+* **devices:** allow patching register ([b3742f9](https://github.com/tillhub/schemas/commit/b3742f9))
+
 # [2.168.0](https://github.com/tillhub/schemas/compare/v2.167.0...v2.168.0) (2019-05-05)
 
 
