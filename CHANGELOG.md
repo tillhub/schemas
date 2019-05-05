@@ -1,3 +1,10 @@
+# [2.168.0](https://github.com/tillhub/schemas/compare/v2.167.0...v2.168.0) (2019-05-05)
+
+
+### Features
+
+* **devices:** add name ([93c671c](https://github.com/tillhub/schemas/commit/93c671c))
+
 # [2.167.0](https://github.com/tillhub/schemas/compare/v2.166.0...v2.167.0) (2019-05-02)
 
 

@@ -9,6 +9,11 @@
     "type"
   ],
   "properties": {
+    "name": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 255
+    },
     "client_id": {
       "type": "string",
       "format": "uuid"

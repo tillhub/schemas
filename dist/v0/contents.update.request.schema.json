@@ -44,6 +44,7 @@
       ]
     },
     "content_configuration": {
+      "description": "Drive behaviour of contents e.g. play times",
       "oneOf": [
         {
           "type": "object",
@@ -114,6 +115,7 @@
       ]
     },
     "payload_configuration": {
+      "description": "Add required configuration for the payload to be accessible, e.g. authentication.",
       "oneOf": [
         {
           "type": "object",
