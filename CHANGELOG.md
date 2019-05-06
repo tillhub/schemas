@@ -1,3 +1,10 @@
+# [2.170.0](https://github.com/tillhub/schemas/compare/v2.169.0...v2.170.0) (2019-05-06)
+
+
+### Features
+
+* add product templates ([6b5f5b9](https://github.com/tillhub/schemas/commit/6b5f5b9))
+
 # [2.169.0](https://github.com/tillhub/schemas/compare/v2.168.0...v2.169.0) (2019-05-05)
 
 
