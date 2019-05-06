@@ -1,3 +1,10 @@
+## [2.170.1](https://github.com/tillhub/schemas/compare/v2.170.0...v2.170.1) (2019-05-06)
+
+
+### Bug Fixes
+
+* **product_templates:** fix arbitrary key regex ([d45a323](https://github.com/tillhub/schemas/commit/d45a323))
+
 # [2.170.0](https://github.com/tillhub/schemas/compare/v2.169.0...v2.170.0) (2019-05-06)
 
 
