@@ -1,0 +1,23 @@
+{
+  "$id": "https://schemas.tillhub.com/v0/cfd_api.events.auth.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "description": "AUTH body",
+  "properties": {
+    "user": {
+      "type": "string"
+    },
+    "token": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    }
+  },
+  "required": [
+    "user",
+    "token",
+    "id"
+  ]
+}

@@ -1,3 +1,10 @@
+# [2.173.0](https://github.com/tillhub/schemas/compare/v2.172.0...v2.173.0) (2019-05-07)
+
+
+### Features
+
+* add cfd_api schemas ([f46d780](https://github.com/tillhub/schemas/commit/f46d780))
+
 # [2.172.0](https://github.com/tillhub/schemas/compare/v2.171.1...v2.172.0) (2019-05-07)
 
 

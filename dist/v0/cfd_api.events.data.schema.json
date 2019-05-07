@@ -1,0 +1,339 @@
+{
+  "$id": "https://schemas.tillhub.com/v0/cfd_api.events.data.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "Revised schema for messages injected from CFD",
+  "type": "object",
+  "oneOf": [
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "auth"
+          ]
+        },
+        "body": {
+          "type": "object",
+          "description": "AUTH body",
+          "properties": {
+            "user": {
+              "type": "string"
+            },
+            "token": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          "required": [
+            "user",
+            "token",
+            "id"
+          ]
+        }
+      }
+    },
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "action"
+          ]
+        },
+        "body": {
+          "type": "object",
+          "description": "ACTION body",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "payload": {
+              "type": "object"
+            }
+          },
+          "required": [
+            "name"
+          ]
+        }
+      }
+    },
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "pos_message"
+          ]
+        },
+        "body": {
+          "type": "object",
+          "description": "POS_MESSAGE body",
+          "properties": {
+            "view": {
+              "type": "string",
+              "enum": [
+                "idle",
+                "welcome",
+                "cart",
+                "payment",
+                "payment_terminal",
+                "payment_accepted",
+                "goodbye"
+              ]
+            },
+            "payload": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string"
+                },
+                "message": {
+                  "type": "string"
+                },
+                "cashier": {
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "custom_id": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "customer": {
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "custom_id": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "tax_type": {
+                  "type": "string",
+                  "enum": [
+                    "inclusive",
+                    "exclusive"
+                  ]
+                },
+                "summary_items": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "currency": {
+                        "type": "string",
+                        "description": "three letter country code specified by [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217)",
+                        "example": "EUR",
+                        "minLength": 3,
+                        "maxLength": 3
+                      },
+                      "sub_total": {
+                        "type": "number",
+                        "multipleOf": 0.01
+                      },
+                      "amount_total_net": {
+                        "type": "number",
+                        "multipleOf": 0.01
+                      },
+                      "amount_total_gross": {
+                        "type": "number",
+                        "multipleOf": 0.01
+                      },
+                      "tax_amount_total": {
+                        "type": "number",
+                        "multipleOf": 0.01
+                      },
+                      "discount_amount_total": {
+                        "type": "number",
+                        "multipleOf": 0.01
+                      },
+                      "requested_amount_total": {
+                        "type": "number",
+                        "multipleOf": 0.01
+                      },
+                      "requested_amount_left": {
+                        "type": "number",
+                        "multipleOf": 0.01
+                      },
+                      "given_amount_total": {
+                        "type": "number",
+                        "multipleOf": 0.01
+                      }
+                    }
+                  }
+                },
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "type": {
+                        "type": "string",
+                        "enum": [
+                          "item",
+                          "discount"
+                        ]
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "description": {
+                        "type": "string"
+                      },
+                      "qty": {
+                        "type": "number",
+                        "multipleOf": 1
+                      },
+                      "vat_rate": {
+                        "type": "number"
+                      },
+                      "currency": {
+                        "type": "string",
+                        "description": "three letter country code specified by [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217)",
+                        "example": "EUR",
+                        "minLength": 3,
+                        "maxLength": 3
+                      },
+                      "sub_total": {
+                        "type": "number",
+                        "multipleOf": 0.01
+                      },
+                      "amount_total_net": {
+                        "type": "number",
+                        "multipleOf": 0.01
+                      },
+                      "amount_total_gross": {
+                        "type": "number",
+                        "multipleOf": 0.01
+                      },
+                      "amount_unit_net": {
+                        "type": "number",
+                        "multipleOf": 0.01
+                      },
+                      "amount_unit_gross": {
+                        "type": "number",
+                        "multipleOf": 0.01
+                      },
+                      "tax_amount_total": {
+                        "type": "number",
+                        "multipleOf": 0.01
+                      },
+                      "discount_amount_total": {
+                        "type": "number",
+                        "multipleOf": 0.01
+                      },
+                      "discounts": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "oneOf": [
+                            {
+                              "properties": {
+                                "rate": {
+                                  "type": "number"
+                                },
+                                "name": {
+                                  "type": "string"
+                                },
+                                "amount_total": {
+                                  "type": "number",
+                                  "multipleOf": 0.01
+                                },
+                                "index": {
+                                  "type": "number",
+                                  "multipleOf": 1
+                                }
+                              },
+                              "required": [
+                                "rate"
+                              ]
+                            },
+                            {
+                              "properties": {
+                                "value": {
+                                  "type": "number",
+                                  "multipleOf": 0.01
+                                },
+                                "name": {
+                                  "type": "string"
+                                },
+                                "amount_total": {
+                                  "type": "number",
+                                  "multipleOf": 0.01
+                                },
+                                "index": {
+                                  "type": "number",
+                                  "multipleOf": 1
+                                }
+                              },
+                              "required": [
+                                "value"
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  }
+                },
+                "payments": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "type": {
+                        "type": "string",
+                        "enum": [
+                          "cash",
+                          "card"
+                        ]
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "currency": {
+                        "type": "string",
+                        "description": "three letter country code specified by [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217)",
+                        "example": "EUR",
+                        "minLength": 3,
+                        "maxLength": 3
+                      },
+                      "amount_given": {
+                        "type": "number",
+                        "multipleOf": 0.01
+                      },
+                      "tip_total": {
+                        "type": "number",
+                        "multipleOf": 0.01
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "required": [
+            "view"
+          ]
+        }
+      }
+    }
+  ],
+  "required": [
+    "type",
+    "body"
+  ]
+}
