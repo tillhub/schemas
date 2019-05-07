@@ -1,0 +1,163 @@
+{
+  "$id": "https://schemas.tillhub.com/v0/safes.update.request.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "type": "object",
+  "required": [],
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": [
+        "safe",
+        "vault"
+      ]
+    },
+    "account_number": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Financial account number of the safe, which is mutable and not deduplicated"
+    },
+    "name": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "custom_id": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "cost_center": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "location": {
+      "oneOf": [
+        {
+          "type": "string",
+          "description": "Alphanumeric ID of the location, e.g. branch, warehouse, or warehouse_shelf",
+          "format": "uuid"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "state": {
+      "oneOf": [
+        {
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "limit_upper": {
+      "oneOf": [
+        {
+          "type": "number",
+          "description": "Maximum amount that can be booked into the safe",
+          "multipleOf": 0.01
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "limit_lower": {
+      "oneOf": [
+        {
+          "type": "number",
+          "minimum": 0,
+          "description": "Minimum amount that has to be present in the safe",
+          "multipleOf": 0.01
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "items": {
+      "oneOf": [
+        {
+          "type": "array",
+          "description": "Amount items that are stored by currency",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "currency": {
+                "type": "string",
+                "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                "example": "",
+                "minLength": 3,
+                "maxLength": 3
+              },
+              "amount": {
+                "type": "number",
+                "minimum": 0,
+                "multipleOf": 0.01
+              }
+            }
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "metadata": {
+      "oneOf": [
+        {
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "deleted": {
+      "oneOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "active": {
+      "oneOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  }
+}

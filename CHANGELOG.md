@@ -1,3 +1,10 @@
+# [2.171.0](https://github.com/tillhub/schemas/compare/v2.170.1...v2.171.0) (2019-05-07)
+
+
+### Features
+
+* **safes:** add safes ([#67](https://github.com/tillhub/schemas/issues/67)) ([d75d394](https://github.com/tillhub/schemas/commit/d75d394))
+
 ## [2.170.1](https://github.com/tillhub/schemas/compare/v2.170.0...v2.170.1) (2019-05-06)
 
 
