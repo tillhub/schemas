@@ -1,3 +1,10 @@
+# [2.172.0](https://github.com/tillhub/schemas/compare/v2.171.1...v2.172.0) (2019-05-07)
+
+
+### Features
+
+* **configurations:** add additional options ([f3846c1](https://github.com/tillhub/schemas/commit/f3846c1))
+
 ## [2.171.1](https://github.com/tillhub/schemas/compare/v2.171.0...v2.171.1) (2019-05-07)
 
 
