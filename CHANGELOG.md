@@ -1,3 +1,10 @@
+## [2.171.1](https://github.com/tillhub/schemas/compare/v2.171.0...v2.171.1) (2019-05-07)
+
+
+### Bug Fixes
+
+* **safes:** fix example ([59e1d24](https://github.com/tillhub/schemas/commit/59e1d24))
+
 # [2.171.0](https://github.com/tillhub/schemas/compare/v2.170.1...v2.171.0) (2019-05-07)
 
 
