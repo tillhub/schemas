@@ -1,3 +1,10 @@
+# [2.175.0](https://github.com/tillhub/schemas/compare/v2.174.0...v2.175.0) (2019-05-08)
+
+
+### Features
+
+* **Transactions.CartItems:** User tax switch ([5ce03e0](https://github.com/tillhub/schemas/commit/5ce03e0))
+
 # [2.174.0](https://github.com/tillhub/schemas/compare/v2.173.0...v2.174.0) (2019-05-08)
 
 

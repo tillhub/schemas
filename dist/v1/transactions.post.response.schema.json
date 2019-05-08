@@ -1297,6 +1297,55 @@
                   ],
                   "default": []
                 },
+                "configuration": {
+                  "default": null,
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "description": "Item property changes triggered by a user decision.",
+                      "properties": {
+                        "tax_switched": {
+                          "type": "boolean",
+                          "default": false,
+                          "description": "Indicates if the tax was switched (e.g. by a matching configured button)."
+                        },
+                        "action": {
+                          "default": null,
+                          "oneOf": [
+                            {
+                              "type": "object",
+                              "description": "Description of a specific user action that could cause automatic tax switches.",
+                              "properties": {
+                                "default": {
+                                  "type": "boolean",
+                                  "default": true,
+                                  "description": "The default option was used."
+                                },
+                                "name": {
+                                  "type": "string",
+                                  "description": "Name of the specific user action",
+                                  "example": "ToGo"
+                                },
+                                "tax": {
+                                  "description": "The applicable Tillhub tax resource with tax accounts that is associated with this user action and can trigger a tax switch.",
+                                  "type": "string",
+                                  "format": "uuid",
+                                  "example": "a3be1e02-7983-4cba-b7b8-94453c0536ef"
+                                }
+                              }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
                 "account": {
                   "default": null,
                   "oneOf": [
