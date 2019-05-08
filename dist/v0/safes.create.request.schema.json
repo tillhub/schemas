@@ -80,9 +80,29 @@
     "limit_upper": {
       "oneOf": [
         {
-          "type": "number",
-          "description": "Maximum amount that can be booked into the safe",
-          "multipleOf": 0.01
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "amount",
+              "currency"
+            ],
+            "properties": {
+              "currency": {
+                "type": "string",
+                "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                "example": "EUR",
+                "minLength": 3,
+                "maxLength": 3
+              },
+              "amount": {
+                "type": "number",
+                "description": "Maximum amount that can be booked into the safe",
+                "multipleOf": 0.01
+              }
+            }
+          }
         },
         {
           "type": "null"
@@ -92,10 +112,30 @@
     "limit_lower": {
       "oneOf": [
         {
-          "type": "number",
-          "minimum": 0,
-          "description": "Minimum amount that has to be present in the safe",
-          "multipleOf": 0.01
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "amount",
+              "currency"
+            ],
+            "properties": {
+              "currency": {
+                "type": "string",
+                "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                "example": "EUR",
+                "minLength": 3,
+                "maxLength": 3
+              },
+              "amount": {
+                "type": "number",
+                "description": "Minimum amount that can be booked into the safe",
+                "multipleOf": 0.01,
+                "minimum": 0
+              }
+            }
+          }
         },
         {
           "type": "null"

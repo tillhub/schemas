@@ -1,3 +1,10 @@
+# [2.174.0](https://github.com/tillhub/schemas/compare/v2.173.0...v2.174.0) (2019-05-08)
+
+
+### Features
+
+* **safes:** change types for limit_upper and limit_lower into an array ([94a823f](https://github.com/tillhub/schemas/commit/94a823f))
+
 # [2.173.0](https://github.com/tillhub/schemas/compare/v2.172.0...v2.173.0) (2019-05-07)
 
 
