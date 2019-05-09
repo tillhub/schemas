@@ -1,3 +1,10 @@
+# [2.176.0](https://github.com/tillhub/schemas/compare/v2.175.0...v2.176.0) (2019-05-09)
+
+
+### Features
+
+* **Configurations.receipts:** Make total net printing configurable ([8c45277](https://github.com/tillhub/schemas/commit/8c45277))
+
 # [2.175.0](https://github.com/tillhub/schemas/compare/v2.174.0...v2.175.0) (2019-05-08)
 
 
