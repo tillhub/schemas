@@ -1,3 +1,10 @@
+# [2.177.0](https://github.com/tillhub/schemas/compare/v2.176.0...v2.177.0) (2019-05-10)
+
+
+### Features
+
+* **configurations:** add property navigation_after_creation ([02f79ee](https://github.com/tillhub/schemas/commit/02f79ee))
+
 # [2.176.0](https://github.com/tillhub/schemas/compare/v2.175.0...v2.176.0) (2019-05-09)
 
 

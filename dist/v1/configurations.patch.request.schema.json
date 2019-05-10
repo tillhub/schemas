@@ -177,6 +177,20 @@
                       "type": "null"
                     }
                   ]
+                },
+                "navigation_after_creation": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "enum": [
+                        "list",
+                        "edit"
+                      ]
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
                 }
               }
             },
