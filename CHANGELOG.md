@@ -1,3 +1,11 @@
+# [2.178.0](https://github.com/tillhub/schemas/compare/v2.177.0...v2.178.0) (2019-05-10)
+
+
+### Features
+
+* **contents:** add runtime type ([df8b103](https://github.com/tillhub/schemas/commit/df8b103))
+* **devices:** add runtime type to contents ([2cd65ec](https://github.com/tillhub/schemas/commit/2cd65ec))
+
 # [2.177.0](https://github.com/tillhub/schemas/compare/v2.176.0...v2.177.0) (2019-05-10)
 
 

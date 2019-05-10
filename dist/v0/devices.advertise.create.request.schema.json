@@ -227,6 +227,17 @@
                   "type": "null"
                 }
               ]
+            },
+            "runtime": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                {
+                  "type": "null"
+                }
+              ]
             }
           }
         },

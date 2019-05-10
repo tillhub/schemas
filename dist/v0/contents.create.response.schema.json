@@ -26,7 +26,8 @@
         "video",
         "image",
         "text",
-        "transition"
+        "transition",
+        "runtime"
       ]
     },
     "payload": {
