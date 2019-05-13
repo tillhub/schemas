@@ -1,3 +1,23 @@
+# [3.0.0](https://github.com/tillhub/schemas/compare/v2.178.0...v3.0.0) (2019-05-13)
+
+
+### Bug Fixes
+
+* **accounts:** fix property typo ([4304dcb](https://github.com/tillhub/schemas/commit/4304dcb))
+
+
+### Features
+
+* **Accounts per location:** Accounts get location specific properties ([4c4286a](https://github.com/tillhub/schemas/commit/4c4286a))
+* refine financial accounting ([7b55b1c](https://github.com/tillhub/schemas/commit/7b55b1c))
+
+
+### BREAKING CHANGES
+
+* **Accounts per location:** Accounts.accounts changes from self table ref to plain data
+
+https://tillhub.atlassian.net/browse/TM-4343
+
 # [2.178.0](https://github.com/tillhub/schemas/compare/v2.177.0...v2.178.0) (2019-05-10)
 
 

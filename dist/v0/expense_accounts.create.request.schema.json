@@ -1,16 +1,28 @@
 {
-  "$id": "https://schemas.tillhub.com/v0/accounts.create.request.schema.json",
+  "$id": "https://schemas.tillhub.com/v0/expense_accounts.create.request.schema.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "additionalProperties": false,
-  "anyOf": [
+  "type": "object",
+  "required": [
+    "name",
     "type",
-    "name"
+    "fa_account_number"
   ],
   "properties": {
+    "active": {
+      "type": "boolean"
+    },
+    "deleted": {
+      "type": "boolean"
+    },
     "name": {
       "anyOf": [
         {
-          "type": "string"
+          "description": "A custom name for an expense account.",
+          "example": "Utilities expense",
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 64
         },
         {
           "type": "null"
@@ -20,7 +32,11 @@
     "fa_account_number": {
       "anyOf": [
         {
-          "type": "string"
+          "description": "The custom financial account identifier.",
+          "example": "1776",
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 64
         },
         {
           "type": "null"
@@ -30,14 +46,24 @@
     "type": {
       "type": "string",
       "enum": [
-        "vat",
-        "discount",
-        "revenue",
-        "payment"
+        "expense",
+        "deposit",
+        "bank",
+        "transit",
+        "safe"
       ]
     },
-    "metadata": {
-      "type": "object"
+    "tax": {
+      "description": "DEPRECATED",
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "uuid"
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "financial_accounts": {
       "anyOf": [
@@ -94,6 +120,5 @@
         }
       ]
     }
-  },
-  "type": "object"
+  }
 }

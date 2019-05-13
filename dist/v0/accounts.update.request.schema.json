@@ -34,34 +34,63 @@
         "payment"
       ]
     },
-    "accounts": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "branch": {
-            "type": "string",
-            "minLength": 12,
-            "maxLength": 64
-          },
-          "branch_number": {
-            "type": "number"
-          },
-          "name": {
-            "type": "string",
-            "minLength": 1,
-            "maxLength": 64
-          },
-          "account": {
-            "type": "string",
-            "minLength": 12,
-            "maxLength": 64
-          }
-        }
-      }
-    },
     "metadata": {
       "type": "object"
+    },
+    "financial_accounts": {
+      "anyOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "anyOf": [
+                  {
+                    "description": "A custom name for a financial account.",
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 64
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "location": {
+                "description": "The specific Tillhub resource this account applies to (e.g. branch).",
+                "type": "string",
+                "format": "uuid",
+                "example": "936835f7-2d75-41d2-9001-38ed6e458328"
+              },
+              "custom_id": {
+                "description": "The custom financial account identifier e.g. an account number.",
+                "example": "1776",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 64
+              },
+              "cost_center": {
+                "anyOf": [
+                  {
+                    "description": "A custom cost center identifier.",
+                    "example": "4321",
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 64
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
     }
   }
 }
