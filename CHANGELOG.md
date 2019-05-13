@@ -1,3 +1,10 @@
+# [3.1.0](https://github.com/tillhub/schemas/compare/v3.0.0...v3.1.0) (2019-05-13)
+
+
+### Features
+
+* **Configurations:** Configurations carts ([8ceb4ac](https://github.com/tillhub/schemas/commit/8ceb4ac))
+
 # [3.0.0](https://github.com/tillhub/schemas/compare/v2.178.0...v3.0.0) (2019-05-13)
 
 
