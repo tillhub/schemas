@@ -54,7 +54,7 @@
       "oneOf": [
         {
           "type": "string",
-          "format": "uuid"
+          "maxLength": 64
         },
         {
           "type": "null"

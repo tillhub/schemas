@@ -1,3 +1,10 @@
+## [3.1.1](https://github.com/tillhub/schemas/compare/v3.1.0...v3.1.1) (2019-05-13)
+
+
+### Bug Fixes
+
+* **expense-accounts:** fix tax type regression ([93f1a74](https://github.com/tillhub/schemas/commit/93f1a74))
+
 # [3.1.0](https://github.com/tillhub/schemas/compare/v3.0.0...v3.1.0) (2019-05-13)
 
 
