@@ -1,3 +1,10 @@
+## [3.1.3](https://github.com/tillhub/schemas/compare/v3.1.2...v3.1.3) (2019-05-14)
+
+
+### Bug Fixes
+
+* **payment_options:** fix missing array type ([48d268b](https://github.com/tillhub/schemas/commit/48d268b))
+
 ## [3.1.2](https://github.com/tillhub/schemas/compare/v3.1.1...v3.1.2) (2019-05-14)
 
 

@@ -68,7 +68,10 @@
       "description": "DEPRECATED: do not use",
       "anyOf": [
         {
-          "type": "string"
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         },
         {
           "type": "null"
