@@ -1,3 +1,11 @@
+## [3.1.5](https://github.com/tillhub/schemas/compare/v3.1.4...v3.1.5) (2019-05-14)
+
+
+### Bug Fixes
+
+* **accounts:** add missing account column ([92c0a2a](https://github.com/tillhub/schemas/commit/92c0a2a))
+* **accounts:** add missing description prop ([2f607bb](https://github.com/tillhub/schemas/commit/2f607bb))
+
 ## [3.1.4](https://github.com/tillhub/schemas/compare/v3.1.3...v3.1.4) (2019-05-14)
 
 
