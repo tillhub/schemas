@@ -64,6 +64,17 @@
         }
       ]
     },
+    "accounts": {
+      "description": "DEPRECATED: do not use",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "financial_accounts": {
       "anyOf": [
         {

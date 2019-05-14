@@ -1,3 +1,10 @@
+## [3.1.2](https://github.com/tillhub/schemas/compare/v3.1.1...v3.1.2) (2019-05-14)
+
+
+### Bug Fixes
+
+* **payment_options:** readd accounts due to regression ([f325ee5](https://github.com/tillhub/schemas/commit/f325ee5))
+
 ## [3.1.1](https://github.com/tillhub/schemas/compare/v3.1.0...v3.1.1) (2019-05-13)
 
 
