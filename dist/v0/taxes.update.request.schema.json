@@ -33,6 +33,7 @@
       ]
     },
     "account": {
+      "description": "DEPRECATED: do not use",
       "type": "string"
     },
     "rate": {
@@ -53,6 +54,10 @@
           "type": "array",
           "items": {
             "type": "object",
+            "required": [
+              "location",
+              "custom_id"
+            ],
             "properties": {
               "name": {
                 "anyOf": [
@@ -68,10 +73,17 @@
                 ]
               },
               "location": {
-                "description": "The specific Tillhub resource this account applies to (e.g. branch).",
-                "type": "string",
-                "format": "uuid",
-                "example": "936835f7-2d75-41d2-9001-38ed6e458328"
+                "anyOf": [
+                  {
+                    "description": "The specific Tillhub resource this account applies to (e.g. branch).",
+                    "type": "string",
+                    "format": "uuid",
+                    "example": "936835f7-2d75-41d2-9001-38ed6e458328"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
               },
               "custom_id": {
                 "description": "The custom financial account identifier e.g. an account number.",

@@ -1,3 +1,10 @@
+## [3.1.4](https://github.com/tillhub/schemas/compare/v3.1.3...v3.1.4) (2019-05-14)
+
+
+### Bug Fixes
+
+* **accounting:** force location and number, allow location null ([72cbd82](https://github.com/tillhub/schemas/commit/72cbd82))
+
 ## [3.1.3](https://github.com/tillhub/schemas/compare/v3.1.2...v3.1.3) (2019-05-14)
 
 
