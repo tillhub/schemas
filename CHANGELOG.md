@@ -1,3 +1,10 @@
+## [3.1.6](https://github.com/tillhub/schemas/compare/v3.1.5...v3.1.6) (2019-05-14)
+
+
+### Bug Fixes
+
+* **accounts:** fix invalid required prop ([cbb2f79](https://github.com/tillhub/schemas/commit/cbb2f79))
+
 ## [3.1.5](https://github.com/tillhub/schemas/compare/v3.1.4...v3.1.5) (2019-05-14)
 
 
