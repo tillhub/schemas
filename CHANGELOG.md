@@ -1,3 +1,10 @@
+## [3.1.7](https://github.com/tillhub/schemas/compare/v3.1.6...v3.1.7) (2019-05-14)
+
+
+### Bug Fixes
+
+* **accounting:** add missing props ([03dbcd8](https://github.com/tillhub/schemas/commit/03dbcd8))
+
 ## [3.1.6](https://github.com/tillhub/schemas/compare/v3.1.5...v3.1.6) (2019-05-14)
 
 

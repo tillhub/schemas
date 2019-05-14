@@ -18,7 +18,8 @@
     "description": {
       "anyOf": [
         {
-          "type": "string"
+          "type": "string",
+          "maxLength": 16384
         },
         {
           "type": "null"
@@ -43,6 +44,12 @@
         "revenue",
         "payment"
       ]
+    },
+    "active": {
+      "type": "boolean"
+    },
+    "deleted": {
+      "type": "boolean"
     },
     "metadata": {
       "type": "object"
