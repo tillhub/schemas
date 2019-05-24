@@ -1,0 +1,86 @@
+{
+  "$id": "https://schemas.tillhub.com/v0/safes.book.request.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "type": "object",
+  "required": [
+    "initiated_at",
+    "issuer",
+    "from",
+    "to",
+    "items"
+  ],
+  "properties": {
+    "initiated_at": {
+      "type": "string",
+      "description": "The timestamp from the UI, when the transfer was initiated by the user, e.g. clicking the submit button",
+      "format": "date-time"
+    },
+    "issuer": {
+      "type": "string",
+      "description": "Client ID of who initiated the transfer"
+    },
+    "from": {
+      "type": "string",
+      "description": "Alphanumeric ID of origin, e.g. safe uuid",
+      "format": "uuid"
+    },
+    "to": {
+      "type": "string",
+      "description": "Alphanumeric ID of destination, e.g. safe or bank uuid",
+      "format": "uuid"
+    },
+    "comment": {
+      "oneOf": [
+        {
+          "type": "string",
+          "maxLength": 4096
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "metadata": {
+      "oneOf": [
+        {
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "transfer_type": {
+      "type": "string",
+      "enum": [
+        "safe_to_safe",
+        "safe_to_bank"
+      ]
+    },
+    "items": {
+      "type": "array",
+      "description": "Array of bookings with an element for each currency to allow multi-currency",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "amount": {
+            "type": "number",
+            "description": "Amount that is being transferred from origin to destination",
+            "multipleOf": 0.01,
+            "minimum": 0
+          },
+          "currency": {
+            "type": "string",
+            "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+            "example": "EUR",
+            "minLength": 3,
+            "maxLength": 3
+          }
+        }
+      }
+    }
+  }
+}

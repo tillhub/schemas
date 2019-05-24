@@ -1,3 +1,12 @@
+# [3.2.0](https://github.com/tillhub/schemas/compare/v3.1.7...v3.2.0) (2019-05-24)
+
+
+### Features
+
+* **safes:** add property transfer_type to "book" schema ([6001ee3](https://github.com/tillhub/schemas/commit/6001ee3))
+* **safes:** add safes book handler and safes_log_book ([36b4ee1](https://github.com/tillhub/schemas/commit/36b4ee1))
+* **safes_log_book:** add new schema for safes_log_book ([5d7e286](https://github.com/tillhub/schemas/commit/5d7e286))
+
 ## [3.1.7](https://github.com/tillhub/schemas/compare/v3.1.6...v3.1.7) (2019-05-14)
 
 
