@@ -1,3 +1,10 @@
+# [3.5.0](https://github.com/tillhub/schemas/compare/v3.4.0...v3.5.0) (2019-05-27)
+
+
+### Features
+
+* **Configurations:** Products configuration ([f7dca82](https://github.com/tillhub/schemas/commit/f7dca82))
+
 # [3.4.0](https://github.com/tillhub/schemas/compare/v3.3.0...v3.4.0) (2019-05-27)
 
 
