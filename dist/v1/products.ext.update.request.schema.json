@@ -1,0 +1,1227 @@
+{
+  "$id": "https://schemas.tillhub.com/v1/products.ext.update.request.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "type": "object",
+  "required": [],
+  "properties": {
+    "name": {
+      "description": "Product name",
+      "type": "string",
+      "maxLength": 512
+    },
+    "summary": {
+      "description": "Short summary of the product",
+      "oneOf": [
+        {
+          "type": "string",
+          "maxLength": 1024
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "description": {
+      "description": "Long description of a product",
+      "oneOf": [
+        {
+          "type": "string",
+          "maxLength": 16384
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "attributes": {
+      "description": "Arbitrary attributes a product has, that will be displayed in e.g. a sale",
+      "anyOf": [
+        {
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "parent": {
+      "description": "Only valid for child products (variant and linked)",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "tags": {
+      "anyOf": [
+        {
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "linked_products": {
+      "description": "Used to store linked_products (existing (can be any type, including `linked` and embedded (`full` product schema)",
+      "anyOf": [
+        {
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "prices": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "branch_prices": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "branch": {
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "prices": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "amount": {
+                          "type": "object",
+                          "properties": {
+                            "net": {
+                              "example": "27633.02",
+                              "type": "number",
+                              "minimum": 0,
+                              "maximum": 1000000,
+                              "multipleOf": 0.01
+                            },
+                            "gross": {
+                              "example": "27633.02",
+                              "type": "number",
+                              "minimum": 0,
+                              "maximum": 1000000,
+                              "multipleOf": 0.01
+                            }
+                          }
+                        },
+                        "currency": {
+                          "type": "string",
+                          "minLength": 3,
+                          "maxLength": 3
+                        },
+                        "percentage": {
+                          "description": "DEPRECATED",
+                          "type": "number"
+                        },
+                        "purchase_price": {
+                          "description": "Define the opportunity cost or calculatory base price of this product and currency.",
+                          "oneOf": [
+                            {
+                              "example": "27633.02",
+                              "type": "number",
+                              "minimum": 0,
+                              "maximum": 1000000,
+                              "multipleOf": 0.01
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "cost": {
+                          "description": "Define additional cost.",
+                          "oneOf": [
+                            {
+                              "example": "27633.02",
+                              "type": "number",
+                              "minimum": 0,
+                              "maximum": 1000000,
+                              "multipleOf": 0.01
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "margin": {
+                          "description": "Add a margin to pruchase_price and cost to result in net.",
+                          "oneOf": [
+                            {
+                              "type": "number",
+                              "multipleOf": 0.0001
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "scaled_prices": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "qty": {
+                    "type": "number"
+                  },
+                  "prices": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "amount": {
+                          "type": "object",
+                          "properties": {
+                            "net": {
+                              "example": "27633.02",
+                              "type": "number",
+                              "minimum": 0,
+                              "maximum": 1000000,
+                              "multipleOf": 0.01
+                            },
+                            "gross": {
+                              "example": "27633.02",
+                              "type": "number",
+                              "minimum": 0,
+                              "maximum": 1000000,
+                              "multipleOf": 0.01
+                            }
+                          }
+                        },
+                        "currency": {
+                          "type": "string",
+                          "minLength": 3,
+                          "maxLength": 3
+                        },
+                        "percentage": {
+                          "description": "DEPRECATED",
+                          "type": "number"
+                        },
+                        "purchase_price": {
+                          "description": "Define the opportunity cost or calculatory base price of this product and currency.",
+                          "oneOf": [
+                            {
+                              "example": "27633.02",
+                              "type": "number",
+                              "minimum": 0,
+                              "maximum": 1000000,
+                              "multipleOf": 0.01
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "cost": {
+                          "description": "Define additional cost.",
+                          "oneOf": [
+                            {
+                              "example": "27633.02",
+                              "type": "number",
+                              "minimum": 0,
+                              "maximum": 1000000,
+                              "multipleOf": 0.01
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "margin": {
+                          "description": "Add a margin to pruchase_price and cost to result in net.",
+                          "oneOf": [
+                            {
+                              "type": "number",
+                              "multipleOf": 0.0001
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "default_prices": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "amount": {
+                    "type": "object",
+                    "properties": {
+                      "net": {
+                        "example": "27633.02",
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1000000,
+                        "multipleOf": 0.01
+                      },
+                      "gross": {
+                        "example": "27633.02",
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1000000,
+                        "multipleOf": 0.01
+                      }
+                    }
+                  },
+                  "currency": {
+                    "type": "string",
+                    "minLength": 3,
+                    "maxLength": 3
+                  },
+                  "percentage": {
+                    "description": "DEPRECATED",
+                    "type": "number"
+                  },
+                  "purchase_price": {
+                    "description": "Define the opportunity cost or calculatory base price of this product and currency.",
+                    "oneOf": [
+                      {
+                        "example": "27633.02",
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1000000,
+                        "multipleOf": 0.01
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "cost": {
+                    "description": "Define additional cost.",
+                    "oneOf": [
+                      {
+                        "example": "27633.02",
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1000000,
+                        "multipleOf": 0.01
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "margin": {
+                    "description": "Add a margin to pruchase_price and cost to result in net.",
+                    "oneOf": [
+                      {
+                        "type": "number",
+                        "multipleOf": 0.0001
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "required": [
+            "default_prices"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "barcode": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "sku": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "stock_minimum": {
+      "oneOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "stock_maximum": {
+      "description": "The maximum resulting qty a location should have after a reorder",
+      "oneOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "reorder_point": {
+      "description": "The stock level that triggers a reorder",
+      "oneOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "reorder_qty": {
+      "description": "The default qty on any reorder",
+      "oneOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "stockable": {
+      "description": "Define whether to keep track of stock of this product.",
+      "oneOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "discountable": {
+      "description": "Define whether this product can receive a discount during a sale.",
+      "oneOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "linkable": {
+      "description": "Define whether a product should be linkable. NOTE: this will replace the type \"linked\"",
+      "type": "boolean",
+      "default": false
+    },
+    "metadata": {
+      "anyOf": [
+        {
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "audiences": {
+      "anyOf": [
+        {
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "keywords": {
+      "anyOf": [
+        {
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "categories": {
+      "anyOf": [
+        {
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "custom_ids": {
+      "description": "DEPRECATED",
+      "anyOf": [
+        {
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "related_to": {
+      "anyOf": [
+        {
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "similar_to": {
+      "anyOf": [
+        {
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "released_at": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date-time"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "purchased_at": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date-time"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "produced_at": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date-time"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "custom_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "tax": {
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "uuid"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "taxes_options": {
+      "anyOf": [
+        {
+          "type": "array"
+        },
+        {
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "season": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "seasons": {
+      "anyOf": [
+        {
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "account": {
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "uuid"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "vat_class": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "category": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "brand": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "active": {
+      "type": "boolean"
+    },
+    "deleted": {
+      "type": "boolean"
+    },
+    "type": {
+      "type": "string",
+      "description": "variant is a child of variant_product, and has a parent property containing the ID of a variant_product typed parent product",
+      "enum": [
+        "product",
+        "voucher",
+        "linked",
+        "linked_product",
+        "variant",
+        "variant_product"
+      ]
+    },
+    "manufacturer": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "iln": {
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": ""
+            }
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "supplier": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "sku": {
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": ""
+            }
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "locations": {
+      "oneOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "condition": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "images": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "original": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "format": "uri"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null
+            },
+            "1x": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "format": "uri"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null
+            },
+            "2x": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "format": "uri"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null
+            },
+            "3x": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "format": "uri"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null
+            },
+            "lia_1x": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "format": "uri"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null
+            },
+            "lia_2x": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "format": "uri"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null
+            },
+            "lia_3x": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "format": "uri"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null
+            },
+            "square_1x": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "format": "uri"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null
+            },
+            "square_2x": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "format": "uri"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null
+            },
+            "square_3x": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "format": "uri"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null
+            },
+            "avatar": {
+              "type": "string",
+              "format": "uri"
+            }
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "insert_id": {
+      "type": "integer"
+    },
+    "product_group": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "delegated_to": {
+      "anyOf": [
+        {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "client_id": {
+      "description": "A client definable ID for the purpose of syncing to a client or used in analytics for e.g. transactions that created a product offline and done transactions offline before they received a backend ID.",
+      "oneOf": [
+        {
+          "type": "string",
+          "maxLength": 128
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "external_reference_id": {
+      "description": "A caller defined custom ID for the purpose of syncing from external resources, or to use in analytics.",
+      "oneOf": [
+        {
+          "type": "string",
+          "maxLength": 128
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "default_tile_color": {
+      "description": "Color to be displayed when no image is set.",
+      "oneOf": [
+        {
+          "type": "string",
+          "maxLength": 10
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "codes": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "qr": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "caption": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "maxLength": 16384
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "code128": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "caption": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "maxLength": 512
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "aztec": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "caption": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "maxLength": 512
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "stock_mode": {
+      "oneOf": [
+        {
+          "type": "string",
+          "description": "determines if stock configurations are handled on global client level or on individual product level",
+          "enum": [
+            "simple",
+            "complex"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "stock_configuration_location": {
+      "oneOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "location": {
+                "oneOf": [
+                  {
+                    "description": "Alphanumerical uuid of the location, e.g. branch or warehouse",
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "stockable": {
+                "oneOf": [
+                  {
+                    "type": "boolean"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "stock_minimum": {
+                "oneOf": [
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "reorder_qty": {
+                "oneOf": [
+                  {
+                    "description": "The amount/quantity that should be used in a reorder",
+                    "type": "number"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "reorder_point": {
+                "oneOf": [
+                  {
+                    "description": "Threshold at which a reorder should be triggered",
+                    "type": "number"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "stock_info": {
+      "description": "READ ONLY: summary of stock accross accounts. This potentially is not real-time. After a stock change.",
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "additionalProperties": true,
+        "summary": {
+          "type": "object",
+          "properties": {
+            "total": {
+              "type": "object",
+              "additionalProperties": true,
+              "properties": {
+                "count": {
+                  "type": "number"
+                }
+              }
+            },
+            "locations": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  "count": {
+                    "type": "number"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "i18n": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "locales": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "code",
+                  "translations"
+                ],
+                "properties": {
+                  "code": {
+                    "type": "string",
+                    "enum": [
+                      "de_DE",
+                      "de",
+                      "en",
+                      "en_US",
+                      "en_GB",
+                      "es",
+                      "es_ES",
+                      "hu_HU",
+                      "hu",
+                      "fr_FR",
+                      "fr"
+                    ]
+                  },
+                  "translations": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "format",
+                          "payload"
+                        ],
+                        "properties": {
+                          "format": {
+                            "type": "string",
+                            "enum": [
+                              "i18next"
+                            ]
+                          },
+                          "payload": {
+                            "oneOf": [
+                              {
+                                "type": "array"
+                              },
+                              {
+                                "type": "object"
+                              },
+                              {
+                                "type": "string"
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  }
+}
