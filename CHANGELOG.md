@@ -1,3 +1,10 @@
+## [3.5.2](https://github.com/tillhub/schemas/compare/v3.5.1...v3.5.2) (2019-05-27)
+
+
+### Bug Fixes
+
+* **products:** fix ext qty name ([d0fbdfc](https://github.com/tillhub/schemas/commit/d0fbdfc))
+
 ## [3.5.1](https://github.com/tillhub/schemas/compare/v3.5.0...v3.5.1) (2019-05-27)
 
 

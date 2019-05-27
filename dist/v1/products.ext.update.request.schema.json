@@ -1117,7 +1117,7 @@
               "type": "object",
               "additionalProperties": true,
               "properties": {
-                "count": {
+                "qty": {
                   "type": "number"
                 }
               }
@@ -1132,7 +1132,7 @@
                     "type": "string",
                     "format": "uuid"
                   },
-                  "count": {
+                  "qty": {
                     "type": "number"
                   }
                 }
