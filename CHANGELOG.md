@@ -1,3 +1,10 @@
+## [3.5.1](https://github.com/tillhub/schemas/compare/v3.5.0...v3.5.1) (2019-05-27)
+
+
+### Bug Fixes
+
+* **products:** fix ext ref ([a2b9834](https://github.com/tillhub/schemas/commit/a2b9834))
+
 # [3.5.0](https://github.com/tillhub/schemas/compare/v3.4.0...v3.5.0) (2019-05-27)
 
 
