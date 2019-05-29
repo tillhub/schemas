@@ -1,3 +1,10 @@
+# [3.6.0](https://github.com/tillhub/schemas/compare/v3.5.2...v3.6.0) (2019-05-29)
+
+
+### Features
+
+* **safes:** add conditionals for "from" and "to" ([0b62b2f](https://github.com/tillhub/schemas/commit/0b62b2f))
+
 ## [3.5.2](https://github.com/tillhub/schemas/compare/v3.5.1...v3.5.2) (2019-05-27)
 
 

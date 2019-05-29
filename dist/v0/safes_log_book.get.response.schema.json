@@ -63,6 +63,16 @@
           }
         ]
       },
+      "origins": {
+        "oneOf": [
+          {
+            "type": "object"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
       "transfer_value": {
         "oneOf": [
           {

@@ -3,14 +3,6 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "additionalProperties": false,
   "type": "object",
-  "required": [
-    "initiated_at",
-    "issuer",
-    "from",
-    "to",
-    "items",
-    "transfer_type"
-  ],
   "properties": {
     "initiated_at": {
       "type": "string",
@@ -22,14 +14,28 @@
       "description": "Client ID of who initiated the transfer"
     },
     "from": {
-      "type": "string",
-      "description": "Alphanumeric ID of origin, e.g. safe uuid",
-      "format": "uuid"
+      "oneOf": [
+        {
+          "type": "string",
+          "description": "Alphanumeric ID of origin, e.g. safe uuid",
+          "format": "uuid"
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "to": {
-      "type": "string",
-      "description": "Alphanumeric ID of destination, e.g. safe or bank uuid",
-      "format": "uuid"
+      "oneOf": [
+        {
+          "type": "string",
+          "description": "Alphanumeric ID of destination, e.g. safe or bank uuid",
+          "format": "uuid"
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "comment": {
       "oneOf": [
@@ -52,11 +58,22 @@
         }
       ]
     },
+    "origins": {
+      "oneOf": [
+        {
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "transfer_type": {
       "type": "string",
       "enum": [
         "safe_to_safe",
-        "safe_to_bank"
+        "safe_to_bank",
+        "pos_to_safe"
       ]
     },
     "items": {
@@ -81,6 +98,54 @@
             "maxLength": 3
           }
         }
+      }
+    }
+  },
+  "if": {
+    "properties": {
+      "transfer_type": {
+        "type": "string",
+        "enum": [
+          "pos_to_safe"
+        ]
+      }
+    }
+  },
+  "then": {
+    "required": [
+      "initiated_at",
+      "issuer",
+      "to",
+      "items",
+      "transfer_type"
+    ],
+    "properties": {
+      "to": {
+        "type": "string",
+        "description": "Alphanumeric ID of origin, e.g. safe uuid",
+        "format": "uuid"
+      }
+    }
+  },
+  "else": {
+    "required": [
+      "initiated_at",
+      "issuer",
+      "from",
+      "to",
+      "items",
+      "transfer_type"
+    ],
+    "properties": {
+      "from": {
+        "type": "string",
+        "description": "Alphanumeric ID of origin, e.g. safe uuid",
+        "format": "uuid"
+      },
+      "to": {
+        "type": "string",
+        "description": "Alphanumeric ID of destination, e.g. safe or bank uuid",
+        "format": "uuid"
       }
     }
   }
