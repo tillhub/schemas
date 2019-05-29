@@ -1,3 +1,10 @@
+## [3.6.1](https://github.com/tillhub/schemas/compare/v3.6.0...v3.6.1) (2019-05-29)
+
+
+### Bug Fixes
+
+* **devices:** make name nullable ([ec76c7f](https://github.com/tillhub/schemas/commit/ec76c7f))
+
 # [3.6.0](https://github.com/tillhub/schemas/compare/v3.5.2...v3.6.0) (2019-05-29)
 
 

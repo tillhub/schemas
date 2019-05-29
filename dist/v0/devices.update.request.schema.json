@@ -6,9 +6,16 @@
   "required": [],
   "properties": {
     "name": {
-      "type": "string",
-      "minLength": 3,
-      "maxLength": 255
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 255
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "client_id": {
       "type": "string",
