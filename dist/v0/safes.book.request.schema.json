@@ -61,7 +61,8 @@
     "origins": {
       "oneOf": [
         {
-          "type": "object"
+          "type": "object",
+          "description": "Holds information about e.g. the original fr_transaction"
         },
         {
           "type": "null"
@@ -87,8 +88,7 @@
           "amount": {
             "type": "number",
             "description": "Amount that is being transferred from origin to destination",
-            "multipleOf": 0.01,
-            "minimum": 0
+            "multipleOf": 0.01
           },
           "currency": {
             "type": "string",

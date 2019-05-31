@@ -1,3 +1,10 @@
+# [3.7.0](https://github.com/tillhub/schemas/compare/v3.6.1...v3.7.0) (2019-05-31)
+
+
+### Features
+
+* **safes:** add make transfer_type mandatory and remove minimum ([6670c0c](https://github.com/tillhub/schemas/commit/6670c0c))
+
 ## [3.6.1](https://github.com/tillhub/schemas/compare/v3.6.0...v3.6.1) (2019-05-29)
 
 

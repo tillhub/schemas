@@ -66,11 +66,20 @@
       "origins": {
         "oneOf": [
           {
-            "type": "object"
+            "type": "object",
+            "description": "Holds information about e.g. the original fr_transaction"
           },
           {
             "type": "null"
           }
+        ]
+      },
+      "transfer_type": {
+        "type": "string",
+        "enum": [
+          "safe_to_safe",
+          "safe_to_bank",
+          "pos_to_safe"
         ]
       },
       "transfer_value": {
