@@ -1,3 +1,10 @@
+# [3.10.0](https://github.com/tillhub/schemas/compare/v3.9.0...v3.10.0) (2019-06-03)
+
+
+### Features
+
+* Added safes ([4fdffcc](https://github.com/tillhub/schemas/commit/4fdffcc))
+
 # [3.9.0](https://github.com/tillhub/schemas/compare/v3.8.0...v3.9.0) (2019-06-03)
 
 

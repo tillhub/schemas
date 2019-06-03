@@ -31,7 +31,11 @@
         "bank_deposit",
         "bank_deposit_cancel",
         "bank_expense",
-        "bank_expense_cancel"
+        "bank_expense_cancel",
+        "safe_expense",
+        "safe_expense_cancel",
+        "safe_deposit",
+        "safe_deposit_cancel"
       ]
     },
     "client_id": {
