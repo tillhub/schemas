@@ -1,3 +1,10 @@
+# [3.13.0](https://github.com/tillhub/schemas/compare/v3.12.0...v3.13.0) (2019-06-03)
+
+
+### Features
+
+* **Safe expense:** Store safe_id in transactions ([b6d84a2](https://github.com/tillhub/schemas/commit/b6d84a2))
+
 # [3.12.0](https://github.com/tillhub/schemas/compare/v3.11.0...v3.12.0) (2019-06-03)
 
 
