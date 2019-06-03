@@ -1,3 +1,10 @@
+# [3.8.0](https://github.com/tillhub/schemas/compare/v3.7.0...v3.8.0) (2019-06-03)
+
+
+### Features
+
+* **Transactions, returning goods:** Added return reason to transactions.items ([129ca84](https://github.com/tillhub/schemas/commit/129ca84))
+
 # [3.7.0](https://github.com/tillhub/schemas/compare/v3.6.1...v3.7.0) (2019-05-31)
 
 

@@ -7,7 +7,7 @@
     "id"
   ],
   "properties": {
-    "reason": {
+    "name": {
       "oneOf": [
         {
           "type": "string",

@@ -8,7 +8,7 @@
     "reason"
   ],
   "properties": {
-    "reason": {
+    "name": {
       "oneOf": [
         {
           "type": "string",
