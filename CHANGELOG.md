@@ -1,3 +1,68 @@
+# [3.7.0](https://github.com/tillhub/schemas/compare/v3.6.1...v3.7.0) (2019-05-31)
+
+
+### Features
+
+* **safes:** add make transfer_type mandatory and remove minimum ([6670c0c](https://github.com/tillhub/schemas/commit/6670c0c))
+
+## [3.6.1](https://github.com/tillhub/schemas/compare/v3.6.0...v3.6.1) (2019-05-29)
+
+
+### Bug Fixes
+
+* **devices:** make name nullable ([ec76c7f](https://github.com/tillhub/schemas/commit/ec76c7f))
+
+# [3.6.0](https://github.com/tillhub/schemas/compare/v3.5.2...v3.6.0) (2019-05-29)
+
+
+### Features
+
+* **safes:** add conditionals for "from" and "to" ([0b62b2f](https://github.com/tillhub/schemas/commit/0b62b2f))
+
+## [3.5.2](https://github.com/tillhub/schemas/compare/v3.5.1...v3.5.2) (2019-05-27)
+
+
+### Bug Fixes
+
+* **products:** fix ext qty name ([d0fbdfc](https://github.com/tillhub/schemas/commit/d0fbdfc))
+
+## [3.5.1](https://github.com/tillhub/schemas/compare/v3.5.0...v3.5.1) (2019-05-27)
+
+
+### Bug Fixes
+
+* **products:** fix ext ref ([a2b9834](https://github.com/tillhub/schemas/commit/a2b9834))
+
+# [3.5.0](https://github.com/tillhub/schemas/compare/v3.4.0...v3.5.0) (2019-05-27)
+
+
+### Features
+
+* **Configurations:** Products configuration ([f7dca82](https://github.com/tillhub/schemas/commit/f7dca82))
+
+# [3.4.0](https://github.com/tillhub/schemas/compare/v3.3.0...v3.4.0) (2019-05-27)
+
+
+### Features
+
+* **safes:** Make transfer_type required in "book" schema ([aabf2f3](https://github.com/tillhub/schemas/commit/aabf2f3))
+
+# [3.3.0](https://github.com/tillhub/schemas/compare/v3.2.0...v3.3.0) (2019-05-27)
+
+
+### Features
+
+* **products:** add ext ([08c56b7](https://github.com/tillhub/schemas/commit/08c56b7))
+
+# [3.2.0](https://github.com/tillhub/schemas/compare/v3.1.7...v3.2.0) (2019-05-24)
+
+
+### Features
+
+* **safes:** add property transfer_type to "book" schema ([6001ee3](https://github.com/tillhub/schemas/commit/6001ee3))
+* **safes:** add safes book handler and safes_log_book ([36b4ee1](https://github.com/tillhub/schemas/commit/36b4ee1))
+* **safes_log_book:** add new schema for safes_log_book ([5d7e286](https://github.com/tillhub/schemas/commit/5d7e286))
+
 ## [3.1.7](https://github.com/tillhub/schemas/compare/v3.1.6...v3.1.7) (2019-05-14)
 
 

@@ -1,0 +1,1306 @@
+{
+  "$id": "https://schemas.tillhub.com/v0/safes_log_book.get.response.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "id"
+    ],
+    "properties": {
+      "initiated_at": {
+        "type": "string",
+        "description": "The timestamp from the UI, when the transfer was initiated by the user, e.g. clicking the submit button",
+        "format": "date-time"
+      },
+      "issuer": {
+        "type": "string",
+        "description": "Client ID of who initiated the transfer"
+      },
+      "from": {
+        "oneOf": [
+          {
+            "type": "string",
+            "description": "Alphanumeric ID of origin, e.g. safe uuid",
+            "format": "uuid"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "to": {
+        "oneOf": [
+          {
+            "type": "string",
+            "description": "Alphanumeric ID of destination, e.g. safe or bank uuid",
+            "format": "uuid"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "comment": {
+        "oneOf": [
+          {
+            "type": "string",
+            "maxLength": 4096
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "metadata": {
+        "oneOf": [
+          {
+            "type": "object"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "origins": {
+        "oneOf": [
+          {
+            "type": "object",
+            "description": "Holds information about e.g. the original fr_transaction"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "transfer_type": {
+        "type": "string",
+        "enum": [
+          "safe_to_safe",
+          "safe_to_bank",
+          "pos_to_safe"
+        ]
+      },
+      "transfer_value": {
+        "oneOf": [
+          {
+            "type": "number",
+            "description": "Amount that is being transferred from origin to destination",
+            "multipleOf": 0.01,
+            "minimum": 0
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "currency": {
+        "oneOf": [
+          {
+            "type": "string",
+            "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+            "example": "EUR",
+            "minLength": 3,
+            "maxLength": 3
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "id": {
+        "type": "string",
+        "format": "uuid"
+      },
+      "created_at": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "old": {
+        "oneOf": [
+          {
+            "type": "object",
+            "description": "The origin and destination objects as jsonb BEFORE the transfer happened. Will be supplied from within database pg transaction.",
+            "additionalProperties": false,
+            "properties": {
+              "from": {
+                "type": "object",
+                "description": "The origin object (i.e. safe) BEFORE the transfer happened",
+                "additionalProperties": false,
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "enum": [
+                      "safe",
+                      "vault"
+                    ]
+                  },
+                  "account_number": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "Financial account number of the safe, which is mutable and not deduplicated"
+                  },
+                  "name": {
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 128
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "custom_id": {
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 128
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "cost_center": {
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "location": {
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "description": "Alphanumeric ID of the location, e.g. branch, warehouse, or warehouse_shelf",
+                        "format": "uuid"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "state": {
+                    "oneOf": [
+                      {
+                        "type": "object"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "limit_upper": {
+                    "oneOf": [
+                      {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "required": [
+                            "amount",
+                            "currency"
+                          ],
+                          "properties": {
+                            "currency": {
+                              "type": "string",
+                              "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                              "example": "EUR",
+                              "minLength": 3,
+                              "maxLength": 3
+                            },
+                            "amount": {
+                              "type": "number",
+                              "description": "Maximum amount that can be booked into the safe",
+                              "multipleOf": 0.01
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "limit_lower": {
+                    "oneOf": [
+                      {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "required": [
+                            "amount",
+                            "currency"
+                          ],
+                          "properties": {
+                            "currency": {
+                              "type": "string",
+                              "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                              "example": "EUR",
+                              "minLength": 3,
+                              "maxLength": 3
+                            },
+                            "amount": {
+                              "type": "number",
+                              "description": "Minimum amount that can be booked into the safe",
+                              "multipleOf": 0.01,
+                              "minimum": 0
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "items": {
+                    "oneOf": [
+                      {
+                        "type": "array",
+                        "description": "Amount items that are stored by currency",
+                        "minItems": 1,
+                        "items": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "currency": {
+                              "type": "string",
+                              "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                              "example": "EUR",
+                              "minLength": 3,
+                              "maxLength": 3
+                            },
+                            "amount": {
+                              "type": "number",
+                              "minimum": 0,
+                              "multipleOf": 0.01
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "metadata": {
+                    "oneOf": [
+                      {
+                        "type": "object"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "deleted": {
+                    "oneOf": [
+                      {
+                        "type": "boolean"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "active": {
+                    "oneOf": [
+                      {
+                        "type": "boolean"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "id": {
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  "created_at": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "updated_at": {
+                    "type": "string",
+                    "format": "date-time"
+                  }
+                }
+              },
+              "to": {
+                "description": "The destination object (i.e. safe or bank) BEFORE the transfer happened",
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "type": {
+                        "type": "string",
+                        "enum": [
+                          "safe",
+                          "vault"
+                        ]
+                      },
+                      "account_number": {
+                        "type": "string",
+                        "minLength": 1,
+                        "description": "Financial account number of the safe, which is mutable and not deduplicated"
+                      },
+                      "name": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 128
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "custom_id": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 128
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "cost_center": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "location": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "description": "Alphanumeric ID of the location, e.g. branch, warehouse, or warehouse_shelf",
+                            "format": "uuid"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "state": {
+                        "oneOf": [
+                          {
+                            "type": "object"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "limit_upper": {
+                        "oneOf": [
+                          {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "additionalProperties": false,
+                              "required": [
+                                "amount",
+                                "currency"
+                              ],
+                              "properties": {
+                                "currency": {
+                                  "type": "string",
+                                  "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                                  "example": "EUR",
+                                  "minLength": 3,
+                                  "maxLength": 3
+                                },
+                                "amount": {
+                                  "type": "number",
+                                  "description": "Maximum amount that can be booked into the safe",
+                                  "multipleOf": 0.01
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "limit_lower": {
+                        "oneOf": [
+                          {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "additionalProperties": false,
+                              "required": [
+                                "amount",
+                                "currency"
+                              ],
+                              "properties": {
+                                "currency": {
+                                  "type": "string",
+                                  "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                                  "example": "EUR",
+                                  "minLength": 3,
+                                  "maxLength": 3
+                                },
+                                "amount": {
+                                  "type": "number",
+                                  "description": "Minimum amount that can be booked into the safe",
+                                  "multipleOf": 0.01,
+                                  "minimum": 0
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "items": {
+                        "oneOf": [
+                          {
+                            "type": "array",
+                            "description": "Amount items that are stored by currency",
+                            "minItems": 1,
+                            "items": {
+                              "type": "object",
+                              "additionalProperties": false,
+                              "properties": {
+                                "currency": {
+                                  "type": "string",
+                                  "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                                  "example": "EUR",
+                                  "minLength": 3,
+                                  "maxLength": 3
+                                },
+                                "amount": {
+                                  "type": "number",
+                                  "minimum": 0,
+                                  "multipleOf": 0.01
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "metadata": {
+                        "oneOf": [
+                          {
+                            "type": "object"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "deleted": {
+                        "oneOf": [
+                          {
+                            "type": "boolean"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "active": {
+                        "oneOf": [
+                          {
+                            "type": "boolean"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "id": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "created_at": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "updated_at": {
+                        "type": "string",
+                        "format": "date-time"
+                      }
+                    }
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": true,
+                    "properties": {
+                      "active": {
+                        "type": "boolean"
+                      },
+                      "deleted": {
+                        "type": "boolean"
+                      },
+                      "name": {
+                        "anyOf": [
+                          {
+                            "description": "A custom name for an expense account.",
+                            "example": "Utilities expense",
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 64
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "fa_account_number": {
+                        "anyOf": [
+                          {
+                            "description": "The custom financial account identifier.",
+                            "example": "1776",
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 64
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "type": {
+                        "type": "string",
+                        "enum": [
+                          "bank"
+                        ]
+                      },
+                      "tax": {
+                        "description": "DEPRECATED",
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "maxLength": 64
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "financial_accounts": {
+                        "anyOf": [
+                          {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "required": [
+                                "location",
+                                "custom_id"
+                              ],
+                              "properties": {
+                                "name": {
+                                  "anyOf": [
+                                    {
+                                      "description": "A custom name for a financial account.",
+                                      "type": "string",
+                                      "minLength": 1,
+                                      "maxLength": 64
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "location": {
+                                  "anyOf": [
+                                    {
+                                      "description": "The specific Tillhub resource this account applies to (e.g. branch).",
+                                      "type": "string",
+                                      "format": "uuid",
+                                      "example": "936835f7-2d75-41d2-9001-38ed6e458328"
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "custom_id": {
+                                  "description": "The custom financial account identifier e.g. an account number.",
+                                  "example": "1776",
+                                  "type": "string",
+                                  "minLength": 1,
+                                  "maxLength": 64
+                                },
+                                "cost_center": {
+                                  "anyOf": [
+                                    {
+                                      "description": "A custom cost center identifier.",
+                                      "example": "4321",
+                                      "type": "string",
+                                      "minLength": 1,
+                                      "maxLength": 64
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "id": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "created_at": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "client_account": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "new": {
+        "oneOf": [
+          {
+            "type": "object",
+            "description": "The origin and destination objects as jsonb AFTER the transfer happened. Will be supplied from within database pg transaction.",
+            "additionalProperties": false,
+            "properties": {
+              "from": {
+                "type": "object",
+                "description": "The origin object (i.e. safe) AFTER the transfer happened",
+                "additionalProperties": false,
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "enum": [
+                      "safe",
+                      "vault"
+                    ]
+                  },
+                  "account_number": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "Financial account number of the safe, which is mutable and not deduplicated"
+                  },
+                  "name": {
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 128
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "custom_id": {
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 128
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "cost_center": {
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "location": {
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "description": "Alphanumeric ID of the location, e.g. branch, warehouse, or warehouse_shelf",
+                        "format": "uuid"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "state": {
+                    "oneOf": [
+                      {
+                        "type": "object"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "limit_upper": {
+                    "oneOf": [
+                      {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "required": [
+                            "amount",
+                            "currency"
+                          ],
+                          "properties": {
+                            "currency": {
+                              "type": "string",
+                              "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                              "example": "EUR",
+                              "minLength": 3,
+                              "maxLength": 3
+                            },
+                            "amount": {
+                              "type": "number",
+                              "description": "Maximum amount that can be booked into the safe",
+                              "multipleOf": 0.01
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "limit_lower": {
+                    "oneOf": [
+                      {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "required": [
+                            "amount",
+                            "currency"
+                          ],
+                          "properties": {
+                            "currency": {
+                              "type": "string",
+                              "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                              "example": "EUR",
+                              "minLength": 3,
+                              "maxLength": 3
+                            },
+                            "amount": {
+                              "type": "number",
+                              "description": "Minimum amount that can be booked into the safe",
+                              "multipleOf": 0.01,
+                              "minimum": 0
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "items": {
+                    "oneOf": [
+                      {
+                        "type": "array",
+                        "description": "Amount items that are stored by currency",
+                        "minItems": 1,
+                        "items": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "currency": {
+                              "type": "string",
+                              "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                              "example": "EUR",
+                              "minLength": 3,
+                              "maxLength": 3
+                            },
+                            "amount": {
+                              "type": "number",
+                              "minimum": 0,
+                              "multipleOf": 0.01
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "metadata": {
+                    "oneOf": [
+                      {
+                        "type": "object"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "deleted": {
+                    "oneOf": [
+                      {
+                        "type": "boolean"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "active": {
+                    "oneOf": [
+                      {
+                        "type": "boolean"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "id": {
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  "created_at": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "updated_at": {
+                    "type": "string",
+                    "format": "date-time"
+                  }
+                }
+              },
+              "to": {
+                "description": "The destination object (i.e. safe or bank) AFTER the transfer happened",
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "type": {
+                        "type": "string",
+                        "enum": [
+                          "safe",
+                          "vault"
+                        ]
+                      },
+                      "account_number": {
+                        "type": "string",
+                        "minLength": 1,
+                        "description": "Financial account number of the safe, which is mutable and not deduplicated"
+                      },
+                      "name": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 128
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "custom_id": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 128
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "cost_center": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "location": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "description": "Alphanumeric ID of the location, e.g. branch, warehouse, or warehouse_shelf",
+                            "format": "uuid"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "state": {
+                        "oneOf": [
+                          {
+                            "type": "object"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "limit_upper": {
+                        "oneOf": [
+                          {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "additionalProperties": false,
+                              "required": [
+                                "amount",
+                                "currency"
+                              ],
+                              "properties": {
+                                "currency": {
+                                  "type": "string",
+                                  "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                                  "example": "EUR",
+                                  "minLength": 3,
+                                  "maxLength": 3
+                                },
+                                "amount": {
+                                  "type": "number",
+                                  "description": "Maximum amount that can be booked into the safe",
+                                  "multipleOf": 0.01
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "limit_lower": {
+                        "oneOf": [
+                          {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "additionalProperties": false,
+                              "required": [
+                                "amount",
+                                "currency"
+                              ],
+                              "properties": {
+                                "currency": {
+                                  "type": "string",
+                                  "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                                  "example": "EUR",
+                                  "minLength": 3,
+                                  "maxLength": 3
+                                },
+                                "amount": {
+                                  "type": "number",
+                                  "description": "Minimum amount that can be booked into the safe",
+                                  "multipleOf": 0.01,
+                                  "minimum": 0
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "items": {
+                        "oneOf": [
+                          {
+                            "type": "array",
+                            "description": "Amount items that are stored by currency",
+                            "minItems": 1,
+                            "items": {
+                              "type": "object",
+                              "additionalProperties": false,
+                              "properties": {
+                                "currency": {
+                                  "type": "string",
+                                  "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                                  "example": "EUR",
+                                  "minLength": 3,
+                                  "maxLength": 3
+                                },
+                                "amount": {
+                                  "type": "number",
+                                  "minimum": 0,
+                                  "multipleOf": 0.01
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "metadata": {
+                        "oneOf": [
+                          {
+                            "type": "object"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "deleted": {
+                        "oneOf": [
+                          {
+                            "type": "boolean"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "active": {
+                        "oneOf": [
+                          {
+                            "type": "boolean"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "id": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "created_at": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "updated_at": {
+                        "type": "string",
+                        "format": "date-time"
+                      }
+                    }
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": true,
+                    "properties": {
+                      "active": {
+                        "type": "boolean"
+                      },
+                      "deleted": {
+                        "type": "boolean"
+                      },
+                      "name": {
+                        "anyOf": [
+                          {
+                            "description": "A custom name for an expense account.",
+                            "example": "Utilities expense",
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 64
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "fa_account_number": {
+                        "anyOf": [
+                          {
+                            "description": "The custom financial account identifier.",
+                            "example": "1776",
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 64
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "type": {
+                        "type": "string",
+                        "enum": [
+                          "bank"
+                        ]
+                      },
+                      "tax": {
+                        "description": "DEPRECATED",
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "maxLength": 64
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "financial_accounts": {
+                        "anyOf": [
+                          {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "required": [
+                                "location",
+                                "custom_id"
+                              ],
+                              "properties": {
+                                "name": {
+                                  "anyOf": [
+                                    {
+                                      "description": "A custom name for a financial account.",
+                                      "type": "string",
+                                      "minLength": 1,
+                                      "maxLength": 64
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "location": {
+                                  "anyOf": [
+                                    {
+                                      "description": "The specific Tillhub resource this account applies to (e.g. branch).",
+                                      "type": "string",
+                                      "format": "uuid",
+                                      "example": "936835f7-2d75-41d2-9001-38ed6e458328"
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "custom_id": {
+                                  "description": "The custom financial account identifier e.g. an account number.",
+                                  "example": "1776",
+                                  "type": "string",
+                                  "minLength": 1,
+                                  "maxLength": 64
+                                },
+                                "cost_center": {
+                                  "anyOf": [
+                                    {
+                                      "description": "A custom cost center identifier.",
+                                      "example": "4321",
+                                      "type": "string",
+                                      "minLength": 1,
+                                      "maxLength": 64
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "id": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "created_at": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "client_account": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "transaction_id": {
+        "type": "string",
+        "description": "A unique id given to all the logs belonging to one transaction/transfer. Will be supplied from within database pg transaction.",
+        "format": "uuid"
+      },
+      "operation": {
+        "type": "string",
+        "description": "Type of operation of this transfer. Will be supplied from within database pg transaction.",
+        "enum": [
+          "start",
+          "stop",
+          "book",
+          "error"
+        ]
+      },
+      "reason": {
+        "oneOf": [
+          {
+            "type": "string",
+            "description": "Reason supplied from within database in case the pg transaction errored out."
+          },
+          {
+            "type": "null"
+          }
+        ]
+      }
+    }
+  }
+}
