@@ -1,3 +1,10 @@
+# [3.11.0](https://github.com/tillhub/schemas/compare/v3.10.0...v3.11.0) (2019-06-03)
+
+
+### Features
+
+* **reasons:** Update required fields in "create" ([40cdad8](https://github.com/tillhub/schemas/commit/40cdad8))
+
 # [3.10.0](https://github.com/tillhub/schemas/compare/v3.9.0...v3.10.0) (2019-06-03)
 
 

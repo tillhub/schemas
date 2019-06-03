@@ -4,7 +4,7 @@
   "additionalProperties": false,
   "type": "object",
   "required": [
-    "reason"
+    "name"
   ],
   "properties": {
     "name": {
