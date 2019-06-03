@@ -1,3 +1,10 @@
+# [3.12.0](https://github.com/tillhub/schemas/compare/v3.11.0...v3.12.0) (2019-06-03)
+
+
+### Features
+
+* **chore:** update package-lock ([df28f88](https://github.com/tillhub/schemas/commit/df28f88))
+
 # [3.11.0](https://github.com/tillhub/schemas/compare/v3.10.0...v3.11.0) (2019-06-03)
 
 
