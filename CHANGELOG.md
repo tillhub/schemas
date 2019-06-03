@@ -1,3 +1,11 @@
+# [3.9.0](https://github.com/tillhub/schemas/compare/v3.8.0...v3.9.0) (2019-06-03)
+
+
+### Features
+
+* **dependsOn for items:** enable item-to-item dependency ([a6174a9](https://github.com/tillhub/schemas/commit/a6174a9))
+* **Transactions V1:** transactions dependencies ([29387c4](https://github.com/tillhub/schemas/commit/29387c4))
+
 # [3.8.0](https://github.com/tillhub/schemas/compare/v3.7.0...v3.8.0) (2019-06-03)
 
 

@@ -690,12 +690,14 @@
                 "type": "string",
                 "description": "The type of reference",
                 "enum": [
-                  "cancelled_sale",
+                  "canceled_sale",
+                  "canceled_item",
                   "refunded_sale",
-                  "cancelled_expense",
-                  "cancelled_deposit",
-                  "cancelled_bank_expense",
-                  "cancelled_bank_deposit"
+                  "refunded_item",
+                  "canceled_expense",
+                  "canceled_deposit",
+                  "canceled_bank_expense",
+                  "canceled_bank_deposit"
                 ]
               },
               "id": {
@@ -716,8 +718,21 @@
                 "oneOf": [
                   {
                     "type": "string",
-                    "example": "278",
+                    "example": "0814 QZXL",
                     "description": "The custom_id of a Tillhub transaction that this reference links to."
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null
+              },
+              "client_id": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "example": "278d66eae23400bcdbe283764sc",
+                    "description": "The client_id of a Tillhub transaction or item that this reference links to."
                   },
                   {
                     "type": "null"
@@ -1485,12 +1500,14 @@
                       "type": "string",
                       "description": "The type of reference",
                       "enum": [
-                        "cancelled_sale",
+                        "canceled_sale",
+                        "canceled_item",
                         "refunded_sale",
-                        "cancelled_expense",
-                        "cancelled_deposit",
-                        "cancelled_bank_expense",
-                        "cancelled_bank_deposit"
+                        "refunded_item",
+                        "canceled_expense",
+                        "canceled_deposit",
+                        "canceled_bank_expense",
+                        "canceled_bank_deposit"
                       ]
                     },
                     "id": {
@@ -1511,8 +1528,21 @@
                       "oneOf": [
                         {
                           "type": "string",
-                          "example": "278",
+                          "example": "0814 QZXL",
                           "description": "The custom_id of a Tillhub transaction that this reference links to."
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "default": null
+                    },
+                    "client_id": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "example": "278d66eae23400bcdbe283764sc",
+                          "description": "The client_id of a Tillhub transaction or item that this reference links to."
                         },
                         {
                           "type": "null"
@@ -2527,12 +2557,14 @@
                       "type": "string",
                       "description": "The type of reference",
                       "enum": [
-                        "cancelled_sale",
+                        "canceled_sale",
+                        "canceled_item",
                         "refunded_sale",
-                        "cancelled_expense",
-                        "cancelled_deposit",
-                        "cancelled_bank_expense",
-                        "cancelled_bank_deposit"
+                        "refunded_item",
+                        "canceled_expense",
+                        "canceled_deposit",
+                        "canceled_bank_expense",
+                        "canceled_bank_deposit"
                       ]
                     },
                     "id": {
@@ -2553,8 +2585,21 @@
                       "oneOf": [
                         {
                           "type": "string",
-                          "example": "278",
+                          "example": "0814 QZXL",
                           "description": "The custom_id of a Tillhub transaction that this reference links to."
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "default": null
+                    },
+                    "client_id": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "example": "278d66eae23400bcdbe283764sc",
+                          "description": "The client_id of a Tillhub transaction or item that this reference links to."
                         },
                         {
                           "type": "null"
