@@ -107,5 +107,7 @@
   "/taxes.create.request.schema.json",
   "/taxes.update.request.schema.json",
   "/vouchers.create.schema.json",
-  "/vouchers.patch.schema.json"
+  "/vouchers.patch.schema.json",
+  "/warehouses.create.request.schema.json",
+  "/warehouses.update.request.schema.json"
 ]
