@@ -1,3 +1,24 @@
+# [3.14.0](https://github.com/tillhub/schemas/compare/v3.13.0...v3.14.0) (2019-06-04)
+
+
+### Features
+
+* **warehouses:** add base, create and update ([#90](https://github.com/tillhub/schemas/issues/90)) ([674533d](https://github.com/tillhub/schemas/commit/674533d))
+
+# [3.13.0](https://github.com/tillhub/schemas/compare/v3.12.0...v3.13.0) (2019-06-03)
+
+
+### Features
+
+* **Safe expense:** Store safe_id in transactions ([b6d84a2](https://github.com/tillhub/schemas/commit/b6d84a2))
+
+# [3.12.0](https://github.com/tillhub/schemas/compare/v3.11.0...v3.12.0) (2019-06-03)
+
+
+### Features
+
+* **chore:** update package-lock ([df28f88](https://github.com/tillhub/schemas/commit/df28f88))
+
 # [3.11.0](https://github.com/tillhub/schemas/compare/v3.10.0...v3.11.0) (2019-06-03)
 
 

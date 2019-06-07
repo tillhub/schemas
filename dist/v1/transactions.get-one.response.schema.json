@@ -837,7 +837,7 @@
                 "description": "A list of Tillhub resources that this transaction is related to, e.g. an invoice object that tracks the lifetime of that invoice",
                 "items": {
                   "type": "object",
-                  "description": "Reference to a very different type of object (e.g. transaction to invoice)",
+                  "description": "Reference to a very different type of object (e.g. transaction to invoice or expense to safe)",
                   "additionalProperties": false,
                   "required": [
                     "type",
@@ -848,7 +848,8 @@
                       "type": "string",
                       "description": "The type of reference",
                       "enum": [
-                        "invoice"
+                        "invoice",
+                        "safe"
                       ]
                     },
                     "id": {
@@ -1775,7 +1776,7 @@
                       "description": "A list of Tillhub resources that this transaction is related to, e.g. an invoice object that tracks the lifetime of that invoice",
                       "items": {
                         "type": "object",
-                        "description": "Reference to a very different type of object (e.g. transaction to invoice)",
+                        "description": "Reference to a very different type of object (e.g. transaction to invoice or expense to safe)",
                         "additionalProperties": false,
                         "required": [
                           "type",
@@ -1786,7 +1787,8 @@
                             "type": "string",
                             "description": "The type of reference",
                             "enum": [
-                              "invoice"
+                              "invoice",
+                              "safe"
                             ]
                           },
                           "id": {
@@ -2888,7 +2890,7 @@
                       "description": "A list of Tillhub resources that this transaction is related to, e.g. an invoice object that tracks the lifetime of that invoice",
                       "items": {
                         "type": "object",
-                        "description": "Reference to a very different type of object (e.g. transaction to invoice)",
+                        "description": "Reference to a very different type of object (e.g. transaction to invoice or expense to safe)",
                         "additionalProperties": false,
                         "required": [
                           "type",
@@ -2899,7 +2901,8 @@
                             "type": "string",
                             "description": "The type of reference",
                             "enum": [
-                              "invoice"
+                              "invoice",
+                              "safe"
                             ]
                           },
                           "id": {

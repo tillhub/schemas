@@ -78,12 +78,15 @@
       ]
     },
     "limit_upper": {
+      "description": "Upper capacity or safety limit per currency",
       "oneOf": [
         {
           "type": "array",
+          "description": "A list of non-negative monetary values by currency",
           "items": {
             "type": "object",
             "additionalProperties": false,
+            "description": "Describes a non-negative monetary value in a specific currency.",
             "required": [
               "amount",
               "currency"
@@ -98,7 +101,9 @@
               },
               "amount": {
                 "type": "number",
-                "description": "Maximum amount that can be booked into the safe",
+                "description": "The value as .2-Decimal.",
+                "example": "47.02",
+                "minimum": 0,
                 "multipleOf": 0.01
               }
             }
@@ -110,12 +115,15 @@
       ]
     },
     "limit_lower": {
+      "description": "Lower safety limit per currency",
       "oneOf": [
         {
           "type": "array",
+          "description": "A list of non-negative monetary values by currency",
           "items": {
             "type": "object",
             "additionalProperties": false,
+            "description": "Describes a non-negative monetary value in a specific currency.",
             "required": [
               "amount",
               "currency"
@@ -130,9 +138,10 @@
               },
               "amount": {
                 "type": "number",
-                "description": "Minimum amount that can be booked into the safe",
-                "multipleOf": 0.01,
-                "minimum": 0
+                "description": "The value as .2-Decimal.",
+                "example": "47.02",
+                "minimum": 0,
+                "multipleOf": 0.01
               }
             }
           }
@@ -143,14 +152,19 @@
       ]
     },
     "items": {
+      "description": "Current cash amount stored in the safe per currency",
       "oneOf": [
         {
           "type": "array",
-          "description": "Amount items that are stored by currency",
-          "minItems": 1,
+          "description": "A list of non-negative monetary values by currency",
           "items": {
             "type": "object",
             "additionalProperties": false,
+            "description": "Describes a non-negative monetary value in a specific currency.",
+            "required": [
+              "amount",
+              "currency"
+            ],
             "properties": {
               "currency": {
                 "type": "string",
@@ -161,6 +175,8 @@
               },
               "amount": {
                 "type": "number",
+                "description": "The value as .2-Decimal.",
+                "example": "47.02",
                 "minimum": 0,
                 "multipleOf": 0.01
               }
