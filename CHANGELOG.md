@@ -1,3 +1,10 @@
+# [3.19.0](https://github.com/tillhub/schemas/compare/v3.18.0...v3.19.0) (2019-06-11)
+
+
+### Features
+
+* **product_v1:** add is_service prop ([5eeb020](https://github.com/tillhub/schemas/commit/5eeb020))
+
 # [3.18.0](https://github.com/tillhub/schemas/compare/v3.17.0...v3.18.0) (2019-06-11)
 
 
