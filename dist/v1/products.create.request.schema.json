@@ -1108,6 +1108,24 @@
           "type": "null"
         }
       ]
+    },
+    "is_service": {
+      "type": "boolean"
+    },
+    "service_questions": {
+      "oneOf": [
+        {
+          "type": "array",
+          "description": "An array of uuids of the products service questions",
+          "items": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
     }
   }
 }
