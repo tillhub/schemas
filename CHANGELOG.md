@@ -1,3 +1,10 @@
+# [3.16.0](https://github.com/tillhub/schemas/compare/v3.15.0...v3.16.0) (2019-06-11)
+
+
+### Features
+
+* **product_service_questions:** add flag for mandatory questions ([ca93835](https://github.com/tillhub/schemas/commit/ca93835))
+
 # [3.15.0](https://github.com/tillhub/schemas/compare/v3.14.0...v3.15.0) (2019-06-11)
 
 

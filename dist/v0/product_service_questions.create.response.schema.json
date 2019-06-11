@@ -40,6 +40,10 @@
     "active": {
       "type": "boolean"
     },
+    "required": {
+      "type": "boolean",
+      "description": "Flag on the service for mandatory input request"
+    },
     "id": {
       "type": "string",
       "format": "uuid"
