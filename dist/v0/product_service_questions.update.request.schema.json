@@ -1,0 +1,40 @@
+{
+  "$id": "https://schemas.tillhub.com/v0/product_service_questions.update.request.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "type": "object",
+  "required": [],
+  "properties": {
+    "name": {
+      "type": "string",
+      "example": "Customer satisfaction",
+      "minLength": 1,
+      "maxLength": 128
+    },
+    "description": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4096
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "content": {
+      "type": "string",
+      "description": "The question itself that is going to displayed to the user",
+      "example": "Was the service performed without any problems?",
+      "minLength": 1,
+      "maxLength": 4096
+    },
+    "deleted": {
+      "type": "boolean"
+    },
+    "active": {
+      "type": "boolean"
+    }
+  }
+}

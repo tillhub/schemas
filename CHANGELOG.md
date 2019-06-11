@@ -1,3 +1,10 @@
+# [3.15.0](https://github.com/tillhub/schemas/compare/v3.14.0...v3.15.0) (2019-06-11)
+
+
+### Features
+
+* **product_service_questions:** add new schema ([fb9eb37](https://github.com/tillhub/schemas/commit/fb9eb37))
+
 # [3.14.0](https://github.com/tillhub/schemas/compare/v3.13.0...v3.14.0) (2019-06-04)
 
 
