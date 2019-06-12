@@ -3,25 +3,20 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "additionalProperties": false,
   "type": "object",
-  "oneOf": [
-    {
-      "type": "object",
-      "required": [
-        "type",
-        "payload"
-      ],
-      "properties": {
-        "type": {
-          "type": "string",
-          "enum": [
-            "text"
-          ]
-        },
-        "payload": {
-          "type": "string",
-          "maxLength": 16384
-        }
-      }
+  "required": [
+    "type",
+    "payload"
+  ],
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": [
+        "text"
+      ]
+    },
+    "payload": {
+      "type": "string",
+      "maxLength": 16384
     }
-  ]
+  }
 }

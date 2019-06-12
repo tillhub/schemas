@@ -1,3 +1,10 @@
+## [3.22.1](https://github.com/tillhub/schemas/compare/v3.22.0...v3.22.1) (2019-06-12)
+
+
+### Bug Fixes
+
+* **customers:** revert to simple note type inference ([7ca1983](https://github.com/tillhub/schemas/commit/7ca1983))
+
 # [3.22.0](https://github.com/tillhub/schemas/compare/v3.21.0...v3.22.0) (2019-06-12)
 
 
