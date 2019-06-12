@@ -1,3 +1,10 @@
+# [3.21.0](https://github.com/tillhub/schemas/compare/v3.20.0...v3.21.0) (2019-06-12)
+
+
+### Features
+
+* **cuustomers:** add ext ([994a95d](https://github.com/tillhub/schemas/commit/994a95d))
+
 # [3.20.0](https://github.com/tillhub/schemas/compare/v3.19.0...v3.20.0) (2019-06-12)
 
 
