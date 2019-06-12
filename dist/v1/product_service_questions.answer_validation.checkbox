@@ -1,0 +1,15 @@
+{
+  "type": "object",
+  "title": "checkbox",
+  "$id": "https://schemas.tillhub.com/v1/product_service_questions.answer_validation.checkbox",
+  "description": "Checkbox or toggle for a true/false answer",
+  "required": [
+    "content"
+  ],
+  "properties": {
+    "content": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

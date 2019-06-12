@@ -1,3 +1,10 @@
+# [3.20.0](https://github.com/tillhub/schemas/compare/v3.19.0...v3.20.0) (2019-06-12)
+
+
+### Features
+
+* **product_service_questions:** add answer_validation property ([1a59e2b](https://github.com/tillhub/schemas/commit/1a59e2b))
+
 # [3.19.0](https://github.com/tillhub/schemas/compare/v3.18.0...v3.19.0) (2019-06-11)
 
 

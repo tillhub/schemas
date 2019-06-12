@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "title": "simple_select",
+  "$id": "https://schemas.tillhub.com/v1/product_service_questions.answer_validation.simple_select",
+  "description": "Simple dropwdown select with given options",
+  "required": [
+    "content"
+  ],
+  "properties": {
+    "content": {
+      "type": "string",
+      "enum": [
+        "green",
+        "blue",
+        "red"
+      ]
+    }
+  }
+}

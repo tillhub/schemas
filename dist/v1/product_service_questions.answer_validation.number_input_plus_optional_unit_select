@@ -1,0 +1,23 @@
+{
+  "type": "object",
+  "title": "number_input_plus_optional_unit_select",
+  "$id": "https://schemas.tillhub.com/v1/product_service_questions.answer_validation.number_input_plus_optional_unit_select",
+  "description": "Number input field plus a select field for optional unit options",
+  "required": [
+    "content"
+  ],
+  "properties": {
+    "content": {
+      "type": "number",
+      "max": 100,
+      "min": 0
+    },
+    "unit": {
+      "type": "string",
+      "enum": [
+        "ml",
+        "l"
+      ]
+    }
+  }
+}

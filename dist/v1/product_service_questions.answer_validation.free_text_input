@@ -1,0 +1,14 @@
+{
+  "type": "object",
+  "title": "free_text_input",
+  "$id": "https://schemas.tillhub.com/v1/product_service_questions.answer_validation.free_text_input",
+  "description": "User input for free text",
+  "required": [
+    "content"
+  ],
+  "properties": {
+    "content": {
+      "type": "string"
+    }
+  }
+}
