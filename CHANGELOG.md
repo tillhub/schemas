@@ -1,3 +1,10 @@
+# [3.22.0](https://github.com/tillhub/schemas/compare/v3.21.0...v3.22.0) (2019-06-12)
+
+
+### Features
+
+* **customers:** add base fields to notes ([35c9278](https://github.com/tillhub/schemas/commit/35c9278))
+
 # [3.21.0](https://github.com/tillhub/schemas/compare/v3.20.0...v3.21.0) (2019-06-12)
 
 
