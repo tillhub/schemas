@@ -1,3 +1,10 @@
+## [3.26.1](https://github.com/tillhub/schemas/compare/v3.26.0...v3.26.1) (2019-06-14)
+
+
+### Bug Fixes
+
+* **devices:** add properties for template configuration ([6cc391d](https://github.com/tillhub/schemas/commit/6cc391d))
+
 # [3.26.0](https://github.com/tillhub/schemas/compare/v3.25.0...v3.26.0) (2019-06-14)
 
 

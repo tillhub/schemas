@@ -257,6 +257,44 @@
         }
       ]
     },
+    "template": {
+      "oneOf": [
+        {
+          "type": "string",
+          "enum": [
+            "simple",
+            "advanced",
+            "custom"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "template_config": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "runtime_url": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "format": "uri"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "id": {
       "type": "string",
       "format": "uuid"
