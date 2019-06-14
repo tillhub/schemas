@@ -39,28 +39,6 @@
         }
       ]
     },
-    "type": {
-      "type": "string",
-      "enum": [
-        "expense",
-        "deposit",
-        "bank",
-        "transit",
-        "safe"
-      ]
-    },
-    "tax": {
-      "description": "DEPRECATED",
-      "oneOf": [
-        {
-          "type": "string",
-          "maxLength": 64
-        },
-        {
-          "type": "null"
-        }
-      ]
-    },
     "financial_accounts": {
       "anyOf": [
         {
@@ -121,6 +99,28 @@
               }
             }
           }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "expense",
+        "deposit",
+        "bank",
+        "transit",
+        "safe"
+      ]
+    },
+    "tax": {
+      "description": "DEPRECATED",
+      "oneOf": [
+        {
+          "type": "string",
+          "maxLength": 64
         },
         {
           "type": "null"
