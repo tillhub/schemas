@@ -1,3 +1,10 @@
+# [3.26.0](https://github.com/tillhub/schemas/compare/v3.25.0...v3.26.0) (2019-06-14)
+
+
+### Features
+
+* **products:** add periodic prices ([#101](https://github.com/tillhub/schemas/issues/101)) ([5a195d0](https://github.com/tillhub/schemas/commit/5a195d0))
+
 # [3.25.0](https://github.com/tillhub/schemas/compare/v3.24.0...v3.25.0) (2019-06-14)
 
 

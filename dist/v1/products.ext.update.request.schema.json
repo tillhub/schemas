@@ -268,6 +268,109 @@
                 }
               }
             },
+            "time_based_prices": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "time_range": {
+                    "type": "object",
+                    "properties": {
+                      "start": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "end": {
+                        "type": "string",
+                        "format": "date-time"
+                      }
+                    },
+                    "required": [
+                      "start",
+                      "end"
+                    ]
+                  },
+                  "prices": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "amount": {
+                          "type": "object",
+                          "properties": {
+                            "net": {
+                              "example": "27633.02",
+                              "type": "number",
+                              "minimum": 0,
+                              "maximum": 1000000,
+                              "multipleOf": 0.01
+                            },
+                            "gross": {
+                              "example": "27633.02",
+                              "type": "number",
+                              "minimum": 0,
+                              "maximum": 1000000,
+                              "multipleOf": 0.01
+                            }
+                          }
+                        },
+                        "currency": {
+                          "type": "string",
+                          "minLength": 3,
+                          "maxLength": 3
+                        },
+                        "percentage": {
+                          "description": "DEPRECATED",
+                          "type": "number"
+                        },
+                        "purchase_price": {
+                          "description": "Define the opportunity cost or calculatory base price of this product and currency.",
+                          "oneOf": [
+                            {
+                              "example": "27633.02",
+                              "type": "number",
+                              "minimum": 0,
+                              "maximum": 1000000,
+                              "multipleOf": 0.01
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "cost": {
+                          "description": "Define additional cost.",
+                          "oneOf": [
+                            {
+                              "example": "27633.02",
+                              "type": "number",
+                              "minimum": 0,
+                              "maximum": 1000000,
+                              "multipleOf": 0.01
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "margin": {
+                          "description": "Add a margin to pruchase_price and cost to result in net.",
+                          "oneOf": [
+                            {
+                              "type": "number",
+                              "multipleOf": 0.0001
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
             "default_prices": {
               "type": "array",
               "items": {
