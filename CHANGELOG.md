@@ -1,3 +1,10 @@
+# [3.23.0](https://github.com/tillhub/schemas/compare/v3.22.1...v3.23.0) (2019-06-14)
+
+
+### Features
+
+* **product_service_question_groups:** add new schemas ([c11977b](https://github.com/tillhub/schemas/commit/c11977b))
+
 ## [3.22.1](https://github.com/tillhub/schemas/compare/v3.22.0...v3.22.1) (2019-06-12)
 
 

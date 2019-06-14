@@ -1,0 +1,31 @@
+{
+  "$id": "https://schemas.tillhub.com/v0/product_service_question_groups.get.query.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "type": "object",
+  "required": [],
+  "properties": {
+    "start": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "end": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "deleted": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "active": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    }
+  }
+}

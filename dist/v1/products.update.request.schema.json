@@ -1121,6 +1121,21 @@
           "type": "null"
         }
       ]
+    },
+    "service_question_groups": {
+      "oneOf": [
+        {
+          "type": "array",
+          "description": "An array of uuids of the products service question groups",
+          "items": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
     }
   }
 }

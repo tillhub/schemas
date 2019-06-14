@@ -1127,6 +1127,21 @@
         }
       ]
     },
+    "service_question_groups": {
+      "oneOf": [
+        {
+          "type": "array",
+          "description": "An array of uuids of the products service question groups",
+          "items": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "stock_info": {
       "description": "READ ONLY: summary of stock accross accounts. This potentially is not real-time. After a stock change.",
       "type": "object",
