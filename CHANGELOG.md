@@ -1,3 +1,10 @@
+# [3.24.0](https://github.com/tillhub/schemas/compare/v3.23.0...v3.24.0) (2019-06-14)
+
+
+### Features
+
+* **v1 settings:** iOS Auto locking configuration ([826e59a](https://github.com/tillhub/schemas/commit/826e59a))
+
 # [3.23.0](https://github.com/tillhub/schemas/compare/v3.22.1...v3.23.0) (2019-06-14)
 
 
