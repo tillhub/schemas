@@ -1,3 +1,10 @@
+# [3.27.0](https://github.com/tillhub/schemas/compare/v3.26.1...v3.27.0) (2019-06-18)
+
+
+### Features
+
+* **configurations:** add schema to config.staff ([#103](https://github.com/tillhub/schemas/issues/103)) ([84936ce](https://github.com/tillhub/schemas/commit/84936ce))
+
 ## [3.26.1](https://github.com/tillhub/schemas/compare/v3.26.0...v3.26.1) (2019-06-14)
 
 

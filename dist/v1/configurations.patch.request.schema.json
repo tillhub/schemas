@@ -535,7 +535,54 @@
     "staff": {
       "oneOf": [
         {
-          "type": "object"
+          "type": "object",
+          "additionalProperties": true,
+          "properties": {
+            "salesman_pin_policy": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "after",
+                    "before",
+                    "none"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "customer_add_policy": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "after",
+                    "before",
+                    "none"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "cashier_pin_policy": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "required",
+                    "none"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
         },
         {
           "type": "null"
