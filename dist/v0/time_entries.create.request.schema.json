@@ -1,0 +1,63 @@
+{
+  "$id": "https://schemas.tillhub.com/v0/time_entries.create.request.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": [
+        "day",
+        "break"
+      ]
+    },
+    "description": {
+      "anyOf": [
+        {
+          "type": "string",
+          "maxLength": 32,
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "start": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date-time"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "end": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date-time"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "staff": {
+      "anyOf": [
+        {
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "type": "object",
+  "required": [
+    "staff",
+    "type",
+    "start"
+  ]
+}

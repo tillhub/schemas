@@ -1,3 +1,11 @@
+# [3.28.0](https://github.com/tillhub/schemas/compare/v3.27.0...v3.28.0) (2019-06-20)
+
+
+### Features
+
+* Implementing time entries schema ([97d56cf](https://github.com/tillhub/schemas/commit/97d56cf))
+* Implements time entry schema ([0ba7240](https://github.com/tillhub/schemas/commit/0ba7240))
+
 # [3.27.0](https://github.com/tillhub/schemas/compare/v3.26.1...v3.27.0) (2019-06-18)
 
 
