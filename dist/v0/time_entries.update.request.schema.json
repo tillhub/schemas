@@ -1,6 +1,9 @@
 {
   "$id": "https://schemas.tillhub.com/v0/time_entries.update.request.schema.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "type": "object",
+  "required": [],
   "properties": {
     "type": {
       "type": "string",
@@ -53,10 +56,5 @@
         }
       ]
     }
-  },
-  "type": "object",
-  "required": [
-    "staff",
-    "type"
-  ]
+  }
 }

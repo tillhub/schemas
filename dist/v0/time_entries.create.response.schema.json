@@ -1,12 +1,10 @@
 {
-  "$id": "https://schemas.tillhub.com/v0/time_entries.create.request.schema.json",
+  "$id": "https://schemas.tillhub.com/v0/time_entries.create.response.schema.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "additionalProperties": false,
+  "additionalProperties": true,
   "type": "object",
   "required": [
-    "staff",
-    "type",
-    "start"
+    "id"
   ],
   "properties": {
     "type": {
@@ -59,6 +57,14 @@
           "type": "null"
         }
       ]
+    },
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
     }
   }
 }

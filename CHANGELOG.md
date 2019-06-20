@@ -1,3 +1,10 @@
+## [3.28.1](https://github.com/tillhub/schemas/compare/v3.28.0...v3.28.1) (2019-06-20)
+
+
+### Bug Fixes
+
+* **time-tracking:** Add reponse schema ([0178b9a](https://github.com/tillhub/schemas/commit/0178b9a))
+
 # [3.28.0](https://github.com/tillhub/schemas/compare/v3.27.0...v3.28.0) (2019-06-20)
 
 
