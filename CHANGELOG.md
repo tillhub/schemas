@@ -1,3 +1,10 @@
+# [3.29.0](https://github.com/tillhub/schemas/compare/v3.28.6...v3.29.0) (2019-06-21)
+
+
+### Features
+
+* **vouchers:** add is campaign logic ([fce5c59](https://github.com/tillhub/schemas/commit/fce5c59))
+
 ## [3.28.6](https://github.com/tillhub/schemas/compare/v3.28.5...v3.28.6) (2019-06-21)
 
 

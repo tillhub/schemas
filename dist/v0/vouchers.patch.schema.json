@@ -256,6 +256,10 @@
     "restriction_single_transaction": {
       "description": "",
       "type": "boolean"
+    },
+    "is_campaign": {
+      "description": "Mark this voucher to be a campaign itself. This should be issued if you issue multiple vouchers with the same code and do not want to deduct value from it.",
+      "type": "boolean"
     }
   },
   "required": []
