@@ -4,7 +4,6 @@
   "additionalProperties": false,
   "type": "object",
   "required": [
-    "staff_id",
     "type",
     "start"
   ],
@@ -19,7 +18,7 @@
     "description": {
       "type": "string",
       "maxLength": 32,
-      "minLength": 1
+      "minLength": 0
     },
     "start": {
       "type": "string",
