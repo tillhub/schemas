@@ -1,3 +1,10 @@
+## [3.29.1](https://github.com/tillhub/schemas/compare/v3.29.0...v3.29.1) (2019-06-21)
+
+
+### Bug Fixes
+
+* **vouchers:** correct docs ([73aa124](https://github.com/tillhub/schemas/commit/73aa124))
+
 # [3.29.0](https://github.com/tillhub/schemas/compare/v3.28.6...v3.29.0) (2019-06-21)
 
 
