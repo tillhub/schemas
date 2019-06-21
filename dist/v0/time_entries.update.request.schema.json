@@ -13,48 +13,21 @@
       ]
     },
     "description": {
-      "anyOf": [
-        {
-          "type": "string",
-          "maxLength": 32,
-          "minLength": 1
-        },
-        {
-          "type": "null"
-        }
-      ]
+      "type": "string",
+      "maxLength": 32,
+      "minLength": 1
     },
     "start": {
-      "anyOf": [
-        {
-          "type": "string",
-          "format": "date-time"
-        },
-        {
-          "type": "null"
-        }
-      ]
+      "type": "string",
+      "format": "date-time"
     },
     "end": {
-      "anyOf": [
-        {
-          "type": "string",
-          "format": "date-time"
-        },
-        {
-          "type": "null"
-        }
-      ]
+      "type": "string",
+      "format": "date-time"
     },
     "staff_id": {
-      "anyOf": [
-        {
-          "type": "string"
-        },
-        {
-          "type": "null"
-        }
-      ]
+      "type": "string",
+      "maxLength": 128
     }
   }
 }
