@@ -4,7 +4,7 @@
   "additionalProperties": false,
   "type": "object",
   "required": [
-    "staff",
+    "staff_id",
     "type",
     "start"
   ],
@@ -50,10 +50,10 @@
         }
       ]
     },
-    "staff": {
+    "staff_id": {
       "anyOf": [
         {
-          "type": "object"
+          "type": "string"
         },
         {
           "type": "null"

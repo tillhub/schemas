@@ -1,3 +1,10 @@
+## [3.28.2](https://github.com/tillhub/schemas/compare/v3.28.1...v3.28.2) (2019-06-21)
+
+
+### Bug Fixes
+
+* **time-tracking:** Add properties to response object ([97fb0db](https://github.com/tillhub/schemas/commit/97fb0db))
+
 ## [3.28.1](https://github.com/tillhub/schemas/compare/v3.28.0...v3.28.1) (2019-06-20)
 
 

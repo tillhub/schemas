@@ -48,10 +48,10 @@
         }
       ]
     },
-    "staff": {
+    "staff_id": {
       "anyOf": [
         {
-          "type": "object"
+          "type": "string"
         },
         {
           "type": "null"
@@ -63,6 +63,10 @@
       "format": "uuid"
     },
     "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updated_at": {
       "type": "string",
       "format": "date-time"
     }

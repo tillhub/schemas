@@ -46,10 +46,10 @@
         }
       ]
     },
-    "staff": {
+    "staff_id": {
       "anyOf": [
         {
-          "type": "object"
+          "type": "string"
         },
         {
           "type": "null"
