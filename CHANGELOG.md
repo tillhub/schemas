@@ -1,3 +1,10 @@
+## [3.28.3](https://github.com/tillhub/schemas/compare/v3.28.2...v3.28.3) (2019-06-21)
+
+
+### Bug Fixes
+
+* **time-tracking:** Change data type ([2067d40](https://github.com/tillhub/schemas/commit/2067d40))
+
 ## [3.28.2](https://github.com/tillhub/schemas/compare/v3.28.1...v3.28.2) (2019-06-21)
 
 

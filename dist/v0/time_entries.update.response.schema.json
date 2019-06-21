@@ -60,7 +60,7 @@
     },
     "id": {
       "type": "string",
-      "format": "uuid"
+      "maxLength": 128
     },
     "created_at": {
       "type": "string",
