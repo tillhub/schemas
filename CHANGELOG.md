@@ -1,3 +1,10 @@
+## [3.28.6](https://github.com/tillhub/schemas/compare/v3.28.5...v3.28.6) (2019-06-21)
+
+
+### Bug Fixes
+
+* **time-tracing:** Fix data validation ([0630f66](https://github.com/tillhub/schemas/commit/0630f66))
+
 ## [3.28.5](https://github.com/tillhub/schemas/compare/v3.28.4...v3.28.5) (2019-06-21)
 
 

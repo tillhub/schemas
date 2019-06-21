@@ -15,17 +15,31 @@
       ]
     },
     "description": {
-      "type": "string",
-      "maxLength": 32,
-      "minLength": 0
+      "anyOf": [
+        {
+          "type": "string",
+          "maxLength": 32,
+          "minLength": 0
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "start": {
       "type": "string",
       "format": "date-time"
     },
     "end": {
-      "type": "string",
-      "format": "date-time"
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date-time"
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "staff_id": {
       "type": "string",
