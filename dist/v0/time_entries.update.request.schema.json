@@ -42,6 +42,10 @@
     "staff_id": {
       "type": "string",
       "maxLength": 128
+    },
+    "project_id": {
+      "type": "string",
+      "maxLength": 128
     }
   }
 }

@@ -1,3 +1,10 @@
+## [3.31.1](https://github.com/tillhub/schemas/compare/v3.31.0...v3.31.1) (2019-06-24)
+
+
+### Bug Fixes
+
+* **time-tracking:** Add project for time entry ([0824c6f](https://github.com/tillhub/schemas/commit/0824c6f))
+
 # [3.31.0](https://github.com/tillhub/schemas/compare/v3.30.0...v3.31.0) (2019-06-24)
 
 
