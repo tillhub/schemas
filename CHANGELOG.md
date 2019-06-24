@@ -1,3 +1,10 @@
+# [3.31.0](https://github.com/tillhub/schemas/compare/v3.30.0...v3.31.0) (2019-06-24)
+
+
+### Features
+
+* **Configurations:** Confogurations.products ([57a5405](https://github.com/tillhub/schemas/commit/57a5405))
+
 # [3.30.0](https://github.com/tillhub/schemas/compare/v3.29.1...v3.30.0) (2019-06-24)
 
 
