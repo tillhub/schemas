@@ -1,0 +1,23 @@
+{
+  "$id": "https://schemas.tillhub.com/v0/loyalty_logs.get.query.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "type": "object",
+  "required": [],
+  "properties": {
+    "start": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "end": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "limit": {
+      "type": "string"
+    },
+    "cursor_field": {
+      "type": "string"
+    }
+  }
+}

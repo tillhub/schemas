@@ -1,0 +1,171 @@
+{
+  "$id": "https://schemas.tillhub.com/v0/loyalty_logs.create.response.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": true,
+  "type": "object",
+  "required": [
+    "id",
+    "loyalty_system"
+  ],
+  "properties": {
+    "loyalty_system": {
+      "description": "The uuid of the loyalty system that this log belongs to.",
+      "type": "string",
+      "format": "uuid",
+      "example": "936835f7-2d75-41d2-9001-38ed6e458328"
+    },
+    "operation": {
+      "type": "string",
+      "enum": [
+        "increment",
+        "decrement",
+        "spend",
+        "book",
+        "deactivate_card",
+        "deactivate_account",
+        "delete_account",
+        "delete_card",
+        "lookup_card"
+      ]
+    },
+    "loyalty_account": {
+      "oneOf": [
+        {
+          "description": "The uuid of the loyalty account that this log belongs to.",
+          "type": "string",
+          "format": "uuid",
+          "example": "936835f7-2d75-41d2-9001-38ed6e458328"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "loyalty_card": {
+      "oneOf": [
+        {
+          "description": "The uuid of the loyalty card that this log belongs to.",
+          "type": "string",
+          "format": "uuid",
+          "example": "936835f7-2d75-41d2-9001-38ed6e458328"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "product": {
+      "oneOf": [
+        {
+          "description": "The uuid of the product that this log belongs to.",
+          "type": "string",
+          "format": "uuid",
+          "example": "936835f7-2d75-41d2-9001-38ed6e458328"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "transaction": {
+      "oneOf": [
+        {
+          "description": "The uuid of the transaction that this log belongs to.",
+          "type": "string",
+          "format": "uuid",
+          "example": "936835f7-2d75-41d2-9001-38ed6e458328"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "cart_item": {
+      "oneOf": [
+        {
+          "description": "The uuid of the cart_item that this log belongs to.",
+          "type": "string",
+          "format": "uuid",
+          "example": "936835f7-2d75-41d2-9001-38ed6e458328"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "register": {
+      "oneOf": [
+        {
+          "description": "The uuid of the register that this log belongs to.",
+          "type": "string",
+          "format": "uuid",
+          "example": "936835f7-2d75-41d2-9001-38ed6e458328"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "issuer": {
+      "oneOf": [
+        {
+          "description": "The uuid of the staff that this log belongs to.",
+          "type": "string",
+          "format": "uuid",
+          "example": "936835f7-2d75-41d2-9001-38ed6e458328"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "metadata": {
+      "oneOf": [
+        {
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "related_to": {
+      "oneOf": [
+        {
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "amount": {
+      "oneOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "unit": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

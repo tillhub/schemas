@@ -1,0 +1,88 @@
+{
+  "$id": "https://schemas.tillhub.com/v0/loyalty_accounts.update.request.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "type": "object",
+  "required": [],
+  "properties": {
+    "customer": {
+      "description": "The customer that this account belongs to.",
+      "type": "string",
+      "format": "uuid",
+      "example": "936835f7-2d75-41d2-9001-38ed6e458328"
+    },
+    "name": {
+      "oneOf": [
+        {
+          "type": "string",
+          "example": "Tillhub Loyalty Account",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "activated_at": {
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "date-time"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "account_number": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "is_payment_method": {
+      "oneOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "description": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4096
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "deleted": {
+      "type": "boolean"
+    },
+    "active": {
+      "type": "boolean"
+    },
+    "metadata": {
+      "oneOf": [
+        {
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "$id": "https://schemas.tillhub.com/v0/loyalty_cards.update.response.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": true,
+  "type": "object",
+  "required": [
+    "id",
+    "code",
+    "loyalty_system"
+  ],
+  "properties": {
+    "code": {
+      "type": "string"
+    },
+    "activated_at": {
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "date-time"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "name": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "description": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4096
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "deleted": {
+      "type": "boolean"
+    },
+    "active": {
+      "type": "boolean"
+    },
+    "metadata": {
+      "oneOf": [
+        {
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "loyalty_account": {
+      "oneOf": [
+        {
+          "description": "The loyalty account that this card belongs to.",
+          "type": "string",
+          "format": "uuid",
+          "example": "936835f7-2d75-41d2-9001-38ed6e458328"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

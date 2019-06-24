@@ -1,3 +1,10 @@
+# [3.30.0](https://github.com/tillhub/schemas/compare/v3.29.1...v3.30.0) (2019-06-24)
+
+
+### Features
+
+* **loyalties:** Add schemas for systems, accounts, cards ([3fadd81](https://github.com/tillhub/schemas/commit/3fadd81))
+
 ## [3.29.1](https://github.com/tillhub/schemas/compare/v3.29.0...v3.29.1) (2019-06-21)
 
 
