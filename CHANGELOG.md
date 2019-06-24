@@ -1,3 +1,10 @@
+## [3.31.2](https://github.com/tillhub/schemas/compare/v3.31.1...v3.31.2) (2019-06-24)
+
+
+### Bug Fixes
+
+* **time-tracking:** Fix project field ([a00ef4e](https://github.com/tillhub/schemas/commit/a00ef4e))
+
 ## [3.31.1](https://github.com/tillhub/schemas/compare/v3.31.0...v3.31.1) (2019-06-24)
 
 

@@ -6,7 +6,7 @@
   "required": [
     "type",
     "start",
-    "project"
+    "project_id"
   ],
   "properties": {
     "type": {
