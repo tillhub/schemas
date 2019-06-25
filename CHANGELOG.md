@@ -1,3 +1,10 @@
+## [3.33.2](https://github.com/tillhub/schemas/compare/v3.33.1...v3.33.2) (2019-06-25)
+
+
+### Bug Fixes
+
+* **time-tracking:** fix boolean type ([3d03d83](https://github.com/tillhub/schemas/commit/3d03d83))
+
 ## [3.33.1](https://github.com/tillhub/schemas/compare/v3.33.0...v3.33.1) (2019-06-25)
 
 
