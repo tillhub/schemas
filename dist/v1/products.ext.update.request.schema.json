@@ -1040,81 +1040,204 @@
     "codes": {
       "oneOf": [
         {
-          "type": "object",
+          "type": "array",
           "additionalProperties": false,
-          "properties": {
-            "qr": {
-              "oneOf": [
-                {
-                  "type": "object",
-                  "additionalProperties": false,
-                  "properties": {
-                    "caption": {
-                      "oneOf": [
-                        {
-                          "type": "string",
-                          "maxLength": 16384
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ]
-                    }
+          "items": {
+            "anyOf": [
+              {
+                "type": "object",
+                "required": [
+                  "data",
+                  "type"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "data": {
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 16384
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "caption": {
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 512
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "type": {
+                    "type": "string",
+                    "enum": [
+                      "qr"
+                    ]
                   }
-                },
-                {
-                  "type": "null"
                 }
-              ]
-            },
-            "code128": {
-              "oneOf": [
-                {
-                  "type": "object",
-                  "additionalProperties": false,
-                  "properties": {
-                    "caption": {
-                      "oneOf": [
-                        {
-                          "type": "string",
-                          "maxLength": 512
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ]
-                    }
+              },
+              {
+                "type": "object",
+                "required": [
+                  "data",
+                  "type"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "data": {
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 64
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "caption": {
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 512
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "type": {
+                    "type": "string",
+                    "enum": [
+                      "code128"
+                    ]
                   }
-                },
-                {
-                  "type": "null"
                 }
-              ]
-            },
-            "aztec": {
-              "oneOf": [
-                {
-                  "type": "object",
-                  "additionalProperties": false,
-                  "properties": {
-                    "caption": {
-                      "oneOf": [
-                        {
-                          "type": "string",
-                          "maxLength": 512
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ]
-                    }
+              },
+              {
+                "type": "object",
+                "required": [
+                  "data",
+                  "type"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "data": {
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "minLength": 12,
+                        "maxLength": 3832
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "caption": {
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 512
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "type": {
+                    "type": "string",
+                    "enum": [
+                      "aztec"
+                    ]
                   }
-                },
-                {
-                  "type": "null"
                 }
-              ]
-            }
+              },
+              {
+                "type": "object",
+                "required": [
+                  "data",
+                  "type"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "data": {
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "minLength": 13,
+                        "maxLength": 13
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "caption": {
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 512
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "type": {
+                    "type": "string",
+                    "enum": [
+                      "ean13"
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "required": [
+                  "data",
+                  "type"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "data": {
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "minLength": 8,
+                        "maxLength": 8
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "caption": {
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 512
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "type": {
+                    "type": "string",
+                    "enum": [
+                      "ean13"
+                    ]
+                  }
+                }
+              }
+            ]
           }
         },
         {

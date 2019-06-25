@@ -1,3 +1,10 @@
+# [3.32.0](https://github.com/tillhub/schemas/compare/v3.31.2...v3.32.0) (2019-06-25)
+
+
+### Features
+
+* **products:** alter products, to accept decent codes ([8429015](https://github.com/tillhub/schemas/commit/8429015))
+
 ## [3.31.2](https://github.com/tillhub/schemas/compare/v3.31.1...v3.31.2) (2019-06-24)
 
 
