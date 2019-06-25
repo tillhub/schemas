@@ -1,3 +1,10 @@
+# [3.33.0](https://github.com/tillhub/schemas/compare/v3.32.0...v3.33.0) (2019-06-25)
+
+
+### Features
+
+* **expense_accounts:** add locations ([82cb04c](https://github.com/tillhub/schemas/commit/82cb04c))
+
 # [3.32.0](https://github.com/tillhub/schemas/compare/v3.31.2...v3.32.0) (2019-06-25)
 
 

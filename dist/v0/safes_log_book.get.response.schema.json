@@ -838,6 +838,20 @@
                           }
                         ]
                       },
+                      "locations": {
+                        "oneOf": [
+                          {
+                            "type": "array",
+                            "items": {
+                              "type": "string",
+                              "format": "uuid"
+                            }
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
                       "id": {
                         "type": "string",
                         "format": "uuid"
@@ -1575,6 +1589,20 @@
                           {
                             "type": "string",
                             "maxLength": 64
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "locations": {
+                        "oneOf": [
+                          {
+                            "type": "array",
+                            "items": {
+                              "type": "string",
+                              "format": "uuid"
+                            }
                           },
                           {
                             "type": "null"
