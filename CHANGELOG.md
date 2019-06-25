@@ -1,3 +1,10 @@
+## [3.33.1](https://github.com/tillhub/schemas/compare/v3.33.0...v3.33.1) (2019-06-25)
+
+
+### Bug Fixes
+
+* **time-tracking:** add deleted field ([d09b65d](https://github.com/tillhub/schemas/commit/d09b65d))
+
 # [3.33.0](https://github.com/tillhub/schemas/compare/v3.32.0...v3.33.0) (2019-06-25)
 
 

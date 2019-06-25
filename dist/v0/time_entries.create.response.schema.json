@@ -41,11 +41,7 @@
         }
       ]
     },
-    "staff_id": {
-      "type": "string",
-      "maxLength": 128
-    },
-    "project_id": {
+    "staff": {
       "type": "string",
       "maxLength": 128
     },
@@ -60,6 +56,10 @@
     "updated_at": {
       "type": "string",
       "format": "date-time"
+    },
+    "deleted": {
+      "type": "string",
+      "format": "boolean"
     }
   }
 }

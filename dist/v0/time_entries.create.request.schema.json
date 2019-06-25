@@ -5,8 +5,7 @@
   "type": "object",
   "required": [
     "type",
-    "start",
-    "project_id"
+    "start"
   ],
   "properties": {
     "type": {
@@ -43,11 +42,7 @@
         }
       ]
     },
-    "staff_id": {
-      "type": "string",
-      "maxLength": 128
-    },
-    "project_id": {
+    "staff": {
       "type": "string",
       "maxLength": 128
     }
