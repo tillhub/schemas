@@ -1,3 +1,10 @@
+# [3.37.0](https://github.com/tillhub/schemas/compare/v3.36.0...v3.37.0) (2019-06-26)
+
+
+### Features
+
+* **customers:** add ext tx count ([c552c96](https://github.com/tillhub/schemas/commit/c552c96))
+
 # [3.36.0](https://github.com/tillhub/schemas/compare/v3.35.0...v3.36.0) (2019-06-26)
 
 

@@ -726,6 +726,18 @@
                         }
                       ]
                     },
+                    "total_transactions": {
+                      "description": "Absolute number of all transactions.",
+                      "oneOf": [
+                        {
+                          "type": "number",
+                          "min": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
                     "total_amount_transactions": {
                       "description": "Revenue of that customer.",
                       "oneOf": [
