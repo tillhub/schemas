@@ -18,7 +18,7 @@
       "anyOf": [
         {
           "type": "string",
-          "maxLength": 32,
+          "maxLength": 64,
           "minLength": 0
         },
         {
@@ -45,6 +45,42 @@
       "type": "string",
       "maxLength": 128
     },
+    "custom_properties": {
+      "anyOf": [
+        {
+          "type": "string",
+          "maxLength": 255
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "metadata": {
+      "anyOf": [
+        {
+          "type": "string",
+          "maxLength": 255
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "location": {
+      "anyOf": [
+        {
+          "type": "string",
+          "maxLength": 255
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "deleted": {
+      "type": "boolean"
+    },
     "id": {
       "type": "string",
       "maxLength": 128
@@ -56,9 +92,6 @@
     "updated_at": {
       "type": "string",
       "format": "date-time"
-    },
-    "deleted": {
-      "type": "boolean"
     }
   }
 }

@@ -16,7 +16,7 @@
       "anyOf": [
         {
           "type": "string",
-          "maxLength": 32,
+          "maxLength": 64,
           "minLength": 0
         },
         {
@@ -42,6 +42,42 @@
     "staff": {
       "type": "string",
       "maxLength": 128
+    },
+    "custom_properties": {
+      "anyOf": [
+        {
+          "type": "string",
+          "maxLength": 255
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "metadata": {
+      "anyOf": [
+        {
+          "type": "string",
+          "maxLength": 255
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "location": {
+      "anyOf": [
+        {
+          "type": "string",
+          "maxLength": 255
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "deleted": {
+      "type": "boolean"
     }
   }
 }

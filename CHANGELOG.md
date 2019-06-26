@@ -1,3 +1,11 @@
+## [3.33.3](https://github.com/tillhub/schemas/compare/v3.33.2...v3.33.3) (2019-06-26)
+
+
+### Bug Fixes
+
+* **time-tracking:** fix data schema ([66759bf](https://github.com/tillhub/schemas/commit/66759bf))
+* **time-tracking:** fix data schema ([9ee1ba9](https://github.com/tillhub/schemas/commit/9ee1ba9))
+
 ## [3.33.2](https://github.com/tillhub/schemas/compare/v3.33.1...v3.33.2) (2019-06-25)
 
 
