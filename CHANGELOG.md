@@ -1,3 +1,10 @@
+# [3.34.0](https://github.com/tillhub/schemas/compare/v3.33.3...v3.34.0) (2019-06-26)
+
+
+### Features
+
+* **products:** add product configuration ([91cd4b6](https://github.com/tillhub/schemas/commit/91cd4b6))
+
 ## [3.33.3](https://github.com/tillhub/schemas/compare/v3.33.2...v3.33.3) (2019-06-26)
 
 

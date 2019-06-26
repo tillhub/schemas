@@ -1368,6 +1368,23 @@
         }
       ]
     },
+    "configuration": {
+      "anyOf": [
+        {
+          "type": "object",
+          "additionalProperties": true,
+          "properties": {
+            "allow_zero_prices": {
+              "description": "Allow adding this product to a cart if it has no price.",
+              "type": "boolean"
+            }
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "stock_info": {
       "description": "READ ONLY: summary of stock accross accounts. This potentially is not real-time. After a stock change.",
       "type": "object",
