@@ -1,3 +1,10 @@
+# [3.35.0](https://github.com/tillhub/schemas/compare/v3.34.0...v3.35.0) (2019-06-26)
+
+
+### Features
+
+* **customers:** extend analytics constraints ([2aca9ba](https://github.com/tillhub/schemas/commit/2aca9ba))
+
 # [3.34.0](https://github.com/tillhub/schemas/compare/v3.33.3...v3.34.0) (2019-06-26)
 
 

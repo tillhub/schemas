@@ -632,7 +632,239 @@
             "summary": {
               "oneOf": [
                 {
-                  "type": "object"
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "top_seller": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "format": "uuid"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "top_branch": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "format": "uuid"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "average_items_per_transaction": {
+                      "oneOf": [
+                        {
+                          "type": "number",
+                          "min": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "total_returns": {
+                      "oneOf": [
+                        {
+                          "type": "number",
+                          "min": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "total_amount_returns": {
+                      "oneOf": [
+                        {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                              "amount": {
+                                "type": "object",
+                                "properties": {
+                                  "net": {
+                                    "example": "27633.02",
+                                    "type": "number",
+                                    "minimum": 0,
+                                    "maximum": 1000000,
+                                    "multipleOf": 0.01
+                                  },
+                                  "gross": {
+                                    "example": "27633.02",
+                                    "type": "number",
+                                    "minimum": 0,
+                                    "maximum": 1000000,
+                                    "multipleOf": 0.01
+                                  }
+                                }
+                              },
+                              "currency": {
+                                "type": "string",
+                                "minLength": 3,
+                                "maxLength": 3
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "total_amount_transactions": {
+                      "oneOf": [
+                        {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                              "amount": {
+                                "type": "object",
+                                "properties": {
+                                  "net": {
+                                    "example": "27633.02",
+                                    "type": "number",
+                                    "minimum": 0,
+                                    "maximum": 1000000,
+                                    "multipleOf": 0.01
+                                  },
+                                  "gross": {
+                                    "example": "27633.02",
+                                    "type": "number",
+                                    "minimum": 0,
+                                    "maximum": 1000000,
+                                    "multipleOf": 0.01
+                                  }
+                                }
+                              },
+                              "currency": {
+                                "type": "string",
+                                "minLength": 3,
+                                "maxLength": 3
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "total_amount_items_sold": {
+                      "oneOf": [
+                        {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                              "amount": {
+                                "type": "object",
+                                "properties": {
+                                  "net": {
+                                    "example": "27633.02",
+                                    "type": "number",
+                                    "minimum": 0,
+                                    "maximum": 1000000,
+                                    "multipleOf": 0.01
+                                  },
+                                  "gross": {
+                                    "example": "27633.02",
+                                    "type": "number",
+                                    "minimum": 0,
+                                    "maximum": 1000000,
+                                    "multipleOf": 0.01
+                                  }
+                                }
+                              },
+                              "currency": {
+                                "type": "string",
+                                "minLength": 3,
+                                "maxLength": 3
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "average_purchase_value": {
+                      "oneOf": [
+                        {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                              "amount": {
+                                "type": "object",
+                                "properties": {
+                                  "net": {
+                                    "example": "27633.02",
+                                    "type": "number",
+                                    "minimum": 0,
+                                    "maximum": 1000000,
+                                    "multipleOf": 0.01
+                                  },
+                                  "gross": {
+                                    "example": "27633.02",
+                                    "type": "number",
+                                    "minimum": 0,
+                                    "maximum": 1000000,
+                                    "multipleOf": 0.01
+                                  }
+                                }
+                              },
+                              "currency": {
+                                "type": "string",
+                                "minLength": 3,
+                                "maxLength": 3
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "last_seen": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "format": "date-time"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "last_transactions_v0": {
+              "oneOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "description": "Array of v0 transactions. DEPRECATED.",
+                    "type": "object"
+                  }
                 },
                 {
                   "type": "null"
