@@ -1,3 +1,10 @@
+# [3.36.0](https://github.com/tillhub/schemas/compare/v3.35.0...v3.36.0) (2019-06-26)
+
+
+### Features
+
+* **customers:** add some desc for docs ([f67ba7b](https://github.com/tillhub/schemas/commit/f67ba7b))
+
 # [3.35.0](https://github.com/tillhub/schemas/compare/v3.34.0...v3.35.0) (2019-06-26)
 
 

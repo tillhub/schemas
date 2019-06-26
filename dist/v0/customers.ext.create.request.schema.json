@@ -625,17 +625,20 @@
       ]
     },
     "analytics": {
+      "description": "A number of aggregated customer centric analytics data. Usually this data is being compiled at transaction time. Rehydrating data or adding missing data, requires a transaction with this customer.",
       "oneOf": [
         {
           "type": "object",
           "properties": {
             "summary": {
+              "description": "Global analytics summary of this customer.",
               "oneOf": [
                 {
                   "type": "object",
                   "additionalProperties": false,
                   "properties": {
                     "top_seller": {
+                      "description": "Reference to top selling Tillhub staff.",
                       "oneOf": [
                         {
                           "type": "string",
@@ -647,6 +650,7 @@
                       ]
                     },
                     "top_branch": {
+                      "description": "Reference to top selling Tillhub branch.",
                       "oneOf": [
                         {
                           "type": "string",
@@ -658,6 +662,7 @@
                       ]
                     },
                     "average_items_per_transaction": {
+                      "description": "The anbsolute number of cart items (products), including the absolute returns. This is meant as \"items handled\" per customer.",
                       "oneOf": [
                         {
                           "type": "number",
@@ -669,6 +674,7 @@
                       ]
                     },
                     "total_returns": {
+                      "description": "Absolute number of all transactions that include at least a return.",
                       "oneOf": [
                         {
                           "type": "number",
@@ -680,6 +686,7 @@
                       ]
                     },
                     "total_amount_returns": {
+                      "description": "The revenue of all returns.",
                       "oneOf": [
                         {
                           "type": "array",
@@ -720,6 +727,7 @@
                       ]
                     },
                     "total_amount_transactions": {
+                      "description": "Revenue of that customer.",
                       "oneOf": [
                         {
                           "type": "array",
@@ -760,6 +768,7 @@
                       ]
                     },
                     "total_amount_items_sold": {
+                      "description": "Revenue of all cart items that were a sale.",
                       "oneOf": [
                         {
                           "type": "array",
@@ -800,6 +809,7 @@
                       ]
                     },
                     "average_purchase_value": {
+                      "description": "Average of revenue of all sales.",
                       "oneOf": [
                         {
                           "type": "array",
@@ -840,6 +850,7 @@
                       ]
                     },
                     "last_seen": {
+                      "description": "The last interaction with this customer.",
                       "oneOf": [
                         {
                           "type": "string",
@@ -858,11 +869,11 @@
               ]
             },
             "last_transactions_v0": {
+              "description": "Array of v0 transactions. DEPRECATED.",
               "oneOf": [
                 {
                   "type": "array",
                   "items": {
-                    "description": "Array of v0 transactions. DEPRECATED.",
                     "type": "object"
                   }
                 },
