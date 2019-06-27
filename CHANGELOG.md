@@ -1,3 +1,10 @@
+# [3.38.0](https://github.com/tillhub/schemas/compare/v3.37.0...v3.38.0) (2019-06-27)
+
+
+### Features
+
+* **service-questions:** allow null validation ([9de8e7b](https://github.com/tillhub/schemas/commit/9de8e7b))
+
 # [3.37.0](https://github.com/tillhub/schemas/compare/v3.36.0...v3.37.0) (2019-06-26)
 
 

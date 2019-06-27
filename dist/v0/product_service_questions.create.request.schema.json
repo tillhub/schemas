@@ -44,8 +44,15 @@
       "description": "Flag on the service for mandatory input request"
     },
     "answer_validation": {
-      "type": "object",
       "description": "JSON schema that is applied to the user's answer to the product question; it is useful for UI development because it gives information on how to construct the answer form fields, i.e. the field type (select, input, checkbox) and values for unit options",
+      "oneOf": [
+        {
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ],
       "examples": [
         {
           "type": "object",
