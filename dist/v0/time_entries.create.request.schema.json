@@ -47,6 +47,10 @@
       "type": "string",
       "maxLength": 128
     },
+    "owner": {
+      "type": "string",
+      "maxLength": 128
+    },
     "custom_properties": {
       "anyOf": [
         {

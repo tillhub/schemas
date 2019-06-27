@@ -1,3 +1,10 @@
+## [3.38.1](https://github.com/tillhub/schemas/compare/v3.38.0...v3.38.1) (2019-06-27)
+
+
+### Bug Fixes
+
+* **time-tracking:** add owner filed ([a28eb95](https://github.com/tillhub/schemas/commit/a28eb95))
+
 # [3.38.0](https://github.com/tillhub/schemas/compare/v3.37.0...v3.38.0) (2019-06-27)
 
 
