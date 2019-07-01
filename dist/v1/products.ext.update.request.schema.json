@@ -1380,6 +1380,44 @@
         }
       ]
     },
+    "loyalty_values": {
+      "oneOf": [
+        {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "unit",
+              "amount"
+            ],
+            "properties": {
+              "unit": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 64,
+                "examples": [
+                  "miles",
+                  "points",
+                  "EUR",
+                  "USD"
+                ]
+              },
+              "amount": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1000000,
+                "multipleOf": 0.01
+              }
+            }
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "stock_info": {
       "description": "READ ONLY: summary of stock accross accounts. This potentially is not real-time. After a stock change.",
       "type": "object",

@@ -1,3 +1,10 @@
+# [3.39.0](https://github.com/tillhub/schemas/compare/v3.38.1...v3.39.0) (2019-07-01)
+
+
+### Features
+
+* **products_v1:** add loyalty_values ([e154624](https://github.com/tillhub/schemas/commit/e154624))
+
 ## [3.38.1](https://github.com/tillhub/schemas/compare/v3.38.0...v3.38.1) (2019-06-27)
 
 
