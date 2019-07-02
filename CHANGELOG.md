@@ -1,3 +1,10 @@
+# [3.43.0](https://github.com/tillhub/schemas/compare/v3.42.0...v3.43.0) (2019-07-02)
+
+
+### Features
+
+* **discounts:** add locations param ([01bfdbf](https://github.com/tillhub/schemas/commit/01bfdbf))
+
 # [3.42.0](https://github.com/tillhub/schemas/compare/v3.41.0...v3.42.0) (2019-07-02)
 
 
