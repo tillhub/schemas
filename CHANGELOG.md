@@ -1,3 +1,10 @@
+# [3.41.0](https://github.com/tillhub/schemas/compare/v3.40.0...v3.41.0) (2019-07-02)
+
+
+### Features
+
+* **Transactions_v1:** cart_item.service_answers ([94ef7b5](https://github.com/tillhub/schemas/commit/94ef7b5))
+
 # [3.40.0](https://github.com/tillhub/schemas/compare/v3.39.0...v3.40.0) (2019-07-02)
 
 
