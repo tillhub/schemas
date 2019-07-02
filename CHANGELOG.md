@@ -1,3 +1,10 @@
+# [3.42.0](https://github.com/tillhub/schemas/compare/v3.41.0...v3.42.0) (2019-07-02)
+
+
+### Features
+
+* **loyalty_cards:** modify query ([a7194f1](https://github.com/tillhub/schemas/commit/a7194f1))
+
 # [3.41.0](https://github.com/tillhub/schemas/compare/v3.40.0...v3.41.0) (2019-07-02)
 
 
