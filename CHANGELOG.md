@@ -1,3 +1,10 @@
+# [3.40.0](https://github.com/tillhub/schemas/compare/v3.39.0...v3.40.0) (2019-07-02)
+
+
+### Features
+
+* **products_v1:** add description ([56b1433](https://github.com/tillhub/schemas/commit/56b1433))
+
 # [3.39.0](https://github.com/tillhub/schemas/compare/v3.38.1...v3.39.0) (2019-07-01)
 
 

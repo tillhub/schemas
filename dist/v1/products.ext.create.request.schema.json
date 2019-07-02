@@ -1389,6 +1389,7 @@
       "oneOf": [
         {
           "type": "array",
+          "description": "The amount of loyalty values that a customer receives per product. They will be used then the loyalty system specifies \"lookup\" as a base in the value configurations. The unit is also determined in the loyalty system configurations.",
           "minItems": 1,
           "items": {
             "type": "object",

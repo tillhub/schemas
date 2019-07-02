@@ -1,0 +1,145 @@
+{
+  "$id": "https://schemas.tillhub.com/v0/loyalty_values.create.request.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "type": "object",
+  "required": [
+    "items"
+  ],
+  "properties": {
+    "items": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "amount",
+          "unit",
+          "operation"
+        ],
+        "properties": {
+          "amount": {
+            "type": "number",
+            "multipleOf": 0.01,
+            "minimum": 0
+          },
+          "unit": {
+            "type": "string",
+            "description": "Custom unit name. Default is the currency",
+            "examples": [
+              "miles",
+              "points",
+              "stamps"
+            ],
+            "minLength": 1,
+            "maxLength": 128
+          },
+          "operation": {
+            "type": "string",
+            "description": "Type of operation that changes the loyalty_values.",
+            "examples": [
+              "increment",
+              "decrease",
+              "spend",
+              "book"
+            ],
+            "minLength": 1,
+            "maxLength": 128
+          },
+          "product": {
+            "oneOf": [
+              {
+                "type": "string",
+                "description": "UUID of the product that this value change relates to.",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "transaction": {
+            "oneOf": [
+              {
+                "type": "string",
+                "description": "UUID of the transaction that this value change relates to.",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "cart_item": {
+            "oneOf": [
+              {
+                "type": "string",
+                "description": "UUID of the cart_item that this value change relates to.",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "register": {
+            "oneOf": [
+              {
+                "type": "string",
+                "description": "UUID of the register where this value change was initiated.",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "register_number": {
+            "oneOf": [
+              {
+                "description": "The register number (not uuid).",
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "issuer": {
+            "oneOf": [
+              {
+                "type": "string",
+                "description": "UUID of the issuer who initiated this value change.",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "metadata": {
+            "oneOf": [
+              {
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "related_to": {
+            "oneOf": [
+              {
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

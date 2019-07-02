@@ -46,7 +46,8 @@
       "type": "boolean"
     },
     "active": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": false
     },
     "metadata": {
       "oneOf": [

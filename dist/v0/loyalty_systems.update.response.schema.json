@@ -101,7 +101,7 @@
                     "additionalProperties": false,
                     "required": [
                       "endpoint",
-                      "auth"
+                      "method"
                     ],
                     "properties": {
                       "endpoint": {
@@ -171,7 +171,7 @@
                     "additionalProperties": false,
                     "required": [
                       "endpoint",
-                      "auth"
+                      "method"
                     ],
                     "properties": {
                       "endpoint": {
