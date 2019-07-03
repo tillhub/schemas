@@ -1,3 +1,10 @@
+# [3.44.0](https://github.com/tillhub/schemas/compare/v3.43.1...v3.44.0) (2019-07-03)
+
+
+### Features
+
+* **loyalty_logs:** update schema ([3604337](https://github.com/tillhub/schemas/commit/3604337))
+
 ## [3.43.1](https://github.com/tillhub/schemas/compare/v3.43.0...v3.43.1) (2019-07-03)
 
 
