@@ -1,3 +1,10 @@
+## [3.43.1](https://github.com/tillhub/schemas/compare/v3.43.0...v3.43.1) (2019-07-03)
+
+
+### Bug Fixes
+
+* **products_v1:** codes.ean8 ([16f13b0](https://github.com/tillhub/schemas/commit/16f13b0))
+
 # [3.43.0](https://github.com/tillhub/schemas/compare/v3.42.0...v3.43.0) (2019-07-02)
 
 

@@ -1237,7 +1237,7 @@
                   "type": {
                     "type": "string",
                     "enum": [
-                      "ean13"
+                      "ean8"
                     ]
                   }
                 }
