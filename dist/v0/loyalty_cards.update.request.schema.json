@@ -8,17 +8,6 @@
     "code": {
       "type": "string"
     },
-    "activated_at": {
-      "oneOf": [
-        {
-          "type": "string",
-          "format": "date-time"
-        },
-        {
-          "type": "null"
-        }
-      ]
-    },
     "name": {
       "oneOf": [
         {

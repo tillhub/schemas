@@ -1,3 +1,10 @@
+# [3.46.0](https://github.com/tillhub/schemas/compare/v3.45.0...v3.46.0) (2019-07-04)
+
+
+### Features
+
+* **loyalties:** remove activated_at ([2b7df83](https://github.com/tillhub/schemas/commit/2b7df83))
+
 # [3.45.0](https://github.com/tillhub/schemas/compare/v3.44.0...v3.45.0) (2019-07-04)
 
 
