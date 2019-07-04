@@ -76,6 +76,17 @@
     "updated_at": {
       "type": "string",
       "format": "date-time"
+    },
+    "activated_at": {
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "date-time"
+        },
+        {
+          "type": "null"
+        }
+      ]
     }
   }
 }

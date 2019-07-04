@@ -1,3 +1,10 @@
+# [3.47.0](https://github.com/tillhub/schemas/compare/v3.46.0...v3.47.0) (2019-07-04)
+
+
+### Features
+
+* **loyalties:** add activated_at to responses ([901ace1](https://github.com/tillhub/schemas/commit/901ace1))
+
 # [3.46.0](https://github.com/tillhub/schemas/compare/v3.45.0...v3.46.0) (2019-07-04)
 
 
