@@ -1,3 +1,10 @@
+# [3.45.0](https://github.com/tillhub/schemas/compare/v3.44.0...v3.45.0) (2019-07-04)
+
+
+### Features
+
+* **loyalty_logs:** add operation type ([31d611f](https://github.com/tillhub/schemas/commit/31d611f))
+
 # [3.44.0](https://github.com/tillhub/schemas/compare/v3.43.1...v3.44.0) (2019-07-03)
 
 
