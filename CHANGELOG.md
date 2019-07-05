@@ -1,3 +1,10 @@
+# [3.51.0](https://github.com/tillhub/schemas/compare/v3.50.0...v3.51.0) (2019-07-05)
+
+
+### Features
+
+* **voucher_systems:** add new schemas ([eb00c1f](https://github.com/tillhub/schemas/commit/eb00c1f))
+
 # [3.50.0](https://github.com/tillhub/schemas/compare/v3.49.0...v3.50.0) (2019-07-05)
 
 
