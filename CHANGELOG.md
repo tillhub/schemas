@@ -1,3 +1,10 @@
+# [3.52.0](https://github.com/tillhub/schemas/compare/v3.51.0...v3.52.0) (2019-07-05)
+
+
+### Features
+
+* **products:** allow null net and gross ([af8cba9](https://github.com/tillhub/schemas/commit/af8cba9))
+
 # [3.51.0](https://github.com/tillhub/schemas/compare/v3.50.0...v3.51.0) (2019-07-05)
 
 

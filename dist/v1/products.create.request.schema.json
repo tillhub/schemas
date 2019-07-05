@@ -109,21 +109,36 @@
                       "type": "object",
                       "properties": {
                         "amount": {
+                          "description": "Either net or gross should be set (not null). Tax will be calculated accordingly automatically. We do not validate for either to be set, for data flexibility reasons.",
                           "type": "object",
                           "properties": {
                             "net": {
-                              "example": "27633.02",
-                              "type": "number",
-                              "minimum": 0,
-                              "maximum": 1000000,
-                              "multipleOf": 0.01
+                              "oneOf": [
+                                {
+                                  "example": "27633.02",
+                                  "type": "number",
+                                  "minimum": 0,
+                                  "maximum": 1000000,
+                                  "multipleOf": 0.01
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
                             },
                             "gross": {
-                              "example": "27633.02",
-                              "type": "number",
-                              "minimum": 0,
-                              "maximum": 1000000,
-                              "multipleOf": 0.01
+                              "oneOf": [
+                                {
+                                  "example": "27633.02",
+                                  "type": "number",
+                                  "minimum": 0,
+                                  "maximum": 1000000,
+                                  "multipleOf": 0.01
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
                             }
                           }
                         },
@@ -198,21 +213,36 @@
                       "type": "object",
                       "properties": {
                         "amount": {
+                          "description": "Either net or gross should be set (not null). Tax will be calculated accordingly automatically. We do not validate for either to be set, for data flexibility reasons.",
                           "type": "object",
                           "properties": {
                             "net": {
-                              "example": "27633.02",
-                              "type": "number",
-                              "minimum": 0,
-                              "maximum": 1000000,
-                              "multipleOf": 0.01
+                              "oneOf": [
+                                {
+                                  "example": "27633.02",
+                                  "type": "number",
+                                  "minimum": 0,
+                                  "maximum": 1000000,
+                                  "multipleOf": 0.01
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
                             },
                             "gross": {
-                              "example": "27633.02",
-                              "type": "number",
-                              "minimum": 0,
-                              "maximum": 1000000,
-                              "multipleOf": 0.01
+                              "oneOf": [
+                                {
+                                  "example": "27633.02",
+                                  "type": "number",
+                                  "minimum": 0,
+                                  "maximum": 1000000,
+                                  "multipleOf": 0.01
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
                             }
                           }
                         },
@@ -301,21 +331,36 @@
                       "type": "object",
                       "properties": {
                         "amount": {
+                          "description": "Either net or gross should be set (not null). Tax will be calculated accordingly automatically. We do not validate for either to be set, for data flexibility reasons.",
                           "type": "object",
                           "properties": {
                             "net": {
-                              "example": "27633.02",
-                              "type": "number",
-                              "minimum": 0,
-                              "maximum": 1000000,
-                              "multipleOf": 0.01
+                              "oneOf": [
+                                {
+                                  "example": "27633.02",
+                                  "type": "number",
+                                  "minimum": 0,
+                                  "maximum": 1000000,
+                                  "multipleOf": 0.01
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
                             },
                             "gross": {
-                              "example": "27633.02",
-                              "type": "number",
-                              "minimum": 0,
-                              "maximum": 1000000,
-                              "multipleOf": 0.01
+                              "oneOf": [
+                                {
+                                  "example": "27633.02",
+                                  "type": "number",
+                                  "minimum": 0,
+                                  "maximum": 1000000,
+                                  "multipleOf": 0.01
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
                             }
                           }
                         },
@@ -382,21 +427,36 @@
                 "type": "object",
                 "properties": {
                   "amount": {
+                    "description": "Either net or gross should be set (not null). Tax will be calculated accordingly automatically. We do not validate for either to be set, for data flexibility reasons.",
                     "type": "object",
                     "properties": {
                       "net": {
-                        "example": "27633.02",
-                        "type": "number",
-                        "minimum": 0,
-                        "maximum": 1000000,
-                        "multipleOf": 0.01
+                        "oneOf": [
+                          {
+                            "example": "27633.02",
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 1000000,
+                            "multipleOf": 0.01
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
                       },
                       "gross": {
-                        "example": "27633.02",
-                        "type": "number",
-                        "minimum": 0,
-                        "maximum": 1000000,
-                        "multipleOf": 0.01
+                        "oneOf": [
+                          {
+                            "example": "27633.02",
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 1000000,
+                            "multipleOf": 0.01
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
                       }
                     }
                   },
