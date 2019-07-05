@@ -1,3 +1,10 @@
+# [3.53.0](https://github.com/tillhub/schemas/compare/v3.52.0...v3.53.0) (2019-07-05)
+
+
+### Features
+
+* **configurations:** add product self sustained query ([2968bf5](https://github.com/tillhub/schemas/commit/2968bf5))
+
 # [3.52.0](https://github.com/tillhub/schemas/compare/v3.51.0...v3.52.0) (2019-07-05)
 
 

@@ -156,6 +156,10 @@
                           "type": "null"
                         }
                       ]
+                    },
+                    "only_self_sustained": {
+                      "description": "Instruct clients to filter for types 'variant_product', 'product' and 'voucher'",
+                      "type": "boolean"
                     }
                   }
                 }
