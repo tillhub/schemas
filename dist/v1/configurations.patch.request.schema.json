@@ -581,6 +581,17 @@
                   "type": "null"
                 }
               ]
+            },
+            "show_staff_number": {
+              "oneOf": [
+                {
+                  "type": "boolean",
+                  "default": true
+                },
+                {
+                  "type": "null"
+                }
+              ]
             }
           }
         },

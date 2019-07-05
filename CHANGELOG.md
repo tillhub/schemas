@@ -1,3 +1,10 @@
+# [3.49.0](https://github.com/tillhub/schemas/compare/v3.48.0...v3.49.0) (2019-07-05)
+
+
+### Features
+
+* **config:** add prop to staff config ([#131](https://github.com/tillhub/schemas/issues/131)) ([5740739](https://github.com/tillhub/schemas/commit/5740739))
+
 # [3.48.0](https://github.com/tillhub/schemas/compare/v3.47.0...v3.48.0) (2019-07-05)
 
 
