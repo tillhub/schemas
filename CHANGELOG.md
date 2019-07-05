@@ -1,3 +1,10 @@
+# [3.48.0](https://github.com/tillhub/schemas/compare/v3.47.0...v3.48.0) (2019-07-05)
+
+
+### Features
+
+* **loyalties:** add description ([6388d40](https://github.com/tillhub/schemas/commit/6388d40))
+
 # [3.47.0](https://github.com/tillhub/schemas/compare/v3.46.0...v3.47.0) (2019-07-04)
 
 

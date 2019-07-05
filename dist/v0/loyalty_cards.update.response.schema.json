@@ -40,6 +40,7 @@
     },
     "active": {
       "type": "boolean",
+      "description": "The card defaults to inactive, if this property is not specified. Only active cards will be able to collect loyalty values.",
       "default": false
     },
     "metadata": {

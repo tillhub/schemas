@@ -61,7 +61,9 @@
       "type": "boolean"
     },
     "active": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "The accounts defaults to active, if this property is not specified. Only active accounts will be able to collect loyalty values on their respective loyalty cards.",
+      "default": true
     },
     "metadata": {
       "oneOf": [
