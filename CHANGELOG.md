@@ -1,3 +1,10 @@
+# [3.50.0](https://github.com/tillhub/schemas/compare/v3.49.0...v3.50.0) (2019-07-05)
+
+
+### Features
+
+* **configurations:** staff configuration ([#133](https://github.com/tillhub/schemas/issues/133)) ([b8f8c1c](https://github.com/tillhub/schemas/commit/b8f8c1c))
+
 # [3.49.0](https://github.com/tillhub/schemas/compare/v3.48.0...v3.49.0) (2019-07-05)
 
 

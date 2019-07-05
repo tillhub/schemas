@@ -539,6 +539,7 @@
           "additionalProperties": true,
           "properties": {
             "salesman_pin_policy": {
+              "description": "The salesperson selection screen will be presented automatically before or after a sale (or not in case of none).",
               "oneOf": [
                 {
                   "type": "string",
@@ -554,6 +555,7 @@
               ]
             },
             "customer_add_policy": {
+              "description": "The customer selection screen will be presented automatically before or after a sale (or not in case of none).",
               "oneOf": [
                 {
                   "type": "string",
@@ -569,6 +571,7 @@
               ]
             },
             "cashier_pin_policy": {
+              "description": "If required, the client shows a non-discardable login view (staff selection + login).",
               "oneOf": [
                 {
                   "type": "string",
@@ -583,10 +586,36 @@
               ]
             },
             "show_staff_number": {
+              "description": "If true, staff number will be shown below the name in the staff selection view.",
               "oneOf": [
                 {
                   "type": "boolean",
                   "default": true
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "promote_permissions": {
+              "description": "If true, the client performs a migration from legacy permissions once.",
+              "oneOf": [
+                {
+                  "type": "boolean",
+                  "default": false
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "staff_number_length": {
+              "description": "If the API defines a specific length for a staff number it can be reported here.",
+              "oneOf": [
+                {
+                  "type": "integer",
+                  "minimum": 2,
+                  "maximum": 32
                 },
                 {
                   "type": "null"
