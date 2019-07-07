@@ -1,3 +1,10 @@
+# [3.54.0](https://github.com/tillhub/schemas/compare/v3.53.0...v3.54.0) (2019-07-07)
+
+
+### Features
+
+* **Balances:** Balances.extended ([548bea7](https://github.com/tillhub/schemas/commit/548bea7))
+
 # [3.53.0](https://github.com/tillhub/schemas/compare/v3.52.0...v3.53.0) (2019-07-05)
 
 
