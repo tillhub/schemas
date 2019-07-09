@@ -1,3 +1,10 @@
+## [3.55.1](https://github.com/tillhub/schemas/compare/v3.55.0...v3.55.1) (2019-07-09)
+
+
+### Bug Fixes
+
+* **devices:** add `deleted` flag ([b5b632f](https://github.com/tillhub/schemas/commit/b5b632f))
+
 # [3.55.0](https://github.com/tillhub/schemas/compare/v3.54.0...v3.55.0) (2019-07-09)
 
 

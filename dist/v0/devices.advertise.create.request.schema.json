@@ -290,6 +290,9 @@
           "type": "null"
         }
       ]
+    },
+    "deleted": {
+      "type": "boolean"
     }
   }
 }

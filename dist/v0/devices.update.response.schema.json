@@ -295,6 +295,9 @@
         }
       ]
     },
+    "deleted": {
+      "type": "boolean"
+    },
     "id": {
       "type": "string",
       "format": "uuid"
