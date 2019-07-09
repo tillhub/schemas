@@ -1,3 +1,10 @@
+## [3.55.2](https://github.com/tillhub/schemas/compare/v3.55.1...v3.55.2) (2019-07-09)
+
+
+### Bug Fixes
+
+* **products:** change format for start, end date ([#137](https://github.com/tillhub/schemas/issues/137)) ([a324aa8](https://github.com/tillhub/schemas/commit/a324aa8))
+
 ## [3.55.1](https://github.com/tillhub/schemas/compare/v3.55.0...v3.55.1) (2019-07-09)
 
 

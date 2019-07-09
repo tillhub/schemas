@@ -313,11 +313,11 @@
                     "properties": {
                       "start": {
                         "type": "string",
-                        "format": "date-time"
+                        "format": "date"
                       },
                       "end": {
                         "type": "string",
-                        "format": "date-time"
+                        "format": "date"
                       }
                     },
                     "required": [
