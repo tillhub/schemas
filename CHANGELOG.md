@@ -1,3 +1,10 @@
+# [3.55.0](https://github.com/tillhub/schemas/compare/v3.54.0...v3.55.0) (2019-07-09)
+
+
+### Features
+
+* **GET:** allow additional props ([fbe29b9](https://github.com/tillhub/schemas/commit/fbe29b9))
+
 # [3.54.0](https://github.com/tillhub/schemas/compare/v3.53.0...v3.54.0) (2019-07-07)
 
 
