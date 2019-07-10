@@ -1,3 +1,12 @@
+## [3.55.5](https://github.com/tillhub/schemas/compare/v3.55.4...v3.55.5) (2019-07-10)
+
+
+### Bug Fixes
+
+* **time-entries:** add owner field and descriptions ([065ce74](https://github.com/tillhub/schemas/commit/065ce74))
+* **time-entries:** fixing fields length ([8fc9d24](https://github.com/tillhub/schemas/commit/8fc9d24))
+* **time-entries:** rename start and end fields ([086b436](https://github.com/tillhub/schemas/commit/086b436))
+
 ## [3.55.4](https://github.com/tillhub/schemas/compare/v3.55.3...v3.55.4) (2019-07-10)
 
 
