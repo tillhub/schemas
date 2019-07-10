@@ -6,6 +6,7 @@
   "required": [],
   "properties": {
     "type": {
+      "description": "The type of the time entry.",
       "type": "string",
       "enum": [
         "day",
@@ -13,6 +14,7 @@
       ]
     },
     "description": {
+      "description": "The description about the task.",
       "anyOf": [
         {
           "type": "string",
@@ -24,11 +26,13 @@
         }
       ]
     },
-    "start": {
+    "start_time_entry": {
+      "description": "The start of the time entry.",
       "type": "string",
       "format": "date-time"
     },
-    "end": {
+    "end_time_entry": {
+      "description": "The end of the time entry.",
       "anyOf": [
         {
           "type": "string",
@@ -40,14 +44,24 @@
       ]
     },
     "staff": {
+      "description": "The staff member which is clocking in/out.",
       "type": "string",
       "maxLength": 128
     },
-    "owner": {
-      "type": "string",
-      "maxLength": 128
+    "client_id": {
+      "description": "The client id of the costumer.",
+      "anyOf": [
+        {
+          "type": "string",
+          "maxLength": 128
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "custom_properties": {
+      "description": "Any custom properties necessary.",
       "anyOf": [
         {
           "type": "string",
@@ -59,17 +73,11 @@
       ]
     },
     "metadata": {
-      "anyOf": [
-        {
-          "type": "string",
-          "maxLength": 255
-        },
-        {
-          "type": "null"
-        }
-      ]
+      "description": "Any metadata necessary.",
+      "type": "object"
     },
     "location": {
+      "description": "Any location necessary.",
       "anyOf": [
         {
           "type": "string",
@@ -81,7 +89,14 @@
       ]
     },
     "deleted": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "If the time entry is deleted or not.",
+      "default": false
+    },
+    "active": {
+      "type": "boolean",
+      "description": "If the time entry is active or not.",
+      "default": true
     }
   }
 }

@@ -1,3 +1,10 @@
+## [3.55.3](https://github.com/tillhub/schemas/compare/v3.55.2...v3.55.3) (2019-07-10)
+
+
+### Bug Fixes
+
+* **time-entries:** rename and add default fields ([af27800](https://github.com/tillhub/schemas/commit/af27800))
+
 ## [3.55.2](https://github.com/tillhub/schemas/compare/v3.55.1...v3.55.2) (2019-07-09)
 
 
