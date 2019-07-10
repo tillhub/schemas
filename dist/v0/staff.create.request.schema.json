@@ -165,7 +165,7 @@
       "anyOf": [
         {
           "type": "object",
-          "additionalProperties": true,
+          "additionalProperties": false,
           "properties": {
             "original": {
               "type": "string",
@@ -485,7 +485,7 @@
                   "type": {
                     "type": "string",
                     "enum": [
-                      "percentage",
+                      "percent",
                       "value"
                     ]
                   },
@@ -569,6 +569,13 @@
       "type": "string",
       "maxLength": 10,
       "minLength": 1
+    },
+    "locations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uuid"
+      }
     },
     "default": {
       "type": "boolean"

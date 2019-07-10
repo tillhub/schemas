@@ -1,3 +1,10 @@
+## [3.55.4](https://github.com/tillhub/schemas/compare/v3.55.3...v3.55.4) (2019-07-10)
+
+
+### Bug Fixes
+
+* **staff:** remove commented code ([7f617d3](https://github.com/tillhub/schemas/commit/7f617d3))
+
 ## [3.55.3](https://github.com/tillhub/schemas/compare/v3.55.2...v3.55.3) (2019-07-10)
 
 
