@@ -1,3 +1,10 @@
+## [3.56.1](https://github.com/tillhub/schemas/compare/v3.56.0...v3.56.1) (2019-07-11)
+
+
+### Bug Fixes
+
+* **staff:** alllow locations null ([#144](https://github.com/tillhub/schemas/issues/144)) ([f1fee51](https://github.com/tillhub/schemas/commit/f1fee51))
+
 # [3.56.0](https://github.com/tillhub/schemas/compare/v3.55.5...v3.56.0) (2019-07-11)
 
 

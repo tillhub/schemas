@@ -571,11 +571,18 @@
       "minLength": 1
     },
     "locations": {
-      "type": "array",
-      "items": {
-        "type": "string",
-        "format": "uuid"
-      }
+      "anyOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "default": {
       "type": "boolean"
