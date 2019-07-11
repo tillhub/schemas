@@ -140,6 +140,10 @@
           "type": "null"
         }
       ]
+    },
+    "accepts_booking_from_safe": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

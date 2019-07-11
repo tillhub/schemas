@@ -1,3 +1,10 @@
+# [3.56.0](https://github.com/tillhub/schemas/compare/v3.55.5...v3.56.0) (2019-07-11)
+
+
+### Features
+
+* **expense_acc:** add accepts_booking_from_safe ([7c3b01f](https://github.com/tillhub/schemas/commit/7c3b01f))
+
 ## [3.55.5](https://github.com/tillhub/schemas/compare/v3.55.4...v3.55.5) (2019-07-10)
 
 
