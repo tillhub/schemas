@@ -1,3 +1,10 @@
+# [3.57.0](https://github.com/tillhub/schemas/compare/v3.56.1...v3.57.0) (2019-07-12)
+
+
+### Features
+
+* **safe_log_book:** add transfer type ([8a8c2fe](https://github.com/tillhub/schemas/commit/8a8c2fe))
+
 ## [3.56.1](https://github.com/tillhub/schemas/compare/v3.56.0...v3.56.1) (2019-07-11)
 
 
