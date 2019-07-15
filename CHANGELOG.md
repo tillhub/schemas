@@ -1,3 +1,10 @@
+## [3.57.1](https://github.com/tillhub/schemas/compare/v3.57.0...v3.57.1) (2019-07-15)
+
+
+### Bug Fixes
+
+* **time_entries:** make metada nullable ([12f9782](https://github.com/tillhub/schemas/commit/12f9782))
+
 # [3.57.0](https://github.com/tillhub/schemas/compare/v3.56.1...v3.57.0) (2019-07-12)
 
 

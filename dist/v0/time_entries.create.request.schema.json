@@ -93,8 +93,15 @@
     },
     "metadata": {
       "description": "Arbitrary user defined data.",
-      "type": "object",
-      "maxProperties": 10
+      "anyOf": [
+        {
+          "type": "object",
+          "maxProperties": 10
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "location": {
       "description": "Arbitrary user location.",
