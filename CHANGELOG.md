@@ -1,3 +1,10 @@
+## [3.57.2](https://github.com/tillhub/schemas/compare/v3.57.1...v3.57.2) (2019-07-17)
+
+
+### Bug Fixes
+
+* **staff:** remove specific scopes as it can expand ([6b9e6db](https://github.com/tillhub/schemas/commit/6b9e6db))
+
 ## [3.57.1](https://github.com/tillhub/schemas/compare/v3.57.0...v3.57.1) (2019-07-15)
 
 
