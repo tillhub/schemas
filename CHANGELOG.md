@@ -1,3 +1,10 @@
+# [3.58.0](https://github.com/tillhub/schemas/compare/v3.57.2...v3.58.0) (2019-07-17)
+
+
+### Features
+
+* **loyalties:** update book schemas ([f2c2875](https://github.com/tillhub/schemas/commit/f2c2875))
+
 ## [3.57.2](https://github.com/tillhub/schemas/compare/v3.57.1...v3.57.2) (2019-07-17)
 
 
