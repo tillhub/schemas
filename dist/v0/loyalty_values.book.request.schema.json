@@ -52,9 +52,8 @@
       "oneOf": [
         {
           "type": "string",
-          "description": "The rules by which the destination amount should be calculated. \"exchange_rate\" will trigger a lookup in voucher_systems.exchange_rates, while \"custom\" will trigger the relevant hook from loyalty_systems.hooks",
+          "description": "The rules by which the destination amount should be calculated. The option \"custom\" will trigger the relevant hook from loyalty_systems.hooks. Another options, which is not available yet but will be added in the future is \"exchange_rate\". This will trigger a lookup in voucher_systems.exchange_rates to determine the voucher value.",
           "enum": [
-            "exchange_rate",
             "custom"
           ]
         },
@@ -67,7 +66,7 @@
       "oneOf": [
         {
           "type": "string",
-          "description": "The entity where the values should be transferred to, e.g. \"voucher\"",
+          "description": "The entity where the values should be transferred to. At this moment, the only option is \"voucher\", but can potentially be extended in the future.",
           "enum": [
             "voucher"
           ]

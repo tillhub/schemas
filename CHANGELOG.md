@@ -1,3 +1,10 @@
+# [3.60.0](https://github.com/tillhub/schemas/compare/v3.59.0...v3.60.0) (2019-07-18)
+
+
+### Features
+
+* **loyalties:** add descriptions for booking ([3c72bdb](https://github.com/tillhub/schemas/commit/3c72bdb))
+
 # [3.59.0](https://github.com/tillhub/schemas/compare/v3.58.0...v3.59.0) (2019-07-18)
 
 
