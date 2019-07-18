@@ -1,3 +1,10 @@
+# [3.64.0](https://github.com/tillhub/schemas/compare/v3.63.0...v3.64.0) (2019-07-18)
+
+
+### Features
+
+* **vouchers:** add get schema ([ddfae6a](https://github.com/tillhub/schemas/commit/ddfae6a))
+
 # [3.63.0](https://github.com/tillhub/schemas/compare/v3.62.0...v3.63.0) (2019-07-18)
 
 
