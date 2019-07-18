@@ -1,3 +1,10 @@
+# [3.62.0](https://github.com/tillhub/schemas/compare/v3.61.0...v3.62.0) (2019-07-18)
+
+
+### Features
+
+* **transactions:** add timezone ([fd42bb6](https://github.com/tillhub/schemas/commit/fd42bb6))
+
 # [3.61.0](https://github.com/tillhub/schemas/compare/v3.60.0...v3.61.0) (2019-07-18)
 
 
