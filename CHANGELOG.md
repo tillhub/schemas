@@ -1,3 +1,10 @@
+# [3.63.0](https://github.com/tillhub/schemas/compare/v3.62.0...v3.63.0) (2019-07-18)
+
+
+### Features
+
+* **configurations:** extend custom_dashboards ([6a7780b](https://github.com/tillhub/schemas/commit/6a7780b))
+
 # [3.62.0](https://github.com/tillhub/schemas/compare/v3.61.0...v3.62.0) (2019-07-18)
 
 
