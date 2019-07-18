@@ -1,3 +1,10 @@
+# [3.61.0](https://github.com/tillhub/schemas/compare/v3.60.0...v3.61.0) (2019-07-18)
+
+
+### Features
+
+* **favourites:** extend types ([f73170e](https://github.com/tillhub/schemas/commit/f73170e))
+
 # [3.60.0](https://github.com/tillhub/schemas/compare/v3.59.0...v3.60.0) (2019-07-18)
 
 
