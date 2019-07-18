@@ -1,3 +1,10 @@
+# [3.59.0](https://github.com/tillhub/schemas/compare/v3.58.0...v3.59.0) (2019-07-18)
+
+
+### Features
+
+* **notes:** add client_id and date for IOS team ([57aa66a](https://github.com/tillhub/schemas/commit/57aa66a))
+
 # [3.58.0](https://github.com/tillhub/schemas/compare/v3.57.2...v3.58.0) (2019-07-17)
 
 

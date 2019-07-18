@@ -935,6 +935,28 @@
                   "payload": {
                     "type": "string",
                     "maxLength": 16384
+                  },
+                  "client_id": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 128
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "date": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
                   }
                 }
               }
