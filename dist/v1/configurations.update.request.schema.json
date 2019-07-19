@@ -1815,13 +1815,15 @@
                                 "type": "string",
                                 "enum": [
                                   "nav",
+                                  "nav.reports",
                                   "nav.reports.statistics",
                                   "nav.reports.financial_accounting",
                                   "nav.reports.exports",
                                   "nav.products",
                                   "nav.customers",
                                   "nav.vouchers",
-                                  "nav.staff"
+                                  "nav.staff",
+                                  "nav.utilities"
                                 ]
                               }
                             }

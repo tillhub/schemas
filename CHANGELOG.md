@@ -1,3 +1,10 @@
+# [3.65.0](https://github.com/tillhub/schemas/compare/v3.64.0...v3.65.0) (2019-07-19)
+
+
+### Features
+
+* **config:** extend available hooks ([c42372d](https://github.com/tillhub/schemas/commit/c42372d))
+
 # [3.64.0](https://github.com/tillhub/schemas/compare/v3.63.0...v3.64.0) (2019-07-18)
 
 
