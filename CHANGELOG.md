@@ -1,3 +1,10 @@
+## [3.65.1](https://github.com/tillhub/schemas/compare/v3.65.0...v3.65.1) (2019-07-19)
+
+
+### Bug Fixes
+
+* **voucher:** update numbers type to string ([38e8ad0](https://github.com/tillhub/schemas/commit/38e8ad0))
+
 # [3.65.0](https://github.com/tillhub/schemas/compare/v3.64.0...v3.65.0) (2019-07-19)
 
 
