@@ -144,6 +144,44 @@
     "accepts_booking_from_safe": {
       "type": "boolean",
       "default": false
+    },
+    "images": {
+      "description": "A Tillhub image object with URLs to display images for expenses.",
+      "anyOf": [
+        {
+          "type": "object",
+          "additionalProperties": true,
+          "properties": {
+            "original": {
+              "type": "string",
+              "format": "uri"
+            },
+            "gallery": {
+              "type": "string",
+              "format": "uri"
+            },
+            "avatar": {
+              "type": "string",
+              "format": "uri"
+            },
+            "1x": {
+              "type": "string",
+              "format": "uri"
+            },
+            "2x": {
+              "type": "string",
+              "format": "uri"
+            },
+            "3x": {
+              "type": "string",
+              "format": "uri"
+            }
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
     }
   }
 }

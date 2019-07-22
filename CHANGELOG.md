@@ -1,3 +1,15 @@
+# [3.66.0](https://github.com/tillhub/schemas/compare/v3.65.1...v3.66.0) (2019-07-22)
+
+
+### Bug Fixes
+
+* **expenses:** add more images format ([361d875](https://github.com/tillhub/schemas/commit/361d875))
+
+
+### Features
+
+* **expense-deposits:** add images ([ca73bf9](https://github.com/tillhub/schemas/commit/ca73bf9))
+
 ## [3.65.1](https://github.com/tillhub/schemas/compare/v3.65.0...v3.65.1) (2019-07-19)
 
 
