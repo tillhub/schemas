@@ -1,3 +1,10 @@
+# [3.67.0](https://github.com/tillhub/schemas/compare/v3.66.0...v3.67.0) (2019-07-22)
+
+
+### Features
+
+* **Configurations:** Configurations.tips ([#155](https://github.com/tillhub/schemas/issues/155)) ([b2fa02c](https://github.com/tillhub/schemas/commit/b2fa02c))
+
 # [3.66.0](https://github.com/tillhub/schemas/compare/v3.65.1...v3.66.0) (2019-07-22)
 
 
