@@ -1,0 +1,49 @@
+{
+  "$id": "https://schemas.tillhub.com/v1/transacions_ext.update.request.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "type": "object",
+  "required": [],
+  "properties": {
+    "additionalProperties": false,
+    "images": {
+      "description": "A Tillhub images object with URLs to display images for this expense/deposit.",
+      "anyOf": [
+        {
+          "type": "object",
+          "additionalProperties": true,
+          "properties": {
+            "original": {
+              "type": "string",
+              "format": "uri"
+            },
+            "1x": {
+              "type": "string",
+              "format": "uri"
+            },
+            "2x": {
+              "type": "string",
+              "format": "uri"
+            },
+            "3x": {
+              "type": "string",
+              "format": "uri"
+            }
+          }
+        }
+      ]
+    },
+    "metadata": {
+      "oneOf": [
+        {
+          "type": "object",
+          "description": "A container for storing arbitrary metadata."
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    }
+  }
+}

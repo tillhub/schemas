@@ -1,3 +1,16 @@
+# [3.68.0](https://github.com/tillhub/schemas/compare/v3.67.3...v3.68.0) (2019-07-23)
+
+
+### Bug Fixes
+
+* **transactins-ext:** fix test ([607dfde](https://github.com/tillhub/schemas/commit/607dfde))
+* **transactions_ext:** resolve schema ([fe1d365](https://github.com/tillhub/schemas/commit/fe1d365))
+
+
+### Features
+
+* **transactions_ext:** add schema to transactions_ext ([8f131fd](https://github.com/tillhub/schemas/commit/8f131fd))
+
 ## [3.67.3](https://github.com/tillhub/schemas/compare/v3.67.2...v3.67.3) (2019-07-23)
 
 
