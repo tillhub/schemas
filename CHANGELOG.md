@@ -1,3 +1,10 @@
+## [3.67.1](https://github.com/tillhub/schemas/compare/v3.67.0...v3.67.1) (2019-07-23)
+
+
+### Bug Fixes
+
+* **expenses:** add images to expenses and deposits ([ee632fb](https://github.com/tillhub/schemas/commit/ee632fb))
+
 # [3.67.0](https://github.com/tillhub/schemas/compare/v3.66.0...v3.67.0) (2019-07-22)
 
 
