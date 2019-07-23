@@ -1,3 +1,10 @@
+## [3.67.2](https://github.com/tillhub/schemas/compare/v3.67.1...v3.67.2) (2019-07-23)
+
+
+### Bug Fixes
+
+* **expenses:** add images to expenses ([ef86c97](https://github.com/tillhub/schemas/commit/ef86c97))
+
 ## [3.67.1](https://github.com/tillhub/schemas/compare/v3.67.0...v3.67.1) (2019-07-23)
 
 
