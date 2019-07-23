@@ -1,3 +1,10 @@
+## [3.67.3](https://github.com/tillhub/schemas/compare/v3.67.2...v3.67.3) (2019-07-23)
+
+
+### Bug Fixes
+
+* **transactions_ext:** fix response and request validation ([46fdcad](https://github.com/tillhub/schemas/commit/46fdcad))
+
 ## [3.67.2](https://github.com/tillhub/schemas/compare/v3.67.1...v3.67.2) (2019-07-23)
 
 
