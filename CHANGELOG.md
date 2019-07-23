@@ -1,3 +1,10 @@
+# [3.69.0](https://github.com/tillhub/schemas/compare/v3.68.0...v3.69.0) (2019-07-23)
+
+
+### Features
+
+* **custom_dashboards:** allow to pass token ([2b73bb8](https://github.com/tillhub/schemas/commit/2b73bb8))
+
 # [3.68.0](https://github.com/tillhub/schemas/compare/v3.67.3...v3.68.0) (2019-07-23)
 
 
