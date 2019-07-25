@@ -6,6 +6,11 @@
   "required": [],
   "properties": {
     "additionalProperties": false,
+    "transaction_id": {
+      "description": "The transaction uuid for this expense/deposit.",
+      "type": "string",
+      "format": "uuid"
+    },
     "images": {
       "description": "A Tillhub images object with URLs to display images for this expense/deposit.",
       "anyOf": [

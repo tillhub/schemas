@@ -1,3 +1,10 @@
+## [3.69.2](https://github.com/tillhub/schemas/compare/v3.69.1...v3.69.2) (2019-07-25)
+
+
+### Bug Fixes
+
+* **transactions-ext:** add transaction id ([e2c3a10](https://github.com/tillhub/schemas/commit/e2c3a10))
+
 ## [3.69.1](https://github.com/tillhub/schemas/compare/v3.69.0...v3.69.1) (2019-07-25)
 
 
