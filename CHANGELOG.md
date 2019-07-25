@@ -1,3 +1,10 @@
+## [3.69.3](https://github.com/tillhub/schemas/compare/v3.69.2...v3.69.3) (2019-07-25)
+
+
+### Bug Fixes
+
+* **transactions-ext:** remove transaction_id required ([dbaa1d8](https://github.com/tillhub/schemas/commit/dbaa1d8))
+
 ## [3.69.2](https://github.com/tillhub/schemas/compare/v3.69.1...v3.69.2) (2019-07-25)
 
 

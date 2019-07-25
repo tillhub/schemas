@@ -4,7 +4,6 @@
   "additionalProperties": false,
   "type": "object",
   "required": [
-    "transaction_id",
     "images"
   ],
   "properties": {
