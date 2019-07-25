@@ -7,61 +7,58 @@
     "id"
   ],
   "properties": {
-    "type": "object",
     "additionalProperties": false,
-    "required": [],
-    "properties": {
-      "additionalProperties": false,
-      "images": {
-        "description": "A Tillhub images object with URLs to display images for this expense/deposit.",
-        "anyOf": [
-          {
-            "type": "object",
-            "additionalProperties": true,
-            "properties": {
-              "original": {
-                "type": "string",
-                "format": "uri"
-              },
-              "1x": {
-                "type": "string",
-                "format": "uri"
-              },
-              "2x": {
-                "type": "string",
-                "format": "uri"
-              },
-              "3x": {
-                "type": "string",
-                "format": "uri"
-              }
+    "images": {
+      "description": "A Tillhub images object with URLs to display images for this expense/deposit.",
+      "anyOf": [
+        {
+          "type": "object",
+          "additionalProperties": true,
+          "properties": {
+            "original": {
+              "type": "string",
+              "format": "uri"
+            },
+            "1x": {
+              "type": "string",
+              "format": "uri"
+            },
+            "2x": {
+              "type": "string",
+              "format": "uri"
+            },
+            "3x": {
+              "type": "string",
+              "format": "uri"
             }
           }
-        ]
-      },
-      "metadata": {
-        "oneOf": [
-          {
-            "type": "object",
-            "description": "A container for storing arbitrary metadata."
-          },
-          {
-            "type": "null"
-          }
-        ],
-        "default": null
-      },
-      "id": {
-        "type": "string",
-        "format": "uuid",
-        "description": "The item resource reference ID."
-      },
-      "created_at": {
-        "type": "string",
-        "format": "date-time",
-        "example": "2018-11-04T23:18:43.075Z",
-        "description": "The server creation time of this item."
-      }
+        }
+      ]
+    },
+    "metadata": {
+      "oneOf": [
+        {
+          "type": "object",
+          "description": "A container for storing arbitrary metadata."
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "The item resource reference ID."
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
     }
   }
 }

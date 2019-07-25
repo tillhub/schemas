@@ -1,8 +1,8 @@
 [
   "/index.json",
   "/currency.available.schema.json",
-  "/patch.request.schema.json",
   "/timezone.schema.json",
+  "/patch.request.schema.json",
   "/accounts.create.request.schema.json",
   "/accounts.update.request.schema.json",
   "/branches.create.request.schema.json",
@@ -60,16 +60,16 @@
   "/loyalty_logs.create.request.schema.json",
   "/loyalty_logs.create.response.schema.json",
   "/loyalty_logs.get.query.schema.json",
-  "/loyalty_systems.create.response.schema.json",
   "/loyalty_systems.create.request.schema.json",
+  "/loyalty_systems.create.response.schema.json",
   "/loyalty_systems.get.query.schema.json",
   "/loyalty_systems.update.request.schema.json",
   "/loyalty_systems.update.response.schema.json",
   "/loyalty_values.book.request.query.schema.json",
   "/loyalty_values.book.request.schema.json",
   "/loyalty_values.create.request.schema.json",
-  "/loyalty_values.get.query.schema.json",
   "/loyalty_values.create.response.schema.json",
+  "/loyalty_values.get.query.schema.json",
   "/messages.create.request.schema.json",
   "/messages.update.request.schema.json",
   "/orders.create.request.schema.json",
@@ -161,7 +161,7 @@
   "/transactions.get-all.response.schema.json",
   "/transactions.get-one.response.schema.json",
   "/transactions.post.response.schema.json",
+  "/transactions_ext.create.request.schema.json",
   "/transactions_ext.create.response.schema.json",
-  "/vouchers.patch.schema.json",
-  "/transactions_ext.create.request.schema.json"
+  "/vouchers.patch.schema.json"
 ]

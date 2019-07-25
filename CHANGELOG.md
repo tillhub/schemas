@@ -1,3 +1,10 @@
+## [3.69.1](https://github.com/tillhub/schemas/compare/v3.69.0...v3.69.1) (2019-07-25)
+
+
+### Bug Fixes
+
+* **transactions-ext:** fix response schema validation ([271c750](https://github.com/tillhub/schemas/commit/271c750))
+
 # [3.69.0](https://github.com/tillhub/schemas/compare/v3.68.0...v3.69.0) (2019-07-23)
 
 
