@@ -1,3 +1,10 @@
+# [3.71.0](https://github.com/tillhub/schemas/compare/v3.70.0...v3.71.0) (2019-07-26)
+
+
+### Features
+
+* **loyalty_cards:** add schema for lookup route ([8abd342](https://github.com/tillhub/schemas/commit/8abd342))
+
 # [3.70.0](https://github.com/tillhub/schemas/compare/v3.69.3...v3.70.0) (2019-07-26)
 
 
