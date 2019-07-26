@@ -1,3 +1,10 @@
+# [3.70.0](https://github.com/tillhub/schemas/compare/v3.69.3...v3.70.0) (2019-07-26)
+
+
+### Features
+
+* **loyalties:** add get all and get one response schema ([2a7e4dc](https://github.com/tillhub/schemas/commit/2a7e4dc))
+
 ## [3.69.3](https://github.com/tillhub/schemas/compare/v3.69.2...v3.69.3) (2019-07-25)
 
 
