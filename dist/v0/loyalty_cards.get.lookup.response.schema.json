@@ -1,0 +1,511 @@
+{
+  "$id": "https://schemas.tillhub.com/v0/loyalty_cards.get.lookup.response.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": true,
+  "type": "object",
+  "required": [
+    "loyalty_system",
+    "card_code"
+  ],
+  "properties": {
+    "loyalty_system": {
+      "name": {
+        "type": "string",
+        "example": "Miles and More",
+        "minLength": 1,
+        "maxLength": 128
+      },
+      "system_vendor": {
+        "type": "string",
+        "enum": [
+          "miles_and_more",
+          "payback",
+          "tillhub_loyalties"
+        ],
+        "example": "tillhub_loyalties"
+      },
+      "description": {
+        "oneOf": [
+          {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 4096
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "deleted": {
+        "type": "boolean"
+      },
+      "active": {
+        "type": "boolean"
+      },
+      "value_configurations": {
+        "oneOf": [
+          {
+            "type": "array",
+            "description": "This is where the main configuration of the values that are being saved in the loyalty account lives. Per item an entry is being saved. By default, if value_types is not defined, the mere revenue from the cart item is saved. E.g. if the transaction_cart_item has a total_value of 30.00 EUR, an entry will be saved in the account's value of 30 EUR. If the implementor desires to save only 1% of the revenue as a value, then he needs to define a value_type item where factor = 0.01.",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "minItems": 1,
+              "required": [
+                "base"
+              ],
+              "properties": {
+                "custom_unit": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "description": "Custom unit names can be defined here. If custom_unit is not defined, it will default to the currency of the cart item.",
+                      "examples": [
+                        "miles",
+                        "points",
+                        "stamps"
+                      ],
+                      "minLength": 1,
+                      "maxLength": 128
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "base": {
+                  "type": "string",
+                  "description": "The value that is being saved in the loyalty account is calculated by: base * factor = value [unit]. A choice of \"lookup\" means that the base will be looked up in the products table. A choice of \"custom\" means that a custom function (defined in the property \"incoming_hook\") will be applied.",
+                  "enum": [
+                    "revenue",
+                    "lookup",
+                    "custom"
+                  ]
+                },
+                "factor": {
+                  "oneOf": [
+                    {
+                      "type": "number",
+                      "description": "The value that is being saved in the loyalty account is calculated by: base * factor = value [unit]. If not defined, a factor of 1 will be applied.",
+                      "minimum": 0,
+                      "multipleOf": 0.01,
+                      "default": 1
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "incoming_hook": {
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "endpoint",
+                        "method"
+                      ],
+                      "properties": {
+                        "endpoint": {
+                          "type": "string",
+                          "description": "The url of the cloud based function",
+                          "example": "https://us-central1-<project-id>.cloudfunctions.net/date"
+                        },
+                        "method": {
+                          "oneOf": [
+                            {
+                              "type": "string",
+                              "enum": [
+                                "GET",
+                                "POST",
+                                "PUT"
+                              ]
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "auth": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "required": [
+                            "type"
+                          ],
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "enum": [
+                                "basic",
+                                "token",
+                                "bearer_token"
+                              ]
+                            },
+                            "token": {
+                              "type": "string"
+                            },
+                            "user": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      },
+                      "example": {
+                        "endpoint": "https://us-central1-<project-id>.cloudfunctions.net/date",
+                        "method": "GET",
+                        "auth": {
+                          "type": "basic",
+                          "user": "some_user_name_123123",
+                          "token": "abc123456789"
+                        }
+                      },
+                      "description": "The configuration of a cloud based function. It will be applied then property base has been set as \"custom\". The arguments that are being passed into the function are the transaction, the product data and the customer data."
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "outgoing_hook": {
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "endpoint",
+                        "method"
+                      ],
+                      "properties": {
+                        "endpoint": {
+                          "type": "string",
+                          "description": "The url of the cloud based function",
+                          "example": "https://us-central1-<project-id>.cloudfunctions.net/date"
+                        },
+                        "method": {
+                          "oneOf": [
+                            {
+                              "type": "string",
+                              "enum": [
+                                "GET",
+                                "POST",
+                                "PUT"
+                              ]
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "auth": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "required": [
+                            "type"
+                          ],
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "enum": [
+                                "basic",
+                                "token",
+                                "bearer_token"
+                              ]
+                            },
+                            "token": {
+                              "type": "string"
+                            },
+                            "user": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      },
+                      "example": {
+                        "endpoint": "https://us-central1-<project-id>.cloudfunctions.net/date",
+                        "method": "GET",
+                        "auth": {
+                          "type": "basic",
+                          "user": "some_user_name_123123",
+                          "token": "abc123456789"
+                        }
+                      },
+                      "description": "The url of a cloud based function. This function will be applied to the values, when they are booked away from the account using the route POST \"/loyalties/:user/:system_id/book\". The arguments that are being passed into the function are the transaction, the product data and the customer data."
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "eligible_products": {
+        "oneOf": [
+          {
+            "type": "array",
+            "description": "Only these products will generate an value entry in the loyalty account. It is additive with eligible_product_groups. If not defined, there will be no restrictions.",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "eligible_product_groups": {
+        "oneOf": [
+          {
+            "type": "array",
+            "description": "Only these product groups will generate an value entry in the loyalty account. It is additive with eligible_products. If not defined, there will be no restrictions.",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "branches": {
+        "oneOf": [
+          {
+            "type": "array",
+            "description": "Only these branches will generate an value entry in the loyalty account. If not defined, there will be no restriction on which branches can use this system.",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "region": {
+        "oneOf": [
+          {
+            "type": "string",
+            "description": "The international format for regional sub category of a country e.g. a state or province."
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "country": {
+        "oneOf": [
+          {
+            "type": "string",
+            "description": "A country as ISO Alpha-2 code.",
+            "minLength": 2,
+            "maxLength": 2,
+            "pattern": "^[A-Z]{2}$"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "metadata": {
+        "oneOf": [
+          {
+            "type": "object"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "hooks": {
+        "oneOf": [
+          {
+            "type": "object",
+            "description": "Holds all the hooks for loyalties, divided by resource (systems, accounts, cards, values, logs)",
+            "additionalProperties": false,
+            "required": [],
+            "properties": {
+              "values": {
+                "type": "object",
+                "description": "Holds the hooks for endpoints belonging to loyalty_values",
+                "properties": {
+                  "book": {
+                    "type": "object",
+                    "properties": {
+                      "voucher": {
+                        "oneOf": [
+                          {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "required": [
+                              "endpoint",
+                              "method"
+                            ],
+                            "properties": {
+                              "endpoint": {
+                                "type": "string",
+                                "description": "The url of the cloud based function",
+                                "example": "https://us-central1-<project-id>.cloudfunctions.net/date"
+                              },
+                              "method": {
+                                "oneOf": [
+                                  {
+                                    "type": "string",
+                                    "enum": [
+                                      "GET",
+                                      "POST",
+                                      "PUT"
+                                    ]
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ]
+                              },
+                              "auth": {
+                                "type": "object",
+                                "additionalProperties": false,
+                                "required": [
+                                  "type"
+                                ],
+                                "properties": {
+                                  "type": {
+                                    "type": "string",
+                                    "enum": [
+                                      "basic",
+                                      "token",
+                                      "bearer_token"
+                                    ]
+                                  },
+                                  "token": {
+                                    "type": "string"
+                                  },
+                                  "user": {
+                                    "type": "string"
+                                  }
+                                }
+                              }
+                            },
+                            "example": {
+                              "endpoint": "https://us-central1-<project-id>.cloudfunctions.net/date",
+                              "method": "GET",
+                              "auth": {
+                                "type": "basic",
+                                "user": "some_user_name_123123",
+                                "token": "abc123456789"
+                              }
+                            },
+                            "description": "The hook receives as a parameter an object with the properties \"requestedValue\" and \"customer\". The customer data includes the gender and more. The requestedValue is an object with properties \"amount\" and \"unit\". The expected response from the hook is an object with keys of \"amount\" and \"currency\"."
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              },
+              "logs": {
+                "type": "object",
+                "description": "Holds the hooks for endpoints belonging to loyalty_logs"
+              },
+              "accounts": {
+                "type": "object",
+                "description": "Holds the hooks for endpoints belonging to loyalty_accounts"
+              },
+              "cards": {
+                "type": "object",
+                "description": "Holds the hooks for endpoints belonging to loyalty_cards"
+              },
+              "systems": {
+                "type": "object",
+                "description": "Holds the hooks for endpoints belonging to loyalty_systems"
+              }
+            }
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "exchange_rates": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "type": "object",
+          "description": "Holds all the exchange rates, e.g. points-to-EUR, miles-to-USD, ...",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to",
+            "rate"
+          ],
+          "properties": {
+            "from": {
+              "type": "string",
+              "description": "Name of the unit from which you are converting the amount. This can be a 3 letter ISO currency code or any other string that corresponds to a unit from loyalty_systems.value_configurations."
+            },
+            "to": {
+              "type": "string",
+              "description": "Name of the unit which you are converting the amount to. This can be a 3 letter ISO currency code or any other string that corresponds to a unit from loyalty_systems.value_configurations."
+            },
+            "rate": {
+              "type": "number",
+              "description": "The exchange rate",
+              "minimum": 0,
+              "multipleOf": 0.01,
+              "default": 1
+            }
+          }
+        }
+      }
+    },
+    "card_code": {
+      "type": "string",
+      "description": "The code of the loyalty card that was used to make this request, typically the card's barcode scanned from the POS.",
+      "example": "2s9f384h7"
+    },
+    "values": {
+      "type": "object",
+      "description": "The loyalty values accumulated on the loyalty card",
+      "additionalProperties": false,
+      "properties": {
+        "amount": {
+          "example": "27633.02",
+          "type": "number",
+          "multipleOf": 0.01
+        },
+        "unit": {
+          "type": "string",
+          "examples": [
+            "EUR",
+            "points",
+            "miles"
+          ]
+        }
+      }
+    },
+    "metadata": {
+      "oneOf": [
+        {
+          "type": "object",
+          "description": "Either the data object of loyalty_card from Tillhub database or any information coming back from external providers"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  }
+}

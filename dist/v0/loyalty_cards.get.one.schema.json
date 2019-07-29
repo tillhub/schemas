@@ -1,0 +1,81 @@
+{
+  "$id": "https://schemas.tillhub.com/v0/loyalty_cards.get.one.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": true,
+  "type": "object",
+  "required": [],
+  "properties": {
+    "code": {
+      "type": "string"
+    },
+    "name": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "description": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4096
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "deleted": {
+      "type": "boolean"
+    },
+    "active": {
+      "type": "boolean",
+      "description": "The card defaults to inactive, if this property is not specified. Only active cards will be able to collect loyalty values.",
+      "default": false
+    },
+    "metadata": {
+      "oneOf": [
+        {
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "loyalty_account": {
+      "oneOf": [
+        {
+          "description": "The loyalty account that this card belongs to.",
+          "type": "string",
+          "format": "uuid",
+          "example": "936835f7-2d75-41d2-9001-38ed6e458328"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "loyalty_values": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "amount": {
+            "type": "number"
+          },
+          "unit": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
