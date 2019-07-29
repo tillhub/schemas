@@ -114,7 +114,8 @@
         "deposit",
         "bank",
         "transit",
-        "safe"
+        "safe",
+        "tip"
       ]
     },
     "tax": {

@@ -1,3 +1,10 @@
+# [3.72.0](https://github.com/tillhub/schemas/compare/v3.71.0...v3.72.0) (2019-07-29)
+
+
+### Features
+
+* **expense_account:** add tip type ([17329dd](https://github.com/tillhub/schemas/commit/17329dd))
+
 # [3.71.0](https://github.com/tillhub/schemas/compare/v3.70.0...v3.71.0) (2019-07-26)
 
 
