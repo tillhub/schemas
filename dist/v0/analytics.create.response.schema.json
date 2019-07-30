@@ -1,0 +1,905 @@
+{
+  "$id": "https://schemas.tillhub.com/v0/analytics.create.response.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "type": "object",
+  "properties": {
+    "msg": {
+      "type": "string",
+      "minLength": 1,
+      "example": "Queried transactions sucessefully.",
+      "description": "Any English sentence, meant as information for developers and implementers. Avoid displaying this to the users and especially do not expect thos messages to stay stable."
+    },
+    "msg_localised": {
+      "type": "string",
+      "minLength": 1,
+      "example": "Queried transactions sucessefully.",
+      "description": "Optional localised message that can be displayed to the user if existing. The language can be set by in the request or will fallback to English."
+    },
+    "request": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Information about the request itself.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "The request uuid that can be used to identify and trace API calls.",
+          "format": "uuid"
+        },
+        "host": {
+          "type": "string",
+          "minLength": 1,
+          "example": "https://api.tillhub.com",
+          "description": "Server host and protocol from which request was handled."
+        }
+      }
+    },
+    "count": {
+      "type": "number",
+      "description": "the length of the results array.",
+      "example": 1
+    },
+    "results": {
+      "type": "array",
+      "description": "The envelope of items, that are usually objects. We are generally sending back arrays even if there was just one requested resource.",
+      "items": {
+        "anyOf": [
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "created_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "metric": {
+                "job": "analytics_snapshots_bank_amount_total",
+                "user": {
+                  "description": "ID of the client account",
+                  "type": "string"
+                }
+              },
+              "count": {
+                "description": "Count of items in values",
+                "type": "number"
+              },
+              "values": {
+                "type": "array",
+                "items": {
+                  "label": {
+                    "type": "string"
+                  },
+                  "data": {
+                    "type": "object",
+                    "properties": {
+                      "amount_total": {
+                        "type": "number"
+                      },
+                      "currency": {
+                        "type": "string",
+                        "minLength": 3,
+                        "maxLength": 3
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "created_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "metric": {
+                "job": "analytics_snapshots_cancellations_amount_total_cancelled",
+                "user": {
+                  "description": "ID of the client account",
+                  "type": "string"
+                }
+              },
+              "count": {
+                "description": "Count of items in values",
+                "type": "number"
+              },
+              "values": {
+                "type": "array",
+                "items": {
+                  "label": {
+                    "type": "string"
+                  },
+                  "data": {
+                    "type": "object",
+                    "properties": {
+                      "amount_total": {
+                        "type": "number"
+                      },
+                      "currency": {
+                        "type": "string",
+                        "minLength": 3,
+                        "maxLength": 3
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "created_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "metric": {
+                "job": "analytics_snapshots_cancellations_amount_total_refunded",
+                "user": {
+                  "description": "ID of the client account",
+                  "type": "string"
+                }
+              },
+              "count": {
+                "description": "Count of items in values",
+                "type": "number"
+              },
+              "values": {
+                "type": "array",
+                "items": {
+                  "label": {
+                    "type": "string"
+                  },
+                  "data": {
+                    "type": "object",
+                    "properties": {
+                      "amount_total": {
+                        "type": "number"
+                      },
+                      "currency": {
+                        "type": "string",
+                        "minLength": 3,
+                        "maxLength": 3
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "created_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "metric": {
+                "job": "analytics_snapshots_cancellations_cancellations_count",
+                "user": {
+                  "description": "ID of the client account",
+                  "type": "string"
+                }
+              },
+              "count": {
+                "description": "Count of items in values",
+                "type": "number"
+              },
+              "values": {
+                "type": "array",
+                "items": {
+                  "label": {
+                    "type": "string"
+                  },
+                  "data": {
+                    "type": "number"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "created_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "metric": {
+                "job": "analytics_snapshots_cancellations_refunds_count",
+                "user": {
+                  "description": "ID of the client account",
+                  "type": "string"
+                }
+              },
+              "count": {
+                "description": "Count of items in values",
+                "type": "number"
+              },
+              "values": {
+                "type": "array",
+                "items": {
+                  "label": {
+                    "type": "string"
+                  },
+                  "data": {
+                    "type": "number"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "created_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "metric": {
+                "job": "analytics_snapshots_cancellations_share_of_cancelled",
+                "user": {
+                  "description": "ID of the client account",
+                  "type": "string"
+                }
+              },
+              "count": {
+                "description": "Count of items in values",
+                "type": "number"
+              },
+              "values": {
+                "type": "array",
+                "items": {
+                  "label": {
+                    "type": "string"
+                  },
+                  "data": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "created_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "metric": {
+                "job": "analytics_snapshots_cancellations_share_of_refunded",
+                "user": {
+                  "description": "ID of the client account",
+                  "type": "string"
+                }
+              },
+              "count": {
+                "description": "Count of items in values",
+                "type": "number"
+              },
+              "values": {
+                "type": "array",
+                "items": {
+                  "label": {
+                    "type": "string"
+                  },
+                  "data": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "created_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "metric": {
+                "job": "analytics_snapshots_discounts_amount_total",
+                "user": {
+                  "description": "ID of the client account",
+                  "type": "string"
+                }
+              },
+              "count": {
+                "description": "Count of items in values",
+                "type": "number"
+              },
+              "values": {
+                "type": "array",
+                "items": {
+                  "label": {
+                    "type": "string"
+                  },
+                  "data": {
+                    "type": "object",
+                    "properties": {
+                      "amount_total": {
+                        "type": "number"
+                      },
+                      "currency": {
+                        "type": "string",
+                        "minLength": 3,
+                        "maxLength": 3
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "created_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "metric": {
+                "job": "analytics_snapshots_discounts_count",
+                "user": {
+                  "description": "ID of the client account",
+                  "type": "string"
+                }
+              },
+              "count": {
+                "description": "Count of items in values",
+                "type": "number"
+              },
+              "values": {
+                "type": "array",
+                "items": {
+                  "label": {
+                    "type": "string"
+                  },
+                  "data": {
+                    "type": "number"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "created_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "metric": {
+                "job": "analytics_snapshots_discounts_share_of",
+                "user": {
+                  "description": "ID of the client account",
+                  "type": "string"
+                }
+              },
+              "count": {
+                "description": "Count of items in values",
+                "type": "number"
+              },
+              "values": {
+                "type": "array",
+                "items": {
+                  "label": {
+                    "type": "string"
+                  },
+                  "data": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "created_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "metric": {
+                "job": "analytics_snapshots_expenses_amount_total",
+                "user": {
+                  "description": "ID of the client account",
+                  "type": "string"
+                }
+              },
+              "count": {
+                "description": "Count of items in values",
+                "type": "number"
+              },
+              "values": {
+                "type": "array",
+                "items": {
+                  "label": {
+                    "type": "string"
+                  },
+                  "data": {
+                    "type": "object",
+                    "properties": {
+                      "amount_total": {
+                        "type": "number"
+                      },
+                      "currency": {
+                        "type": "string",
+                        "minLength": 3,
+                        "maxLength": 3
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "created_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "metric": {
+                "job": "analytics_snapshots_payments_card_count",
+                "user": {
+                  "description": "ID of the client account",
+                  "type": "string"
+                }
+              },
+              "count": {
+                "description": "Count of items in values",
+                "type": "number"
+              },
+              "values": {
+                "type": "array",
+                "items": {
+                  "label": {
+                    "type": "string"
+                  },
+                  "data": {
+                    "type": "number"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "created_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "metric": {
+                "job": "analytics_snapshots_payments_card_revenue",
+                "user": {
+                  "description": "ID of the client account",
+                  "type": "string"
+                }
+              },
+              "count": {
+                "description": "Count of items in values",
+                "type": "number"
+              },
+              "values": {
+                "type": "array",
+                "items": {
+                  "label": {
+                    "type": "string"
+                  },
+                  "data": {
+                    "type": "object",
+                    "properties": {
+                      "revenue": {
+                        "type": "number"
+                      },
+                      "currency": {
+                        "type": "string",
+                        "minLength": 3,
+                        "maxLength": 3
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "created_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "metric": {
+                "job": "analytics_snapshots_payments_cash_count",
+                "user": {
+                  "description": "ID of the client account",
+                  "type": "string"
+                }
+              },
+              "count": {
+                "description": "Count of items in values",
+                "type": "number"
+              },
+              "values": {
+                "type": "array",
+                "items": {
+                  "label": {
+                    "type": "string"
+                  },
+                  "data": {
+                    "type": "number"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "created_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "metric": {
+                "job": "analytics_snapshots_payments_cash_discrepancy",
+                "user": {
+                  "description": "ID of the client account",
+                  "type": "string"
+                }
+              },
+              "count": {
+                "description": "Count of items in values",
+                "type": "number"
+              },
+              "values": {
+                "type": "array",
+                "items": {
+                  "label": {
+                    "type": "string"
+                  },
+                  "data": {
+                    "type": "object",
+                    "properties": {
+                      "amount_total": {
+                        "type": "number"
+                      },
+                      "currency": {
+                        "type": "string",
+                        "minLength": 3,
+                        "maxLength": 3
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "created_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "metric": {
+                "job": "analytics_snapshots_payments_cash_revenue",
+                "user": {
+                  "description": "ID of the client account",
+                  "type": "string"
+                }
+              },
+              "count": {
+                "description": "Count of items in values",
+                "type": "number"
+              },
+              "values": {
+                "type": "array",
+                "items": {
+                  "label": {
+                    "type": "string"
+                  },
+                  "data": {
+                    "type": "object",
+                    "properties": {
+                      "revenue": {
+                        "type": "number"
+                      },
+                      "currency": {
+                        "type": "string",
+                        "minLength": 3,
+                        "maxLength": 3
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "created_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "metric": {
+                "job": "analytics_snapshots_payments_giftcard_count",
+                "user": {
+                  "description": "ID of the client account",
+                  "type": "string"
+                }
+              },
+              "count": {
+                "description": "Count of items in values",
+                "type": "number"
+              },
+              "values": {
+                "type": "array",
+                "items": {
+                  "label": {
+                    "type": "string"
+                  },
+                  "data": {
+                    "type": "number"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "created_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "metric": {
+                "job": "analytics_snapshots_payments_giftcard_revenue",
+                "user": {
+                  "description": "ID of the client account",
+                  "type": "string"
+                }
+              },
+              "count": {
+                "description": "Count of items in values",
+                "type": "number"
+              },
+              "values": {
+                "type": "array",
+                "items": {
+                  "label": {
+                    "type": "string"
+                  },
+                  "data": {
+                    "type": "object",
+                    "properties": {
+                      "revenue": {
+                        "type": "number"
+                      },
+                      "currency": {
+                        "type": "string",
+                        "minLength": 3,
+                        "maxLength": 3
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "created_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "metric": {
+                "job": "analytics_snapshots_product_groups_revenue",
+                "user": {
+                  "description": "ID of the client account",
+                  "type": "string"
+                }
+              },
+              "count": {
+                "description": "Count of items in values",
+                "type": "number"
+              },
+              "values": {
+                "type": "array",
+                "items": {
+                  "label": {
+                    "type": "string"
+                  },
+                  "data": {
+                    "type": "object",
+                    "properties": {
+                      "revenue": {
+                        "type": "number"
+                      },
+                      "currency": {
+                        "type": "string",
+                        "minLength": 3,
+                        "maxLength": 3
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "created_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "metric": {
+                "job": "analytics_snapshots_product_groups_share_of",
+                "user": {
+                  "description": "ID of the client account",
+                  "type": "string"
+                }
+              },
+              "count": {
+                "description": "Count of items in values",
+                "type": "number"
+              },
+              "values": {
+                "type": "array",
+                "items": {
+                  "label": {
+                    "type": "string"
+                  },
+                  "data": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "created_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "metric": {
+                "job": "analytics_snapshots_safe_amount_total",
+                "user": {
+                  "description": "ID of the client account",
+                  "type": "string"
+                }
+              },
+              "count": {
+                "description": "Count of items in values",
+                "type": "number"
+              },
+              "values": {
+                "type": "array",
+                "items": {
+                  "label": {
+                    "type": "string"
+                  },
+                  "data": {
+                    "type": "object",
+                    "properties": {
+                      "amount_total": {
+                        "type": "number"
+                      },
+                      "currency": {
+                        "type": "string",
+                        "minLength": 3,
+                        "maxLength": 3
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "created_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "metric": {
+                "job": "analytics_snapshots_transactions_first_transaction",
+                "user": {
+                  "description": "ID of the client account",
+                  "type": "string"
+                }
+              },
+              "count": {
+                "description": "Count of items in values",
+                "type": "number"
+              },
+              "values": {
+                "type": "array",
+                "items": {
+                  "label": {
+                    "type": "string"
+                  },
+                  "data": {
+                    "type": "number"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "created_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "metric": {
+                "job": "analytics_snapshots_transactions_last_transaction",
+                "user": {
+                  "description": "ID of the client account",
+                  "type": "string"
+                }
+              },
+              "count": {
+                "description": "Count of items in values",
+                "type": "number"
+              },
+              "values": {
+                "type": "array",
+                "items": {
+                  "label": {
+                    "type": "string"
+                  },
+                  "data": {
+                    "type": "number"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

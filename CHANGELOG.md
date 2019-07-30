@@ -1,3 +1,10 @@
+# [3.75.0](https://github.com/tillhub/schemas/compare/v3.74.0...v3.75.0) (2019-07-30)
+
+
+### Features
+
+* **analyitcs:** add snapshots ([05afb8c](https://github.com/tillhub/schemas/commit/05afb8c))
+
 # [3.74.0](https://github.com/tillhub/schemas/compare/v3.73.2...v3.74.0) (2019-07-30)
 
 
