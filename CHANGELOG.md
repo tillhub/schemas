@@ -1,3 +1,10 @@
+## [3.73.1](https://github.com/tillhub/schemas/compare/v3.73.0...v3.73.1) (2019-07-30)
+
+
+### Bug Fixes
+
+* **manufacturers:** fix contacts field ([7ed7cbe](https://github.com/tillhub/schemas/commit/7ed7cbe))
+
 # [3.73.0](https://github.com/tillhub/schemas/compare/v3.72.0...v3.73.0) (2019-07-30)
 
 
