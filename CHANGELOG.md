@@ -1,3 +1,10 @@
+## [3.73.2](https://github.com/tillhub/schemas/compare/v3.73.1...v3.73.2) (2019-07-30)
+
+
+### Bug Fixes
+
+* **manufacturers:** fix contacts properties names ([1c921e3](https://github.com/tillhub/schemas/commit/1c921e3))
+
 ## [3.73.1](https://github.com/tillhub/schemas/compare/v3.73.0...v3.73.1) (2019-07-30)
 
 
