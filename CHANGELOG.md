@@ -1,3 +1,10 @@
+# [3.73.0](https://github.com/tillhub/schemas/compare/v3.72.0...v3.73.0) (2019-07-30)
+
+
+### Features
+
+* **manufacturers:** add schema for manufacturers ([22fa125](https://github.com/tillhub/schemas/commit/22fa125))
+
 # [3.72.0](https://github.com/tillhub/schemas/compare/v3.71.0...v3.72.0) (2019-07-29)
 
 
