@@ -1,3 +1,10 @@
+# [3.77.0](https://github.com/tillhub/schemas/compare/v3.76.0...v3.77.0) (2019-07-30)
+
+
+### Features
+
+* **analytics/snapshots:** add reauest body ([9955cb5](https://github.com/tillhub/schemas/commit/9955cb5))
+
 # [3.76.0](https://github.com/tillhub/schemas/compare/v3.75.0...v3.76.0) (2019-07-30)
 
 
