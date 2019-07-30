@@ -1,3 +1,10 @@
+# [3.74.0](https://github.com/tillhub/schemas/compare/v3.73.2...v3.74.0) (2019-07-30)
+
+
+### Features
+
+* **vouchers:** extend for system ([3f8131f](https://github.com/tillhub/schemas/commit/3f8131f))
+
 ## [3.73.2](https://github.com/tillhub/schemas/compare/v3.73.1...v3.73.2) (2019-07-30)
 
 
