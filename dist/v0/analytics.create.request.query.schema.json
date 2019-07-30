@@ -15,6 +15,14 @@
     "end": {
       "type": "string",
       "format": "date-time"
+    },
+    "branch": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "register": {
+      "type": "string",
+      "format": "uuid"
     }
   }
 }

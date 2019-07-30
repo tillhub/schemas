@@ -1,3 +1,10 @@
+# [3.76.0](https://github.com/tillhub/schemas/compare/v3.75.0...v3.76.0) (2019-07-30)
+
+
+### Features
+
+* **analytics/snapshots:** add branch and register query ([dcee98a](https://github.com/tillhub/schemas/commit/dcee98a))
+
 # [3.75.0](https://github.com/tillhub/schemas/compare/v3.74.0...v3.75.0) (2019-07-30)
 
 
