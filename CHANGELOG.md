@@ -1,3 +1,10 @@
+# [3.78.0](https://github.com/tillhub/schemas/compare/v3.77.0...v3.78.0) (2019-07-31)
+
+
+### Features
+
+* **analytics/snapshots:** add timezone ([5508fef](https://github.com/tillhub/schemas/commit/5508fef))
+
 # [3.77.0](https://github.com/tillhub/schemas/compare/v3.76.0...v3.77.0) (2019-07-30)
 
 

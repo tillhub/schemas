@@ -13,6 +13,17 @@
       "type": "string",
       "format": "uuid"
     },
+    "timezone": {
+      "description": "IANA timezone.",
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
     "branch": {
       "type": "string",
       "format": "uuid"
