@@ -1,3 +1,10 @@
+## [3.79.1](https://github.com/tillhub/schemas/compare/v3.79.0...v3.79.1) (2019-07-31)
+
+
+### Bug Fixes
+
+* **manufacturers:** rename fields ([aa6a583](https://github.com/tillhub/schemas/commit/aa6a583))
+
 # [3.79.0](https://github.com/tillhub/schemas/compare/v3.78.0...v3.79.0) (2019-07-31)
 
 
