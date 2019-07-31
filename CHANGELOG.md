@@ -1,3 +1,10 @@
+# [3.79.0](https://github.com/tillhub/schemas/compare/v3.78.0...v3.79.0) (2019-07-31)
+
+
+### Features
+
+* **analytics/snapshots:** require branch and register ([c994c4f](https://github.com/tillhub/schemas/commit/c994c4f))
+
 # [3.78.0](https://github.com/tillhub/schemas/compare/v3.77.0...v3.78.0) (2019-07-31)
 
 

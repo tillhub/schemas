@@ -5,7 +5,9 @@
   "type": "object",
   "required": [
     "start",
-    "end"
+    "end",
+    "branch",
+    "register"
   ],
   "properties": {
     "start": {
