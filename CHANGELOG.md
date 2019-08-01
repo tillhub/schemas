@@ -1,3 +1,10 @@
+## [3.80.2](https://github.com/tillhub/schemas/compare/v3.80.1...v3.80.2) (2019-08-01)
+
+
+### Bug Fixes
+
+* make deployable ([734b0c8](https://github.com/tillhub/schemas/commit/734b0c8))
+
 ## [3.80.1](https://github.com/tillhub/schemas/compare/v3.80.0...v3.80.1) (2019-08-01)
 
 
