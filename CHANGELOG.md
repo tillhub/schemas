@@ -1,3 +1,10 @@
+## [3.80.3](https://github.com/tillhub/schemas/compare/v3.80.2...v3.80.3) (2019-08-01)
+
+
+### Bug Fixes
+
+* **custom_hooks:** add resource to root index ([16b006e](https://github.com/tillhub/schemas/commit/16b006e))
+
 ## [3.80.2](https://github.com/tillhub/schemas/compare/v3.80.1...v3.80.2) (2019-08-01)
 
 
