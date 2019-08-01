@@ -1,3 +1,15 @@
+# [3.80.0](https://github.com/tillhub/schemas/compare/v3.79.1...v3.80.0) (2019-08-01)
+
+
+### Bug Fixes
+
+* **custom_hooks:** fix auth ([e8c884a](https://github.com/tillhub/schemas/commit/e8c884a))
+
+
+### Features
+
+* **custom_hooks:** add new resource schema ([b902701](https://github.com/tillhub/schemas/commit/b902701))
+
 ## [3.79.1](https://github.com/tillhub/schemas/compare/v3.79.0...v3.79.1) (2019-07-31)
 
 
