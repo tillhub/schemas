@@ -1,3 +1,10 @@
+## [3.80.4](https://github.com/tillhub/schemas/compare/v3.80.3...v3.80.4) (2019-08-01)
+
+
+### Bug Fixes
+
+* **custom-hooks:** fix name type ([9862610](https://github.com/tillhub/schemas/commit/9862610))
+
 ## [3.80.3](https://github.com/tillhub/schemas/compare/v3.80.2...v3.80.3) (2019-08-01)
 
 

@@ -14,7 +14,7 @@
       "description": "Name of the custom hook",
       "oneOf": [
         {
-          "type": "number",
+          "type": "string",
           "maxLength": 128
         },
         {
