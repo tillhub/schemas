@@ -1,3 +1,10 @@
+## [3.80.1](https://github.com/tillhub/schemas/compare/v3.80.0...v3.80.1) (2019-08-01)
+
+
+### Bug Fixes
+
+* **custom-hooks:** chage auth type and context ([7606f82](https://github.com/tillhub/schemas/commit/7606f82))
+
 # [3.80.0](https://github.com/tillhub/schemas/compare/v3.79.1...v3.80.0) (2019-08-01)
 
 
