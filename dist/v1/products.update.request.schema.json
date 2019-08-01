@@ -1478,6 +1478,21 @@
           "type": "null"
         }
       ]
+    },
+    "manufacturers": {
+      "oneOf": [
+        {
+          "type": "array",
+          "description": "An array of uuids of the product manufacturers",
+          "items": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
     }
   }
 }

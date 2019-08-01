@@ -1484,6 +1484,21 @@
         }
       ]
     },
+    "manufacturers": {
+      "oneOf": [
+        {
+          "type": "array",
+          "description": "An array of uuids of the product manufacturers",
+          "items": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "stock_info": {
       "description": "READ ONLY: summary of stock accross accounts. This potentially is not real-time. After a stock change.",
       "type": "object",

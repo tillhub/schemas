@@ -1,3 +1,10 @@
+## [3.80.5](https://github.com/tillhub/schemas/compare/v3.80.4...v3.80.5) (2019-08-01)
+
+
+### Bug Fixes
+
+* **products:** add manufacturers for products v1 ([0356bf9](https://github.com/tillhub/schemas/commit/0356bf9))
+
 ## [3.80.4](https://github.com/tillhub/schemas/compare/v3.80.3...v3.80.4) (2019-08-01)
 
 
