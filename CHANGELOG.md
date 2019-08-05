@@ -1,3 +1,10 @@
+# [3.81.0](https://github.com/tillhub/schemas/compare/v3.80.5...v3.81.0) (2019-08-05)
+
+
+### Features
+
+* **reason:** add properties ([2dd162b](https://github.com/tillhub/schemas/commit/2dd162b))
+
 ## [3.80.5](https://github.com/tillhub/schemas/compare/v3.80.4...v3.80.5) (2019-08-01)
 
 
