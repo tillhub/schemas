@@ -1,13 +1,9 @@
 {
-  "$id": "https://schemas.tillhub.com/v0/loyalty_cards.update.response.schema.json",
+  "$id": "https://schemas.tillhub.com/v0/loyalty_cards.get.all.response.schema.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "additionalProperties": true,
   "type": "object",
-  "required": [
-    "id",
-    "code",
-    "loyalty_system"
-  ],
+  "required": [],
   "properties": {
     "code": {
       "type": "string"
@@ -92,6 +88,29 @@
     "loyalty_system": {
       "type": "string",
       "format": "uuid"
+    },
+    "loyalty_values": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "description": "The loyalty values accumulated on the loyalty card",
+        "additionalProperties": false,
+        "properties": {
+          "amount": {
+            "example": "27633.02",
+            "type": "number",
+            "multipleOf": 0.01
+          },
+          "unit": {
+            "type": "string",
+            "examples": [
+              "EUR",
+              "points",
+              "miles"
+            ]
+          }
+        }
+      }
     }
   }
 }

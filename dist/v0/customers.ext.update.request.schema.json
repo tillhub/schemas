@@ -638,7 +638,7 @@
                   "additionalProperties": false,
                   "properties": {
                     "top_seller": {
-                      "description": "Reference to top selling Tillhub staff.",
+                      "description": "Reference to top selling Tillhub staff, based on \"salesman_staff\" on cartitem level.",
                       "oneOf": [
                         {
                           "type": "string",

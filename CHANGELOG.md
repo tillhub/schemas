@@ -1,3 +1,10 @@
+# [3.82.0](https://github.com/tillhub/schemas/compare/v3.81.0...v3.82.0) (2019-08-09)
+
+
+### Features
+
+* **customers_ext:** update description ([78b60af](https://github.com/tillhub/schemas/commit/78b60af))
+
 # [3.81.0](https://github.com/tillhub/schemas/compare/v3.80.5...v3.81.0) (2019-08-05)
 
 
