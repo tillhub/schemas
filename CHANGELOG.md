@@ -1,3 +1,10 @@
+# [3.83.0](https://github.com/tillhub/schemas/compare/v3.82.0...v3.83.0) (2019-08-12)
+
+
+### Features
+
+* **customers_ext:** update top_branch/top_seller ([a58d423](https://github.com/tillhub/schemas/commit/a58d423))
+
 # [3.82.0](https://github.com/tillhub/schemas/compare/v3.81.0...v3.82.0) (2019-08-09)
 
 
