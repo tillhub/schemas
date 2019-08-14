@@ -1,3 +1,10 @@
+# [3.84.0](https://github.com/tillhub/schemas/compare/v3.83.0...v3.84.0) (2019-08-14)
+
+
+### Features
+
+* **stocks:** add reason param ([d295744](https://github.com/tillhub/schemas/commit/d295744))
+
 # [3.83.0](https://github.com/tillhub/schemas/compare/v3.82.0...v3.83.0) (2019-08-12)
 
 
