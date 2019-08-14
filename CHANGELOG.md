@@ -1,3 +1,10 @@
+# [3.85.0](https://github.com/tillhub/schemas/compare/v3.84.0...v3.85.0) (2019-08-14)
+
+
+### Features
+
+* **customers_ext:** change summary ([2f8484d](https://github.com/tillhub/schemas/commit/2f8484d))
+
 # [3.84.0](https://github.com/tillhub/schemas/compare/v3.83.0...v3.84.0) (2019-08-14)
 
 

@@ -694,6 +694,10 @@
                                 "maxLength": 3
                               },
                               "branch_number": {
+                                "type": "number",
+                                "min": 0
+                              },
+                              "branch": {
                                 "type": "string",
                                 "format": "uuid"
                               }
@@ -717,7 +721,7 @@
                         }
                       ]
                     },
-                    "total_returns": {
+                    "total_quantity_returns": {
                       "description": "Absolute number of all transactions that include at least a return.",
                       "oneOf": [
                         {
@@ -729,8 +733,20 @@
                         }
                       ]
                     },
+                    "total_quantity_cartitems": {
+                      "description": "Absolute number of all cart items that are of type \"sale\".",
+                      "oneOf": [
+                        {
+                          "type": "number",
+                          "min": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
                     "total_amount_returns": {
-                      "description": "The revenue of all returns.",
+                      "description": "The revenue (sum of selling_price_total) of all returns.",
                       "oneOf": [
                         {
                           "type": "array",
@@ -739,23 +755,11 @@
                             "additionalProperties": false,
                             "properties": {
                               "amount": {
-                                "type": "object",
-                                "properties": {
-                                  "net": {
-                                    "example": "27633.02",
-                                    "type": "number",
-                                    "minimum": 0,
-                                    "maximum": 1000000,
-                                    "multipleOf": 0.01
-                                  },
-                                  "gross": {
-                                    "example": "27633.02",
-                                    "type": "number",
-                                    "minimum": 0,
-                                    "maximum": 1000000,
-                                    "multipleOf": 0.01
-                                  }
-                                }
+                                "example": "27633.02",
+                                "type": "number",
+                                "minimum": 0,
+                                "maximum": 1000000,
+                                "multipleOf": 0.01
                               },
                               "currency": {
                                 "type": "string",
