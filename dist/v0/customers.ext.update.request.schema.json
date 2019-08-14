@@ -695,7 +695,8 @@
                               },
                               "branch_number": {
                                 "type": "number",
-                                "min": 0
+                                "min": 0,
+                                "multipleOf": 1
                               },
                               "branch": {
                                 "type": "string",
@@ -726,7 +727,8 @@
                       "oneOf": [
                         {
                           "type": "number",
-                          "min": 0
+                          "min": 0,
+                          "multipleOf": 1
                         },
                         {
                           "type": "null"
@@ -738,7 +740,8 @@
                       "oneOf": [
                         {
                           "type": "number",
-                          "min": 0
+                          "min": 0,
+                          "multipleOf": 1
                         },
                         {
                           "type": "null"
@@ -779,7 +782,8 @@
                       "oneOf": [
                         {
                           "type": "number",
-                          "min": 0
+                          "min": 0,
+                          "multipleOf": 1
                         },
                         {
                           "type": "null"

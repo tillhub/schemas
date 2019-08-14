@@ -1,3 +1,10 @@
+# [3.86.0](https://github.com/tillhub/schemas/compare/v3.85.0...v3.86.0) (2019-08-14)
+
+
+### Features
+
+* **customers_ext:** indicate integers ([5fc184a](https://github.com/tillhub/schemas/commit/5fc184a))
+
 # [3.85.0](https://github.com/tillhub/schemas/compare/v3.84.0...v3.85.0) (2019-08-14)
 
 
