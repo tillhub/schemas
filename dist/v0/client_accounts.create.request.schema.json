@@ -1,0 +1,122 @@
+{
+  "$id": "https://schemas.tillhub.com/v0/client_accounts.create.request.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "required": [
+    "email",
+    "password"
+  ],
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "display_name": {
+      "type": "string",
+      "pattern": "^[a-z0-9_-]*$"
+    },
+    "email": {
+      "type": "string",
+      "format": "email"
+    },
+    "email_confirmed": {
+      "type": "boolean"
+    },
+    "password": {
+      "type": "string",
+      "minLength": 5,
+      "maxLength": 36
+    },
+    "test_account": {
+      "type": "boolean"
+    },
+    "template": {
+      "type": "string",
+      "enum": [
+        "tillhub_init",
+        "tillhub_init_legacy"
+      ],
+      "default": "tillhub_init"
+    },
+    "dashboard": {
+      "type": "string",
+      "enum": [
+        "tillhub",
+        "shore",
+        "localsearch"
+      ],
+      "default": "tillhub"
+    },
+    "demo_data": {
+      "anyOf": [
+        {
+          "type": "object",
+          "required": [
+            "accounts",
+            "expenses",
+            "taxes",
+            "payment_options",
+            "branches_registers",
+            "staff"
+          ],
+          "properties": {
+            "accounts": {
+              "type": "string",
+              "enum": [
+                "de_skr_03",
+                "de_skr_04",
+                "ch"
+              ]
+            },
+            "expenses": {
+              "type": "string",
+              "enum": [
+                "standard_german",
+                "standard_english",
+                "fleurop"
+              ]
+            },
+            "taxes": {
+              "type": "string",
+              "enum": [
+                "de",
+                "ch"
+              ]
+            },
+            "payment_options": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "voucher",
+                  "ccvfly",
+                  "rechnung",
+                  "amex",
+                  "concardis",
+                  "bar",
+                  "card_circuits"
+                ]
+              }
+            }
+          },
+          "branches_registers": {
+            "type": "string",
+            "enum": [
+              "basic",
+              "basic_v1"
+            ]
+          },
+          "staff": {
+            "type": "string",
+            "enum": [
+              "default"
+            ]
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "type": "object"
+}

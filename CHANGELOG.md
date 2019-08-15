@@ -1,3 +1,15 @@
+# [3.87.0](https://github.com/tillhub/schemas/compare/v3.86.0...v3.87.0) (2019-08-15)
+
+
+### Bug Fixes
+
+* **demodata:** fix load module ([06334a6](https://github.com/tillhub/schemas/commit/06334a6))
+
+
+### Features
+
+* **client_accounts:** add client account demo data schema ([6884de8](https://github.com/tillhub/schemas/commit/6884de8))
+
 # [3.86.0](https://github.com/tillhub/schemas/compare/v3.85.0...v3.86.0) (2019-08-14)
 
 
