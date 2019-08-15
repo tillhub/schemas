@@ -1,3 +1,10 @@
+# [3.88.0](https://github.com/tillhub/schemas/compare/v3.87.1...v3.88.0) (2019-08-15)
+
+
+### Features
+
+* **stock:** add reason to update and transfer ([4ee857d](https://github.com/tillhub/schemas/commit/4ee857d))
+
 ## [3.87.1](https://github.com/tillhub/schemas/compare/v3.87.0...v3.87.1) (2019-08-15)
 
 
