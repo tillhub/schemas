@@ -1,3 +1,10 @@
+## [3.87.1](https://github.com/tillhub/schemas/compare/v3.87.0...v3.87.1) (2019-08-15)
+
+
+### Bug Fixes
+
+* **client_accounts:** fix export module name ([f94213a](https://github.com/tillhub/schemas/commit/f94213a))
+
 # [3.87.0](https://github.com/tillhub/schemas/compare/v3.86.0...v3.87.0) (2019-08-15)
 
 
