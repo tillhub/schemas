@@ -16,6 +16,7 @@
       "type": "string",
       "enum": [
         "cash",
+        "card",
         "invoice",
         "card_opi",
         "card_concardis",

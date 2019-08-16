@@ -116,7 +116,8 @@
         "deposit",
         "bank",
         "transit",
-        "safe"
+        "safe",
+        "tip"
       ]
     },
     "tax": {
@@ -144,6 +145,10 @@
           "type": "null"
         }
       ]
+    },
+    "accepts_booking_from_safe": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

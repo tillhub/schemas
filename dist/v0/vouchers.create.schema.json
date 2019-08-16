@@ -260,6 +260,35 @@
     "is_campaign": {
       "description": "Mark this voucher to be a campaign itself. This should be used if you issue multiple vouchers with the same code and do not want to deduct value from it.",
       "type": "boolean"
+    },
+    "system": {
+      "description": "The voucher system this voucher gets it's behaviour from and and will be matched upon lookup.",
+      "default": null,
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "uuid",
+          "description": "The Tillhub sub-system resource reference ID associated with this voucher (system.system in configurations).",
+          "example": "43847a66-97dc-4ac2-8e8a-c44920e1f22f"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "product": {
+      "default": null,
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "uuid",
+          "description": "The Tillhub product resource reference ID associated with this voucher.",
+          "example": "43847a66-97dc-4ac2-8e8a-c44920e1f22f"
+        },
+        {
+          "type": "null"
+        }
+      ]
     }
   },
   "required": [

@@ -6,6 +6,7 @@
   "required": [],
   "properties": {
     "type": {
+      "description": "The type of the time entry.",
       "type": "string",
       "enum": [
         "day",
@@ -13,6 +14,7 @@
       ]
     },
     "description": {
+      "description": "The description about the task.",
       "anyOf": [
         {
           "type": "string",
@@ -24,11 +26,13 @@
         }
       ]
     },
-    "start": {
+    "started_at": {
+      "description": "The start of the time entry.",
       "type": "string",
       "format": "date-time"
     },
-    "end": {
+    "ended_at": {
+      "description": "The end of the time entry.",
       "anyOf": [
         {
           "type": "string",
@@ -40,29 +44,55 @@
       ]
     },
     "staff": {
+      "description": "The staff member which is clocking in/out.",
       "type": "string",
-      "maxLength": 128
+      "maxLength": 64
     },
     "owner": {
+      "description": "The client account id",
       "type": "string",
       "maxLength": 128
     },
-    "custom_properties": {
+    "client_id": {
+      "description": "A identifier used locally on POS for their own reference.",
       "anyOf": [
         {
           "type": "string",
-          "maxLength": 255
+          "maxLength": 128
         },
         {
           "type": "null"
         }
       ]
     },
-    "metadata": {
+    "custom_properties": {
+      "description": "Arbitrary custom properties for this time entry.",
       "anyOf": [
         {
           "type": "string",
-          "maxLength": 255
+          "maxLength": 128
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "active": {
+      "description": "Soft disable or enabled this time entry.",
+      "type": "boolean",
+      "default": true
+    },
+    "deleted": {
+      "description": "Soft delete this time entry.",
+      "type": "boolean",
+      "default": false
+    },
+    "metadata": {
+      "description": "Arbitrary user defined data.",
+      "anyOf": [
+        {
+          "type": "object",
+          "maxProperties": 10
         },
         {
           "type": "null"
@@ -70,6 +100,7 @@
       ]
     },
     "location": {
+      "description": "Arbitrary user location.",
       "anyOf": [
         {
           "type": "string",
@@ -79,9 +110,6 @@
           "type": "null"
         }
       ]
-    },
-    "deleted": {
-      "type": "boolean"
     }
   }
 }

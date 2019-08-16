@@ -1,3 +1,439 @@
+# [3.88.0](https://github.com/tillhub/schemas/compare/v3.87.1...v3.88.0) (2019-08-15)
+
+
+### Features
+
+* **stock:** add reason to update and transfer ([4ee857d](https://github.com/tillhub/schemas/commit/4ee857d))
+
+## [3.87.1](https://github.com/tillhub/schemas/compare/v3.87.0...v3.87.1) (2019-08-15)
+
+
+### Bug Fixes
+
+* **client_accounts:** fix export module name ([f94213a](https://github.com/tillhub/schemas/commit/f94213a))
+
+# [3.87.0](https://github.com/tillhub/schemas/compare/v3.86.0...v3.87.0) (2019-08-15)
+
+
+### Bug Fixes
+
+* **demodata:** fix load module ([06334a6](https://github.com/tillhub/schemas/commit/06334a6))
+
+
+### Features
+
+* **client_accounts:** add client account demo data schema ([6884de8](https://github.com/tillhub/schemas/commit/6884de8))
+
+# [3.86.0](https://github.com/tillhub/schemas/compare/v3.85.0...v3.86.0) (2019-08-14)
+
+
+### Features
+
+* **customers_ext:** indicate integers ([5fc184a](https://github.com/tillhub/schemas/commit/5fc184a))
+
+# [3.85.0](https://github.com/tillhub/schemas/compare/v3.84.0...v3.85.0) (2019-08-14)
+
+
+### Features
+
+* **customers_ext:** change summary ([2f8484d](https://github.com/tillhub/schemas/commit/2f8484d))
+
+# [3.84.0](https://github.com/tillhub/schemas/compare/v3.83.0...v3.84.0) (2019-08-14)
+
+
+### Features
+
+* **stocks:** add reason param ([d295744](https://github.com/tillhub/schemas/commit/d295744))
+
+# [3.83.0](https://github.com/tillhub/schemas/compare/v3.82.0...v3.83.0) (2019-08-12)
+
+
+### Features
+
+* **customers_ext:** update top_branch/top_seller ([a58d423](https://github.com/tillhub/schemas/commit/a58d423))
+
+# [3.82.0](https://github.com/tillhub/schemas/compare/v3.81.0...v3.82.0) (2019-08-09)
+
+
+### Features
+
+* **customers_ext:** update description ([78b60af](https://github.com/tillhub/schemas/commit/78b60af))
+
+# [3.81.0](https://github.com/tillhub/schemas/compare/v3.80.5...v3.81.0) (2019-08-05)
+
+
+### Features
+
+* **reason:** add properties ([2dd162b](https://github.com/tillhub/schemas/commit/2dd162b))
+
+## [3.80.5](https://github.com/tillhub/schemas/compare/v3.80.4...v3.80.5) (2019-08-01)
+
+
+### Bug Fixes
+
+* **products:** add manufacturers for products v1 ([0356bf9](https://github.com/tillhub/schemas/commit/0356bf9))
+
+## [3.80.4](https://github.com/tillhub/schemas/compare/v3.80.3...v3.80.4) (2019-08-01)
+
+
+### Bug Fixes
+
+* **custom-hooks:** fix name type ([9862610](https://github.com/tillhub/schemas/commit/9862610))
+
+## [3.80.3](https://github.com/tillhub/schemas/compare/v3.80.2...v3.80.3) (2019-08-01)
+
+
+### Bug Fixes
+
+* **custom_hooks:** add resource to root index ([16b006e](https://github.com/tillhub/schemas/commit/16b006e))
+
+## [3.80.2](https://github.com/tillhub/schemas/compare/v3.80.1...v3.80.2) (2019-08-01)
+
+
+### Bug Fixes
+
+* make deployable ([734b0c8](https://github.com/tillhub/schemas/commit/734b0c8))
+
+## [3.80.1](https://github.com/tillhub/schemas/compare/v3.80.0...v3.80.1) (2019-08-01)
+
+
+### Bug Fixes
+
+* **custom-hooks:** chage auth type and context ([7606f82](https://github.com/tillhub/schemas/commit/7606f82))
+
+# [3.80.0](https://github.com/tillhub/schemas/compare/v3.79.1...v3.80.0) (2019-08-01)
+
+
+### Bug Fixes
+
+* **custom_hooks:** fix auth ([e8c884a](https://github.com/tillhub/schemas/commit/e8c884a))
+
+
+### Features
+
+* **custom_hooks:** add new resource schema ([b902701](https://github.com/tillhub/schemas/commit/b902701))
+
+## [3.79.1](https://github.com/tillhub/schemas/compare/v3.79.0...v3.79.1) (2019-07-31)
+
+
+### Bug Fixes
+
+* **manufacturers:** rename fields ([aa6a583](https://github.com/tillhub/schemas/commit/aa6a583))
+
+# [3.79.0](https://github.com/tillhub/schemas/compare/v3.78.0...v3.79.0) (2019-07-31)
+
+
+### Features
+
+* **analytics/snapshots:** require branch and register ([c994c4f](https://github.com/tillhub/schemas/commit/c994c4f))
+
+# [3.78.0](https://github.com/tillhub/schemas/compare/v3.77.0...v3.78.0) (2019-07-31)
+
+
+### Features
+
+* **analytics/snapshots:** add timezone ([5508fef](https://github.com/tillhub/schemas/commit/5508fef))
+
+# [3.77.0](https://github.com/tillhub/schemas/compare/v3.76.0...v3.77.0) (2019-07-30)
+
+
+### Features
+
+* **analytics/snapshots:** add reauest body ([9955cb5](https://github.com/tillhub/schemas/commit/9955cb5))
+
+# [3.76.0](https://github.com/tillhub/schemas/compare/v3.75.0...v3.76.0) (2019-07-30)
+
+
+### Features
+
+* **analytics/snapshots:** add branch and register query ([dcee98a](https://github.com/tillhub/schemas/commit/dcee98a))
+
+# [3.75.0](https://github.com/tillhub/schemas/compare/v3.74.0...v3.75.0) (2019-07-30)
+
+
+### Features
+
+* **analyitcs:** add snapshots ([05afb8c](https://github.com/tillhub/schemas/commit/05afb8c))
+
+# [3.74.0](https://github.com/tillhub/schemas/compare/v3.73.2...v3.74.0) (2019-07-30)
+
+
+### Features
+
+* **vouchers:** extend for system ([3f8131f](https://github.com/tillhub/schemas/commit/3f8131f))
+
+## [3.73.2](https://github.com/tillhub/schemas/compare/v3.73.1...v3.73.2) (2019-07-30)
+
+
+### Bug Fixes
+
+* **manufacturers:** fix contacts properties names ([1c921e3](https://github.com/tillhub/schemas/commit/1c921e3))
+
+## [3.73.1](https://github.com/tillhub/schemas/compare/v3.73.0...v3.73.1) (2019-07-30)
+
+
+### Bug Fixes
+
+* **manufacturers:** fix contacts field ([7ed7cbe](https://github.com/tillhub/schemas/commit/7ed7cbe))
+
+# [3.73.0](https://github.com/tillhub/schemas/compare/v3.72.0...v3.73.0) (2019-07-30)
+
+
+### Features
+
+* **manufacturers:** add schema for manufacturers ([22fa125](https://github.com/tillhub/schemas/commit/22fa125))
+
+# [3.72.0](https://github.com/tillhub/schemas/compare/v3.71.0...v3.72.0) (2019-07-29)
+
+
+### Features
+
+* **expense_account:** add tip type ([17329dd](https://github.com/tillhub/schemas/commit/17329dd))
+
+# [3.71.0](https://github.com/tillhub/schemas/compare/v3.70.0...v3.71.0) (2019-07-26)
+
+
+### Features
+
+* **loyalty_cards:** add schema for lookup route ([8abd342](https://github.com/tillhub/schemas/commit/8abd342))
+
+# [3.70.0](https://github.com/tillhub/schemas/compare/v3.69.3...v3.70.0) (2019-07-26)
+
+
+### Features
+
+* **loyalties:** add get all and get one response schema ([2a7e4dc](https://github.com/tillhub/schemas/commit/2a7e4dc))
+
+## [3.69.3](https://github.com/tillhub/schemas/compare/v3.69.2...v3.69.3) (2019-07-25)
+
+
+### Bug Fixes
+
+* **transactions-ext:** remove transaction_id required ([dbaa1d8](https://github.com/tillhub/schemas/commit/dbaa1d8))
+
+## [3.69.2](https://github.com/tillhub/schemas/compare/v3.69.1...v3.69.2) (2019-07-25)
+
+
+### Bug Fixes
+
+* **transactions-ext:** add transaction id ([e2c3a10](https://github.com/tillhub/schemas/commit/e2c3a10))
+
+## [3.69.1](https://github.com/tillhub/schemas/compare/v3.69.0...v3.69.1) (2019-07-25)
+
+
+### Bug Fixes
+
+* **transactions-ext:** fix response schema validation ([271c750](https://github.com/tillhub/schemas/commit/271c750))
+
+# [3.69.0](https://github.com/tillhub/schemas/compare/v3.68.0...v3.69.0) (2019-07-23)
+
+
+### Features
+
+* **custom_dashboards:** allow to pass token ([2b73bb8](https://github.com/tillhub/schemas/commit/2b73bb8))
+
+# [3.68.0](https://github.com/tillhub/schemas/compare/v3.67.3...v3.68.0) (2019-07-23)
+
+
+### Bug Fixes
+
+* **transactins-ext:** fix test ([607dfde](https://github.com/tillhub/schemas/commit/607dfde))
+* **transactions_ext:** resolve schema ([fe1d365](https://github.com/tillhub/schemas/commit/fe1d365))
+
+
+### Features
+
+* **transactions_ext:** add schema to transactions_ext ([8f131fd](https://github.com/tillhub/schemas/commit/8f131fd))
+
+## [3.67.3](https://github.com/tillhub/schemas/compare/v3.67.2...v3.67.3) (2019-07-23)
+
+
+### Bug Fixes
+
+* **transactions_ext:** fix response and request validation ([46fdcad](https://github.com/tillhub/schemas/commit/46fdcad))
+
+## [3.67.2](https://github.com/tillhub/schemas/compare/v3.67.1...v3.67.2) (2019-07-23)
+
+
+### Bug Fixes
+
+* **expenses:** add images to expenses ([ef86c97](https://github.com/tillhub/schemas/commit/ef86c97))
+
+## [3.67.1](https://github.com/tillhub/schemas/compare/v3.67.0...v3.67.1) (2019-07-23)
+
+
+### Bug Fixes
+
+* **expenses:** add images to expenses and deposits ([ee632fb](https://github.com/tillhub/schemas/commit/ee632fb))
+
+# [3.67.0](https://github.com/tillhub/schemas/compare/v3.66.0...v3.67.0) (2019-07-22)
+
+
+### Features
+
+* **Configurations:** Configurations.tips ([#155](https://github.com/tillhub/schemas/issues/155)) ([b2fa02c](https://github.com/tillhub/schemas/commit/b2fa02c))
+
+# [3.66.0](https://github.com/tillhub/schemas/compare/v3.65.1...v3.66.0) (2019-07-22)
+
+
+### Bug Fixes
+
+* **expenses:** add more images format ([361d875](https://github.com/tillhub/schemas/commit/361d875))
+
+
+### Features
+
+* **expense-deposits:** add images ([ca73bf9](https://github.com/tillhub/schemas/commit/ca73bf9))
+
+## [3.65.1](https://github.com/tillhub/schemas/compare/v3.65.0...v3.65.1) (2019-07-19)
+
+
+### Bug Fixes
+
+* **voucher:** update numbers type to string ([38e8ad0](https://github.com/tillhub/schemas/commit/38e8ad0))
+
+# [3.65.0](https://github.com/tillhub/schemas/compare/v3.64.0...v3.65.0) (2019-07-19)
+
+
+### Features
+
+* **config:** extend available hooks ([c42372d](https://github.com/tillhub/schemas/commit/c42372d))
+
+# [3.64.0](https://github.com/tillhub/schemas/compare/v3.63.0...v3.64.0) (2019-07-18)
+
+
+### Features
+
+* **vouchers:** add get schema ([ddfae6a](https://github.com/tillhub/schemas/commit/ddfae6a))
+
+# [3.63.0](https://github.com/tillhub/schemas/compare/v3.62.0...v3.63.0) (2019-07-18)
+
+
+### Features
+
+* **configurations:** extend custom_dashboards ([6a7780b](https://github.com/tillhub/schemas/commit/6a7780b))
+
+# [3.62.0](https://github.com/tillhub/schemas/compare/v3.61.0...v3.62.0) (2019-07-18)
+
+
+### Features
+
+* **transactions:** add timezone ([fd42bb6](https://github.com/tillhub/schemas/commit/fd42bb6))
+
+# [3.61.0](https://github.com/tillhub/schemas/compare/v3.60.0...v3.61.0) (2019-07-18)
+
+
+### Features
+
+* **favourites:** extend types ([f73170e](https://github.com/tillhub/schemas/commit/f73170e))
+
+# [3.60.0](https://github.com/tillhub/schemas/compare/v3.59.0...v3.60.0) (2019-07-18)
+
+
+### Features
+
+* **loyalties:** add descriptions for booking ([3c72bdb](https://github.com/tillhub/schemas/commit/3c72bdb))
+
+# [3.59.0](https://github.com/tillhub/schemas/compare/v3.58.0...v3.59.0) (2019-07-18)
+
+
+### Features
+
+* **notes:** add client_id and date for IOS team ([57aa66a](https://github.com/tillhub/schemas/commit/57aa66a))
+
+# [3.58.0](https://github.com/tillhub/schemas/compare/v3.57.2...v3.58.0) (2019-07-17)
+
+
+### Features
+
+* **loyalties:** update book schemas ([f2c2875](https://github.com/tillhub/schemas/commit/f2c2875))
+
+## [3.57.2](https://github.com/tillhub/schemas/compare/v3.57.1...v3.57.2) (2019-07-17)
+
+
+### Bug Fixes
+
+* **staff:** remove specific scopes as it can expand ([6b9e6db](https://github.com/tillhub/schemas/commit/6b9e6db))
+
+## [3.57.1](https://github.com/tillhub/schemas/compare/v3.57.0...v3.57.1) (2019-07-15)
+
+
+### Bug Fixes
+
+* **time_entries:** make metada nullable ([12f9782](https://github.com/tillhub/schemas/commit/12f9782))
+
+# [3.57.0](https://github.com/tillhub/schemas/compare/v3.56.1...v3.57.0) (2019-07-12)
+
+
+### Features
+
+* **safe_log_book:** add transfer type ([8a8c2fe](https://github.com/tillhub/schemas/commit/8a8c2fe))
+
+## [3.56.1](https://github.com/tillhub/schemas/compare/v3.56.0...v3.56.1) (2019-07-11)
+
+
+### Bug Fixes
+
+* **staff:** alllow locations null ([#144](https://github.com/tillhub/schemas/issues/144)) ([f1fee51](https://github.com/tillhub/schemas/commit/f1fee51))
+
+# [3.56.0](https://github.com/tillhub/schemas/compare/v3.55.5...v3.56.0) (2019-07-11)
+
+
+### Features
+
+* **expense_acc:** add accepts_booking_from_safe ([7c3b01f](https://github.com/tillhub/schemas/commit/7c3b01f))
+
+## [3.55.5](https://github.com/tillhub/schemas/compare/v3.55.4...v3.55.5) (2019-07-10)
+
+
+### Bug Fixes
+
+* **time-entries:** add owner field and descriptions ([065ce74](https://github.com/tillhub/schemas/commit/065ce74))
+* **time-entries:** fixing fields length ([8fc9d24](https://github.com/tillhub/schemas/commit/8fc9d24))
+* **time-entries:** rename start and end fields ([086b436](https://github.com/tillhub/schemas/commit/086b436))
+
+## [3.55.4](https://github.com/tillhub/schemas/compare/v3.55.3...v3.55.4) (2019-07-10)
+
+
+### Bug Fixes
+
+* **staff:** remove commented code ([7f617d3](https://github.com/tillhub/schemas/commit/7f617d3))
+
+## [3.55.3](https://github.com/tillhub/schemas/compare/v3.55.2...v3.55.3) (2019-07-10)
+
+
+### Bug Fixes
+
+* **time-entries:** rename and add default fields ([af27800](https://github.com/tillhub/schemas/commit/af27800))
+
+## [3.55.2](https://github.com/tillhub/schemas/compare/v3.55.1...v3.55.2) (2019-07-09)
+
+
+### Bug Fixes
+
+* **products:** change format for start, end date ([#137](https://github.com/tillhub/schemas/issues/137)) ([a324aa8](https://github.com/tillhub/schemas/commit/a324aa8))
+
+## [3.55.1](https://github.com/tillhub/schemas/compare/v3.55.0...v3.55.1) (2019-07-09)
+
+
+### Bug Fixes
+
+* **devices:** add `deleted` flag ([b5b632f](https://github.com/tillhub/schemas/commit/b5b632f))
+
+# [3.55.0](https://github.com/tillhub/schemas/compare/v3.54.0...v3.55.0) (2019-07-09)
+
+
+### Features
+
+* **GET:** allow additional props ([fbe29b9](https://github.com/tillhub/schemas/commit/fbe29b9))
+
+# [3.54.0](https://github.com/tillhub/schemas/compare/v3.53.0...v3.54.0) (2019-07-07)
+
+
+### Features
+
+* **Balances:** Balances.extended ([548bea7](https://github.com/tillhub/schemas/commit/548bea7))
+
 # [3.53.0](https://github.com/tillhub/schemas/compare/v3.52.0...v3.53.0) (2019-07-05)
 
 

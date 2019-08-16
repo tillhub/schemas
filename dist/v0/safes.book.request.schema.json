@@ -74,7 +74,8 @@
       "enum": [
         "safe_to_safe",
         "safe_to_bank",
-        "pos_to_safe"
+        "pos_to_safe",
+        "safe_to_expense"
       ]
     },
     "items": {

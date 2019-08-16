@@ -66,6 +66,25 @@
     },
     "active": {
       "type": "boolean"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "refund",
+        "stock_change"
+      ]
+    },
+    "noted_required": {
+      "type": "boolean",
+      "default": false
+    },
+    "image_required": {
+      "type": "boolean",
+      "default": false
+    },
+    "approval_required": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

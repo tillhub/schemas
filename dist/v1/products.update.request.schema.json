@@ -308,11 +308,11 @@
                     "properties": {
                       "start": {
                         "type": "string",
-                        "format": "date-time"
+                        "format": "date"
                       },
                       "end": {
                         "type": "string",
-                        "format": "date-time"
+                        "format": "date"
                       }
                     },
                     "required": [
@@ -1472,6 +1472,21 @@
                 "multipleOf": 0.01
               }
             }
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "manufacturers": {
+      "oneOf": [
+        {
+          "type": "array",
+          "description": "An array of uuids of the product manufacturers",
+          "items": {
+            "type": "string",
+            "format": "uuid"
           }
         },
         {

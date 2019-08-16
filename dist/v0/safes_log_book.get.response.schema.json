@@ -79,7 +79,8 @@
         "enum": [
           "safe_to_safe",
           "safe_to_bank",
-          "pos_to_safe"
+          "pos_to_safe",
+          "safe_to_expense"
         ]
       },
       "transfer_value": {
@@ -852,6 +853,10 @@
                           }
                         ]
                       },
+                      "accepts_booking_from_safe": {
+                        "type": "boolean",
+                        "default": false
+                      },
                       "id": {
                         "type": "string",
                         "format": "uuid"
@@ -1608,6 +1613,10 @@
                             "type": "null"
                           }
                         ]
+                      },
+                      "accepts_booking_from_safe": {
+                        "type": "boolean",
+                        "default": false
                       },
                       "id": {
                         "type": "string",

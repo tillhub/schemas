@@ -1,0 +1,40 @@
+{
+  "$id": "https://schemas.tillhub.com/v0/analytics.create.request.body.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": true,
+  "type": "object",
+  "required": [],
+  "properties": {
+    "deleted": {
+      "type": "boolean",
+      "default": false
+    },
+    "register": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "timezone": {
+      "description": "IANA timezone.",
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "branch": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "client_id": {
+      "type": "string",
+      "maxLength": 64
+    },
+    "comment": {
+      "type": "string",
+      "maxLength": 2048
+    }
+  }
+}
