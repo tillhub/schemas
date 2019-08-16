@@ -1,3 +1,15 @@
+# [4.1.0](https://github.com/tillhub/schemas/compare/v4.0.0...v4.1.0) (2019-08-16)
+
+
+### Bug Fixes
+
+* **v0 vouchers:** moved system id to top level ([4eef33e](https://github.com/tillhub/schemas/commit/4eef33e))
+
+
+### Features
+
+* **Vouchers:** Vouchers+System+Product: scan_prefixes, voucher_actions, vouchers ([72f3ba4](https://github.com/tillhub/schemas/commit/72f3ba4))
+
 # [4.0.0](https://github.com/tillhub/schemas/compare/v3.88.0...v4.0.0) (2019-08-16)
 
 
