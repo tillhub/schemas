@@ -1,3 +1,11 @@
+# [4.2.0](https://github.com/tillhub/schemas/compare/v4.1.0...v4.2.0) (2019-08-16)
+
+
+### Features
+
+* **blances:** balances.extended ([b85fe94](https://github.com/tillhub/schemas/commit/b85fe94))
+* **configurations:** balances and receipts ([482d622](https://github.com/tillhub/schemas/commit/482d622))
+
 # [4.1.0](https://github.com/tillhub/schemas/compare/v4.0.0...v4.1.0) (2019-08-16)
 
 

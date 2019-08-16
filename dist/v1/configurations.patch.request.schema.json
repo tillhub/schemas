@@ -1639,6 +1639,23 @@
                         }
                       ]
                     },
+                    "print_extended_stats": {
+                      "oneOf": [
+                        {
+                          "description": "Defines the receipt-types the extended balance stats will be printed on (only makes sense for balances)",
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "enum": [
+                              "balance"
+                            ]
+                          }
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
                     "print_total_discount": {
                       "oneOf": [
                         {
@@ -2121,7 +2138,19 @@
           "type": "null"
         },
         {
-          "type": "object"
+          "type": "object",
+          "properties": {
+            "skip_x_report": {
+              "description": "Specifies if the x-report will be skipped by default.",
+              "type": "boolean",
+              "default": "false"
+            },
+            "extended_report": {
+              "description": "Specifies if the balance will calculate extended statistics.",
+              "type": "boolean",
+              "default": "false"
+            }
+          }
         }
       ]
     },
