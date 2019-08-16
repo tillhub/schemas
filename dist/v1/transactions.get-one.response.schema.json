@@ -139,7 +139,11 @@
               "safe_expense",
               "safe_expense_cancel",
               "safe_deposit",
-              "safe_deposit_cancel"
+              "safe_deposit_cancel",
+              "tip_expense",
+              "tip_expense_cancel",
+              "tip_deposit",
+              "tip_deposit_cancel"
             ]
           },
           "client_id": {

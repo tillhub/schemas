@@ -847,6 +847,10 @@
               "type": "boolean",
               "default": false
             },
+            "tips_expense_note_required": {
+              "type": "boolean",
+              "default": false
+            },
             "safe_deposit_limit": {
               "description": "How much cash per currency can be taken from a safe, regardless of it's state",
               "oneOf": [
@@ -2140,15 +2144,52 @@
         {
           "type": "object",
           "properties": {
-            "skip_x_report": {
-              "description": "Specifies if the x-report will be skipped by default.",
-              "type": "boolean",
-              "default": "false"
-            },
-            "extended_report": {
-              "description": "Specifies if the balance will calculate extended statistics.",
-              "type": "boolean",
-              "default": "false"
+            "display": {
+              "type": "object",
+              "properties": {
+                "skip_x_report": {
+                  "description": "If true, skips the x-report and directly goes to conduct a balance.",
+                  "default": false,
+                  "oneOf": [
+                    {
+                      "type": "null"
+                    },
+                    {
+                      "type": "boolean"
+                    }
+                  ]
+                },
+                "extended_report": {
+                  "description": "If true, adds extended balance information to the UI and the receipts.",
+                  "default": false,
+                  "oneOf": [
+                    {
+                      "type": "null"
+                    },
+                    {
+                      "type": "boolean"
+                    }
+                  ]
+                },
+                "tips_expense": {
+                  "description": "Defines if a tip expense is required within conducting the balance (if tips > 0).",
+                  "type": "string",
+                  "enum": [
+                    "none",
+                    "optional",
+                    "required"
+                  ]
+                },
+                "bank_expense": {
+                  "description": "Defines if a bank expense is required within conducting the balance (if register cash > 0).",
+                  "type": "string",
+                  "enum": [
+                    "none",
+                    "optional",
+                    "required"
+                  ]
+                }
+              }
             }
           }
         }

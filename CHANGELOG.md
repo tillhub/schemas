@@ -1,3 +1,10 @@
+# [4.3.0](https://github.com/tillhub/schemas/compare/v4.2.0...v4.3.0) (2019-08-16)
+
+
+### Features
+
+* **Configurations:** Configuartion.balances behavior ([c6351eb](https://github.com/tillhub/schemas/commit/c6351eb))
+
 # [4.2.0](https://github.com/tillhub/schemas/compare/v4.1.0...v4.2.0) (2019-08-16)
 
 
