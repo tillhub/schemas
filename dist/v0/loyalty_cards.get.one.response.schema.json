@@ -1,0 +1,116 @@
+{
+  "$id": "https://schemas.tillhub.com/v0/loyalty_cards.get.one.response.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": true,
+  "type": "object",
+  "required": [],
+  "properties": {
+    "code": {
+      "type": "string"
+    },
+    "name": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "description": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4096
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "deleted": {
+      "type": "boolean"
+    },
+    "active": {
+      "type": "boolean",
+      "description": "The card defaults to inactive, if this property is not specified. Only active cards will be able to collect loyalty values.",
+      "default": false
+    },
+    "metadata": {
+      "oneOf": [
+        {
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "loyalty_account": {
+      "oneOf": [
+        {
+          "description": "The loyalty account that this card belongs to.",
+          "type": "string",
+          "format": "uuid",
+          "example": "936835f7-2d75-41d2-9001-38ed6e458328"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "activated_at": {
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "date-time"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "loyalty_system": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "loyalty_values": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "description": "The loyalty values accumulated on the loyalty card",
+        "additionalProperties": false,
+        "properties": {
+          "amount": {
+            "example": "27633.02",
+            "type": "number",
+            "multipleOf": 0.01
+          },
+          "unit": {
+            "type": "string",
+            "examples": [
+              "EUR",
+              "points",
+              "miles"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

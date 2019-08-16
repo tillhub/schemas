@@ -1,0 +1,30 @@
+{
+  "$id": "https://schemas.tillhub.com/v0/analytics.create.request.query.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": true,
+  "type": "object",
+  "required": [
+    "start",
+    "end",
+    "branch",
+    "register"
+  ],
+  "properties": {
+    "start": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "end": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "branch": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "register": {
+      "type": "string",
+      "format": "uuid"
+    }
+  }
+}

@@ -88,6 +88,10 @@
           "type": "null"
         }
       ]
+    },
+    "loyalty_system": {
+      "type": "string",
+      "format": "uuid"
     }
   }
 }
