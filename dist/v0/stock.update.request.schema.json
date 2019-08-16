@@ -32,6 +32,10 @@
     },
     "metadata": {
       "type": "object"
+    },
+    "reasons": {
+      "type": "string",
+      "format": "uuid"
     }
   }
 }
