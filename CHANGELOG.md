@@ -1,3 +1,17 @@
+# [4.0.0](https://github.com/tillhub/schemas/compare/v3.88.0...v4.0.0) (2019-08-16)
+
+
+### Features
+
+* **customers_ext:** add gross and net ([708ff8d](https://github.com/tillhub/schemas/commit/708ff8d))
+
+
+### BREAKING CHANGES
+
+* **customers_ext:** All of the metrics that return an amount now return "gross"/"net", instead of only
+"amount". The metric total_amount_transactions was removed as it is the same as
+total_amount_items_sold.
+
 # [3.88.0](https://github.com/tillhub/schemas/compare/v3.87.1...v3.88.0) (2019-08-15)
 
 
