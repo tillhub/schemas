@@ -1,3 +1,10 @@
+## [4.3.1](https://github.com/tillhub/schemas/compare/v4.3.0...v4.3.1) (2019-08-19)
+
+
+### Bug Fixes
+
+* **configurations:** config balances ([9429d07](https://github.com/tillhub/schemas/commit/9429d07))
+
 # [4.3.0](https://github.com/tillhub/schemas/compare/v4.2.0...v4.3.0) (2019-08-16)
 
 
