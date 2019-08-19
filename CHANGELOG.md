@@ -1,3 +1,44 @@
+# [4.3.0](https://github.com/tillhub/schemas/compare/v4.2.0...v4.3.0) (2019-08-16)
+
+
+### Features
+
+* **Configurations:** Configuartion.balances behavior ([c6351eb](https://github.com/tillhub/schemas/commit/c6351eb))
+
+# [4.2.0](https://github.com/tillhub/schemas/compare/v4.1.0...v4.2.0) (2019-08-16)
+
+
+### Features
+
+* **blances:** balances.extended ([b85fe94](https://github.com/tillhub/schemas/commit/b85fe94))
+* **configurations:** balances and receipts ([482d622](https://github.com/tillhub/schemas/commit/482d622))
+
+# [4.1.0](https://github.com/tillhub/schemas/compare/v4.0.0...v4.1.0) (2019-08-16)
+
+
+### Bug Fixes
+
+* **v0 vouchers:** moved system id to top level ([4eef33e](https://github.com/tillhub/schemas/commit/4eef33e))
+
+
+### Features
+
+* **Vouchers:** Vouchers+System+Product: scan_prefixes, voucher_actions, vouchers ([72f3ba4](https://github.com/tillhub/schemas/commit/72f3ba4))
+
+# [4.0.0](https://github.com/tillhub/schemas/compare/v3.88.0...v4.0.0) (2019-08-16)
+
+
+### Features
+
+* **customers_ext:** add gross and net ([708ff8d](https://github.com/tillhub/schemas/commit/708ff8d))
+
+
+### BREAKING CHANGES
+
+* **customers_ext:** All of the metrics that return an amount now return "gross"/"net", instead of only
+"amount". The metric total_amount_transactions was removed as it is the same as
+total_amount_items_sold.
+
 # [3.88.0](https://github.com/tillhub/schemas/compare/v3.87.1...v3.88.0) (2019-08-15)
 
 
