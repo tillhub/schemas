@@ -1,3 +1,10 @@
+## [4.3.4](https://github.com/tillhub/schemas/compare/v4.3.3...v4.3.4) (2019-08-20)
+
+
+### Bug Fixes
+
+* **configurations:** fix format regression ([6df3ffa](https://github.com/tillhub/schemas/commit/6df3ffa))
+
 ## [4.3.3](https://github.com/tillhub/schemas/compare/v4.3.2...v4.3.3) (2019-08-20)
 
 
