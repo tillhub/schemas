@@ -1,3 +1,10 @@
+## [4.3.3](https://github.com/tillhub/schemas/compare/v4.3.2...v4.3.3) (2019-08-20)
+
+
+### Bug Fixes
+
+* **configurations:** handle type regression ([97a7223](https://github.com/tillhub/schemas/commit/97a7223))
+
 ## [4.3.2](https://github.com/tillhub/schemas/compare/v4.3.1...v4.3.2) (2019-08-20)
 
 
