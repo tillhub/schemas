@@ -1,3 +1,10 @@
+## [4.3.2](https://github.com/tillhub/schemas/compare/v4.3.1...v4.3.2) (2019-08-20)
+
+
+### Bug Fixes
+
+* **notification:** refactor notifications ([3509c72](https://github.com/tillhub/schemas/commit/3509c72))
+
 ## [4.3.1](https://github.com/tillhub/schemas/compare/v4.3.0...v4.3.1) (2019-08-19)
 
 
