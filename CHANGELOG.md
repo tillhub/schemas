@@ -1,3 +1,133 @@
+## [4.3.1](https://github.com/tillhub/schemas/compare/v4.3.0...v4.3.1) (2019-08-19)
+
+
+### Bug Fixes
+
+* **configurations:** config balances ([9429d07](https://github.com/tillhub/schemas/commit/9429d07))
+
+# [4.3.0](https://github.com/tillhub/schemas/compare/v4.2.0...v4.3.0) (2019-08-16)
+
+
+### Features
+
+* **Configurations:** Configuartion.balances behavior ([c6351eb](https://github.com/tillhub/schemas/commit/c6351eb))
+
+# [4.2.0](https://github.com/tillhub/schemas/compare/v4.1.0...v4.2.0) (2019-08-16)
+
+
+### Features
+
+* **blances:** balances.extended ([b85fe94](https://github.com/tillhub/schemas/commit/b85fe94))
+* **configurations:** balances and receipts ([482d622](https://github.com/tillhub/schemas/commit/482d622))
+
+# [4.1.0](https://github.com/tillhub/schemas/compare/v4.0.0...v4.1.0) (2019-08-16)
+
+
+### Bug Fixes
+
+* **v0 vouchers:** moved system id to top level ([4eef33e](https://github.com/tillhub/schemas/commit/4eef33e))
+
+
+### Features
+
+* **Vouchers:** Vouchers+System+Product: scan_prefixes, voucher_actions, vouchers ([72f3ba4](https://github.com/tillhub/schemas/commit/72f3ba4))
+
+# [4.0.0](https://github.com/tillhub/schemas/compare/v3.88.0...v4.0.0) (2019-08-16)
+
+
+### Features
+
+* **customers_ext:** add gross and net ([708ff8d](https://github.com/tillhub/schemas/commit/708ff8d))
+
+
+### BREAKING CHANGES
+
+* **customers_ext:** All of the metrics that return an amount now return "gross"/"net", instead of only
+"amount". The metric total_amount_transactions was removed as it is the same as
+total_amount_items_sold.
+
+# [3.88.0](https://github.com/tillhub/schemas/compare/v3.87.1...v3.88.0) (2019-08-15)
+
+
+### Features
+
+* **stock:** add reason to update and transfer ([4ee857d](https://github.com/tillhub/schemas/commit/4ee857d))
+
+## [3.87.1](https://github.com/tillhub/schemas/compare/v3.87.0...v3.87.1) (2019-08-15)
+
+
+### Bug Fixes
+
+* **client_accounts:** fix export module name ([f94213a](https://github.com/tillhub/schemas/commit/f94213a))
+
+# [3.87.0](https://github.com/tillhub/schemas/compare/v3.86.0...v3.87.0) (2019-08-15)
+
+
+### Bug Fixes
+
+* **demodata:** fix load module ([06334a6](https://github.com/tillhub/schemas/commit/06334a6))
+
+
+### Features
+
+* **client_accounts:** add client account demo data schema ([6884de8](https://github.com/tillhub/schemas/commit/6884de8))
+
+# [3.86.0](https://github.com/tillhub/schemas/compare/v3.85.0...v3.86.0) (2019-08-14)
+
+
+### Features
+
+* **customers_ext:** indicate integers ([5fc184a](https://github.com/tillhub/schemas/commit/5fc184a))
+
+# [3.85.0](https://github.com/tillhub/schemas/compare/v3.84.0...v3.85.0) (2019-08-14)
+
+
+### Features
+
+* **customers_ext:** change summary ([2f8484d](https://github.com/tillhub/schemas/commit/2f8484d))
+
+# [3.84.0](https://github.com/tillhub/schemas/compare/v3.83.0...v3.84.0) (2019-08-14)
+
+
+### Features
+
+* **stocks:** add reason param ([d295744](https://github.com/tillhub/schemas/commit/d295744))
+
+# [3.83.0](https://github.com/tillhub/schemas/compare/v3.82.0...v3.83.0) (2019-08-12)
+
+
+### Features
+
+* **customers_ext:** update top_branch/top_seller ([a58d423](https://github.com/tillhub/schemas/commit/a58d423))
+
+# [3.82.0](https://github.com/tillhub/schemas/compare/v3.81.0...v3.82.0) (2019-08-09)
+
+
+### Features
+
+* **customers_ext:** update description ([78b60af](https://github.com/tillhub/schemas/commit/78b60af))
+
+# [3.81.0](https://github.com/tillhub/schemas/compare/v3.80.5...v3.81.0) (2019-08-05)
+
+
+### Features
+
+* **reason:** add properties ([2dd162b](https://github.com/tillhub/schemas/commit/2dd162b))
+
+## [3.80.5](https://github.com/tillhub/schemas/compare/v3.80.4...v3.80.5) (2019-08-01)
+
+
+### Bug Fixes
+
+* **products:** add manufacturers for products v1 ([0356bf9](https://github.com/tillhub/schemas/commit/0356bf9))
+
+## [3.80.4](https://github.com/tillhub/schemas/compare/v3.80.3...v3.80.4) (2019-08-01)
+
+
+### Bug Fixes
+
+* **custom-hooks:** fix name type ([9862610](https://github.com/tillhub/schemas/commit/9862610))
+
 ## [3.80.3](https://github.com/tillhub/schemas/compare/v3.80.2...v3.80.3) (2019-08-01)
 
 

@@ -37,25 +37,106 @@
             "properties": {
               "id": {
                 "type": "string",
-                "maxLength": 64
+                "format": "uuid",
+                "description": "The Tillhub scan prefix resource reference ID.",
+                "example": "43847a66-97dc-4ac2-8e8a-c44920e1f22f"
               },
               "action": {
                 "type": "string",
-                "maxLength": 32
+                "enum": [
+                  "voucher"
+                ]
               },
               "prefix": {
+                "description": "The prefix to look up and remove from scan results before requesting the voucher.",
                 "type": "string",
-                "maxLength": 16
+                "maxLength": 16,
+                "example": "bsh"
               },
               "display_name": {
-                "type": "string",
-                "maxLength": 64
+                "default": null,
+                "oneOf": [
+                  {
+                    "description": "The display string for presenting the selection of available prefixes.",
+                    "type": "string",
+                    "maxLength": 64,
+                    "example": "BSH - Marketing"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "display_format": {
+                "default": null,
+                "oneOf": [
+                  {
+                    "description": "'X' will be filled with digits/characters from a scan result.",
+                    "type": "string",
+                    "maxLength": 64,
+                    "example": "XXXX-XXXX-XXXX-XXXX"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "min_identifier_length": {
+                "default": null,
+                "oneOf": [
+                  {
+                    "description": "The minimum length before a lookup can be performed.",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 32
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
               },
               "system": {
-                "type": "object"
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "format": "uuid",
+                    "description": "The Tillhub system resource reference ID associated with this prefix.",
+                    "example": "43847a66-97dc-4ac2-8e8a-c44920e1f22f"
+                  },
+                  "system": {
+                    "type": "string",
+                    "format": "uuid",
+                    "description": "The Tillhub sub-system resource reference ID associated with this prefix.",
+                    "example": "43847a66-97dc-4ac2-8e8a-c44920e1f22f"
+                  },
+                  "type": {
+                    "type": "string",
+                    "enum": [
+                      "tillhub-voucher-api",
+                      "fleurop-voucher-api"
+                    ]
+                  }
+                }
               },
               "product": {
-                "type": "object"
+                "default": null,
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "format": "uuid",
+                        "description": "The Tillhub product resource reference ID assocuated with this prefix.",
+                        "example": "43847a66-97dc-4ac2-8e8a-c44920e1f22f"
+                      }
+                    }
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
               }
             }
           }
@@ -65,13 +146,122 @@
     "voucher_actions": {
       "oneOf": [
         {
-          "type": "array",
-          "items": {
-            "type": "object"
-          }
+          "type": "null"
         },
         {
-          "type": "null"
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "format": "uuid",
+                "description": "The Tillhub voucher action resource reference ID.",
+                "example": "43847a66-97dc-4ac2-8e8a-c44920e1f22f"
+              },
+              "action": {
+                "type": "string",
+                "enum": [
+                  "increment",
+                  "decrement"
+                ]
+              },
+              "external_parameter": {
+                "default": null,
+                "oneOf": [
+                  {
+                    "description": "Additional parameter for external voucher systems, e.g. Fleurop Voucher Type specifier",
+                    "type": "string",
+                    "maxLength": 128,
+                    "example": "0023903408"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "context": {
+                "default": null,
+                "oneOf": [
+                  {
+                    "description": "Specifies from where this action can be triggered",
+                    "type": "string",
+                    "enum": [
+                      "library",
+                      "tiles"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "lookup": {
+                "default": null,
+                "oneOf": [
+                  {
+                    "description": "Specifies the key for a request by e.g. 'code'",
+                    "type": "string",
+                    "maxLength": 64,
+                    "example": "code"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "type": {
+                "type": "string",
+                "enum": [
+                  "tillhub-voucher-api",
+                  "fleurop-voucher-api"
+                ]
+              },
+              "system": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "format": "uuid",
+                    "description": "The Tillhub system resource reference ID associated with this prefix.",
+                    "example": "43847a66-97dc-4ac2-8e8a-c44920e1f22f"
+                  },
+                  "system": {
+                    "type": "string",
+                    "format": "uuid",
+                    "description": "The Tillhub sub-system resource reference ID associated with this prefix.",
+                    "example": "43847a66-97dc-4ac2-8e8a-c44920e1f22f"
+                  },
+                  "type": {
+                    "type": "string",
+                    "enum": [
+                      "tillhub-voucher-api",
+                      "fleurop-voucher-api"
+                    ]
+                  }
+                }
+              },
+              "product": {
+                "default": null,
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "format": "uuid",
+                        "description": "The Tillhub product resource reference ID assocuated with this prefix.",
+                        "example": "43847a66-97dc-4ac2-8e8a-c44920e1f22f"
+                      }
+                    }
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            }
+          }
         }
       ]
     },
@@ -654,6 +844,10 @@
               "default": false
             },
             "safe_note_required": {
+              "type": "boolean",
+              "default": false
+            },
+            "tips_expense_note_required": {
               "type": "boolean",
               "default": false
             },
@@ -1449,6 +1643,23 @@
                         }
                       ]
                     },
+                    "print_extended_stats": {
+                      "oneOf": [
+                        {
+                          "description": "Defines the receipt-types the extended balance stats will be printed on (only makes sense for balances)",
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "enum": [
+                              "balance"
+                            ]
+                          }
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
                     "print_total_discount": {
                       "oneOf": [
                         {
@@ -1931,7 +2142,51 @@
           "type": "null"
         },
         {
-          "type": "object"
+          "type": "object",
+          "properties": {
+            "skip_x_report": {
+              "description": "If true, skips the x-report and directly goes to conduct a balance.",
+              "default": false,
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "boolean"
+                }
+              ]
+            },
+            "extended_report": {
+              "description": "If true, adds extended balance information to the UI and the receipts.",
+              "default": false,
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "boolean"
+                }
+              ]
+            },
+            "tips_expense": {
+              "description": "Defines if a tip expense is required within conducting the balance (if tips > 0).",
+              "type": "string",
+              "enum": [
+                "none",
+                "optional",
+                "required"
+              ]
+            },
+            "bank_expense": {
+              "description": "Defines if a bank expense is required within conducting the balance (if register cash > 0).",
+              "type": "string",
+              "enum": [
+                "none",
+                "optional",
+                "required"
+              ]
+            }
+          }
         }
       ]
     },
