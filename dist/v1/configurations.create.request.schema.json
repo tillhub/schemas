@@ -44,8 +44,12 @@
               "action": {
                 "type": "string",
                 "enum": [
-                  "voucher"
+                  "voucher",
+                  "vouchers"
                 ]
+              },
+              "type": {
+                "type": "string"
               },
               "prefix": {
                 "description": "The prefix to look up and remove from scan results before requesting the voucher.",
@@ -100,15 +104,21 @@
                 "properties": {
                   "id": {
                     "type": "string",
-                    "format": "uuid",
                     "description": "The Tillhub system resource reference ID associated with this prefix.",
                     "example": "43847a66-97dc-4ac2-8e8a-c44920e1f22f"
                   },
                   "system": {
-                    "type": "string",
-                    "format": "uuid",
-                    "description": "The Tillhub sub-system resource reference ID associated with this prefix.",
-                    "example": "43847a66-97dc-4ac2-8e8a-c44920e1f22f"
+                    "oneOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "type": "string",
+                        "format": "uuid",
+                        "description": "The Tillhub sub-system resource reference ID associated with this prefix.",
+                        "example": "43847a66-97dc-4ac2-8e8a-c44920e1f22f"
+                      }
+                    ]
                   },
                   "type": {
                     "type": "string",
@@ -126,10 +136,17 @@
                     "type": "object",
                     "properties": {
                       "id": {
-                        "type": "string",
-                        "format": "uuid",
-                        "description": "The Tillhub product resource reference ID assocuated with this prefix.",
-                        "example": "43847a66-97dc-4ac2-8e8a-c44920e1f22f"
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "format": "uuid",
+                            "description": "The Tillhub product resource reference ID assocuated with this prefix.",
+                            "example": "43847a66-97dc-4ac2-8e8a-c44920e1f22f"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
                       }
                     }
                   },
@@ -248,10 +265,17 @@
                     "type": "object",
                     "properties": {
                       "id": {
-                        "type": "string",
-                        "format": "uuid",
-                        "description": "The Tillhub product resource reference ID assocuated with this prefix.",
-                        "example": "43847a66-97dc-4ac2-8e8a-c44920e1f22f"
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "format": "uuid",
+                            "description": "The Tillhub product resource reference ID assocuated with this prefix.",
+                            "example": "43847a66-97dc-4ac2-8e8a-c44920e1f22f"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
                       }
                     }
                   },
@@ -2144,52 +2168,47 @@
         {
           "type": "object",
           "properties": {
-            "display": {
-              "type": "object",
-              "properties": {
-                "skip_x_report": {
-                  "description": "If true, skips the x-report and directly goes to conduct a balance.",
-                  "default": false,
-                  "oneOf": [
-                    {
-                      "type": "null"
-                    },
-                    {
-                      "type": "boolean"
-                    }
-                  ]
+            "skip_x_report": {
+              "description": "If true, skips the x-report and directly goes to conduct a balance.",
+              "default": false,
+              "oneOf": [
+                {
+                  "type": "null"
                 },
-                "extended_report": {
-                  "description": "If true, adds extended balance information to the UI and the receipts.",
-                  "default": false,
-                  "oneOf": [
-                    {
-                      "type": "null"
-                    },
-                    {
-                      "type": "boolean"
-                    }
-                  ]
-                },
-                "tips_expense": {
-                  "description": "Defines if a tip expense is required within conducting the balance (if tips > 0).",
-                  "type": "string",
-                  "enum": [
-                    "none",
-                    "optional",
-                    "required"
-                  ]
-                },
-                "bank_expense": {
-                  "description": "Defines if a bank expense is required within conducting the balance (if register cash > 0).",
-                  "type": "string",
-                  "enum": [
-                    "none",
-                    "optional",
-                    "required"
-                  ]
+                {
+                  "type": "boolean"
                 }
-              }
+              ]
+            },
+            "extended_report": {
+              "description": "If true, adds extended balance information to the UI and the receipts.",
+              "default": false,
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "boolean"
+                }
+              ]
+            },
+            "tips_expense": {
+              "description": "Defines if a tip expense is required within conducting the balance (if tips > 0).",
+              "type": "string",
+              "enum": [
+                "none",
+                "optional",
+                "required"
+              ]
+            },
+            "bank_expense": {
+              "description": "Defines if a bank expense is required within conducting the balance (if register cash > 0).",
+              "type": "string",
+              "enum": [
+                "none",
+                "optional",
+                "required"
+              ]
             }
           }
         }

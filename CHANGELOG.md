@@ -1,3 +1,45 @@
+## [4.3.6](https://github.com/tillhub/schemas/compare/v4.3.5...v4.3.6) (2019-08-21)
+
+
+### Bug Fixes
+
+* **configurations:** allow null scn prefix products ([8018e1f](https://github.com/tillhub/schemas/commit/8018e1f))
+
+## [4.3.5](https://github.com/tillhub/schemas/compare/v4.3.4...v4.3.5) (2019-08-21)
+
+
+### Bug Fixes
+
+* **configurations:** allow null product ids ([5a1de31](https://github.com/tillhub/schemas/commit/5a1de31))
+
+## [4.3.4](https://github.com/tillhub/schemas/compare/v4.3.3...v4.3.4) (2019-08-20)
+
+
+### Bug Fixes
+
+* **configurations:** fix format regression ([6df3ffa](https://github.com/tillhub/schemas/commit/6df3ffa))
+
+## [4.3.3](https://github.com/tillhub/schemas/compare/v4.3.2...v4.3.3) (2019-08-20)
+
+
+### Bug Fixes
+
+* **configurations:** handle type regression ([97a7223](https://github.com/tillhub/schemas/commit/97a7223))
+
+## [4.3.2](https://github.com/tillhub/schemas/compare/v4.3.1...v4.3.2) (2019-08-20)
+
+
+### Bug Fixes
+
+* **notification:** refactor notifications ([3509c72](https://github.com/tillhub/schemas/commit/3509c72))
+
+## [4.3.1](https://github.com/tillhub/schemas/compare/v4.3.0...v4.3.1) (2019-08-19)
+
+
+### Bug Fixes
+
+* **configurations:** config balances ([9429d07](https://github.com/tillhub/schemas/commit/9429d07))
+
 # [4.3.0](https://github.com/tillhub/schemas/compare/v4.2.0...v4.3.0) (2019-08-16)
 
 
