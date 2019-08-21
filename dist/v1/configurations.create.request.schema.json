@@ -136,10 +136,17 @@
                     "type": "object",
                     "properties": {
                       "id": {
-                        "type": "string",
-                        "format": "uuid",
-                        "description": "The Tillhub product resource reference ID assocuated with this prefix.",
-                        "example": "43847a66-97dc-4ac2-8e8a-c44920e1f22f"
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "format": "uuid",
+                            "description": "The Tillhub product resource reference ID assocuated with this prefix.",
+                            "example": "43847a66-97dc-4ac2-8e8a-c44920e1f22f"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
                       }
                     }
                   },
