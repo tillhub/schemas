@@ -1,3 +1,10 @@
+## [4.3.6](https://github.com/tillhub/schemas/compare/v4.3.5...v4.3.6) (2019-08-21)
+
+
+### Bug Fixes
+
+* **configurations:** allow null scn prefix products ([8018e1f](https://github.com/tillhub/schemas/commit/8018e1f))
+
 ## [4.3.5](https://github.com/tillhub/schemas/compare/v4.3.4...v4.3.5) (2019-08-21)
 
 
