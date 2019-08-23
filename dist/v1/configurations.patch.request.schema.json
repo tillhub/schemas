@@ -2372,6 +2372,114 @@
         }
       ]
     },
+    "searches": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "search_view": {
+              "description": "Scan view, should be limited to products/offlineFirst",
+              "type": "object",
+              "properties": {
+                "trigger_action": {
+                  "description": "Trigger a context specific action (e.g. addToCart, refundSale) on a result condition",
+                  "type": "string",
+                  "enum": [
+                    "on_first",
+                    "on_unique",
+                    "on_none"
+                  ]
+                },
+                "search_entities": {
+                  "description": "Entities that should be searched in a specific context. Searches will be performed in parallel (within an entity per defined behavior).",
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "type": {
+                        "description": "Searchable entities within the iOS client app",
+                        "type": "string",
+                        "enum": [
+                          "transactions",
+                          "products",
+                          "customers",
+                          "vouchers",
+                          "loyalty_cards",
+                          "hooks"
+                        ]
+                      },
+                      "behavior": {
+                        "description": "Search behavior within a single entity, limited by availability (e.g. vouchers: only online_first)",
+                        "type": "string",
+                        "default": "online_first",
+                        "enum": [
+                          "online_first",
+                          "offline_first",
+                          "online_only",
+                          "offline_only",
+                          "race"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "tile_view": {
+              "description": "Tile view, no limitations, probably account requirements dependent",
+              "type": "object",
+              "properties": {
+                "trigger_action": {
+                  "description": "Trigger a context specific action (e.g. addToCart, refundSale) on a result condition",
+                  "type": "string",
+                  "enum": [
+                    "on_first",
+                    "on_unique",
+                    "on_none"
+                  ]
+                },
+                "search_entities": {
+                  "description": "Entities that should be searched in a specific context. Searches will be performed in parallel (within an entity per defined behavior).",
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "type": {
+                        "description": "Searchable entities within the iOS client app",
+                        "type": "string",
+                        "enum": [
+                          "transactions",
+                          "products",
+                          "customers",
+                          "vouchers",
+                          "loyalty_cards",
+                          "hooks"
+                        ]
+                      },
+                      "behavior": {
+                        "description": "Search behavior within a single entity, limited by availability (e.g. vouchers: only online_first)",
+                        "type": "string",
+                        "default": "online_first",
+                        "enum": [
+                          "online_first",
+                          "offline_first",
+                          "online_only",
+                          "offline_only",
+                          "race"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "created_at": {
       "type": "string",
       "format": "date-time",

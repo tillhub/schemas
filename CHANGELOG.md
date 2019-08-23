@@ -1,3 +1,17 @@
+# [4.5.0](https://github.com/tillhub/schemas/compare/v4.4.0...v4.5.0) (2019-08-23)
+
+
+### Bug Fixes
+
+* **configurations:** searches ([4b33c9d](https://github.com/tillhub/schemas/commit/4b33c9d))
+* **Configurations:** Configurations.searches ([df81dec](https://github.com/tillhub/schemas/commit/df81dec))
+
+
+### Features
+
+* **configurations:** configurations search ([6386fab](https://github.com/tillhub/schemas/commit/6386fab))
+* **Configurations:** Configurations.searches ([159abbb](https://github.com/tillhub/schemas/commit/159abbb))
+
 # [4.4.0](https://github.com/tillhub/schemas/compare/v4.3.6...v4.4.0) (2019-08-23)
 
 
