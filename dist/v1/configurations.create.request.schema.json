@@ -1550,6 +1550,62 @@
           "type": "object",
           "additionalProperties": false,
           "properties": {
+            "order_receipt": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "enabled": {
+                      "description": "States if order recipts should be used",
+                      "type": "boolean",
+                      "default": false
+                    },
+                    "maxReceiptNumber": {
+                      "description": "If reached - restart numbering from 1",
+                      "type": "integer",
+                      "minimum": 2,
+                      "maximum": 4096,
+                      "default": 100
+                    },
+                    "receipts": {
+                      "description": "Receipt configurations per printer",
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "tags": {
+                            "type": "array",
+                            "items": {
+                              "description": "Tags from cart item products that will cause assignment to this specific receipt.",
+                              "type": "string",
+                              "example": "food",
+                              "minLength": 3,
+                              "maxLength": 64
+                            }
+                          },
+                          "title": {
+                            "description": "Visual clue where a specific receipt should be used.",
+                            "type": "string",
+                            "example": "Kitchen",
+                            "minLength": 3,
+                            "maxLength": 64
+                          },
+                          "coaster": {
+                            "description": "If true - print the coaster(number) on the specified receipt",
+                            "type": "boolean",
+                            "default": true
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
             "configurable_receipt": {
               "oneOf": [
                 {

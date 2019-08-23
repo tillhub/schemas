@@ -1,3 +1,10 @@
+# [4.4.0](https://github.com/tillhub/schemas/compare/v4.3.6...v4.4.0) (2019-08-23)
+
+
+### Features
+
+* **Configurations:** Order receipts config ([fdaaffe](https://github.com/tillhub/schemas/commit/fdaaffe))
+
 ## [4.3.6](https://github.com/tillhub/schemas/compare/v4.3.5...v4.3.6) (2019-08-21)
 
 
