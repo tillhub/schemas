@@ -1,3 +1,10 @@
+# [4.8.0](https://github.com/tillhub/schemas/compare/v4.7.1...v4.8.0) (2019-08-26)
+
+
+### Features
+
+* **stocks:** revert location validation ([2298cba](https://github.com/tillhub/schemas/commit/2298cba))
+
 ## [4.7.1](https://github.com/tillhub/schemas/compare/v4.7.0...v4.7.1) (2019-08-26)
 
 
