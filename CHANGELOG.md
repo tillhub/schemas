@@ -1,3 +1,10 @@
+# [4.6.0](https://github.com/tillhub/schemas/compare/v4.5.0...v4.6.0) (2019-08-25)
+
+
+### Features
+
+* **products:** add customizations ([2e81dc0](https://github.com/tillhub/schemas/commit/2e81dc0))
+
 # [4.5.0](https://github.com/tillhub/schemas/compare/v4.4.0...v4.5.0) (2019-08-23)
 
 

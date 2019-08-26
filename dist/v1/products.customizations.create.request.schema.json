@@ -1,0 +1,813 @@
+{
+  "$id": "https://schemas.tillhub.com/v1/products.customizations.create.request.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "type": "object",
+  "required": [
+    "product"
+  ],
+  "properties": {
+    "product": {
+      "description": "The reference to the actual product",
+      "type": "string",
+      "format": "uuid"
+    },
+    "customer": {
+      "description": "The reference to customer this product might be customized for",
+      "type": "string",
+      "format": "uuid"
+    },
+    "name": {
+      "description": "Product name",
+      "type": "string",
+      "maxLength": 512
+    },
+    "summary": {
+      "description": "Short summary of the product",
+      "oneOf": [
+        {
+          "type": "string",
+          "maxLength": 1024
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "description": {
+      "description": "Long description of a product",
+      "oneOf": [
+        {
+          "type": "string",
+          "maxLength": 16384
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "attributes": {
+      "description": "Arbitrary attributes a product has, that will be displayed in e.g. a sale",
+      "anyOf": [
+        {
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "prices": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "branch_prices": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "branch": {
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "prices": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "amount": {
+                          "description": "Either net or gross should be set (not null). Tax will be calculated accordingly automatically. We do not validate for either to be set, for data flexibility reasons.",
+                          "type": "object",
+                          "properties": {
+                            "net": {
+                              "oneOf": [
+                                {
+                                  "example": "27633.02",
+                                  "type": "number",
+                                  "minimum": 0,
+                                  "maximum": 1000000,
+                                  "multipleOf": 0.01
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "gross": {
+                              "oneOf": [
+                                {
+                                  "example": "27633.02",
+                                  "type": "number",
+                                  "minimum": 0,
+                                  "maximum": 1000000,
+                                  "multipleOf": 0.01
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            }
+                          }
+                        },
+                        "currency": {
+                          "type": "string",
+                          "minLength": 3,
+                          "maxLength": 3
+                        },
+                        "percentage": {
+                          "description": "DEPRECATED",
+                          "type": "number"
+                        },
+                        "purchase_price": {
+                          "description": "Define the opportunity cost or calculatory base price of this product and currency.",
+                          "oneOf": [
+                            {
+                              "example": "27633.02",
+                              "type": "number",
+                              "minimum": 0,
+                              "maximum": 1000000,
+                              "multipleOf": 0.01
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "cost": {
+                          "description": "Define additional cost.",
+                          "oneOf": [
+                            {
+                              "example": "27633.02",
+                              "type": "number",
+                              "minimum": 0,
+                              "maximum": 1000000,
+                              "multipleOf": 0.01
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "margin": {
+                          "description": "Add a margin to pruchase_price and cost to result in net.",
+                          "oneOf": [
+                            {
+                              "type": "number",
+                              "multipleOf": 0.0001
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "scaled_prices": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "qty": {
+                    "type": "number"
+                  },
+                  "prices": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "amount": {
+                          "description": "Either net or gross should be set (not null). Tax will be calculated accordingly automatically. We do not validate for either to be set, for data flexibility reasons.",
+                          "type": "object",
+                          "properties": {
+                            "net": {
+                              "oneOf": [
+                                {
+                                  "example": "27633.02",
+                                  "type": "number",
+                                  "minimum": 0,
+                                  "maximum": 1000000,
+                                  "multipleOf": 0.01
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "gross": {
+                              "oneOf": [
+                                {
+                                  "example": "27633.02",
+                                  "type": "number",
+                                  "minimum": 0,
+                                  "maximum": 1000000,
+                                  "multipleOf": 0.01
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            }
+                          }
+                        },
+                        "currency": {
+                          "type": "string",
+                          "minLength": 3,
+                          "maxLength": 3
+                        },
+                        "percentage": {
+                          "description": "DEPRECATED",
+                          "type": "number"
+                        },
+                        "purchase_price": {
+                          "description": "Define the opportunity cost or calculatory base price of this product and currency.",
+                          "oneOf": [
+                            {
+                              "example": "27633.02",
+                              "type": "number",
+                              "minimum": 0,
+                              "maximum": 1000000,
+                              "multipleOf": 0.01
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "cost": {
+                          "description": "Define additional cost.",
+                          "oneOf": [
+                            {
+                              "example": "27633.02",
+                              "type": "number",
+                              "minimum": 0,
+                              "maximum": 1000000,
+                              "multipleOf": 0.01
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "margin": {
+                          "description": "Add a margin to pruchase_price and cost to result in net.",
+                          "oneOf": [
+                            {
+                              "type": "number",
+                              "multipleOf": 0.0001
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "time_based_prices": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "time_range": {
+                    "type": "object",
+                    "properties": {
+                      "start": {
+                        "type": "string",
+                        "format": "date"
+                      },
+                      "end": {
+                        "type": "string",
+                        "format": "date"
+                      }
+                    },
+                    "required": [
+                      "start",
+                      "end"
+                    ]
+                  },
+                  "prices": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "amount": {
+                          "description": "Either net or gross should be set (not null). Tax will be calculated accordingly automatically. We do not validate for either to be set, for data flexibility reasons.",
+                          "type": "object",
+                          "properties": {
+                            "net": {
+                              "oneOf": [
+                                {
+                                  "example": "27633.02",
+                                  "type": "number",
+                                  "minimum": 0,
+                                  "maximum": 1000000,
+                                  "multipleOf": 0.01
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "gross": {
+                              "oneOf": [
+                                {
+                                  "example": "27633.02",
+                                  "type": "number",
+                                  "minimum": 0,
+                                  "maximum": 1000000,
+                                  "multipleOf": 0.01
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            }
+                          }
+                        },
+                        "currency": {
+                          "type": "string",
+                          "minLength": 3,
+                          "maxLength": 3
+                        },
+                        "percentage": {
+                          "description": "DEPRECATED",
+                          "type": "number"
+                        },
+                        "purchase_price": {
+                          "description": "Define the opportunity cost or calculatory base price of this product and currency.",
+                          "oneOf": [
+                            {
+                              "example": "27633.02",
+                              "type": "number",
+                              "minimum": 0,
+                              "maximum": 1000000,
+                              "multipleOf": 0.01
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "cost": {
+                          "description": "Define additional cost.",
+                          "oneOf": [
+                            {
+                              "example": "27633.02",
+                              "type": "number",
+                              "minimum": 0,
+                              "maximum": 1000000,
+                              "multipleOf": 0.01
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "margin": {
+                          "description": "Add a margin to pruchase_price and cost to result in net.",
+                          "oneOf": [
+                            {
+                              "type": "number",
+                              "multipleOf": 0.0001
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "default_prices": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "amount": {
+                    "description": "Either net or gross should be set (not null). Tax will be calculated accordingly automatically. We do not validate for either to be set, for data flexibility reasons.",
+                    "type": "object",
+                    "properties": {
+                      "net": {
+                        "oneOf": [
+                          {
+                            "example": "27633.02",
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 1000000,
+                            "multipleOf": 0.01
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "gross": {
+                        "oneOf": [
+                          {
+                            "example": "27633.02",
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 1000000,
+                            "multipleOf": 0.01
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "currency": {
+                    "type": "string",
+                    "minLength": 3,
+                    "maxLength": 3
+                  },
+                  "percentage": {
+                    "description": "DEPRECATED",
+                    "type": "number"
+                  },
+                  "purchase_price": {
+                    "description": "Define the opportunity cost or calculatory base price of this product and currency.",
+                    "oneOf": [
+                      {
+                        "example": "27633.02",
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1000000,
+                        "multipleOf": 0.01
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "cost": {
+                    "description": "Define additional cost.",
+                    "oneOf": [
+                      {
+                        "example": "27633.02",
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1000000,
+                        "multipleOf": 0.01
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "margin": {
+                    "description": "Add a margin to pruchase_price and cost to result in net.",
+                    "oneOf": [
+                      {
+                        "type": "number",
+                        "multipleOf": 0.0001
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "required": [
+            "default_prices"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "metadata": {
+      "anyOf": [
+        {
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "brand": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "active": {
+      "type": "boolean"
+    },
+    "deleted": {
+      "type": "boolean"
+    },
+    "supplier": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "sku": {
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": ""
+            }
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "locations": {
+      "oneOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "condition": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "images": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "original": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "format": "uri"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null
+            },
+            "1x": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "format": "uri"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null
+            },
+            "2x": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "format": "uri"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null
+            },
+            "3x": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "format": "uri"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null
+            },
+            "lia_1x": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "format": "uri"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null
+            },
+            "lia_2x": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "format": "uri"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null
+            },
+            "lia_3x": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "format": "uri"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null
+            },
+            "square_1x": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "format": "uri"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null
+            },
+            "square_2x": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "format": "uri"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null
+            },
+            "square_3x": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "format": "uri"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null
+            },
+            "avatar": {
+              "type": "string",
+              "format": "uri"
+            }
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "client_id": {
+      "description": "A client definable ID for the purpose of syncing to a client or used in analytics for e.g. transactions that created a product offline and done transactions offline before they received a backend ID.",
+      "oneOf": [
+        {
+          "type": "string",
+          "maxLength": 128
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "external_reference_id": {
+      "description": "A caller defined custom ID for the purpose of syncing from external resources, or to use in analytics.",
+      "oneOf": [
+        {
+          "type": "string",
+          "maxLength": 128
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "service_questions": {
+      "oneOf": [
+        {
+          "type": "array",
+          "description": "An array of actual service questions and their answers. This can be essentially used as service card i.e. for a customer.",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "answer"
+            ],
+            "properties": {
+              "id": {
+                "description": "The reference to the product service question. Resolve from content from that resource.",
+                "type": "string",
+                "format": "uuid"
+              },
+              "answer": {
+                "description": "The answer based on the the answer validation of the product service question.",
+                "oneOf": [
+                  {
+                    "type": "object"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "loyalty_values": {
+      "oneOf": [
+        {
+          "type": "array",
+          "description": "The amount of loyalty values that a customer receives per product. They will be used then the loyalty system specifies \"lookup\" as a base in the value configurations. The unit is also determined in the loyalty system configurations.",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "unit",
+              "amount"
+            ],
+            "properties": {
+              "unit": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 64,
+                "examples": [
+                  "miles",
+                  "points",
+                  "EUR",
+                  "USD"
+                ]
+              },
+              "amount": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1000000,
+                "multipleOf": 0.01
+              }
+            }
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  }
+}
