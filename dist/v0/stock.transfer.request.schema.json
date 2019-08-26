@@ -63,8 +63,15 @@
       ]
     },
     "reasons": {
-      "type": "string",
-      "format": "uuid"
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "uuid"
+        },
+        {
+          "type": "null"
+        }
+      ]
     }
   }
 }

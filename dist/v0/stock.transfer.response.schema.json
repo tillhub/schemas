@@ -1,12 +1,10 @@
 {
-  "$id": "https://schemas.tillhub.com/v0/stock.create.request.schema.json",
+  "$id": "https://schemas.tillhub.com/v0/stock.transfer.response.schema.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "additionalProperties": false,
   "type": "object",
   "required": [
-    "qty",
-    "product",
-    "location"
+    "id"
   ],
   "properties": {
     "qty": {
@@ -95,6 +93,42 @@
         {
           "type": "string",
           "format": "uuid"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "article": {
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "uuid"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "branch": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "uuid",
+          "minLength": 1,
+          "maxLength": 64
         },
         {
           "type": "null"

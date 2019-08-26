@@ -1,3 +1,10 @@
+# [4.7.0](https://github.com/tillhub/schemas/compare/v4.6.0...v4.7.0) (2019-08-26)
+
+
+### Features
+
+* **stocks:** add response schemas ([a0d19e7](https://github.com/tillhub/schemas/commit/a0d19e7))
+
 # [4.6.0](https://github.com/tillhub/schemas/compare/v4.5.0...v4.6.0) (2019-08-25)
 
 
