@@ -1,3 +1,10 @@
+## [4.7.1](https://github.com/tillhub/schemas/compare/v4.7.0...v4.7.1) (2019-08-26)
+
+
+### Bug Fixes
+
+* **pdfs:** add missing company prop ([f1a9106](https://github.com/tillhub/schemas/commit/f1a9106))
+
 # [4.7.0](https://github.com/tillhub/schemas/compare/v4.6.0...v4.7.0) (2019-08-26)
 
 

@@ -228,6 +228,16 @@
             }
           ]
         },
+        "company": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
         "address": {
           "oneOf": [
             {
