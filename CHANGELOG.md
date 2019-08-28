@@ -1,3 +1,10 @@
+# [4.9.0](https://github.com/tillhub/schemas/compare/v4.8.0...v4.9.0) (2019-08-28)
+
+
+### Features
+
+* **Configurations:** third party app links ([4aefecf](https://github.com/tillhub/schemas/commit/4aefecf))
+
 # [4.8.0](https://github.com/tillhub/schemas/compare/v4.7.1...v4.8.0) (2019-08-26)
 
 
