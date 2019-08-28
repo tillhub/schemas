@@ -1,3 +1,11 @@
+# [4.11.0](https://github.com/tillhub/schemas/compare/v4.10.0...v4.11.0) (2019-08-28)
+
+
+### Features
+
+* **full_receipt:** apply ios description ([1122a20](https://github.com/tillhub/schemas/commit/1122a20))
+* **full_receipt:** update create items and summery items ([ae6390b](https://github.com/tillhub/schemas/commit/ae6390b))
+
 # [4.10.0](https://github.com/tillhub/schemas/compare/v4.9.0...v4.10.0) (2019-08-28)
 
 
