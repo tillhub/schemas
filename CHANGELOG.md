@@ -1,3 +1,10 @@
+# [4.10.0](https://github.com/tillhub/schemas/compare/v4.9.0...v4.10.0) (2019-08-28)
+
+
+### Features
+
+* **staff:** add staff scopes as a seperate file module ([dd4da90](https://github.com/tillhub/schemas/commit/dd4da90))
+
 # [4.9.0](https://github.com/tillhub/schemas/compare/v4.8.0...v4.9.0) (2019-08-28)
 
 
