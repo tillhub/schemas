@@ -1,3 +1,10 @@
+# [4.12.0](https://github.com/tillhub/schemas/compare/v4.11.0...v4.12.0) (2019-08-29)
+
+
+### Features
+
+* **Configurations:** third_party ([9f467f9](https://github.com/tillhub/schemas/commit/9f467f9))
+
 # [4.11.0](https://github.com/tillhub/schemas/compare/v4.10.0...v4.11.0) (2019-08-28)
 
 
