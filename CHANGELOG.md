@@ -1,3 +1,16 @@
+# [4.13.0](https://github.com/tillhub/schemas/compare/v4.12.0...v4.13.0) (2019-09-02)
+
+
+### Bug Fixes
+
+* **promotions:** fix dist ([70c20df](https://github.com/tillhub/schemas/commit/70c20df))
+
+
+### Features
+
+* **promotions:** add promotion schema ([e38f374](https://github.com/tillhub/schemas/commit/e38f374))
+* **promotions:** update columns ([b260299](https://github.com/tillhub/schemas/commit/b260299))
+
 # [4.12.0](https://github.com/tillhub/schemas/compare/v4.11.0...v4.12.0) (2019-08-29)
 
 
