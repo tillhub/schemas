@@ -2403,10 +2403,17 @@
                   "default": false
                 },
                 "maximum_rate": {
-                  "type": "number",
-                  "minimum": 0,
-                  "maximum": 1,
-                  "multipleOf": 0.001
+                  "oneOf": [
+                    {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 1,
+                      "multipleOf": 0.001
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
                 },
                 "maximum_value": {
                   "oneOf": [
@@ -2454,10 +2461,17 @@
                   "default": false
                 },
                 "maximum_rate": {
-                  "type": "number",
-                  "minimum": 0,
-                  "maximum": 1,
-                  "multipleOf": 0.001
+                  "oneOf": [
+                    {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 1,
+                      "multipleOf": 0.001
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
                 },
                 "maximum_value": {
                   "oneOf": [

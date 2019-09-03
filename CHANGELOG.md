@@ -1,3 +1,10 @@
+## [4.14.1](https://github.com/tillhub/schemas/compare/v4.14.0...v4.14.1) (2019-09-03)
+
+
+### Bug Fixes
+
+* **settings/discounts:** max rate can be null ([a8d4a17](https://github.com/tillhub/schemas/commit/a8d4a17))
+
 # [4.14.0](https://github.com/tillhub/schemas/compare/v4.13.0...v4.14.0) (2019-09-03)
 
 
