@@ -1,3 +1,10 @@
+# [4.14.0](https://github.com/tillhub/schemas/compare/v4.13.0...v4.14.0) (2019-09-03)
+
+
+### Features
+
+* **configurations:** add discounts details ([#201](https://github.com/tillhub/schemas/issues/201)) ([e1817ac](https://github.com/tillhub/schemas/commit/e1817ac))
+
 # [4.13.0](https://github.com/tillhub/schemas/compare/v4.12.0...v4.13.0) (2019-09-02)
 
 

@@ -2394,6 +2394,112 @@
                   ]
                 }
               }
+            },
+            "variable": {
+              "type": "object",
+              "properties": {
+                "can_exceed_cart_item_total": {
+                  "type": "boolean",
+                  "default": false
+                },
+                "maximum_rate": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1,
+                  "multipleOf": 0.001
+                },
+                "maximum_value": {
+                  "oneOf": [
+                    {
+                      "type": "array",
+                      "description": "A list of non-negative monetary values by currency",
+                      "items": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "description": "Describes a non-negative monetary value in a specific currency.",
+                        "required": [
+                          "amount",
+                          "currency"
+                        ],
+                        "properties": {
+                          "currency": {
+                            "type": "string",
+                            "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                            "example": "EUR",
+                            "minLength": 3,
+                            "maxLength": 3
+                          },
+                          "amount": {
+                            "type": "number",
+                            "description": "The value as .2-Decimal.",
+                            "example": "47.02",
+                            "minimum": 0,
+                            "multipleOf": 0.01
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              }
+            },
+            "fixed": {
+              "type": "object",
+              "properties": {
+                "can_exceed_cart_item_total": {
+                  "type": "boolean",
+                  "default": false
+                },
+                "maximum_rate": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1,
+                  "multipleOf": 0.001
+                },
+                "maximum_value": {
+                  "oneOf": [
+                    {
+                      "type": "array",
+                      "description": "A list of non-negative monetary values by currency",
+                      "items": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "description": "Describes a non-negative monetary value in a specific currency.",
+                        "required": [
+                          "amount",
+                          "currency"
+                        ],
+                        "properties": {
+                          "currency": {
+                            "type": "string",
+                            "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                            "example": "EUR",
+                            "minLength": 3,
+                            "maxLength": 3
+                          },
+                          "amount": {
+                            "type": "number",
+                            "description": "The value as .2-Decimal.",
+                            "example": "47.02",
+                            "minimum": 0,
+                            "multipleOf": 0.01
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              }
+            },
+            "stacked_on_product": {
+              "type": "boolean",
+              "default": true
             }
           }
         }
