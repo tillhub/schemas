@@ -1,3 +1,11 @@
+## [4.16.1](https://github.com/tillhub/schemas/compare/v4.16.0...v4.16.1) (2019-09-05)
+
+
+### Bug Fixes
+
+* **stocks_book:** rename reasons property ([529df27](https://github.com/tillhub/schemas/commit/529df27))
+* **stocks_book reason:** rename reasons ([5531951](https://github.com/tillhub/schemas/commit/5531951))
+
 # [4.16.0](https://github.com/tillhub/schemas/compare/v4.15.0...v4.16.0) (2019-09-05)
 
 

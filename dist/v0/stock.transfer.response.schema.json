@@ -98,6 +98,17 @@
         }
       ]
     },
+    "reason": {
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "uuid"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "id": {
       "type": "string",
       "format": "uuid"
