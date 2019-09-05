@@ -1,3 +1,10 @@
+# [4.16.0](https://github.com/tillhub/schemas/compare/v4.15.0...v4.16.0) (2019-09-05)
+
+
+### Features
+
+* **functions:** add_to_cart class ([fbb8db4](https://github.com/tillhub/schemas/commit/fbb8db4))
+
 # [4.15.0](https://github.com/tillhub/schemas/compare/v4.14.1...v4.15.0) (2019-09-04)
 
 
