@@ -1,3 +1,10 @@
+# [4.17.0](https://github.com/tillhub/schemas/compare/v4.16.1...v4.17.0) (2019-09-09)
+
+
+### Features
+
+* **promotions:** add locations property ([2a99dde](https://github.com/tillhub/schemas/commit/2a99dde))
+
 ## [4.16.1](https://github.com/tillhub/schemas/compare/v4.16.0...v4.16.1) (2019-09-05)
 
 

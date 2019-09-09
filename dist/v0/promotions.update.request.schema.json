@@ -65,6 +65,20 @@
         }
       ]
     },
+    "locations": {
+      "oneOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "client_id": {
       "description": "A identifier used locally on POS for their own reference.",
       "oneOf": [
