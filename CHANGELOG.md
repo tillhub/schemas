@@ -1,3 +1,10 @@
+## [4.18.1](https://github.com/tillhub/schemas/compare/v4.18.0...v4.18.1) (2019-09-11)
+
+
+### Bug Fixes
+
+* **staff_permission_templates:** add index ([d02786f](https://github.com/tillhub/schemas/commit/d02786f))
+
 # [4.18.0](https://github.com/tillhub/schemas/compare/v4.17.0...v4.18.0) (2019-09-11)
 
 
