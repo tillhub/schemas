@@ -1,3 +1,11 @@
+# [4.18.0](https://github.com/tillhub/schemas/compare/v4.17.0...v4.18.0) (2019-09-11)
+
+
+### Features
+
+* **permissions:** add permissions templates ([09093cf](https://github.com/tillhub/schemas/commit/09093cf))
+* **permissions:** rename resource to staff_permission_templates ([7a4fb47](https://github.com/tillhub/schemas/commit/7a4fb47))
+
 # [4.17.0](https://github.com/tillhub/schemas/compare/v4.16.1...v4.17.0) (2019-09-09)
 
 
