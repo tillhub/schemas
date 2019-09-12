@@ -1,3 +1,10 @@
+# [4.19.0](https://github.com/tillhub/schemas/compare/v4.18.1...v4.19.0) (2019-09-12)
+
+
+### Features
+
+* **contents_templates:** add new schemas ([611a8ac](https://github.com/tillhub/schemas/commit/611a8ac))
+
 ## [4.18.1](https://github.com/tillhub/schemas/compare/v4.18.0...v4.18.1) (2019-09-11)
 
 
