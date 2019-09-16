@@ -1,3 +1,10 @@
+# [4.20.0](https://github.com/tillhub/schemas/compare/v4.19.0...v4.20.0) (2019-09-16)
+
+
+### Features
+
+* **content_templates:** rename contents_templates into content_templates ([1238d3e](https://github.com/tillhub/schemas/commit/1238d3e))
+
 # [4.19.0](https://github.com/tillhub/schemas/compare/v4.18.1...v4.19.0) (2019-09-12)
 
 
