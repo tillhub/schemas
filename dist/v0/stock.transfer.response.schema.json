@@ -90,6 +90,7 @@
     "reasons": {
       "oneOf": [
         {
+          "description": "Deprecated property. Use reason instead.",
           "type": "string",
           "format": "uuid"
         },
@@ -103,6 +104,18 @@
         {
           "type": "string",
           "format": "uuid"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "comments": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2048
         },
         {
           "type": "null"

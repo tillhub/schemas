@@ -1,3 +1,11 @@
+# [4.21.0](https://github.com/tillhub/schemas/compare/v4.20.0...v4.21.0) (2019-09-16)
+
+
+### Features
+
+* **stock_books:** add comments ([8827ced](https://github.com/tillhub/schemas/commit/8827ced))
+* **stock_books:** add comments to schema ([92a9af8](https://github.com/tillhub/schemas/commit/92a9af8))
+
 # [4.20.0](https://github.com/tillhub/schemas/compare/v4.19.0...v4.20.0) (2019-09-16)
 
 
