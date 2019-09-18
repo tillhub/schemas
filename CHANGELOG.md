@@ -1,3 +1,10 @@
+# [4.22.0](https://github.com/tillhub/schemas/compare/v4.21.0...v4.22.0) (2019-09-18)
+
+
+### Features
+
+* **products_v1:** add delegated_from and delegateable_to ([a5d4c12](https://github.com/tillhub/schemas/commit/a5d4c12))
+
 # [4.21.0](https://github.com/tillhub/schemas/compare/v4.20.0...v4.21.0) (2019-09-16)
 
 

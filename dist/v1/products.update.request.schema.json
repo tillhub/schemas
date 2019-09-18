@@ -1493,6 +1493,84 @@
           "type": "null"
         }
       ]
+    },
+    "delegateable_to": {
+      "oneOf": [
+        {
+          "type": "array",
+          "description": "List of other (sub)users that are allowed to read this product. If it is \"null\" then the product can be read by any of the validated (sub)users.",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "type",
+              "value"
+            ],
+            "properties": {
+              "type": {
+                "type": "string",
+                "description": "Type of the user, that indicates in which table to look up",
+                "enum": [
+                  "client_account"
+                ]
+              },
+              "value": {
+                "type": "string",
+                "description": "Alphanumeric uuid of the user",
+                "format": "uuid"
+              }
+            }
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "delegated_from": {
+      "oneOf": [
+        {
+          "type": "object",
+          "description": "When the product was cloned from another account's product, the origin/owner should be listed here.",
+          "additionalProperties": false,
+          "required": [
+            "owner",
+            "product"
+          ],
+          "properties": {
+            "owner": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "type",
+                "value"
+              ],
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "description": "Type of the user from whom the product was cloned",
+                  "enum": [
+                    "client_account"
+                  ]
+                },
+                "value": {
+                  "type": "string",
+                  "description": "Alphanumeric uuid of the user from whom the product was cloned",
+                  "format": "uuid"
+                }
+              }
+            },
+            "product": {
+              "type": "string",
+              "description": "Alphanumeric uuid of the original product from whom it was cloned",
+              "format": "uuid"
+            }
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
     }
   }
 }
