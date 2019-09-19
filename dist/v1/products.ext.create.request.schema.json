@@ -1499,6 +1499,17 @@
         }
       ]
     },
+    "delegateable": {
+      "description": "Define whether the product can be delegated to other users at all.",
+      "oneOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "delegateable_to": {
       "oneOf": [
         {

@@ -1,3 +1,10 @@
+# [4.23.0](https://github.com/tillhub/schemas/compare/v4.22.0...v4.23.0) (2019-09-19)
+
+
+### Features
+
+* **products_v1:** add delegateable flag ([c48783e](https://github.com/tillhub/schemas/commit/c48783e))
+
 # [4.22.0](https://github.com/tillhub/schemas/compare/v4.21.0...v4.22.0) (2019-09-18)
 
 
