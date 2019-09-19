@@ -1,3 +1,10 @@
+# [4.24.0](https://github.com/tillhub/schemas/compare/v4.23.0...v4.24.0) (2019-09-19)
+
+
+### Features
+
+* **Configurations:** Configurations.staff logout button ([b2b3060](https://github.com/tillhub/schemas/commit/b2b3060))
+
 # [4.23.0](https://github.com/tillhub/schemas/compare/v4.22.0...v4.23.0) (2019-09-19)
 
 
