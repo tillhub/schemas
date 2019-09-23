@@ -1,3 +1,10 @@
+# [4.25.0](https://github.com/tillhub/schemas/compare/v4.24.0...v4.25.0) (2019-09-23)
+
+
+### Features
+
+* **branch_groups:** add branch groups crud ([fc3d89b](https://github.com/tillhub/schemas/commit/fc3d89b))
+
 # [4.24.0](https://github.com/tillhub/schemas/compare/v4.23.0...v4.24.0) (2019-09-19)
 
 
