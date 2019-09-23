@@ -1,3 +1,10 @@
+## [4.25.1](https://github.com/tillhub/schemas/compare/v4.25.0...v4.25.1) (2019-09-23)
+
+
+### Bug Fixes
+
+* **branch_groups:** add index route ([d68310a](https://github.com/tillhub/schemas/commit/d68310a))
+
 # [4.25.0](https://github.com/tillhub/schemas/compare/v4.24.0...v4.25.0) (2019-09-23)
 
 

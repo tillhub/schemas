@@ -3,15 +3,25 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "additionalProperties": false,
   "required": [
-    "name",
-    "scopes"
+    "name"
   ],
   "properties": {
     "name": {
       "type": "string",
       "maxLength": 64
     },
-    "scopes": {
+    "description": {
+      "oneOf": [
+        {
+          "type": "string",
+          "maxLength": 128
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "branches": {
       "oneOf": [
         {
           "type": "array",
@@ -24,11 +34,27 @@
         }
       ]
     },
+    "client_id": {
+      "description": "A identifier used locally on POS for their own reference.",
+      "oneOf": [
+        {
+          "type": "string",
+          "maxLength": 128
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "active": {
-      "type": "boolean"
+      "description": "Soft disable or enabled this branch group.",
+      "type": "boolean",
+      "default": true
     },
     "deleted": {
-      "type": "boolean"
+      "description": "Soft delete this branch group.",
+      "type": "boolean",
+      "default": false
     }
   },
   "type": "object"
