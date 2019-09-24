@@ -1,3 +1,10 @@
+## [4.25.2](https://github.com/tillhub/schemas/compare/v4.25.1...v4.25.2) (2019-09-24)
+
+
+### Bug Fixes
+
+* **branch_groups:** fix schemas json ([b297c9e](https://github.com/tillhub/schemas/commit/b297c9e))
+
 ## [4.25.1](https://github.com/tillhub/schemas/compare/v4.25.0...v4.25.1) (2019-09-23)
 
 
