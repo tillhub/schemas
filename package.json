@@ -17,7 +17,8 @@
     "postversion": "TAG=$(echo $(git describe --tags $(git rev-list --tags --max-count=1))) && git tag -a $TAG $TAG -f -m \"$(git log `git describe --tags --abbrev=0 HEAD^`..HEAD --oneline)\" && git push && git push --tags && npm run clean",
     "clean": "rm -rf coverage coverage.lcov .nyc_output",
     "deploy:static": "firebase deploy --only=hosting",
-    "compile": "node compile"
+    "compile": "node compile",
+    "new:schema": "hygen schema with-prompt"
   },
   "repository": {
     "type": "git",
@@ -86,7 +87,8 @@
     "validate-commit-msg": "^2.14.0"
   },
   "dependencies": {
-    "ajv": "^6.5.3"
+    "ajv": "^6.5.3",
+    "hygen": "^4.0.9"
   },
   "config": {
     "commitizen": {
