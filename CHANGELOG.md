@@ -1,3 +1,10 @@
+# [4.27.0](https://github.com/tillhub/schemas/compare/v4.26.0...v4.27.0) (2019-09-25)
+
+
+### Features
+
+* **Configurations.Transactions:** Limits for transaction history ([955877d](https://github.com/tillhub/schemas/commit/955877d))
+
 # [4.26.0](https://github.com/tillhub/schemas/compare/v4.25.2...v4.26.0) (2019-09-25)
 
 
