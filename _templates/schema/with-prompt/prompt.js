@@ -2,7 +2,7 @@ module.exports = [
   {
     type: 'input',
     name: 'name',
-    message: 'What is the URI name of thew new schema resource?',
+    message: 'What is the name of thew new schema resource?',
     validate (value, state, item, index) {
       if (value.length <= 2) {
         return 'resource should have more than 2 characters'
