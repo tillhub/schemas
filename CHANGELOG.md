@@ -1,3 +1,10 @@
+# [4.26.0](https://github.com/tillhub/schemas/compare/v4.25.2...v4.26.0) (2019-09-25)
+
+
+### Features
+
+* **staff:** add staff group schema ([edfe1a0](https://github.com/tillhub/schemas/commit/edfe1a0))
+
 ## [4.25.2](https://github.com/tillhub/schemas/compare/v4.25.1...v4.25.2) (2019-09-24)
 
 

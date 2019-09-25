@@ -173,6 +173,8 @@
   "/safes_log_book.get.response.schema.json",
   "/staff.create.request.schema.json",
   "/staff.update.request.schema.json",
+  "/staff_groups.create.request.schema.json",
+  "/staff_groups.update.request.schema.json",
   "/staff_permission_templates.create.request.schema.json",
   "/staff_permission_templates.update.request.schema.json",
   "/stock.create.request.schema.json",
