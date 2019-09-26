@@ -1,8 +1,8 @@
 [
   "/index.json",
   "/currency.available.schema.json",
-  "/patch.request.schema.json",
   "/timezone.schema.json",
+  "/patch.request.schema.json",
   "/balances.create.request.schema.json",
   "/balances.get-all.response.schema.json",
   "/balances.get-one.response.schema.json",
@@ -81,6 +81,8 @@
   "/deliveries.create.request.schema.json",
   "/deliveries.items.update.request.schema.json",
   "/deliveries.update.request.schema.json",
+  "/device_groups.create.request.schema.json",
+  "/device_groups.update.request.schema.json",
   "/devices.advertise.create.request.schema.json",
   "/devices.advertise.create.response.schema.json",
   "/devices.advertise.update.request.schema.json",

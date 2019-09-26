@@ -1,3 +1,10 @@
+# [4.29.0](https://github.com/tillhub/schemas/compare/v4.28.0...v4.29.0) (2019-09-26)
+
+
+### Features
+
+* **device_groups:** add device group schema ([e67df60](https://github.com/tillhub/schemas/commit/e67df60))
+
 # [4.28.0](https://github.com/tillhub/schemas/compare/v4.27.0...v4.28.0) (2019-09-25)
 
 
