@@ -1,3 +1,10 @@
+# [4.30.0](https://github.com/tillhub/schemas/compare/v4.29.0...v4.30.0) (2019-09-27)
+
+
+### Features
+
+* **region_groups:** add region groups crud ([d36f064](https://github.com/tillhub/schemas/commit/d36f064))
+
 # [4.29.0](https://github.com/tillhub/schemas/compare/v4.28.0...v4.29.0) (2019-09-26)
 
 
