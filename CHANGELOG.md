@@ -1,3 +1,10 @@
+## [4.30.1](https://github.com/tillhub/schemas/compare/v4.30.0...v4.30.1) (2019-09-27)
+
+
+### Bug Fixes
+
+* **regions:** rename region groups to regions ([3c20699](https://github.com/tillhub/schemas/commit/3c20699))
+
 # [4.30.0](https://github.com/tillhub/schemas/compare/v4.29.0...v4.30.0) (2019-09-27)
 
 
