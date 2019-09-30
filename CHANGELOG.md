@@ -1,3 +1,10 @@
+# [4.31.0](https://github.com/tillhub/schemas/compare/v4.30.1...v4.31.0) (2019-09-30)
+
+
+### Features
+
+* add seasons schemas ([dcd5cee](https://github.com/tillhub/schemas/commit/dcd5cee))
+
 ## [4.30.1](https://github.com/tillhub/schemas/compare/v4.30.0...v4.30.1) (2019-09-27)
 
 
