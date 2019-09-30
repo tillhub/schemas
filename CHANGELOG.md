@@ -1,3 +1,10 @@
+## [4.31.1](https://github.com/tillhub/schemas/compare/v4.31.0...v4.31.1) (2019-09-30)
+
+
+### Bug Fixes
+
+* **branch_groups:** add color property ([17c0774](https://github.com/tillhub/schemas/commit/17c0774))
+
 # [4.31.0](https://github.com/tillhub/schemas/compare/v4.30.1...v4.31.0) (2019-09-30)
 
 

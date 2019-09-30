@@ -20,6 +20,17 @@
         }
       ]
     },
+    "color": {
+      "oneOf": [
+        {
+          "type": "string",
+          "maxLength": 32
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "branches": {
       "oneOf": [
         {
