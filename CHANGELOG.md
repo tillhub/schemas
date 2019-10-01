@@ -1,3 +1,10 @@
+# [4.34.0](https://github.com/tillhub/schemas/compare/v4.33.0...v4.34.0) (2019-10-01)
+
+
+### Features
+
+* **register_opening_protocols:** add new schemas ([570007f](https://github.com/tillhub/schemas/commit/570007f))
+
 # [4.33.0](https://github.com/tillhub/schemas/compare/v4.32.0...v4.33.0) (2019-10-01)
 
 
