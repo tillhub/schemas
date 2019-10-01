@@ -6,7 +6,8 @@
   "required": [],
   "properties": {
     "name": {
-      "type": "string"
+      "type": "string",
+      "maxLength": 64
     },
     "display_name": {
       "type": "string",
@@ -118,6 +119,68 @@
       "oneOf": [
         {
           "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "comments": {
+      "oneOf": [
+        {
+          "type": "string",
+          "maxLength": 4096
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "is_test": {
+      "type": "boolean",
+      "default": false
+    },
+    "is_demo": {
+      "type": "boolean",
+      "default": false
+    },
+    "is_trial": {
+      "type": "boolean",
+      "default": false
+    },
+    "default_language": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 5
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "default_currency": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 3
+    },
+    "trial_until": {
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "date-time"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "active_until": {
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "date-time"
         },
         {
           "type": "null"
