@@ -114,6 +114,16 @@
           "type": "null"
         }
       ]
+    },
+    "whitelabel": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
     }
   }
 }

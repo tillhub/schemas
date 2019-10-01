@@ -1,3 +1,10 @@
+# [4.32.0](https://github.com/tillhub/schemas/compare/v4.31.1...v4.32.0) (2019-10-01)
+
+
+### Features
+
+* **client_accounts:** add missing whitelabel prop ([58685ea](https://github.com/tillhub/schemas/commit/58685ea))
+
 ## [4.31.1](https://github.com/tillhub/schemas/compare/v4.31.0...v4.31.1) (2019-09-30)
 
 
