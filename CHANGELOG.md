@@ -1,3 +1,10 @@
+# [4.33.0](https://github.com/tillhub/schemas/compare/v4.32.0...v4.33.0) (2019-10-01)
+
+
+### Features
+
+* **configurations.tips:** tips auto proposal on/off ([#232](https://github.com/tillhub/schemas/issues/232)) ([094fa08](https://github.com/tillhub/schemas/commit/094fa08))
+
 # [4.32.0](https://github.com/tillhub/schemas/compare/v4.31.1...v4.32.0) (2019-10-01)
 
 

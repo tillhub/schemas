@@ -186,8 +186,8 @@
   "/staff_permission_templates.create.request.schema.json",
   "/staff_permission_templates.update.request.schema.json",
   "/stock.create.request.schema.json",
-  "/stock.create.response.schema.json",
   "/stock.transfer.request.schema.json",
+  "/stock.create.response.schema.json",
   "/stock.transfer.response.schema.json",
   "/stock.update.request.schema.json",
   "/stock.update.response.schema.json",
@@ -196,9 +196,9 @@
   "/tags.update.request.schema.json",
   "/tags.update.response.schema.json",
   "/taxes.create.request.schema.json",
-  "/taxes.update.request.schema.json",
   "/things.notification.create.request.schema.json",
   "/time_entries.create.request.schema.json",
+  "/taxes.update.request.schema.json",
   "/time_entries.create.response.schema.json",
   "/time_entries.update.request.schema.json",
   "/time_entries.update.response.schema.json",
@@ -209,6 +209,6 @@
   "/voucher_systems.update.response.schema.json",
   "/vouchers.create.schema.json",
   "/vouchers.patch.schema.json",
-  "/warehouses.update.request.schema.json",
-  "/warehouses.create.request.schema.json"
+  "/warehouses.create.request.schema.json",
+  "/warehouses.update.request.schema.json"
 ]
