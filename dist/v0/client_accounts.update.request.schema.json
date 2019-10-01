@@ -86,10 +86,9 @@
                 "type": "string",
                 "enum": [
                   "voucher",
-                  "ccvfly",
+                  "card",
+                  "generic_card",
                   "rechnung",
-                  "amex",
-                  "concardis",
                   "bar",
                   "card_circuits"
                 ]
