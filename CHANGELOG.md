@@ -1,3 +1,10 @@
+# [4.35.0](https://github.com/tillhub/schemas/compare/v4.34.0...v4.35.0) (2019-10-01)
+
+
+### Features
+
+* **register_opening_protocols:** add discprepancy ([2329c33](https://github.com/tillhub/schemas/commit/2329c33))
+
 # [4.34.0](https://github.com/tillhub/schemas/compare/v4.33.0...v4.34.0) (2019-10-01)
 
 
