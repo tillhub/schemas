@@ -1,3 +1,10 @@
+# [4.39.0](https://github.com/tillhub/schemas/compare/v4.38.0...v4.39.0) (2019-10-02)
+
+
+### Features
+
+* **register_opening_protocols:** rename property ([f38b353](https://github.com/tillhub/schemas/commit/f38b353))
+
 # [4.38.0](https://github.com/tillhub/schemas/compare/v4.37.0...v4.38.0) (2019-10-02)
 
 
