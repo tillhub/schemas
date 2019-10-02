@@ -112,6 +112,20 @@
       ],
       "default": null
     },
+    "temp_staff": {
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "uuid",
+          "example": "378a5f19-44c6-4ed1-9ad1-45ec103f1414",
+          "description": "The Tillhub temporary staff (as cashier) resource ID, that has conducted this protocol."
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
     "device": {
       "oneOf": [
         {
@@ -781,48 +795,158 @@
       "default": false
     },
     "discrepancy_total": {
-      "type": "array",
-      "items": {
-        "description": "The discrepancy amount by currency",
-        "additionalProperties": false,
-        "type": "object",
-        "required": [
-          "currency",
-          "amount"
-        ],
-        "properties": {
-          "client_id": {
-            "oneOf": [
-              {
-                "type": "string",
-                "example": "d0d40841-b1a7-438a-9d1e-2bfec590d2e3",
-                "minLength": 6,
-                "maxLength": 64,
-                "description": "A implementer defined identifier. This can be used for local resource matching and has no business implication."
-              },
-              {
-                "type": "null"
-              }
+      "oneOf": [
+        {
+          "type": "array",
+          "items": {
+            "description": "The discrepancy amount by currency",
+            "additionalProperties": false,
+            "type": "object",
+            "required": [
+              "currency",
+              "amount"
             ],
-            "default": null
-          },
-          "currency": {
-            "type": "string",
-            "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
-            "example": "EUR",
-            "minLength": 3,
-            "maxLength": 3
-          },
-          "amount": {
-            "type": "number",
-            "description": "The quantity of this unit.",
-            "example": "27633.02",
-            "minimum": 0,
-            "maximum": 1000000,
-            "multipleOf": 0.01
+            "properties": {
+              "client_id": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "example": "d0d40841-b1a7-438a-9d1e-2bfec590d2e3",
+                    "minLength": 6,
+                    "maxLength": 64,
+                    "description": "A implementer defined identifier. This can be used for local resource matching and has no business implication."
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null
+              },
+              "currency": {
+                "type": "string",
+                "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                "example": "EUR",
+                "minLength": 3,
+                "maxLength": 3
+              },
+              "amount": {
+                "type": "number",
+                "description": "The quantity of this unit.",
+                "example": "27633.02",
+                "minimum": 0,
+                "maximum": 1000000,
+                "multipleOf": 0.01
+              }
+            }
           }
+        },
+        {
+          "type": "null"
         }
-      }
+      ]
+    },
+    "opening_time": {
+      "type": "string",
+      "format": "date-time",
+      "example": "2018-11-04T23:18:43.075Z",
+      "description": "The time when the cashier clicked on the button in the app to open the register"
+    },
+    "opening_tips": {
+      "oneOf": [
+        {
+          "type": "array",
+          "items": {
+            "description": "The opening tips amount by currency",
+            "additionalProperties": false,
+            "type": "object",
+            "required": [
+              "currency",
+              "amount"
+            ],
+            "properties": {
+              "client_id": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "example": "d0d40841-b1a7-438a-9d1e-2bfec590d2e3",
+                    "minLength": 6,
+                    "maxLength": 64,
+                    "description": "A implementer defined identifier. This can be used for local resource matching and has no business implication."
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null
+              },
+              "currency": {
+                "type": "string",
+                "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                "example": "EUR",
+                "minLength": 3,
+                "maxLength": 3
+              },
+              "amount": {
+                "type": "number",
+                "description": "The quantity of this unit.",
+                "example": "27633.02",
+                "minimum": 0,
+                "maximum": 1000000,
+                "multipleOf": 0.01
+              }
+            }
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "balance_number": {
+      "oneOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "balance_last": {
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "uuid",
+          "example": "9d20d799-b6e0-46a0-9e48-7ca372af13d4",
+          "description": "The Tillhub balance resource ID of the last balance."
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "balance_custom_id_last": {
+      "oneOf": [
+        {
+          "type": "string",
+          "example": "12",
+          "description": "The last balance's `custom_id`, that usually fiscally referred to as the balance number."
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "merchant_receipt": {
+      "oneOf": [
+        {
+          "type": "string",
+          "maxLength": 16384
+        },
+        {
+          "type": "null"
+        }
+      ]
     }
   }
 }

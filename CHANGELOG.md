@@ -1,3 +1,10 @@
+# [4.38.0](https://github.com/tillhub/schemas/compare/v4.37.0...v4.38.0) (2019-10-02)
+
+
+### Features
+
+* **register_opening_protocols:** add properties ([6ada527](https://github.com/tillhub/schemas/commit/6ada527))
+
 # [4.37.0](https://github.com/tillhub/schemas/compare/v4.36.0...v4.37.0) (2019-10-01)
 
 
