@@ -1,3 +1,10 @@
+# [4.40.0](https://github.com/tillhub/schemas/compare/v4.39.0...v4.40.0) (2019-10-02)
+
+
+### Features
+
+* **register_opening_protocols:** rename required property ([fc69446](https://github.com/tillhub/schemas/commit/fc69446))
+
 # [4.39.0](https://github.com/tillhub/schemas/compare/v4.38.0...v4.39.0) (2019-10-02)
 
 

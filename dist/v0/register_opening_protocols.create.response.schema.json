@@ -10,7 +10,7 @@
     "cash_units",
     "register",
     "branch",
-    "opening_time",
+    "opening_date",
     "timezone"
   ],
   "properties": {
