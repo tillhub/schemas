@@ -1,3 +1,10 @@
+# [4.44.0](https://github.com/tillhub/schemas/compare/v4.43.0...v4.44.0) (2019-10-02)
+
+
+### Features
+
+* **register_opening_protocols:** expose module path ([2cfaf5d](https://github.com/tillhub/schemas/commit/2cfaf5d))
+
 # [4.43.0](https://github.com/tillhub/schemas/compare/v4.42.0...v4.43.0) (2019-10-02)
 
 
