@@ -1499,7 +1499,7 @@
         }
       ]
     },
-    "delegateable": {
+    "delegatable": {
       "description": "Define whether the product can be delegated to other users at all.",
       "oneOf": [
         {
@@ -1510,7 +1510,7 @@
         }
       ]
     },
-    "delegateable_to": {
+    "delegatable_to": {
       "oneOf": [
         {
           "type": "array",

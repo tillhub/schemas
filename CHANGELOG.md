@@ -1,3 +1,10 @@
+# [4.41.0](https://github.com/tillhub/schemas/compare/v4.40.0...v4.41.0) (2019-10-02)
+
+
+### Features
+
+* **products_v1:** rename delegatable properties ([ad4f9db](https://github.com/tillhub/schemas/commit/ad4f9db))
+
 # [4.40.0](https://github.com/tillhub/schemas/compare/v4.39.0...v4.40.0) (2019-10-02)
 
 
