@@ -10,8 +10,7 @@
     "cash_units",
     "register",
     "branch",
-    "opening_date",
-    "timezone"
+    "opening_date"
   ],
   "properties": {
     "custom_id": {

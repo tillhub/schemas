@@ -1,3 +1,10 @@
+# [4.42.0](https://github.com/tillhub/schemas/compare/v4.41.0...v4.42.0) (2019-10-02)
+
+
+### Features
+
+* **register_opening_protocol:** remove required property ([9ca9827](https://github.com/tillhub/schemas/commit/9ca9827))
+
 # [4.41.0](https://github.com/tillhub/schemas/compare/v4.40.0...v4.41.0) (2019-10-02)
 
 
