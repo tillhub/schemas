@@ -1,0 +1,57 @@
+{
+  "$id": "https://schemas.tillhub.com/v0/tokens.update.request.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "type": "object",
+  "required": [],
+  "properties": {
+    "token_id": {
+      "description": "The id of the jwt token of the user.",
+      "type": "string"
+    },
+    "client_account": {
+      "description": "The client account id of the user.",
+      "type": "string"
+    },
+    "issued_at": {
+      "description": "When the token was issued.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "issuer": {
+      "description": "Details about the issuer.",
+      "oneOf": [
+        {
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "valid_until": {
+      "description": "When the token expires.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "is_logged_out": {
+      "description": "If the token was logged out.",
+      "type": "boolean",
+      "default": false
+    },
+    "logged_out_at": {
+      "description": "When the token was logged out.",
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "date-time"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    }
+  }
+}
