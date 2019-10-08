@@ -1,3 +1,21 @@
+# [4.45.0](https://github.com/tillhub/schemas/compare/v4.44.0...v4.45.0) (2019-10-08)
+
+
+### Bug Fixes
+
+* fix description ([2294a47](https://github.com/tillhub/schemas/commit/2294a47))
+* fix helpers dependency ([f16b295](https://github.com/tillhub/schemas/commit/f16b295))
+* handle block properties separatedly ([4f705d8](https://github.com/tillhub/schemas/commit/4f705d8))
+* handle token as string not uuid ([3642f17](https://github.com/tillhub/schemas/commit/3642f17))
+* remove base dependency ([ebce08e](https://github.com/tillhub/schemas/commit/ebce08e))
+* use oneOf helpers ([ff06715](https://github.com/tillhub/schemas/commit/ff06715))
+* validate block ([dd6ab25](https://github.com/tillhub/schemas/commit/dd6ab25))
+
+
+### Features
+
+* **tokens:** validate tokens on login/logout ([a797e61](https://github.com/tillhub/schemas/commit/a797e61))
+
 # [4.44.0](https://github.com/tillhub/schemas/compare/v4.43.0...v4.44.0) (2019-10-02)
 
 
