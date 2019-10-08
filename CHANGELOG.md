@@ -1,3 +1,10 @@
+## [4.46.1](https://github.com/tillhub/schemas/compare/v4.46.0...v4.46.1) (2019-10-08)
+
+
+### Bug Fixes
+
+* **tokens:** token_id as uuid ([0afe508](https://github.com/tillhub/schemas/commit/0afe508))
+
 # [4.46.0](https://github.com/tillhub/schemas/compare/v4.45.1...v4.46.0) (2019-10-08)
 
 

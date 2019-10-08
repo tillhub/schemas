@@ -11,7 +11,8 @@
   "properties": {
     "token_id": {
       "description": "The id of the jwt token of the user.",
-      "type": "string"
+      "type": "string",
+      "format": "uuid"
     },
     "client_account": {
       "description": "The client account id of the user.",
