@@ -1,3 +1,15 @@
+# [4.46.0](https://github.com/tillhub/schemas/compare/v4.45.1...v4.46.0) (2019-10-08)
+
+
+### Bug Fixes
+
+* **Configurations:** balances discrepency warning ([46276ab](https://github.com/tillhub/schemas/commit/46276ab))
+
+
+### Features
+
+* **Configurations:** Config for balance discrepency warning ([1c0e455](https://github.com/tillhub/schemas/commit/1c0e455))
+
 ## [4.45.1](https://github.com/tillhub/schemas/compare/v4.45.0...v4.45.1) (2019-10-08)
 
 

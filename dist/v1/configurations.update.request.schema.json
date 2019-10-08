@@ -2368,7 +2368,7 @@
                 }
               ]
             },
-            "discrepency_warning": {
+            "discrepancy_warning": {
               "description": "If true, warns the user when cash counted is not equal to cash calculated.",
               "default": true,
               "oneOf": [
