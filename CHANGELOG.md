@@ -1,3 +1,10 @@
+## [4.45.1](https://github.com/tillhub/schemas/compare/v4.45.0...v4.45.1) (2019-10-08)
+
+
+### Bug Fixes
+
+* **tokens:** add client account property ([025b178](https://github.com/tillhub/schemas/commit/025b178))
+
 # [4.45.0](https://github.com/tillhub/schemas/compare/v4.44.0...v4.45.0) (2019-10-08)
 
 

@@ -9,6 +9,10 @@
       "description": "The id of the jwt token of the user.",
       "type": "string"
     },
+    "client_account": {
+      "description": "The client account id of the user.",
+      "type": "string"
+    },
     "issued_at": {
       "description": "When the token was issued.",
       "type": "string",

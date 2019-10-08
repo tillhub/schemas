@@ -2368,6 +2368,18 @@
                 }
               ]
             },
+            "discrepency_warning": {
+              "description": "If true, warns the user when cash counted is not equal to cash calculated.",
+              "default": true,
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "boolean"
+                }
+              ]
+            },
             "extended_report": {
               "description": "If true, adds extended balance information to the UI and the receipts.",
               "default": false,
