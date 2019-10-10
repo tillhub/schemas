@@ -1,3 +1,10 @@
+# [4.47.0](https://github.com/tillhub/schemas/compare/v4.46.1...v4.47.0) (2019-10-10)
+
+
+### Features
+
+* **configurations:** receipts, customer style ([beb45ab](https://github.com/tillhub/schemas/commit/beb45ab))
+
 ## [4.46.1](https://github.com/tillhub/schemas/compare/v4.46.0...v4.46.1) (2019-10-08)
 
 

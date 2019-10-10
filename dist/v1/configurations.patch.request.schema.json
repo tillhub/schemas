@@ -1822,7 +1822,64 @@
                     "print_customer": {
                       "oneOf": [
                         {
-                          "description": "Defines the receipt-types the customer will be printed on (e.g. just for the merchant)",
+                          "description": "DEPRECATED: iOS pre 4.10, Defines the receipt-types the customer will be printed on (e.g. just for the merchant)",
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "enum": [
+                              "merchant",
+                              "customer",
+                              "order"
+                            ]
+                          }
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "print_customer_name": {
+                      "oneOf": [
+                        {
+                          "description": "Defines the receipt-types the customer name will be printed on (e.g. just for the merchant)",
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "enum": [
+                              "merchant",
+                              "customer",
+                              "order"
+                            ]
+                          }
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "print_customer_address": {
+                      "oneOf": [
+                        {
+                          "description": "Defines the receipt-types the customer address will be printed on (e.g. just for the merchant)",
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "enum": [
+                              "merchant",
+                              "customer",
+                              "order"
+                            ]
+                          }
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "print_customer_number": {
+                      "oneOf": [
+                        {
+                          "description": "Defines the receipt-types the customer number will be printed on (e.g. just for the merchant)",
                           "type": "array",
                           "items": {
                             "type": "string",
