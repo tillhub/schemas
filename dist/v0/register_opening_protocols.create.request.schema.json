@@ -253,7 +253,12 @@
         {
           "type": "object",
           "additionalProperties": false,
-          "example": "{ \"lat\": 52.5065133, \"lng\": 13.1445545}",
+          "examples": [
+            {
+              "lat": 52.5065133,
+              "lng": 13.1445545
+            }
+          ],
           "description": "Geospatial data of this transaction",
           "required": [
             "lat",
@@ -329,7 +334,9 @@
                     {
                       "type": "number",
                       "description": "The quantity of this unit.",
-                      "example": "7",
+                      "examples": [
+                        7
+                      ],
                       "minimum": 0,
                       "maximum": 32767,
                       "multipleOf": 1
@@ -340,7 +347,9 @@
                   ]
                 },
                 "value": {
-                  "example": "0.10",
+                  "examples": [
+                    0.1
+                  ],
                   "description": "The amount by summing all cash for that bill/coin.",
                   "type": "number",
                   "minimum": 0,
@@ -837,7 +846,9 @@
               "amount": {
                 "type": "number",
                 "description": "The quantity of this unit.",
-                "example": "27633.02",
+                "examples": [
+                  27633.02
+                ],
                 "minimum": 0,
                 "maximum": 1000000,
                 "multipleOf": 0.01
@@ -894,7 +905,9 @@
               "amount": {
                 "type": "number",
                 "description": "The quantity of this unit.",
-                "example": "27633.02",
+                "examples": [
+                  27633.02
+                ],
                 "minimum": 0,
                 "maximum": 1000000,
                 "multipleOf": 0.01

@@ -1,3 +1,10 @@
+# [4.48.0](https://github.com/tillhub/schemas/compare/v4.47.0...v4.48.0) (2019-10-10)
+
+
+### Features
+
+* **register_protocols:** fix examples and their types ([7463825](https://github.com/tillhub/schemas/commit/7463825))
+
 # [4.47.0](https://github.com/tillhub/schemas/compare/v4.46.1...v4.47.0) (2019-10-10)
 
 
