@@ -401,6 +401,55 @@
                 }
               }
             },
+            "register": {
+              "description": "Defines the settings on register opening and closing ",
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "open": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "counting_policy": {
+                      "oneOf": [
+                        {
+                          "description": "Defines if counting protocol is active or not on register opening",
+                          "type": "string",
+                          "enum": [
+                            "none",
+                            "required"
+                          ]
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  }
+                },
+                "close": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "counting_policy": {
+                      "oneOf": [
+                        {
+                          "description": "Defines if counting protocol is active or not on register closing",
+                          "type": "string",
+                          "enum": [
+                            "none",
+                            "required"
+                          ]
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            },
             "search": {
               "description": "Limits in-app searches.",
               "type": "object",

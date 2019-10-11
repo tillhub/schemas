@@ -1,3 +1,10 @@
+# [4.49.0](https://github.com/tillhub/schemas/compare/v4.48.0...v4.49.0) (2019-10-11)
+
+
+### Features
+
+* **configurations of register opening and closing:** Activation of counting protocole on register o ([8cd4696](https://github.com/tillhub/schemas/commit/8cd4696))
+
 # [4.48.0](https://github.com/tillhub/schemas/compare/v4.47.0...v4.48.0) (2019-10-10)
 
 
