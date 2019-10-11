@@ -1,3 +1,10 @@
+# [4.50.0](https://github.com/tillhub/schemas/compare/v4.49.0...v4.50.0) (2019-10-11)
+
+
+### Features
+
+* add product price to commom lib ([a70b2fc](https://github.com/tillhub/schemas/commit/a70b2fc))
+
 # [4.49.0](https://github.com/tillhub/schemas/compare/v4.48.0...v4.49.0) (2019-10-11)
 
 
