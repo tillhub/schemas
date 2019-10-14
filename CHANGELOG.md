@@ -1,3 +1,10 @@
+## [4.53.1](https://github.com/tillhub/schemas/compare/v4.53.0...v4.53.1) (2019-10-14)
+
+
+### Bug Fixes
+
+* add missing fields ([05df70c](https://github.com/tillhub/schemas/commit/05df70c))
+
 # [4.53.0](https://github.com/tillhub/schemas/compare/v4.52.0...v4.53.0) (2019-10-14)
 
 

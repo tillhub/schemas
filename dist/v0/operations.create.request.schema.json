@@ -17,6 +17,28 @@
         }
       ]
     },
+    "summary": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "string",
+          "maxLength": 512
+        }
+      ]
+    },
+    "description": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "string",
+          "maxLength": 4096
+        }
+      ]
+    },
     "client_id": {
       "description": "An identifier a caller might refer to in a client side application.",
       "oneOf": [
@@ -481,7 +503,12 @@
       "type": "boolean",
       "default": true
     },
-    "suspend": {
+    "ignored": {
+      "description": "Ignore this operation e.g. in UIs.",
+      "type": "boolean",
+      "default": false
+    },
+    "suspended": {
       "description": "Pause execution of operation.",
       "type": "boolean",
       "default": false
