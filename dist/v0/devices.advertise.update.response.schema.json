@@ -30,8 +30,7 @@
       ]
     },
     "device_id": {
-      "type": "string",
-      "format": "uuid"
+      "type": "string"
     },
     "register": {
       "type": "string",
@@ -112,7 +111,8 @@
           "type": "string",
           "enum": [
             "cfd",
-            "printer"
+            "printer",
+            "eda"
           ]
         },
         {

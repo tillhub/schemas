@@ -1,3 +1,15 @@
+# [4.51.0](https://github.com/tillhub/schemas/compare/v4.50.0...v4.51.0) (2019-10-14)
+
+
+### Bug Fixes
+
+* **devices:** remove need for device id to be uuid ([72c5f65](https://github.com/tillhub/schemas/commit/72c5f65))
+
+
+### Features
+
+* **devices:** support eda ([a50f3bd](https://github.com/tillhub/schemas/commit/a50f3bd))
+
 # [4.50.0](https://github.com/tillhub/schemas/compare/v4.49.0...v4.50.0) (2019-10-11)
 
 
