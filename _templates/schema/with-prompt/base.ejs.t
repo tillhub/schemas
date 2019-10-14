@@ -2,7 +2,7 @@
 to: "lib/<%= version %>/<%= name %>/base.js"
 ---
 module.exports = {
-  // add here the properties you need
+  // add the properties you need here
   client_id: {
     description: 'An identifier used locally on POS for their own reference.',
     oneOf: [
