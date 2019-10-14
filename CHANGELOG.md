@@ -1,3 +1,10 @@
+# [4.52.0](https://github.com/tillhub/schemas/compare/v4.51.0...v4.52.0) (2019-10-14)
+
+
+### Features
+
+* **products:** change date format for time based price ([5ab2474](https://github.com/tillhub/schemas/commit/5ab2474))
+
 # [4.51.0](https://github.com/tillhub/schemas/compare/v4.50.0...v4.51.0) (2019-10-14)
 
 

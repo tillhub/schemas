@@ -308,11 +308,11 @@
                     "properties": {
                       "start": {
                         "type": "string",
-                        "format": "date"
+                        "format": "date-time"
                       },
                       "end": {
                         "type": "string",
-                        "format": "date"
+                        "format": "date-time"
                       }
                     },
                     "required": [
