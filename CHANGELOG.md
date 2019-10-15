@@ -1,3 +1,10 @@
+# [4.54.0](https://github.com/tillhub/schemas/compare/v4.53.3...v4.54.0) (2019-10-15)
+
+
+### Features
+
+* **devices:** add create schema ([fdad176](https://github.com/tillhub/schemas/commit/fdad176))
+
 ## [4.53.3](https://github.com/tillhub/schemas/compare/v4.53.2...v4.53.3) (2019-10-15)
 
 
