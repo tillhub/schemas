@@ -1,3 +1,10 @@
+## [4.53.3](https://github.com/tillhub/schemas/compare/v4.53.2...v4.53.3) (2019-10-15)
+
+
+### Bug Fixes
+
+* **devices:** make register id during binding optional ([96022db](https://github.com/tillhub/schemas/commit/96022db))
+
 ## [4.53.2](https://github.com/tillhub/schemas/compare/v4.53.1...v4.53.2) (2019-10-15)
 
 
