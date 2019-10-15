@@ -1,3 +1,10 @@
+## [4.53.2](https://github.com/tillhub/schemas/compare/v4.53.1...v4.53.2) (2019-10-15)
+
+
+### Bug Fixes
+
+* **devices:** enforce device id max length ([4c6c7ae](https://github.com/tillhub/schemas/commit/4c6c7ae))
+
 ## [4.53.1](https://github.com/tillhub/schemas/compare/v4.53.0...v4.53.1) (2019-10-14)
 
 
