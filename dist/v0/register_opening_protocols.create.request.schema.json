@@ -76,6 +76,18 @@
       ],
       "default": null
     },
+    "client_id": {
+      "oneOf": [
+        {
+          "type": "string",
+          "description": "A client definable ID for the purpose of syncing to a client or used in analytics for e.g. transactions that created a product offline and done transactions offline before they received a backend ID.",
+          "maxLength": 128
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "client_custom_id": {
       "oneOf": [
         {

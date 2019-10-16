@@ -1,3 +1,10 @@
+# [4.55.0](https://github.com/tillhub/schemas/compare/v4.54.0...v4.55.0) (2019-10-16)
+
+
+### Features
+
+* **register-opening-protocols:** add client_id ([7395bae](https://github.com/tillhub/schemas/commit/7395bae))
+
 # [4.54.0](https://github.com/tillhub/schemas/compare/v4.53.3...v4.54.0) (2019-10-15)
 
 
