@@ -1,3 +1,10 @@
+# [4.56.0](https://github.com/tillhub/schemas/compare/v4.55.0...v4.56.0) (2019-10-16)
+
+
+### Features
+
+* **configurations:** add minimum stock notif flag ([fe20725](https://github.com/tillhub/schemas/commit/fe20725))
+
 # [4.55.0](https://github.com/tillhub/schemas/compare/v4.54.0...v4.55.0) (2019-10-16)
 
 
