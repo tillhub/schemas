@@ -1,3 +1,10 @@
+## [4.56.1](https://github.com/tillhub/schemas/compare/v4.56.0...v4.56.1) (2019-10-21)
+
+
+### Bug Fixes
+
+* **devices:** remove duplicate properties in default response ([0c02693](https://github.com/tillhub/schemas/commit/0c02693))
+
 # [4.56.0](https://github.com/tillhub/schemas/compare/v4.55.0...v4.56.0) (2019-10-16)
 
 

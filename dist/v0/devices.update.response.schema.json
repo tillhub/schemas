@@ -20,14 +20,8 @@
       ]
     },
     "client_id": {
-      "oneOf": [
-        {
-          "type": "string"
-        },
-        {
-          "type": "null"
-        }
-      ]
+      "type": "string",
+      "format": "uuid"
     },
     "device_id": {
       "type": "string",
@@ -308,8 +302,9 @@
       "type": "string",
       "format": "date-time"
     },
-    "client_account": {
-      "type": "string"
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
     }
   }
 }

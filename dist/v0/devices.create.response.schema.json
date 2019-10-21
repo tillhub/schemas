@@ -1,10 +1,11 @@
 {
-  "$id": "https://schemas.tillhub.com/v0/devices.advertise.update.response.schema.json",
+  "$id": "https://schemas.tillhub.com/v0/devices.create.response.schema.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "additionalProperties": true,
   "type": "object",
   "required": [
-    "id"
+    "id",
+    "client_account"
   ],
   "properties": {
     "name": {
@@ -305,50 +306,6 @@
     "updated_at": {
       "type": "string",
       "format": "date-time"
-    },
-    "client_account": {
-      "oneOf": [
-        {
-          "type": "string"
-        },
-        {
-          "type": "null"
-        }
-      ]
-    },
-    "token": {
-      "oneOf": [
-        {
-          "type": "string"
-        },
-        {
-          "type": "null"
-        }
-      ]
-    },
-    "short_id": {
-      "oneOf": [
-        {
-          "type": "string"
-        },
-        {
-          "type": "null"
-        }
-      ]
-    },
-    "status": {
-      "type": "string"
-    },
-    "device": {
-      "oneOf": [
-        {
-          "type": "string",
-          "format": "uuid"
-        },
-        {
-          "type": "null"
-        }
-      ]
     }
   }
 }
