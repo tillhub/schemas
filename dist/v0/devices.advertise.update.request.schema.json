@@ -19,17 +19,38 @@
       ]
     },
     "client_id": {
-      "type": "string",
-      "format": "uuid"
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "uuid"
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "device_id": {
-      "type": "string",
-      "minLength": 1,
-      "maxLength": 36
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 36
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "register": {
-      "type": "string",
-      "format": "uuid"
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "uuid"
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "device_configuration": {
       "type": "object",

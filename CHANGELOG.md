@@ -1,3 +1,10 @@
+## [4.56.2](https://github.com/tillhub/schemas/compare/v4.56.1...v4.56.2) (2019-10-21)
+
+
+### Bug Fixes
+
+* **devices:** make a few more properties optional ([1d3aea7](https://github.com/tillhub/schemas/commit/1d3aea7))
+
 ## [4.56.1](https://github.com/tillhub/schemas/compare/v4.56.0...v4.56.1) (2019-10-21)
 
 
