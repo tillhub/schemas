@@ -1,3 +1,10 @@
+## [4.56.3](https://github.com/tillhub/schemas/compare/v4.56.2...v4.56.3) (2019-10-21)
+
+
+### Bug Fixes
+
+* **devices:** make device_configuration optional ([3d1c13f](https://github.com/tillhub/schemas/commit/3d1c13f))
+
 ## [4.56.2](https://github.com/tillhub/schemas/compare/v4.56.1...v4.56.2) (2019-10-21)
 
 
