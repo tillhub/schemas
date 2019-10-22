@@ -1,3 +1,10 @@
+# [4.58.0](https://github.com/tillhub/schemas/compare/v4.57.0...v4.58.0) (2019-10-22)
+
+
+### Features
+
+* **register_opening_protocols:** remove client_id and staff ([53fe746](https://github.com/tillhub/schemas/commit/53fe746))
+
 # [4.57.0](https://github.com/tillhub/schemas/compare/v4.56.3...v4.57.0) (2019-10-22)
 
 

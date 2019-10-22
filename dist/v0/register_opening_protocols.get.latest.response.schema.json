@@ -104,20 +104,6 @@
       ],
       "default": null
     },
-    "staff": {
-      "oneOf": [
-        {
-          "type": "string",
-          "format": "uuid",
-          "example": "b3465a62-62e9-46de-9df7-4d3009c46068",
-          "description": "The Tillhub staff resource ID, that has conducted this protocol. (used by temp staff)"
-        },
-        {
-          "type": "null"
-        }
-      ],
-      "default": null
-    },
     "cashier_staff": {
       "oneOf": [
         {
@@ -836,21 +822,6 @@
               "amount"
             ],
             "properties": {
-              "client_id": {
-                "oneOf": [
-                  {
-                    "type": "string",
-                    "example": "d0d40841-b1a7-438a-9d1e-2bfec590d2e3",
-                    "minLength": 6,
-                    "maxLength": 64,
-                    "description": "A implementer defined identifier. This can be used for local resource matching and has no business implication."
-                  },
-                  {
-                    "type": "null"
-                  }
-                ],
-                "default": null
-              },
               "currency": {
                 "type": "string",
                 "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
@@ -864,7 +835,7 @@
                 "examples": [
                   27633.02
                 ],
-                "minimum": 0,
+                "minimum": -1000000,
                 "maximum": 1000000,
                 "multipleOf": 0.01
               }
@@ -886,30 +857,16 @@
       "oneOf": [
         {
           "type": "array",
+          "description": "A list of non-negative monetary values by currency",
           "items": {
-            "description": "The opening tips amount by currency",
-            "additionalProperties": false,
             "type": "object",
+            "additionalProperties": false,
+            "description": "Describes a non-negative monetary value in a specific currency.",
             "required": [
-              "currency",
-              "amount"
+              "amount",
+              "currency"
             ],
             "properties": {
-              "client_id": {
-                "oneOf": [
-                  {
-                    "type": "string",
-                    "example": "d0d40841-b1a7-438a-9d1e-2bfec590d2e3",
-                    "minLength": 6,
-                    "maxLength": 64,
-                    "description": "A implementer defined identifier. This can be used for local resource matching and has no business implication."
-                  },
-                  {
-                    "type": "null"
-                  }
-                ],
-                "default": null
-              },
               "currency": {
                 "type": "string",
                 "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
@@ -919,12 +876,9 @@
               },
               "amount": {
                 "type": "number",
-                "description": "The quantity of this unit.",
-                "examples": [
-                  27633.02
-                ],
+                "description": "The value as .2-Decimal.",
+                "example": "47.02",
                 "minimum": 0,
-                "maximum": 1000000,
                 "multipleOf": 0.01
               }
             }
