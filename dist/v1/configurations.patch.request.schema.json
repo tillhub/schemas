@@ -289,6 +289,99 @@
         }
       ]
     },
+    "expense_deposits": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": true,
+          "properties": {
+            "image_expense": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "description": "defines wether image is mandatory, optional, for expenses",
+                  "enum": [
+                    "mandatory",
+                    "optional",
+                    "none"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "image_deposit": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "description": "defines wether image is mandatory, optional, or non-mandatory for deposits",
+                  "enum": [
+                    "mandatory",
+                    "optional",
+                    "none"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "image_bank": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "description": "defines wether image is mandatory, optional, or non-mandatory for banks",
+                  "enum": [
+                    "mandatory",
+                    "optional",
+                    "none"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "image_safe": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "description": "defines wether image is mandatory, optional, or non-mandatory for safes",
+                  "enum": [
+                    "mandatory",
+                    "optional",
+                    "none"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "image_tip": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "description": "defines wether image is mandatory, optional, or non-mandatory for tips",
+                  "enum": [
+                    "mandatory",
+                    "optional",
+                    "none"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "settings": {
       "oneOf": [
         {

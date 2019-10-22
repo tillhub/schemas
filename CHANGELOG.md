@@ -1,3 +1,10 @@
+# [4.57.0](https://github.com/tillhub/schemas/compare/v4.56.3...v4.57.0) (2019-10-22)
+
+
+### Features
+
+* **configurations:** add expense deposit flags ([95aaa03](https://github.com/tillhub/schemas/commit/95aaa03))
+
 ## [4.56.3](https://github.com/tillhub/schemas/compare/v4.56.2...v4.56.3) (2019-10-21)
 
 
