@@ -1,3 +1,10 @@
+# [4.60.0](https://github.com/tillhub/schemas/compare/v4.59.0...v4.60.0) (2019-10-22)
+
+
+### Features
+
+* **register_opening_protocol:** add totals and descriptions ([#259](https://github.com/tillhub/schemas/issues/259)) ([e1a0c1d](https://github.com/tillhub/schemas/commit/e1a0c1d))
+
 # [4.59.0](https://github.com/tillhub/schemas/compare/v4.58.0...v4.59.0) (2019-10-22)
 
 

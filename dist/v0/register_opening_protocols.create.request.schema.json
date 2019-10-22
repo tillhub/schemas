@@ -25,42 +25,40 @@
       "default": null
     },
     "branch": {
-      "type": "string",
-      "format": "uuid",
-      "example": "f2ac2cae-97ff-42a1-967b-0a35222ab6d1",
-      "description": "The Tillhub branch location ID."
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "uuid",
+          "example": "f2ac2cae-97ff-42a1-967b-0a35222ab6d1",
+          "description": "The Tillhub branch location ID."
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "branch_custom_id": {
-      "oneOf": [
-        {
-          "type": "string",
-          "example": "5",
-          "description": "The Tillhub branch number."
-        },
-        {
-          "type": "null"
-        }
-      ],
-      "default": null
+      "type": "string",
+      "example": "5",
+      "description": "The Tillhub branch number."
     },
     "register": {
-      "type": "string",
-      "format": "uuid",
-      "example": "9d110eb2-2245-4e14-9574-49b502f3a9b3",
-      "description": "The Tillhub register location ID."
-    },
-    "register_custom_id": {
       "oneOf": [
         {
           "type": "string",
-          "example": "7",
-          "description": "The Tillhub register number."
+          "format": "uuid",
+          "example": "9d110eb2-2245-4e14-9574-49b502f3a9b3",
+          "description": "The Tillhub register location ID."
         },
         {
           "type": "null"
         }
-      ],
-      "default": null
+      ]
+    },
+    "register_custom_id": {
+      "type": "string",
+      "example": "7",
+      "description": "The Tillhub register number."
     },
     "client": {
       "oneOf": [
@@ -802,9 +800,69 @@
       "type": "boolean",
       "default": false
     },
-    "discrepancy": {
-      "type": "boolean",
-      "default": false
+    "opening_date": {
+      "type": "string",
+      "format": "date-time",
+      "example": "2018-11-04T23:18:43.075Z",
+      "description": "The time when the cashier clicked on the button in the app to open the register"
+    },
+    "total_counted": {
+      "type": "array",
+      "description": "Total amounts per currency from manual counting (total sum of bills and coins per currency, actual value)",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "description": "Describes a non-negative monetary value in a specific currency.",
+        "required": [
+          "amount",
+          "currency"
+        ],
+        "properties": {
+          "currency": {
+            "type": "string",
+            "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+            "example": "EUR",
+            "minLength": 3,
+            "maxLength": 3
+          },
+          "amount": {
+            "type": "number",
+            "description": "The value as .2-Decimal.",
+            "example": "47.02",
+            "minimum": 0,
+            "multipleOf": 0.01
+          }
+        }
+      }
+    },
+    "total_calculated": {
+      "type": "array",
+      "description": "Total amounts per currency from calculation (values from previously closed balance, setpoint value)",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "description": "Describes a non-negative monetary value in a specific currency.",
+        "required": [
+          "amount",
+          "currency"
+        ],
+        "properties": {
+          "currency": {
+            "type": "string",
+            "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+            "example": "EUR",
+            "minLength": 3,
+            "maxLength": 3
+          },
+          "amount": {
+            "type": "number",
+            "description": "The value as .2-Decimal.",
+            "example": "47.02",
+            "minimum": 0,
+            "multipleOf": 0.01
+          }
+        }
+      }
     },
     "discrepancy_total": {
       "oneOf": [
@@ -837,24 +895,23 @@
                 "multipleOf": 0.01
               }
             }
-          }
+          },
+          "description": "Discrepencies per currency (discrepencies[currency] = total_calculated[currency] - total_counted[currency])"
         },
         {
           "type": "null"
         }
       ]
     },
-    "opening_date": {
-      "type": "string",
-      "format": "date-time",
-      "example": "2018-11-04T23:18:43.075Z",
-      "description": "The time when the cashier clicked on the button in the app to open the register"
+    "has_discrepancy": {
+      "type": "boolean",
+      "default": false
     },
     "opening_tips": {
       "oneOf": [
         {
           "type": "array",
-          "description": "A list of non-negative monetary values by currency",
+          "description": "Tips carry-overs from previous balance when opening the register before any sales",
           "items": {
             "type": "object",
             "additionalProperties": false,
@@ -925,7 +982,8 @@
       "oneOf": [
         {
           "type": "string",
-          "maxLength": 16384
+          "maxLength": 16384,
+          "description": "A printable plaintext receipt for a register opening."
         },
         {
           "type": "null"
