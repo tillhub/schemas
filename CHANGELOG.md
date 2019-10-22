@@ -1,3 +1,10 @@
+# [4.62.0](https://github.com/tillhub/schemas/compare/v4.61.0...v4.62.0) (2019-10-22)
+
+
+### Features
+
+* **register opening protocol:** added totals and some descriptions ([f2d4d78](https://github.com/tillhub/schemas/commit/f2d4d78))
+
 # [4.61.0](https://github.com/tillhub/schemas/compare/v4.60.0...v4.61.0) (2019-10-22)
 
 

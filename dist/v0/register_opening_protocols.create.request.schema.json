@@ -896,7 +896,7 @@
               }
             }
           },
-          "description": "Discrepencies per currency (discrepencies[currency] = total_calculated[currency] - total_counted[currency])"
+          "description": "Discrepencies per currency (discrepencies[currency] = total_counted[currency] - total_calculated[currency])"
         },
         {
           "type": "null"
