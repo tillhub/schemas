@@ -1296,6 +1296,43 @@
                     ]
                   }
                 }
+              },
+              {
+                "type": "object",
+                "required": [
+                  "data",
+                  "type"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "data": {
+                    "oneOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "caption": {
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 512
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "type": {
+                    "type": "string",
+                    "enum": [
+                      "unknown"
+                    ]
+                  }
+                }
               }
             ]
           }
