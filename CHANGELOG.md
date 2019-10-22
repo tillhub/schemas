@@ -1,3 +1,10 @@
+# [4.59.0](https://github.com/tillhub/schemas/compare/v4.58.0...v4.59.0) (2019-10-22)
+
+
+### Features
+
+* **register-opening-protocols:** change required fields ([6c8d04f](https://github.com/tillhub/schemas/commit/6c8d04f))
+
 # [4.58.0](https://github.com/tillhub/schemas/compare/v4.57.0...v4.58.0) (2019-10-22)
 
 

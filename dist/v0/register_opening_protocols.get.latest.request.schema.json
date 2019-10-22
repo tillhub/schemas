@@ -1,22 +1,20 @@
 {
   "$id": "https://schemas.tillhub.com/v0/register_opening_protocols.get.latest.request.schema.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "additionalProperties": false,
+  "additionalProperties": true,
   "type": "object",
   "required": [
-    "register",
-    "branch"
+    "register_custom_id",
+    "branch_custom_id"
   ],
   "properties": {
-    "register": {
+    "register_custom_id": {
       "type": "string",
-      "description": "The alphanumeric uuid of the register",
-      "format": "uuid"
+      "description": "The alphanumeric uuid of the register_custom_id"
     },
-    "branch": {
+    "branch_custom_id": {
       "type": "string",
-      "description": "The alphanumeric uuid of the register",
-      "format": "uuid"
+      "description": "The alphanumeric uuid of the branch_custom_id"
     }
   }
 }

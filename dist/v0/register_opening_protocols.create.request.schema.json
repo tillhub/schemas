@@ -5,8 +5,8 @@
   "type": "object",
   "required": [
     "cash_units",
-    "register",
-    "branch",
+    "register_custom_id",
+    "branch_custom_id",
     "opening_date"
   ],
   "properties": {
