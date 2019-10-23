@@ -1,3 +1,10 @@
+## [4.66.2](https://github.com/tillhub/schemas/compare/v4.66.1...v4.66.2) (2019-10-23)
+
+
+### Bug Fixes
+
+* **products:** use correct prose description ([65842aa](https://github.com/tillhub/schemas/commit/65842aa))
+
 ## [4.66.1](https://github.com/tillhub/schemas/compare/v4.66.0...v4.66.1) (2019-10-23)
 
 

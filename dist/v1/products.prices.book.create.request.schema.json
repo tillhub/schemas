@@ -8,14 +8,14 @@
   ],
   "properties": {
     "product": {
-      "description": "The reference to the actual product",
+      "description": "The reference to the product",
       "type": "string",
       "format": "uuid"
     },
     "name": {
       "oneOf": [
         {
-          "description": "Product name",
+          "description": "Price book item name",
           "type": "string",
           "maxLength": 512
         },
@@ -25,7 +25,7 @@
       ]
     },
     "summary": {
-      "description": "Short summary of the product",
+      "description": "Short summary of the price book item",
       "oneOf": [
         {
           "type": "string",
