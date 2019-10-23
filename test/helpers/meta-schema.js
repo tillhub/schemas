@@ -75,7 +75,7 @@ module.exports = {
       'default': false
     },
     example: {
-      type: ['string', 'object']
+      type: ['string', 'object', 'number']
     },
     examples: {
       type: 'array',
@@ -237,6 +237,9 @@ module.exports = {
     },
     not: {
       $ref: '#'
+    },
+    deprecated: {
+      type: 'boolean'
     }
   },
   'default': true
