@@ -1,0 +1,142 @@
+{
+  "$id": "https://schemas.tillhub.com/v1/products.prices.book.update.request.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "type": "object",
+  "required": [],
+  "properties": {
+    "product": {
+      "description": "The reference to the actual product",
+      "type": "string",
+      "format": "uuid"
+    },
+    "name": {
+      "oneOf": [
+        {
+          "description": "Product name",
+          "type": "string",
+          "maxLength": 512
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "summary": {
+      "description": "Short summary of the product",
+      "oneOf": [
+        {
+          "type": "string",
+          "maxLength": 1024
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "active": {
+      "type": "boolean"
+    },
+    "deleted": {
+      "type": "boolean"
+    },
+    "locations": {
+      "oneOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "external_reference_id": {
+      "description": "A caller defined custom ID for the purpose of syncing from external resources, or to use in analytics.",
+      "oneOf": [
+        {
+          "type": "string",
+          "maxLength": 128
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "start": {
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "date-time"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "end": {
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "date-time"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "value_type": {
+      "type": "string",
+      "description": "Value types restrict the pricing to the value fields (amount_net & amount_gross or rate). If all of those are set the value_type counts. If there is no value_type, amount fields take precedence.",
+      "enum": [
+        "rate",
+        "value"
+      ]
+    },
+    "amount_net": {
+      "oneOf": [
+        {
+          "example": "27633.02",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1000000,
+          "multipleOf": 0.01
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "amount_gross": {
+      "oneOf": [
+        {
+          "example": "27633.02",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1000000,
+          "multipleOf": 0.01
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "rate": {
+      "description": "Relative value of this product based on any other applicable price.",
+      "oneOf": [
+        {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "multipleOf": 0.001
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  }
+}

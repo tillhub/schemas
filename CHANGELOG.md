@@ -1,3 +1,10 @@
+# [4.66.0](https://github.com/tillhub/schemas/compare/v4.65.0...v4.66.0) (2019-10-23)
+
+
+### Features
+
+* **products:** add price book ([b930d3a](https://github.com/tillhub/schemas/commit/b930d3a))
+
 # [4.65.0](https://github.com/tillhub/schemas/compare/v4.64.0...v4.65.0) (2019-10-23)
 
 
