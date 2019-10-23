@@ -1,3 +1,10 @@
+# [4.64.0](https://github.com/tillhub/schemas/compare/v4.63.0...v4.64.0) (2019-10-23)
+
+
+### Features
+
+* **staff:** add permission scopes for devices ([3ef5c44](https://github.com/tillhub/schemas/commit/3ef5c44))
+
 # [4.63.0](https://github.com/tillhub/schemas/compare/v4.62.0...v4.63.0) (2019-10-23)
 
 
