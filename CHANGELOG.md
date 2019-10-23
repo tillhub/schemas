@@ -1,3 +1,10 @@
+## [4.66.1](https://github.com/tillhub/schemas/compare/v4.66.0...v4.66.1) (2019-10-23)
+
+
+### Bug Fixes
+
+* **products:** add missing price book props ([d027127](https://github.com/tillhub/schemas/commit/d027127))
+
 # [4.66.0](https://github.com/tillhub/schemas/compare/v4.65.0...v4.66.0) (2019-10-23)
 
 
