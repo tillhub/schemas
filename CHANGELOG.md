@@ -1,3 +1,10 @@
+# [4.65.0](https://github.com/tillhub/schemas/compare/v4.64.0...v4.65.0) (2019-10-23)
+
+
+### Features
+
+* **branches:** add branch_price schema ([f73ed27](https://github.com/tillhub/schemas/commit/f73ed27))
+
 # [4.64.0](https://github.com/tillhub/schemas/compare/v4.63.0...v4.64.0) (2019-10-23)
 
 
