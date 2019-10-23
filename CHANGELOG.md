@@ -1,3 +1,10 @@
+# [4.63.0](https://github.com/tillhub/schemas/compare/v4.62.0...v4.63.0) (2019-10-23)
+
+
+### Features
+
+* **configurations:** add cart limit prop, restructure ([#262](https://github.com/tillhub/schemas/issues/262)) ([c14cd9e](https://github.com/tillhub/schemas/commit/c14cd9e))
+
 # [4.62.0](https://github.com/tillhub/schemas/compare/v4.61.0...v4.62.0) (2019-10-22)
 
 

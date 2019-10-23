@@ -2718,12 +2718,15 @@
         },
         {
           "type": "object",
+          "additionalProperties": false,
           "properties": {
             "display": {
               "type": "object",
+              "additionalProperties": false,
               "properties": {
                 "show_inactive": {
                   "default": false,
+                  "description": "If true, non-active discounts will be still displayed (greyed out)",
                   "oneOf": [
                     {
                       "type": "null"
@@ -2735,125 +2738,204 @@
                 }
               }
             },
-            "variable": {
+            "limits": {
               "type": "object",
+              "description": "Global limits for effective discount values",
+              "additionalProperties": false,
               "properties": {
-                "can_exceed_cart_item_total": {
-                  "type": "boolean",
-                  "default": false
-                },
-                "maximum_rate": {
-                  "oneOf": [
-                    {
-                      "type": "number",
-                      "minimum": 0,
-                      "maximum": 1,
-                      "multipleOf": 0.001
-                    },
-                    {
-                      "type": "null"
-                    }
-                  ]
-                },
-                "maximum_value": {
-                  "oneOf": [
-                    {
-                      "type": "array",
-                      "description": "A list of non-negative monetary values by currency",
-                      "items": {
-                        "type": "object",
-                        "additionalProperties": false,
-                        "description": "Describes a non-negative monetary value in a specific currency.",
-                        "required": [
-                          "amount",
-                          "currency"
-                        ],
-                        "properties": {
-                          "currency": {
-                            "type": "string",
-                            "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
-                            "example": "EUR",
-                            "minLength": 3,
-                            "maxLength": 3
-                          },
-                          "amount": {
-                            "type": "number",
-                            "description": "The value as .2-Decimal.",
-                            "example": "47.02",
-                            "minimum": 0,
-                            "multipleOf": 0.01
-                          }
+                "cart_item": {
+                  "type": "object",
+                  "description": "Global limits for effective discount values on single cart items (affects current cart via multi-assignment)",
+                  "additionalProperties": false,
+                  "properties": {
+                    "variable": {
+                      "type": "object",
+                      "description": "0-discounts (Frank) that let the cashier enter a value, limits e.g. to 30% AND $2.00",
+                      "additionalProperties": false,
+                      "properties": {
+                        "maximum_rate": {
+                          "oneOf": [
+                            {
+                              "type": "number",
+                              "description": "Effective rate that a discount can not exceed",
+                              "minimum": 0,
+                              "maximum": 1,
+                              "multipleOf": 0.001
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "maximum_value": {
+                          "oneOf": [
+                            {
+                              "type": "array",
+                              "description": "Effective monetary values (by currency) that a discount can not exceed",
+                              "items": {
+                                "type": "object",
+                                "additionalProperties": false,
+                                "description": "Describes a non-negative monetary value in a specific currency.",
+                                "required": [
+                                  "amount",
+                                  "currency"
+                                ],
+                                "properties": {
+                                  "currency": {
+                                    "type": "string",
+                                    "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                                    "example": "EUR",
+                                    "minLength": 3,
+                                    "maxLength": 3
+                                  },
+                                  "amount": {
+                                    "type": "number",
+                                    "description": "The value as .2-Decimal.",
+                                    "example": "47.02",
+                                    "minimum": 0,
+                                    "multipleOf": 0.01
+                                  }
+                                }
+                              }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "can_exceed_cart_item_total": {
+                          "description": "If true, negative outcomes are alowed (via stacking value discounts) or having rates > 1.0",
+                          "type": "boolean",
+                          "default": false
                         }
                       }
                     },
-                    {
-                      "type": "null"
-                    }
-                  ]
-                }
-              }
-            },
-            "fixed": {
-              "type": "object",
-              "properties": {
-                "can_exceed_cart_item_total": {
-                  "type": "boolean",
-                  "default": false
-                },
-                "maximum_rate": {
-                  "oneOf": [
-                    {
-                      "type": "number",
-                      "minimum": 0,
-                      "maximum": 1,
-                      "multipleOf": 0.001
-                    },
-                    {
-                      "type": "null"
-                    }
-                  ]
-                },
-                "maximum_value": {
-                  "oneOf": [
-                    {
-                      "type": "array",
-                      "description": "A list of non-negative monetary values by currency",
-                      "items": {
-                        "type": "object",
-                        "additionalProperties": false,
-                        "description": "Describes a non-negative monetary value in a specific currency.",
-                        "required": [
-                          "amount",
-                          "currency"
-                        ],
-                        "properties": {
-                          "currency": {
-                            "type": "string",
-                            "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
-                            "example": "EUR",
-                            "minLength": 3,
-                            "maxLength": 3
-                          },
-                          "amount": {
-                            "type": "number",
-                            "description": "The value as .2-Decimal.",
-                            "example": "47.02",
-                            "minimum": 0,
-                            "multipleOf": 0.01
-                          }
+                    "fixed": {
+                      "type": "object",
+                      "description": "Standard-discounts (have 5% or $3.00 already) - limit creation values in the Dashboard",
+                      "additionalProperties": false,
+                      "properties": {
+                        "maximum_rate": {
+                          "oneOf": [
+                            {
+                              "type": "number",
+                              "description": "Effective rate that a discount can not exceed",
+                              "minimum": 0,
+                              "maximum": 1,
+                              "multipleOf": 0.001
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "maximum_value": {
+                          "oneOf": [
+                            {
+                              "type": "array",
+                              "description": "Effective monetary values (by currency) that a discount can not exceed",
+                              "items": {
+                                "type": "object",
+                                "additionalProperties": false,
+                                "description": "Describes a non-negative monetary value in a specific currency.",
+                                "required": [
+                                  "amount",
+                                  "currency"
+                                ],
+                                "properties": {
+                                  "currency": {
+                                    "type": "string",
+                                    "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                                    "example": "EUR",
+                                    "minLength": 3,
+                                    "maxLength": 3
+                                  },
+                                  "amount": {
+                                    "type": "number",
+                                    "description": "The value as .2-Decimal.",
+                                    "example": "47.02",
+                                    "minimum": 0,
+                                    "multipleOf": 0.01
+                                  }
+                                }
+                              }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "can_exceed_cart_item_total": {
+                          "description": "If true, negative outcomes are alowed (via stacking value discounts) or having rates > 1.0",
+                          "type": "boolean",
+                          "default": false
                         }
                       }
-                    },
-                    {
-                      "type": "null"
                     }
-                  ]
+                  }
+                },
+                "cart": {
+                  "type": "object",
+                  "description": "Global limits for effective discount values on the whole cart (must additionally respect values for items)",
+                  "additionalProperties": false,
+                  "properties": {
+                    "maximum_rate": {
+                      "oneOf": [
+                        {
+                          "type": "number",
+                          "description": "Effective rate that a discount can not exceed",
+                          "minimum": 0,
+                          "maximum": 1,
+                          "multipleOf": 0.001
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "maximum_value": {
+                      "oneOf": [
+                        {
+                          "type": "array",
+                          "description": "Effective monetary values (by currency) that a discount can not exceed",
+                          "items": {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "description": "Describes a non-negative monetary value in a specific currency.",
+                            "required": [
+                              "amount",
+                              "currency"
+                            ],
+                            "properties": {
+                              "currency": {
+                                "type": "string",
+                                "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                                "example": "EUR",
+                                "minLength": 3,
+                                "maxLength": 3
+                              },
+                              "amount": {
+                                "type": "number",
+                                "description": "The value as .2-Decimal.",
+                                "example": "47.02",
+                                "minimum": 0,
+                                "multipleOf": 0.01
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  }
+                },
+                "stacked_on_product": {
+                  "type": "boolean",
+                  "default": true
                 }
               }
-            },
-            "stacked_on_product": {
-              "type": "boolean",
-              "default": true
             }
           }
         }
