@@ -1,3 +1,10 @@
+## [4.69.1](https://github.com/tillhub/schemas/compare/v4.69.0...v4.69.1) (2019-10-24)
+
+
+### Bug Fixes
+
+* **demo-data:** fix validation ([d9cfa47](https://github.com/tillhub/schemas/commit/d9cfa47))
+
 # [4.69.0](https://github.com/tillhub/schemas/compare/v4.68.0...v4.69.0) (2019-10-24)
 
 

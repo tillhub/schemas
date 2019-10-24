@@ -46,7 +46,10 @@
       "default": "tillhub"
     },
     "demo_data": {
-      "anyOf": [
+      "oneOf": [
+        {
+          "type": "null"
+        },
         {
           "type": "object",
           "required": [
@@ -109,9 +112,6 @@
               "default"
             ]
           }
-        },
-        {
-          "type": "null"
         }
       ]
     },
