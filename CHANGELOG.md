@@ -1,3 +1,10 @@
+# [4.69.0](https://github.com/tillhub/schemas/compare/v4.68.0...v4.69.0) (2019-10-24)
+
+
+### Features
+
+* **permissions:** add new permission, loosely validate permissions ([8a4d4ea](https://github.com/tillhub/schemas/commit/8a4d4ea))
+
 # [4.68.0](https://github.com/tillhub/schemas/compare/v4.67.0...v4.68.0) (2019-10-24)
 
 
