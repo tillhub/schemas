@@ -1,3 +1,10 @@
+## [4.69.2](https://github.com/tillhub/schemas/compare/v4.69.1...v4.69.2) (2019-10-24)
+
+
+### Bug Fixes
+
+* **staff/scopes:** add even more devices permissions ([3433902](https://github.com/tillhub/schemas/commit/3433902))
+
 ## [4.69.1](https://github.com/tillhub/schemas/compare/v4.69.0...v4.69.1) (2019-10-24)
 
 
