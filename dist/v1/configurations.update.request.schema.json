@@ -2616,6 +2616,18 @@
                 }
               ]
             },
+            "sales_required": {
+              "description": "If true, balances are not conductable without fiat/cash cashflows.",
+              "default": true,
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "boolean"
+                }
+              ]
+            },
             "discrepancy_warning": {
               "description": "If true, warns the user when cash counted is not equal to cash calculated.",
               "default": true,

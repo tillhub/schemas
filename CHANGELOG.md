@@ -1,3 +1,10 @@
+# [4.68.0](https://github.com/tillhub/schemas/compare/v4.67.0...v4.68.0) (2019-10-24)
+
+
+### Features
+
+* **configurations:** require sales for balances ([ac62c1f](https://github.com/tillhub/schemas/commit/ac62c1f))
+
 # [4.67.0](https://github.com/tillhub/schemas/compare/v4.66.2...v4.67.0) (2019-10-24)
 
 
