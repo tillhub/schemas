@@ -1,3 +1,10 @@
+## [4.69.3](https://github.com/tillhub/schemas/compare/v4.69.2...v4.69.3) (2019-10-24)
+
+
+### Bug Fixes
+
+* **demo_data:** fix object properties ([088ff3b](https://github.com/tillhub/schemas/commit/088ff3b))
+
 ## [4.69.2](https://github.com/tillhub/schemas/compare/v4.69.1...v4.69.2) (2019-10-24)
 
 
