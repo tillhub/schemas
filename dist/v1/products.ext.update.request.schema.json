@@ -1620,6 +1620,103 @@
         }
       ]
     },
+    "warranty_notice": {
+      "description": "Warranty notice for the customer",
+      "oneOf": [
+        {
+          "type": "string",
+          "maxLength": 16384
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "refund_policy": {
+      "description": "Refund policy for the customer",
+      "oneOf": [
+        {
+          "type": "string",
+          "maxLength": 16384
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "disclaimer": {
+      "description": "Any disclaimer for the customer",
+      "oneOf": [
+        {
+          "type": "string",
+          "maxLength": 16384
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "policy": {
+      "description": "ACL / permissions for this product",
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "v0",
+            "statements"
+          ],
+          "properties": {
+            "version": {
+              "type": "string",
+              "enum": [
+                "v0"
+              ]
+            },
+            "statements": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "effect"
+                ],
+                "properties": {
+                  "effect": {
+                    "type": "string",
+                    "enum": [
+                      "allow",
+                      "deny"
+                    ]
+                  },
+                  "resource_type": {
+                    "type": "string",
+                    "enum": [
+                      "register",
+                      "branch",
+                      "branch_group",
+                      "location",
+                      "client_account",
+                      "client",
+                      "staff",
+                      "user"
+                    ]
+                  },
+                  "resource": {
+                    "type": "string",
+                    "maxLength": 64,
+                    "minLength": 16
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "stock_info": {
       "description": "READ ONLY: summary of stock accross accounts. This potentially is not real-time. After a stock change.",
       "type": "object",

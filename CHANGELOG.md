@@ -1,3 +1,10 @@
+# [4.67.0](https://github.com/tillhub/schemas/compare/v4.66.2...v4.67.0) (2019-10-24)
+
+
+### Features
+
+* **products:** add warranty etc. + acls ([9b4985f](https://github.com/tillhub/schemas/commit/9b4985f))
+
 ## [4.66.2](https://github.com/tillhub/schemas/compare/v4.66.1...v4.66.2) (2019-10-23)
 
 
