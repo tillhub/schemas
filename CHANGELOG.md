@@ -1,3 +1,10 @@
+## [4.69.4](https://github.com/tillhub/schemas/compare/v4.69.3...v4.69.4) (2019-10-25)
+
+
+### Bug Fixes
+
+* **configurations:** remove required fields not used ([3d6e8fb](https://github.com/tillhub/schemas/commit/3d6e8fb))
+
 ## [4.69.3](https://github.com/tillhub/schemas/compare/v4.69.2...v4.69.3) (2019-10-24)
 
 

@@ -3098,10 +3098,6 @@
     }
   },
   "required": [
-    "name",
-    "vouchers",
-    "scan_prefixes",
-    "voucher_actions",
-    "settings"
+    "name"
   ]
 }
