@@ -1,3 +1,10 @@
+## [4.69.5](https://github.com/tillhub/schemas/compare/v4.69.4...v4.69.5) (2019-10-28)
+
+
+### Bug Fixes
+
+* **devices:** add `status` to base properties ([9c4948e](https://github.com/tillhub/schemas/commit/9c4948e))
+
 ## [4.69.4](https://github.com/tillhub/schemas/compare/v4.69.3...v4.69.4) (2019-10-25)
 
 

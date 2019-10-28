@@ -322,6 +322,9 @@
     "deleted": {
       "type": "boolean"
     },
+    "status": {
+      "type": "string"
+    },
     "id": {
       "type": "string",
       "format": "uuid"
@@ -363,9 +366,6 @@
           "type": "null"
         }
       ]
-    },
-    "status": {
-      "type": "string"
     },
     "device": {
       "oneOf": [

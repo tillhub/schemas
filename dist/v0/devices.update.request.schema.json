@@ -319,6 +319,9 @@
     },
     "deleted": {
       "type": "boolean"
+    },
+    "status": {
+      "type": "string"
     }
   }
 }
