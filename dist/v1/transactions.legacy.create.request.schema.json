@@ -94,6 +94,12 @@
     "cashier_staff": {
       "deprecated": true
     },
+    "expense": {
+      "deprecated": true
+    },
+    "temp_staff": {
+      "deprecated": true
+    },
     "client": {
       "deprecated": true
     },
@@ -1151,6 +1157,9 @@
             "deprecated": true
           },
           "is_voucher": {
+            "deprecated": true
+          },
+          "discounts": {
             "deprecated": true
           },
           "context": {
@@ -2298,17 +2307,7 @@
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": [
-          "account",
-          "payment_option",
-          "type",
-          "name",
-          "currency",
-          "amount_total",
-          "tip_total",
-          "amount_given",
-          "amount_requested"
-        ],
+        "required": [],
         "properties": {
           "fr_transaction_id": {
             "deprecated": true
@@ -2320,6 +2319,9 @@
             "deprecated": true
           },
           "currency_iso_code": {
+            "deprecated": true
+          },
+          "account": {
             "deprecated": true
           },
           "exchange_rate": {
@@ -3083,6 +3085,10 @@
               "type": "null"
             }
           ]
+        },
+        "status": {},
+        "signature": {
+          "type": "object"
         }
       }
     }

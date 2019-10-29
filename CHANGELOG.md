@@ -1,3 +1,10 @@
+# [4.73.0](https://github.com/tillhub/schemas/compare/v4.72.0...v4.73.0) (2019-10-29)
+
+
+### Features
+
+* **tx_v1_legacy:** add properties ([4dc1822](https://github.com/tillhub/schemas/commit/4dc1822))
+
 # [4.72.0](https://github.com/tillhub/schemas/compare/v4.71.0...v4.72.0) (2019-10-29)
 
 

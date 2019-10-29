@@ -3272,6 +3272,10 @@
               "type": "null"
             }
           ]
+        },
+        "status": {},
+        "signature": {
+          "type": "object"
         }
       }
     }
