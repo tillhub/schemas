@@ -1,3 +1,10 @@
+# [4.71.0](https://github.com/tillhub/schemas/compare/v4.70.0...v4.71.0) (2019-10-29)
+
+
+### Features
+
+* **tx_v1_legacy:** add signing status property ([18747d0](https://github.com/tillhub/schemas/commit/18747d0))
+
 # [4.70.0](https://github.com/tillhub/schemas/compare/v4.69.6...v4.70.0) (2019-10-29)
 
 
