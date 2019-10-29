@@ -289,7 +289,7 @@
         }
       ]
     },
-    "expense_deposits": {
+    "expenses_deposits": {
       "oneOf": [
         {
           "type": "object",
