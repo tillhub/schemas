@@ -668,48 +668,6 @@
               ],
               "default": null
             },
-            "return": {
-              "oneOf": [
-                {
-                  "type": "object",
-                  "description": "Information about a returned item.",
-                  "properties": {
-                    "reason": {
-                      "oneOf": [
-                        {
-                          "type": "string",
-                          "format": "uuid",
-                          "example": "9d110eb2-2245-4e14-9574-49b502f3a9b3",
-                          "description": "The associated Tillhub reason resource."
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ],
-                      "default": null
-                    },
-                    "custom_description": {
-                      "oneOf": [
-                        {
-                          "type": "string",
-                          "maxLength": 1024,
-                          "example": "Cashier entered here a custom reason.",
-                          "description": "A client side user defined custom description for this return process."
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ],
-                      "default": null
-                    }
-                  }
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "default": null
-            },
             "counters": {
               "oneOf": [
                 {
@@ -1417,6 +1375,109 @@
                           "type",
                           "status"
                         ]
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
+                  "return": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "description": "Information about a returned item.",
+                        "properties": {
+                          "id": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "format": "uuid",
+                                "example": "9d110eb2-2245-4e14-9574-49b502f3a9b3",
+                                "description": "The associated Tillhub reason resource."
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ],
+                            "default": null
+                          },
+                          "reason": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "maxLength": 64,
+                                "example": "Accidental Charge",
+                                "description": "The  Tillhub reason resource's name."
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ],
+                            "default": null
+                          },
+                          "description": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "maxLength": 1024,
+                                "example": "Accidentally charged the customer for products he did not buy",
+                                "description": "The  Tillhub reason resource's description."
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ],
+                            "default": null
+                          },
+                          "custom_reason": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "maxLength": 1024,
+                                "example": "Cashier entered here a custom reason.",
+                                "description": "A client side user defined custom description for this return process."
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ],
+                            "default": null
+                          },
+                          "behavior": {
+                            "oneOf": [
+                              {
+                                "type": "object",
+                                "description": "Copy of the behavior object from the reasons table.",
+                                "properties": {
+                                  "stock": {
+                                    "type": "string",
+                                    "enum": [
+                                      "restock"
+                                    ]
+                                  },
+                                  "stock_location": {
+                                    "type": "string",
+                                    "enum": [
+                                      "current"
+                                    ]
+                                  },
+                                  "navigation": {
+                                    "type": "string",
+                                    "enum": [
+                                      "payment_view",
+                                      "carts",
+                                      "ask"
+                                    ]
+                                  }
+                                }
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
                       },
                       {
                         "type": "null"
