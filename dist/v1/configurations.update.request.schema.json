@@ -2415,6 +2415,43 @@
           "type": "object",
           "additionalProperties": false,
           "properties": {
+            "scanner_apis": {
+              "type": "object",
+              "properties": {
+                "zebra": {
+                  "type": "object",
+                  "properties": {
+                    "enabled": {
+                      "type": "boolean",
+                      "default": false
+                    }
+                  }
+                },
+                "epson": {
+                  "type": "object",
+                  "properties": {
+                    "enabled": {
+                      "type": "boolean",
+                      "default": true
+                    }
+                  }
+                }
+              }
+            },
+            "printer_apis": {
+              "type": "object",
+              "properties": {
+                "epson": {
+                  "type": "object",
+                  "properties": {
+                    "enabled": {
+                      "type": "boolean",
+                      "default": true
+                    }
+                  }
+                }
+              }
+            },
             "terminal_apis": {
               "type": "object",
               "properties": {

@@ -1,3 +1,10 @@
+# [4.72.0](https://github.com/tillhub/schemas/compare/v4.71.0...v4.72.0) (2019-10-29)
+
+
+### Features
+
+* **configurations:** config zebra scanner api ([#275](https://github.com/tillhub/schemas/issues/275)) ([2e7d557](https://github.com/tillhub/schemas/commit/2e7d557))
+
 # [4.71.0](https://github.com/tillhub/schemas/compare/v4.70.0...v4.71.0) (2019-10-29)
 
 
