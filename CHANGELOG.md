@@ -1,3 +1,10 @@
+## [4.69.6](https://github.com/tillhub/schemas/compare/v4.69.5...v4.69.6) (2019-10-29)
+
+
+### Bug Fixes
+
+* **configurations:** rename expenses deposits ([d561ce7](https://github.com/tillhub/schemas/commit/d561ce7))
+
 ## [4.69.5](https://github.com/tillhub/schemas/compare/v4.69.4...v4.69.5) (2019-10-28)
 
 
