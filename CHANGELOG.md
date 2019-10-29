@@ -1,3 +1,10 @@
+## [4.73.1](https://github.com/tillhub/schemas/compare/v4.73.0...v4.73.1) (2019-10-29)
+
+
+### Bug Fixes
+
+* **Transactions V1 legacy:** moved Return Reason to cart item with up-to-date format ([82a9900](https://github.com/tillhub/schemas/commit/82a9900))
+
 # [4.73.0](https://github.com/tillhub/schemas/compare/v4.72.0...v4.73.0) (2019-10-29)
 
 
