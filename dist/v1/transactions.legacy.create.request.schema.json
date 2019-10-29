@@ -1,0 +1,3045 @@
+{
+  "$id": "https://schemas.tillhub.com/v1/transactions.legacy.create.request.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "date",
+    "type_name",
+    "cartitems",
+    "payments"
+  ],
+  "properties": {
+    "dev_uuid": {
+      "deprecated": true
+    },
+    "transaction_number": {
+      "deprecated": true
+    },
+    "balance_number": {
+      "deprecated": true
+    },
+    "branch_number": {
+      "deprecated": true
+    },
+    "register_number": {
+      "deprecated": true
+    },
+    "guid": {
+      "deprecated": true
+    },
+    "date": {
+      "deprecated": true
+    },
+    "cashier_staff_number": {
+      "deprecated": true
+    },
+    "branch_fa_ident": {
+      "deprecated": true
+    },
+    "geo_data": {
+      "deprecated": true
+    },
+    "currency_iso_code": {
+      "deprecated": true
+    },
+    "total": {
+      "deprecated": true
+    },
+    "change": {
+      "deprecated": true
+    },
+    "fr_receipt_id": {
+      "deprecated": true
+    },
+    "customer_id": {
+      "deprecated": true
+    },
+    "type_name": {
+      "deprecated": true
+    },
+    "receipt_text": {
+      "deprecated": true
+    },
+    "customer_number": {
+      "deprecated": true
+    },
+    "refunded_at": {
+      "deprecated": true
+    },
+    "_id": {
+      "deprecated": true
+    },
+    "customer_receipt": {
+      "deprecated": true
+    },
+    "merchant_receipt": {
+      "deprecated": true
+    },
+    "barcode": {
+      "deprecated": true
+    },
+    "customer_description": {
+      "deprecated": true
+    },
+    "signed_transactions": {
+      "deprecated": true
+    },
+    "metadata": {
+      "deprecated": true
+    },
+    "client_id": {
+      "deprecated": true
+    },
+    "cashier_staff": {
+      "deprecated": true
+    },
+    "client": {
+      "deprecated": true
+    },
+    "customer": {
+      "deprecated": true
+    },
+    "context": {
+      "deprecated": true
+    },
+    "timezone": {
+      "$id": "https://schemas.tillhub.com/common/timezone.schema.json",
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "string",
+          "enum": [
+            "Africa/Abidjan",
+            "Africa/Accra",
+            "Africa/Addis_Ababa",
+            "Africa/Algiers",
+            "Africa/Asmara",
+            "Africa/Bamako",
+            "Africa/Bangui",
+            "Africa/Banjul",
+            "Africa/Bissau",
+            "Africa/Blantyre",
+            "Africa/Brazzaville",
+            "Africa/Bujumbura",
+            "Africa/Cairo",
+            "Africa/Casablanca",
+            "Africa/Ceuta",
+            "Africa/Conakry",
+            "Africa/Dakar",
+            "Africa/Dar_es_Salaam",
+            "Africa/Djibouti",
+            "Africa/Douala",
+            "Africa/El_Aaiun",
+            "Africa/Freetown",
+            "Africa/Gaborone",
+            "Africa/Harare",
+            "Africa/Johannesburg",
+            "Africa/Juba",
+            "Africa/Kampala",
+            "Africa/Khartoum",
+            "Africa/Kigali",
+            "Africa/Kinshasa",
+            "Africa/Lagos",
+            "Africa/Libreville",
+            "Africa/Lome",
+            "Africa/Luanda",
+            "Africa/Lubumbashi",
+            "Africa/Lusaka",
+            "Africa/Malabo",
+            "Africa/Maputo",
+            "Africa/Maseru",
+            "Africa/Mbabane",
+            "Africa/Mogadishu",
+            "Africa/Monrovia",
+            "Africa/Nairobi",
+            "Africa/Ndjamena",
+            "Africa/Niamey",
+            "Africa/Nouakchott",
+            "Africa/Ouagadougou",
+            "Africa/Porto-Novo",
+            "Africa/Sao_Tome",
+            "Africa/Tripoli",
+            "Africa/Tunis",
+            "Africa/Windhoek",
+            "America/Adak",
+            "America/Anchorage",
+            "America/Anguilla",
+            "America/Antigua",
+            "America/Araguaina",
+            "America/Argentina/Buenos_Aires",
+            "America/Argentina/Catamarca",
+            "America/Argentina/Cordoba",
+            "America/Argentina/Jujuy",
+            "America/Argentina/La_Rioja",
+            "America/Argentina/Mendoza",
+            "America/Argentina/Rio_Gallegos",
+            "America/Argentina/Salta",
+            "America/Argentina/San_Juan",
+            "America/Argentina/San_Luis",
+            "America/Argentina/Tucuman",
+            "America/Argentina/Ushuaia",
+            "America/Aruba",
+            "America/Asuncion",
+            "America/Atikokan",
+            "America/Bahia",
+            "America/Bahia_Banderas",
+            "America/Barbados",
+            "America/Belem",
+            "America/Belize",
+            "America/Blanc-Sablon",
+            "America/Boa_Vista",
+            "America/Bogota",
+            "America/Boise",
+            "America/Cambridge_Bay",
+            "America/Campo_Grande",
+            "America/Cancun",
+            "America/Caracas",
+            "America/Cayenne",
+            "America/Cayman",
+            "America/Chicago",
+            "America/Chihuahua",
+            "America/Costa_Rica",
+            "America/Creston",
+            "America/Cuiaba",
+            "America/Curacao",
+            "America/Danmarkshavn",
+            "America/Dawson",
+            "America/Dawson_Creek",
+            "America/Denver",
+            "America/Detroit",
+            "America/Dominica",
+            "America/Edmonton",
+            "America/Eirunepe",
+            "America/El_Salvador",
+            "America/Fort_Nelson",
+            "America/Fortaleza",
+            "America/Glace_Bay",
+            "America/Godthab",
+            "America/Goose_Bay",
+            "America/Grand_Turk",
+            "America/Grenada",
+            "America/Guadeloupe",
+            "America/Guatemala",
+            "America/Guayaquil",
+            "America/Guyana",
+            "America/Halifax",
+            "America/Havana",
+            "America/Hermosillo",
+            "America/Indiana/Indianapolis",
+            "America/Indiana/Knox",
+            "America/Indiana/Marengo",
+            "America/Indiana/Petersburg",
+            "America/Indiana/Tell_City",
+            "America/Indiana/Vevay",
+            "America/Indiana/Vincennes",
+            "America/Indiana/Winamac",
+            "America/Inuvik",
+            "America/Iqaluit",
+            "America/Jamaica",
+            "America/Juneau",
+            "America/Kentucky/Louisville",
+            "America/Kentucky/Monticello",
+            "America/Kralendijk",
+            "America/La_Paz",
+            "America/Lima",
+            "America/Los_Angeles",
+            "America/Lower_Princes",
+            "America/Maceio",
+            "America/Managua",
+            "America/Manaus",
+            "America/Marigot",
+            "America/Martinique",
+            "America/Matamoros",
+            "America/Mazatlan",
+            "America/Menominee",
+            "America/Merida",
+            "America/Metlakatla",
+            "America/Mexico_City",
+            "America/Miquelon",
+            "America/Moncton",
+            "America/Monterrey",
+            "America/Montevideo",
+            "America/Montserrat",
+            "America/Nassau",
+            "America/New_York",
+            "America/Nipigon",
+            "America/Nome",
+            "America/Noronha",
+            "America/North_Dakota/Beulah",
+            "America/North_Dakota/Center",
+            "America/North_Dakota/New_Salem",
+            "America/Ojinaga",
+            "America/Panama",
+            "America/Pangnirtung",
+            "America/Paramaribo",
+            "America/Phoenix",
+            "America/Port_of_Spain",
+            "America/Port-au-Prince",
+            "America/Porto_Velho",
+            "America/Puerto_Rico",
+            "America/Punta_Arenas",
+            "America/Rainy_River",
+            "America/Rankin_Inlet",
+            "America/Recife",
+            "America/Regina",
+            "America/Resolute",
+            "America/Rio_Branco",
+            "America/Santarem",
+            "America/Santiago",
+            "America/Santo_Domingo",
+            "America/Sao_Paulo",
+            "America/Scoresbysund",
+            "America/Sitka",
+            "America/St_Barthelemy",
+            "America/St_Johns",
+            "America/St_Kitts",
+            "America/St_Lucia",
+            "America/St_Thomas",
+            "America/St_Vincent",
+            "America/Swift_Current",
+            "America/Tegucigalpa",
+            "America/Thule",
+            "America/Thunder_Bay",
+            "America/Tijuana",
+            "America/Toronto",
+            "America/Tortola",
+            "America/Vancouver",
+            "America/Whitehorse",
+            "America/Winnipeg",
+            "America/Yakutat",
+            "America/Yellowknife",
+            "Antarctica/Casey",
+            "Antarctica/Davis",
+            "Antarctica/DumontDUrville",
+            "Antarctica/Macquarie",
+            "Antarctica/Mawson",
+            "Antarctica/McMurdo",
+            "Antarctica/Palmer",
+            "Antarctica/Rothera",
+            "Antarctica/Syowa",
+            "Antarctica/Troll",
+            "Antarctica/Vostok",
+            "Arctic/Longyearbyen",
+            "Asia/Aden",
+            "Asia/Almaty",
+            "Asia/Amman",
+            "Asia/Anadyr",
+            "Asia/Aqtau",
+            "Asia/Aqtobe",
+            "Asia/Ashgabat",
+            "Asia/Atyrau",
+            "Asia/Baghdad",
+            "Asia/Bahrain",
+            "Asia/Baku",
+            "Asia/Bangkok",
+            "Asia/Barnaul",
+            "Asia/Beirut",
+            "Asia/Bishkek",
+            "Asia/Brunei",
+            "Asia/Chita",
+            "Asia/Choibalsan",
+            "Asia/Colombo",
+            "Asia/Damascus",
+            "Asia/Dhaka",
+            "Asia/Dili",
+            "Asia/Dubai",
+            "Asia/Dushanbe",
+            "Asia/Famagusta",
+            "Asia/Gaza",
+            "Asia/Hebron",
+            "Asia/Ho_Chi_Minh",
+            "Asia/Hong_Kong",
+            "Asia/Hovd",
+            "Asia/Irkutsk",
+            "Asia/Jakarta",
+            "Asia/Jayapura",
+            "Asia/Jerusalem",
+            "Asia/Kabul",
+            "Asia/Kamchatka",
+            "Asia/Karachi",
+            "Asia/Kathmandu",
+            "Asia/Khandyga",
+            "Asia/Kolkata",
+            "Asia/Krasnoyarsk",
+            "Asia/Kuala_Lumpur",
+            "Asia/Kuching",
+            "Asia/Kuwait",
+            "Asia/Macau",
+            "Asia/Magadan",
+            "Asia/Makassar",
+            "Asia/Manila",
+            "Asia/Muscat",
+            "Asia/Nicosia",
+            "Asia/Novokuznetsk",
+            "Asia/Novosibirsk",
+            "Asia/Omsk",
+            "Asia/Oral",
+            "Asia/Phnom_Penh",
+            "Asia/Pontianak",
+            "Asia/Pyongyang",
+            "Asia/Qatar",
+            "Asia/Qyzylorda",
+            "Asia/Riyadh",
+            "Asia/Sakhalin",
+            "Asia/Samarkand",
+            "Asia/Seoul",
+            "Asia/Shanghai",
+            "Asia/Singapore",
+            "Asia/Srednekolymsk",
+            "Asia/Taipei",
+            "Asia/Tashkent",
+            "Asia/Tbilisi",
+            "Asia/Tehran",
+            "Asia/Thimphu",
+            "Asia/Tokyo",
+            "Asia/Tomsk",
+            "Asia/Ulaanbaatar",
+            "Asia/Urumqi",
+            "Asia/Ust-Nera",
+            "Asia/Vientiane",
+            "Asia/Vladivostok",
+            "Asia/Yakutsk",
+            "Asia/Yangon",
+            "Asia/Yekaterinburg",
+            "Asia/Yerevan",
+            "Atlantic/Azores",
+            "Atlantic/Bermuda",
+            "Atlantic/Canary",
+            "Atlantic/Cape_Verde",
+            "Atlantic/Faroe",
+            "Atlantic/Madeira",
+            "Atlantic/Reykjavik",
+            "Atlantic/South_Georgia",
+            "Atlantic/St_Helena",
+            "Atlantic/Stanley",
+            "Australia/Adelaide",
+            "Australia/Brisbane",
+            "Australia/Broken_Hill",
+            "Australia/Currie",
+            "Australia/Darwin",
+            "Australia/Eucla",
+            "Australia/Hobart",
+            "Australia/Lindeman",
+            "Australia/Lord_Howe",
+            "Australia/Melbourne",
+            "Australia/Perth",
+            "Australia/Sydney",
+            "Europe/Amsterdam",
+            "Europe/Andorra",
+            "Europe/Astrakhan",
+            "Europe/Athens",
+            "Europe/Belgrade",
+            "Europe/Berlin",
+            "Europe/Bratislava",
+            "Europe/Brussels",
+            "Europe/Bucharest",
+            "Europe/Budapest",
+            "Europe/Busingen",
+            "Europe/Chisinau",
+            "Europe/Copenhagen",
+            "Europe/Dublin",
+            "Europe/Gibraltar",
+            "Europe/Guernsey",
+            "Europe/Helsinki",
+            "Europe/Isle_of_Man",
+            "Europe/Istanbul",
+            "Europe/Jersey",
+            "Europe/Kaliningrad",
+            "Europe/Kiev",
+            "Europe/Kirov",
+            "Europe/Lisbon",
+            "Europe/Ljubljana",
+            "Europe/London",
+            "Europe/Luxembourg",
+            "Europe/Madrid",
+            "Europe/Malta",
+            "Europe/Mariehamn",
+            "Europe/Minsk",
+            "Europe/Monaco",
+            "Europe/Moscow",
+            "Europe/Oslo",
+            "Europe/Paris",
+            "Europe/Podgorica",
+            "Europe/Prague",
+            "Europe/Riga",
+            "Europe/Rome",
+            "Europe/Samara",
+            "Europe/San_Marino",
+            "Europe/Sarajevo",
+            "Europe/Saratov",
+            "Europe/Simferopol",
+            "Europe/Skopje",
+            "Europe/Sofia",
+            "Europe/Stockholm",
+            "Europe/Tallinn",
+            "Europe/Tirane",
+            "Europe/Ulyanovsk",
+            "Europe/Uzhgorod",
+            "Europe/Vaduz",
+            "Europe/Vatican",
+            "Europe/Vienna",
+            "Europe/Vilnius",
+            "Europe/Volgograd",
+            "Europe/Warsaw",
+            "Europe/Zagreb",
+            "Europe/Zaporozhye",
+            "Europe/Zurich",
+            "Indian/Antananarivo",
+            "Indian/Chagos",
+            "Indian/Christmas",
+            "Indian/Cocos",
+            "Indian/Comoro",
+            "Indian/Kerguelen",
+            "Indian/Mahe",
+            "Indian/Maldives",
+            "Indian/Mauritius",
+            "Indian/Mayotte",
+            "Indian/Reunion",
+            "Pacific/Apia",
+            "Pacific/Auckland",
+            "Pacific/Bougainville",
+            "Pacific/Chatham",
+            "Pacific/Chuuk",
+            "Pacific/Easter",
+            "Pacific/Efate",
+            "Pacific/Enderbury",
+            "Pacific/Fakaofo",
+            "Pacific/Fiji",
+            "Pacific/Funafuti",
+            "Pacific/Galapagos",
+            "Pacific/Gambier",
+            "Pacific/Guadalcanal",
+            "Pacific/Guam",
+            "Pacific/Honolulu",
+            "Pacific/Kiritimati",
+            "Pacific/Kosrae",
+            "Pacific/Kwajalein",
+            "Pacific/Majuro",
+            "Pacific/Marquesas",
+            "Pacific/Midway",
+            "Pacific/Nauru",
+            "Pacific/Niue",
+            "Pacific/Norfolk",
+            "Pacific/Noumea",
+            "Pacific/Pago_Pago",
+            "Pacific/Palau",
+            "Pacific/Pitcairn",
+            "Pacific/Pohnpei",
+            "Pacific/Port_Moresby",
+            "Pacific/Rarotonga",
+            "Pacific/Saipan",
+            "Pacific/Tahiti",
+            "Pacific/Tarawa",
+            "Pacific/Tongatapu",
+            "Pacific/Wake",
+            "Pacific/Wallis"
+          ]
+        }
+      ]
+    },
+    "has_promotion": {
+      "deprecated": true
+    },
+    "branch": {
+      "oneOf": [
+        {
+          "type": "string",
+          "description": "Alphanumeric id of the branch",
+          "format": "uuid"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "register": {
+      "oneOf": [
+        {
+          "type": "string",
+          "description": "Alphanumeric id of the register",
+          "format": "uuid"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "_type": {
+      "oneOf": [
+        {
+          "type": "string",
+          "description": "The supported transaction type",
+          "enum": [
+            "sale",
+            "sale_cancel",
+            "invoice",
+            "invoice_cancel",
+            "expense",
+            "expense_cancel",
+            "deposit",
+            "deposit_cancel",
+            "bank_deposit",
+            "bank_deposit_cancel",
+            "bank_expense",
+            "bank_expense_cancel",
+            "safe_expense",
+            "safe_expense_cancel",
+            "safe_deposit",
+            "safe_deposit_cancel",
+            "tip_expense",
+            "tip_expense_cancel",
+            "tip_deposit",
+            "tip_deposit_cancel"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "_custom_id": {
+      "oneOf": [
+        {
+          "type": "string",
+          "example": "Sale Nr.5",
+          "maxLength": 128,
+          "description": "Any string that a user wants to store to identify a transaction, or wants to make it human readable."
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "_staff": {
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "uuid",
+          "example": "b3465a62-62e9-46de-9df7-4d3009c46068",
+          "description": "The Tillhub staff resource ID, that has generated this transaction. (used by temp staff)"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "_context": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "description": "Any additional flat values.",
+          "properties": {
+            "guid": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "example": "00000016000120181122163945117",
+                  "maxLength": 128,
+                  "description": "Old school transaction custom ID."
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null
+            },
+            "title": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "example": "Random 3.",
+                  "maxLength": 1024,
+                  "description": "Any arbitrary title."
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null
+            },
+            "return": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "description": "Information about a returned item.",
+                  "properties": {
+                    "reason": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "format": "uuid",
+                          "example": "9d110eb2-2245-4e14-9574-49b502f3a9b3",
+                          "description": "The associated Tillhub reason resource."
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "default": null
+                    },
+                    "custom_description": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "maxLength": 1024,
+                          "example": "Cashier entered here a custom reason.",
+                          "description": "A client side user defined custom description for this return process."
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "default": null
+                    }
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null
+            },
+            "counters": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "description": "Transaction specific counters.",
+                  "properties": {
+                    "signing_error": {
+                      "type": "number",
+                      "example": "2",
+                      "description": "Number of failed signing attempts in a row."
+                    }
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null
+            },
+            "register": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "description": "Register face values.",
+                  "properties": {
+                    "display": {
+                      "type": "string",
+                      "example": "Front Register 2"
+                    }
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null
+            },
+            "branch": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "description": "Branch face values.",
+                  "properties": {
+                    "display": {
+                      "type": "string",
+                      "example": "WAX Berlin 2"
+                    }
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null
+            },
+            "cashier_staff": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "description": "Cashier face values.",
+                  "properties": {
+                    "custom_id": {
+                      "type": "string",
+                      "example": "005"
+                    },
+                    "display": {
+                      "type": "string",
+                      "example": "Chantal Kowalski"
+                    }
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null
+            },
+            "customer": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "description": "Customer face values.",
+                  "properties": {
+                    "custom_id": {
+                      "type": "string",
+                      "example": "004310981002"
+                    },
+                    "display": {
+                      "type": "string",
+                      "example": "Alexander von Müller"
+                    }
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null
+            }
+          }
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "_external_reference_id": {
+      "oneOf": [
+        {
+          "type": "string",
+          "example": "823742686434462376376376473647346",
+          "maxLength": 128,
+          "description": "Any identifier a user wants to store in the transaction system. E.g. an ID in a thirdy party ERP."
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "_customer_external_reference_id": {
+      "oneOf": [
+        {
+          "type": "string",
+          "maxLength": 128,
+          "example": "135543344343",
+          "description": "An user defined customer reference."
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "_origins": {
+      "oneOf": [
+        {
+          "type": "array",
+          "description": "A list of Tillhub resources that caused this transaction, e.g. a stored cart or multiple delivery notes",
+          "items": {
+            "type": "object",
+            "description": "Reference to a similar type of object (e.g. transaction to cart)",
+            "additionalProperties": false,
+            "required": [
+              "type"
+            ],
+            "properties": {
+              "type": {
+                "type": "string",
+                "description": "The type of reference",
+                "enum": [
+                  "checked_out_delivery_note",
+                  "checked_out_saved_cart"
+                ]
+              },
+              "id": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "format": "uuid",
+                    "example": "f2ac2cae-97ff-42a1-967b-0a35222ab6d1",
+                    "description": "A Tillhub transaction that this reference links to."
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null
+              },
+              "custom_id": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "example": "278",
+                    "description": "The custom_id of a Tillhub transaction that this reference links to."
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null
+              },
+              "date": {
+                "type": "string",
+                "format": "date-time",
+                "example": "2018-01-29T14:55:05.000Z",
+                "description": "The date of a Tillhub transaction that this reference links to."
+              }
+            }
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "_depends_on": {
+      "oneOf": [
+        {
+          "type": "array",
+          "description": "A list of Tillhub resources that this transaction directly depends on, e.g. a refund for a previous sale",
+          "items": {
+            "type": "object",
+            "description": "Reference to the same type of object (e.g. transaction to pervious transaction)",
+            "additionalProperties": false,
+            "required": [
+              "type"
+            ],
+            "properties": {
+              "type": {
+                "type": "string",
+                "description": "The type of reference",
+                "enum": [
+                  "canceled_sale",
+                  "canceled_item",
+                  "refunded_sale",
+                  "refunded_item",
+                  "canceled_expense",
+                  "canceled_deposit",
+                  "canceled_bank_expense",
+                  "canceled_bank_deposit"
+                ]
+              },
+              "id": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "format": "uuid",
+                    "example": "f2ac2cae-97ff-42a1-967b-0a35222ab6d1",
+                    "description": "A Tillhub transaction that this reference links to."
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null
+              },
+              "custom_id": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "example": "0814 QZXL",
+                    "description": "The custom_id of a Tillhub transaction that this reference links to."
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null
+              },
+              "client_id": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "example": "278d66eae23400bcdbe283764sc",
+                    "description": "The client_id of a Tillhub transaction or item that this reference links to."
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null
+              },
+              "date": {
+                "type": "string",
+                "format": "date-time",
+                "example": "2018-01-29T14:55:05.000Z",
+                "description": "The date of a Tillhub transaction that this reference links to."
+              }
+            }
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "_related_to": {
+      "oneOf": [
+        {
+          "type": "array",
+          "description": "A list of Tillhub resources that this transaction is related to, e.g. an invoice object that tracks the lifetime of that invoice",
+          "items": {
+            "type": "object",
+            "description": "Reference to a very different type of object (e.g. transaction to invoice or expense to safe)",
+            "additionalProperties": false,
+            "required": [
+              "type",
+              "id"
+            ],
+            "properties": {
+              "type": {
+                "type": "string",
+                "description": "The type of reference",
+                "enum": [
+                  "invoice",
+                  "safe"
+                ]
+              },
+              "id": {
+                "type": "string",
+                "format": "uuid",
+                "example": "f2ac2cae-97ff-42a1-967b-0a35222ab6d1",
+                "description": "A Tillhub resource that this reference links to."
+              }
+            }
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "_location": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "example": "{ \"lat\": 52.5065133, \"lng\": 13.1445545}",
+          "description": "Geospatial data of this transaction",
+          "required": [
+            "lat",
+            "lng"
+          ],
+          "properties": {
+            "lat": {
+              "type": "number"
+            },
+            "lng": {
+              "type": "number"
+            }
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "cartitems": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [],
+        "properties": {
+          "fr_transaction_id": {
+            "deprecated": true
+          },
+          "quantity": {
+            "deprecated": true
+          },
+          "article_number": {
+            "deprecated": true
+          },
+          "article_attr_desc": {
+            "deprecated": true
+          },
+          "article_price": {
+            "deprecated": true
+          },
+          "selling_price": {
+            "deprecated": true
+          },
+          "selling_price_total": {
+            "deprecated": true
+          },
+          "article_fa_account_number": {
+            "deprecated": true
+          },
+          "vat_percentage": {
+            "deprecated": true
+          },
+          "vat_fa_account_number": {
+            "deprecated": true
+          },
+          "vat_amount": {
+            "deprecated": true
+          },
+          "salesman_staff_number": {
+            "deprecated": true
+          },
+          "product_number": {
+            "deprecated": true
+          },
+          "article_id": {
+            "deprecated": true
+          },
+          "vat_amount_euro": {
+            "deprecated": true
+          },
+          "discount_amount": {
+            "deprecated": true
+          },
+          "product_name": {
+            "deprecated": true
+          },
+          "guid": {
+            "deprecated": true
+          },
+          "product_group_number": {
+            "deprecated": true
+          },
+          "product_group_id": {
+            "deprecated": true
+          },
+          "is_refund": {
+            "deprecated": true
+          },
+          "_id": {
+            "deprecated": true
+          },
+          "related_transaction_number": {
+            "deprecated": true
+          },
+          "related_transaction_date": {
+            "deprecated": true
+          },
+          "related_transaction_type": {
+            "deprecated": true
+          },
+          "article": {
+            "deprecated": true
+          },
+          "attributes_description": {
+            "deprecated": true
+          },
+          "is_tip": {
+            "deprecated": true
+          },
+          "is_owner": {
+            "deprecated": true
+          },
+          "reference_cartitem_client_id": {
+            "deprecated": true
+          },
+          "is_service": {
+            "deprecated": true
+          },
+          "used_barcode": {
+            "deprecated": true
+          },
+          "is_voucher": {
+            "deprecated": true
+          },
+          "context": {
+            "deprecated": true
+          },
+          "_context": {
+            "oneOf": [
+              {
+                "type": "object",
+                "description": "Any additional flat values.",
+                "properties": {
+                  "title": {
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "example": "Random 3.",
+                        "maxLength": 1024,
+                        "description": "Any arbitrary title."
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
+                  "account": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "description": "Account face values.",
+                        "properties": {
+                          "custom_id": {
+                            "description": "Account number.",
+                            "type": "string",
+                            "example": "1776"
+                          },
+                          "display": {
+                            "description": "Account description.",
+                            "type": "string",
+                            "example": "Warenerlöse 7 %"
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
+                  "tax": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "description": "In case of a single tax (usually VAT) - the tax account face values.",
+                        "properties": {
+                          "custom_id": {
+                            "description": "Custom number identifier.",
+                            "type": "string",
+                            "example": "440165"
+                          },
+                          "display": {
+                            "description": "Custom description.",
+                            "default": null,
+                            "type": "string",
+                            "example": "Another tax"
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
+                  "product": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "description": "Product face values.",
+                        "properties": {
+                          "custom_id": {
+                            "type": "string",
+                            "example": "0032039845"
+                          },
+                          "display": {
+                            "type": "string",
+                            "example": "Another product string"
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
+                  "product_group": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "description": "Product face values.",
+                        "properties": {
+                          "custom_id": {
+                            "type": "string",
+                            "example": "0032039845"
+                          },
+                          "display": {
+                            "type": "string",
+                            "example": "Waxing HIM"
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
+                  "salesman_staff": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "description": "Salesman face values.",
+                        "properties": {
+                          "owner": {
+                            "type": "boolean",
+                            "example": "true"
+                          },
+                          "custom_id": {
+                            "type": "string",
+                            "example": "012"
+                          },
+                          "display": {
+                            "type": "string",
+                            "example": "Cindy Schmidt"
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
+                  "voucher": {
+                    "oneOf": [
+                      {
+                        "description": "The effective voucher delta record for this item (thus reversable if needed)",
+                        "additionalProperties": false,
+                        "type": "object",
+                        "properties": {
+                          "client_id": {
+                            "type": "string",
+                            "example": "d0d40841-b1a7-438a-9d1e-2bfec590d2e3",
+                            "minLength": 6,
+                            "maxLength": 64,
+                            "description": "A implementer defined identifier. This can be used for local resource matching and has no business implication. TO BE DEPRECTAED."
+                          },
+                          "source_id": {
+                            "type": "string",
+                            "example": "d0d40841-b1a7-438a-9d1e-2bfec590d2e3",
+                            "minLength": 6,
+                            "maxLength": 64,
+                            "description": "The Tillhub or Fleurop Id of the source voucher."
+                          },
+                          "api": {
+                            "type": "string",
+                            "enum": [
+                              "fleurop-voucher-api",
+                              "tillhub-voucher-api"
+                            ]
+                          },
+                          "delta_amount": {
+                            "description": "The effective change in the value of the voucher.",
+                            "type": "number",
+                            "minimum": -1000000,
+                            "maximum": 1000000,
+                            "multipleOf": 0.01
+                          },
+                          "delta_currency": {
+                            "type": "string",
+                            "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                            "example": "EUR",
+                            "minLength": 3,
+                            "maxLength": 3
+                          },
+                          "barcode": {
+                            "default": null,
+                            "type": "string",
+                            "minLength": 3,
+                            "maxLength": 128,
+                            "description": "Voucher EAN or similar."
+                          },
+                          "code": {
+                            "default": null,
+                            "type": "string",
+                            "minLength": 3,
+                            "maxLength": 128,
+                            "description": "Voucher number."
+                          },
+                          "system": {
+                            "default": null,
+                            "type": "string",
+                            "minLength": 3,
+                            "maxLength": 128,
+                            "description": "Identifier for the voucher system. (Also known as User)"
+                          },
+                          "title": {
+                            "default": null,
+                            "type": "string",
+                            "maxLength": 256,
+                            "description": "Title of the source voucher."
+                          },
+                          "message": {
+                            "default": null,
+                            "type": "string",
+                            "maxLength": 2048,
+                            "description": "Messages from voucher processing."
+                          },
+                          "type": {
+                            "type": "string",
+                            "description": "Mainly legacy support for Fleurop flows.",
+                            "enum": [
+                              "undefined",
+                              "fleuropRedeem",
+                              "fleuropSellOrRecharge",
+                              "ownBrandedRecharge",
+                              "ownBrandedRedeem",
+                              "externalSellAndActivate",
+                              "tillhubSell",
+                              "tillhubRecharge",
+                              "tillhubRedeem"
+                            ]
+                          },
+                          "status": {
+                            "type": "string",
+                            "description": "Client side recorded booking state of the delta operation.",
+                            "enum": [
+                              "unknown",
+                              "pending",
+                              "locked",
+                              "succeed",
+                              "failed",
+                              "scheduled"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "client_id",
+                          "source_id",
+                          "api",
+                          "delta_amount",
+                          "delta_currency",
+                          "system",
+                          "type",
+                          "status"
+                        ]
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  }
+                },
+                "required": [
+                  "account"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "type": {
+            "oneOf": [
+              {
+                "type": "string",
+                "description": "The type of item."
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "client_id": {
+            "oneOf": [
+              {
+                "type": "string",
+                "example": "d0d40841-b1a7-438a-9d1e-2bfec590d2e3",
+                "minLength": 6,
+                "maxLength": 64,
+                "description": "A implementer defined identifier. This can be used for local resource matching and has no business implication."
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "position": {
+            "oneOf": [
+              {
+                "type": "number",
+                "description": "The position description of the item. E.g. positon 1 (2, 3 etc.) in the cart.",
+                "example": "1",
+                "maximum": 32767,
+                "minimum": 0
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "_qty": {
+            "oneOf": [
+              {
+                "type": "number",
+                "description": "The quantity of this item.",
+                "example": "100",
+                "minimum": -32767,
+                "maximum": 32767,
+                "multipleOf": 0.001
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "_unit": {
+            "oneOf": [
+              {
+                "type": "string",
+                "description": "The metric unit of this item. E.g. 1.754 kg(!) vegetables.",
+                "example": "kg"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "_currency": {
+            "oneOf": [
+              {
+                "type": "string",
+                "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                "example": "",
+                "minLength": 3,
+                "maxLength": 3
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "_product": {
+            "oneOf": [
+              {
+                "type": "string",
+                "format": "uuid",
+                "description": "The Tillhub product resource reference ID.",
+                "example": "43847a66-97dc-4ac2-8e8a-c44920e1f22f"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "_custom_id": {
+            "oneOf": [
+              {
+                "type": "string",
+                "description": "Any custom ID, e.g. a product number",
+                "example": "AKI-1234566"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "_tax": {
+            "oneOf": [
+              {
+                "type": "string",
+                "format": "uuid",
+                "example": "9d110eb2-2245-4e14-9574-49b502f3a9b3",
+                "description": "If a single tax applies (normally VAT) - the applicable Tillhub tax resource with tax accounts."
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "_vat_rate": {
+            "oneOf": [
+              {
+                "type": "number",
+                "description": "The VAT rate of this item. E.g. 0.19 for 19% German VAT. If no VAT applies, set to 0.",
+                "example": "0.19",
+                "minimum": 0,
+                "maximum": 1,
+                "multipleOf": 0.001
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "branch": {
+            "oneOf": [
+              {
+                "type": "string",
+                "format": "uuid",
+                "example": "f2ac2cae-97ff-42a1-967b-0a35222ab6d1",
+                "description": "The Tillhub branch location ID."
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "register": {
+            "oneOf": [
+              {
+                "type": "string",
+                "format": "uuid",
+                "example": "9d110eb2-2245-4e14-9574-49b502f3a9b3",
+                "description": "The Tillhub register location ID."
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "salesman_staff": {
+            "oneOf": [
+              {
+                "type": "string",
+                "format": "uuid",
+                "example": "b3465a62-62e9-46de-9df7-4d3009c46068",
+                "description": "The Tillhub staff (as salesman) resource ID, that has generated this transaction."
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "_taxes": {
+            "oneOf": [
+              {
+                "type": "array",
+                "items": {
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "description": "The applicable Tillhub tax resource.",
+                      "properties": {
+                        "tax": {
+                          "description": "The applicable Tillhub tax resource with tax accounts.",
+                          "type": "string",
+                          "example": "a3be1e02-7983-4cba-b7b8-94453c0536ef"
+                        },
+                        "position": {
+                          "description": "Position of the specific tax.",
+                          "type": "integer",
+                          "minimum": 0,
+                          "maximum": 30,
+                          "example": "1"
+                        },
+                        "rate": {
+                          "type": "number",
+                          "description": "The rate of this tax.",
+                          "example": "0.21",
+                          "minimum": 0,
+                          "maximum": 1,
+                          "multipleOf": 0.001
+                        },
+                        "custom_id": {
+                          "default": null,
+                          "oneOf": [
+                            {
+                              "description": "Custom tax account number identifier.",
+                              "type": "string",
+                              "example": "440165"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "display": {
+                          "default": null,
+                          "oneOf": [
+                            {
+                              "description": "Custom tax account description.",
+                              "type": "string",
+                              "example": "Another tax"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "configuration": {
+            "oneOf": [
+              {
+                "type": "object",
+                "description": "Item property changes triggered by a user decision."
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "_account": {
+            "oneOf": [
+              {
+                "type": "string",
+                "format": "uuid",
+                "description": "The applicable Tillhub (revenue or EXPENSE) account.",
+                "example": "a5380b42-6025-49de-bb1d-c9357df96506"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "_product_group": {
+            "oneOf": [
+              {
+                "type": "string",
+                "format": "uuid",
+                "description": "The Tillhub product group resource reference ID.",
+                "example": "897bac99-f98e-433a-bca0-19acc380fb12"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "_tax_amount": {
+            "oneOf": [
+              {
+                "description": "The tax amount on the per unit qty base of 1.",
+                "type": "number",
+                "minimum": -1000000,
+                "maximum": 1000000,
+                "multipleOf": 0.01
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "_tax_amount_total": {
+            "oneOf": [
+              {
+                "description": "The total tax amount.",
+                "type": "number",
+                "minimum": -1000000,
+                "maximum": 1000000,
+                "multipleOf": 0.01
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "_discount_amount": {
+            "default": 0,
+            "description": "The discount amount on the per unit qty base of 1.",
+            "type": "number",
+            "minimum": -1000000,
+            "maximum": 1000000,
+            "multipleOf": 0.01
+          },
+          "_discount_amount_total": {
+            "oneOf": [
+              {
+                "default": 0,
+                "description": "The total discount amount.",
+                "type": "number",
+                "minimum": -1000000,
+                "maximum": 1000000,
+                "multipleOf": 0.01
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "_promotion_amount": {
+            "oneOf": [
+              {
+                "description": "The promotion amount on the per unit qty base of 1.",
+                "type": "number",
+                "minimum": -1000000,
+                "maximum": 1000000,
+                "multipleOf": 0.01
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "_promotion_amount_total": {
+            "oneOf": [
+              {
+                "description": "The total promotion amount.",
+                "type": "number",
+                "minimum": -1000000,
+                "maximum": 1000000,
+                "multipleOf": 0.01
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "_discounts": {
+            "oneOf": [
+              {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "description": "Any applied discounts as they happened at transaction creation time.",
+                  "properties": {
+                    "amount": {
+                      "description": "The effective amount for this discount per single item",
+                      "type": "number",
+                      "minimum": -1000000,
+                      "maximum": 1000000,
+                      "multipleOf": 0.01
+                    },
+                    "amount_total": {
+                      "description": "The effective amount for this discount per qty items",
+                      "type": "number",
+                      "minimum": -1000000,
+                      "maximum": 1000000,
+                      "multipleOf": 0.01
+                    },
+                    "order_index": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "maximum": 100
+                    },
+                    "currency": {
+                      "type": "string",
+                      "minLength": 3,
+                      "maxLength": 3
+                    },
+                    "value": {
+                      "description": "The absolut reduction via this voucher",
+                      "oneOf": [
+                        {
+                          "type": "number",
+                          "minimum": -1000000,
+                          "maximum": 1000000,
+                          "multipleOf": 0.01
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "rate": {
+                      "description": "The relative reduction via this voucher",
+                      "oneOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0,
+                          "maximum": 1,
+                          "multipleOf": 0.001
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "client_id": {
+                      "description": "Client id to map this object back",
+                      "type": "string",
+                      "maxLength": 128
+                    },
+                    "group": {
+                      "type": "string",
+                      "enum": [
+                        "customer",
+                        "staff",
+                        "cart",
+                        "product_set",
+                        "sconto"
+                      ]
+                    },
+                    "name": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 128
+                    },
+                    "source_id": {
+                      "description": "The Tillhub discount resource (if available)",
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "format": "uuid"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "assignment_id": {
+                      "description": "Identification of the client process that created this discount",
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "maxLength": 128
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "assignment_source": {
+                      "description": "Identification of the client source of the process that created this discount",
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "enum": [
+                            "cart",
+                            "item",
+                            "customer",
+                            "sconto"
+                          ]
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "amount",
+                    "amount_total",
+                    "currency",
+                    "name",
+                    "value",
+                    "rate"
+                  ]
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "_origins": {
+            "oneOf": [
+              {
+                "type": "array",
+                "description": "A list of Tillhub resources that caused this transaction, e.g. a stored cart or multiple delivery notes",
+                "items": {
+                  "type": "object",
+                  "description": "Reference to a similar type of object (e.g. transaction to cart)",
+                  "additionalProperties": false,
+                  "required": [
+                    "type"
+                  ],
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "description": "The type of reference",
+                      "enum": [
+                        "checked_out_delivery_note",
+                        "checked_out_saved_cart"
+                      ]
+                    },
+                    "id": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "format": "uuid",
+                          "example": "f2ac2cae-97ff-42a1-967b-0a35222ab6d1",
+                          "description": "A Tillhub transaction that this reference links to."
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "default": null
+                    },
+                    "custom_id": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "example": "278",
+                          "description": "The custom_id of a Tillhub transaction that this reference links to."
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "default": null
+                    },
+                    "date": {
+                      "type": "string",
+                      "format": "date-time",
+                      "example": "2018-01-29T14:55:05.000Z",
+                      "description": "The date of a Tillhub transaction that this reference links to."
+                    }
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "_depends_on": {
+            "oneOf": [
+              {
+                "type": "array",
+                "description": "A list of Tillhub resources that this transaction directly depends on, e.g. a refund for a previous sale",
+                "items": {
+                  "type": "object",
+                  "description": "Reference to the same type of object (e.g. transaction to pervious transaction)",
+                  "additionalProperties": false,
+                  "required": [
+                    "type"
+                  ],
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "description": "The type of reference",
+                      "enum": [
+                        "canceled_sale",
+                        "canceled_item",
+                        "refunded_sale",
+                        "refunded_item",
+                        "canceled_expense",
+                        "canceled_deposit",
+                        "canceled_bank_expense",
+                        "canceled_bank_deposit"
+                      ]
+                    },
+                    "id": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "format": "uuid",
+                          "example": "f2ac2cae-97ff-42a1-967b-0a35222ab6d1",
+                          "description": "A Tillhub transaction that this reference links to."
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "default": null
+                    },
+                    "custom_id": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "example": "0814 QZXL",
+                          "description": "The custom_id of a Tillhub transaction that this reference links to."
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "default": null
+                    },
+                    "client_id": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "example": "278d66eae23400bcdbe283764sc",
+                          "description": "The client_id of a Tillhub transaction or item that this reference links to."
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "default": null
+                    },
+                    "date": {
+                      "type": "string",
+                      "format": "date-time",
+                      "example": "2018-01-29T14:55:05.000Z",
+                      "description": "The date of a Tillhub transaction that this reference links to."
+                    }
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "_related_to": {
+            "oneOf": [
+              {
+                "type": "array",
+                "description": "A list of Tillhub resources that this transaction is related to, e.g. an invoice object that tracks the lifetime of that invoice",
+                "items": {
+                  "type": "object",
+                  "description": "Reference to a very different type of object (e.g. transaction to invoice or expense to safe)",
+                  "additionalProperties": false,
+                  "required": [
+                    "type",
+                    "id"
+                  ],
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "description": "The type of reference",
+                      "enum": [
+                        "invoice",
+                        "safe"
+                      ]
+                    },
+                    "id": {
+                      "type": "string",
+                      "format": "uuid",
+                      "example": "f2ac2cae-97ff-42a1-967b-0a35222ab6d1",
+                      "description": "A Tillhub resource that this reference links to."
+                    }
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "_product_service_answers": {
+            "oneOf": [
+              {
+                "type": "array",
+                "description": "A list of answers to product service questions",
+                "items": {
+                  "type": "object",
+                  "description": "Answer to a product service question",
+                  "additionalProperties": false,
+                  "required": [
+                    "id",
+                    "type",
+                    "content_type"
+                  ],
+                  "properties": {
+                    "question_id": {
+                      "type": "string",
+                      "format": "uuid",
+                      "description": "A Tillhub product question resource."
+                    },
+                    "type": {
+                      "type": "string",
+                      "description": "The type of answer layout",
+                      "enum": [
+                        "checkbox",
+                        "free_text_input",
+                        "simple_select",
+                        "number_input_plus_optional_unit_select"
+                      ]
+                    },
+                    "content_type": {
+                      "type": "string",
+                      "description": "The type of answer content validation",
+                      "enum": [
+                        "string",
+                        "boolean",
+                        "number"
+                      ]
+                    },
+                    "required": {
+                      "description": "If true, the answer is mandatory",
+                      "oneOf": [
+                        {
+                          "type": "boolean",
+                          "default": false
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "default": null
+                    },
+                    "answer": {
+                      "description": "Answer content of a product service question",
+                      "oneOf": [
+                        {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "required": [
+                            "content"
+                          ],
+                          "properties": {
+                            "content": {},
+                            "unit": {}
+                          }
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "default": null
+                    }
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "_comments": {
+            "oneOf": [
+              {
+                "type": "string",
+                "example": "Did this sale. Went to the next one.",
+                "maxLength": 8192,
+                "description": "Any arbitrary comment."
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "_external_reference_id": {
+            "oneOf": [
+              {
+                "type": "string",
+                "example": "823742686434462376376376473647346",
+                "maxLength": 128,
+                "description": "Any identifier a user wants to store in the transaction system. E.g. an ID in a thirdy party ERP."
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "_amount_net": {
+            "oneOf": [
+              {
+                "description": "The payable net amount on the units qty base of 1, after decrementing applicable discounts etc. This value needs to be lower than or equal to the respective unti amount.",
+                "type": "number",
+                "minimum": -1000000,
+                "maximum": 1000000,
+                "multipleOf": 0.01
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "_amount_gross": {
+            "oneOf": [
+              {
+                "description": "The payable gross amount on the units qty base of 1, after decrementing applicable discounts etc.  This value needs to be lower than or equal to the respective unti amount.",
+                "type": "number",
+                "minimum": -1000000,
+                "maximum": 1000000,
+                "multipleOf": 0.01
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "_amount_total_net": {
+            "oneOf": [
+              {
+                "description": "The payable net amount total, after decrementing applicable discounts etc. This value needs to be lower than or equal to the respective unti amount.",
+                "type": "number",
+                "minimum": -1000000,
+                "maximum": 1000000,
+                "multipleOf": 0.01
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "_amount_total_gross": {
+            "oneOf": [
+              {
+                "description": "The payable net amount total, after decrementing applicable discounts etc. This value needs to be lower than or equal to the respective unti amount.",
+                "type": "number",
+                "minimum": -1000000,
+                "maximum": 1000000,
+                "multipleOf": 0.01
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "_amount_unit_net": {
+            "oneOf": [
+              {
+                "description": "The original qty base 1 item net amount, e.g. the product shelf price",
+                "type": "number",
+                "minimum": -1000000,
+                "maximum": 1000000,
+                "multipleOf": 0.01
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "_amount_unit_gross": {
+            "oneOf": [
+              {
+                "description": "The original qty base 1 item net amount, e.g. the product shelf price",
+                "type": "number",
+                "minimum": -1000000,
+                "maximum": 1000000,
+                "multipleOf": 0.01
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "payments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "account",
+          "payment_option",
+          "type",
+          "name",
+          "currency",
+          "amount_total",
+          "tip_total",
+          "amount_given",
+          "amount_requested"
+        ],
+        "properties": {
+          "fr_transaction_id": {
+            "deprecated": true
+          },
+          "fa_account_number": {
+            "deprecated": true
+          },
+          "amount": {
+            "deprecated": true
+          },
+          "currency_iso_code": {
+            "deprecated": true
+          },
+          "exchange_rate": {
+            "deprecated": true
+          },
+          "payment_option_name": {
+            "deprecated": true
+          },
+          "payment_option_type_name": {
+            "deprecated": true
+          },
+          "payment_option_id": {
+            "deprecated": true
+          },
+          "guid": {
+            "deprecated": true
+          },
+          "_id": {
+            "deprecated": true
+          },
+          "date": {
+            "deprecated": true
+          },
+          "tip": {
+            "deprecated": true
+          },
+          "terminal_response": {
+            "deprecated": true
+          },
+          "context": {
+            "deprecated": true
+          },
+          "client_id": {
+            "oneOf": [
+              {
+                "type": "string",
+                "example": "d0d40841-b1a7-438a-9d1e-2bfec590d2e3",
+                "minLength": 6,
+                "maxLength": 64,
+                "description": "A implementer defined identifier. This can be used for local resource matching and has no business implication."
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "_type": {
+            "oneOf": [
+              {
+                "type": "string",
+                "description": "",
+                "enum": [
+                  "card",
+                  "cash",
+                  "expense",
+                  "voucher",
+                  "custom",
+                  "invoice",
+                  "card_opi",
+                  "card_concardis",
+                  "card_adyen",
+                  "card_tim"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "_context": {
+            "oneOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "description": "Any additional flat values.",
+                "properties": {
+                  "title": {
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "example": "Random 3.",
+                        "maxLength": 1024,
+                        "description": "Any arbitrary title."
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
+                  "account": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "description": "Account face values.",
+                        "properties": {
+                          "custom_id": {
+                            "type": "string",
+                            "example": "1009"
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
+                  "terminal": {
+                    "description": "If a terminal was used for this payment - addtional information will be stored here. NULL together with a card type indicates a disconnected terminal payment.",
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "description": "The effective voucher delta record for this item (thus reversable if needed)",
+                        "additionalProperties": false,
+                        "required": [
+                          "device_id",
+                          "transaction_id",
+                          "api",
+                          "card_circuit",
+                          "card_pan",
+                          "raw_response"
+                        ],
+                        "properties": {
+                          "device_id": {
+                            "type": "string",
+                            "example": "51098708",
+                            "minLength": 4,
+                            "maxLength": 64,
+                            "description": "The Id of the terminal used. Style differs by Terminal-API-type."
+                          },
+                          "transaction_id": {
+                            "type": "string",
+                            "example": "d0d40841-b1a7-438a-9d1e-2bfec590d2e3",
+                            "minLength": 4,
+                            "maxLength": 64,
+                            "description": "The Id assigned by the terminal for this transaction."
+                          },
+                          "api": {
+                            "type": "string",
+                            "enum": [
+                              "adyen",
+                              "concardis",
+                              "opi",
+                              "tim"
+                            ]
+                          },
+                          "payment_provider": {
+                            "default": null,
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 128,
+                            "description": "The payment provider (e.g. Elavon)"
+                          },
+                          "card_circuit": {
+                            "default": null,
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 128,
+                            "description": "The detected card circuit as reposrted by the terminal (VISA, MasterCard, GiroCard etc.)"
+                          },
+                          "card_pan": {
+                            "default": null,
+                            "type": "string",
+                            "minLength": 3,
+                            "maxLength": 128,
+                            "description": "The cards primary account number. *** on merchant receipts."
+                          },
+                          "receipts": {
+                            "description": "The receipt texts reported by the terminal.",
+                            "type": "array",
+                            "default": null,
+                            "items": {
+                              "type": "object",
+                              "additionalProperties": false,
+                              "required": [
+                                "type",
+                                "text"
+                              ],
+                              "properties": {
+                                "type": {
+                                  "type": "string",
+                                  "enum": [
+                                    "customer",
+                                    "merchant"
+                                  ]
+                                },
+                                "text": {
+                                  "type": "string",
+                                  "maxLength": 16384
+                                }
+                              }
+                            }
+                          },
+                          "raw_response": {
+                            "default": null,
+                            "description": "The raw response of the terminal for finalizing the card payment. Might contain additional information.",
+                            "type": "string",
+                            "maxLength": 16384
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "voucher": {
+                    "description": "If a voucher was used for this payment - addtional information will be stored here.",
+                    "oneOf": [
+                      {
+                        "description": "The effective voucher delta record for this item (thus reversable if needed)",
+                        "additionalProperties": false,
+                        "type": "object",
+                        "properties": {
+                          "client_id": {
+                            "type": "string",
+                            "example": "d0d40841-b1a7-438a-9d1e-2bfec590d2e3",
+                            "minLength": 6,
+                            "maxLength": 64,
+                            "description": "A implementer defined identifier. This can be used for local resource matching and has no business implication. TO BE DEPRECTAED."
+                          },
+                          "source_id": {
+                            "type": "string",
+                            "example": "d0d40841-b1a7-438a-9d1e-2bfec590d2e3",
+                            "minLength": 6,
+                            "maxLength": 64,
+                            "description": "The Tillhub or Fleurop Id of the source voucher."
+                          },
+                          "api": {
+                            "type": "string",
+                            "enum": [
+                              "fleurop-voucher-api",
+                              "tillhub-voucher-api"
+                            ]
+                          },
+                          "delta_amount": {
+                            "description": "The effective change in the value of the voucher.",
+                            "type": "number",
+                            "minimum": -1000000,
+                            "maximum": 1000000,
+                            "multipleOf": 0.01
+                          },
+                          "delta_currency": {
+                            "type": "string",
+                            "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                            "example": "EUR",
+                            "minLength": 3,
+                            "maxLength": 3
+                          },
+                          "barcode": {
+                            "default": null,
+                            "type": "string",
+                            "minLength": 3,
+                            "maxLength": 128,
+                            "description": "Voucher EAN or similar."
+                          },
+                          "code": {
+                            "default": null,
+                            "type": "string",
+                            "minLength": 3,
+                            "maxLength": 128,
+                            "description": "Voucher number."
+                          },
+                          "system": {
+                            "default": null,
+                            "type": "string",
+                            "minLength": 3,
+                            "maxLength": 128,
+                            "description": "Identifier for the voucher system. (Also known as User)"
+                          },
+                          "title": {
+                            "default": null,
+                            "type": "string",
+                            "maxLength": 256,
+                            "description": "Title of the source voucher."
+                          },
+                          "message": {
+                            "default": null,
+                            "type": "string",
+                            "maxLength": 2048,
+                            "description": "Messages from voucher processing."
+                          },
+                          "type": {
+                            "type": "string",
+                            "description": "Mainly legacy support for Fleurop flows.",
+                            "enum": [
+                              "undefined",
+                              "fleuropRedeem",
+                              "fleuropSellOrRecharge",
+                              "ownBrandedRecharge",
+                              "ownBrandedRedeem",
+                              "externalSellAndActivate",
+                              "tillhubSell",
+                              "tillhubRecharge",
+                              "tillhubRedeem"
+                            ]
+                          },
+                          "status": {
+                            "type": "string",
+                            "description": "Client side recorded booking state of the delta operation.",
+                            "enum": [
+                              "unknown",
+                              "pending",
+                              "locked",
+                              "succeed",
+                              "failed",
+                              "scheduled"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "client_id",
+                          "source_id",
+                          "api",
+                          "delta_amount",
+                          "delta_currency",
+                          "system",
+                          "type",
+                          "status"
+                        ]
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "payment_option": {
+            "oneOf": [
+              {
+                "type": "string",
+                "format": "uuid",
+                "description": "The Tillhub payment option resource reference ID.",
+                "example": "bd7d8a90-83d1-4d53-8659-b205b409d6e1"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "_position": {
+            "oneOf": [
+              {
+                "type": "number",
+                "description": "The position of the payment item. E.g. positon 1 (2, 3 etc.) in the transaction.",
+                "minimum": 0,
+                "maximum": 300,
+                "example": "1"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "_currency": {
+            "oneOf": [
+              {
+                "type": "string",
+                "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                "example": "",
+                "minLength": 3,
+                "maxLength": 3
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "_amount_total": {
+            "oneOf": [
+              {
+                "description": "The payed amount total.",
+                "type": "number",
+                "minimum": -1000000,
+                "maximum": 1000000,
+                "multipleOf": 0.01
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "_tip_total": {
+            "oneOf": [
+              {
+                "description": "The included tip amount.",
+                "type": "number",
+                "minimum": -1000000,
+                "maximum": 1000000,
+                "multipleOf": 0.01
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "_amount_given": {
+            "oneOf": [
+              {
+                "description": "The actual over the counter money flow: regardles what needs to be payed e.g. 49.98, but the customer has given. This is usually of interest in cash payments, or when when customers gave fewer amount than they ought to pay.",
+                "example": "50.00",
+                "type": "number",
+                "minimum": -1000000,
+                "maximum": 1000000,
+                "multipleOf": 0.01
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "_amount_requested": {
+            "oneOf": [
+              {
+                "description": "The amount that was requested by the POS e.g. 49.98, regardless of what was given e.g. 50.00. Hence the rest is change or tip. This is usually of interest in cash payments.",
+                "example": "49.98",
+                "type": "number",
+                "minimum": -1000000,
+                "maximum": 1000000,
+                "multipleOf": 0.01
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "_amount_change": {
+            "oneOf": [
+              {
+                "description": "The cash amount that was handed back from the cashier as change.",
+                "example": "49.98",
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1000000,
+                "multipleOf": 0.01
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "branch": {
+            "oneOf": [
+              {
+                "type": "string",
+                "format": "uuid",
+                "example": "f2ac2cae-97ff-42a1-967b-0a35222ab6d1",
+                "description": "The Tillhub branch location ID. If none is specified we will use the one from the transaction."
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "register": {
+            "oneOf": [
+              {
+                "type": "string",
+                "format": "uuid",
+                "example": "9d110eb2-2245-4e14-9574-49b502f3a9b3",
+                "description": "The Tillhub register location ID. If none is specified we will use the one from the transaction."
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "cost_center": {
+            "oneOf": [
+              {
+                "type": "string",
+                "description": "Any external reference to a cost center e.g. in enterprise environments.",
+                "example": "CORP-123"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "_account": {
+            "oneOf": [
+              {
+                "type": "string",
+                "description": "The applicable Tillhub account e.g for this payment type.",
+                "example": "a5380b42-6025-49de-bb1d-c9357df96506"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "_account_change": {
+            "oneOf": [
+              {
+                "type": "string",
+                "description": "The applicable Tillhub account for the cash payment type used for change.",
+                "example": "a5380b42-6025-49de-bb1d-c9357df96506"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "_comments": {
+            "oneOf": [
+              {
+                "type": "string",
+                "example": "Did this sale. Went to the next one.",
+                "maxLength": 8192,
+                "description": "Any arbitrary comment."
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "_origins": {
+            "oneOf": [
+              {
+                "type": "array",
+                "description": "A list of Tillhub resources that caused this transaction, e.g. a stored cart or multiple delivery notes",
+                "items": {
+                  "type": "object",
+                  "description": "Reference to a similar type of object (e.g. transaction to cart)",
+                  "additionalProperties": false,
+                  "required": [
+                    "type"
+                  ],
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "description": "The type of reference",
+                      "enum": [
+                        "checked_out_delivery_note",
+                        "checked_out_saved_cart"
+                      ]
+                    },
+                    "id": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "format": "uuid",
+                          "example": "f2ac2cae-97ff-42a1-967b-0a35222ab6d1",
+                          "description": "A Tillhub transaction that this reference links to."
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "default": null
+                    },
+                    "custom_id": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "example": "278",
+                          "description": "The custom_id of a Tillhub transaction that this reference links to."
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "default": null
+                    },
+                    "date": {
+                      "type": "string",
+                      "format": "date-time",
+                      "example": "2018-01-29T14:55:05.000Z",
+                      "description": "The date of a Tillhub transaction that this reference links to."
+                    }
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "_depends_on": {
+            "oneOf": [
+              {
+                "type": "array",
+                "description": "A list of Tillhub resources that this transaction directly depends on, e.g. a refund for a previous sale",
+                "items": {
+                  "type": "object",
+                  "description": "Reference to the same type of object (e.g. transaction to pervious transaction)",
+                  "additionalProperties": false,
+                  "required": [
+                    "type"
+                  ],
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "description": "The type of reference",
+                      "enum": [
+                        "canceled_sale",
+                        "canceled_item",
+                        "refunded_sale",
+                        "refunded_item",
+                        "canceled_expense",
+                        "canceled_deposit",
+                        "canceled_bank_expense",
+                        "canceled_bank_deposit"
+                      ]
+                    },
+                    "id": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "format": "uuid",
+                          "example": "f2ac2cae-97ff-42a1-967b-0a35222ab6d1",
+                          "description": "A Tillhub transaction that this reference links to."
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "default": null
+                    },
+                    "custom_id": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "example": "0814 QZXL",
+                          "description": "The custom_id of a Tillhub transaction that this reference links to."
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "default": null
+                    },
+                    "client_id": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "example": "278d66eae23400bcdbe283764sc",
+                          "description": "The client_id of a Tillhub transaction or item that this reference links to."
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "default": null
+                    },
+                    "date": {
+                      "type": "string",
+                      "format": "date-time",
+                      "example": "2018-01-29T14:55:05.000Z",
+                      "description": "The date of a Tillhub transaction that this reference links to."
+                    }
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "_related_to": {
+            "oneOf": [
+              {
+                "type": "array",
+                "description": "A list of Tillhub resources that this transaction is related to, e.g. an invoice object that tracks the lifetime of that invoice",
+                "items": {
+                  "type": "object",
+                  "description": "Reference to a very different type of object (e.g. transaction to invoice or expense to safe)",
+                  "additionalProperties": false,
+                  "required": [
+                    "type",
+                    "id"
+                  ],
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "description": "The type of reference",
+                      "enum": [
+                        "invoice",
+                        "safe"
+                      ]
+                    },
+                    "id": {
+                      "type": "string",
+                      "format": "uuid",
+                      "example": "f2ac2cae-97ff-42a1-967b-0a35222ab6d1",
+                      "description": "A Tillhub resource that this reference links to."
+                    }
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "_external_reference_id": {
+            "oneOf": [
+              {
+                "type": "string",
+                "example": "823742686434462376376376473647346",
+                "maxLength": 128,
+                "description": "Any identifier a user wants to store in the transaction system. E.g. an ID in a third party ERP."
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

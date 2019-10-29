@@ -34,31 +34,6 @@
         }
       }
     },
-    "cursor": {
-      "type": "object",
-      "additionalProperties": false,
-      "description": "Optional cursor in pagable API calls. The cursor next field must be called as fully qualifyable URI in order to hit the next page",
-      "properties": {
-        "next": {
-          "type": "string",
-          "format": "uri",
-          "description": "The URI pointing to the next page.",
-          "example": "https://api.tillhub.com/api/v1/products/061f91a3-eba2-40b8-9a76-115189d6741e?first=2018-07-02T21%3A47%3A44.382Z&page=0&size=10&cursor_field=updated_at"
-        },
-        "first": {
-          "type": "string",
-          "format": "uri",
-          "description": "The URI pointing to the the first page.",
-          "example": "https://api.tillhub.com/api/v1/products/061f91a3-eba2-40b8-9a76-115189d6741e?first=2018-07-02T21%3A47%3A44.382Z&page=1&size=10&cursor_field=updated_at"
-        },
-        "self": {
-          "type": "string",
-          "format": "uri",
-          "description": "The URI pointing to this page.",
-          "example": "https://api.tillhub.com/api/v1/products/061f91a3-eba2-40b8-9a76-115189d6741e?first=2018-07-02T21%3A47%3A44.382Z&page=0&size=10&cursor_field=updated_at"
-        }
-      }
-    },
     "count": {
       "type": "number",
       "description": "the length of the results array.",
@@ -3668,6 +3643,31 @@
             }
           }
         }
+      }
+    }
+  },
+  "cursor": {
+    "type": "object",
+    "additionalProperties": false,
+    "description": "Optional cursor in pagable API calls. The cursor next field must be called as fully qualifyable URI in order to hit the next page",
+    "properties": {
+      "next": {
+        "type": "string",
+        "format": "uri",
+        "description": "The URI pointing to the next page.",
+        "example": "https://api.tillhub.com/api/v1/products/061f91a3-eba2-40b8-9a76-115189d6741e?first=2018-07-02T21%3A47%3A44.382Z&page=0&size=10&cursor_field=updated_at"
+      },
+      "first": {
+        "type": "string",
+        "format": "uri",
+        "description": "The URI pointing to the the first page.",
+        "example": "https://api.tillhub.com/api/v1/products/061f91a3-eba2-40b8-9a76-115189d6741e?first=2018-07-02T21%3A47%3A44.382Z&page=1&size=10&cursor_field=updated_at"
+      },
+      "self": {
+        "type": "string",
+        "format": "uri",
+        "description": "The URI pointing to this page.",
+        "example": "https://api.tillhub.com/api/v1/products/061f91a3-eba2-40b8-9a76-115189d6741e?first=2018-07-02T21%3A47%3A44.382Z&page=0&size=10&cursor_field=updated_at"
       }
     }
   }

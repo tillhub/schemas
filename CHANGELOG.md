@@ -1,3 +1,10 @@
+# [4.70.0](https://github.com/tillhub/schemas/compare/v4.69.6...v4.70.0) (2019-10-29)
+
+
+### Features
+
+* **tx_v1:** fix typo ([b3a1943](https://github.com/tillhub/schemas/commit/b3a1943))
+
 ## [4.69.6](https://github.com/tillhub/schemas/compare/v4.69.5...v4.69.6) (2019-10-29)
 
 
