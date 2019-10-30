@@ -2025,14 +2025,21 @@
                     "content_type"
                   ],
                   "properties": {
-                    "question_id": {
+                    "id": {
                       "type": "string",
                       "format": "uuid",
-                      "description": "A Tillhub product question resource."
+                      "example": "1d53f799-c24f-49e3-b68f-93ae5fc69921",
+                      "description": "A Tillhub product question resource identifier."
+                    },
+                    "question": {
+                      "type": "string",
+                      "maxLength": 1024,
+                      "example": "Which colour is used?",
+                      "description": "The associated Tillhub product question 'content' field."
                     },
                     "type": {
                       "type": "string",
-                      "description": "The type of answer layout",
+                      "description": "The required layout type of the answer",
                       "enum": [
                         "checkbox",
                         "free_text_input",
@@ -2042,7 +2049,7 @@
                     },
                     "content_type": {
                       "type": "string",
-                      "description": "The type of answer content validation",
+                      "description": "The required content type of the answer",
                       "enum": [
                         "string",
                         "boolean",
@@ -2063,7 +2070,7 @@
                       "default": null
                     },
                     "answer": {
-                      "description": "Answer content of a product service question",
+                      "description": "The answer content of a product service question",
                       "oneOf": [
                         {
                           "type": "object",
@@ -2072,8 +2079,39 @@
                             "content"
                           ],
                           "properties": {
-                            "content": {},
-                            "unit": {}
+                            "content": {
+                              "oneOf": [
+                                {
+                                  "type": "number",
+                                  "description": "If 'number_input_plus_optional_unit_select', this field contains the inputted numerical value."
+                                },
+                                {
+                                  "type": "boolean",
+                                  "description": "If 'checkbox', this field contains the selcetd boolean value."
+                                },
+                                {
+                                  "type": "string",
+                                  "description": "If 'free_text_input' or 'simple_select', this field contains the inputted text."
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "unit": {
+                              "oneOf": [
+                                {
+                                  "type": "string",
+                                  "maxLength": 128,
+                                  "example": "ml",
+                                  "description": "If 'number_input_plus_optional_unit_select', this field contains the selected unit."
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ],
+                              "default": null
+                            }
                           }
                         },
                         {

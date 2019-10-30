@@ -1,3 +1,10 @@
+# [4.77.0](https://github.com/tillhub/schemas/compare/v4.76.0...v4.77.0) (2019-10-30)
+
+
+### Features
+
+* **transactions:** update product service answers ([e7d669c](https://github.com/tillhub/schemas/commit/e7d669c))
+
 # [4.76.0](https://github.com/tillhub/schemas/compare/v4.75.0...v4.76.0) (2019-10-30)
 
 
