@@ -1,3 +1,10 @@
+# [4.74.0](https://github.com/tillhub/schemas/compare/v4.73.1...v4.74.0) (2019-10-30)
+
+
+### Features
+
+* **transactions:** move return reason to items ([#277](https://github.com/tillhub/schemas/issues/277)) ([389d465](https://github.com/tillhub/schemas/commit/389d465))
+
 ## [4.73.1](https://github.com/tillhub/schemas/compare/v4.73.0...v4.73.1) (2019-10-29)
 
 

@@ -1478,7 +1478,7 @@
                           ],
                           "default": null
                         },
-                        "return": {
+                        "return_reason": {
                           "oneOf": [
                             {
                               "type": "object",
