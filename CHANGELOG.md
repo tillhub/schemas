@@ -1,3 +1,10 @@
+# [4.76.0](https://github.com/tillhub/schemas/compare/v4.75.0...v4.76.0) (2019-10-30)
+
+
+### Features
+
+* **registers:** add cost center property ([#280](https://github.com/tillhub/schemas/issues/280)) ([c7a0200](https://github.com/tillhub/schemas/commit/c7a0200))
+
 # [4.75.0](https://github.com/tillhub/schemas/compare/v4.74.0...v4.75.0) (2019-10-30)
 
 
