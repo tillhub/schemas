@@ -65,6 +65,16 @@
         }
       ]
     },
+    "discrepancy_account": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "accounts": {
       "description": "DEPRECATED: do not use",
       "anyOf": [

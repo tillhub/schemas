@@ -1,3 +1,10 @@
+# [4.75.0](https://github.com/tillhub/schemas/compare/v4.74.0...v4.75.0) (2019-10-30)
+
+
+### Features
+
+* **payment_options:** add discrepancy account property ([#279](https://github.com/tillhub/schemas/issues/279)) ([8dedab6](https://github.com/tillhub/schemas/commit/8dedab6))
+
 # [4.74.0](https://github.com/tillhub/schemas/compare/v4.73.1...v4.74.0) (2019-10-30)
 
 
