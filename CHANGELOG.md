@@ -1,3 +1,10 @@
+# [4.78.0](https://github.com/tillhub/schemas/compare/v4.77.0...v4.78.0) (2019-10-31)
+
+
+### Features
+
+* **vouchers:** add increment restrictions ([27abab7](https://github.com/tillhub/schemas/commit/27abab7))
+
 # [4.77.0](https://github.com/tillhub/schemas/compare/v4.76.0...v4.77.0) (2019-10-30)
 
 

@@ -242,6 +242,44 @@
         }
       ]
     },
+    "increments": {
+      "description": "Define a client side increment restriction. E.g. only allow a a voucher to be issued with 5 EUR minimum.",
+      "oneOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "oneOf": [
+              {
+                "properties": {
+                  "currency": {
+                    "type": "string",
+                    "minLength": 3,
+                    "maxLength": 3
+                  },
+                  "type": {
+                    "type": "string",
+                    "enum": [
+                      "amount"
+                    ]
+                  },
+                  "value": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 100000,
+                    "multipleOf": 0.01
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "id": {
       "type": "string",
       "format": "uuid"
