@@ -1,3 +1,10 @@
+# [4.79.0](https://github.com/tillhub/schemas/compare/v4.78.0...v4.79.0) (2019-11-01)
+
+
+### Features
+
+* **transactions:** add details for v0 props ([612c7ed](https://github.com/tillhub/schemas/commit/612c7ed))
+
 # [4.78.0](https://github.com/tillhub/schemas/compare/v4.77.0...v4.78.0) (2019-10-31)
 
 

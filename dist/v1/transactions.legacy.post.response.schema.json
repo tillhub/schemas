@@ -1115,109 +1115,536 @@
                   "description": "The server creation time of this transaction."
                 },
                 "fr_transaction_id": {
-                  "deprecated": true
+                  "oneOf": [
+                    {
+                      "deprecated": true
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
                 },
                 "quantity": {
-                  "deprecated": true
+                  "oneOf": [
+                    {
+                      "deprecated": true,
+                      "description": "Quantity of the product in that item, supports floating point for e.g. 2.73 kg. The POS sends it currently as string."
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
                 },
                 "article_number": {
-                  "deprecated": true
+                  "oneOf": [
+                    {
+                      "deprecated": true,
+                      "description": "Apparently not used"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
                 },
                 "article_attr_desc": {
-                  "deprecated": true
+                  "oneOf": [
+                    {
+                      "deprecated": true,
+                      "description": "Apparently not used"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
                 },
                 "article_price": {
-                  "deprecated": true
+                  "oneOf": [
+                    {
+                      "deprecated": true,
+                      "type": "integer",
+                      "example": 799,
+                      "description": "The per qty=1 raw price of the product in the lowest (available) fraction of that currency -> 7.99 EUR or 799 HUF respectively"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
                 },
                 "selling_price": {
-                  "deprecated": true
+                  "oneOf": [
+                    {
+                      "deprecated": true,
+                      "type": "integer",
+                      "example": 612,
+                      "description": "The per qty=1 (disocunted) price of the product in the lowest (available) fraction of that currency -> 6.12 EUR or 612 HUF respectively"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
                 },
                 "selling_price_total": {
-                  "deprecated": true
+                  "oneOf": [
+                    {
+                      "deprecated": true,
+                      "type": "integer",
+                      "example": 1671,
+                      "description": "The total (disocunted) revenue of the item, before or after taxes depending on the scheme, 16.71 EUR or 1671 HUF respectively"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
                 },
                 "article_fa_account_number": {
-                  "deprecated": true
+                  "oneOf": [
+                    {
+                      "deprecated": true,
+                      "type": "string",
+                      "example": "8400",
+                      "description": "Custom identifier for the revenue financial account of the contained product"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
                 },
                 "vat_percentage": {
-                  "deprecated": true
+                  "oneOf": [
+                    {
+                      "deprecated": true,
+                      "type": "integer",
+                      "example": 1900,
+                      "description": "Rate of the VAT encoded in Millis 1900 = 0.19 = 19%"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
                 },
                 "vat_fa_account_number": {
-                  "deprecated": true
+                  "deprecated": true,
+                  "type": "string",
+                  "example": "1991",
+                  "description": "Custom identifier for the VAT financial account"
                 },
                 "vat_amount": {
-                  "deprecated": true
+                  "oneOf": [
+                    {
+                      "deprecated": true,
+                      "type": "integer",
+                      "example": 267,
+                      "description": "The total amount of VAT on the item, 2.67 EUR or 267 HUF respectively"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
                 },
                 "salesman_staff_number": {
-                  "deprecated": true
+                  "oneOf": [
+                    {
+                      "deprecated": true,
+                      "type": "string",
+                      "example": "00603",
+                      "description": "Custom identifier for a staff that is the salesperson of that item"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
                 },
                 "product_number": {
-                  "deprecated": true
+                  "oneOf": [
+                    {
+                      "deprecated": true,
+                      "type": "string",
+                      "example": "998877",
+                      "description": "Custom identifier for the product"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
                 },
                 "article_id": {
-                  "deprecated": true
+                  "oneOf": [
+                    {
+                      "deprecated": true,
+                      "description": "Apparently not used"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
                 },
                 "vat_amount_euro": {
-                  "deprecated": true
+                  "oneOf": [
+                    {
+                      "deprecated": true,
+                      "description": "Numerical exact amount of the VAT before rounding, no HUF shift: 266.798319327731092 EUR == 266.798319327731092 HUF !!! This value is sent as string from the POS."
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
                 },
                 "discount_amount": {
-                  "deprecated": true
+                  "oneOf": [
+                    {
+                      "deprecated": true,
+                      "type": "integer",
+                      "example": 187,
+                      "description": "Discount amount (per qty 1) = article_price - selling_price, 1.87 EUR or 187 HUF respectively"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
                 },
                 "product_name": {
-                  "deprecated": true
+                  "oneOf": [
+                    {
+                      "deprecated": true,
+                      "type": "string",
+                      "example": "Soft Soothing Spray",
+                      "description": "Display name of the contained product"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
                 },
                 "guid": {
-                  "deprecated": true
+                  "oneOf": [
+                    {
+                      "deprecated": true,
+                      "description": "Apparently not used"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
                 },
                 "product_group_number": {
-                  "deprecated": true
+                  "oneOf": [
+                    {
+                      "deprecated": true,
+                      "type": "string",
+                      "example": "004",
+                      "description": "Custom identifier for the product's product group"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
                 },
                 "product_group_id": {
-                  "deprecated": true
+                  "oneOf": [
+                    {
+                      "deprecated": true,
+                      "description": "Apparently not used"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
                 },
                 "is_refund": {
-                  "deprecated": true
+                  "oneOf": [
+                    {
+                      "deprecated": true,
+                      "type": "number",
+                      "description": "If true, the item was created by (partially) refunding a previous sale. The POS sends 0 for false and 1 for true."
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
                 },
                 "_id": {
-                  "deprecated": true
+                  "oneOf": [
+                    {
+                      "deprecated": true,
+                      "type": "string",
+                      "format": "uuid",
+                      "example": "b3063bbe-d44d-42a6-8bbf-971f5d88f848",
+                      "description": "UUID hack for already existing integer"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
                 },
                 "related_transaction_number": {
-                  "deprecated": true
+                  "oneOf": [
+                    {
+                      "deprecated": true,
+                      "type": "integer",
+                      "example": 49,
+                      "description": "In cases of refund or cancellation, or invoicing a delivery note or selling a saved cart: the custom id (counting number) of the origin transaction"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
                 },
                 "related_transaction_date": {
-                  "deprecated": true
+                  "oneOf": [
+                    {
+                      "deprecated": true,
+                      "type": "string",
+                      "format": "date-time",
+                      "example": "2018-01-29T14:55:05.000Z",
+                      "description": "In cases of refund or cancellation, or invoicing a delivery note or selling a saved cart: the creation date of the origin transaction"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
                 },
                 "related_transaction_type": {
-                  "deprecated": true
+                  "oneOf": [
+                    {
+                      "deprecated": true,
+                      "type": "string",
+                      "enum": [
+                        "sale",
+                        "sale_cancel",
+                        "delivery_note",
+                        "saved_cart",
+                        "expense",
+                        "expense_cancel"
+                      ],
+                      "description": "In cases of refund or cancellation, or invoicing a delivery note or selling a saved cart: the type of the origin transaction"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
                 },
                 "article": {
-                  "deprecated": true
+                  "oneOf": [
+                    {
+                      "deprecated": true,
+                      "type": "string",
+                      "format": "uuid",
+                      "example": "cf8eae54-79da-4ad1-ab3a-878db60d4743",
+                      "description": "Id of the Tillhub product resource"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
                 },
                 "attributes_description": {
-                  "deprecated": true
+                  "oneOf": [
+                    {
+                      "deprecated": true,
+                      "type": "string",
+                      "example": "red | big | 32",
+                      "description": "A short description of the child attributes in variant products"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
                 },
                 "is_tip": {
-                  "deprecated": true
+                  "oneOf": [
+                    {
+                      "deprecated": true,
+                      "type": "boolean",
+                      "default": false,
+                      "description": "If true, this item represents a pseudo product compensating a tip"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
                 },
                 "is_owner": {
-                  "deprecated": true
+                  "oneOf": [
+                    {
+                      "deprecated": true,
+                      "type": "boolean",
+                      "default": false,
+                      "description": "If true and is_tip == true, the salesperson is the shop owner (different taxation)"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
                 },
                 "reference_cartitem_client_id": {
-                  "deprecated": true
+                  "oneOf": [
+                    {
+                      "deprecated": true,
+                      "type": "string",
+                      "example": "01331B44-130B-45D4-97A7-401247FD5B68",
+                      "description": "In cases of refund or cancellation, or invoicing a delivery note or selling a saved cart: the client_id of the origin item"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
                 },
                 "is_service": {
-                  "deprecated": true
+                  "oneOf": [
+                    {
+                      "deprecated": true,
+                      "type": "boolean",
+                      "default": false,
+                      "description": "If true, this item represents a service and might come with answers to service questions"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
                 },
                 "used_barcode": {
-                  "deprecated": true
+                  "oneOf": [
+                    {
+                      "deprecated": true,
+                      "type": "string",
+                      "example": "0E9761310XF",
+                      "description": "The barcode used to trigger putting this item into the cart (defaults to the first available barcode from the product)"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
                 },
                 "is_voucher": {
-                  "deprecated": true
+                  "oneOf": [
+                    {
+                      "deprecated": true,
+                      "type": "boolean",
+                      "default": false,
+                      "description": "If true, this item represents a voucher and must come with voucher information in 'context'"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
                 },
                 "discounts": {
-                  "deprecated": true
+                  "oneOf": [
+                    {
+                      "deprecated": true,
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": "string",
+                            "example": "Bonus",
+                            "description": "The name of an applied discount"
+                          },
+                          "group": {
+                            "type": "string",
+                            "enum": [
+                              "customer",
+                              "staff",
+                              "cart",
+                              "product_set",
+                              "sconto",
+                              "promotion"
+                            ],
+                            "description": "The group type of discount (type was taken)"
+                          },
+                          "order_index": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "description": "Position of that discount inside the list (application used to have unordered set previously)"
+                          },
+                          "type": {
+                            "type": "string",
+                            "enum": [
+                              "percentage",
+                              "value"
+                            ],
+                            "description": "The type of the discount, decides the meaning of amount (absolut or relative value)"
+                          },
+                          "value": {
+                            "type": "integer",
+                            "example": "25",
+                            "description": "Source discount info, depending on type this means for 'percentage': 25% and for 'value': 0.25 EUR or 25 HUF respectively"
+                          },
+                          "amount": {
+                            "type": "integer",
+                            "example": 43,
+                            "description": "The per qty=1 effective discount amount -> 0.43 EUR or 43 HUF respectively"
+                          },
+                          "amount_total": {
+                            "type": "integer",
+                            "example": 312,
+                            "description": "The total effective discount amount -> 3.12 EUR or 312 HUF respectively"
+                          },
+                          "source_id": {
+                            "type": "string",
+                            "format": "uuid",
+                            "example": "03063bbe-e44d-42f6-8bbf-971f5d88f848",
+                            "description": "The Tillhub discount resource identifier for the discount used"
+                          }
+                        }
+                      },
+                      "description": "A list of applied discounts"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
                 },
                 "context": {
-                  "deprecated": true
+                  "oneOf": [
+                    {
+                      "deprecated": true,
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": "string",
+                            "examples": [
+                              "return_reason",
+                              "product_service_questions",
+                              "note",
+                              "related_transaction_guid",
+                              "voucher_value",
+                              "voucher_id",
+                              "voucher_client_id",
+                              "voucher_number",
+                              "voucher_ean",
+                              "voucher_product",
+                              "voucher_system_id",
+                              "voucher_system_system",
+                              "voucher_currency",
+                              "voucher_api",
+                              "voucher_is_booked",
+                              "voucher_is_locked",
+                              "voucher_message",
+                              "voucher_title",
+                              "voucher_type"
+                            ]
+                          },
+                          "value": {
+                            "oneOf": [
+                              {
+                                "type": "string"
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
                 },
                 "_context": {
                   "oneOf": [
@@ -2547,49 +2974,246 @@
                   "description": "The server creation time of this transaction."
                 },
                 "fr_transaction_id": {
-                  "deprecated": true
+                  "oneOf": [
+                    {
+                      "deprecated": true
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
                 },
                 "fa_account_number": {
-                  "deprecated": true
+                  "oneOf": [
+                    {
+                      "deprecated": true,
+                      "type": "string",
+                      "example": "100575",
+                      "description": "Custom identifier for the payment financial account"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
                 },
                 "amount": {
-                  "deprecated": true
+                  "oneOf": [
+                    {
+                      "deprecated": true,
+                      "type": "integer",
+                      "example": 2000,
+                      "description": "The given amount via this payment, 20.00 EUR or 2000 HUF respectively"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
                 },
                 "currency_iso_code": {
-                  "deprecated": true
+                  "oneOf": [
+                    {
+                      "deprecated": true,
+                      "type": "string",
+                      "example": "EUR",
+                      "description": "The payment's currency"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
                 },
                 "account": {
-                  "deprecated": true
+                  "oneOf": [
+                    {
+                      "deprecated": true,
+                      "type": "string",
+                      "format": "uuid",
+                      "example": "55224036-e83f-4ece-8dbe-504e69d662c0",
+                      "description": "The Tillhub account resource associated with this payment option"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
                 },
                 "exchange_rate": {
-                  "deprecated": true
+                  "oneOf": [
+                    {
+                      "deprecated": true,
+                      "type": "string",
+                      "example": "2.315",
+                      "description": "String encoded number, not used"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
                 },
                 "payment_option_name": {
-                  "deprecated": true
+                  "oneOf": [
+                    {
+                      "deprecated": true,
+                      "type": "string",
+                      "example": "American Express",
+                      "description": "Name of the used payment option"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
                 },
                 "payment_option_type_name": {
-                  "deprecated": true
+                  "oneOf": [
+                    {
+                      "deprecated": true,
+                      "type": "string",
+                      "enum": [
+                        "undefined",
+                        "cash",
+                        "invoice",
+                        "gift_card",
+                        "card_opi",
+                        "card_concardis",
+                        "card_tim",
+                        "card_adyen",
+                        "card"
+                      ],
+                      "description": "Payment option type"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
                 },
                 "payment_option_id": {
-                  "deprecated": true
+                  "oneOf": [
+                    {
+                      "deprecated": true,
+                      "type": "string",
+                      "format": "uuid",
+                      "example": "96b619a6-6189-4f03-a135-e1b307d664de",
+                      "description": "The Tillhub payment option resource used for this payment"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
                 },
                 "guid": {
-                  "deprecated": true
+                  "oneOf": [
+                    {
+                      "deprecated": true,
+                      "description": "Not used"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
                 },
                 "_id": {
-                  "deprecated": true
+                  "oneOf": [
+                    {
+                      "deprecated": true
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
                 },
                 "date": {
-                  "deprecated": true
+                  "oneOf": [
+                    {
+                      "deprecated": true,
+                      "type": "string",
+                      "format": "date-time",
+                      "example": "2018-01-29T14:55:05.000Z",
+                      "description": "Date when this payment was created"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
                 },
                 "tip": {
-                  "deprecated": true
+                  "oneOf": [
+                    {
+                      "deprecated": true,
+                      "type": "integer",
+                      "example": 110,
+                      "description": "The given tip via this payment, 1.10 EUR or 110 HUF respectively"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
                 },
                 "terminal_response": {
-                  "deprecated": true
+                  "oneOf": [
+                    {
+                      "deprecated": true,
+                      "type": "string",
+                      "example": "<?xml version...",
+                      "description": "The final RAW response from any kind of card terminal API (e.g. OPI, Concardis...) - Used for payment verification against card operators"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
                 },
                 "context": {
-                  "deprecated": true
+                  "oneOf": [
+                    {
+                      "deprecated": true,
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": "string",
+                            "examples": [
+                              "voucher_value",
+                              "voucher_id",
+                              "voucher_client_id",
+                              "voucher_number",
+                              "voucher_ean",
+                              "voucher_product",
+                              "voucher_system_id",
+                              "voucher_system_system",
+                              "voucher_currency",
+                              "voucher_api",
+                              "voucher_is_booked",
+                              "voucher_is_locked",
+                              "voucher_message",
+                              "voucher_title",
+                              "voucher_type",
+                              "cardCircuit",
+                              "cardCustomerReceipt",
+                              "cardMerchantReceipt",
+                              "cardPAN",
+                              "cardTerminalID",
+                              "cardTerminalApi",
+                              "cardTerminalProvider",
+                              "cardTransactionID",
+                              "isTerminalConnected"
+                            ]
+                          },
+                          "value": {
+                            "oneOf": [
+                              {
+                                "type": "string"
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
                 },
                 "client_id": {
                   "oneOf": [
