@@ -248,10 +248,15 @@
         {
           "type": "array",
           "items": {
-            "type": "object",
-            "additionalProperties": false,
             "oneOf": [
               {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "type",
+                  "currency",
+                  "value"
+                ],
                 "properties": {
                   "currency": {
                     "type": "string",

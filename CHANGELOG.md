@@ -1,3 +1,10 @@
+## [4.81.1](https://github.com/tillhub/schemas/compare/v4.81.0...v4.81.1) (2019-11-05)
+
+
+### Bug Fixes
+
+* **voucher-systems:** use correct one of inference ([456ce0c](https://github.com/tillhub/schemas/commit/456ce0c))
+
 # [4.81.0](https://github.com/tillhub/schemas/compare/v4.80.0...v4.81.0) (2019-11-05)
 
 
