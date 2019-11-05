@@ -1,3 +1,10 @@
+# [4.81.0](https://github.com/tillhub/schemas/compare/v4.80.0...v4.81.0) (2019-11-05)
+
+
+### Features
+
+* **products:** add is free ([94ea3a4](https://github.com/tillhub/schemas/commit/94ea3a4))
+
 # [4.80.0](https://github.com/tillhub/schemas/compare/v4.79.0...v4.80.0) (2019-11-01)
 
 
