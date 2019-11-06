@@ -33,6 +33,20 @@ Contributors should commit only via the following command. Deployment and change
 npm run commit
 ```
 
+### Resources CRUD CLI
+
+Use the schema cli to create new resources automatically using Hygen:
+
+```console
+$ npm run new:schema
+> # interactive CLI
+```
+
+It will create the resources for the new schema and the route for it.
+Feel free to edit any files you need and don't forget to add the custom properties (if necessary) on:
+
+`/lib/<version>/base.js`
+
 ## License
 
 Apache-2.0

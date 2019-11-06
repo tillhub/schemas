@@ -245,46 +245,7 @@
               "default": null
             },
             "return": {
-              "oneOf": [
-                {
-                  "type": "object",
-                  "description": "Information about a returned item.",
-                  "properties": {
-                    "reason": {
-                      "oneOf": [
-                        {
-                          "type": "string",
-                          "format": "uuid",
-                          "example": "9d110eb2-2245-4e14-9574-49b502f3a9b3",
-                          "description": "The associated Tillhub reason resource."
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ],
-                      "default": null
-                    },
-                    "custom_description": {
-                      "oneOf": [
-                        {
-                          "type": "string",
-                          "maxLength": 1024,
-                          "example": "Cashier entered here a custom reason.",
-                          "description": "A client side user defined custom description for this return process."
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ],
-                      "default": null
-                    }
-                  }
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "default": null
+              "deprecated": true
             },
             "counters": {
               "oneOf": [
@@ -2064,14 +2025,21 @@
                     "content_type"
                   ],
                   "properties": {
-                    "question_id": {
+                    "id": {
                       "type": "string",
                       "format": "uuid",
-                      "description": "A Tillhub product question resource."
+                      "example": "1d53f799-c24f-49e3-b68f-93ae5fc69921",
+                      "description": "A Tillhub product question resource identifier."
+                    },
+                    "question": {
+                      "type": "string",
+                      "maxLength": 1024,
+                      "example": "Which colour is used?",
+                      "description": "The associated Tillhub product question 'content' field."
                     },
                     "type": {
                       "type": "string",
-                      "description": "The type of answer layout",
+                      "description": "The required layout type of the answer",
                       "enum": [
                         "checkbox",
                         "free_text_input",
@@ -2081,7 +2049,7 @@
                     },
                     "content_type": {
                       "type": "string",
-                      "description": "The type of answer content validation",
+                      "description": "The required content type of the answer",
                       "enum": [
                         "string",
                         "boolean",
@@ -2102,7 +2070,7 @@
                       "default": null
                     },
                     "answer": {
-                      "description": "Answer content of a product service question",
+                      "description": "The answer content of a product service question",
                       "oneOf": [
                         {
                           "type": "object",
@@ -2111,8 +2079,39 @@
                             "content"
                           ],
                           "properties": {
-                            "content": {},
-                            "unit": {}
+                            "content": {
+                              "oneOf": [
+                                {
+                                  "type": "number",
+                                  "description": "If 'number_input_plus_optional_unit_select', this field contains the inputted numerical value."
+                                },
+                                {
+                                  "type": "boolean",
+                                  "description": "If 'checkbox', this field contains the selcetd boolean value."
+                                },
+                                {
+                                  "type": "string",
+                                  "description": "If 'free_text_input' or 'simple_select', this field contains the inputted text."
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "unit": {
+                              "oneOf": [
+                                {
+                                  "type": "string",
+                                  "maxLength": 128,
+                                  "example": "ml",
+                                  "description": "If 'number_input_plus_optional_unit_select', this field contains the selected unit."
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ],
+                              "default": null
+                            }
                           }
                         },
                         {
@@ -2382,6 +2381,109 @@
                           "type",
                           "status"
                         ]
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
+                  "return_reason": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "description": "Information about a returned item.",
+                        "properties": {
+                          "id": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "format": "uuid",
+                                "example": "9d110eb2-2245-4e14-9574-49b502f3a9b3",
+                                "description": "The associated Tillhub reason resource."
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ],
+                            "default": null
+                          },
+                          "reason": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "maxLength": 64,
+                                "example": "Accidental Charge",
+                                "description": "The  Tillhub reason resource's name."
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ],
+                            "default": null
+                          },
+                          "description": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "maxLength": 1024,
+                                "example": "Accidentally charged the customer for products he did not buy",
+                                "description": "The  Tillhub reason resource's description."
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ],
+                            "default": null
+                          },
+                          "custom_reason": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "maxLength": 1024,
+                                "example": "Cashier entered here a custom reason.",
+                                "description": "A client side user defined custom description for this return process."
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ],
+                            "default": null
+                          },
+                          "behavior": {
+                            "oneOf": [
+                              {
+                                "type": "object",
+                                "description": "Copy of the behavior object from the reasons table.",
+                                "properties": {
+                                  "stock": {
+                                    "type": "string",
+                                    "enum": [
+                                      "restock"
+                                    ]
+                                  },
+                                  "stock_location": {
+                                    "type": "string",
+                                    "enum": [
+                                      "current"
+                                    ]
+                                  },
+                                  "navigation": {
+                                    "type": "string",
+                                    "enum": [
+                                      "payment_view",
+                                      "carts",
+                                      "ask"
+                                    ]
+                                  }
+                                }
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
                       },
                       {
                         "type": "null"
@@ -3272,6 +3374,10 @@
               "type": "null"
             }
           ]
+        },
+        "status": {},
+        "signature": {
+          "type": "object"
         }
       }
     }

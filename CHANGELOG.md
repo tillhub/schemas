@@ -1,3 +1,747 @@
+## [4.81.1](https://github.com/tillhub/schemas/compare/v4.81.0...v4.81.1) (2019-11-05)
+
+
+### Bug Fixes
+
+* **voucher-systems:** use correct one of inference ([456ce0c](https://github.com/tillhub/schemas/commit/456ce0c))
+
+# [4.81.0](https://github.com/tillhub/schemas/compare/v4.80.0...v4.81.0) (2019-11-05)
+
+
+### Features
+
+* **products:** add is free ([94ea3a4](https://github.com/tillhub/schemas/commit/94ea3a4))
+
+# [4.80.0](https://github.com/tillhub/schemas/compare/v4.79.0...v4.80.0) (2019-11-01)
+
+
+### Features
+
+* **transactions:** add details for v0 props top level ([4c46d26](https://github.com/tillhub/schemas/commit/4c46d26))
+
+# [4.79.0](https://github.com/tillhub/schemas/compare/v4.78.0...v4.79.0) (2019-11-01)
+
+
+### Features
+
+* **transactions:** add details for v0 props ([612c7ed](https://github.com/tillhub/schemas/commit/612c7ed))
+
+# [4.78.0](https://github.com/tillhub/schemas/compare/v4.77.0...v4.78.0) (2019-10-31)
+
+
+### Features
+
+* **vouchers:** add increment restrictions ([27abab7](https://github.com/tillhub/schemas/commit/27abab7))
+
+# [4.77.0](https://github.com/tillhub/schemas/compare/v4.76.0...v4.77.0) (2019-10-30)
+
+
+### Features
+
+* **transactions:** update product service answers ([e7d669c](https://github.com/tillhub/schemas/commit/e7d669c))
+
+# [4.76.0](https://github.com/tillhub/schemas/compare/v4.75.0...v4.76.0) (2019-10-30)
+
+
+### Features
+
+* **registers:** add cost center property ([#280](https://github.com/tillhub/schemas/issues/280)) ([c7a0200](https://github.com/tillhub/schemas/commit/c7a0200))
+
+# [4.75.0](https://github.com/tillhub/schemas/compare/v4.74.0...v4.75.0) (2019-10-30)
+
+
+### Features
+
+* **payment_options:** add discrepancy account property ([#279](https://github.com/tillhub/schemas/issues/279)) ([8dedab6](https://github.com/tillhub/schemas/commit/8dedab6))
+
+# [4.74.0](https://github.com/tillhub/schemas/compare/v4.73.1...v4.74.0) (2019-10-30)
+
+
+### Features
+
+* **transactions:** move return reason to items ([#277](https://github.com/tillhub/schemas/issues/277)) ([389d465](https://github.com/tillhub/schemas/commit/389d465))
+
+## [4.73.1](https://github.com/tillhub/schemas/compare/v4.73.0...v4.73.1) (2019-10-29)
+
+
+### Bug Fixes
+
+* **Transactions V1 legacy:** moved Return Reason to cart item with up-to-date format ([82a9900](https://github.com/tillhub/schemas/commit/82a9900))
+
+# [4.73.0](https://github.com/tillhub/schemas/compare/v4.72.0...v4.73.0) (2019-10-29)
+
+
+### Features
+
+* **tx_v1_legacy:** add properties ([4dc1822](https://github.com/tillhub/schemas/commit/4dc1822))
+
+# [4.72.0](https://github.com/tillhub/schemas/compare/v4.71.0...v4.72.0) (2019-10-29)
+
+
+### Features
+
+* **configurations:** config zebra scanner api ([#275](https://github.com/tillhub/schemas/issues/275)) ([2e7d557](https://github.com/tillhub/schemas/commit/2e7d557))
+
+# [4.71.0](https://github.com/tillhub/schemas/compare/v4.70.0...v4.71.0) (2019-10-29)
+
+
+### Features
+
+* **tx_v1_legacy:** add signing status property ([18747d0](https://github.com/tillhub/schemas/commit/18747d0))
+
+# [4.70.0](https://github.com/tillhub/schemas/compare/v4.69.6...v4.70.0) (2019-10-29)
+
+
+### Features
+
+* **tx_v1:** fix typo ([b3a1943](https://github.com/tillhub/schemas/commit/b3a1943))
+
+## [4.69.6](https://github.com/tillhub/schemas/compare/v4.69.5...v4.69.6) (2019-10-29)
+
+
+### Bug Fixes
+
+* **configurations:** rename expenses deposits ([d561ce7](https://github.com/tillhub/schemas/commit/d561ce7))
+
+## [4.69.5](https://github.com/tillhub/schemas/compare/v4.69.4...v4.69.5) (2019-10-28)
+
+
+### Bug Fixes
+
+* **devices:** add `status` to base properties ([9c4948e](https://github.com/tillhub/schemas/commit/9c4948e))
+
+## [4.69.4](https://github.com/tillhub/schemas/compare/v4.69.3...v4.69.4) (2019-10-25)
+
+
+### Bug Fixes
+
+* **configurations:** remove required fields not used ([3d6e8fb](https://github.com/tillhub/schemas/commit/3d6e8fb))
+
+## [4.69.3](https://github.com/tillhub/schemas/compare/v4.69.2...v4.69.3) (2019-10-24)
+
+
+### Bug Fixes
+
+* **demo_data:** fix object properties ([088ff3b](https://github.com/tillhub/schemas/commit/088ff3b))
+
+## [4.69.2](https://github.com/tillhub/schemas/compare/v4.69.1...v4.69.2) (2019-10-24)
+
+
+### Bug Fixes
+
+* **staff/scopes:** add even more devices permissions ([3433902](https://github.com/tillhub/schemas/commit/3433902))
+
+## [4.69.1](https://github.com/tillhub/schemas/compare/v4.69.0...v4.69.1) (2019-10-24)
+
+
+### Bug Fixes
+
+* **demo-data:** fix validation ([d9cfa47](https://github.com/tillhub/schemas/commit/d9cfa47))
+
+# [4.69.0](https://github.com/tillhub/schemas/compare/v4.68.0...v4.69.0) (2019-10-24)
+
+
+### Features
+
+* **permissions:** add new permission, loosely validate permissions ([8a4d4ea](https://github.com/tillhub/schemas/commit/8a4d4ea))
+
+# [4.68.0](https://github.com/tillhub/schemas/compare/v4.67.0...v4.68.0) (2019-10-24)
+
+
+### Features
+
+* **configurations:** require sales for balances ([ac62c1f](https://github.com/tillhub/schemas/commit/ac62c1f))
+
+# [4.67.0](https://github.com/tillhub/schemas/compare/v4.66.2...v4.67.0) (2019-10-24)
+
+
+### Features
+
+* **products:** add warranty etc. + acls ([9b4985f](https://github.com/tillhub/schemas/commit/9b4985f))
+
+## [4.66.2](https://github.com/tillhub/schemas/compare/v4.66.1...v4.66.2) (2019-10-23)
+
+
+### Bug Fixes
+
+* **products:** use correct prose description ([65842aa](https://github.com/tillhub/schemas/commit/65842aa))
+
+## [4.66.1](https://github.com/tillhub/schemas/compare/v4.66.0...v4.66.1) (2019-10-23)
+
+
+### Bug Fixes
+
+* **products:** add missing price book props ([d027127](https://github.com/tillhub/schemas/commit/d027127))
+
+# [4.66.0](https://github.com/tillhub/schemas/compare/v4.65.0...v4.66.0) (2019-10-23)
+
+
+### Features
+
+* **products:** add price book ([b930d3a](https://github.com/tillhub/schemas/commit/b930d3a))
+
+# [4.65.0](https://github.com/tillhub/schemas/compare/v4.64.0...v4.65.0) (2019-10-23)
+
+
+### Features
+
+* **branches:** add branch_price schema ([f73ed27](https://github.com/tillhub/schemas/commit/f73ed27))
+
+# [4.64.0](https://github.com/tillhub/schemas/compare/v4.63.0...v4.64.0) (2019-10-23)
+
+
+### Features
+
+* **staff:** add permission scopes for devices ([3ef5c44](https://github.com/tillhub/schemas/commit/3ef5c44))
+
+# [4.63.0](https://github.com/tillhub/schemas/compare/v4.62.0...v4.63.0) (2019-10-23)
+
+
+### Features
+
+* **configurations:** add cart limit prop, restructure ([#262](https://github.com/tillhub/schemas/issues/262)) ([c14cd9e](https://github.com/tillhub/schemas/commit/c14cd9e))
+
+# [4.62.0](https://github.com/tillhub/schemas/compare/v4.61.0...v4.62.0) (2019-10-22)
+
+
+### Features
+
+* **register opening protocol:** added totals and some descriptions ([f2d4d78](https://github.com/tillhub/schemas/commit/f2d4d78))
+
+# [4.61.0](https://github.com/tillhub/schemas/compare/v4.60.0...v4.61.0) (2019-10-22)
+
+
+### Features
+
+* **products:** add barcode type - unknown ([a1e5e6f](https://github.com/tillhub/schemas/commit/a1e5e6f))
+
+# [4.60.0](https://github.com/tillhub/schemas/compare/v4.59.0...v4.60.0) (2019-10-22)
+
+
+### Features
+
+* **register_opening_protocol:** add totals and descriptions ([#259](https://github.com/tillhub/schemas/issues/259)) ([e1a0c1d](https://github.com/tillhub/schemas/commit/e1a0c1d))
+
+# [4.59.0](https://github.com/tillhub/schemas/compare/v4.58.0...v4.59.0) (2019-10-22)
+
+
+### Features
+
+* **register-opening-protocols:** change required fields ([6c8d04f](https://github.com/tillhub/schemas/commit/6c8d04f))
+
+# [4.58.0](https://github.com/tillhub/schemas/compare/v4.57.0...v4.58.0) (2019-10-22)
+
+
+### Features
+
+* **register_opening_protocols:** remove client_id and staff ([53fe746](https://github.com/tillhub/schemas/commit/53fe746))
+
+# [4.57.0](https://github.com/tillhub/schemas/compare/v4.56.3...v4.57.0) (2019-10-22)
+
+
+### Features
+
+* **configurations:** add expense deposit flags ([95aaa03](https://github.com/tillhub/schemas/commit/95aaa03))
+
+## [4.56.3](https://github.com/tillhub/schemas/compare/v4.56.2...v4.56.3) (2019-10-21)
+
+
+### Bug Fixes
+
+* **devices:** make device_configuration optional ([3d1c13f](https://github.com/tillhub/schemas/commit/3d1c13f))
+
+## [4.56.2](https://github.com/tillhub/schemas/compare/v4.56.1...v4.56.2) (2019-10-21)
+
+
+### Bug Fixes
+
+* **devices:** make a few more properties optional ([1d3aea7](https://github.com/tillhub/schemas/commit/1d3aea7))
+
+## [4.56.1](https://github.com/tillhub/schemas/compare/v4.56.0...v4.56.1) (2019-10-21)
+
+
+### Bug Fixes
+
+* **devices:** remove duplicate properties in default response ([0c02693](https://github.com/tillhub/schemas/commit/0c02693))
+
+# [4.56.0](https://github.com/tillhub/schemas/compare/v4.55.0...v4.56.0) (2019-10-16)
+
+
+### Features
+
+* **configurations:** add minimum stock notif flag ([fe20725](https://github.com/tillhub/schemas/commit/fe20725))
+
+# [4.55.0](https://github.com/tillhub/schemas/compare/v4.54.0...v4.55.0) (2019-10-16)
+
+
+### Features
+
+* **register-opening-protocols:** add client_id ([7395bae](https://github.com/tillhub/schemas/commit/7395bae))
+
+# [4.54.0](https://github.com/tillhub/schemas/compare/v4.53.3...v4.54.0) (2019-10-15)
+
+
+### Features
+
+* **devices:** add create schema ([fdad176](https://github.com/tillhub/schemas/commit/fdad176))
+
+## [4.53.3](https://github.com/tillhub/schemas/compare/v4.53.2...v4.53.3) (2019-10-15)
+
+
+### Bug Fixes
+
+* **devices:** make register id during binding optional ([96022db](https://github.com/tillhub/schemas/commit/96022db))
+
+## [4.53.2](https://github.com/tillhub/schemas/compare/v4.53.1...v4.53.2) (2019-10-15)
+
+
+### Bug Fixes
+
+* **devices:** enforce device id max length ([4c6c7ae](https://github.com/tillhub/schemas/commit/4c6c7ae))
+
+## [4.53.1](https://github.com/tillhub/schemas/compare/v4.53.0...v4.53.1) (2019-10-14)
+
+
+### Bug Fixes
+
+* add missing fields ([05df70c](https://github.com/tillhub/schemas/commit/05df70c))
+
+# [4.53.0](https://github.com/tillhub/schemas/compare/v4.52.0...v4.53.0) (2019-10-14)
+
+
+### Features
+
+* add operations ([8f95e0f](https://github.com/tillhub/schemas/commit/8f95e0f))
+
+# [4.52.0](https://github.com/tillhub/schemas/compare/v4.51.0...v4.52.0) (2019-10-14)
+
+
+### Features
+
+* **products:** change date format for time based price ([5ab2474](https://github.com/tillhub/schemas/commit/5ab2474))
+
+# [4.51.0](https://github.com/tillhub/schemas/compare/v4.50.0...v4.51.0) (2019-10-14)
+
+
+### Bug Fixes
+
+* **devices:** remove need for device id to be uuid ([72c5f65](https://github.com/tillhub/schemas/commit/72c5f65))
+
+
+### Features
+
+* **devices:** support eda ([a50f3bd](https://github.com/tillhub/schemas/commit/a50f3bd))
+
+# [4.50.0](https://github.com/tillhub/schemas/compare/v4.49.0...v4.50.0) (2019-10-11)
+
+
+### Features
+
+* add product price to commom lib ([a70b2fc](https://github.com/tillhub/schemas/commit/a70b2fc))
+
+# [4.49.0](https://github.com/tillhub/schemas/compare/v4.48.0...v4.49.0) (2019-10-11)
+
+
+### Features
+
+* **configurations of register opening and closing:** Activation of counting protocole on register o ([8cd4696](https://github.com/tillhub/schemas/commit/8cd4696))
+
+# [4.48.0](https://github.com/tillhub/schemas/compare/v4.47.0...v4.48.0) (2019-10-10)
+
+
+### Features
+
+* **register_protocols:** fix examples and their types ([7463825](https://github.com/tillhub/schemas/commit/7463825))
+
+# [4.47.0](https://github.com/tillhub/schemas/compare/v4.46.1...v4.47.0) (2019-10-10)
+
+
+### Features
+
+* **configurations:** receipts, customer style ([beb45ab](https://github.com/tillhub/schemas/commit/beb45ab))
+
+## [4.46.1](https://github.com/tillhub/schemas/compare/v4.46.0...v4.46.1) (2019-10-08)
+
+
+### Bug Fixes
+
+* **tokens:** token_id as uuid ([0afe508](https://github.com/tillhub/schemas/commit/0afe508))
+
+# [4.46.0](https://github.com/tillhub/schemas/compare/v4.45.1...v4.46.0) (2019-10-08)
+
+
+### Bug Fixes
+
+* **Configurations:** balances discrepency warning ([46276ab](https://github.com/tillhub/schemas/commit/46276ab))
+
+
+### Features
+
+* **Configurations:** Config for balance discrepency warning ([1c0e455](https://github.com/tillhub/schemas/commit/1c0e455))
+
+## [4.45.1](https://github.com/tillhub/schemas/compare/v4.45.0...v4.45.1) (2019-10-08)
+
+
+### Bug Fixes
+
+* **tokens:** add client account property ([025b178](https://github.com/tillhub/schemas/commit/025b178))
+
+# [4.45.0](https://github.com/tillhub/schemas/compare/v4.44.0...v4.45.0) (2019-10-08)
+
+
+### Bug Fixes
+
+* fix description ([2294a47](https://github.com/tillhub/schemas/commit/2294a47))
+* fix helpers dependency ([f16b295](https://github.com/tillhub/schemas/commit/f16b295))
+* handle block properties separatedly ([4f705d8](https://github.com/tillhub/schemas/commit/4f705d8))
+* handle token as string not uuid ([3642f17](https://github.com/tillhub/schemas/commit/3642f17))
+* remove base dependency ([ebce08e](https://github.com/tillhub/schemas/commit/ebce08e))
+* use oneOf helpers ([ff06715](https://github.com/tillhub/schemas/commit/ff06715))
+* validate block ([dd6ab25](https://github.com/tillhub/schemas/commit/dd6ab25))
+
+
+### Features
+
+* **tokens:** validate tokens on login/logout ([a797e61](https://github.com/tillhub/schemas/commit/a797e61))
+
+# [4.44.0](https://github.com/tillhub/schemas/compare/v4.43.0...v4.44.0) (2019-10-02)
+
+
+### Features
+
+* **register_opening_protocols:** expose module path ([2cfaf5d](https://github.com/tillhub/schemas/commit/2cfaf5d))
+
+# [4.43.0](https://github.com/tillhub/schemas/compare/v4.42.0...v4.43.0) (2019-10-02)
+
+
+### Features
+
+* **register_opening_protocol:** add "get" request schema ([49ad036](https://github.com/tillhub/schemas/commit/49ad036))
+
+# [4.42.0](https://github.com/tillhub/schemas/compare/v4.41.0...v4.42.0) (2019-10-02)
+
+
+### Features
+
+* **register_opening_protocol:** remove required property ([9ca9827](https://github.com/tillhub/schemas/commit/9ca9827))
+
+# [4.41.0](https://github.com/tillhub/schemas/compare/v4.40.0...v4.41.0) (2019-10-02)
+
+
+### Features
+
+* **products_v1:** rename delegatable properties ([ad4f9db](https://github.com/tillhub/schemas/commit/ad4f9db))
+
+# [4.40.0](https://github.com/tillhub/schemas/compare/v4.39.0...v4.40.0) (2019-10-02)
+
+
+### Features
+
+* **register_opening_protocols:** rename required property ([fc69446](https://github.com/tillhub/schemas/commit/fc69446))
+
+# [4.39.0](https://github.com/tillhub/schemas/compare/v4.38.0...v4.39.0) (2019-10-02)
+
+
+### Features
+
+* **register_opening_protocols:** rename property ([f38b353](https://github.com/tillhub/schemas/commit/f38b353))
+
+# [4.38.0](https://github.com/tillhub/schemas/compare/v4.37.0...v4.38.0) (2019-10-02)
+
+
+### Features
+
+* **register_opening_protocols:** add properties ([6ada527](https://github.com/tillhub/schemas/commit/6ada527))
+
+# [4.37.0](https://github.com/tillhub/schemas/compare/v4.36.0...v4.37.0) (2019-10-01)
+
+
+### Features
+
+* **client_accounts:** enhance client ux ([07431c6](https://github.com/tillhub/schemas/commit/07431c6))
+
+# [4.36.0](https://github.com/tillhub/schemas/compare/v4.35.0...v4.36.0) (2019-10-01)
+
+
+### Features
+
+* **client_accounts:** align correct payment options ([3baf6b5](https://github.com/tillhub/schemas/commit/3baf6b5))
+
+# [4.35.0](https://github.com/tillhub/schemas/compare/v4.34.0...v4.35.0) (2019-10-01)
+
+
+### Features
+
+* **register_opening_protocols:** add discprepancy ([2329c33](https://github.com/tillhub/schemas/commit/2329c33))
+
+# [4.34.0](https://github.com/tillhub/schemas/compare/v4.33.0...v4.34.0) (2019-10-01)
+
+
+### Features
+
+* **register_opening_protocols:** add new schemas ([570007f](https://github.com/tillhub/schemas/commit/570007f))
+
+# [4.33.0](https://github.com/tillhub/schemas/compare/v4.32.0...v4.33.0) (2019-10-01)
+
+
+### Features
+
+* **configurations.tips:** tips auto proposal on/off ([#232](https://github.com/tillhub/schemas/issues/232)) ([094fa08](https://github.com/tillhub/schemas/commit/094fa08))
+
+# [4.32.0](https://github.com/tillhub/schemas/compare/v4.31.1...v4.32.0) (2019-10-01)
+
+
+### Features
+
+* **client_accounts:** add missing whitelabel prop ([58685ea](https://github.com/tillhub/schemas/commit/58685ea))
+
+## [4.31.1](https://github.com/tillhub/schemas/compare/v4.31.0...v4.31.1) (2019-09-30)
+
+
+### Bug Fixes
+
+* **branch_groups:** add color property ([17c0774](https://github.com/tillhub/schemas/commit/17c0774))
+
+# [4.31.0](https://github.com/tillhub/schemas/compare/v4.30.1...v4.31.0) (2019-09-30)
+
+
+### Features
+
+* add seasons schemas ([dcd5cee](https://github.com/tillhub/schemas/commit/dcd5cee))
+
+## [4.30.1](https://github.com/tillhub/schemas/compare/v4.30.0...v4.30.1) (2019-09-27)
+
+
+### Bug Fixes
+
+* **regions:** rename region groups to regions ([3c20699](https://github.com/tillhub/schemas/commit/3c20699))
+
+# [4.30.0](https://github.com/tillhub/schemas/compare/v4.29.0...v4.30.0) (2019-09-27)
+
+
+### Features
+
+* **region_groups:** add region groups crud ([d36f064](https://github.com/tillhub/schemas/commit/d36f064))
+
+# [4.29.0](https://github.com/tillhub/schemas/compare/v4.28.0...v4.29.0) (2019-09-26)
+
+
+### Features
+
+* **device_groups:** add device group schema ([e67df60](https://github.com/tillhub/schemas/commit/e67df60))
+
+# [4.28.0](https://github.com/tillhub/schemas/compare/v4.27.0...v4.28.0) (2019-09-25)
+
+
+### Bug Fixes
+
+* **cli:** change prompt message ([ed42853](https://github.com/tillhub/schemas/commit/ed42853))
+* **cli:** remove irreirrelevant hygen stuff ([dead112](https://github.com/tillhub/schemas/commit/dead112))
+
+
+### Features
+
+* **cli:** add cli to create  schemas ([9b1ff4b](https://github.com/tillhub/schemas/commit/9b1ff4b))
+
+# [4.27.0](https://github.com/tillhub/schemas/compare/v4.26.0...v4.27.0) (2019-09-25)
+
+
+### Features
+
+* **Configurations.Transactions:** Limits for transaction history ([955877d](https://github.com/tillhub/schemas/commit/955877d))
+
+# [4.26.0](https://github.com/tillhub/schemas/compare/v4.25.2...v4.26.0) (2019-09-25)
+
+
+### Features
+
+* **staff:** add staff group schema ([edfe1a0](https://github.com/tillhub/schemas/commit/edfe1a0))
+
+## [4.25.2](https://github.com/tillhub/schemas/compare/v4.25.1...v4.25.2) (2019-09-24)
+
+
+### Bug Fixes
+
+* **branch_groups:** fix schemas json ([b297c9e](https://github.com/tillhub/schemas/commit/b297c9e))
+
+## [4.25.1](https://github.com/tillhub/schemas/compare/v4.25.0...v4.25.1) (2019-09-23)
+
+
+### Bug Fixes
+
+* **branch_groups:** add index route ([d68310a](https://github.com/tillhub/schemas/commit/d68310a))
+
+# [4.25.0](https://github.com/tillhub/schemas/compare/v4.24.0...v4.25.0) (2019-09-23)
+
+
+### Features
+
+* **branch_groups:** add branch groups crud ([fc3d89b](https://github.com/tillhub/schemas/commit/fc3d89b))
+
+# [4.24.0](https://github.com/tillhub/schemas/compare/v4.23.0...v4.24.0) (2019-09-19)
+
+
+### Features
+
+* **Configurations:** Configurations.staff logout button ([b2b3060](https://github.com/tillhub/schemas/commit/b2b3060))
+
+# [4.23.0](https://github.com/tillhub/schemas/compare/v4.22.0...v4.23.0) (2019-09-19)
+
+
+### Features
+
+* **products_v1:** add delegateable flag ([c48783e](https://github.com/tillhub/schemas/commit/c48783e))
+
+# [4.22.0](https://github.com/tillhub/schemas/compare/v4.21.0...v4.22.0) (2019-09-18)
+
+
+### Features
+
+* **products_v1:** add delegated_from and delegateable_to ([a5d4c12](https://github.com/tillhub/schemas/commit/a5d4c12))
+
+# [4.21.0](https://github.com/tillhub/schemas/compare/v4.20.0...v4.21.0) (2019-09-16)
+
+
+### Features
+
+* **stock_books:** add comments ([8827ced](https://github.com/tillhub/schemas/commit/8827ced))
+* **stock_books:** add comments to schema ([92a9af8](https://github.com/tillhub/schemas/commit/92a9af8))
+
+# [4.20.0](https://github.com/tillhub/schemas/compare/v4.19.0...v4.20.0) (2019-09-16)
+
+
+### Features
+
+* **content_templates:** rename contents_templates into content_templates ([1238d3e](https://github.com/tillhub/schemas/commit/1238d3e))
+
+# [4.19.0](https://github.com/tillhub/schemas/compare/v4.18.1...v4.19.0) (2019-09-12)
+
+
+### Features
+
+* **contents_templates:** add new schemas ([611a8ac](https://github.com/tillhub/schemas/commit/611a8ac))
+
+## [4.18.1](https://github.com/tillhub/schemas/compare/v4.18.0...v4.18.1) (2019-09-11)
+
+
+### Bug Fixes
+
+* **staff_permission_templates:** add index ([d02786f](https://github.com/tillhub/schemas/commit/d02786f))
+
+# [4.18.0](https://github.com/tillhub/schemas/compare/v4.17.0...v4.18.0) (2019-09-11)
+
+
+### Features
+
+* **permissions:** add permissions templates ([09093cf](https://github.com/tillhub/schemas/commit/09093cf))
+* **permissions:** rename resource to staff_permission_templates ([7a4fb47](https://github.com/tillhub/schemas/commit/7a4fb47))
+
+# [4.17.0](https://github.com/tillhub/schemas/compare/v4.16.1...v4.17.0) (2019-09-09)
+
+
+### Features
+
+* **promotions:** add locations property ([2a99dde](https://github.com/tillhub/schemas/commit/2a99dde))
+
+## [4.16.1](https://github.com/tillhub/schemas/compare/v4.16.0...v4.16.1) (2019-09-05)
+
+
+### Bug Fixes
+
+* **stocks_book:** rename reasons property ([529df27](https://github.com/tillhub/schemas/commit/529df27))
+* **stocks_book reason:** rename reasons ([5531951](https://github.com/tillhub/schemas/commit/5531951))
+
+# [4.16.0](https://github.com/tillhub/schemas/compare/v4.15.0...v4.16.0) (2019-09-05)
+
+
+### Features
+
+* **functions:** add_to_cart class ([fbb8db4](https://github.com/tillhub/schemas/commit/fbb8db4))
+
+# [4.15.0](https://github.com/tillhub/schemas/compare/v4.14.1...v4.15.0) (2019-09-04)
+
+
+### Features
+
+* **configurations:** configuartions receipts options ([7419b24](https://github.com/tillhub/schemas/commit/7419b24))
+
+## [4.14.1](https://github.com/tillhub/schemas/compare/v4.14.0...v4.14.1) (2019-09-03)
+
+
+### Bug Fixes
+
+* **settings/discounts:** max rate can be null ([a8d4a17](https://github.com/tillhub/schemas/commit/a8d4a17))
+
+# [4.14.0](https://github.com/tillhub/schemas/compare/v4.13.0...v4.14.0) (2019-09-03)
+
+
+### Features
+
+* **configurations:** add discounts details ([#201](https://github.com/tillhub/schemas/issues/201)) ([e1817ac](https://github.com/tillhub/schemas/commit/e1817ac))
+
+# [4.13.0](https://github.com/tillhub/schemas/compare/v4.12.0...v4.13.0) (2019-09-02)
+
+
+### Bug Fixes
+
+* **promotions:** fix dist ([70c20df](https://github.com/tillhub/schemas/commit/70c20df))
+
+
+### Features
+
+* **promotions:** add promotion schema ([e38f374](https://github.com/tillhub/schemas/commit/e38f374))
+* **promotions:** update columns ([b260299](https://github.com/tillhub/schemas/commit/b260299))
+
+# [4.12.0](https://github.com/tillhub/schemas/compare/v4.11.0...v4.12.0) (2019-08-29)
+
+
+### Features
+
+* **Configurations:** third_party ([9f467f9](https://github.com/tillhub/schemas/commit/9f467f9))
+
+# [4.11.0](https://github.com/tillhub/schemas/compare/v4.10.0...v4.11.0) (2019-08-28)
+
+
+### Features
+
+* **full_receipt:** apply ios description ([1122a20](https://github.com/tillhub/schemas/commit/1122a20))
+* **full_receipt:** update create items and summery items ([ae6390b](https://github.com/tillhub/schemas/commit/ae6390b))
+
+# [4.10.0](https://github.com/tillhub/schemas/compare/v4.9.0...v4.10.0) (2019-08-28)
+
+
+### Features
+
+* **staff:** add staff scopes as a seperate file module ([dd4da90](https://github.com/tillhub/schemas/commit/dd4da90))
+
+# [4.9.0](https://github.com/tillhub/schemas/compare/v4.8.0...v4.9.0) (2019-08-28)
+
+
+### Features
+
+* **Configurations:** third party app links ([4aefecf](https://github.com/tillhub/schemas/commit/4aefecf))
+
+# [4.8.0](https://github.com/tillhub/schemas/compare/v4.7.1...v4.8.0) (2019-08-26)
+
+
+### Features
+
+* **stocks:** revert location validation ([2298cba](https://github.com/tillhub/schemas/commit/2298cba))
+
+## [4.7.1](https://github.com/tillhub/schemas/compare/v4.7.0...v4.7.1) (2019-08-26)
+
+
+### Bug Fixes
+
+* **pdfs:** add missing company prop ([f1a9106](https://github.com/tillhub/schemas/commit/f1a9106))
+
+# [4.7.0](https://github.com/tillhub/schemas/compare/v4.6.0...v4.7.0) (2019-08-26)
+
+
+### Features
+
+* **stocks:** add response schemas ([a0d19e7](https://github.com/tillhub/schemas/commit/a0d19e7))
+
 # [4.6.0](https://github.com/tillhub/schemas/compare/v4.5.0...v4.6.0) (2019-08-25)
 
 

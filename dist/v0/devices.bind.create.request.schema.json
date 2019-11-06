@@ -5,8 +5,7 @@
   "type": "object",
   "required": [
     "token",
-    "client_account",
-    "register"
+    "client_account"
   ],
   "properties": {
     "token": {

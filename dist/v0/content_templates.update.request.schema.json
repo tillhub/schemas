@@ -1,0 +1,169 @@
+{
+  "$id": "https://schemas.tillhub.com/v0/content_templates.update.request.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "type": "object",
+  "required": [],
+  "properties": {
+    "name": {
+      "description": "Any arbitrary name for a content template",
+      "oneOf": [
+        {
+          "type": "string",
+          "maxLength": 255,
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "active": {
+      "description": "Soft disable or enabled this item.",
+      "type": "boolean",
+      "default": true
+    },
+    "deleted": {
+      "description": "Soft delete this item.",
+      "type": "boolean",
+      "default": false
+    },
+    "contents": {
+      "oneOf": [
+        {
+          "type": "object",
+          "description": "CFD displayable device contents",
+          "additionalProperties": false,
+          "properties": {
+            "idle": {
+              "oneOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "welcome": {
+              "oneOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "cart": {
+              "oneOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "payment": {
+              "oneOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "payment_terminal": {
+              "oneOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "payment_approved": {
+              "oneOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "goodbye": {
+              "oneOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "logo": {
+              "oneOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "runtime": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  }
+}

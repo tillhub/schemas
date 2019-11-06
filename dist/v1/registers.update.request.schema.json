@@ -83,6 +83,17 @@
         }
       ]
     },
+    "cost_center": {
+      "anyOf": [
+        {
+          "type": "string",
+          "maxLength": 128
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "register_number": {
       "anyOf": [
         {

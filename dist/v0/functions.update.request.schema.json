@@ -107,7 +107,8 @@
           "type": "string",
           "description": "Define which e.g. client local function implementation to use.",
           "enum": [
-            "instant_checkout"
+            "instant_checkout",
+            "add_to_cart"
           ]
         }
       },
@@ -116,7 +117,8 @@
           "class": {
             "type": "string",
             "enum": [
-              "instant_checkout"
+              "instant_checkout",
+              "add_to_cart"
             ]
           }
         }

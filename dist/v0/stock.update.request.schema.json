@@ -31,11 +31,49 @@
       ]
     },
     "metadata": {
-      "type": "object"
+      "oneOf": [
+        {
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "reasons": {
-      "type": "string",
-      "format": "uuid"
+      "oneOf": [
+        {
+          "description": "Deprecated property. Use reason instead.",
+          "type": "string",
+          "format": "uuid"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "reason": {
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "uuid"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "comments": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2048
+        },
+        {
+          "type": "null"
+        }
+      ]
     }
   }
 }

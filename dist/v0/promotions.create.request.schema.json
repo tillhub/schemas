@@ -1,0 +1,105 @@
+{
+  "$id": "https://schemas.tillhub.com/v0/promotions.create.request.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "type": "object",
+  "required": [
+    "payload",
+    "type"
+  ],
+  "properties": {
+    "name": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 255
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "description": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1024
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "payload": {
+      "description": "Javascript function text",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 65536
+    },
+    "type": {
+      "description": "The type of the promotion function",
+      "type": "string",
+      "enum": [
+        "cart_map_function"
+      ]
+    },
+    "metadata": {
+      "oneOf": [
+        {
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "arguments": {
+      "oneOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "locations": {
+      "oneOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "client_id": {
+      "description": "A identifier used locally on POS for their own reference.",
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "deleted": {
+      "type": "boolean"
+    },
+    "active": {
+      "type": "boolean"
+    }
+  }
+}

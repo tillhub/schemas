@@ -59,49 +59,70 @@
         }
       ]
     },
-    "from": {
-      "anyOf": [
-        {
-          "type": "string",
-          "minLength": 1,
-          "maxLength": 64
-        },
-        {
-          "type": "null"
-        }
-      ]
-    },
-    "to": {
-      "anyOf": [
-        {
-          "type": "string",
-          "minLength": 1,
-          "maxLength": 64
-        },
-        {
-          "type": "null"
-        }
-      ]
-    },
     "status": {
-      "type": "string",
-      "enum": [
-        "available",
-        "sold",
-        "purchased",
-        "reserved",
-        "transit_outgoing",
-        "transit_incoming",
-        "delivered",
-        "selected"
+      "oneOf": [
+        {
+          "type": "string",
+          "enum": [
+            "available",
+            "sold",
+            "purchased",
+            "reserved",
+            "transit_outgoing",
+            "transit_incoming",
+            "delivered",
+            "selected"
+          ]
+        },
+        {
+          "type": "null"
+        }
       ]
     },
     "metadata": {
-      "type": "object"
+      "oneOf": [
+        {
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "reasons": {
-      "type": "string",
-      "format": "uuid"
+      "oneOf": [
+        {
+          "description": "Deprecated property. Use reason instead.",
+          "type": "string",
+          "format": "uuid"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "reason": {
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "uuid"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "comments": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2048
+        },
+        {
+          "type": "null"
+        }
+      ]
     }
   }
 }

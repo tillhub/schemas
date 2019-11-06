@@ -289,6 +289,99 @@
         }
       ]
     },
+    "expenses_deposits": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": true,
+          "properties": {
+            "image_expense": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "description": "defines wether image is mandatory, optional, for expenses",
+                  "enum": [
+                    "mandatory",
+                    "optional",
+                    "none"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "image_deposit": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "description": "defines wether image is mandatory, optional, or non-mandatory for deposits",
+                  "enum": [
+                    "mandatory",
+                    "optional",
+                    "none"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "image_bank": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "description": "defines wether image is mandatory, optional, or non-mandatory for banks",
+                  "enum": [
+                    "mandatory",
+                    "optional",
+                    "none"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "image_safe": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "description": "defines wether image is mandatory, optional, or non-mandatory for safes",
+                  "enum": [
+                    "mandatory",
+                    "optional",
+                    "none"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "image_tip": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "description": "defines wether image is mandatory, optional, or non-mandatory for tips",
+                  "enum": [
+                    "mandatory",
+                    "optional",
+                    "none"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "settings": {
       "oneOf": [
         {
@@ -323,6 +416,58 @@
                 }
               }
             },
+            "third_party": {
+              "description": "Third party app links",
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "title": {
+                    "description": "Display title of a 3rd-party-link.",
+                    "type": "string",
+                    "example": "Shore",
+                    "minLength": 2,
+                    "maxLength": 64
+                  },
+                  "scheme": {
+                    "description": "URL-scheme to use for this link",
+                    "type": "string",
+                    "example": "de.termine24.dienstleister.production.tillhub-url-scheme",
+                    "minLength": 3,
+                    "maxLength": 256
+                  },
+                  "itunes": {
+                    "description": "App Store ID to use if 3rd-party-app is not installed",
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "example": "id548235635",
+                        "minLength": 3,
+                        "maxLength": 256
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "icon": {
+                    "description": "Name of the icon file used on the client",
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "example": "ic_app_shore",
+                        "minLength": 3,
+                        "maxLength": 128
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
             "sync": {
               "description": "Drives in-app syncing behaviour.",
               "type": "object",
@@ -339,6 +484,55 @@
                           "type": "integer",
                           "minimum": 1,
                           "maximum": 1000
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "register": {
+              "description": "Defines the settings on register opening and closing ",
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "open": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "counting_policy": {
+                      "oneOf": [
+                        {
+                          "description": "Defines if counting protocol is active or not on register opening",
+                          "type": "string",
+                          "enum": [
+                            "none",
+                            "required"
+                          ]
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  }
+                },
+                "close": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "counting_policy": {
+                      "oneOf": [
+                        {
+                          "description": "Defines if counting protocol is active or not on register closing",
+                          "type": "string",
+                          "enum": [
+                            "none",
+                            "required"
+                          ]
                         },
                         {
                           "type": "null"
@@ -756,6 +950,30 @@
           "type": "object",
           "additionalProperties": true,
           "properties": {
+            "cashier_pin_cancel_enabled": {
+              "description": "If true, a cashier is allowed to cancel a PIN request. If false, the PIN request is not cancelable and will stay there",
+              "oneOf": [
+                {
+                  "type": "boolean",
+                  "default": false
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "cashier_pin_logout_enabled": {
+              "description": "If true, a cashier is allowed to logout on a mandatory PIN request.",
+              "oneOf": [
+                {
+                  "type": "boolean",
+                  "default": false
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
             "salesman_pin_policy": {
               "description": "The salesperson selection screen will be presented automatically before or after a sale (or not in case of none).",
               "oneOf": [
@@ -1101,12 +1319,61 @@
       ]
     },
     "stock": {
-      "anyOf": [
+      "oneOf": [
         {
           "type": "null"
         },
         {
-          "type": "object"
+          "type": "object",
+          "properties": {
+            "customer_number_template": {
+              "description": "A Tillhub string pattern that allows for parameterized customer number generation",
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "string",
+                  "minLength": 4,
+                  "maxLength": 512
+                }
+              ]
+            },
+            "generate_customer_number": {
+              "description": "The toggle to opt-in or -out of the customer number generation. Send this as query parameter on creation: ?generate_customer_number=true",
+              "type": "boolean",
+              "default": "false"
+            },
+            "customer_number_type": {
+              "type": "string",
+              "enum": [
+                "franchise"
+              ]
+            },
+            "auto_customer_number_enabled": {
+              "type": "boolean",
+              "default": false
+            },
+            "customers_per_branch": {
+              "type": "boolean",
+              "default": false
+            },
+            "default_branch": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "custom_export": {
+              "type": "boolean",
+              "default": false
+            }
+          }
         }
       ]
     },
@@ -1129,6 +1396,43 @@
                   "enum": [
                     "branches"
                   ]
+                }
+              }
+            },
+            "history": {
+              "type": "object",
+              "properties": {
+                "range": {
+                  "description": "Transactions created before (Now() - Range) are not guaranteed to be kept on the client (e.g. older ones will be deleted).",
+                  "type": "object",
+                  "properties": {
+                    "unit": {
+                      "description": "Unit of the range.",
+                      "type": "string",
+                      "enum": [
+                        "hours",
+                        "days",
+                        "weeks",
+                        "months",
+                        "years"
+                      ],
+                      "default": "months"
+                    },
+                    "value": {
+                      "description": "The value of the range, defines a timeframe together with the set unit.",
+                      "type": "integer",
+                      "minimum": 1,
+                      "maximum": 500,
+                      "default": 2
+                    }
+                  }
+                },
+                "max_count": {
+                  "description": "Maximum number of transactions that are kept on the client.",
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 75000,
+                  "default": 20000
                 }
               }
             }
@@ -1649,6 +1953,25 @@
                         }
                       ]
                     },
+                    "print_product_attributes": {
+                      "oneOf": [
+                        {
+                          "description": "Defines the receipt-types the product attributes (in case of options) will be printed on (e.g. just for the customer)",
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "enum": [
+                              "merchant",
+                              "customer",
+                              "order"
+                            ]
+                          }
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
                     "print_product_description": {
                       "oneOf": [
                         {
@@ -1690,7 +2013,64 @@
                     "print_customer": {
                       "oneOf": [
                         {
-                          "description": "Defines the receipt-types the customer will be printed on (e.g. just for the merchant)",
+                          "description": "DEPRECATED: iOS pre 4.10, Defines the receipt-types the customer will be printed on (e.g. just for the merchant)",
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "enum": [
+                              "merchant",
+                              "customer",
+                              "order"
+                            ]
+                          }
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "print_customer_name": {
+                      "oneOf": [
+                        {
+                          "description": "Defines the receipt-types the customer name will be printed on (e.g. just for the merchant)",
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "enum": [
+                              "merchant",
+                              "customer",
+                              "order"
+                            ]
+                          }
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "print_customer_address": {
+                      "oneOf": [
+                        {
+                          "description": "Defines the receipt-types the customer address will be printed on (e.g. just for the merchant)",
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "enum": [
+                              "merchant",
+                              "customer",
+                              "order"
+                            ]
+                          }
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "print_customer_number": {
+                      "oneOf": [
+                        {
+                          "description": "Defines the receipt-types the customer number will be printed on (e.g. just for the merchant)",
                           "type": "array",
                           "items": {
                             "type": "string",
@@ -2035,6 +2415,43 @@
           "type": "object",
           "additionalProperties": false,
           "properties": {
+            "scanner_apis": {
+              "type": "object",
+              "properties": {
+                "zebra": {
+                  "type": "object",
+                  "properties": {
+                    "enabled": {
+                      "type": "boolean",
+                      "default": false
+                    }
+                  }
+                },
+                "epson": {
+                  "type": "object",
+                  "properties": {
+                    "enabled": {
+                      "type": "boolean",
+                      "default": true
+                    }
+                  }
+                }
+              }
+            },
+            "printer_apis": {
+              "type": "object",
+              "properties": {
+                "epson": {
+                  "type": "object",
+                  "properties": {
+                    "enabled": {
+                      "type": "boolean",
+                      "default": true
+                    }
+                  }
+                }
+              }
+            },
             "terminal_apis": {
               "type": "object",
               "properties": {
@@ -2236,6 +2653,30 @@
                 }
               ]
             },
+            "sales_required": {
+              "description": "If true, balances are not conductable without fiat/cash cashflows.",
+              "default": true,
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "boolean"
+                }
+              ]
+            },
+            "discrepancy_warning": {
+              "description": "If true, warns the user when cash counted is not equal to cash calculated.",
+              "default": true,
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "boolean"
+                }
+              ]
+            },
             "extended_report": {
               "description": "If true, adds extended balance information to the UI and the receipts.",
               "default": false,
@@ -2326,12 +2767,15 @@
         },
         {
           "type": "object",
+          "additionalProperties": false,
           "properties": {
             "display": {
               "type": "object",
+              "additionalProperties": false,
               "properties": {
                 "show_inactive": {
                   "default": false,
+                  "description": "If true, non-active discounts will be still displayed (greyed out)",
                   "oneOf": [
                     {
                       "type": "null"
@@ -2340,6 +2784,205 @@
                       "type": "boolean"
                     }
                   ]
+                }
+              }
+            },
+            "limits": {
+              "type": "object",
+              "description": "Global limits for effective discount values",
+              "additionalProperties": false,
+              "properties": {
+                "cart_item": {
+                  "type": "object",
+                  "description": "Global limits for effective discount values on single cart items (affects current cart via multi-assignment)",
+                  "additionalProperties": false,
+                  "properties": {
+                    "variable": {
+                      "type": "object",
+                      "description": "0-discounts (Frank) that let the cashier enter a value, limits e.g. to 30% AND $2.00",
+                      "additionalProperties": false,
+                      "properties": {
+                        "maximum_rate": {
+                          "oneOf": [
+                            {
+                              "type": "number",
+                              "description": "Effective rate that a discount can not exceed",
+                              "minimum": 0,
+                              "maximum": 1,
+                              "multipleOf": 0.001
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "maximum_value": {
+                          "oneOf": [
+                            {
+                              "type": "array",
+                              "description": "Effective monetary values (by currency) that a discount can not exceed",
+                              "items": {
+                                "type": "object",
+                                "additionalProperties": false,
+                                "description": "Describes a non-negative monetary value in a specific currency.",
+                                "required": [
+                                  "amount",
+                                  "currency"
+                                ],
+                                "properties": {
+                                  "currency": {
+                                    "type": "string",
+                                    "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                                    "example": "EUR",
+                                    "minLength": 3,
+                                    "maxLength": 3
+                                  },
+                                  "amount": {
+                                    "type": "number",
+                                    "description": "The value as .2-Decimal.",
+                                    "example": "47.02",
+                                    "minimum": 0,
+                                    "multipleOf": 0.01
+                                  }
+                                }
+                              }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "can_exceed_cart_item_total": {
+                          "description": "If true, negative outcomes are alowed (via stacking value discounts) or having rates > 1.0",
+                          "type": "boolean",
+                          "default": false
+                        }
+                      }
+                    },
+                    "fixed": {
+                      "type": "object",
+                      "description": "Standard-discounts (have 5% or $3.00 already) - limit creation values in the Dashboard",
+                      "additionalProperties": false,
+                      "properties": {
+                        "maximum_rate": {
+                          "oneOf": [
+                            {
+                              "type": "number",
+                              "description": "Effective rate that a discount can not exceed",
+                              "minimum": 0,
+                              "maximum": 1,
+                              "multipleOf": 0.001
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "maximum_value": {
+                          "oneOf": [
+                            {
+                              "type": "array",
+                              "description": "Effective monetary values (by currency) that a discount can not exceed",
+                              "items": {
+                                "type": "object",
+                                "additionalProperties": false,
+                                "description": "Describes a non-negative monetary value in a specific currency.",
+                                "required": [
+                                  "amount",
+                                  "currency"
+                                ],
+                                "properties": {
+                                  "currency": {
+                                    "type": "string",
+                                    "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                                    "example": "EUR",
+                                    "minLength": 3,
+                                    "maxLength": 3
+                                  },
+                                  "amount": {
+                                    "type": "number",
+                                    "description": "The value as .2-Decimal.",
+                                    "example": "47.02",
+                                    "minimum": 0,
+                                    "multipleOf": 0.01
+                                  }
+                                }
+                              }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "can_exceed_cart_item_total": {
+                          "description": "If true, negative outcomes are alowed (via stacking value discounts) or having rates > 1.0",
+                          "type": "boolean",
+                          "default": false
+                        }
+                      }
+                    }
+                  }
+                },
+                "cart": {
+                  "type": "object",
+                  "description": "Global limits for effective discount values on the whole cart (must additionally respect values for items)",
+                  "additionalProperties": false,
+                  "properties": {
+                    "maximum_rate": {
+                      "oneOf": [
+                        {
+                          "type": "number",
+                          "description": "Effective rate that a discount can not exceed",
+                          "minimum": 0,
+                          "maximum": 1,
+                          "multipleOf": 0.001
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "maximum_value": {
+                      "oneOf": [
+                        {
+                          "type": "array",
+                          "description": "Effective monetary values (by currency) that a discount can not exceed",
+                          "items": {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "description": "Describes a non-negative monetary value in a specific currency.",
+                            "required": [
+                              "amount",
+                              "currency"
+                            ],
+                            "properties": {
+                              "currency": {
+                                "type": "string",
+                                "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                                "example": "EUR",
+                                "minLength": 3,
+                                "maxLength": 3
+                              },
+                              "amount": {
+                                "type": "number",
+                                "description": "The value as .2-Decimal.",
+                                "example": "47.02",
+                                "minimum": 0,
+                                "multipleOf": 0.01
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  }
+                },
+                "stacked_on_product": {
+                  "type": "boolean",
+                  "default": true
                 }
               }
             }
@@ -2492,10 +3135,6 @@
     }
   },
   "required": [
-    "name",
-    "vouchers",
-    "scan_prefixes",
-    "voucher_actions",
-    "settings"
+    "name"
   ]
 }

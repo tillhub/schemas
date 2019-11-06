@@ -1,0 +1,246 @@
+{
+  "$id": "https://schemas.tillhub.com/v0/stock.update.response.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "type": "object",
+  "required": [
+    "id",
+    "qty_change"
+  ],
+  "properties": {
+    "qty": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "product": {
+      "anyOf": [
+        {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 64
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "location": {
+      "anyOf": [
+        {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 64
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "location_type": {
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "client",
+            "branch",
+            "warehouse",
+            "warehouse_shelf"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "status": {
+      "oneOf": [
+        {
+          "type": "string",
+          "enum": [
+            "available",
+            "sold",
+            "purchased",
+            "reserved",
+            "transit_outgoing",
+            "transit_incoming",
+            "delivered",
+            "selected"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "metadata": {
+      "oneOf": [
+        {
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "reasons": {
+      "oneOf": [
+        {
+          "description": "Deprecated property. Use reason instead.",
+          "type": "string",
+          "format": "uuid"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "reason": {
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "uuid"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "comments": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2048
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "article": {
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "uuid"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "branch": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "uuid",
+          "minLength": 1,
+          "maxLength": 64
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "qty_change": {
+      "type": "number"
+    },
+    "channel": {
+      "oneOf": [
+        {
+          "type": "string",
+          "example": "api"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "purchase": {
+      "oneOf": [
+        {
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "from": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "id": {
+              "type": "string",
+              "description": "Alphanumeric uuid of the location, e.g. branch uuid or warehouse uuid",
+              "format": "uuid"
+            },
+            "location_type": {
+              "type": "string",
+              "enum": [
+                "client",
+                "branch",
+                "warehouse",
+                "warehouse_shelf"
+              ]
+            }
+          },
+          "required": [
+            "id"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "to": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "id": {
+              "type": "string",
+              "description": "Alphanumeric uuid of the location, e.g. branch uuid or warehouse uuid",
+              "format": "uuid"
+            },
+            "location_type": {
+              "type": "string",
+              "enum": [
+                "branch",
+                "warehouse",
+                "warehouse_shelf"
+              ]
+            }
+          },
+          "required": [
+            "id"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  }
+}

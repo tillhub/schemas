@@ -22,7 +22,8 @@
     "client_id": {
       "oneOf": [
         {
-          "type": "string"
+          "type": "string",
+          "format": "uuid"
         },
         {
           "type": "null"
@@ -30,31 +31,70 @@
       ]
     },
     "device_id": {
-      "type": "string",
-      "format": "uuid"
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 36
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "register": {
-      "type": "string",
-      "format": "uuid"
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "uuid"
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "device_configuration": {
-      "type": "object",
-      "properties": {
-        "network": {
+      "oneOf": [
+        {
           "type": "object",
           "properties": {
-            "ip": {
-              "type": "string",
-              "oneOf": [
-                {
-                  "format": "ipv4"
+            "network": {
+              "type": "object",
+              "properties": {
+                "ip": {
+                  "type": "string",
+                  "oneOf": [
+                    {
+                      "format": "ipv4"
+                    },
+                    {
+                      "format": "ipv6"
+                    }
+                  ]
                 },
-                {
-                  "format": "ipv6"
+                "host": {
+                  "oneOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "port": {
+                  "type": "integer"
+                },
+                "protocol": {
+                  "type": "string",
+                  "enum": [
+                    "http",
+                    "https"
+                  ]
                 }
-              ]
+              }
             },
-            "host": {
+            "public_key": {
               "oneOf": [
                 {
                   "type": "string"
@@ -64,47 +104,30 @@
                 }
               ]
             },
-            "port": {
-              "type": "integer"
-            },
-            "protocol": {
-              "type": "string",
-              "enum": [
-                "http",
-                "https"
+            "auth": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "enum": [
+                        "x.509"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "type": "null"
+                }
               ]
             }
           }
         },
-        "public_key": {
-          "oneOf": [
-            {
-              "type": "string"
-            },
-            {
-              "type": "null"
-            }
-          ]
-        },
-        "auth": {
-          "oneOf": [
-            {
-              "type": "object",
-              "properties": {
-                "type": {
-                  "type": "string",
-                  "enum": [
-                    "x.509"
-                  ]
-                }
-              }
-            },
-            {
-              "type": "null"
-            }
-          ]
+        {
+          "type": "null"
         }
-      }
+      ]
     },
     "type": {
       "oneOf": [
@@ -112,7 +135,8 @@
           "type": "string",
           "enum": [
             "cfd",
-            "printer"
+            "printer",
+            "eda"
           ]
         },
         {
@@ -298,6 +322,9 @@
     "deleted": {
       "type": "boolean"
     },
+    "status": {
+      "type": "string"
+    },
     "id": {
       "type": "string",
       "format": "uuid"
@@ -306,8 +333,9 @@
       "type": "string",
       "format": "date-time"
     },
-    "client_account": {
-      "type": "string"
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
     }
   }
 }
