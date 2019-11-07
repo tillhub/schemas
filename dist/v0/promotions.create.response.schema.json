@@ -105,14 +105,14 @@
         {
           "$id": "https://schemas.tillhub.com/v0/promotions.templates.schema.json",
           "$schema": "http://json-schema.org/draft-07/schema#",
-          "additionalProperties": false,
-          "type": "object",
-          "required": [
-            "inputs",
-            "type"
-          ],
           "oneOf": [
             {
+              "additionalProperties": false,
+              "type": "object",
+              "required": [
+                "inputs",
+                "type"
+              ],
               "properties": {
                 "type": {
                   "type": "string",
@@ -133,6 +133,12 @@
               }
             },
             {
+              "additionalProperties": false,
+              "type": "object",
+              "required": [
+                "inputs",
+                "type"
+              ],
               "properties": {
                 "type": {
                   "type": "string",

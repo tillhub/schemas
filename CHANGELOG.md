@@ -1,3 +1,10 @@
+## [4.82.1](https://github.com/tillhub/schemas/compare/v4.82.0...v4.82.1) (2019-11-07)
+
+
+### Bug Fixes
+
+* **promotions:** use correct object ref ([a25eeda](https://github.com/tillhub/schemas/commit/a25eeda))
+
 # [4.82.0](https://github.com/tillhub/schemas/compare/v4.81.1...v4.82.0) (2019-11-07)
 
 
