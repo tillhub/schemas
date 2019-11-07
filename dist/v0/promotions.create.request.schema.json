@@ -100,6 +100,463 @@
     },
     "active": {
       "type": "boolean"
+    },
+    "template": {
+      "oneOf": [
+        {
+          "$id": "https://schemas.tillhub.com/v0/promotions.templates.schema.json",
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "additionalProperties": false,
+          "type": "object",
+          "required": [
+            "inputs",
+            "type"
+          ],
+          "oneOf": [
+            {
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "product_property:and_or_concat:output_properties"
+                  ]
+                },
+                "inputs": {
+                  "oneOf": [
+                    {
+                      "type": "object"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "product_property:exclusive_bundle:output_properties"
+                  ]
+                },
+                "inputs": {
+                  "oneOf": [
+                    {
+                      "type": "object"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "constraints": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "time": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "scheduled": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "day_of_week": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "enabled": {
+                          "type": "boolean",
+                          "default": true
+                        },
+                        "monday": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "slots": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "additionalProperties": false,
+                                "properties": {
+                                  "enabled": {
+                                    "type": "boolean",
+                                    "default": true
+                                  },
+                                  "start": {
+                                    "oneOf": [
+                                      {
+                                        "type": "string",
+                                        "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
+                                  },
+                                  "end": {
+                                    "oneOf": [
+                                      {
+                                        "type": "string",
+                                        "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "tuesday": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "slots": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "additionalProperties": false,
+                                "properties": {
+                                  "enabled": {
+                                    "type": "boolean",
+                                    "default": true
+                                  },
+                                  "start": {
+                                    "oneOf": [
+                                      {
+                                        "type": "string",
+                                        "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
+                                  },
+                                  "end": {
+                                    "oneOf": [
+                                      {
+                                        "type": "string",
+                                        "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "wednesday": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "slots": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "additionalProperties": false,
+                                "properties": {
+                                  "enabled": {
+                                    "type": "boolean",
+                                    "default": true
+                                  },
+                                  "start": {
+                                    "oneOf": [
+                                      {
+                                        "type": "string",
+                                        "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
+                                  },
+                                  "end": {
+                                    "oneOf": [
+                                      {
+                                        "type": "string",
+                                        "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "thursday": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "slots": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "additionalProperties": false,
+                                "properties": {
+                                  "enabled": {
+                                    "type": "boolean",
+                                    "default": true
+                                  },
+                                  "start": {
+                                    "oneOf": [
+                                      {
+                                        "type": "string",
+                                        "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
+                                  },
+                                  "end": {
+                                    "oneOf": [
+                                      {
+                                        "type": "string",
+                                        "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "friday": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "slots": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "additionalProperties": false,
+                                "properties": {
+                                  "enabled": {
+                                    "type": "boolean",
+                                    "default": true
+                                  },
+                                  "start": {
+                                    "oneOf": [
+                                      {
+                                        "type": "string",
+                                        "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
+                                  },
+                                  "end": {
+                                    "oneOf": [
+                                      {
+                                        "type": "string",
+                                        "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "saturday": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "slots": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "additionalProperties": false,
+                                "properties": {
+                                  "enabled": {
+                                    "type": "boolean",
+                                    "default": true
+                                  },
+                                  "start": {
+                                    "oneOf": [
+                                      {
+                                        "type": "string",
+                                        "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
+                                  },
+                                  "end": {
+                                    "oneOf": [
+                                      {
+                                        "type": "string",
+                                        "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "sunday": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "slots": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "additionalProperties": false,
+                                "properties": {
+                                  "enabled": {
+                                    "type": "boolean",
+                                    "default": true
+                                  },
+                                  "start": {
+                                    "oneOf": [
+                                      {
+                                        "type": "string",
+                                        "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
+                                  },
+                                  "end": {
+                                    "oneOf": [
+                                      {
+                                        "type": "string",
+                                        "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "date_range": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "enabled": {
+                          "type": "boolean",
+                          "default": true
+                        },
+                        "start": {
+                          "oneOf": [
+                            {
+                              "type": "object",
+                              "additionalProperties": false,
+                              "properties": {
+                                "enabled": {
+                                  "type": "boolean",
+                                  "default": true
+                                },
+                                "value": {
+                                  "oneOf": [
+                                    {
+                                      "type": "string",
+                                      "format": "date-time"
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                }
+                              }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "end": {
+                          "oneOf": [
+                            {
+                              "type": "object",
+                              "additionalProperties": false,
+                              "properties": {
+                                "enabled": {
+                                  "type": "boolean",
+                                  "default": true
+                                },
+                                "value": {
+                                  "oneOf": [
+                                    {
+                                      "type": "string",
+                                      "format": "date-time"
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                }
+                              }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "tz": {
+                          "oneOf": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
     }
   }
 }

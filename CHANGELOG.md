@@ -1,3 +1,10 @@
+# [4.82.0](https://github.com/tillhub/schemas/compare/v4.81.1...v4.82.0) (2019-11-07)
+
+
+### Features
+
+* **promotions:** add templates and contraints ([c54ddf8](https://github.com/tillhub/schemas/commit/c54ddf8))
+
 ## [4.81.1](https://github.com/tillhub/schemas/compare/v4.81.0...v4.81.1) (2019-11-05)
 
 
