@@ -88,7 +88,8 @@
   },
   "dependencies": {
     "ajv": "^6.5.3",
-    "hygen": "^4.0.9"
+    "hygen": "^4.0.9",
+    "just-pick": "^2.1.0"
   },
   "config": {
     "commitizen": {
