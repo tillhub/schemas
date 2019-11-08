@@ -1,3 +1,22 @@
+# [4.83.0](https://github.com/tillhub/schemas/compare/v4.82.1...v4.83.0) (2019-11-08)
+
+
+### Bug Fixes
+
+* **voucher_systems:** voucher_systems.actions add id ([0072fcd](https://github.com/tillhub/schemas/commit/0072fcd))
+* **voucher-systems:** add missing dep ([2e47186](https://github.com/tillhub/schemas/commit/2e47186))
+* **voucher-systems:** hoist some props, add more external logic to top level ([69f1715](https://github.com/tillhub/schemas/commit/69f1715))
+
+
+### Features
+
+* **voucher systems:** voucher actions ([9cd3615](https://github.com/tillhub/schemas/commit/9cd3615))
+* **Voucher Systems:** Embedding and streamlining ([693201c](https://github.com/tillhub/schemas/commit/693201c))
+* **voucher_systems:** voucher_systems.actions ([1a72942](https://github.com/tillhub/schemas/commit/1a72942))
+* **voucher-system:** add plural templates, redefine some prop checking, add names ([1f9cc9d](https://github.com/tillhub/schemas/commit/1f9cc9d))
+* **voucher-systems:** add customer ref, sanitise some formatting, add some more descs ([c931009](https://github.com/tillhub/schemas/commit/c931009))
+* **voucher-systems:** add voucher template ([e31440a](https://github.com/tillhub/schemas/commit/e31440a))
+
 ## [4.82.1](https://github.com/tillhub/schemas/compare/v4.82.0...v4.82.1) (2019-11-07)
 
 

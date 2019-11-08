@@ -5,7 +5,7 @@
   "additionalProperties": false,
   "properties": {
     "code": {
-      "description": "The chosen or generated voucher code",
+      "description": "The chosen or generated voucher code.",
       "example": "1234 1234 1234",
       "anyOf": [
         {
@@ -17,12 +17,12 @@
       ]
     },
     "format": {
-      "description": "The format this voucher conforms to",
+      "description": "The visual format this voucher conforms to.",
       "example": "xxxx xxxx xxxx",
       "type": "string"
     },
     "format_type": {
-      "description": "",
+      "description": "Define which characters can be used during a voucher creation. E.g. numeric XXXX XXXX will be a voucher code with 8 random numbers divided by a space. The lookup on the voucher will be made on code and code_normalised equally (if defined).",
       "type": "string",
       "enum": [
         "numeric",
@@ -31,7 +31,7 @@
       ]
     },
     "amount": {
-      "description": "decimal type",
+      "description": "The current value of this voucher.",
       "example": "10.99",
       "anyOf": [
         {
@@ -166,7 +166,7 @@
       ]
     },
     "customer": {
-      "description": "",
+      "description": "The reference to a customer. The layout is an object to allow for imported vouchers to include any kind of customer reference. In the Tillhub voucher case the object will have at least an ID reference to the customer if existing.",
       "anyOf": [
         {
           "type": "object"
@@ -177,9 +177,9 @@
       ]
     },
     "comment": {
+      "description": "An arbitrary comment from a user for this voucher.",
       "oneOf": [
         {
-          "description": "",
           "type": "string",
           "maxLength": 1024
         },
@@ -189,9 +189,9 @@
       ]
     },
     "expires_at": {
+      "description": "Define until when this voucher should be usable. This will be hard validated on the API when incrementing / decrementing a voucher.",
       "oneOf": [
         {
-          "description": "",
           "type": "string",
           "format": "date-time"
         },
@@ -213,7 +213,7 @@
       "type": "boolean"
     },
     "active": {
-      "description": "",
+      "description": "Define whether this voucher is currently active.",
       "type": "boolean"
     },
     "bound_to": {
@@ -234,7 +234,7 @@
       ]
     },
     "regions": {
-      "description": "Regions to limit this voucher to",
+      "description": "Regions to limit this voucher to.",
       "oneOf": [
         {
           "type": "array",
@@ -251,11 +251,11 @@
       ]
     },
     "limited_to_region": {
-      "description": "",
+      "description": "Define whether to limit this voucher in a particular region.",
       "type": "boolean"
     },
     "refundable": {
-      "description": "",
+      "description": "Define whether this voucher can be refunded or be used in a refund scenario.",
       "type": "boolean"
     },
     "mutable": {
@@ -263,7 +263,7 @@
       "type": "boolean"
     },
     "exchange_for_cash": {
-      "description": "",
+      "description": "Define whether the value or rest value can be paid out with cash.",
       "type": "boolean"
     },
     "restriction_single_transaction": {
