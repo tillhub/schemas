@@ -2332,10 +2332,17 @@
                             "description": "Identifier for the voucher system. (Also known as User)"
                           },
                           "title": {
-                            "default": null,
-                            "type": "string",
-                            "maxLength": 256,
-                            "description": "Title of the source voucher."
+                            "oneOf": [
+                              {
+                                "default": null,
+                                "type": "string",
+                                "maxLength": 256,
+                                "description": "Title of the source voucher."
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
                           },
                           "message": {
                             "default": null,
@@ -3030,10 +3037,17 @@
                             "description": "Identifier for the voucher system. (Also known as User)"
                           },
                           "title": {
-                            "default": null,
-                            "type": "string",
-                            "maxLength": 256,
-                            "description": "Title of the source voucher."
+                            "oneOf": [
+                              {
+                                "default": null,
+                                "type": "string",
+                                "maxLength": 256,
+                                "description": "Title of the source voucher."
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
                           },
                           "message": {
                             "default": null,

@@ -1,3 +1,10 @@
+# [4.84.0](https://github.com/tillhub/schemas/compare/v4.83.0...v4.84.0) (2019-11-11)
+
+
+### Features
+
+* **transactions:** make fields nullable ([8a6c3f3](https://github.com/tillhub/schemas/commit/8a6c3f3))
+
 # [4.83.0](https://github.com/tillhub/schemas/compare/v4.82.1...v4.83.0) (2019-11-08)
 
 
