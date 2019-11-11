@@ -1936,13 +1936,20 @@
                             "maxLength": 128
                           },
                           "group": {
-                            "type": "string",
-                            "enum": [
-                              "customer",
-                              "staff",
-                              "cart",
-                              "product_set",
-                              "sconto"
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "enum": [
+                                  "customer",
+                                  "staff",
+                                  "cart",
+                                  "product_set",
+                                  "sconto"
+                                ]
+                              },
+                              {
+                                "type": "null"
+                              }
                             ]
                           },
                           "name": {

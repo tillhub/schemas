@@ -1,7 +1,7 @@
 [
   "/index.json",
-  "/currency.available.schema.json",
   "/patch.request.schema.json",
+  "/currency.available.schema.json",
   "/timezone.schema.json",
   "/balances.create.request.schema.json",
   "/balances.get-all.response.schema.json",
@@ -19,8 +19,8 @@
   "/discounts.update.request.schema.json",
   "/helpers.patch.request.schema.json",
   "/product_service_questions.answer_validation.checkbox",
-  "/product_service_questions.answer_validation.number_input_plus_optional_unit_select",
   "/product_service_questions.answer_validation.free_text_input",
+  "/product_service_questions.answer_validation.number_input_plus_optional_unit_select",
   "/product_service_questions.answer_validation.simple_select",
   "/products.create.request.schema.json",
   "/products.customizations.create.request.schema.json",

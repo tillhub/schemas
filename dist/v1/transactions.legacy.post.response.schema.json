@@ -1639,10 +1639,17 @@
                   ]
                 },
                 "vat_fa_account_number": {
-                  "deprecated": true,
-                  "type": "string",
-                  "example": "1991",
-                  "description": "Custom identifier for the VAT financial account"
+                  "oneOf": [
+                    {
+                      "deprecated": true,
+                      "type": "string",
+                      "example": "1991",
+                      "description": "Custom identifier for the VAT financial account"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
                 },
                 "vat_amount": {
                   "oneOf": [
@@ -1998,10 +2005,17 @@
                             "description": "The total effective discount amount -> 3.12 EUR or 312 HUF respectively"
                           },
                           "source_id": {
-                            "type": "string",
-                            "format": "uuid",
-                            "example": "03063bbe-e44d-42f6-8bbf-971f5d88f848",
-                            "description": "The Tillhub discount resource identifier for the discount used"
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "format": "uuid",
+                                "example": "03063bbe-e44d-42f6-8bbf-971f5d88f848",
+                                "description": "The Tillhub discount resource identifier for the discount used"
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
                           }
                         }
                       },
@@ -2921,13 +2935,20 @@
                             "maxLength": 128
                           },
                           "group": {
-                            "type": "string",
-                            "enum": [
-                              "customer",
-                              "staff",
-                              "cart",
-                              "product_set",
-                              "sconto"
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "enum": [
+                                  "customer",
+                                  "staff",
+                                  "cart",
+                                  "product_set",
+                                  "sconto"
+                                ]
+                              },
+                              {
+                                "type": "null"
+                              }
                             ]
                           },
                           "name": {
