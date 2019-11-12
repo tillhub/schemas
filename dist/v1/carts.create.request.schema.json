@@ -1062,6 +1062,17 @@
     },
     "metadata": {
       "type": "object"
+    },
+    "opened_at": {
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "date-time"
+        },
+        {
+          "type": "null"
+        }
+      ]
     }
   }
 }
