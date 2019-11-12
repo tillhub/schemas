@@ -78,9 +78,9 @@
             ]
           },
           "dev_uuid": {
+            "deprecated": true,
             "oneOf": [
               {
-                "deprecated": true,
                 "type": "string",
                 "example": "886eef646bc1c4d79eb8495321bbd472",
                 "description": "Initialized as the iPAD's UIDevice.current.identifierForVendor?.uuidString.md5() and stored in the Keychain for the Tillhub application"
@@ -99,6 +99,7 @@
                 "description": "The counting number (receipt number) of this transaction"
               },
               {
+                "deprecated": true,
                 "type": "null"
               }
             ]
