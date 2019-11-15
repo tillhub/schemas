@@ -390,6 +390,22 @@
                   }
                 ]
               },
+              "code_generation": {
+                "default": "request",
+                "description": "Information if code should be picked from existing barcodes (scan) or requested from the API (request)",
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "scan",
+                      "request"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
               "attributes": {
                 "type": "object",
                 "additionalProperties": false,

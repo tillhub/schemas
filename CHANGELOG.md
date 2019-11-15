@@ -1,3 +1,11 @@
+# [4.89.0](https://github.com/tillhub/schemas/compare/v4.88.0...v4.89.0) (2019-11-15)
+
+
+### Features
+
+* **Vocuher system templates:** code gen default ([6d1d54c](https://github.com/tillhub/schemas/commit/6d1d54c))
+* **Voucher systems:** templates ([a81d0bb](https://github.com/tillhub/schemas/commit/a81d0bb))
+
 # [4.88.0](https://github.com/tillhub/schemas/compare/v4.87.0...v4.88.0) (2019-11-12)
 
 
