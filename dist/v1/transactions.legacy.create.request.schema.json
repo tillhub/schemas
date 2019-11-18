@@ -1928,7 +1928,7 @@
                         "voucher_ean",
                         "voucher_product",
                         "voucher_system_id",
-                        "voucher_system_system",
+                        "voucher_action_id",
                         "voucher_currency",
                         "voucher_api",
                         "voucher_is_booked",
@@ -2201,11 +2201,16 @@
                             "description": "Voucher number."
                           },
                           "system": {
-                            "default": null,
                             "type": "string",
-                            "minLength": 3,
-                            "maxLength": 128,
-                            "description": "Identifier for the voucher system. (Also known as User)"
+                            "format": "uuid",
+                            "example": "AB3847a66-97dc-4ac2-8e8a-c44920e1f22f",
+                            "description": "Voucher system used."
+                          },
+                          "action": {
+                            "type": "string",
+                            "format": "uuid",
+                            "example": "CD847a66-97dc-4ac2-8e8a-c44920e1f22f",
+                            "description": "Voucher system's action used."
                           },
                           "title": {
                             "oneOf": [
@@ -3495,7 +3500,7 @@
                         "voucher_ean",
                         "voucher_product",
                         "voucher_system_id",
-                        "voucher_system_system",
+                        "voucher_action_id",
                         "voucher_currency",
                         "voucher_api",
                         "voucher_is_booked",
@@ -3766,11 +3771,16 @@
                             "description": "Voucher number."
                           },
                           "system": {
-                            "default": null,
                             "type": "string",
-                            "minLength": 3,
-                            "maxLength": 128,
-                            "description": "Identifier for the voucher system. (Also known as User)"
+                            "format": "uuid",
+                            "example": "AB3847a66-97dc-4ac2-8e8a-c44920e1f22f",
+                            "description": "Voucher system used."
+                          },
+                          "action": {
+                            "type": "string",
+                            "format": "uuid",
+                            "example": "CD847a66-97dc-4ac2-8e8a-c44920e1f22f",
+                            "description": "Voucher system's action used."
                           },
                           "title": {
                             "oneOf": [
