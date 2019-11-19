@@ -1,3 +1,10 @@
+# [4.93.0](https://github.com/tillhub/schemas/compare/v4.92.0...v4.93.0) (2019-11-19)
+
+
+### Features
+
+* add exports ([06f8041](https://github.com/tillhub/schemas/commit/06f8041))
+
 # [4.92.0](https://github.com/tillhub/schemas/compare/v4.91.0...v4.92.0) (2019-11-19)
 
 
