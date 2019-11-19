@@ -1,3 +1,10 @@
+# [4.91.0](https://github.com/tillhub/schemas/compare/v4.90.0...v4.91.0) (2019-11-19)
+
+
+### Features
+
+* **Configurations:** Add flag for time tracking ([c2e9658](https://github.com/tillhub/schemas/commit/c2e9658))
+
 # [4.90.0](https://github.com/tillhub/schemas/compare/v4.89.0...v4.90.0) (2019-11-18)
 
 

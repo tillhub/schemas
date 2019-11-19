@@ -382,6 +382,24 @@
         }
       ]
     },
+    "time_tracking": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": true,
+          "properties": {
+            "enabled": {
+              "type": "boolean",
+              "description": "defines whether time tracking feature is active or not",
+              "default": "false"
+            }
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "settings": {
       "oneOf": [
         {
