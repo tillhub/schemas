@@ -1,3 +1,10 @@
+# [4.92.0](https://github.com/tillhub/schemas/compare/v4.91.0...v4.92.0) (2019-11-19)
+
+
+### Features
+
+* add custom properties ([93b14ef](https://github.com/tillhub/schemas/commit/93b14ef))
+
 # [4.91.0](https://github.com/tillhub/schemas/compare/v4.90.0...v4.91.0) (2019-11-19)
 
 
