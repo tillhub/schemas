@@ -419,20 +419,41 @@
               "maxLength": 3
             },
             "auto_lock": {
-              "description": "Settings for inactivity monitor.",
-              "type": "object",
-              "properties": {
-                "enabled": {
-                  "type": "boolean",
-                  "default": false
+              "oneOf": [
+                {
+                  "description": "Settings for inactivity monitor.",
+                  "type": "object",
+                  "properties": {
+                    "enabled": {
+                      "oneOf": [
+                        {
+                          "type": "boolean",
+                          "default": false
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "idle_time": {
+                      "oneOf": [
+                        {
+                          "description": "Allowed idle time in seconds before locking the application",
+                          "type": "number",
+                          "minimum": 0,
+                          "default": 120
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  }
                 },
-                "idle_time": {
-                  "description": "Allowed idle time in seconds before locking the application",
-                  "type": "number",
-                  "minimum": 0,
-                  "default": 120
+                {
+                  "type": "null"
                 }
-              }
+              ]
             },
             "third_party": {
               "description": "Third party app links",

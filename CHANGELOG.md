@@ -1,3 +1,10 @@
+# [4.94.0](https://github.com/tillhub/schemas/compare/v4.93.0...v4.94.0) (2019-11-20)
+
+
+### Features
+
+* **configurations/auto-lock:** make nullable ([f84bd98](https://github.com/tillhub/schemas/commit/f84bd98))
+
 # [4.93.0](https://github.com/tillhub/schemas/compare/v4.92.0...v4.93.0) (2019-11-19)
 
 
