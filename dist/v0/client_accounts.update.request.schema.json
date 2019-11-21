@@ -186,6 +186,18 @@
           "type": "null"
         }
       ]
+    },
+    "active_until_years": {
+      "oneOf": [
+        {
+          "type": "integer",
+          "maximum": 5,
+          "minimum": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
     }
   }
 }

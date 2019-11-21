@@ -1,3 +1,10 @@
+# [4.96.0](https://github.com/tillhub/schemas/compare/v4.95.0...v4.96.0) (2019-11-21)
+
+
+### Features
+
+* **client_accounts:** add active_until_years ([d0a586c](https://github.com/tillhub/schemas/commit/d0a586c))
+
 # [4.95.0](https://github.com/tillhub/schemas/compare/v4.94.0...v4.95.0) (2019-11-21)
 
 
