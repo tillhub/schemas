@@ -1,3 +1,10 @@
+# [4.95.0](https://github.com/tillhub/schemas/compare/v4.94.0...v4.95.0) (2019-11-21)
+
+
+### Features
+
+* **vouchers:** add constraints ([df1f224](https://github.com/tillhub/schemas/commit/df1f224))
+
 # [4.94.0](https://github.com/tillhub/schemas/compare/v4.93.0...v4.94.0) (2019-11-20)
 
 
