@@ -190,6 +190,7 @@
       ]
     },
     "active_until_years": {
+      "description": "The value in years to increment the active until date from now.",
       "oneOf": [
         {
           "type": "integer",

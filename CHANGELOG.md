@@ -1,3 +1,10 @@
+## [4.96.1](https://github.com/tillhub/schemas/compare/v4.96.0...v4.96.1) (2019-11-22)
+
+
+### Bug Fixes
+
+* **client_account:** add description ([a82a0d3](https://github.com/tillhub/schemas/commit/a82a0d3))
+
 # [4.96.0](https://github.com/tillhub/schemas/compare/v4.95.0...v4.96.0) (2019-11-21)
 
 
