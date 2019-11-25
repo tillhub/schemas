@@ -1,3 +1,10 @@
+# [4.97.0](https://github.com/tillhub/schemas/compare/v4.96.1...v4.97.0) (2019-11-25)
+
+
+### Features
+
+* **Transactions V1 legacy:** voucher extended ([6ccd871](https://github.com/tillhub/schemas/commit/6ccd871))
+
 ## [4.96.1](https://github.com/tillhub/schemas/compare/v4.96.0...v4.96.1) (2019-11-22)
 
 

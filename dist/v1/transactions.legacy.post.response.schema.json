@@ -2297,15 +2297,8 @@
                                   "maxLength": 64,
                                   "description": "The Tillhub or Fleurop Id of the source voucher."
                                 },
-                                "api": {
-                                  "type": "string",
-                                  "enum": [
-                                    "fleurop-voucher-api",
-                                    "tillhub-voucher-api"
-                                  ]
-                                },
                                 "delta_amount": {
-                                  "description": "The effective change in the value of the voucher.",
+                                  "description": "The effective change in the value of the voucher or it's creation amount.",
                                   "type": "number",
                                   "minimum": -1000000,
                                   "maximum": 1000000,
@@ -2338,11 +2331,70 @@
                                   "example": "AB3847a66-97dc-4ac2-8e8a-c44920e1f22f",
                                   "description": "Voucher system used."
                                 },
+                                "external": {
+                                  "description": "Make this voucher to follow external logic",
+                                  "type": "boolean",
+                                  "default": false
+                                },
+                                "external_system_type": {
+                                  "description": "Define which voucher API implementation to follow",
+                                  "oneOf": [
+                                    {
+                                      "type": "string",
+                                      "enum": [
+                                        "tillhub-voucher-api",
+                                        "fleurop",
+                                        "zalando"
+                                      ]
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "external_system_id": {
+                                  "description": "Define here whether this voucher system is an external one and which ID it references at the provider. E.g. a Tillhub Account can talk to another one, but permissions and this reference need to be set.",
+                                  "default": null,
+                                  "oneOf": [
+                                    {
+                                      "description": "Additional parameter for external voucher systems, e.g. Fleurop Voucher Type specifier",
+                                      "type": "string",
+                                      "maxLength": 128,
+                                      "example": "0023903408"
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
                                 "action": {
                                   "type": "string",
                                   "format": "uuid",
                                   "example": "CD847a66-97dc-4ac2-8e8a-c44920e1f22f",
                                   "description": "Voucher system's action used."
+                                },
+                                "action_type": {
+                                  "type": "string",
+                                  "enum": [
+                                    "increment",
+                                    "decrement",
+                                    "create"
+                                  ],
+                                  "description": "Voucher system's action type used."
+                                },
+                                "template": {
+                                  "oneOf": [
+                                    {
+                                      "default": null,
+                                      "type": "string",
+                                      "format": "uuid",
+                                      "description": "If action_type is 'create' - a reference to the voucher template used",
+                                      "example": "43847a66-97dc-4ac2-8e8a-c44920e1f22f"
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
                                 },
                                 "title": {
                                   "oneOf": [
@@ -2368,14 +2420,14 @@
                                   "description": "Mainly legacy support for Fleurop flows.",
                                   "enum": [
                                     "undefined",
-                                    "fleuropRedeem",
-                                    "fleuropSellOrRecharge",
-                                    "ownBrandedRecharge",
-                                    "ownBrandedRedeem",
-                                    "externalSellAndActivate",
-                                    "tillhubSell",
-                                    "tillhubRecharge",
-                                    "tillhubRedeem"
+                                    "fleurop_redeem",
+                                    "fleurop_sell_or_recharge",
+                                    "fleurop_own_branded_recharge",
+                                    "fleurop_own_branded_redeem",
+                                    "fleurop_externa_sell_and_activate",
+                                    "tillhub_create",
+                                    "tillhub_recharge",
+                                    "tillhub_reedeem"
                                   ]
                                 },
                                 "status": {
@@ -3934,15 +3986,8 @@
                                   "maxLength": 64,
                                   "description": "The Tillhub or Fleurop Id of the source voucher."
                                 },
-                                "api": {
-                                  "type": "string",
-                                  "enum": [
-                                    "fleurop-voucher-api",
-                                    "tillhub-voucher-api"
-                                  ]
-                                },
                                 "delta_amount": {
-                                  "description": "The effective change in the value of the voucher.",
+                                  "description": "The effective change in the value of the voucher or it's creation amount.",
                                   "type": "number",
                                   "minimum": -1000000,
                                   "maximum": 1000000,
@@ -3975,11 +4020,70 @@
                                   "example": "AB3847a66-97dc-4ac2-8e8a-c44920e1f22f",
                                   "description": "Voucher system used."
                                 },
+                                "external": {
+                                  "description": "Make this voucher to follow external logic",
+                                  "type": "boolean",
+                                  "default": false
+                                },
+                                "external_system_type": {
+                                  "description": "Define which voucher API implementation to follow",
+                                  "oneOf": [
+                                    {
+                                      "type": "string",
+                                      "enum": [
+                                        "tillhub-voucher-api",
+                                        "fleurop",
+                                        "zalando"
+                                      ]
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "external_system_id": {
+                                  "description": "Define here whether this voucher system is an external one and which ID it references at the provider. E.g. a Tillhub Account can talk to another one, but permissions and this reference need to be set.",
+                                  "default": null,
+                                  "oneOf": [
+                                    {
+                                      "description": "Additional parameter for external voucher systems, e.g. Fleurop Voucher Type specifier",
+                                      "type": "string",
+                                      "maxLength": 128,
+                                      "example": "0023903408"
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
                                 "action": {
                                   "type": "string",
                                   "format": "uuid",
                                   "example": "CD847a66-97dc-4ac2-8e8a-c44920e1f22f",
                                   "description": "Voucher system's action used."
+                                },
+                                "action_type": {
+                                  "type": "string",
+                                  "enum": [
+                                    "increment",
+                                    "decrement",
+                                    "create"
+                                  ],
+                                  "description": "Voucher system's action type used."
+                                },
+                                "template": {
+                                  "oneOf": [
+                                    {
+                                      "default": null,
+                                      "type": "string",
+                                      "format": "uuid",
+                                      "description": "If action_type is 'create' - a reference to the voucher template used",
+                                      "example": "43847a66-97dc-4ac2-8e8a-c44920e1f22f"
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
                                 },
                                 "title": {
                                   "oneOf": [
@@ -4005,14 +4109,14 @@
                                   "description": "Mainly legacy support for Fleurop flows.",
                                   "enum": [
                                     "undefined",
-                                    "fleuropRedeem",
-                                    "fleuropSellOrRecharge",
-                                    "ownBrandedRecharge",
-                                    "ownBrandedRedeem",
-                                    "externalSellAndActivate",
-                                    "tillhubSell",
-                                    "tillhubRecharge",
-                                    "tillhubRedeem"
+                                    "fleurop_redeem",
+                                    "fleurop_sell_or_recharge",
+                                    "fleurop_own_branded_recharge",
+                                    "fleurop_own_branded_redeem",
+                                    "fleurop_externa_sell_and_activate",
+                                    "tillhub_create",
+                                    "tillhub_recharge",
+                                    "tillhub_reedeem"
                                   ]
                                 },
                                 "status": {
