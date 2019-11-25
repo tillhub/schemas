@@ -1,3 +1,10 @@
+# [4.98.0](https://github.com/tillhub/schemas/compare/v4.97.0...v4.98.0) (2019-11-25)
+
+
+### Features
+
+* **configurations:** add print_salesperson_policy ([08a1b85](https://github.com/tillhub/schemas/commit/08a1b85))
+
 # [4.97.0](https://github.com/tillhub/schemas/compare/v4.96.1...v4.97.0) (2019-11-25)
 
 
