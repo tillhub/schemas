@@ -438,6 +438,8 @@
                   {
                     "type": "string",
                     "enum": [
+                      "home",
+                      "work",
                       "delivery",
                       "billing"
                     ]

@@ -1,3 +1,13 @@
+# [4.99.0](https://github.com/tillhub/schemas/compare/v4.98.0...v4.99.0) (2019-11-29)
+
+
+### Features
+
+* **staff:** add address types ([43bb37a](https://github.com/tillhub/schemas/commit/43bb37a))
+* **voucher systems delegates:** delegate system id ([46c5316](https://github.com/tillhub/schemas/commit/46c5316))
+* **voucher_systems:** add templates update schema ([4efb1be](https://github.com/tillhub/schemas/commit/4efb1be))
+* **voucher_systems:** add voucher templates ([6a9c134](https://github.com/tillhub/schemas/commit/6a9c134))
+
 # [4.98.0](https://github.com/tillhub/schemas/compare/v4.97.0...v4.98.0) (2019-11-25)
 
 
