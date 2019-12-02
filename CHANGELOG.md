@@ -1,3 +1,10 @@
+# [4.101.0](https://github.com/tillhub/schemas/compare/v4.100.0...v4.101.0) (2019-12-02)
+
+
+### Features
+
+* **legacy transactions:** vocuher fields extension ([ae68da9](https://github.com/tillhub/schemas/commit/ae68da9))
+
 # [4.100.0](https://github.com/tillhub/schemas/compare/v4.99.0...v4.100.0) (2019-12-02)
 
 

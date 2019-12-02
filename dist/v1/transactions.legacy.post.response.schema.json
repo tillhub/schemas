@@ -2060,6 +2060,8 @@
                               "voucher_ean",
                               "voucher_product",
                               "voucher_system_id",
+                              "voucher_delegate_id",
+                              "voucher_user_id",
                               "voucher_action_id",
                               "voucher_currency",
                               "voucher_api",
@@ -2067,6 +2069,7 @@
                               "voucher_is_locked",
                               "voucher_message",
                               "voucher_title",
+                              "voucher_type",
                               "voucher_type"
                             ]
                           },
@@ -3751,7 +3754,9 @@
                               "voucher_ean",
                               "voucher_product",
                               "voucher_system_id",
+                              "voucher_user_id",
                               "voucher_action_id",
+                              "voucher_product",
                               "voucher_currency",
                               "voucher_api",
                               "voucher_is_booked",
