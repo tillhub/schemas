@@ -1,3 +1,10 @@
+# [4.100.0](https://github.com/tillhub/schemas/compare/v4.99.0...v4.100.0) (2019-12-02)
+
+
+### Features
+
+* **voucher_systems:** Fix schema id namings ([e17c58c](https://github.com/tillhub/schemas/commit/e17c58c))
+
 # [4.99.0](https://github.com/tillhub/schemas/compare/v4.98.0...v4.99.0) (2019-11-29)
 
 
