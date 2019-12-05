@@ -1,3 +1,10 @@
+# [4.106.0](https://github.com/tillhub/schemas/compare/v4.105.0...v4.106.0) (2019-12-05)
+
+
+### Features
+
+* **voucher_systems/templates:** add "contraints" ([40543e1](https://github.com/tillhub/schemas/commit/40543e1))
+
 # [4.105.0](https://github.com/tillhub/schemas/compare/v4.104.0...v4.105.0) (2019-12-05)
 
 
