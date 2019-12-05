@@ -1,3 +1,10 @@
+# [4.104.0](https://github.com/tillhub/schemas/compare/v4.103.0...v4.104.0) (2019-12-05)
+
+
+### Features
+
+* **new_schema:** add auto generated test ([4d2294c](https://github.com/tillhub/schemas/commit/4d2294c))
+
 # [4.103.0](https://github.com/tillhub/schemas/compare/v4.102.0...v4.103.0) (2019-12-05)
 
 
