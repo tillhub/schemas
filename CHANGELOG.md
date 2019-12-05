@@ -1,3 +1,10 @@
+# [4.103.0](https://github.com/tillhub/schemas/compare/v4.102.0...v4.103.0) (2019-12-05)
+
+
+### Features
+
+* **vouchers:** add scan prefix ([167da54](https://github.com/tillhub/schemas/commit/167da54))
+
 # [4.102.0](https://github.com/tillhub/schemas/compare/v4.101.0...v4.102.0) (2019-12-05)
 
 
