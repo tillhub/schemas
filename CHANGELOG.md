@@ -1,3 +1,10 @@
+# [4.102.0](https://github.com/tillhub/schemas/compare/v4.101.0...v4.102.0) (2019-12-05)
+
+
+### Features
+
+* **voucher_systems:** add external_voucher_system_id ([daeae8b](https://github.com/tillhub/schemas/commit/daeae8b))
+
 # [4.101.0](https://github.com/tillhub/schemas/compare/v4.100.0...v4.101.0) (2019-12-02)
 
 

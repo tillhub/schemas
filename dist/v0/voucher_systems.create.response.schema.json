@@ -352,7 +352,22 @@
       "default": null,
       "oneOf": [
         {
-          "description": "Additional parameter for external voucher systems, e.g. Fleurop Voucher Type specifier",
+          "description": "Replace own accountId with external_system_id in requests when external=true, i.e. /vouchers/external_system_id/voucher_id. If external=false use accountId as usual, i.e. /vouchers/accountId/voucher_id",
+          "type": "string",
+          "maxLength": 128,
+          "example": "0023903408"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "external_voucher_system_id": {
+      "description": "If using a parent's voucher system, this is the voucher system id of the delegating parent. external_voucher_system_id is to be sent in requests as a query parameter, whenever external_system_id (instead of the own accountId) is used in the url, e.g. vouchers/{external_system_id}/lookup?code=xyz123&system={external_voucher_system_id}.",
+      "default": null,
+      "oneOf": [
+        {
+          "description": "Additional parameter for external voucher systems, e.g. Fleurop Voucher Type specifier or id inside external system",
           "type": "string",
           "maxLength": 128,
           "example": "0023903408"
