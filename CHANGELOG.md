@@ -1,3 +1,10 @@
+# [4.105.0](https://github.com/tillhub/schemas/compare/v4.104.0...v4.105.0) (2019-12-05)
+
+
+### Features
+
+* **vouchers:** make "type" nullable ([462fba6](https://github.com/tillhub/schemas/commit/462fba6))
+
 # [4.104.0](https://github.com/tillhub/schemas/compare/v4.103.0...v4.104.0) (2019-12-05)
 
 

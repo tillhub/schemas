@@ -174,12 +174,19 @@
           "type": "string"
         },
         "type": {
-          "description": "",
-          "type": "string",
-          "enum": [
-            "amount",
-            "discount",
-            "product"
+          "oneOf": [
+            {
+              "description": "",
+              "type": "string",
+              "enum": [
+                "amount",
+                "discount",
+                "product"
+              ]
+            },
+            {
+              "type": "null"
+            }
           ]
         },
         "regions": {
