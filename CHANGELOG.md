@@ -1,3 +1,10 @@
+# [4.107.0](https://github.com/tillhub/schemas/compare/v4.106.0...v4.107.0) (2019-12-05)
+
+
+### Features
+
+* **voucher_systems/templates:** nullable properties ([2a93720](https://github.com/tillhub/schemas/commit/2a93720))
+
 # [4.106.0](https://github.com/tillhub/schemas/compare/v4.105.0...v4.106.0) (2019-12-05)
 
 

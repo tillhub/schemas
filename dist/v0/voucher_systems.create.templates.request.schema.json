@@ -106,10 +106,6 @@
             }
           ]
         },
-        "currency": {
-          "description": "",
-          "type": "string"
-        },
         "issuable": {
           "description": "",
           "type": "boolean"
@@ -172,22 +168,6 @@
         "namespace": {
           "description": "",
           "type": "string"
-        },
-        "type": {
-          "oneOf": [
-            {
-              "description": "",
-              "type": "string",
-              "enum": [
-                "amount",
-                "discount",
-                "product"
-              ]
-            },
-            {
-              "type": "null"
-            }
-          ]
         },
         "regions": {
           "description": "Regions to limit this voucher to.",
@@ -636,6 +616,33 @@
                   }
                 }
               }
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "currency": {
+          "oneOf": [
+            {
+              "description": "",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "type": {
+          "oneOf": [
+            {
+              "description": "",
+              "type": "string",
+              "enum": [
+                "amount",
+                "discount",
+                "product"
+              ]
             },
             {
               "type": "null"
