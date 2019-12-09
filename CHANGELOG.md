@@ -1,3 +1,10 @@
+## [4.109.1](https://github.com/tillhub/schemas/compare/v4.109.0...v4.109.1) (2019-12-09)
+
+
+### Bug Fixes
+
+* **price_books:** fix price_book custom_id field format ([#314](https://github.com/tillhub/schemas/issues/314)) ([40fe8a7](https://github.com/tillhub/schemas/commit/40fe8a7))
+
 # [4.109.0](https://github.com/tillhub/schemas/compare/v4.108.0...v4.109.0) (2019-12-09)
 
 

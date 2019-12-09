@@ -8,7 +8,7 @@
     "custom_id": {
       "description": "The Price Book custom id",
       "type": "string",
-      "format": "varchar"
+      "maxLength": 128
     },
     "name": {
       "oneOf": [
