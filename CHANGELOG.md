@@ -1,3 +1,10 @@
+# [4.109.0](https://github.com/tillhub/schemas/compare/v4.108.0...v4.109.0) (2019-12-09)
+
+
+### Features
+
+* **voucher_systems:** fix voucher-response schema ([b698e6a](https://github.com/tillhub/schemas/commit/b698e6a))
+
 # [4.108.0](https://github.com/tillhub/schemas/compare/v4.107.0...v4.108.0) (2019-12-06)
 
 

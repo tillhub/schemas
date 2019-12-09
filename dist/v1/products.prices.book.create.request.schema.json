@@ -4,18 +4,18 @@
   "additionalProperties": false,
   "type": "object",
   "required": [
-    "product"
+    "id"
   ],
   "properties": {
-    "product": {
-      "description": "The reference to the product",
+    "custom_id": {
+      "description": "The Price Book custom id",
       "type": "string",
-      "format": "uuid"
+      "format": "varchar"
     },
     "name": {
       "oneOf": [
         {
-          "description": "Price book item name",
+          "description": "The Price Book name",
           "type": "string",
           "maxLength": 512
         },
@@ -24,12 +24,398 @@
         }
       ]
     },
-    "summary": {
-      "description": "Short summary of the price book item",
+    "constraints": {
       "oneOf": [
         {
-          "type": "string",
-          "maxLength": 1024
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "time": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "scheduled": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "day_of_week": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "enabled": {
+                          "type": "boolean",
+                          "default": true
+                        },
+                        "monday": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "slots": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "additionalProperties": false,
+                                "properties": {
+                                  "enabled": {
+                                    "type": "boolean",
+                                    "default": true
+                                  },
+                                  "start": {
+                                    "oneOf": [
+                                      {
+                                        "type": "string",
+                                        "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
+                                  },
+                                  "end": {
+                                    "oneOf": [
+                                      {
+                                        "type": "string",
+                                        "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "tuesday": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "slots": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "additionalProperties": false,
+                                "properties": {
+                                  "enabled": {
+                                    "type": "boolean",
+                                    "default": true
+                                  },
+                                  "start": {
+                                    "oneOf": [
+                                      {
+                                        "type": "string",
+                                        "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
+                                  },
+                                  "end": {
+                                    "oneOf": [
+                                      {
+                                        "type": "string",
+                                        "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "wednesday": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "slots": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "additionalProperties": false,
+                                "properties": {
+                                  "enabled": {
+                                    "type": "boolean",
+                                    "default": true
+                                  },
+                                  "start": {
+                                    "oneOf": [
+                                      {
+                                        "type": "string",
+                                        "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
+                                  },
+                                  "end": {
+                                    "oneOf": [
+                                      {
+                                        "type": "string",
+                                        "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "thursday": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "slots": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "additionalProperties": false,
+                                "properties": {
+                                  "enabled": {
+                                    "type": "boolean",
+                                    "default": true
+                                  },
+                                  "start": {
+                                    "oneOf": [
+                                      {
+                                        "type": "string",
+                                        "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
+                                  },
+                                  "end": {
+                                    "oneOf": [
+                                      {
+                                        "type": "string",
+                                        "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "friday": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "slots": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "additionalProperties": false,
+                                "properties": {
+                                  "enabled": {
+                                    "type": "boolean",
+                                    "default": true
+                                  },
+                                  "start": {
+                                    "oneOf": [
+                                      {
+                                        "type": "string",
+                                        "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
+                                  },
+                                  "end": {
+                                    "oneOf": [
+                                      {
+                                        "type": "string",
+                                        "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "saturday": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "slots": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "additionalProperties": false,
+                                "properties": {
+                                  "enabled": {
+                                    "type": "boolean",
+                                    "default": true
+                                  },
+                                  "start": {
+                                    "oneOf": [
+                                      {
+                                        "type": "string",
+                                        "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
+                                  },
+                                  "end": {
+                                    "oneOf": [
+                                      {
+                                        "type": "string",
+                                        "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "sunday": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "slots": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "additionalProperties": false,
+                                "properties": {
+                                  "enabled": {
+                                    "type": "boolean",
+                                    "default": true
+                                  },
+                                  "start": {
+                                    "oneOf": [
+                                      {
+                                        "type": "string",
+                                        "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
+                                  },
+                                  "end": {
+                                    "oneOf": [
+                                      {
+                                        "type": "string",
+                                        "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "date_range": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "enabled": {
+                          "type": "boolean",
+                          "default": true
+                        },
+                        "start": {
+                          "oneOf": [
+                            {
+                              "type": "object",
+                              "additionalProperties": false,
+                              "properties": {
+                                "enabled": {
+                                  "type": "boolean",
+                                  "default": true
+                                },
+                                "value": {
+                                  "oneOf": [
+                                    {
+                                      "type": "string",
+                                      "format": "date-time"
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                }
+                              }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "end": {
+                          "oneOf": [
+                            {
+                              "type": "object",
+                              "additionalProperties": false,
+                              "properties": {
+                                "enabled": {
+                                  "type": "boolean",
+                                  "default": true
+                                },
+                                "value": {
+                                  "oneOf": [
+                                    {
+                                      "type": "string",
+                                      "format": "date-time"
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                }
+                              }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "tz": {
+                          "oneOf": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
         },
         {
           "type": "null"
@@ -41,128 +427,6 @@
     },
     "deleted": {
       "type": "boolean"
-    },
-    "locations": {
-      "oneOf": [
-        {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "format": "uuid"
-          }
-        },
-        {
-          "type": "null"
-        }
-      ]
-    },
-    "clients": {
-      "oneOf": [
-        {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "format": "uuid"
-          }
-        },
-        {
-          "type": "null"
-        }
-      ]
-    },
-    "external_reference_id": {
-      "description": "A caller defined custom ID for the purpose of syncing from external resources, or to use in analytics.",
-      "oneOf": [
-        {
-          "type": "string",
-          "maxLength": 128
-        },
-        {
-          "type": "null"
-        }
-      ]
-    },
-    "start": {
-      "oneOf": [
-        {
-          "type": "string",
-          "format": "date-time"
-        },
-        {
-          "type": "null"
-        }
-      ]
-    },
-    "end": {
-      "oneOf": [
-        {
-          "type": "string",
-          "format": "date-time"
-        },
-        {
-          "type": "null"
-        }
-      ]
-    },
-    "value_type": {
-      "type": "string",
-      "description": "Value types restrict the pricing to the value fields (amount_net & amount_gross or rate). If all of those are set the value_type counts. If there is no value_type, amount fields take precedence.",
-      "enum": [
-        "rate",
-        "value"
-      ]
-    },
-    "amount_net": {
-      "oneOf": [
-        {
-          "example": "27633.02",
-          "type": "number",
-          "minimum": 0,
-          "maximum": 1000000,
-          "multipleOf": 0.01
-        },
-        {
-          "type": "null"
-        }
-      ]
-    },
-    "amount_gross": {
-      "oneOf": [
-        {
-          "example": "27633.02",
-          "type": "number",
-          "minimum": 0,
-          "maximum": 1000000,
-          "multipleOf": 0.01
-        },
-        {
-          "type": "null"
-        }
-      ]
-    },
-    "rate": {
-      "description": "Relative value of this product based on any other applicable price.",
-      "oneOf": [
-        {
-          "type": "number",
-          "minimum": 0,
-          "maximum": 9,
-          "multipleOf": 0.001
-        },
-        {
-          "type": "null"
-        }
-      ]
-    },
-    "metadata": {
-      "oneOf": [
-        {
-          "type": "object"
-        },
-        {
-          "type": "null"
-        }
-      ]
     }
   }
 }
