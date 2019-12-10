@@ -1,3 +1,10 @@
+# [4.110.0](https://github.com/tillhub/schemas/compare/v4.109.1...v4.110.0) (2019-12-10)
+
+
+### Features
+
+* **locations:** add default favourites ([75e316b](https://github.com/tillhub/schemas/commit/75e316b))
+
 ## [4.109.1](https://github.com/tillhub/schemas/compare/v4.109.0...v4.109.1) (2019-12-09)
 
 

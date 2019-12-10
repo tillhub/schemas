@@ -412,6 +412,18 @@
           }
         }
       ]
+    },
+    "default_favourite": {
+      "description": "Define which favourite set to show as default in the POS.",
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "uuid"
+        },
+        {
+          "type": "null"
+        }
+      ]
     }
   }
 }
