@@ -1,3 +1,10 @@
+# [4.111.0](https://github.com/tillhub/schemas/compare/v4.110.0...v4.111.0) (2019-12-11)
+
+
+### Features
+
+* **correspondences:** add correspondences schema ([#315](https://github.com/tillhub/schemas/issues/315)) ([17fdbf9](https://github.com/tillhub/schemas/commit/17fdbf9))
+
 # [4.110.0](https://github.com/tillhub/schemas/compare/v4.109.1...v4.110.0) (2019-12-10)
 
 

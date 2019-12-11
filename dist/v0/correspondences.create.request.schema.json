@@ -1,0 +1,167 @@
+{
+  "$id": "https://schemas.tillhub.com/v0/correspondences.create.request.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "required": [],
+  "properties": {
+    "metadata": {
+      "description": "Arbitrary user defined data.",
+      "oneOf": [
+        {
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "channel": {
+      "oneOf": [
+        {
+          "type": "string",
+          "maxLength": 24,
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "recipient": {
+      "oneOf": [
+        {
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "sender": {
+      "oneOf": [
+        {
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "payload_type": {
+      "oneOf": [
+        {
+          "type": "string",
+          "maxLength": 24,
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "payload": {
+      "oneOf": [
+        {
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "channel_message": {
+      "oneOf": [
+        {
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "customer": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "resource_type": {
+      "oneOf": [
+        {
+          "type": "string",
+          "maxLength": 24,
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "resource": {
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "uuid"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "sent_at": {
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "date-time"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "delivered_at": {
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "date-time"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "status": {
+      "oneOf": [
+        {
+          "type": "string",
+          "maxLength": 24,
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "status_details": {
+      "oneOf": [
+        {
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "type": {
+      "oneOf": [
+        {
+          "type": "string",
+          "maxLength": 36,
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "type": "object"
+}
