@@ -1,3 +1,10 @@
+# [4.113.0](https://github.com/tillhub/schemas/compare/v4.112.0...v4.113.0) (2019-12-16)
+
+
+### Features
+
+* **voucher_systems:** add description ([9460d73](https://github.com/tillhub/schemas/commit/9460d73))
+
 # [4.112.0](https://github.com/tillhub/schemas/compare/v4.111.0...v4.112.0) (2019-12-16)
 
 

@@ -79,6 +79,7 @@
       }
     },
     "code": {
+      "description": "In order to set a custom code, the template attribute \"code_generation\" must be set to \"scan\". Otherwise the API will generate a random code according to the provided format from the template.",
       "type": "string",
       "maxLength": 128
     }
