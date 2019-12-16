@@ -1,3 +1,10 @@
+# [4.112.0](https://github.com/tillhub/schemas/compare/v4.111.0...v4.112.0) (2019-12-16)
+
+
+### Features
+
+* **voucher_systems:** validate template currency ([520e257](https://github.com/tillhub/schemas/commit/520e257))
+
 # [4.111.0](https://github.com/tillhub/schemas/compare/v4.110.0...v4.111.0) (2019-12-11)
 
 

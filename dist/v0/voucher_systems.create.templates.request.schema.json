@@ -692,8 +692,11 @@
         "currency": {
           "oneOf": [
             {
-              "description": "",
-              "type": "string"
+              "type": "string",
+              "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+              "example": "EUR",
+              "minLength": 3,
+              "maxLength": 3
             },
             {
               "type": "null"
