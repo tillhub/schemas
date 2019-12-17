@@ -1,3 +1,10 @@
+## [4.113.1](https://github.com/tillhub/schemas/compare/v4.113.0...v4.113.1) (2019-12-17)
+
+
+### Bug Fixes
+
+* **price_book_entry:** add currency column ([#319](https://github.com/tillhub/schemas/issues/319)) ([fb08ffa](https://github.com/tillhub/schemas/commit/fb08ffa))
+
 # [4.113.0](https://github.com/tillhub/schemas/compare/v4.112.0...v4.113.0) (2019-12-16)
 
 
