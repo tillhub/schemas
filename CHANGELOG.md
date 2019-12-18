@@ -1,3 +1,10 @@
+# [4.114.0](https://github.com/tillhub/schemas/compare/v4.113.1...v4.114.0) (2019-12-18)
+
+
+### Features
+
+* **configurations:** configurable receipts ([#320](https://github.com/tillhub/schemas/issues/320)) ([26de6e0](https://github.com/tillhub/schemas/commit/26de6e0))
+
 ## [4.113.1](https://github.com/tillhub/schemas/compare/v4.113.0...v4.113.1) (2019-12-17)
 
 
