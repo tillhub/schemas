@@ -143,7 +143,16 @@
     "status_details": {
       "oneOf": [
         {
-          "type": "object"
+          "type": "object",
+          "enum": [
+            "dispatched",
+            "send_attempted",
+            "send_failed",
+            "received",
+            "bounced",
+            "opened",
+            "blocked"
+          ]
         },
         {
           "type": "null"

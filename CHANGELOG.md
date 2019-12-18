@@ -1,3 +1,10 @@
+# [4.115.0](https://github.com/tillhub/schemas/compare/v4.114.0...v4.115.0) (2019-12-18)
+
+
+### Features
+
+* **correspondences:** add status enums ([28255cb](https://github.com/tillhub/schemas/commit/28255cb))
+
 # [4.114.0](https://github.com/tillhub/schemas/compare/v4.113.1...v4.114.0) (2019-12-18)
 
 
