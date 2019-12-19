@@ -132,18 +132,6 @@
       "oneOf": [
         {
           "type": "string",
-          "maxLength": 24,
-          "minLength": 1
-        },
-        {
-          "type": "null"
-        }
-      ]
-    },
-    "status_details": {
-      "oneOf": [
-        {
-          "type": "object",
           "enum": [
             "dispatched",
             "send_attempted",
@@ -153,6 +141,16 @@
             "opened",
             "blocked"
           ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "status_details": {
+      "oneOf": [
+        {
+          "type": "object"
         },
         {
           "type": "null"

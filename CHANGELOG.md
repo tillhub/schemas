@@ -1,3 +1,10 @@
+# [4.116.0](https://github.com/tillhub/schemas/compare/v4.115.0...v4.116.0) (2019-12-19)
+
+
+### Features
+
+* **correspondences:** fix status_details ([65c658d](https://github.com/tillhub/schemas/commit/65c658d))
+
 # [4.115.0](https://github.com/tillhub/schemas/compare/v4.114.0...v4.115.0) (2019-12-18)
 
 
