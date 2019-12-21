@@ -320,7 +320,10 @@
                   "staff:staff:favourites",
                   "staff:staff:devices",
                   "staff:staff:devices:bind",
-                  "staff:staff:devices:unbind"
+                  "staff:staff:devices:unbind",
+                  "staff:staff:licenses",
+                  "staff:staff:licenses:create",
+                  "staff:staff:licenses:delete"
                 ]
               },
               {

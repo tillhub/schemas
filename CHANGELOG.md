@@ -1,3 +1,10 @@
+# [4.117.0](https://github.com/tillhub/schemas/compare/v4.116.0...v4.117.0) (2019-12-21)
+
+
+### Features
+
+* **permissions:** add licenses permissions ([82938b0](https://github.com/tillhub/schemas/commit/82938b0))
+
 # [4.116.0](https://github.com/tillhub/schemas/compare/v4.115.0...v4.116.0) (2019-12-19)
 
 
