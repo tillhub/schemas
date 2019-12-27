@@ -1,3 +1,10 @@
+# [4.119.0](https://github.com/tillhub/schemas/compare/v4.118.0...v4.119.0) (2019-12-27)
+
+
+### Features
+
+* add categories ([80bdc7a](https://github.com/tillhub/schemas/commit/80bdc7a))
+
 # [4.118.0](https://github.com/tillhub/schemas/compare/v4.117.0...v4.118.0) (2019-12-27)
 
 
