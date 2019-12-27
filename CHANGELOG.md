@@ -1,3 +1,10 @@
+# [4.118.0](https://github.com/tillhub/schemas/compare/v4.117.0...v4.118.0) (2019-12-27)
+
+
+### Features
+
+* add storefronts ([cd6ae3a](https://github.com/tillhub/schemas/commit/cd6ae3a))
+
 # [4.117.0](https://github.com/tillhub/schemas/compare/v4.116.0...v4.117.0) (2019-12-21)
 
 
