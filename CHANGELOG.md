@@ -1,3 +1,10 @@
+# [4.120.0](https://github.com/tillhub/schemas/compare/v4.119.0...v4.120.0) (2019-12-29)
+
+
+### Features
+
+* **products:** add required online features ([c24c3a3](https://github.com/tillhub/schemas/commit/c24c3a3))
+
 # [4.119.0](https://github.com/tillhub/schemas/compare/v4.118.0...v4.119.0) (2019-12-27)
 
 

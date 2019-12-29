@@ -1552,6 +1552,30 @@
         }
       ]
     },
+    "online": {
+      "description": "Define whether this product and it's children (if not specified otherwise) are available online.",
+      "default": false,
+      "oneOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "shipping_required": {
+      "description": "Define whether this item requires shipping. This usually the case except for digital goods. Tax and tax splits may apply based on region.",
+      "default": true,
+      "oneOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "delegatable_to": {
       "oneOf": [
         {
