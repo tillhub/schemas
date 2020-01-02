@@ -1467,6 +1467,13 @@
       ]
     },
     "configuration": {
+      "description": "Defines various product behaviours.",
+      "default": {
+        "allow_zero_prices": true,
+        "pricing": {
+          "allow_is_free": false
+        }
+      },
       "anyOf": [
         {
           "type": "object",

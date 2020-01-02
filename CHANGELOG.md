@@ -1,3 +1,10 @@
+# [4.121.0](https://github.com/tillhub/schemas/compare/v4.120.0...v4.121.0) (2020-01-02)
+
+
+### Features
+
+* **products:** add default configuration ([4dd4041](https://github.com/tillhub/schemas/commit/4dd4041))
+
 # [4.120.0](https://github.com/tillhub/schemas/compare/v4.119.0...v4.120.0) (2019-12-29)
 
 
