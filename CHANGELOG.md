@@ -1,3 +1,10 @@
+# [4.122.0](https://github.com/tillhub/schemas/compare/v4.121.0...v4.122.0) (2020-01-10)
+
+
+### Features
+
+* **expense_deposits/configurations:** toggle feat ([3278cfa](https://github.com/tillhub/schemas/commit/3278cfa))
+
 # [4.121.0](https://github.com/tillhub/schemas/compare/v4.120.0...v4.121.0) (2020-01-02)
 
 

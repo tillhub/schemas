@@ -374,6 +374,61 @@
                   "type": "null"
                 }
               ]
+            },
+            "visibility": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "description": "defines visibility of accounts per context e.g. balance",
+                  "properties": {
+                    "balance": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "enum": [
+                          "expense",
+                          "deposit",
+                          "bank",
+                          "transit",
+                          "safe",
+                          "tip"
+                        ]
+                      }
+                    },
+                    "opening": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "enum": [
+                          "expense",
+                          "deposit",
+                          "bank",
+                          "transit",
+                          "safe",
+                          "tip"
+                        ]
+                      }
+                    },
+                    "expense_list": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "enum": [
+                          "expense",
+                          "deposit",
+                          "bank",
+                          "transit",
+                          "safe",
+                          "tip"
+                        ]
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
             }
           }
         },
@@ -1860,6 +1915,42 @@
           "properties": {
             "enabled": {
               "description": "Specifies if delivery notes are available.",
+              "type": "boolean",
+              "default": true
+            }
+          }
+        }
+      ]
+    },
+    "library_view": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "enabled": {
+              "description": "Specifies if library view is available.",
+              "type": "boolean",
+              "default": true
+            }
+          }
+        }
+      ]
+    },
+    "scan_view": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "enabled": {
+              "description": "Specifies if scan view is available.",
               "type": "boolean",
               "default": true
             }
