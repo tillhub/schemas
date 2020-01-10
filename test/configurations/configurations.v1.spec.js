@@ -14,6 +14,7 @@ test('Configurations: update schema validation', function (t) {
   t.plan(2)
   const updateRequest = require('../../lib/v1/configurations').update.request
   const { valid, error } = validate(updateRequest)
+
   t.ok(valid, 'update schema is valid')
   t.error(error, 'should not get any error')
   t.end()
