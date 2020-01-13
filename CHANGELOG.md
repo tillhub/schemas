@@ -1,3 +1,10 @@
+## [4.123.1](https://github.com/tillhub/schemas/compare/v4.123.0...v4.123.1) (2020-01-13)
+
+
+### Bug Fixes
+
+* **packages:** update firebase dep ([85b41c6](https://github.com/tillhub/schemas/commit/85b41c6))
+
 # [4.123.0](https://github.com/tillhub/schemas/compare/v4.122.0...v4.123.0) (2020-01-13)
 
 
