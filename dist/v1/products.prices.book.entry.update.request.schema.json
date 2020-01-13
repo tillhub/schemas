@@ -570,6 +570,17 @@
           "type": "null"
         }
       ]
+    },
+    "tax": {
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "uuid"
+        },
+        {
+          "type": "null"
+        }
+      ]
     }
   }
 }
