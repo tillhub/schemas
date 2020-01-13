@@ -1,3 +1,10 @@
+## [4.123.2](https://github.com/tillhub/schemas/compare/v4.123.1...v4.123.2) (2020-01-13)
+
+
+### Bug Fixes
+
+* **packages:** upgrade firebase-tools dep ([5a9c236](https://github.com/tillhub/schemas/commit/5a9c236))
+
 ## [4.123.1](https://github.com/tillhub/schemas/compare/v4.123.0...v4.123.1) (2020-01-13)
 
 
