@@ -1,3 +1,10 @@
+# [4.124.0](https://github.com/tillhub/schemas/compare/v4.123.2...v4.124.0) (2020-01-14)
+
+
+### Features
+
+* **trash:** force semanti release ([#329](https://github.com/tillhub/schemas/issues/329)) ([faefb5f](https://github.com/tillhub/schemas/commit/faefb5f))
+
 ## [4.123.2](https://github.com/tillhub/schemas/compare/v4.123.1...v4.123.2) (2020-01-13)
 
 
