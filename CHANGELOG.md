@@ -1,3 +1,10 @@
+## [4.124.2](https://github.com/tillhub/schemas/compare/v4.124.1...v4.124.2) (2020-01-14)
+
+
+### Bug Fixes
+
+* **configurations:** add garbage prop to handle legacy accounts ([d132ea4](https://github.com/tillhub/schemas/commit/d132ea4))
+
 ## [4.124.1](https://github.com/tillhub/schemas/compare/v4.124.0...v4.124.1) (2020-01-14)
 
 

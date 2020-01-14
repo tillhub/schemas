@@ -3150,6 +3150,20 @@
                   "default": true
                 }
               }
+            },
+            "fixed": {
+              "description": "DEPRECATED: DO NOT USE",
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "object"
+                },
+                {
+                  "type": "array"
+                }
+              ]
             }
           }
         }
