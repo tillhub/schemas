@@ -1,3 +1,10 @@
+## [4.124.1](https://github.com/tillhub/schemas/compare/v4.124.0...v4.124.1) (2020-01-14)
+
+
+### Bug Fixes
+
+* **pricebook-entry:** fix min/max values for discount, rate ([#330](https://github.com/tillhub/schemas/issues/330)) ([5ec4a7b](https://github.com/tillhub/schemas/commit/5ec4a7b))
+
 # [4.124.0](https://github.com/tillhub/schemas/compare/v4.123.2...v4.124.0) (2020-01-14)
 
 
