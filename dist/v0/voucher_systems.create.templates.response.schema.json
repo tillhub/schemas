@@ -670,6 +670,7 @@
                   ]
                 },
                 "min_identifier_length": {
+                  "description": "This is deprecated, as it conflicts with \"format\" from voucher templates.",
                   "default": null,
                   "oneOf": [
                     {

@@ -35,7 +35,7 @@
       "oneOf": [
         {
           "type": "array",
-          "description": "If defined then only these branches will be using this system. If not defined, there will be no restrictions on which branches can use this system.",
+          "description": "This is deprecated. Please use \"locations\" instead.",
           "minItems": 1,
           "items": {
             "type": "string",
@@ -1051,6 +1051,7 @@
                             ]
                           },
                           "min_identifier_length": {
+                            "description": "This is deprecated, as it conflicts with \"format\" from voucher templates.",
                             "default": null,
                             "oneOf": [
                               {
@@ -1104,6 +1105,22 @@
                 }
               }
             }
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "locations": {
+      "oneOf": [
+        {
+          "type": "array",
+          "description": "If defined then only these locations will be using this system. If not defined, there will be no restrictions on which locations can use this system.",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "format": "uuid"
           }
         },
         {

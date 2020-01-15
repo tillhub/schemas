@@ -1,3 +1,10 @@
+# [4.126.0](https://github.com/tillhub/schemas/compare/v4.125.0...v4.126.0) (2020-01-15)
+
+
+### Features
+
+* **voucher_systems:** add locations ([83e15db](https://github.com/tillhub/schemas/commit/83e15db))
+
 # [4.125.0](https://github.com/tillhub/schemas/compare/v4.124.2...v4.125.0) (2020-01-15)
 
 
