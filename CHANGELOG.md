@@ -1,3 +1,10 @@
+# [4.125.0](https://github.com/tillhub/schemas/compare/v4.124.2...v4.125.0) (2020-01-15)
+
+
+### Features
+
+* **promotions:** add branch_groups ([269ec7b](https://github.com/tillhub/schemas/commit/269ec7b))
+
 ## [4.124.2](https://github.com/tillhub/schemas/compare/v4.124.1...v4.124.2) (2020-01-14)
 
 

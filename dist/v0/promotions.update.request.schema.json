@@ -560,6 +560,20 @@
           "type": "null"
         }
       ]
+    },
+    "branch_groups": {
+      "oneOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
     }
   }
 }
