@@ -1,3 +1,10 @@
+# [4.127.0](https://github.com/tillhub/schemas/compare/v4.126.0...v4.127.0) (2020-01-24)
+
+
+### Features
+
+* **safes_log_book:** add client_id ([133ee53](https://github.com/tillhub/schemas/commit/133ee53))
+
 # [4.126.0](https://github.com/tillhub/schemas/compare/v4.125.0...v4.126.0) (2020-01-15)
 
 
