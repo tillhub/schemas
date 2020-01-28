@@ -1,3 +1,10 @@
+## [4.128.2](https://github.com/tillhub/schemas/compare/v4.128.1...v4.128.2) (2020-01-28)
+
+
+### Bug Fixes
+
+* **trash:** change path to query ([5dfb813](https://github.com/tillhub/schemas/commit/5dfb813))
+
 ## [4.128.1](https://github.com/tillhub/schemas/compare/v4.128.0...v4.128.1) (2020-01-28)
 
 
