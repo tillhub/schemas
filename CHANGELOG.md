@@ -1,3 +1,10 @@
+## [4.128.3](https://github.com/tillhub/schemas/compare/v4.128.2...v4.128.3) (2020-01-28)
+
+
+### Bug Fixes
+
+* **trash:** change trash enum type staff -> staffs ([924b9f9](https://github.com/tillhub/schemas/commit/924b9f9))
+
 ## [4.128.2](https://github.com/tillhub/schemas/compare/v4.128.1...v4.128.2) (2020-01-28)
 
 
