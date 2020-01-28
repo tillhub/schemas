@@ -420,6 +420,20 @@
         }
       ]
     },
+    "locations": {
+      "oneOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "active": {
       "type": "boolean"
     },

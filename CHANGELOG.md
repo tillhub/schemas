@@ -1,3 +1,10 @@
+# [4.128.0](https://github.com/tillhub/schemas/compare/v4.127.0...v4.128.0) (2020-01-28)
+
+
+### Features
+
+* **price_book:** add locations ([#335](https://github.com/tillhub/schemas/issues/335)) ([b8c9fc5](https://github.com/tillhub/schemas/commit/b8c9fc5))
+
 # [4.127.0](https://github.com/tillhub/schemas/compare/v4.126.0...v4.127.0) (2020-01-24)
 
 
