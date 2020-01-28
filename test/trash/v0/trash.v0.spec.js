@@ -4,7 +4,7 @@ const validate = require('../../helpers/validate-schema')
 
 test('Trash V0: create schema validation', function (t) {
   t.plan(2)
-  const getRequest = require('../../../lib/v0/trash').get.request
+  const getRequest = require('../../../lib/v0/trash').get.query
   const { valid, error } = validate(getRequest)
   t.ok(valid, 'get schema is valid')
   t.error(error, 'should not get any error')
