@@ -1,3 +1,10 @@
+## [4.128.1](https://github.com/tillhub/schemas/compare/v4.128.0...v4.128.1) (2020-01-28)
+
+
+### Bug Fixes
+
+* **trash:** change schema path to get.query instead of create ([6b83896](https://github.com/tillhub/schemas/commit/6b83896))
+
 # [4.128.0](https://github.com/tillhub/schemas/compare/v4.127.0...v4.128.0) (2020-01-28)
 
 
