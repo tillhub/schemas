@@ -1,3 +1,10 @@
+# [4.129.0](https://github.com/tillhub/schemas/compare/v4.128.3...v4.129.0) (2020-01-30)
+
+
+### Features
+
+* **configurations:** add fa_transit_account ([4bf2e66](https://github.com/tillhub/schemas/commit/4bf2e66))
+
 ## [4.128.3](https://github.com/tillhub/schemas/compare/v4.128.2...v4.128.3) (2020-01-28)
 
 

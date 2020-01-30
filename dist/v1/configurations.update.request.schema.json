@@ -1397,6 +1397,17 @@
                   "type": "null"
                 }
               ]
+            },
+            "fa_transit_account": {
+              "oneOf": [
+                {
+                  "description": "Used to be \"settings_old.fa_transit_account\"",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
             }
           }
         }
