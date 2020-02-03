@@ -216,6 +216,11 @@
       "description": "Define whether this voucher is currently active.",
       "type": "boolean"
     },
+    "deleted": {
+      "description": "Define whether this voucher is \"soft\" deleted. This is different than a \"hard\" delete where the resource is eliminated from the database.",
+      "type": "boolean",
+      "default": false
+    },
     "bound_to": {
       "description": "",
       "type": "object"

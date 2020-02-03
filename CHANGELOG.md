@@ -1,3 +1,10 @@
+# [4.130.0](https://github.com/tillhub/schemas/compare/v4.129.0...v4.130.0) (2020-02-03)
+
+
+### Features
+
+* **vouchers:** add default to "deleted" ([ba568b1](https://github.com/tillhub/schemas/commit/ba568b1))
+
 # [4.129.0](https://github.com/tillhub/schemas/compare/v4.128.3...v4.129.0) (2020-01-30)
 
 
