@@ -1,3 +1,10 @@
+# [4.131.0](https://github.com/tillhub/schemas/compare/v4.130.0...v4.131.0) (2020-02-09)
+
+
+### Features
+
+* **client_accounts:** add legacy dashboard ([cb9e62b](https://github.com/tillhub/schemas/commit/cb9e62b))
+
 # [4.130.0](https://github.com/tillhub/schemas/compare/v4.129.0...v4.130.0) (2020-02-03)
 
 
