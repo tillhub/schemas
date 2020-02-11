@@ -1,3 +1,15 @@
+# [4.133.0](https://github.com/tillhub/schemas/compare/v4.132.0...v4.133.0) (2020-02-11)
+
+
+### Bug Fixes
+
+* **cashier_counting_protocols:** add index route ([15f65a6](https://github.com/tillhub/schemas/commit/15f65a6))
+
+
+### Features
+
+* **configurations/settings:** add more sync behaviour ([45ca7c8](https://github.com/tillhub/schemas/commit/45ca7c8))
+
 # [4.132.0](https://github.com/tillhub/schemas/compare/v4.131.0...v4.132.0) (2020-02-11)
 
 

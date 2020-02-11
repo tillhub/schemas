@@ -1,0 +1,20 @@
+{
+  "$id": "https://schemas.tillhub.com/v0/cashier_counting_protocols.get.latest.request.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": true,
+  "type": "object",
+  "required": [
+    "register_custom_id",
+    "branch_custom_id"
+  ],
+  "properties": {
+    "register_custom_id": {
+      "type": "string",
+      "description": "The alphanumeric uuid of the register_custom_id"
+    },
+    "branch_custom_id": {
+      "type": "string",
+      "description": "The alphanumeric uuid of the branch_custom_id"
+    }
+  }
+}
