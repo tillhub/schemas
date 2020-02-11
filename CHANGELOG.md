@@ -1,3 +1,10 @@
+# [4.132.0](https://github.com/tillhub/schemas/compare/v4.131.0...v4.132.0) (2020-02-11)
+
+
+### Features
+
+* **cashier_counting_protocols:** add cashier counting out protocols ([#342](https://github.com/tillhub/schemas/issues/342)) ([6806942](https://github.com/tillhub/schemas/commit/6806942))
+
 # [4.131.0](https://github.com/tillhub/schemas/compare/v4.130.0...v4.131.0) (2020-02-09)
 
 
