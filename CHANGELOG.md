@@ -1,3 +1,10 @@
+# [4.136.0](https://github.com/tillhub/schemas/compare/v4.135.0...v4.136.0) (2020-02-13)
+
+
+### Features
+
+* **permissions:** add processes permissions ([cbe068b](https://github.com/tillhub/schemas/commit/cbe068b))
+
 # [4.135.0](https://github.com/tillhub/schemas/compare/v4.134.0...v4.135.0) (2020-02-13)
 
 
