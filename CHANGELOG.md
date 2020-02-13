@@ -1,3 +1,10 @@
+# [4.134.0](https://github.com/tillhub/schemas/compare/v4.133.0...v4.134.0) (2020-02-13)
+
+
+### Features
+
+* **configurations:** add ui configurations ([b9a35e9](https://github.com/tillhub/schemas/commit/b9a35e9))
+
 # [4.133.0](https://github.com/tillhub/schemas/compare/v4.132.0...v4.133.0) (2020-02-11)
 
 
