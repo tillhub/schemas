@@ -583,6 +583,9 @@
                           "type": "null"
                         }
                       ]
+                    },
+                    "active": {
+                      "type": "boolean"
                     }
                   }
                 },
@@ -602,6 +605,9 @@
                           "type": "null"
                         }
                       ]
+                    },
+                    "active": {
+                      "type": "boolean"
                     }
                   }
                 },
@@ -621,6 +627,9 @@
                           "type": "null"
                         }
                       ]
+                    },
+                    "active": {
+                      "type": "boolean"
                     }
                   }
                 },
@@ -640,6 +649,9 @@
                           "type": "null"
                         }
                       ]
+                    },
+                    "active": {
+                      "type": "boolean"
                     }
                   }
                 },
@@ -659,6 +671,9 @@
                           "type": "null"
                         }
                       ]
+                    },
+                    "active": {
+                      "type": "boolean"
                     }
                   }
                 }

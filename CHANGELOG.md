@@ -1,3 +1,10 @@
+# [4.135.0](https://github.com/tillhub/schemas/compare/v4.134.0...v4.135.0) (2020-02-13)
+
+
+### Features
+
+* **settings.sync:** add active ([4d645d9](https://github.com/tillhub/schemas/commit/4d645d9))
+
 # [4.134.0](https://github.com/tillhub/schemas/compare/v4.133.0...v4.134.0) (2020-02-13)
 
 
