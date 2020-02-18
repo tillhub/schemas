@@ -1,3 +1,10 @@
+## [4.136.1](https://github.com/tillhub/schemas/compare/v4.136.0...v4.136.1) (2020-02-18)
+
+
+### Bug Fixes
+
+* **register_opening_protocols:** allow empty cash units ([#344](https://github.com/tillhub/schemas/issues/344)) ([eb812c4](https://github.com/tillhub/schemas/commit/eb812c4))
+
 # [4.136.0](https://github.com/tillhub/schemas/compare/v4.135.0...v4.136.0) (2020-02-13)
 
 
