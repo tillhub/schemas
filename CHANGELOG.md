@@ -1,3 +1,10 @@
+# [4.137.0](https://github.com/tillhub/schemas/compare/v4.136.1...v4.137.0) (2020-02-18)
+
+
+### Features
+
+* **demo_data:** add SumUp as payment option ([#345](https://github.com/tillhub/schemas/issues/345)) ([5a7c7a0](https://github.com/tillhub/schemas/commit/5a7c7a0))
+
 ## [4.136.1](https://github.com/tillhub/schemas/compare/v4.136.0...v4.136.1) (2020-02-18)
 
 

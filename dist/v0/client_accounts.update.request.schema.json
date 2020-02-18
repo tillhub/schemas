@@ -95,7 +95,8 @@
                   "generic_card",
                   "rechnung",
                   "bar",
-                  "card_circuits"
+                  "card_circuits",
+                  "sumup"
                 ]
               }
             }
