@@ -21,7 +21,8 @@
         "gift_card",
         "default",
         "undefined",
-        "voucher"
+        "voucher",
+        "sumup"
       ]
     },
     "metadata": {

@@ -1,3 +1,10 @@
+# [4.138.0](https://github.com/tillhub/schemas/compare/v4.137.0...v4.138.0) (2020-02-19)
+
+
+### Features
+
+* **payment_options:** add sumup ([#346](https://github.com/tillhub/schemas/issues/346)) ([821eebe](https://github.com/tillhub/schemas/commit/821eebe))
+
 # [4.137.0](https://github.com/tillhub/schemas/compare/v4.136.1...v4.137.0) (2020-02-18)
 
 
