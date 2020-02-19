@@ -1,3 +1,10 @@
+# [4.139.0](https://github.com/tillhub/schemas/compare/v4.138.0...v4.139.0) (2020-02-19)
+
+
+### Features
+
+* **client_accounts:** allow for swiss expense accounts ([bb0c737](https://github.com/tillhub/schemas/commit/bb0c737))
+
 # [4.138.0](https://github.com/tillhub/schemas/compare/v4.137.0...v4.138.0) (2020-02-19)
 
 

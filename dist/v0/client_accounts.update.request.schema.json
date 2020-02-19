@@ -75,6 +75,7 @@
               "enum": [
                 "standard_german",
                 "standard_english",
+                "standard_switzerland",
                 "fleurop"
               ]
             },
