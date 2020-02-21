@@ -1,3 +1,10 @@
+# [4.140.0](https://github.com/tillhub/schemas/compare/v4.139.0...v4.140.0) (2020-02-21)
+
+
+### Features
+
+* **configurations:** settings.search ([#348](https://github.com/tillhub/schemas/issues/348)) ([9e94b69](https://github.com/tillhub/schemas/commit/9e94b69))
+
 # [4.139.0](https://github.com/tillhub/schemas/compare/v4.138.0...v4.139.0) (2020-02-19)
 
 
