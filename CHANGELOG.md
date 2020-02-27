@@ -1,3 +1,10 @@
+# [4.141.0](https://github.com/tillhub/schemas/compare/v4.140.0...v4.141.0) (2020-02-27)
+
+
+### Features
+
+* **user_profiles:** add user profiles schema ([#349](https://github.com/tillhub/schemas/issues/349)) ([23bcba0](https://github.com/tillhub/schemas/commit/23bcba0))
+
 # [4.140.0](https://github.com/tillhub/schemas/compare/v4.139.0...v4.140.0) (2020-02-21)
 
 
