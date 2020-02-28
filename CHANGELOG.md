@@ -1,3 +1,10 @@
+## [4.141.1](https://github.com/tillhub/schemas/compare/v4.141.0...v4.141.1) (2020-02-28)
+
+
+### Bug Fixes
+
+* **users:** force release ([73990fb](https://github.com/tillhub/schemas/commit/73990fb))
+
 # [4.141.0](https://github.com/tillhub/schemas/compare/v4.140.0...v4.141.0) (2020-02-27)
 
 
