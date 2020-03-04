@@ -1,3 +1,10 @@
+## [4.142.2](https://github.com/tillhub/schemas/compare/v4.142.1...v4.142.2) (2020-03-04)
+
+
+### Bug Fixes
+
+* **users:** password_hash can be larger then 32 chars ([bf06044](https://github.com/tillhub/schemas/commit/bf06044))
+
 ## [4.142.1](https://github.com/tillhub/schemas/compare/v4.142.0...v4.142.1) (2020-03-04)
 
 
