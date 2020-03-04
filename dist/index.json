@@ -1,7 +1,7 @@
 [
   "/index.json",
-  "/currency.available.schema.json",
   "/custom_properties.definition.schema.json",
+  "/currency.available.schema.json",
   "/patch.request.schema.json",
   "/timezone.schema.json",
   "/balances.create.request.schema.json",

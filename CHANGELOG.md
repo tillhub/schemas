@@ -1,3 +1,10 @@
+# [4.142.0](https://github.com/tillhub/schemas/compare/v4.141.1...v4.142.0) (2020-03-04)
+
+
+### Features
+
+* **users:** add support users ([#350](https://github.com/tillhub/schemas/issues/350)) ([a016e7d](https://github.com/tillhub/schemas/commit/a016e7d))
+
 ## [4.141.1](https://github.com/tillhub/schemas/compare/v4.141.0...v4.141.1) (2020-02-28)
 
 
