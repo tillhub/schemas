@@ -1,3 +1,10 @@
+## [4.142.1](https://github.com/tillhub/schemas/compare/v4.142.0...v4.142.1) (2020-03-04)
+
+
+### Bug Fixes
+
+* **users:** add support user and user profile in the same folder ([#351](https://github.com/tillhub/schemas/issues/351)) ([9edd426](https://github.com/tillhub/schemas/commit/9edd426))
+
 # [4.142.0](https://github.com/tillhub/schemas/compare/v4.141.1...v4.142.0) (2020-03-04)
 
 
