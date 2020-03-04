@@ -1,3 +1,10 @@
+## [4.142.3](https://github.com/tillhub/schemas/compare/v4.142.2...v4.142.3) (2020-03-04)
+
+
+### Bug Fixes
+
+* **users:** avoid replacing support user scopes ([6eac31a](https://github.com/tillhub/schemas/commit/6eac31a))
+
 ## [4.142.2](https://github.com/tillhub/schemas/compare/v4.142.1...v4.142.2) (2020-03-04)
 
 

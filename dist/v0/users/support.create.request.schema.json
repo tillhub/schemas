@@ -14,16 +14,6 @@
         }
       ]
     },
-    "roles": {
-      "oneOf": [
-        {
-          "type": "object"
-        },
-        {
-          "type": "null"
-        }
-      ]
-    },
     "email": {
       "type": "string"
     },
