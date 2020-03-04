@@ -66,9 +66,7 @@
     "password_hash": {
       "oneOf": [
         {
-          "type": "string",
-          "maxLength": 32,
-          "minLength": 3
+          "type": "string"
         },
         {
           "type": "null"
