@@ -1,3 +1,162 @@
+## [4.142.3](https://github.com/tillhub/schemas/compare/v4.142.2...v4.142.3) (2020-03-04)
+
+
+### Bug Fixes
+
+* **users:** avoid replacing support user scopes ([6eac31a](https://github.com/tillhub/schemas/commit/6eac31a))
+
+## [4.142.2](https://github.com/tillhub/schemas/compare/v4.142.1...v4.142.2) (2020-03-04)
+
+
+### Bug Fixes
+
+* **users:** password_hash can be larger then 32 chars ([bf06044](https://github.com/tillhub/schemas/commit/bf06044))
+
+## [4.142.1](https://github.com/tillhub/schemas/compare/v4.142.0...v4.142.1) (2020-03-04)
+
+
+### Bug Fixes
+
+* **users:** add support user and user profile in the same folder ([#351](https://github.com/tillhub/schemas/issues/351)) ([9edd426](https://github.com/tillhub/schemas/commit/9edd426))
+
+# [4.142.0](https://github.com/tillhub/schemas/compare/v4.141.1...v4.142.0) (2020-03-04)
+
+
+### Features
+
+* **users:** add support users ([#350](https://github.com/tillhub/schemas/issues/350)) ([a016e7d](https://github.com/tillhub/schemas/commit/a016e7d))
+
+## [4.141.1](https://github.com/tillhub/schemas/compare/v4.141.0...v4.141.1) (2020-02-28)
+
+
+### Bug Fixes
+
+* **users:** force release ([73990fb](https://github.com/tillhub/schemas/commit/73990fb))
+
+# [4.141.0](https://github.com/tillhub/schemas/compare/v4.140.0...v4.141.0) (2020-02-27)
+
+
+### Features
+
+* **user_profiles:** add user profiles schema ([#349](https://github.com/tillhub/schemas/issues/349)) ([23bcba0](https://github.com/tillhub/schemas/commit/23bcba0))
+
+# [4.140.0](https://github.com/tillhub/schemas/compare/v4.139.0...v4.140.0) (2020-02-21)
+
+
+### Features
+
+* **configurations:** settings.search ([#348](https://github.com/tillhub/schemas/issues/348)) ([9e94b69](https://github.com/tillhub/schemas/commit/9e94b69))
+
+# [4.139.0](https://github.com/tillhub/schemas/compare/v4.138.0...v4.139.0) (2020-02-19)
+
+
+### Features
+
+* **client_accounts:** allow for swiss expense accounts ([bb0c737](https://github.com/tillhub/schemas/commit/bb0c737))
+
+# [4.138.0](https://github.com/tillhub/schemas/compare/v4.137.0...v4.138.0) (2020-02-19)
+
+
+### Features
+
+* **payment_options:** add sumup ([#346](https://github.com/tillhub/schemas/issues/346)) ([821eebe](https://github.com/tillhub/schemas/commit/821eebe))
+
+# [4.137.0](https://github.com/tillhub/schemas/compare/v4.136.1...v4.137.0) (2020-02-18)
+
+
+### Features
+
+* **demo_data:** add SumUp as payment option ([#345](https://github.com/tillhub/schemas/issues/345)) ([5a7c7a0](https://github.com/tillhub/schemas/commit/5a7c7a0))
+
+## [4.136.1](https://github.com/tillhub/schemas/compare/v4.136.0...v4.136.1) (2020-02-18)
+
+
+### Bug Fixes
+
+* **register_opening_protocols:** allow empty cash units ([#344](https://github.com/tillhub/schemas/issues/344)) ([eb812c4](https://github.com/tillhub/schemas/commit/eb812c4))
+
+# [4.136.0](https://github.com/tillhub/schemas/compare/v4.135.0...v4.136.0) (2020-02-13)
+
+
+### Features
+
+* **permissions:** add processes permissions ([cbe068b](https://github.com/tillhub/schemas/commit/cbe068b))
+
+# [4.135.0](https://github.com/tillhub/schemas/compare/v4.134.0...v4.135.0) (2020-02-13)
+
+
+### Features
+
+* **settings.sync:** add active ([4d645d9](https://github.com/tillhub/schemas/commit/4d645d9))
+
+# [4.134.0](https://github.com/tillhub/schemas/compare/v4.133.0...v4.134.0) (2020-02-13)
+
+
+### Features
+
+* **configurations:** add ui configurations ([b9a35e9](https://github.com/tillhub/schemas/commit/b9a35e9))
+
+# [4.133.0](https://github.com/tillhub/schemas/compare/v4.132.0...v4.133.0) (2020-02-11)
+
+
+### Bug Fixes
+
+* **cashier_counting_protocols:** add index route ([15f65a6](https://github.com/tillhub/schemas/commit/15f65a6))
+
+
+### Features
+
+* **configurations/settings:** add more sync behaviour ([45ca7c8](https://github.com/tillhub/schemas/commit/45ca7c8))
+
+# [4.132.0](https://github.com/tillhub/schemas/compare/v4.131.0...v4.132.0) (2020-02-11)
+
+
+### Features
+
+* **cashier_counting_protocols:** add cashier counting out protocols ([#342](https://github.com/tillhub/schemas/issues/342)) ([6806942](https://github.com/tillhub/schemas/commit/6806942))
+
+# [4.131.0](https://github.com/tillhub/schemas/compare/v4.130.0...v4.131.0) (2020-02-09)
+
+
+### Features
+
+* **client_accounts:** add legacy dashboard ([cb9e62b](https://github.com/tillhub/schemas/commit/cb9e62b))
+
+# [4.130.0](https://github.com/tillhub/schemas/compare/v4.129.0...v4.130.0) (2020-02-03)
+
+
+### Features
+
+* **vouchers:** add default to "deleted" ([ba568b1](https://github.com/tillhub/schemas/commit/ba568b1))
+
+# [4.129.0](https://github.com/tillhub/schemas/compare/v4.128.3...v4.129.0) (2020-01-30)
+
+
+### Features
+
+* **configurations:** add fa_transit_account ([4bf2e66](https://github.com/tillhub/schemas/commit/4bf2e66))
+
+## [4.128.3](https://github.com/tillhub/schemas/compare/v4.128.2...v4.128.3) (2020-01-28)
+
+
+### Bug Fixes
+
+* **trash:** change trash enum type staff -> staffs ([924b9f9](https://github.com/tillhub/schemas/commit/924b9f9))
+
+## [4.128.2](https://github.com/tillhub/schemas/compare/v4.128.1...v4.128.2) (2020-01-28)
+
+
+### Bug Fixes
+
+* **trash:** change path to query ([5dfb813](https://github.com/tillhub/schemas/commit/5dfb813))
+
+## [4.128.1](https://github.com/tillhub/schemas/compare/v4.128.0...v4.128.1) (2020-01-28)
+
+
+### Bug Fixes
+
+* **trash:** change schema path to get.query instead of create ([6b83896](https://github.com/tillhub/schemas/commit/6b83896))
+
 # [4.128.0](https://github.com/tillhub/schemas/compare/v4.127.0...v4.128.0) (2020-01-28)
 
 

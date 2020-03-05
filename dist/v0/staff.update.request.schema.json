@@ -323,7 +323,9 @@
                   "staff:staff:devices:unbind",
                   "staff:staff:licenses",
                   "staff:staff:licenses:create",
-                  "staff:staff:licenses:delete"
+                  "staff:staff:licenses:delete",
+                  "staff:staff:processes:all_staff",
+                  "staff:staff:processes:all_locations"
                 ]
               },
               {

@@ -537,7 +537,7 @@
                     "type": "string"
                   },
                   "partial_redemption": {
-                    "description": "",
+                    "description": "If true, the voucher can be used partially and the remainder amount will stay on the voucher.",
                     "type": "boolean"
                   },
                   "active": {

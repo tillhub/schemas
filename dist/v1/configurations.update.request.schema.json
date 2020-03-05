@@ -583,6 +583,97 @@
                           "type": "null"
                         }
                       ]
+                    },
+                    "active": {
+                      "type": "boolean"
+                    }
+                  }
+                },
+                "customers": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "limit": {
+                      "description": "Initial page size for syncing with GET all calls. In-app default is 500. Set this if you run into timeouts.",
+                      "oneOf": [
+                        {
+                          "type": "integer",
+                          "minimum": 1,
+                          "maximum": 1000
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "active": {
+                      "type": "boolean"
+                    }
+                  }
+                },
+                "staff": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "limit": {
+                      "description": "Initial page size for syncing with GET all calls. In-app default is 500. Set this if you run into timeouts.",
+                      "oneOf": [
+                        {
+                          "type": "integer",
+                          "minimum": 1,
+                          "maximum": 1000
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "active": {
+                      "type": "boolean"
+                    }
+                  }
+                },
+                "transactions": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "limit": {
+                      "description": "Initial page size for syncing with GET all calls. In-app default is 500. Set this if you run into timeouts.",
+                      "oneOf": [
+                        {
+                          "type": "integer",
+                          "minimum": 1,
+                          "maximum": 1000
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "active": {
+                      "type": "boolean"
+                    }
+                  }
+                },
+                "balances": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "limit": {
+                      "description": "Initial page size for syncing with GET all calls. In-app default is 500. Set this if you run into timeouts.",
+                      "oneOf": [
+                        {
+                          "type": "integer",
+                          "minimum": 1,
+                          "maximum": 1000
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "active": {
+                      "type": "boolean"
                     }
                   }
                 }
@@ -662,6 +753,82 @@
                     "only_self_sustained": {
                       "description": "Instruct clients to filter for types 'variant_product', 'product' and 'voucher'",
                       "type": "boolean"
+                    }
+                  }
+                },
+                "customers": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "limit": {
+                      "description": "Limits customers search results to a maximum of N",
+                      "oneOf": [
+                        {
+                          "type": "integer",
+                          "minimum": 1,
+                          "maximum": 20
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  }
+                },
+                "staffs": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "limit": {
+                      "description": "Limits staffs search results to a maximum of N",
+                      "oneOf": [
+                        {
+                          "type": "integer",
+                          "minimum": 1,
+                          "maximum": 20
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  }
+                },
+                "vouchers": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "limit": {
+                      "description": "Limits vouchers search results to a maximum of N",
+                      "oneOf": [
+                        {
+                          "type": "integer",
+                          "minimum": 1,
+                          "maximum": 20
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  }
+                },
+                "transactions": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "limit": {
+                      "description": "Limits transactions search results to a maximum of N",
+                      "oneOf": [
+                        {
+                          "type": "integer",
+                          "minimum": 1,
+                          "maximum": 20
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
                     }
                   }
                 }
@@ -1392,6 +1559,17 @@
                       }
                     }
                   }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "fa_transit_account": {
+              "oneOf": [
+                {
+                  "description": "Used to be \"settings_old.fa_transit_account\"",
+                  "type": "string"
                 },
                 {
                   "type": "null"
@@ -3355,6 +3533,49 @@
                     "type": "null"
                   }
                 ]
+              }
+            }
+          }
+        }
+      ]
+    },
+    "ui_configurations": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "dashboard": {
+              "type": "object",
+              "properties": {
+                "products": {
+                  "type": "object",
+                  "properties": {
+                    "list": {
+                      "type": "object",
+                      "properties": {
+                        "quick_view_enabled": {
+                          "type": "boolean"
+                        }
+                      }
+                    },
+                    "edit": {
+                      "type": "object",
+                      "properties": {
+                        "prices": {
+                          "type": "object",
+                          "properties": {
+                            "click_to_edit_enabled": {
+                              "type": "boolean"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
               }
             }
           }

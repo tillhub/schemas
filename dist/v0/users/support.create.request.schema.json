@@ -1,0 +1,88 @@
+{
+  "$id": "https://schemas.tillhub.com/v0/users/support.create.request.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "required": [],
+  "properties": {
+    "metadata": {
+      "oneOf": [
+        {
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "email": {
+      "type": "string"
+    },
+    "firstname": {
+      "oneOf": [
+        {
+          "type": "string",
+          "maxLength": 32,
+          "minLength": 3
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "lastname": {
+      "oneOf": [
+        {
+          "type": "string",
+          "maxLength": 32,
+          "minLength": 3
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "display_name": {
+      "oneOf": [
+        {
+          "type": "string",
+          "maxLength": 32,
+          "minLength": 3
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "password_hash": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "internal": {
+      "type": "boolean",
+      "default": true
+    },
+    "whitelabels": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "active": {
+      "description": "Soft disable or enable this user.",
+      "type": "boolean",
+      "default": true
+    },
+    "deleted": {
+      "description": "Soft delete this user.",
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "type": "object"
+}

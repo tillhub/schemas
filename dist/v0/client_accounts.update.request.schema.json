@@ -40,6 +40,7 @@
       "type": "string",
       "enum": [
         "tillhub",
+        "tillhub_legacy",
         "shore",
         "localsearch"
       ],
@@ -74,6 +75,7 @@
               "enum": [
                 "standard_german",
                 "standard_english",
+                "standard_switzerland",
                 "fleurop"
               ]
             },
@@ -94,7 +96,8 @@
                   "generic_card",
                   "rechnung",
                   "bar",
-                  "card_circuits"
+                  "card_circuits",
+                  "sumup"
                 ]
               }
             }
