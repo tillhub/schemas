@@ -1,3 +1,10 @@
+# [4.143.0](https://github.com/tillhub/schemas/compare/v4.142.3...v4.143.0) (2020-03-06)
+
+
+### Features
+
+* **configuration.base:** hide sum feature ([#337](https://github.com/tillhub/schemas/issues/337)) ([fa37fb1](https://github.com/tillhub/schemas/commit/fa37fb1))
+
 ## [4.142.3](https://github.com/tillhub/schemas/compare/v4.142.2...v4.142.3) (2020-03-04)
 
 

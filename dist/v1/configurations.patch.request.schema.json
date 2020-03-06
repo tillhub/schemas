@@ -463,6 +463,60 @@
         {
           "type": "object",
           "properties": {
+            "revision_safety": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "hide_sum_cart": {
+                  "oneOf": [
+                    {
+                      "description": "Specifies if hiding of cart sum is enabled.",
+                      "type": "boolean",
+                      "default": false
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "visibilty_of_sum": {
+                  "oneOf": [
+                    {
+                      "description": "Specifies which sums are displayed on cart view if hide_sum_cart is enabled",
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "enum": [
+                          "subtotal",
+                          "discount",
+                          "total",
+                          "tax"
+                        ]
+                      }
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "balance_reconciliation": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "description": "defines wether balance reconciliation with terminal is mandatory",
+                      "enum": [
+                        "mandatory",
+                        "optional",
+                        "none"
+                      ]
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              }
+            },
             "language": {
               "type": "string",
               "minLength": 1,
