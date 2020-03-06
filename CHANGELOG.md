@@ -1,3 +1,10 @@
+## [4.143.1](https://github.com/tillhub/schemas/compare/v4.143.0...v4.143.1) (2020-03-06)
+
+
+### Bug Fixes
+
+* **users:** fix support user password ([4814168](https://github.com/tillhub/schemas/commit/4814168))
+
 # [4.143.0](https://github.com/tillhub/schemas/compare/v4.142.3...v4.143.0) (2020-03-06)
 
 

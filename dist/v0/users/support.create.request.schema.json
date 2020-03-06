@@ -53,7 +53,7 @@
         }
       ]
     },
-    "password_hash": {
+    "password": {
       "oneOf": [
         {
           "type": "string"
