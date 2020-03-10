@@ -1,3 +1,10 @@
+# [4.144.0](https://github.com/tillhub/schemas/compare/v4.143.1...v4.144.0) (2020-03-10)
+
+
+### Features
+
+* **storefronts:** add password auth for ecwid accounts ([f7be5dd](https://github.com/tillhub/schemas/commit/f7be5dd))
+
 ## [4.143.1](https://github.com/tillhub/schemas/compare/v4.143.0...v4.143.1) (2020-03-06)
 
 

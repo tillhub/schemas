@@ -120,7 +120,27 @@
             },
             "user": {
               "type": "string"
+            },
+            "password": {
+              "type": "string",
+              "maxLength": 128,
+              "minLength": 1
             }
+          },
+          "if": {
+            "properties": {
+              "external_system_type": {
+                "enum": [
+                  "ecwid"
+                ]
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "password",
+              "user"
+            ]
           }
         }
       ]
