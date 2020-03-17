@@ -1,3 +1,10 @@
+## [4.145.1](https://github.com/tillhub/schemas/compare/v4.145.0...v4.145.1) (2020-03-17)
+
+
+### Bug Fixes
+
+* **storefronts:** add field to profile ([8d050a2](https://github.com/tillhub/schemas/commit/8d050a2))
+
 # [4.145.0](https://github.com/tillhub/schemas/compare/v4.144.0...v4.145.0) (2020-03-17)
 
 

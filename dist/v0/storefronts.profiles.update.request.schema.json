@@ -63,6 +63,10 @@
           "description": "Currency suffix",
           "type": "string"
         },
+        "currencyPrecision": {
+          "description": "Numbers of digits after decimal point in the store prices. E.g. 2 ($2.99) or 0 (¥500).",
+          "type": "number"
+        },
         "currencyGroupSeparator": {
           "description": "Price thousands separator. Supported values: space , dot ., comma , or empty value.",
           "type": "string"
@@ -140,6 +144,10 @@
           "items": {
             "type": "string"
           }
+        },
+        "facebookPreferredLocale": {
+          "description": "Language automatically chosen be default in Facebook storefront (if any)",
+          "type": "string"
         }
       }
     },
