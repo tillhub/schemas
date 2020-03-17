@@ -1,3 +1,10 @@
+# [4.145.0](https://github.com/tillhub/schemas/compare/v4.144.0...v4.145.0) (2020-03-17)
+
+
+### Features
+
+* **storefronts:** add storefront profiles ([1b3a4b5](https://github.com/tillhub/schemas/commit/1b3a4b5))
+
 # [4.144.0](https://github.com/tillhub/schemas/compare/v4.143.1...v4.144.0) (2020-03-10)
 
 
