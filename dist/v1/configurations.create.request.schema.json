@@ -479,6 +479,18 @@
                     }
                   ]
                 },
+                "cancellation_receipt": {
+                  "oneOf": [
+                    {
+                      "description": "Specifies if a receipt is printed when transaction is canceled after cart view.",
+                      "type": "boolean",
+                      "default": false
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
                 "visibilty_of_sum": {
                   "oneOf": [
                     {

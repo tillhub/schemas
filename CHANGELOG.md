@@ -1,3 +1,10 @@
+# [4.146.0](https://github.com/tillhub/schemas/compare/v4.145.1...v4.146.0) (2020-03-23)
+
+
+### Features
+
+* **settings.js:** config for recpeipt printing on cancellation ([a0e6869](https://github.com/tillhub/schemas/commit/a0e6869))
+
 ## [4.145.1](https://github.com/tillhub/schemas/compare/v4.145.0...v4.145.1) (2020-03-17)
 
 
