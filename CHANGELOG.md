@@ -1,3 +1,10 @@
+# [4.148.0](https://github.com/tillhub/schemas/compare/v4.147.0...v4.148.0) (2020-03-24)
+
+
+### Features
+
+* **webhooks:** add webhooks schemas ([#356](https://github.com/tillhub/schemas/issues/356)) ([cf6232a](https://github.com/tillhub/schemas/commit/cf6232a))
+
 # [4.147.0](https://github.com/tillhub/schemas/compare/v4.146.0...v4.147.0) (2020-03-24)
 
 
