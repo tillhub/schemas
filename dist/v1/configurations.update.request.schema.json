@@ -2297,6 +2297,895 @@
                       "type": "boolean",
                       "default": true
                     },
+                    "expense": {
+                      "description": "Defines receipt printing for expense type transactions, e.g. expenses, deposits, safes",
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "print_branch_header": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the branch header will be rpinted",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_branch_footer": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the branch footer will be rpinted",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_cashier_policy": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if and how the cashier will be printed on the receipt",
+                              "type": "string",
+                              "enum": [
+                                "number",
+                                "name",
+                                "none"
+                              ]
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    "customer": {
+                      "description": "Defines receipt printing for cart item based transactions, e.g. sale, order, digital",
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "print_branch_header": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the branch header will be rpinted",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_branch_footer": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the branch footer will be rpinted",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_cashier_policy": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if and how the cashier will be printed on the receipt",
+                              "type": "string",
+                              "enum": [
+                                "number",
+                                "name",
+                                "none"
+                              ]
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_salesman_policy": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if and how the salesperson will be printed on the receipt",
+                              "type": "string",
+                              "enum": [
+                                "number",
+                                "name",
+                                "none"
+                              ]
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_salesperson_policy": {
+                          "oneOf": [
+                            {
+                              "description": "Defines further if the salesperson will be printed on a receipt",
+                              "type": "string",
+                              "enum": [
+                                "not_cashier",
+                                "always",
+                                "never"
+                              ]
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_product_attributes": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the product attributes (in case of options) will be printed on (e.g. just for the customer)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_product_description": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the product description will be printed on (e.g. just for the customer)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_product_group": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the product group will be printed on (e.g. just for the merchant)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_customer_name": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the customer name will be printed on (e.g. just for the merchant)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_customer_address": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the customer address will be printed on (e.g. just for the merchant)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_customer_number": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the customer number will be printed on (e.g. just for the merchant)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_total_discount": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the accumulated discount will be printed on (e.g. customer, merchant)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_total_net": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the total net will be printed on (e.g. customer, merchant)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    "merchant": {
+                      "description": "Defines receipt printing for cart item based transactions, e.g. sale, order, digital",
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "print_branch_header": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the branch header will be rpinted",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_branch_footer": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the branch footer will be rpinted",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_cashier_policy": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if and how the cashier will be printed on the receipt",
+                              "type": "string",
+                              "enum": [
+                                "number",
+                                "name",
+                                "none"
+                              ]
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_salesman_policy": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if and how the salesperson will be printed on the receipt",
+                              "type": "string",
+                              "enum": [
+                                "number",
+                                "name",
+                                "none"
+                              ]
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_salesperson_policy": {
+                          "oneOf": [
+                            {
+                              "description": "Defines further if the salesperson will be printed on a receipt",
+                              "type": "string",
+                              "enum": [
+                                "not_cashier",
+                                "always",
+                                "never"
+                              ]
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_product_attributes": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the product attributes (in case of options) will be printed on (e.g. just for the customer)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_product_description": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the product description will be printed on (e.g. just for the customer)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_product_group": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the product group will be printed on (e.g. just for the merchant)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_customer_name": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the customer name will be printed on (e.g. just for the merchant)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_customer_address": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the customer address will be printed on (e.g. just for the merchant)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_customer_number": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the customer number will be printed on (e.g. just for the merchant)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_total_discount": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the accumulated discount will be printed on (e.g. customer, merchant)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_total_net": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the total net will be printed on (e.g. customer, merchant)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    "order": {
+                      "description": "Defines receipt printing for cart item based transactions, e.g. sale, order, digital",
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "print_branch_header": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the branch header will be rpinted",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_branch_footer": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the branch footer will be rpinted",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_cashier_policy": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if and how the cashier will be printed on the receipt",
+                              "type": "string",
+                              "enum": [
+                                "number",
+                                "name",
+                                "none"
+                              ]
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_salesman_policy": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if and how the salesperson will be printed on the receipt",
+                              "type": "string",
+                              "enum": [
+                                "number",
+                                "name",
+                                "none"
+                              ]
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_salesperson_policy": {
+                          "oneOf": [
+                            {
+                              "description": "Defines further if the salesperson will be printed on a receipt",
+                              "type": "string",
+                              "enum": [
+                                "not_cashier",
+                                "always",
+                                "never"
+                              ]
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_product_attributes": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the product attributes (in case of options) will be printed on (e.g. just for the customer)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_product_description": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the product description will be printed on (e.g. just for the customer)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_product_group": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the product group will be printed on (e.g. just for the merchant)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_customer_name": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the customer name will be printed on (e.g. just for the merchant)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_customer_address": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the customer address will be printed on (e.g. just for the merchant)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_customer_number": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the customer number will be printed on (e.g. just for the merchant)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_total_discount": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the accumulated discount will be printed on (e.g. customer, merchant)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_total_net": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the total net will be printed on (e.g. customer, merchant)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    "digital": {
+                      "description": "Defines receipt printing for cart item based transactions, e.g. sale, order, digital",
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "print_branch_header": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the branch header will be rpinted",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_branch_footer": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the branch footer will be rpinted",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_cashier_policy": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if and how the cashier will be printed on the receipt",
+                              "type": "string",
+                              "enum": [
+                                "number",
+                                "name",
+                                "none"
+                              ]
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_salesman_policy": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if and how the salesperson will be printed on the receipt",
+                              "type": "string",
+                              "enum": [
+                                "number",
+                                "name",
+                                "none"
+                              ]
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_salesperson_policy": {
+                          "oneOf": [
+                            {
+                              "description": "Defines further if the salesperson will be printed on a receipt",
+                              "type": "string",
+                              "enum": [
+                                "not_cashier",
+                                "always",
+                                "never"
+                              ]
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_product_attributes": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the product attributes (in case of options) will be printed on (e.g. just for the customer)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_product_description": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the product description will be printed on (e.g. just for the customer)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_product_group": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the product group will be printed on (e.g. just for the merchant)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_customer_name": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the customer name will be printed on (e.g. just for the merchant)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_customer_address": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the customer address will be printed on (e.g. just for the merchant)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_customer_number": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the customer number will be printed on (e.g. just for the merchant)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_total_discount": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the accumulated discount will be printed on (e.g. customer, merchant)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_total_net": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the total net will be printed on (e.g. customer, merchant)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    "balance": {
+                      "description": "Defines receipt printing for balance type transactions, e.g. balance, opening protocol",
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "print_cashier_policy": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if and how the cashier will be printed on the receipt.",
+                              "type": "string",
+                              "enum": [
+                                "number",
+                                "name",
+                                "none"
+                              ]
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_total_sales": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the total number of sales will be printed.",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_tips_section": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the extended tips-section will be printed.",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_cash_units_section": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the counted cash units will be printed.",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_extended_stats": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the extended balance stats will be printed.",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    "register_opening_protocol": {
+                      "description": "Defines receipt printing for balance type transactions, e.g. balance, opening protocol",
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "print_cashier_policy": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if and how the cashier will be printed on the receipt.",
+                              "type": "string",
+                              "enum": [
+                                "number",
+                                "name",
+                                "none"
+                              ]
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_total_sales": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the total number of sales will be printed.",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_tips_section": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the extended tips-section will be printed.",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_cash_units_section": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the counted cash units will be printed.",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_extended_stats": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the extended balance stats will be printed.",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        }
+                      }
+                    },
                     "print_cashier_policy": {
                       "oneOf": [
                         {

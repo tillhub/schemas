@@ -265,6 +265,6 @@
   "/warehouses.create.request.schema.json",
   "/warehouses.update.request.schema.json",
   "/profile.create.request.schema.json",
-  "/support.create.request.schema.json",
-  "/profile.update.request.schema.json"
+  "/profile.update.request.schema.json",
+  "/support.create.request.schema.json"
 ]

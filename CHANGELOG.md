@@ -1,3 +1,10 @@
+# [4.147.0](https://github.com/tillhub/schemas/compare/v4.146.0...v4.147.0) (2020-03-24)
+
+
+### Features
+
+* **configurations:** digital receipt ([#355](https://github.com/tillhub/schemas/issues/355)) ([ef202dc](https://github.com/tillhub/schemas/commit/ef202dc))
+
 # [4.146.0](https://github.com/tillhub/schemas/compare/v4.145.1...v4.146.0) (2020-03-23)
 
 
