@@ -1,3 +1,10 @@
+# [4.149.0](https://github.com/tillhub/schemas/compare/v4.148.0...v4.149.0) (2020-03-24)
+
+
+### Features
+
+* **webhooks:** add validation ([#357](https://github.com/tillhub/schemas/issues/357)) ([fbbeea2](https://github.com/tillhub/schemas/commit/fbbeea2))
+
 # [4.148.0](https://github.com/tillhub/schemas/compare/v4.147.0...v4.148.0) (2020-03-24)
 
 

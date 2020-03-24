@@ -2,52 +2,101 @@
   "$id": "https://schemas.tillhub.com/v0/webhooks.create.request.schema.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "additionalProperties": false,
-  "required": [],
+  "required": [
+    "client_account",
+    "resource",
+    "action",
+    "type",
+    "url",
+    "secret"
+  ],
   "properties": {
     "client_account": {
       "description": "The client account id of the user.",
       "type": "string"
     },
     "resource": {
-      "type": "string",
-      "enum": [
-        "products",
-        "stocks",
-        "branches",
-        "registers",
-        "customers",
-        "transactions",
-        "balances",
-        "carts",
-        "delivery_notes",
-        "correspondences"
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "string",
+          "enum": [
+            "products",
+            "stocks",
+            "branches",
+            "registers",
+            "customers",
+            "transactions",
+            "balances",
+            "carts",
+            "delivery_notes",
+            "correspondences"
+          ]
+        }
       ]
     },
     "action": {
-      "type": "string",
-      "enum": [
-        "create",
-        "update",
-        "delete"
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "string",
+          "enum": [
+            "create",
+            "update",
+            "delete"
+          ]
+        }
       ]
     },
     "type": {
-      "type": "string",
-      "enum": [
-        "incoming",
-        "outgoing"
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "string",
+          "enum": [
+            "incoming",
+            "outgoing"
+          ]
+        }
       ]
     },
     "url": {
-      "type": "string"
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "string"
+        }
+      ]
     },
     "secret": {
-      "type": "string"
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "string"
+        }
+      ]
     },
     "content_type": {
-      "type": "string",
-      "enum": [
-        "json"
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "string",
+          "enum": [
+            "json"
+          ]
+        }
       ]
     },
     "active": {
