@@ -1,3 +1,10 @@
+# [4.150.0](https://github.com/tillhub/schemas/compare/v4.149.0...v4.150.0) (2020-03-27)
+
+
+### Features
+
+* **categories:** add external_ids ([d1845f2](https://github.com/tillhub/schemas/commit/d1845f2))
+
 # [4.149.0](https://github.com/tillhub/schemas/compare/v4.148.0...v4.149.0) (2020-03-24)
 
 
