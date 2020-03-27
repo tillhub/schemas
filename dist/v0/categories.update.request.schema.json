@@ -110,7 +110,14 @@
           },
           "category_id": {
             "description": "the category id given by external system, e.g. Ecwid",
-            "type": "string"
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "number"
+              }
+            ]
           }
         }
       }

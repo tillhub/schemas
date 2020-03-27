@@ -1,3 +1,10 @@
+# [4.151.0](https://github.com/tillhub/schemas/compare/v4.150.0...v4.151.0) (2020-03-27)
+
+
+### Features
+
+* **categories:** modify property external_id ([c8991ad](https://github.com/tillhub/schemas/commit/c8991ad))
+
 # [4.150.0](https://github.com/tillhub/schemas/compare/v4.149.0...v4.150.0) (2020-03-27)
 
 
