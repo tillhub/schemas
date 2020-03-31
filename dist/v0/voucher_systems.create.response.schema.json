@@ -1129,6 +1129,30 @@
         }
       ]
     },
+    "redemption_valid_from": {
+      "default": null,
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "date-time"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "charge_valid_from": {
+      "default": null,
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "date-time"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "id": {
       "type": "string",
       "format": "uuid"

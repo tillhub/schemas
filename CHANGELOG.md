@@ -1,3 +1,10 @@
+# [4.155.0](https://github.com/tillhub/schemas/compare/v4.154.0...v4.155.0) (2020-03-31)
+
+
+### Features
+
+* **voucher_systems:** add redemption/charge_valid_from ([cd2c43e](https://github.com/tillhub/schemas/commit/cd2c43e))
+
 # [4.154.0](https://github.com/tillhub/schemas/compare/v4.153.0...v4.154.0) (2020-03-31)
 
 
