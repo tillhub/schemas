@@ -1,3 +1,10 @@
+# [4.152.0](https://github.com/tillhub/schemas/compare/v4.151.0...v4.152.0) (2020-03-31)
+
+
+### Features
+
+* **products:** add external_ids ([7aa0884](https://github.com/tillhub/schemas/commit/7aa0884))
+
 # [4.151.0](https://github.com/tillhub/schemas/compare/v4.150.0...v4.151.0) (2020-03-27)
 
 

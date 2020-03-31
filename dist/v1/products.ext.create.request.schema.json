@@ -1763,6 +1763,38 @@
         }
       ]
     },
+    "external_ids": {
+      "oneOf": [
+        {
+          "description": "The product IDs given by external systems, e.g. Ecwid.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "store_front": {
+                "description": "uuid of the Tillhub storeFront",
+                "type": "string",
+                "format": "uuid"
+              },
+              "product_id": {
+                "description": "the product ID given by external system, e.g. Ecwid",
+                "oneOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "number"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "stock_info": {
       "description": "READONLY: summary of stock accross accounts. This potentially is not real-time. After a stock change.",
       "type": "object",
