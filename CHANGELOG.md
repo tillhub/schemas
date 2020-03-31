@@ -1,3 +1,10 @@
+# [4.154.0](https://github.com/tillhub/schemas/compare/v4.153.0...v4.154.0) (2020-03-31)
+
+
+### Features
+
+* **analytics:** add sync_ui_timeout ([b89954c](https://github.com/tillhub/schemas/commit/b89954c))
+
 # [4.153.0](https://github.com/tillhub/schemas/compare/v4.152.0...v4.153.0) (2020-03-31)
 
 
