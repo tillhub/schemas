@@ -1,3 +1,10 @@
+# [4.153.0](https://github.com/tillhub/schemas/compare/v4.152.0...v4.153.0) (2020-03-31)
+
+
+### Features
+
+* **vouchers:** add redemption/charge constraints ([a8b3ac7](https://github.com/tillhub/schemas/commit/a8b3ac7))
+
 # [4.152.0](https://github.com/tillhub/schemas/compare/v4.151.0...v4.152.0) (2020-03-31)
 
 
