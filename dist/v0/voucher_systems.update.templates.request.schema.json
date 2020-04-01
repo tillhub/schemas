@@ -136,6 +136,30 @@
             }
           ]
         },
+        "redemption_valid_from": {
+          "default": null,
+          "oneOf": [
+            {
+              "type": "string",
+              "format": "date-time"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "charge_valid_from": {
+          "default": null,
+          "oneOf": [
+            {
+              "type": "string",
+              "format": "date-time"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
         "customer": {
           "description": "The reference to a customer. The layout is an object to allow for imported vouchers to include any kind of customer reference. In the Tillhub voucher case the object will have at least an ID reference to the customer if existing.",
           "anyOf": [
