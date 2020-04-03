@@ -1,3 +1,10 @@
+# [4.157.0](https://github.com/tillhub/schemas/compare/v4.156.0...v4.157.0) (2020-04-03)
+
+
+### Features
+
+* **Counting.js:** counting receipt and cashing up enabling ([dd56845](https://github.com/tillhub/schemas/commit/dd56845))
+
 # [4.156.0](https://github.com/tillhub/schemas/compare/v4.155.0...v4.156.0) (2020-04-01)
 
 
