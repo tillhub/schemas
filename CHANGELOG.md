@@ -1,3 +1,10 @@
+# [4.159.0](https://github.com/tillhub/schemas/compare/v4.158.0...v4.159.0) (2020-04-10)
+
+
+### Features
+
+* **configurations:** allow datev config ([4050e9a](https://github.com/tillhub/schemas/commit/4050e9a))
+
 # [4.158.0](https://github.com/tillhub/schemas/compare/v4.157.0...v4.158.0) (2020-04-07)
 
 
