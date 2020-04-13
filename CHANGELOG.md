@@ -1,3 +1,15 @@
+# [4.160.0](https://github.com/tillhub/schemas/compare/v4.159.0...v4.160.0) (2020-04-13)
+
+
+### Bug Fixes
+
+* **configurations:** align us formats ([5d87f32](https://github.com/tillhub/schemas/commit/5d87f32))
+
+
+### Features
+
+* **configurations:** allow setting default time formatting ([d106143](https://github.com/tillhub/schemas/commit/d106143))
+
 # [4.159.0](https://github.com/tillhub/schemas/compare/v4.158.0...v4.159.0) (2020-04-10)
 
 

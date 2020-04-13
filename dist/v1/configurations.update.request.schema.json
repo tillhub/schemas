@@ -567,6 +567,68 @@
               "minLength": 3,
               "maxLength": 3
             },
+            "default_timezone": {
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "default_date_format": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "yyyy-MM-dd",
+                    "yyyy-M-d",
+                    "yyyyMMdd",
+                    "yyyyMd",
+                    "dd.MM.yyyy",
+                    "d.M.yyyy",
+                    "d. MMM. yyyy",
+                    "d. MMMM. yyyy",
+                    "yy-MM-dd",
+                    "yy-M-d",
+                    "yyMMdd",
+                    "yyMd",
+                    "dd.MM.yy",
+                    "d. MMM. yy",
+                    "d. MMMM. yy",
+                    "MMM do, yyyy",
+                    "MMM d, yyyy",
+                    "MMMM do, yyyy",
+                    "MMMM d, yyyy",
+                    "MM/dd/yyyy",
+                    "dd/MM/yyyy",
+                    "yyyy/mm/dd"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "default_time_format": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "hh:mm aa",
+                    "hh:mm aaaa",
+                    "h:mm aa",
+                    "h:mm aaaa",
+                    "HH:mm",
+                    "H:mm"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
             "auto_lock": {
               "oneOf": [
                 {
