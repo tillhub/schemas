@@ -1,3 +1,10 @@
+# [4.161.0](https://github.com/tillhub/schemas/compare/v4.160.0...v4.161.0) (2020-04-17)
+
+
+### Features
+
+* **configurations.settings.js:** cahs drawer behaviour ([2b20599](https://github.com/tillhub/schemas/commit/2b20599))
+
 # [4.160.0](https://github.com/tillhub/schemas/compare/v4.159.0...v4.160.0) (2020-04-13)
 
 

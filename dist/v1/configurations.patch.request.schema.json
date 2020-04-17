@@ -562,6 +562,27 @@
               "type": "number",
               "default": 2
             },
+            "drawer_open": {
+              "oneOf": [
+                {
+                  "description": "defines behaviour of cash drawer",
+                  "type": "object",
+                  "properties": {
+                    "finish_payment": {
+                      "type": "string",
+                      "description": "defines when the drawer is opened on finished payment",
+                      "enum": [
+                        "cash",
+                        "always"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
             "default_currency": {
               "type": "string",
               "minLength": 3,
