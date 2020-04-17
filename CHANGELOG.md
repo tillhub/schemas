@@ -1,3 +1,10 @@
+# [4.162.0](https://github.com/tillhub/schemas/compare/v4.161.0...v4.162.0) (2020-04-17)
+
+
+### Features
+
+* **mandatory note:** mandatory note on price change ([bea59c3](https://github.com/tillhub/schemas/commit/bea59c3))
+
 # [4.161.0](https://github.com/tillhub/schemas/compare/v4.160.0...v4.161.0) (2020-04-17)
 
 

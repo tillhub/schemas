@@ -1527,6 +1527,11 @@
               "type": "boolean",
               "default": false
             },
+            "price_change_note_required": {
+              "description": "Defines if a note is mandatory on price changes on the register ",
+              "type": "boolean",
+              "default": false
+            },
             "tips_expense_note_required": {
               "type": "boolean",
               "default": false
