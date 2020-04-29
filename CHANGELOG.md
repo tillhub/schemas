@@ -1,3 +1,10 @@
+# [4.165.0](https://github.com/tillhub/schemas/compare/v4.164.0...v4.165.0) (2020-04-29)
+
+
+### Features
+
+* **cashier_counting_protocols:** counting_type ([fb6c19a](https://github.com/tillhub/schemas/commit/fb6c19a))
+
 # [4.164.0](https://github.com/tillhub/schemas/compare/v4.163.0...v4.164.0) (2020-04-29)
 
 
