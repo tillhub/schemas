@@ -1,3 +1,10 @@
+# [4.163.0](https://github.com/tillhub/schemas/compare/v4.162.0...v4.163.0) (2020-04-29)
+
+
+### Features
+
+* **configurations:** new_sale_conditions ([74aa04f](https://github.com/tillhub/schemas/commit/74aa04f))
+
 # [4.162.0](https://github.com/tillhub/schemas/compare/v4.161.0...v4.162.0) (2020-04-17)
 
 

@@ -549,6 +549,23 @@
                       "type": "null"
                     }
                   ]
+                },
+                "new_sale_conditions": {
+                  "oneOf": [
+                    {
+                      "type": "array",
+                      "description": "defines which conditions must be fulfilled prior to a new sale",
+                      "items": {
+                        "type": "string",
+                        "enum": [
+                          "drawer_closed"
+                        ]
+                      }
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
                 }
               }
             },
