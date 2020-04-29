@@ -3356,6 +3356,53 @@
                         }
                       }
                     },
+                    "voucher": {
+                      "description": "Defines receipt printing for vouchers",
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "print_branch_header": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the branch header will be rpinted",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_branch_footer": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the branch footer will be rpinted",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_cashier_policy": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if and how the cashier will be printed on the receipt",
+                              "type": "string",
+                              "enum": [
+                                "number",
+                                "name",
+                                "none"
+                              ]
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        }
+                      }
+                    },
                     "print_cashier_policy": {
                       "oneOf": [
                         {

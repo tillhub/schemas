@@ -1,3 +1,14 @@
+# [4.164.0](https://github.com/tillhub/schemas/compare/v4.163.0...v4.164.0) (2020-04-29)
+
+
+### Features
+
+* **configurations:** receipts ([a5f6b8d](https://github.com/tillhub/schemas/commit/a5f6b8d))
+* **transactions:** cart vouchers ([d544ab7](https://github.com/tillhub/schemas/commit/d544ab7))
+* **transactions:** v1 legacy vouchers ([2c44514](https://github.com/tillhub/schemas/commit/2c44514))
+* **transactions:** vouchers ([c845000](https://github.com/tillhub/schemas/commit/c845000))
+* **transactions:** vouchers ([4c9bea0](https://github.com/tillhub/schemas/commit/4c9bea0))
+
 # [4.163.0](https://github.com/tillhub/schemas/compare/v4.162.0...v4.163.0) (2020-04-29)
 
 
