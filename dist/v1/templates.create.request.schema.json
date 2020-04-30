@@ -601,6 +601,36 @@
                       "default": false
                     }
                   }
+                },
+                "attributes": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "default": {
+                      "oneOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "custom": {
+                      "oneOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "show": {
+                      "type": "boolean",
+                      "default": false
+                    }
+                  }
                 }
               }
             }
@@ -1207,6 +1237,36 @@
                       "default": false
                     }
                   }
+                },
+                "attributes": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "default": {
+                      "oneOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "custom": {
+                      "oneOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "show": {
+                      "type": "boolean",
+                      "default": false
+                    }
+                  }
                 }
               }
             }
@@ -1785,6 +1845,36 @@
                   }
                 },
                 "comments": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "default": {
+                      "oneOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "custom": {
+                      "oneOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "show": {
+                      "type": "boolean",
+                      "default": false
+                    }
+                  }
+                },
+                "attributes": {
                   "type": "object",
                   "additionalProperties": false,
                   "properties": {

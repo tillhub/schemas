@@ -1,3 +1,10 @@
+# [4.166.0](https://github.com/tillhub/schemas/compare/v4.165.0...v4.166.0) (2020-04-30)
+
+
+### Features
+
+* **templates:** add attributes map prop ([bde4790](https://github.com/tillhub/schemas/commit/bde4790))
+
 # [4.165.0](https://github.com/tillhub/schemas/compare/v4.164.0...v4.165.0) (2020-04-29)
 
 
