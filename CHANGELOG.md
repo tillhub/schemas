@@ -1,3 +1,10 @@
+# [4.167.0](https://github.com/tillhub/schemas/compare/v4.166.0...v4.167.0) (2020-05-04)
+
+
+### Features
+
+* **storefronts:** add default category tree ([53e040e](https://github.com/tillhub/schemas/commit/53e040e))
+
 # [4.166.0](https://github.com/tillhub/schemas/compare/v4.165.0...v4.166.0) (2020-04-30)
 
 
