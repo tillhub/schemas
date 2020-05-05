@@ -1,3 +1,10 @@
+# [4.168.0](https://github.com/tillhub/schemas/compare/v4.167.0...v4.168.0) (2020-05-05)
+
+
+### Features
+
+* **vouchers:** add discount vouchers ([1536973](https://github.com/tillhub/schemas/commit/1536973))
+
 # [4.167.0](https://github.com/tillhub/schemas/compare/v4.166.0...v4.167.0) (2020-05-04)
 
 
