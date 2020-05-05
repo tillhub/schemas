@@ -1,3 +1,10 @@
+# [4.169.0](https://github.com/tillhub/schemas/compare/v4.168.0...v4.169.0) (2020-05-05)
+
+
+### Features
+
+* **vouchers:** allow softer fallbacks on discounts, add more documentation ([6ad2d53](https://github.com/tillhub/schemas/commit/6ad2d53))
+
 # [4.168.0](https://github.com/tillhub/schemas/compare/v4.167.0...v4.168.0) (2020-05-05)
 
 

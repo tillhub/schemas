@@ -47,14 +47,22 @@
       ]
     },
     "discount_type": {
-      "type": "string",
-      "enum": [
-        "percentage",
-        "value"
+      "description": "Define the value type of the discount if one exists.",
+      "oneOf": [
+        {
+          "type": "string",
+          "enum": [
+            "percentage",
+            "value"
+          ]
+        },
+        {
+          "type": "null"
+        }
       ]
     },
     "discount_amount": {
-      "description": "decimal type",
+      "description": "The discount amount on a voucher is either a percentage or money value corresponding to the currency. A voucher discount is mostly an accounting construct, whereas the amount defines the portion of the applied voucher that will be booked against discounts accounts.",
       "example": "10.99",
       "anyOf": [
         {
