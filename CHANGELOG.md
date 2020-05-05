@@ -1,3 +1,104 @@
+# [4.170.0](https://github.com/tillhub/schemas/compare/v4.169.0...v4.170.0) (2020-05-05)
+
+
+### Features
+
+* **configuration:** receipt_printing ([e2024c7](https://github.com/tillhub/schemas/commit/e2024c7))
+* **configurations:** receipt_printing ([d464410](https://github.com/tillhub/schemas/commit/d464410))
+
+# [4.169.0](https://github.com/tillhub/schemas/compare/v4.168.0...v4.169.0) (2020-05-05)
+
+
+### Features
+
+* **vouchers:** allow softer fallbacks on discounts, add more documentation ([6ad2d53](https://github.com/tillhub/schemas/commit/6ad2d53))
+
+# [4.168.0](https://github.com/tillhub/schemas/compare/v4.167.0...v4.168.0) (2020-05-05)
+
+
+### Features
+
+* **vouchers:** add discount vouchers ([1536973](https://github.com/tillhub/schemas/commit/1536973))
+
+# [4.167.0](https://github.com/tillhub/schemas/compare/v4.166.0...v4.167.0) (2020-05-04)
+
+
+### Features
+
+* **storefronts:** add default category tree ([53e040e](https://github.com/tillhub/schemas/commit/53e040e))
+
+# [4.166.0](https://github.com/tillhub/schemas/compare/v4.165.0...v4.166.0) (2020-04-30)
+
+
+### Features
+
+* **templates:** add attributes map prop ([bde4790](https://github.com/tillhub/schemas/commit/bde4790))
+
+# [4.165.0](https://github.com/tillhub/schemas/compare/v4.164.0...v4.165.0) (2020-04-29)
+
+
+### Features
+
+* **cashier_counting_protocols:** counting_type ([fb6c19a](https://github.com/tillhub/schemas/commit/fb6c19a))
+
+# [4.164.0](https://github.com/tillhub/schemas/compare/v4.163.0...v4.164.0) (2020-04-29)
+
+
+### Features
+
+* **configurations:** receipts ([a5f6b8d](https://github.com/tillhub/schemas/commit/a5f6b8d))
+* **transactions:** cart vouchers ([d544ab7](https://github.com/tillhub/schemas/commit/d544ab7))
+* **transactions:** v1 legacy vouchers ([2c44514](https://github.com/tillhub/schemas/commit/2c44514))
+* **transactions:** vouchers ([c845000](https://github.com/tillhub/schemas/commit/c845000))
+* **transactions:** vouchers ([4c9bea0](https://github.com/tillhub/schemas/commit/4c9bea0))
+
+# [4.163.0](https://github.com/tillhub/schemas/compare/v4.162.0...v4.163.0) (2020-04-29)
+
+
+### Features
+
+* **configurations:** new_sale_conditions ([74aa04f](https://github.com/tillhub/schemas/commit/74aa04f))
+
+# [4.162.0](https://github.com/tillhub/schemas/compare/v4.161.0...v4.162.0) (2020-04-17)
+
+
+### Features
+
+* **mandatory note:** mandatory note on price change ([bea59c3](https://github.com/tillhub/schemas/commit/bea59c3))
+
+# [4.161.0](https://github.com/tillhub/schemas/compare/v4.160.0...v4.161.0) (2020-04-17)
+
+
+### Features
+
+* **configurations.settings.js:** cahs drawer behaviour ([2b20599](https://github.com/tillhub/schemas/commit/2b20599))
+
+# [4.160.0](https://github.com/tillhub/schemas/compare/v4.159.0...v4.160.0) (2020-04-13)
+
+
+### Bug Fixes
+
+* **configurations:** align us formats ([5d87f32](https://github.com/tillhub/schemas/commit/5d87f32))
+
+
+### Features
+
+* **configurations:** allow setting default time formatting ([d106143](https://github.com/tillhub/schemas/commit/d106143))
+
+# [4.159.0](https://github.com/tillhub/schemas/compare/v4.158.0...v4.159.0) (2020-04-10)
+
+
+### Features
+
+* **configurations:** allow datev config ([4050e9a](https://github.com/tillhub/schemas/commit/4050e9a))
+
+# [4.158.0](https://github.com/tillhub/schemas/compare/v4.157.0...v4.158.0) (2020-04-07)
+
+
+### Features
+
+* **invoice:** Invoice generation ([08f5088](https://github.com/tillhub/schemas/commit/08f5088))
+
 # [4.157.0](https://github.com/tillhub/schemas/compare/v4.156.0...v4.157.0) (2020-04-03)
 
 

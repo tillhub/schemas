@@ -1925,6 +1925,7 @@
                         "voucher_id",
                         "voucher_client_id",
                         "voucher_number",
+                        "voucher_template",
                         "voucher_ean",
                         "voucher_product",
                         "voucher_user_id",

@@ -148,6 +148,18 @@
         }
       ]
     },
+    "default_category_tree": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "string",
+          "format": "uuid",
+          "example": "936835f7-2d75-41d2-9001-38ed6e458328"
+        }
+      ]
+    },
     "active": {
       "description": "Soft disable or enable this storefronts.",
       "type": "boolean",
