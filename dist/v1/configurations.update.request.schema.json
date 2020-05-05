@@ -2559,32 +2559,158 @@
                             }
                           ]
                         },
-                        "print_salesman_policy": {
+                        "print_salesperson": {
                           "oneOf": [
                             {
-                              "description": "Defines if and how the salesperson will be printed on the receipt",
-                              "type": "string",
-                              "enum": [
-                                "number",
-                                "name",
-                                "none"
-                              ]
-                            },
-                            {
-                              "type": "null"
-                            }
-                          ]
-                        },
-                        "print_salesperson_policy": {
-                          "oneOf": [
-                            {
-                              "description": "Defines further if the salesperson will be printed on a receipt",
-                              "type": "string",
-                              "enum": [
-                                "not_cashier",
-                                "always",
-                                "never"
-                              ]
+                              "type": "object",
+                              "description": "Defines salesperson printing on cart receipts",
+                              "additionalProperties": false,
+                              "properties": {
+                                "header": {
+                                  "oneOf": [
+                                    {
+                                      "description": "Defines salesperson printing in the header section",
+                                      "type": "object",
+                                      "additionalProperties": false,
+                                      "properties": {
+                                        "style": {
+                                          "oneOf": [
+                                            {
+                                              "description": "Defines how the salesperson will be printed, it will not be printed at all if NULL",
+                                              "type": "string",
+                                              "enum": [
+                                                "number",
+                                                "name"
+                                              ]
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        },
+                                        "conditions": {
+                                          "oneOf": [
+                                            {
+                                              "description": "Defines the conditions, e.g. is_unique for header level, does stack - empty means: no restrictions, depends on style then alone",
+                                              "type": "array",
+                                              "items": {
+                                                "type": "string",
+                                                "enum": [
+                                                  "is_unique",
+                                                  "not_unique",
+                                                  "not_cashier"
+                                                ]
+                                              }
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "footer": {
+                                  "oneOf": [
+                                    {
+                                      "description": "Defines salesperson printing in the footer section",
+                                      "type": "object",
+                                      "additionalProperties": false,
+                                      "properties": {
+                                        "style": {
+                                          "oneOf": [
+                                            {
+                                              "description": "Defines how the salesperson will be printed, it will not be printed at all if NULL",
+                                              "type": "string",
+                                              "enum": [
+                                                "number",
+                                                "name"
+                                              ]
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        },
+                                        "conditions": {
+                                          "oneOf": [
+                                            {
+                                              "description": "Defines the conditions, e.g. is_unique for header level, does stack - empty means: no restrictions, depends on style then alone",
+                                              "type": "array",
+                                              "items": {
+                                                "type": "string",
+                                                "enum": [
+                                                  "is_unique",
+                                                  "not_unique",
+                                                  "not_cashier"
+                                                ]
+                                              }
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "item": {
+                                  "oneOf": [
+                                    {
+                                      "description": "Defines salesperson printing on cart items",
+                                      "type": "object",
+                                      "additionalProperties": false,
+                                      "properties": {
+                                        "style": {
+                                          "oneOf": [
+                                            {
+                                              "description": "Defines how the salesperson will be printed, it will not be printed at all if NULL",
+                                              "type": "string",
+                                              "enum": [
+                                                "number",
+                                                "name"
+                                              ]
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        },
+                                        "conditions": {
+                                          "oneOf": [
+                                            {
+                                              "description": "Defines the conditions, e.g. is_unique for header level, does stack - empty means: no restrictions, depends on style then alone",
+                                              "type": "array",
+                                              "items": {
+                                                "type": "string",
+                                                "enum": [
+                                                  "is_unique",
+                                                  "not_unique",
+                                                  "not_cashier"
+                                                ]
+                                              }
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                }
+                              }
                             },
                             {
                               "type": "null"
@@ -2734,32 +2860,158 @@
                             }
                           ]
                         },
-                        "print_salesman_policy": {
+                        "print_salesperson": {
                           "oneOf": [
                             {
-                              "description": "Defines if and how the salesperson will be printed on the receipt",
-                              "type": "string",
-                              "enum": [
-                                "number",
-                                "name",
-                                "none"
-                              ]
-                            },
-                            {
-                              "type": "null"
-                            }
-                          ]
-                        },
-                        "print_salesperson_policy": {
-                          "oneOf": [
-                            {
-                              "description": "Defines further if the salesperson will be printed on a receipt",
-                              "type": "string",
-                              "enum": [
-                                "not_cashier",
-                                "always",
-                                "never"
-                              ]
+                              "type": "object",
+                              "description": "Defines salesperson printing on cart receipts",
+                              "additionalProperties": false,
+                              "properties": {
+                                "header": {
+                                  "oneOf": [
+                                    {
+                                      "description": "Defines salesperson printing in the header section",
+                                      "type": "object",
+                                      "additionalProperties": false,
+                                      "properties": {
+                                        "style": {
+                                          "oneOf": [
+                                            {
+                                              "description": "Defines how the salesperson will be printed, it will not be printed at all if NULL",
+                                              "type": "string",
+                                              "enum": [
+                                                "number",
+                                                "name"
+                                              ]
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        },
+                                        "conditions": {
+                                          "oneOf": [
+                                            {
+                                              "description": "Defines the conditions, e.g. is_unique for header level, does stack - empty means: no restrictions, depends on style then alone",
+                                              "type": "array",
+                                              "items": {
+                                                "type": "string",
+                                                "enum": [
+                                                  "is_unique",
+                                                  "not_unique",
+                                                  "not_cashier"
+                                                ]
+                                              }
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "footer": {
+                                  "oneOf": [
+                                    {
+                                      "description": "Defines salesperson printing in the footer section",
+                                      "type": "object",
+                                      "additionalProperties": false,
+                                      "properties": {
+                                        "style": {
+                                          "oneOf": [
+                                            {
+                                              "description": "Defines how the salesperson will be printed, it will not be printed at all if NULL",
+                                              "type": "string",
+                                              "enum": [
+                                                "number",
+                                                "name"
+                                              ]
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        },
+                                        "conditions": {
+                                          "oneOf": [
+                                            {
+                                              "description": "Defines the conditions, e.g. is_unique for header level, does stack - empty means: no restrictions, depends on style then alone",
+                                              "type": "array",
+                                              "items": {
+                                                "type": "string",
+                                                "enum": [
+                                                  "is_unique",
+                                                  "not_unique",
+                                                  "not_cashier"
+                                                ]
+                                              }
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "item": {
+                                  "oneOf": [
+                                    {
+                                      "description": "Defines salesperson printing on cart items",
+                                      "type": "object",
+                                      "additionalProperties": false,
+                                      "properties": {
+                                        "style": {
+                                          "oneOf": [
+                                            {
+                                              "description": "Defines how the salesperson will be printed, it will not be printed at all if NULL",
+                                              "type": "string",
+                                              "enum": [
+                                                "number",
+                                                "name"
+                                              ]
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        },
+                                        "conditions": {
+                                          "oneOf": [
+                                            {
+                                              "description": "Defines the conditions, e.g. is_unique for header level, does stack - empty means: no restrictions, depends on style then alone",
+                                              "type": "array",
+                                              "items": {
+                                                "type": "string",
+                                                "enum": [
+                                                  "is_unique",
+                                                  "not_unique",
+                                                  "not_cashier"
+                                                ]
+                                              }
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                }
+                              }
                             },
                             {
                               "type": "null"
@@ -2909,32 +3161,158 @@
                             }
                           ]
                         },
-                        "print_salesman_policy": {
+                        "print_salesperson": {
                           "oneOf": [
                             {
-                              "description": "Defines if and how the salesperson will be printed on the receipt",
-                              "type": "string",
-                              "enum": [
-                                "number",
-                                "name",
-                                "none"
-                              ]
-                            },
-                            {
-                              "type": "null"
-                            }
-                          ]
-                        },
-                        "print_salesperson_policy": {
-                          "oneOf": [
-                            {
-                              "description": "Defines further if the salesperson will be printed on a receipt",
-                              "type": "string",
-                              "enum": [
-                                "not_cashier",
-                                "always",
-                                "never"
-                              ]
+                              "type": "object",
+                              "description": "Defines salesperson printing on cart receipts",
+                              "additionalProperties": false,
+                              "properties": {
+                                "header": {
+                                  "oneOf": [
+                                    {
+                                      "description": "Defines salesperson printing in the header section",
+                                      "type": "object",
+                                      "additionalProperties": false,
+                                      "properties": {
+                                        "style": {
+                                          "oneOf": [
+                                            {
+                                              "description": "Defines how the salesperson will be printed, it will not be printed at all if NULL",
+                                              "type": "string",
+                                              "enum": [
+                                                "number",
+                                                "name"
+                                              ]
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        },
+                                        "conditions": {
+                                          "oneOf": [
+                                            {
+                                              "description": "Defines the conditions, e.g. is_unique for header level, does stack - empty means: no restrictions, depends on style then alone",
+                                              "type": "array",
+                                              "items": {
+                                                "type": "string",
+                                                "enum": [
+                                                  "is_unique",
+                                                  "not_unique",
+                                                  "not_cashier"
+                                                ]
+                                              }
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "footer": {
+                                  "oneOf": [
+                                    {
+                                      "description": "Defines salesperson printing in the footer section",
+                                      "type": "object",
+                                      "additionalProperties": false,
+                                      "properties": {
+                                        "style": {
+                                          "oneOf": [
+                                            {
+                                              "description": "Defines how the salesperson will be printed, it will not be printed at all if NULL",
+                                              "type": "string",
+                                              "enum": [
+                                                "number",
+                                                "name"
+                                              ]
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        },
+                                        "conditions": {
+                                          "oneOf": [
+                                            {
+                                              "description": "Defines the conditions, e.g. is_unique for header level, does stack - empty means: no restrictions, depends on style then alone",
+                                              "type": "array",
+                                              "items": {
+                                                "type": "string",
+                                                "enum": [
+                                                  "is_unique",
+                                                  "not_unique",
+                                                  "not_cashier"
+                                                ]
+                                              }
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "item": {
+                                  "oneOf": [
+                                    {
+                                      "description": "Defines salesperson printing on cart items",
+                                      "type": "object",
+                                      "additionalProperties": false,
+                                      "properties": {
+                                        "style": {
+                                          "oneOf": [
+                                            {
+                                              "description": "Defines how the salesperson will be printed, it will not be printed at all if NULL",
+                                              "type": "string",
+                                              "enum": [
+                                                "number",
+                                                "name"
+                                              ]
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        },
+                                        "conditions": {
+                                          "oneOf": [
+                                            {
+                                              "description": "Defines the conditions, e.g. is_unique for header level, does stack - empty means: no restrictions, depends on style then alone",
+                                              "type": "array",
+                                              "items": {
+                                                "type": "string",
+                                                "enum": [
+                                                  "is_unique",
+                                                  "not_unique",
+                                                  "not_cashier"
+                                                ]
+                                              }
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                }
+                              }
                             },
                             {
                               "type": "null"
@@ -3084,32 +3462,158 @@
                             }
                           ]
                         },
-                        "print_salesman_policy": {
+                        "print_salesperson": {
                           "oneOf": [
                             {
-                              "description": "Defines if and how the salesperson will be printed on the receipt",
-                              "type": "string",
-                              "enum": [
-                                "number",
-                                "name",
-                                "none"
-                              ]
-                            },
-                            {
-                              "type": "null"
-                            }
-                          ]
-                        },
-                        "print_salesperson_policy": {
-                          "oneOf": [
-                            {
-                              "description": "Defines further if the salesperson will be printed on a receipt",
-                              "type": "string",
-                              "enum": [
-                                "not_cashier",
-                                "always",
-                                "never"
-                              ]
+                              "type": "object",
+                              "description": "Defines salesperson printing on cart receipts",
+                              "additionalProperties": false,
+                              "properties": {
+                                "header": {
+                                  "oneOf": [
+                                    {
+                                      "description": "Defines salesperson printing in the header section",
+                                      "type": "object",
+                                      "additionalProperties": false,
+                                      "properties": {
+                                        "style": {
+                                          "oneOf": [
+                                            {
+                                              "description": "Defines how the salesperson will be printed, it will not be printed at all if NULL",
+                                              "type": "string",
+                                              "enum": [
+                                                "number",
+                                                "name"
+                                              ]
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        },
+                                        "conditions": {
+                                          "oneOf": [
+                                            {
+                                              "description": "Defines the conditions, e.g. is_unique for header level, does stack - empty means: no restrictions, depends on style then alone",
+                                              "type": "array",
+                                              "items": {
+                                                "type": "string",
+                                                "enum": [
+                                                  "is_unique",
+                                                  "not_unique",
+                                                  "not_cashier"
+                                                ]
+                                              }
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "footer": {
+                                  "oneOf": [
+                                    {
+                                      "description": "Defines salesperson printing in the footer section",
+                                      "type": "object",
+                                      "additionalProperties": false,
+                                      "properties": {
+                                        "style": {
+                                          "oneOf": [
+                                            {
+                                              "description": "Defines how the salesperson will be printed, it will not be printed at all if NULL",
+                                              "type": "string",
+                                              "enum": [
+                                                "number",
+                                                "name"
+                                              ]
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        },
+                                        "conditions": {
+                                          "oneOf": [
+                                            {
+                                              "description": "Defines the conditions, e.g. is_unique for header level, does stack - empty means: no restrictions, depends on style then alone",
+                                              "type": "array",
+                                              "items": {
+                                                "type": "string",
+                                                "enum": [
+                                                  "is_unique",
+                                                  "not_unique",
+                                                  "not_cashier"
+                                                ]
+                                              }
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "item": {
+                                  "oneOf": [
+                                    {
+                                      "description": "Defines salesperson printing on cart items",
+                                      "type": "object",
+                                      "additionalProperties": false,
+                                      "properties": {
+                                        "style": {
+                                          "oneOf": [
+                                            {
+                                              "description": "Defines how the salesperson will be printed, it will not be printed at all if NULL",
+                                              "type": "string",
+                                              "enum": [
+                                                "number",
+                                                "name"
+                                              ]
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        },
+                                        "conditions": {
+                                          "oneOf": [
+                                            {
+                                              "description": "Defines the conditions, e.g. is_unique for header level, does stack - empty means: no restrictions, depends on style then alone",
+                                              "type": "array",
+                                              "items": {
+                                                "type": "string",
+                                                "enum": [
+                                                  "is_unique",
+                                                  "not_unique",
+                                                  "not_cashier"
+                                                ]
+                                              }
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                }
+                              }
                             },
                             {
                               "type": "null"

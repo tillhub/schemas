@@ -1,3 +1,11 @@
+# [4.170.0](https://github.com/tillhub/schemas/compare/v4.169.0...v4.170.0) (2020-05-05)
+
+
+### Features
+
+* **configuration:** receipt_printing ([e2024c7](https://github.com/tillhub/schemas/commit/e2024c7))
+* **configurations:** receipt_printing ([d464410](https://github.com/tillhub/schemas/commit/d464410))
+
 # [4.169.0](https://github.com/tillhub/schemas/compare/v4.168.0...v4.169.0) (2020-05-05)
 
 
