@@ -1,3 +1,10 @@
+## [4.171.1](https://github.com/tillhub/schemas/compare/v4.171.0...v4.171.1) (2020-05-06)
+
+
+### Bug Fixes
+
+* **client_accounts:** handle feature flag correctly ([fc9ece4](https://github.com/tillhub/schemas/commit/fc9ece4))
+
 # [4.171.0](https://github.com/tillhub/schemas/compare/v4.170.0...v4.171.0) (2020-05-06)
 
 
