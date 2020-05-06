@@ -1,3 +1,10 @@
+# [4.171.0](https://github.com/tillhub/schemas/compare/v4.170.0...v4.171.0) (2020-05-06)
+
+
+### Features
+
+* **client_accounts:** add features object ([#375](https://github.com/tillhub/schemas/issues/375)) ([a41a571](https://github.com/tillhub/schemas/commit/a41a571))
+
 # [4.170.0](https://github.com/tillhub/schemas/compare/v4.169.0...v4.170.0) (2020-05-05)
 
 
