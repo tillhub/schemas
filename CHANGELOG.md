@@ -1,3 +1,11 @@
+# [4.172.0](https://github.com/tillhub/schemas/compare/v4.171.1...v4.172.0) (2020-05-06)
+
+
+### Features
+
+* **Configurations:** Cashing up receipts ([6027831](https://github.com/tillhub/schemas/commit/6027831))
+* **Configurations:** Cashing up receipts ([659f29f](https://github.com/tillhub/schemas/commit/659f29f))
+
 ## [4.171.1](https://github.com/tillhub/schemas/compare/v4.171.0...v4.171.1) (2020-05-06)
 
 

@@ -3860,6 +3860,77 @@
                         }
                       }
                     },
+                    "cashing_up": {
+                      "description": "Defines receipt printing for balance type transactions, e.g. balance, opening protocol",
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "print_cashier_policy": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if and how the cashier will be printed on the receipt.",
+                              "type": "string",
+                              "enum": [
+                                "number",
+                                "name",
+                                "none"
+                              ]
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_total_sales": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the total number of sales will be printed.",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_tips_section": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the extended tips-section will be printed.",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_cash_units_section": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the counted cash units will be printed.",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_extended_stats": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the extended balance stats will be printed.",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        }
+                      }
+                    },
                     "voucher": {
                       "description": "Defines receipt printing for vouchers",
                       "type": "object",
