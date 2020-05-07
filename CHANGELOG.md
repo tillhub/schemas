@@ -1,3 +1,10 @@
+# [4.173.0](https://github.com/tillhub/schemas/compare/v4.172.0...v4.173.0) (2020-05-07)
+
+
+### Features
+
+* **configurations:** correspondences ([9bf08d9](https://github.com/tillhub/schemas/commit/9bf08d9))
+
 # [4.172.0](https://github.com/tillhub/schemas/compare/v4.171.1...v4.172.0) (2020-05-06)
 
 
