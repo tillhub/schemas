@@ -1,3 +1,10 @@
+## [4.173.1](https://github.com/tillhub/schemas/compare/v4.173.0...v4.173.1) (2020-05-07)
+
+
+### Bug Fixes
+
+* **configurations:** move correspondences into communications ([96a92d8](https://github.com/tillhub/schemas/commit/96a92d8))
+
 # [4.173.0](https://github.com/tillhub/schemas/compare/v4.172.0...v4.173.0) (2020-05-07)
 
 
