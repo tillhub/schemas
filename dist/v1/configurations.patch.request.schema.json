@@ -4309,12 +4309,13 @@
       ]
     },
     "communications": {
-      "anyOf": [
+      "oneOf": [
         {
           "type": "null"
         },
         {
           "type": "object",
+          "description": "controls communication settings and behavior",
           "additionalProperties": true,
           "properties": {
             "correspondences": {

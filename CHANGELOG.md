@@ -1,3 +1,10 @@
+# [4.174.0](https://github.com/tillhub/schemas/compare/v4.173.1...v4.174.0) (2020-05-10)
+
+
+### Features
+
+* **correspondences:** add resource client id ([4bbd26f](https://github.com/tillhub/schemas/commit/4bbd26f))
+
 ## [4.173.1](https://github.com/tillhub/schemas/compare/v4.173.0...v4.173.1) (2020-05-07)
 
 

@@ -107,6 +107,17 @@
         }
       ]
     },
+    "resource_client_id": {
+      "oneOf": [
+        {
+          "type": "string",
+          "maxLength": 64
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "sent_at": {
       "oneOf": [
         {
