@@ -1,3 +1,10 @@
+# [4.175.0](https://github.com/tillhub/schemas/compare/v4.174.0...v4.175.0) (2020-05-10)
+
+
+### Features
+
+* **correspondences:** add no send status ([d63083c](https://github.com/tillhub/schemas/commit/d63083c))
+
 # [4.174.0](https://github.com/tillhub/schemas/compare/v4.173.1...v4.174.0) (2020-05-10)
 
 

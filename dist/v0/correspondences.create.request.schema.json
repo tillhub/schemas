@@ -144,6 +144,7 @@
         {
           "type": "string",
           "enum": [
+            "no_send",
             "dispatched",
             "send_attempted",
             "send_failed",
