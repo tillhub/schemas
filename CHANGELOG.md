@@ -1,3 +1,10 @@
+## [4.175.1](https://github.com/tillhub/schemas/compare/v4.175.0...v4.175.1) (2020-05-13)
+
+
+### Bug Fixes
+
+* **client-accounts:** minor change to force deployment ([1b06864](https://github.com/tillhub/schemas/commit/1b06864))
+
 # [4.175.0](https://github.com/tillhub/schemas/compare/v4.174.0...v4.175.0) (2020-05-10)
 
 
