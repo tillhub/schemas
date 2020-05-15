@@ -1,3 +1,10 @@
+# [4.177.0](https://github.com/tillhub/schemas/compare/v4.176.0...v4.177.0) (2020-05-15)
+
+
+### Features
+
+* **analytics:** add deposits amount total - snapshot job ([44c2638](https://github.com/tillhub/schemas/commit/44c2638))
+
 # [4.176.0](https://github.com/tillhub/schemas/compare/v4.175.1...v4.176.0) (2020-05-15)
 
 
