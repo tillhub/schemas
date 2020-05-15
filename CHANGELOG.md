@@ -1,3 +1,10 @@
+## [4.177.1](https://github.com/tillhub/schemas/compare/v4.177.0...v4.177.1) (2020-05-15)
+
+
+### Bug Fixes
+
+* **analytics:** add deposits amount total to allowed jobs ([9aeb7f5](https://github.com/tillhub/schemas/commit/9aeb7f5))
+
 # [4.177.0](https://github.com/tillhub/schemas/compare/v4.176.0...v4.177.0) (2020-05-15)
 
 

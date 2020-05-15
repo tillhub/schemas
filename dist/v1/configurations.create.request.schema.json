@@ -4554,6 +4554,7 @@
                       "analytics_snapshots_cancellations_refunds_count",
                       "analytics_snapshots_cancellations_share_of_cancelled",
                       "analytics_snapshots_cancellations_share_of_refunded",
+                      "analytics_snapshots_deposits_amount_total",
                       "analytics_snapshots_discounts_amount_total",
                       "analytics_snapshots_discounts_count",
                       "analytics_snapshots_discounts_share_of",
