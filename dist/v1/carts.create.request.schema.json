@@ -530,6 +530,18 @@
                 "type": "string",
                 "format": "uuid"
               },
+              "product_supplier_name": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "description": "Custom identifier for the product's supplier",
+                    "maxLength": 128
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
               "discountable": {
                 "oneOf": [
                   {

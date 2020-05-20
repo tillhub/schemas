@@ -1,3 +1,10 @@
+# [4.179.0](https://github.com/tillhub/schemas/compare/v4.178.0...v4.179.0) (2020-05-20)
+
+
+### Features
+
+* **cart_items:** product supplier ([#379](https://github.com/tillhub/schemas/issues/379)) ([3b07fcf](https://github.com/tillhub/schemas/commit/3b07fcf))
+
 # [4.178.0](https://github.com/tillhub/schemas/compare/v4.177.1...v4.178.0) (2020-05-20)
 
 
