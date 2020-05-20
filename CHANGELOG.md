@@ -1,3 +1,31 @@
+## [4.177.1](https://github.com/tillhub/schemas/compare/v4.177.0...v4.177.1) (2020-05-15)
+
+
+### Bug Fixes
+
+* **analytics:** add deposits amount total to allowed jobs ([9aeb7f5](https://github.com/tillhub/schemas/commit/9aeb7f5))
+
+# [4.177.0](https://github.com/tillhub/schemas/compare/v4.176.0...v4.177.0) (2020-05-15)
+
+
+### Features
+
+* **analytics:** add deposits amount total - snapshot job ([44c2638](https://github.com/tillhub/schemas/commit/44c2638))
+
+# [4.176.0](https://github.com/tillhub/schemas/compare/v4.175.1...v4.176.0) (2020-05-15)
+
+
+### Features
+
+* **carts_v1:** add patch schema ([#383](https://github.com/tillhub/schemas/issues/383)) ([e699639](https://github.com/tillhub/schemas/commit/e699639))
+
+## [4.175.1](https://github.com/tillhub/schemas/compare/v4.175.0...v4.175.1) (2020-05-13)
+
+
+### Bug Fixes
+
+* **client-accounts:** minor change to force deployment ([1b06864](https://github.com/tillhub/schemas/commit/1b06864))
+
 # [4.175.0](https://github.com/tillhub/schemas/compare/v4.174.0...v4.175.0) (2020-05-10)
 
 
