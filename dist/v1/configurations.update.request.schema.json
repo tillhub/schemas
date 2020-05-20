@@ -2400,6 +2400,24 @@
           "type": "object",
           "additionalProperties": false,
           "properties": {
+            "digital_receipt": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "enabled": {
+                      "description": "States if digital receipts should be used",
+                      "type": "boolean",
+                      "default": false
+                    }
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
             "order_receipt": {
               "oneOf": [
                 {
@@ -2407,7 +2425,7 @@
                   "additionalProperties": false,
                   "properties": {
                     "enabled": {
-                      "description": "States if order recipts should be used",
+                      "description": "States if order receipts should be used",
                       "type": "boolean",
                       "default": false
                     },

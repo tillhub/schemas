@@ -1,3 +1,10 @@
+# [4.180.0](https://github.com/tillhub/schemas/compare/v4.179.1...v4.180.0) (2020-05-20)
+
+
+### Features
+
+* **configurations:** digital_receipt ([c5a5fe1](https://github.com/tillhub/schemas/commit/c5a5fe1))
+
 ## [4.179.1](https://github.com/tillhub/schemas/compare/v4.179.0...v4.179.1) (2020-05-20)
 
 
