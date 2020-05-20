@@ -1,3 +1,46 @@
+## [4.179.1](https://github.com/tillhub/schemas/compare/v4.179.0...v4.179.1) (2020-05-20)
+
+
+### Bug Fixes
+
+* **configurations:** settings.search ([f9a48ae](https://github.com/tillhub/schemas/commit/f9a48ae))
+* **configurations:** settings.sync ([49713bc](https://github.com/tillhub/schemas/commit/49713bc))
+
+# [4.179.0](https://github.com/tillhub/schemas/compare/v4.178.0...v4.179.0) (2020-05-20)
+
+
+### Features
+
+* **cart_items:** product supplier ([#379](https://github.com/tillhub/schemas/issues/379)) ([3b07fcf](https://github.com/tillhub/schemas/commit/3b07fcf))
+
+# [4.178.0](https://github.com/tillhub/schemas/compare/v4.177.1...v4.178.0) (2020-05-20)
+
+
+### Features
+
+* **carts:** add patch request schema json ([d7fc7f2](https://github.com/tillhub/schemas/commit/d7fc7f2))
+
+## [4.177.1](https://github.com/tillhub/schemas/compare/v4.177.0...v4.177.1) (2020-05-15)
+
+
+### Bug Fixes
+
+* **analytics:** add deposits amount total to allowed jobs ([9aeb7f5](https://github.com/tillhub/schemas/commit/9aeb7f5))
+
+# [4.177.0](https://github.com/tillhub/schemas/compare/v4.176.0...v4.177.0) (2020-05-15)
+
+
+### Features
+
+* **analytics:** add deposits amount total - snapshot job ([44c2638](https://github.com/tillhub/schemas/commit/44c2638))
+
+# [4.176.0](https://github.com/tillhub/schemas/compare/v4.175.1...v4.176.0) (2020-05-15)
+
+
+### Features
+
+* **carts_v1:** add patch schema ([#383](https://github.com/tillhub/schemas/issues/383)) ([e699639](https://github.com/tillhub/schemas/commit/e699639))
+
 ## [4.175.1](https://github.com/tillhub/schemas/compare/v4.175.0...v4.175.1) (2020-05-13)
 
 

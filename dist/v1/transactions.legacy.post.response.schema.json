@@ -1799,6 +1799,18 @@
                     }
                   ]
                 },
+                "product_supplier_name": {
+                  "deprecated": true,
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "description": "Custom identifier for the product's supplier"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
                 "is_refund": {
                   "deprecated": true,
                   "oneOf": [
@@ -2204,6 +2216,17 @@
                                     {
                                       "type": "string",
                                       "example": "Another product string"
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "supplier_name": {
+                                  "oneOf": [
+                                    {
+                                      "type": "string",
+                                      "example": "Custom identifier for product supplier"
                                     },
                                     {
                                       "type": "null"
