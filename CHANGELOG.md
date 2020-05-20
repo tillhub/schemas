@@ -1,3 +1,11 @@
+## [4.179.1](https://github.com/tillhub/schemas/compare/v4.179.0...v4.179.1) (2020-05-20)
+
+
+### Bug Fixes
+
+* **configurations:** settings.search ([f9a48ae](https://github.com/tillhub/schemas/commit/f9a48ae))
+* **configurations:** settings.sync ([49713bc](https://github.com/tillhub/schemas/commit/49713bc))
+
 # [4.179.0](https://github.com/tillhub/schemas/compare/v4.178.0...v4.179.0) (2020-05-20)
 
 
