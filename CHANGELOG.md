@@ -1,3 +1,10 @@
+# [4.178.0](https://github.com/tillhub/schemas/compare/v4.177.1...v4.178.0) (2020-05-20)
+
+
+### Features
+
+* **carts:** add patch request schema json ([d7fc7f2](https://github.com/tillhub/schemas/commit/d7fc7f2))
+
 ## [4.177.1](https://github.com/tillhub/schemas/compare/v4.177.0...v4.177.1) (2020-05-15)
 
 
