@@ -1,3 +1,10 @@
+## [4.180.1](https://github.com/tillhub/schemas/compare/v4.180.0...v4.180.1) (2020-05-26)
+
+
+### Bug Fixes
+
+* **saved_carts:** apply patch on all properties ([c62c125](https://github.com/tillhub/schemas/commit/c62c125))
+
 # [4.180.0](https://github.com/tillhub/schemas/compare/v4.179.1...v4.180.0) (2020-05-20)
 
 
