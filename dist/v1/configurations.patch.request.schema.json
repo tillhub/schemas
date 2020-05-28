@@ -5391,9 +5391,6 @@
     "ui_configurations": {
       "oneOf": [
         {
-          "type": "null"
-        },
-        {
           "type": "object",
           "properties": {
             "dashboard": {
@@ -5426,8 +5423,277 @@
                   }
                 }
               }
+            },
+            "pos": {
+              "type": "object",
+              "description": "UI configurations for POS clients",
+              "properties": {
+                "views": {
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "description": "per view UI configurations",
+                      "additionalProperties": true,
+                      "properties": {
+                        "finish_payment": {
+                          "description": "Summary view after finalizing a sale",
+                          "type": "object",
+                          "properties": {
+                            "buttons": {
+                              "description": "Buttons that can be toggled in/out (if implicitly available)",
+                              "type": "object",
+                              "properties": {
+                                "email_receipt": {
+                                  "oneOf": [
+                                    {
+                                      "description": "Defines the 'E-Mail Recipt' button - only non-invoiced sales",
+                                      "type": "object",
+                                      "properties": {
+                                        "visible": {
+                                          "oneOf": [
+                                            {
+                                              "description": "Defines if the button is visible (otherwise hidden)",
+                                              "type": "boolean",
+                                              "default": true
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        },
+                                        "enabled": {
+                                          "oneOf": [
+                                            {
+                                              "description": "Defines if the button is enabled (otherwise greyed out)",
+                                              "type": "boolean",
+                                              "default": true
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "email_quittance": {
+                                  "oneOf": [
+                                    {
+                                      "description": "Defines the 'E-Mail Quittance' button - only non-invoiced sales",
+                                      "type": "object",
+                                      "properties": {
+                                        "visible": {
+                                          "oneOf": [
+                                            {
+                                              "description": "Defines if the button is visible (otherwise hidden)",
+                                              "type": "boolean",
+                                              "default": true
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        },
+                                        "enabled": {
+                                          "oneOf": [
+                                            {
+                                              "description": "Defines if the button is enabled (otherwise greyed out)",
+                                              "type": "boolean",
+                                              "default": true
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "email_invoice": {
+                                  "oneOf": [
+                                    {
+                                      "description": "Defines the 'E-Mail Invoice' button - only invoiced sales",
+                                      "type": "object",
+                                      "properties": {
+                                        "visible": {
+                                          "oneOf": [
+                                            {
+                                              "description": "Defines if the button is visible (otherwise hidden)",
+                                              "type": "boolean",
+                                              "default": true
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        },
+                                        "enabled": {
+                                          "oneOf": [
+                                            {
+                                              "description": "Defines if the button is enabled (otherwise greyed out)",
+                                              "type": "boolean",
+                                              "default": true
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "history_details": {
+                          "description": "Detailed view (per transcation type) inside the history",
+                          "type": "object",
+                          "properties": {
+                            "buttons": {
+                              "description": "Buttons that can be toggled in/out (if implicitly available)",
+                              "type": "object",
+                              "properties": {
+                                "email_receipt": {
+                                  "oneOf": [
+                                    {
+                                      "description": "Defines the 'E-Mail Recipt' button - only non-invoiced sales",
+                                      "type": "object",
+                                      "properties": {
+                                        "visible": {
+                                          "oneOf": [
+                                            {
+                                              "description": "Defines if the button is visible (otherwise hidden)",
+                                              "type": "boolean",
+                                              "default": true
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        },
+                                        "enabled": {
+                                          "oneOf": [
+                                            {
+                                              "description": "Defines if the button is enabled (otherwise greyed out)",
+                                              "type": "boolean",
+                                              "default": true
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "email_quittance": {
+                                  "oneOf": [
+                                    {
+                                      "description": "Defines the 'E-Mail Quittance' button - only non-invoiced sales",
+                                      "type": "object",
+                                      "properties": {
+                                        "visible": {
+                                          "oneOf": [
+                                            {
+                                              "description": "Defines if the button is visible (otherwise hidden)",
+                                              "type": "boolean",
+                                              "default": true
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        },
+                                        "enabled": {
+                                          "oneOf": [
+                                            {
+                                              "description": "Defines if the button is enabled (otherwise greyed out)",
+                                              "type": "boolean",
+                                              "default": true
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "email_invoice": {
+                                  "oneOf": [
+                                    {
+                                      "description": "Defines the 'E-Mail Invoice' button - only invoiced sales",
+                                      "type": "object",
+                                      "properties": {
+                                        "visible": {
+                                          "oneOf": [
+                                            {
+                                              "description": "Defines if the button is visible (otherwise hidden)",
+                                              "type": "boolean",
+                                              "default": true
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        },
+                                        "enabled": {
+                                          "oneOf": [
+                                            {
+                                              "description": "Defines if the button is enabled (otherwise greyed out)",
+                                              "type": "boolean",
+                                              "default": true
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              }
             }
           }
+        },
+        {
+          "type": "null"
         }
       ]
     },

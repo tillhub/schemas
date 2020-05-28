@@ -1,3 +1,16 @@
+# [4.181.0](https://github.com/tillhub/schemas/compare/v4.180.1...v4.181.0) (2020-05-28)
+
+
+### Bug Fixes
+
+* **configurations:** ui ([dcde119](https://github.com/tillhub/schemas/commit/dcde119))
+
+
+### Features
+
+* **configurations:** ui ([58846df](https://github.com/tillhub/schemas/commit/58846df))
+* **configurations:** ui ([2f2de30](https://github.com/tillhub/schemas/commit/2f2de30))
+
 ## [4.180.1](https://github.com/tillhub/schemas/compare/v4.180.0...v4.180.1) (2020-05-26)
 
 
