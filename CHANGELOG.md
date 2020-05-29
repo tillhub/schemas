@@ -1,3 +1,16 @@
+# [5.0.0](https://github.com/tillhub/schemas/compare/v4.181.0...v5.0.0) (2020-05-29)
+
+
+### Features
+
+* **configurations:** pricebook selection price ([d054dc3](https://github.com/tillhub/schemas/commit/d054dc3))
+* **pricebook:** pricebook price behaviour ([71aadae](https://github.com/tillhub/schemas/commit/71aadae))
+
+
+### BREAKING CHANGES
+
+* **pricebook:** Not sure what is a breaking change
+
 # [4.181.0](https://github.com/tillhub/schemas/compare/v4.180.1...v4.181.0) (2020-05-28)
 
 

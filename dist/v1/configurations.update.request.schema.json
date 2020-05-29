@@ -2011,6 +2011,28 @@
                     }
                   ]
                 },
+                "pricebook": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "selection_type": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "description": "Defines which price is chosen by default when conflict",
+                          "enum": [
+                            "default",
+                            "pricebook",
+                            "user"
+                          ]
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  }
+                },
                 "product_id_template": {
                   "description": "A Tillhub string pattern that allows for parameterized product id generation",
                   "oneOf": [
