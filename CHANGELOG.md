@@ -1,3 +1,15 @@
+# [5.3.0](https://github.com/tillhub/schemas/compare/v5.2.0...v5.3.0) (2020-06-02)
+
+
+### Bug Fixes
+
+* **cart_items:** fix docs ([aa63cc6](https://github.com/tillhub/schemas/commit/aa63cc6))
+
+
+### Features
+
+* **cart_items:** add promotion_amount, promotion_amount_total, product_service_answers, is_voucher, ([b27bb18](https://github.com/tillhub/schemas/commit/b27bb18))
+
 # [5.2.0](https://github.com/tillhub/schemas/compare/v5.1.0...v5.2.0) (2020-06-02)
 
 
