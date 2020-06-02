@@ -1,3 +1,10 @@
+# [5.2.0](https://github.com/tillhub/schemas/compare/v5.1.0...v5.2.0) (2020-06-02)
+
+
+### Features
+
+* **cart_items:** is_service ([c18e5ce](https://github.com/tillhub/schemas/commit/c18e5ce))
+
 # [5.1.0](https://github.com/tillhub/schemas/compare/v5.0.0...v5.1.0) (2020-06-02)
 
 
