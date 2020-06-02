@@ -43,6 +43,22 @@
         }
       ]
     },
+    "creation_context": {
+      "default": "required",
+      "description": "Information if a voucher creation will be processed within a transaction or standalone (without a transaction and without any records)",
+      "oneOf": [
+        {
+          "type": "string",
+          "enum": [
+            "transaction",
+            "standalone"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "attributes": {
       "type": "object",
       "additionalProperties": false,
