@@ -1,3 +1,10 @@
+# [5.5.0](https://github.com/tillhub/schemas/compare/v5.4.0...v5.5.0) (2020-06-03)
+
+
+### Features
+
+* **products_v1:** add bulk update schema ([#390](https://github.com/tillhub/schemas/issues/390)) ([a7b97a2](https://github.com/tillhub/schemas/commit/a7b97a2))
+
 # [5.4.0](https://github.com/tillhub/schemas/compare/v5.3.0...v5.4.0) (2020-06-03)
 
 
