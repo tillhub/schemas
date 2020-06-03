@@ -1,3 +1,10 @@
+# [5.4.0](https://github.com/tillhub/schemas/compare/v5.3.0...v5.4.0) (2020-06-03)
+
+
+### Features
+
+* **configurations:** settings ([0baf047](https://github.com/tillhub/schemas/commit/0baf047))
+
 # [5.3.0](https://github.com/tillhub/schemas/compare/v5.2.0...v5.3.0) (2020-06-02)
 
 

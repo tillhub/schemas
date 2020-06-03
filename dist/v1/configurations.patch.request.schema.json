@@ -1155,6 +1155,15 @@
                   }
                 }
               }
+            },
+            "voucher_systems_source": {
+              "description": "Defines how the voucher systems table on the client will be filled, either from configurations or from the voucher_systems table",
+              "type": "string",
+              "enum": [
+                "configurations",
+                "voucher_systems"
+              ],
+              "default": "configurations"
             }
           }
         }
