@@ -1,3 +1,10 @@
+# [5.6.0](https://github.com/tillhub/schemas/compare/v5.5.0...v5.6.0) (2020-06-04)
+
+
+### Features
+
+* **payment_options:** card_circuits ([2e7bbc1](https://github.com/tillhub/schemas/commit/2e7bbc1))
+
 # [5.5.0](https://github.com/tillhub/schemas/compare/v5.4.0...v5.5.0) (2020-06-03)
 
 

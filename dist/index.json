@@ -270,6 +270,6 @@
   "/webhooks.create.request.schema.json",
   "/webhooks.update.request.schema.json",
   "/profile.create.request.schema.json",
-  "/support.create.request.schema.json",
-  "/profile.update.request.schema.json"
+  "/profile.update.request.schema.json",
+  "/support.create.request.schema.json"
 ]

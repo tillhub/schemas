@@ -155,6 +155,20 @@
           "type": "null"
         }
       ]
+    },
+    "card_circuits": {
+      "description": "A list of card circuits (e.g. VISA, Girocard ...) that should trigger a matching re-assignment after payments with terminals",
+      "anyOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
     }
   },
   "type": "object"
