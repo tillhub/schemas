@@ -150,6 +150,17 @@
         }
       ]
     },
+    "immutable": {
+      "description": "If TRUE this cart will not be editable, thus a user can not remove nor add new items.",
+      "oneOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "customer": {
       "oneOf": [
         {

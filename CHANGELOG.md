@@ -1,3 +1,10 @@
+# [5.7.0](https://github.com/tillhub/schemas/compare/v5.6.0...v5.7.0) (2020-06-04)
+
+
+### Features
+
+* **carts:** immutable flag ([602513f](https://github.com/tillhub/schemas/commit/602513f))
+
 # [5.6.0](https://github.com/tillhub/schemas/compare/v5.5.0...v5.6.0) (2020-06-04)
 
 
