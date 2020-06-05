@@ -1,3 +1,10 @@
+# [5.8.0](https://github.com/tillhub/schemas/compare/v5.7.0...v5.8.0) (2020-06-05)
+
+
+### Features
+
+* **products:** add custom properties ([cd80c6b](https://github.com/tillhub/schemas/commit/cd80c6b))
+
 # [5.7.0](https://github.com/tillhub/schemas/compare/v5.6.0...v5.7.0) (2020-06-04)
 
 
