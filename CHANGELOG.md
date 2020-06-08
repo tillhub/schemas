@@ -1,3 +1,10 @@
+# [5.9.0](https://github.com/tillhub/schemas/compare/v5.8.0...v5.9.0) (2020-06-08)
+
+
+### Features
+
+* **voucher_systems:** actions ([1a1dd60](https://github.com/tillhub/schemas/commit/1a1dd60))
+
 # [5.8.0](https://github.com/tillhub/schemas/compare/v5.7.0...v5.8.0) (2020-06-05)
 
 
