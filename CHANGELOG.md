@@ -1,3 +1,10 @@
+# [5.12.0](https://github.com/tillhub/schemas/compare/v5.11.0...v5.12.0) (2020-06-16)
+
+
+### Features
+
+* **vouchers:** add validity period to vouchers ([#398](https://github.com/tillhub/schemas/issues/398)) ([10979c5](https://github.com/tillhub/schemas/commit/10979c5))
+
 # [5.11.0](https://github.com/tillhub/schemas/compare/v5.10.0...v5.11.0) (2020-06-16)
 
 
