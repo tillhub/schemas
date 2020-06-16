@@ -444,11 +444,10 @@
             ]
           },
           "client_id": {
-            "deprecated": true,
             "oneOf": [
               {
                 "type": "string",
-                "description": "The unique identifier within the application (transaction producer)"
+                "description": "The unique identifier within the application (transaction producer)\n\nNote: this will be used as idempotency mechanism."
               },
               {
                 "type": "null"
@@ -1044,7 +1043,7 @@
             "oneOf": [
               {
                 "type": "string",
-                "description": "The supported transaction type",
+                "description": "The supported transaction type\n\nNOTE: this is the new version that was previously 'type' with the difference of storing all sub types such as expense directly top level.",
                 "enum": [
                   "sale",
                   "sale_cancel",
@@ -1077,9 +1076,9 @@
             "oneOf": [
               {
                 "type": "string",
-                "example": "Sale Nr.5",
+                "example": "Sale Nr. 5",
                 "maxLength": 128,
-                "description": "Any string that a user wants to store to identify a transaction, or wants to make it human readable."
+                "description": "Any string that a user wants to store to identify a transaction, or wants to make it human readable.\n\nThis is is commonly refered to as 'transaction number' plus possibly any extension as string."
               },
               {
                 "type": "null"
@@ -1092,7 +1091,20 @@
                 "type": "string",
                 "format": "uuid",
                 "example": "b3465a62-62e9-46de-9df7-4d3009c46068",
-                "description": "The Tillhub staff resource ID, that has generated this transaction. (used by temp staff)"
+                "description": "The Tillhub staff resource ID, that has generated this transaction."
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "_temporary_staff": {
+            "oneOf": [
+              {
+                "type": "string",
+                "format": "uuid",
+                "example": "b3465a62-62e9-46de-9df7-4d3009c46068",
+                "description": "Which staff is being lending pemissions to another staff e.g. in cancellation cases."
               },
               {
                 "type": "null"
@@ -1103,8 +1115,8 @@
             "oneOf": [
               {
                 "type": "object",
-                "additionalProperties": false,
-                "description": "Any additional flat values.",
+                "additionalProperties": true,
+                "description": "Any additional flat values.\n\nThose are non-essential, but give context.",
                 "properties": {
                   "guid": {
                     "oneOf": [
@@ -1293,7 +1305,7 @@
                 "type": "string",
                 "maxLength": 128,
                 "example": "135543344343",
-                "description": "An user defined customer reference."
+                "description": "An user defined customer reference. e.g. a customer number in a third party ERP."
               },
               {
                 "type": "null"
@@ -1304,7 +1316,7 @@
             "oneOf": [
               {
                 "type": "array",
-                "description": "A list of Tillhub resources that caused this transaction, e.g. a stored cart or multiple delivery notes",
+                "description": "A list of Tillhub resources that caused this transaction, e.g. a stored cart or multiple delivery notes.\n\nThis is especially useful when working with third part ERPs or custom integrations over the carts API.",
                 "items": {
                   "type": "object",
                   "description": "Reference to a similar type of object (e.g. transaction to cart)",
@@ -1366,7 +1378,7 @@
             "oneOf": [
               {
                 "type": "array",
-                "description": "A list of Tillhub resources that this transaction directly depends on, e.g. a refund for a previous sale",
+                "description": "A list of Tillhub resources that this transaction directly depends on, e.g. a refund for a previous sale.\n\nThose transactions must be reacted upon by POSes and can be referring in analytics.",
                 "items": {
                   "type": "object",
                   "description": "Reference to the same type of object (e.g. transaction to pervious transaction)",
@@ -1542,7 +1554,6 @@
                   "description": "The server creation time of this transaction."
                 },
                 "_id": {
-                  "deprecated": true,
                   "oneOf": [
                     {
                       "type": "string",
@@ -1800,7 +1811,6 @@
                   ]
                 },
                 "product_supplier_name": {
-                  "deprecated": true,
                   "oneOf": [
                     {
                       "type": "string",
@@ -1885,7 +1895,6 @@
                   ]
                 },
                 "attributes_description": {
-                  "deprecated": true,
                   "oneOf": [
                     {
                       "type": "string",
@@ -1897,12 +1906,25 @@
                     }
                   ]
                 },
+                "attributes": {
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "example": {
+                        "color": "red"
+                      },
+                      "description": "The attributes object of a sold item."
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
                 "is_tip": {
-                  "deprecated": true,
+                  "default": false,
                   "oneOf": [
                     {
                       "type": "boolean",
-                      "default": false,
                       "description": "If true, this item represents a pseudo product compensating a tip"
                     },
                     {
@@ -1911,11 +1933,10 @@
                   ]
                 },
                 "is_owner": {
-                  "deprecated": true,
+                  "default": false,
                   "oneOf": [
                     {
                       "type": "boolean",
-                      "default": false,
                       "description": "If true and is_tip == true, the salesperson is the shop owner (different taxation)"
                     },
                     {
@@ -1924,12 +1945,11 @@
                   ]
                 },
                 "reference_cartitem_client_id": {
-                  "deprecated": true,
                   "oneOf": [
                     {
                       "type": "string",
                       "example": "01331B44-130B-45D4-97A7-401247FD5B68",
-                      "description": "In cases of refund or cancellation, or invoicing a delivery note or selling a saved cart: the client_id of the origin item"
+                      "description": "In cases of refund or cancellation, or invoicing a delivery note or selling a saved cart: the client_id of the origin item."
                     },
                     {
                       "type": "null"
@@ -1937,7 +1957,6 @@
                   ]
                 },
                 "is_service": {
-                  "deprecated": true,
                   "oneOf": [
                     {
                       "type": "boolean",
@@ -1950,7 +1969,6 @@
                   ]
                 },
                 "used_barcode": {
-                  "deprecated": true,
                   "oneOf": [
                     {
                       "type": "string",
@@ -1963,7 +1981,6 @@
                   ]
                 },
                 "is_voucher": {
-                  "deprecated": true,
                   "oneOf": [
                     {
                       "type": "boolean",
@@ -2108,7 +2125,7 @@
                   "oneOf": [
                     {
                       "type": "object",
-                      "description": "Any additional flat values.",
+                      "description": "Any additional flat values.\n\nThose are non-essential, but give context.",
                       "properties": {
                         "title": {
                           "oneOf": [
@@ -2620,7 +2637,12 @@
                   "oneOf": [
                     {
                       "type": "string",
-                      "description": "The type of item."
+                      "description": "Denotes the type and handling of an item.",
+                      "enum": [
+                        "item",
+                        "discount",
+                        "promotion"
+                      ]
                     },
                     {
                       "type": "null"
@@ -2644,7 +2666,7 @@
                 "position": {
                   "oneOf": [
                     {
-                      "type": "number",
+                      "type": "integer",
                       "description": "The position description of the item. E.g. positon 1 (2, 3 etc.) in the cart.",
                       "example": "1",
                       "maximum": 32767,
@@ -2659,7 +2681,7 @@
                   "oneOf": [
                     {
                       "type": "number",
-                      "description": "The quantity of this item.",
+                      "description": "The quantity of this item. e.g. 1 pc or 0.125kg.",
                       "example": "100",
                       "minimum": -32767,
                       "maximum": 32767,
@@ -2674,7 +2696,7 @@
                   "oneOf": [
                     {
                       "type": "string",
-                      "description": "The metric unit of this item. E.g. 1.754 kg(!) vegetables.",
+                      "description": "The metric unit of this item. E.g. 1.754 kg(!) vegetables. or 1 pc(s)",
                       "example": "kg"
                     },
                     {
@@ -2687,7 +2709,7 @@
                     {
                       "type": "string",
                       "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
-                      "example": "",
+                      "example": "EUR",
                       "minLength": 3,
                       "maxLength": 3
                     },
@@ -2709,11 +2731,23 @@
                     }
                   ]
                 },
-                "_custom_id": {
+                "_product_custom_id": {
                   "oneOf": [
                     {
                       "type": "string",
                       "description": "Any custom ID, e.g. a product number",
+                      "example": "AKI-1234566"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "_custom_id": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "description": "Any custom ID of this cart item.",
                       "example": "AKI-1234566"
                     },
                     {
@@ -2867,7 +2901,34 @@
                   "oneOf": [
                     {
                       "type": "object",
-                      "description": "Item property changes triggered by a user decision."
+                      "description": "Item property changes triggered by a user decision.",
+                      "properties": {
+                        "tax_switched": {
+                          "type": "boolean"
+                        },
+                        "action": {
+                          "oneOf": [
+                            {
+                              "type": "object",
+                              "properties": {
+                                "tax": {
+                                  "type": "string",
+                                  "format": "uuid"
+                                },
+                                "default": {
+                                  "type": "boolean"
+                                },
+                                "name": {
+                                  "type": "string"
+                                }
+                              }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        }
+                      }
                     },
                     {
                       "type": "null"
@@ -2903,7 +2964,7 @@
                 "_tax_amount": {
                   "oneOf": [
                     {
-                      "description": "The tax amount on the per unit qty base of 1.",
+                      "description": "The sum of all applied tax amount on the per unit qty base of 1.\n\nNOTE: This is usually a calculated value from `tax_amount_total / qty` and bankers rounded. The value is usually used in analytics.",
                       "type": "number",
                       "minimum": -1000000,
                       "maximum": 1000000,
@@ -2917,7 +2978,7 @@
                 "_tax_amount_total": {
                   "oneOf": [
                     {
-                      "description": "The total tax amount.",
+                      "description": "The sum of all applied taxes.\n\nNOTE: this is the effective financial value in taxation.",
                       "type": "number",
                       "minimum": -1000000,
                       "maximum": 1000000,
@@ -2930,7 +2991,7 @@
                 },
                 "_discount_amount": {
                   "default": 0,
-                  "description": "The discount amount on the per unit qty base of 1.",
+                  "description": "The discount amount on the per unit qty base of 1.\n\nNOTE: This is usually a calculated value from `_discount_amount_total / qty` and bankers rounded. The value is usually used in analytics.",
                   "type": "number",
                   "minimum": -1000000,
                   "maximum": 1000000,
@@ -2940,7 +3001,7 @@
                   "oneOf": [
                     {
                       "default": 0,
-                      "description": "The total discount amount.",
+                      "description": "The sum of all applied discounts. This value does not include promotions\n\nNOTE: this is the effective financial value.",
                       "type": "number",
                       "minimum": -1000000,
                       "maximum": 1000000,
@@ -2954,7 +3015,7 @@
                 "_promotion_amount": {
                   "oneOf": [
                     {
-                      "description": "The promotion amount on the per unit qty base of 1.",
+                      "description": "The promotion amount on the per unit qty base of 1.\n\nNOTE: This is usually a calculated value from `_promotion_amount_total / qty` and bankers rounded. The value is usually used in analytics.",
                       "type": "number",
                       "minimum": -1000000,
                       "maximum": 1000000,
@@ -2968,7 +3029,7 @@
                 "_promotion_amount_total": {
                   "oneOf": [
                     {
-                      "description": "The total promotion amount.",
+                      "description": "The sum of all applied promotions. This value does not include discounts\n\nNOTE: this is the effective financial value.",
                       "type": "number",
                       "minimum": -1000000,
                       "maximum": 1000000,
@@ -2982,6 +3043,7 @@
                 "_discounts": {
                   "oneOf": [
                     {
+                      "description": "The list of applied discountable objects to e.g. attribute shares of discounts or promotion amount totals to source objects.",
                       "type": "array",
                       "items": {
                         "type": "object",
@@ -2989,7 +3051,7 @@
                         "description": "Any applied discounts as they happened at transaction creation time.",
                         "properties": {
                           "amount": {
-                            "description": "The effective amount for this discount per single item",
+                            "description": "The effective amount for this discount per item qty base 1",
                             "type": "number",
                             "minimum": -1000000,
                             "maximum": 1000000,
@@ -3013,7 +3075,7 @@
                             "maxLength": 3
                           },
                           "value": {
-                            "description": "The absolut reduction via this voucher",
+                            "description": "The absolute reduction via this discounting object e.g. a value discount.",
                             "oneOf": [
                               {
                                 "type": "number",
@@ -3048,12 +3110,14 @@
                           "group": {
                             "oneOf": [
                               {
+                                "description": "The effective type of the discounting object.",
                                 "type": "string",
                                 "enum": [
                                   "customer",
                                   "staff",
                                   "cart",
                                   "product_set",
+                                  "promotion",
                                   "sconto"
                                 ]
                               },
@@ -3068,7 +3132,7 @@
                             "maxLength": 128
                           },
                           "source_id": {
-                            "description": "The Tillhub discount resource (if available)",
+                            "description": "The Tillhub discounting resource (if available) e.g. a discount, promotion etc.",
                             "oneOf": [
                               {
                                 "type": "string",
@@ -3100,6 +3164,7 @@
                                   "cart",
                                   "item",
                                   "customer",
+                                  "promotion",
                                   "sconto"
                                 ]
                               },
@@ -3425,9 +3490,22 @@
                   "oneOf": [
                     {
                       "type": "string",
-                      "example": "Did this sale. Went to the next one.",
+                      "example": "I Did this sale. Went to the next one. But made a comment.",
                       "maxLength": 8192,
-                      "description": "Any arbitrary comment."
+                      "description": "Any arbitrary staff comment."
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "_note": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "example": "Please follow this instruction that you can read here on a receipt.",
+                      "maxLength": 8192,
+                      "description": "Any arbitrary text you want the customer to see e.g. on a receipt."
                     },
                     {
                       "type": "null"
@@ -3450,7 +3528,7 @@
                 "_amount_net": {
                   "oneOf": [
                     {
-                      "description": "The payable net amount on the units qty base of 1, after decrementing applicable discounts etc. This value needs to be lower than or equal to the respective unti amount.",
+                      "description": "The payable net amount on the units qty base of 1,\nafter decrementing applicable discounts (meaning including discounts) etc. This value needs\nto be lower than or equal to the respective unit amount.\n\nNOTE: the effective financial value is `amount_net_total`. This value here is bankers rounded.\n\nWHEN TO USE: in analytics it is likely sometimes wanted to avergage the effective net product price, to e.g. compare\nit to undiscounted prices (unit price).",
                       "type": "number",
                       "minimum": -1000000,
                       "maximum": 1000000,
@@ -3464,7 +3542,7 @@
                 "_amount_gross": {
                   "oneOf": [
                     {
-                      "description": "The payable gross amount on the units qty base of 1, after decrementing applicable discounts etc.  This value needs to be lower than or equal to the respective unti amount.",
+                      "description": "The payable gross amount on the units qty base of 1, after decrementing\napplicable discounts etc.\nThis value needs to be lower than or equal to the respective unit amount.\n\nNOTE: the effective financial value is `amount_gross_total`. This value here is bankers rounded.\n\nWHEN TO USE: in analytics it is likely sometimes wanted to avergage the effective gross product price, to e.g. compare\nit to undiscounted prices (unit price).",
                       "type": "number",
                       "minimum": -1000000,
                       "maximum": 1000000,
@@ -3478,7 +3556,7 @@
                 "_amount_total_net": {
                   "oneOf": [
                     {
-                      "description": "The payable net amount total, after decrementing applicable discounts etc. This value needs to be lower than or equal to the respective unti amount.",
+                      "description": "The payable net amount total, after decrementing applicable discounts (meaning including discounts) etc.\nThis value needs to be lower than or equal to the respective unit amount.\n\nNOTE: this is the effective financial value in taxation.",
                       "type": "number",
                       "minimum": -1000000,
                       "maximum": 1000000,
@@ -3492,7 +3570,7 @@
                 "_amount_total_gross": {
                   "oneOf": [
                     {
-                      "description": "The payable net amount total, after decrementing applicable discounts etc. This value needs to be lower than or equal to the respective unti amount.",
+                      "description": "The payable gross amount total, after decrementing applicable discounts (meaning\nincluding discounts) etc. This value needs to be lower than or equal to the respective unit amount.\n\nNOTE: this is the effective financial value in taxation.",
                       "type": "number",
                       "minimum": -1000000,
                       "maximum": 1000000,
@@ -3506,7 +3584,7 @@
                 "_amount_unit_net": {
                   "oneOf": [
                     {
-                      "description": "The original qty base 1 item net amount, e.g. the product shelf price",
+                      "description": "The original qty base 1 item net amount,\n\ne.g. the product shelf price",
                       "type": "number",
                       "minimum": -1000000,
                       "maximum": 1000000,
@@ -3520,7 +3598,7 @@
                 "_amount_unit_gross": {
                   "oneOf": [
                     {
-                      "description": "The original qty base 1 item net amount, e.g. the product shelf price",
+                      "description": "The original qty base 1 item gross amount,\n\ne.g. the product shelf price",
                       "type": "number",
                       "minimum": -1000000,
                       "maximum": 1000000,
@@ -3530,6 +3608,11 @@
                       "type": "null"
                     }
                   ]
+                },
+                "_is_refund": {
+                  "description": "Flag to denote a refund item in a sale.",
+                  "type": "boolean",
+                  "default": true
                 },
                 "account": {
                   "type": "string",
@@ -3736,7 +3819,6 @@
                   ]
                 },
                 "date": {
-                  "deprecated": true,
                   "oneOf": [
                     {
                       "type": "string",
@@ -3763,7 +3845,6 @@
                   ]
                 },
                 "terminal_response": {
-                  "deprecated": true,
                   "oneOf": [
                     {
                       "type": "string",
@@ -3873,7 +3954,7 @@
                   "oneOf": [
                     {
                       "type": "object",
-                      "additionalProperties": false,
+                      "additionalProperties": true,
                       "description": "Any additional flat values.",
                       "properties": {
                         "title": {
@@ -4260,7 +4341,7 @@
                 "_amount_total": {
                   "oneOf": [
                     {
-                      "description": "The payed amount total.",
+                      "description": "The payed amount total. Excluding any change.\n\nNOTE: usually cash payments will be grouped. Also, a cash payment will always carry any possible change money. Even though\na card payment might have caused it.",
                       "type": "number",
                       "minimum": -1000000,
                       "maximum": 1000000,
@@ -4288,7 +4369,7 @@
                 "_amount_given": {
                   "oneOf": [
                     {
-                      "description": "The actual over the counter money flow: regardles what needs to be payed e.g. 49.98, but the customer has given. This is usually of interest in cash payments, or when when customers gave fewer amount than they ought to pay.",
+                      "description": "The actual over the counter money flow: regardles what needs to\nbe payed e.g. 49.98, but the customer has given 50,00. This\nis usually of interest in cash payments, or when when customers\ngave fewer amount than they ought to pay.",
                       "example": "50.00",
                       "type": "number",
                       "minimum": -1000000,
@@ -4303,7 +4384,7 @@
                 "_amount_requested": {
                   "oneOf": [
                     {
-                      "description": "The amount that was requested by the POS e.g. 49.98, regardless of what was given e.g. 50.00. Hence the rest is change or tip. This is usually of interest in cash payments.",
+                      "description": "The amount that was requested\nby the POS e.g. 49.98, regardless\nof what was given e.g. 50.00. Hence the rest is change or tip.\nThis is usually of interest in cash payments.\n\nNOTE: this can be used in analytics to rebuild payment flows",
                       "example": "49.98",
                       "type": "number",
                       "minimum": -1000000,
@@ -4318,7 +4399,7 @@
                 "_amount_change": {
                   "oneOf": [
                     {
-                      "description": "The cash amount that was handed back from the cashier as change.",
+                      "description": "The cash amount that was handed back from the\ncashier as change.\n\nNOTE: that card payments can never have change, but need to cause a cash payment.",
                       "example": "49.98",
                       "type": "number",
                       "minimum": 0,
@@ -4380,25 +4461,26 @@
                     }
                   ]
                 },
-                "_account_change": {
+                "_comments": {
                   "oneOf": [
                     {
                       "type": "string",
-                      "description": "The applicable Tillhub account for the cash payment type used for change.",
-                      "example": "a5380b42-6025-49de-bb1d-c9357df96506"
+                      "example": "I Did this sale. Went to the next one. But made a comment.",
+                      "maxLength": 8192,
+                      "description": "Any arbitrary staff comment."
                     },
                     {
                       "type": "null"
                     }
                   ]
                 },
-                "_comments": {
+                "_note": {
                   "oneOf": [
                     {
                       "type": "string",
-                      "example": "Did this sale. Went to the next one.",
+                      "example": "Please follow this instruction that you can read here on a receipt.",
                       "maxLength": 8192,
-                      "description": "Any arbitrary comment."
+                      "description": "Any arbitrary text you want the customer to see e.g. on a receipt."
                     },
                     {
                       "type": "null"
