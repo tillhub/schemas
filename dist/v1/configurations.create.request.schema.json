@@ -3851,6 +3851,18 @@
                               "type": "null"
                             }
                           ]
+                        },
+                        "print_account_names": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if account names are printed additionally to the numbers.",
+                              "type": "boolean",
+                              "default": false
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
                         }
                       }
                     },
@@ -3922,6 +3934,18 @@
                               "type": "null"
                             }
                           ]
+                        },
+                        "print_account_names": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if account names are printed additionally to the numbers.",
+                              "type": "boolean",
+                              "default": false
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
                         }
                       }
                     },
@@ -3988,6 +4012,18 @@
                               "description": "Defines if the extended balance stats will be printed.",
                               "type": "boolean",
                               "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_account_names": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if account names are printed additionally to the numbers.",
+                              "type": "boolean",
+                              "default": false
                             },
                             {
                               "type": "null"
@@ -4944,6 +4980,18 @@
                 "none",
                 "optional",
                 "required"
+              ]
+            },
+            "show_account_names": {
+              "description": "Defines if account names are shown additionally to the numbers.",
+              "default": false,
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "boolean"
+                }
               ]
             }
           }
