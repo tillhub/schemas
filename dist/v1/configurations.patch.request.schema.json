@@ -2336,6 +2336,22 @@
               "type": "boolean",
               "default": true
             },
+            "presentation": {
+              "type": "object",
+              "description": "Specifies presentation to the user.",
+              "additionalProperties": false,
+              "properties": {
+                "filter": {
+                  "description": "Defines cart grouping",
+                  "type": "string",
+                  "enum": [
+                    "none",
+                    "instant_checkout"
+                  ],
+                  "default": "none"
+                }
+              }
+            },
             "sync": {
               "description": "Describes the synching behavior of saved carts.",
               "type": "object",

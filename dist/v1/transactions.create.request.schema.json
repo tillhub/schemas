@@ -1680,7 +1680,7 @@
                   "description": "Any applied discounts as they happened at transaction creation time.",
                   "properties": {
                     "amount": {
-                      "description": "The effective amount for this discount per single item",
+                      "description": "The effective amount for this discount per item qty base 1",
                       "type": "number",
                       "minimum": -1000000,
                       "maximum": 1000000,
@@ -1704,7 +1704,7 @@
                       "maxLength": 3
                     },
                     "value": {
-                      "description": "The absolut reduction via this voucher",
+                      "description": "The absolute reduction via this discounting object e.g. a value discount.",
                       "oneOf": [
                         {
                           "type": "number",
@@ -1739,12 +1739,14 @@
                     "group": {
                       "oneOf": [
                         {
+                          "description": "The effective type of the discounting object.",
                           "type": "string",
                           "enum": [
                             "customer",
                             "staff",
                             "cart",
                             "product_set",
+                            "promotion",
                             "sconto"
                           ]
                         },
@@ -1759,7 +1761,7 @@
                       "maxLength": 128
                     },
                     "source_id": {
-                      "description": "The Tillhub discount resource (if available)",
+                      "description": "The Tillhub discounting resource (if available) e.g. a discount, promotion etc.",
                       "oneOf": [
                         {
                           "type": "string",
@@ -1791,6 +1793,7 @@
                             "cart",
                             "item",
                             "customer",
+                            "promotion",
                             "sconto"
                           ]
                         },

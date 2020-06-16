@@ -1,3 +1,16 @@
+# [5.10.0](https://github.com/tillhub/schemas/compare/v5.9.0...v5.10.0) (2020-06-16)
+
+
+### Bug Fixes
+
+* **npm:** update common-tags ([7544be3](https://github.com/tillhub/schemas/commit/7544be3))
+
+
+### Features
+
+* **configurations:** saved_cart ([ca46501](https://github.com/tillhub/schemas/commit/ca46501))
+* **tx:** document tx v1 fields properly, undeprecate ([9c51350](https://github.com/tillhub/schemas/commit/9c51350))
+
 # [5.9.0](https://github.com/tillhub/schemas/compare/v5.8.0...v5.9.0) (2020-06-08)
 
 
