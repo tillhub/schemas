@@ -1,3 +1,10 @@
+# [5.13.0](https://github.com/tillhub/schemas/compare/v5.12.0...v5.13.0) (2020-06-18)
+
+
+### Features
+
+* **configurations:** ui_configurations ([28655dc](https://github.com/tillhub/schemas/commit/28655dc))
+
 # [5.12.0](https://github.com/tillhub/schemas/compare/v5.11.0...v5.12.0) (2020-06-16)
 
 

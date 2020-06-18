@@ -5775,6 +5775,72 @@
                               }
                             }
                           }
+                        },
+                        "carts": {
+                          "description": "Carts tab in the sale view (contains saved carts and delivery notes)",
+                          "type": "object",
+                          "properties": {
+                            "grouping": {
+                              "oneOf": [
+                                {
+                                  "description": "Additional grouping of carts and delivery notes by:",
+                                  "type": "object",
+                                  "properties": {
+                                    "by": {
+                                      "oneOf": [
+                                        {
+                                          "type": "string",
+                                          "default": "customers",
+                                          "enum": [
+                                            "none",
+                                            "customers",
+                                            "cashiers"
+                                          ]
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    },
+                                    "max": {
+                                      "oneOf": [
+                                        {
+                                          "type": "integer",
+                                          "description": "The maximum number of groups to display",
+                                          "default": 50,
+                                          "maximum": 100,
+                                          "minimum": 0
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    },
+                                    "sorted_by": {
+                                      "oneOf": [
+                                        {
+                                          "type": "string",
+                                          "description": "Define how the groups are sorted",
+                                          "default": "name",
+                                          "enum": [
+                                            "none",
+                                            "name",
+                                            "count"
+                                          ]
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    }
+                                  }
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            }
+                          }
                         }
                       }
                     },
