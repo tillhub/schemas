@@ -1,3 +1,10 @@
+# [5.14.0](https://github.com/tillhub/schemas/compare/v5.13.0...v5.14.0) (2020-06-18)
+
+
+### Features
+
+* **transactions:** payments ([2fd94f1](https://github.com/tillhub/schemas/commit/2fd94f1))
+
 # [5.13.0](https://github.com/tillhub/schemas/compare/v5.12.0...v5.13.0) (2020-06-18)
 
 

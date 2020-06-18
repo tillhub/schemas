@@ -3242,11 +3242,13 @@
                                 },
                                 "api": {
                                   "type": "string",
+                                  "description": "The API used to talk to the terminal.",
                                   "enum": [
                                     "adyen",
                                     "concardis",
                                     "opi",
-                                    "tim"
+                                    "tim",
+                                    "sumup"
                                   ]
                                 },
                                 "payment_provider": {
@@ -3301,6 +3303,11 @@
                                   "description": "The raw response of the terminal for finalizing the card payment. Might contain additional information.",
                                   "type": "string",
                                   "maxLength": 16384
+                                },
+                                "is_connected": {
+                                  "default": null,
+                                  "description": "If true - the terminal was connected during the payment process and data must have arrived in the POS.\nIf true - a cancellation must be connected to the termianla as well.\nIf false - the terminal was used independently - responsibility is with the cashier to handle data properly.\nIf false - a cancellation will not connect to a device.",
+                                  "type": "boolean"
                                 }
                               }
                             },
