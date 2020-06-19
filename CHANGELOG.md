@@ -1,3 +1,10 @@
+## [5.14.1](https://github.com/tillhub/schemas/compare/v5.14.0...v5.14.1) (2020-06-19)
+
+
+### Bug Fixes
+
+* **cashier_counting_protocols:** allow empty cash units ([#401](https://github.com/tillhub/schemas/issues/401)) ([5e06e04](https://github.com/tillhub/schemas/commit/5e06e04))
+
 # [5.14.0](https://github.com/tillhub/schemas/compare/v5.13.0...v5.14.0) (2020-06-18)
 
 
