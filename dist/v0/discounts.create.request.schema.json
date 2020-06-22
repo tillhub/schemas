@@ -67,6 +67,11 @@
           "type": "object",
           "additionalProperties": false,
           "properties": {
+            "automatic": {
+              "description": "If true - this discount will be automatically applied to a cart item according to it's constraints",
+              "type": "boolean",
+              "default": false
+            },
             "display": {
               "oneOf": [
                 {
@@ -146,6 +151,51 @@
           "type": "object",
           "additionalProperties": false,
           "properties": {
+            "products": {
+              "description": "The tillhub product ressources the discount can be applied to (NULL == all)",
+              "oneOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "product_groups": {
+              "description": "The tillhub product group ressources the discount can be applied to (NULL == all)",
+              "oneOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "taxes": {
+              "description": "The tillhub tax ressources the discount can be applied to (NULL == all)",
+              "oneOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
             "time": {
               "type": "object",
               "additionalProperties": false,

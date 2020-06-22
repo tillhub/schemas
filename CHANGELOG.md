@@ -1,3 +1,10 @@
+# [5.15.0](https://github.com/tillhub/schemas/compare/v5.14.1...v5.15.0) (2020-06-22)
+
+
+### Features
+
+* **discounts:** automatic_application ([cdc0595](https://github.com/tillhub/schemas/commit/cdc0595))
+
 ## [5.14.1](https://github.com/tillhub/schemas/compare/v5.14.0...v5.14.1) (2020-06-19)
 
 
