@@ -89,6 +89,7 @@
                   "staff:staff:settings:dashboard",
                   "staff:staff:settings:database",
                   "staff:staff:settings:history",
+                  "staff:staff:settings:discounts",
                   "staff:staff:analytics",
                   "staff:staff:analytics:journals",
                   "staff:staff:products",

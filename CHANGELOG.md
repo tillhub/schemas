@@ -1,3 +1,10 @@
+# [5.17.0](https://github.com/tillhub/schemas/compare/v5.16.0...v5.17.0) (2020-06-24)
+
+
+### Features
+
+* **permissions:** discounts ([4ea5f1b](https://github.com/tillhub/schemas/commit/4ea5f1b))
+
 # [5.16.0](https://github.com/tillhub/schemas/compare/v5.15.0...v5.16.0) (2020-06-24)
 
 
