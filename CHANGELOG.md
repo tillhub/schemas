@@ -1,3 +1,10 @@
+# [5.16.0](https://github.com/tillhub/schemas/compare/v5.15.0...v5.16.0) (2020-06-24)
+
+
+### Features
+
+* **pdfs:** add attributes to pdfs templates items ([46e2df7](https://github.com/tillhub/schemas/commit/46e2df7))
+
 # [5.15.0](https://github.com/tillhub/schemas/compare/v5.14.1...v5.15.0) (2020-06-22)
 
 
