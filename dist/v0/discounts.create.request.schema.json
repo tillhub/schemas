@@ -6,6 +6,18 @@
     "group",
     "type"
   ],
+  "oneOf": [
+    {
+      "required": [
+        "rate"
+      ]
+    },
+    {
+      "required": [
+        "value"
+      ]
+    }
+  ],
   "properties": {
     "amount": {
       "description": "DEPRECATED: use value or rate in order to avoid polymorphism",

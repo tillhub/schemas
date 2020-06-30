@@ -1,3 +1,10 @@
+# [5.20.0](https://github.com/tillhub/schemas/compare/v5.19.1...v5.20.0) (2020-06-30)
+
+
+### Features
+
+* **discounts:** add require of rate or value ([b52446b](https://github.com/tillhub/schemas/commit/b52446b))
+
 ## [5.19.1](https://github.com/tillhub/schemas/compare/v5.19.0...v5.19.1) (2020-06-30)
 
 
