@@ -4,8 +4,19 @@
   "additionalProperties": false,
   "required": [
     "group",
-    "type",
-    "amount"
+    "type"
+  ],
+  "oneOf": [
+    {
+      "required": [
+        "rate"
+      ]
+    },
+    {
+      "required": [
+        "value"
+      ]
+    }
   ],
   "properties": {
     "amount": {
