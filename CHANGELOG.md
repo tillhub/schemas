@@ -1,3 +1,10 @@
+## [5.20.2](https://github.com/tillhub/schemas/compare/v5.20.1...v5.20.2) (2020-06-30)
+
+
+### Bug Fixes
+
+* **discounts:** match any of amount types correctly ([a05a851](https://github.com/tillhub/schemas/commit/a05a851))
+
 ## [5.20.1](https://github.com/tillhub/schemas/compare/v5.20.0...v5.20.1) (2020-06-30)
 
 
