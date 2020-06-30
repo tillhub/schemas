@@ -1,3 +1,10 @@
+## [5.19.1](https://github.com/tillhub/schemas/compare/v5.19.0...v5.19.1) (2020-06-30)
+
+
+### Bug Fixes
+
+* **discounts:** remove one of rate or value ([9e96f36](https://github.com/tillhub/schemas/commit/9e96f36))
+
 # [5.19.0](https://github.com/tillhub/schemas/compare/v5.18.0...v5.19.0) (2020-06-30)
 
 
