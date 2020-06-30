@@ -1,3 +1,10 @@
+# [5.18.0](https://github.com/tillhub/schemas/compare/v5.17.0...v5.18.0) (2020-06-30)
+
+
+### Features
+
+* **transactions:** signing ([a409a79](https://github.com/tillhub/schemas/commit/a409a79))
+
 # [5.17.0](https://github.com/tillhub/schemas/compare/v5.16.0...v5.17.0) (2020-06-24)
 
 
