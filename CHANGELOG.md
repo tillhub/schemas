@@ -1,3 +1,10 @@
+## [5.20.1](https://github.com/tillhub/schemas/compare/v5.20.0...v5.20.1) (2020-06-30)
+
+
+### Bug Fixes
+
+* **discounts:** force null on dep'ed field ([d2b6eac](https://github.com/tillhub/schemas/commit/d2b6eac))
+
 # [5.20.0](https://github.com/tillhub/schemas/compare/v5.19.1...v5.20.0) (2020-06-30)
 
 
