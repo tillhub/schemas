@@ -1,3 +1,10 @@
+# [5.21.0](https://github.com/tillhub/schemas/compare/v5.20.2...v5.21.0) (2020-07-01)
+
+
+### Features
+
+* **discounts:** change rate to percision 3 ([a77013f](https://github.com/tillhub/schemas/commit/a77013f))
+
 ## [5.20.2](https://github.com/tillhub/schemas/compare/v5.20.1...v5.20.2) (2020-06-30)
 
 

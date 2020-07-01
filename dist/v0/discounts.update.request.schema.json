@@ -52,7 +52,7 @@
           "type": "number",
           "minimum": 0,
           "maximum": 1,
-          "multipleOf": 0.001
+          "multipleOf": 0.00001
         },
         {
           "type": "null"
