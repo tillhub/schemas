@@ -6,7 +6,7 @@
     "group",
     "type"
   ],
-  "oneOf": [
+  "anyOf": [
     {
       "required": [
         "rate"
@@ -20,9 +20,17 @@
   ],
   "properties": {
     "amount": {
-      "description": "DEPRECATED: use value or rate in order to avoid polymorphism",
-      "type": "number",
-      "minimum": 0
+      "default": null,
+      "oneOf": [
+        {
+          "description": "DEPRECATED: use value or rate in order to avoid polymorphism",
+          "type": "number",
+          "minimum": 0
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "currency": {
       "description": "The currency selector for a discount. NOTE: currency will be enforced soon if value is set",
@@ -58,7 +66,7 @@
           "type": "number",
           "minimum": 0,
           "maximum": 1,
-          "multipleOf": 0.001
+          "multipleOf": 0.00001
         },
         {
           "type": "null"

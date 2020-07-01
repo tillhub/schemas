@@ -1,3 +1,38 @@
+# [5.21.0](https://github.com/tillhub/schemas/compare/v5.20.2...v5.21.0) (2020-07-01)
+
+
+### Features
+
+* **discounts:** change rate to percision 3 ([a77013f](https://github.com/tillhub/schemas/commit/a77013f))
+
+## [5.20.2](https://github.com/tillhub/schemas/compare/v5.20.1...v5.20.2) (2020-06-30)
+
+
+### Bug Fixes
+
+* **discounts:** match any of amount types correctly ([a05a851](https://github.com/tillhub/schemas/commit/a05a851))
+
+## [5.20.1](https://github.com/tillhub/schemas/compare/v5.20.0...v5.20.1) (2020-06-30)
+
+
+### Bug Fixes
+
+* **discounts:** force null on dep'ed field ([d2b6eac](https://github.com/tillhub/schemas/commit/d2b6eac))
+
+# [5.20.0](https://github.com/tillhub/schemas/compare/v5.19.1...v5.20.0) (2020-06-30)
+
+
+### Features
+
+* **discounts:** add require of rate or value ([b52446b](https://github.com/tillhub/schemas/commit/b52446b))
+
+## [5.19.1](https://github.com/tillhub/schemas/compare/v5.19.0...v5.19.1) (2020-06-30)
+
+
+### Bug Fixes
+
+* **discounts:** remove one of rate or value ([9e96f36](https://github.com/tillhub/schemas/commit/9e96f36))
+
 # [5.19.0](https://github.com/tillhub/schemas/compare/v5.18.0...v5.19.0) (2020-06-30)
 
 
