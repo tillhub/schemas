@@ -1,3 +1,17 @@
+# [5.22.0](https://github.com/tillhub/schemas/compare/v5.21.0...v5.22.0) (2020-07-01)
+
+
+### Bug Fixes
+
+* **delivery_notes:** add customProperties ([4f34df7](https://github.com/tillhub/schemas/commit/4f34df7))
+* **items:** add custom_properties field ([6052909](https://github.com/tillhub/schemas/commit/6052909))
+* **transactions:** fix custom_properties route ([edc2406](https://github.com/tillhub/schemas/commit/edc2406))
+
+
+### Features
+
+* **transactions:** fiscalization ([9dec790](https://github.com/tillhub/schemas/commit/9dec790))
+
 # [5.21.0](https://github.com/tillhub/schemas/compare/v5.20.2...v5.21.0) (2020-07-01)
 
 

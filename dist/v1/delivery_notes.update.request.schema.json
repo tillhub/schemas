@@ -1075,6 +1075,36 @@
               }
             ]
           },
+          "custom_properties": {
+            "oneOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "maxProperties": 30,
+                "patternProperties": {
+                  "^.{1,128}$": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "number"
+                      },
+                      {
+                        "type": "boolean"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          },
           "attributes": {
             "anyOf": [
               {

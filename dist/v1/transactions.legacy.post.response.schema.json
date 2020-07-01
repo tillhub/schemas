@@ -3614,6 +3614,36 @@
                   "type": "boolean",
                   "default": true
                 },
+                "custom_properties": {
+                  "oneOf": [
+                    {
+                      "type": "null"
+                    },
+                    {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "maxProperties": 30,
+                      "patternProperties": {
+                        "^.{1,128}$": {
+                          "anyOf": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "number"
+                            },
+                            {
+                              "type": "boolean"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                },
                 "account": {
                   "type": "string",
                   "format": "uuid",
@@ -4695,31 +4725,6 @@
             "additionalProperties": false,
             "required": [],
             "properties": {
-              "id": {
-                "type": "string",
-                "format": "uuid",
-                "description": "The item resource reference ID."
-              },
-              "created_at": {
-                "type": "string",
-                "format": "date-time",
-                "example": "2018-11-04T23:18:43.075Z",
-                "description": "The server creation time of this transaction."
-              },
-              "updated_at": {
-                "type": "string",
-                "format": "date-time",
-                "example": "2018-11-04T23:18:43.075Z",
-                "description": "The server update time of this transaction. Transactions are immutable in and out themselves, however statuses might change, which is reflected in this value. This can for example happen if a signing request for this transaction was not possible and needed to be dealt with later."
-              },
-              "status": {
-                "type": "string",
-                "description": "The current status transition of this transaction. A regular transaction will receive the status `complete` immediately. When signing is requested `complete` will only be assigned after signing.",
-                "enum": [
-                  "signing_requested",
-                  "complete"
-                ]
-              },
               "metadata": {
                 "oneOf": [
                   {
@@ -4771,6 +4776,30 @@
                   }
                 ]
               },
+              "status": {
+                "type": "string",
+                "description": "The current signing status of this transaction. A regular transaction will receive the status `complete` immediately. When signing is requested `complete` will only be assigned after signing.",
+                "enum": [
+                  "signing_requested",
+                  "complete"
+                ]
+              },
+              "signature_type": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "description": "Any allowed singing system provider as type.",
+                    "enum": [
+                      "fiskaltrust",
+                      "tse_fiskaly",
+                      "tse_epson"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
               "signature": {
                 "oneOf": [
                   {
@@ -4782,14 +4811,15 @@
                         "enum": [
                           "qr",
                           "aztec",
-                          "code128"
+                          "code128",
+                          "utf8"
                         ]
                       },
                       "data": {
                         "type": "string",
-                        "example": "{\"data_for_a\": \"qr_code\"}",
+                        "example": "NrKeZlh4xLMFS4MtJPoDP8GXPGpOw39\\/uSWYWCYa066Md7TXAL6Op0DWiB5y+dJdR1+P\\/vvtU2yPAJz9Cr2xcXsaPEoJQHTBJrEZ+Imbd7X9FMW+p3tJUeH+JAUPoDFh",
                         "maxLength": 16384,
-                        "description": "A barcade container of any type with which this transaction is associated."
+                        "description": "The actual signature from the signing provider (data for backwards compatibility)"
                       },
                       "caption": {
                         "default": null,
@@ -4802,10 +4832,74 @@
                         "default": null,
                         "oneOf": [
                           {
+                            "type": "string",
+                            "description": "The stringified version of any raw response from any signing provider.",
+                            "example": "\"{\\\"function\\\":\\\"FinishTransaction\\\",\\\"output\\\":{\\\"logTime\\\":\\\"2020-06-30T12:34:53Z\\\",\\\"signature\\\":\\\"NrKeZlh4xLMFS4MtJPoDP8GXPGpOw39/uSWYWCYa066Md7TXAL6Op0DWiB5y+dJdR1+P/vvtU2yPAJz9Cr2xcXsaPEoJQHTBJrEZ+Imbd7X9FMW+p3tJUeH+JAUPoDFh\\\",\\\"signatureCounter\\\":110},\\\"result\\\":\\\"EXECUTION_OK\\\"}\""
+                          },
+                          {
+                            "type": "object"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "request_payload": {
+                        "description": "The original signing request to the signing provider.",
+                        "default": null,
+                        "oneOf": [
+                          {
                             "type": "string"
                           },
                           {
                             "type": "object"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "counter": {
+                        "oneOf": [
+                          {
+                            "type": "integer",
+                            "minimum": 0,
+                            "description": "Internal counter of the signing unit"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "unit": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "description": "ID of the used signing unit"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "error": {
+                        "default": null,
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "description": "Optional error reporting"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "error_counter": {
+                        "oneOf": [
+                          {
+                            "type": "integer",
+                            "minimum": 0,
+                            "description": "Internal counter of succeeding errors, must be reset on next success."
                           },
                           {
                             "type": "null"
@@ -4819,19 +4913,22 @@
                   }
                 ]
               },
-              "signature_type": {
-                "oneOf": [
-                  {
-                    "type": "string",
-                    "description": "Any allowed singing system provider as type.",
-                    "enum": [
-                      "fiskaltrust"
-                    ]
-                  },
-                  {
-                    "type": "null"
-                  }
-                ]
+              "id": {
+                "type": "string",
+                "format": "uuid",
+                "description": "The item resource reference ID."
+              },
+              "created_at": {
+                "type": "string",
+                "format": "date-time",
+                "example": "2018-11-04T23:18:43.075Z",
+                "description": "The server creation time of this transaction."
+              },
+              "updated_at": {
+                "type": "string",
+                "format": "date-time",
+                "example": "2018-11-04T23:18:43.075Z",
+                "description": "The server update time of this transaction. Transactions are immutable in and out themselves, however statuses might change, which is reflected in this value. This can for example happen if a signing request for this transaction was not possible and needed to be dealt with later."
               }
             }
           }

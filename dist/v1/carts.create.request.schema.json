@@ -878,6 +878,36 @@
                 "type": "string",
                 "maxLength": 128
               },
+              "custom_properties": {
+                "oneOf": [
+                  {
+                    "type": "null"
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "maxProperties": 30,
+                    "patternProperties": {
+                      "^.{1,128}$": {
+                        "anyOf": [
+                          {
+                            "type": "string"
+                          },
+                          {
+                            "type": "number"
+                          },
+                          {
+                            "type": "boolean"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              },
               "salesman_staff": {
                 "oneOf": [
                   {
@@ -1364,6 +1394,36 @@
               "client_id": {
                 "type": "string",
                 "maxLength": 128
+              },
+              "custom_properties": {
+                "oneOf": [
+                  {
+                    "type": "null"
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "maxProperties": 30,
+                    "patternProperties": {
+                      "^.{1,128}$": {
+                        "anyOf": [
+                          {
+                            "type": "string"
+                          },
+                          {
+                            "type": "number"
+                          },
+                          {
+                            "type": "boolean"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
               },
               "salesman_staff": {
                 "oneOf": [
