@@ -1,3 +1,10 @@
+# [5.23.0](https://github.com/tillhub/schemas/compare/v5.22.0...v5.23.0) (2020-07-07)
+
+
+### Features
+
+* **users:** add user_permission_templates schema ([#412](https://github.com/tillhub/schemas/issues/412)) ([a5d8b96](https://github.com/tillhub/schemas/commit/a5d8b96))
+
 # [5.22.0](https://github.com/tillhub/schemas/compare/v5.21.0...v5.22.0) (2020-07-01)
 
 

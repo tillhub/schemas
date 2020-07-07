@@ -6,8 +6,8 @@
   "/timezone.schema.json",
   "/balances.create.request.schema.json",
   "/balances.get-all.response.schema.json",
-  "/balances.post.response.schema.json",
   "/balances.get-one.response.schema.json",
+  "/balances.post.response.schema.json",
   "/carts.create.request.schema.json",
   "/carts.patch.request.schema.json",
   "/configurations.create.request.schema.json",
@@ -42,8 +42,8 @@
   "/templates.put.request.schema.json",
   "/transacions_ext.update.request.schema.json",
   "/transacions_ext.update.response.schema.json",
-  "/transactions.get-all.response.schema.json",
   "/transactions.create.request.schema.json",
+  "/transactions.get-all.response.schema.json",
   "/transactions.get-one.response.schema.json",
   "/transactions.legacy.create.request.schema.json",
   "/transactions.legacy.post.response.schema.json",
@@ -246,6 +246,8 @@
   "/trash.create.request.schema.json",
   "/trash.get.query.schema.json",
   "/trash.update.request.schema.json",
+  "/user_permission_templates.create.request.schema.json",
+  "/user_permission_templates.update.request.schema.json",
   "/user_profiles.create.request.schema.json",
   "/user_profiles.update.request.schema.json",
   "/voucher_systems.create.request.schema.json",
@@ -269,7 +271,7 @@
   "/warehouses.update.request.schema.json",
   "/webhooks.create.request.schema.json",
   "/webhooks.update.request.schema.json",
+  "/profile.create.request.schema.json",
   "/profile.update.request.schema.json",
-  "/support.create.request.schema.json",
-  "/profile.create.request.schema.json"
+  "/support.create.request.schema.json"
 ]
