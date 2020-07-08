@@ -1,3 +1,10 @@
+# [5.24.0](https://github.com/tillhub/schemas/compare/v5.23.1...v5.24.0) (2020-07-08)
+
+
+### Features
+
+* **configurations:** sync ([29dead7](https://github.com/tillhub/schemas/commit/29dead7))
+
 ## [5.23.1](https://github.com/tillhub/schemas/compare/v5.23.0...v5.23.1) (2020-07-08)
 
 
