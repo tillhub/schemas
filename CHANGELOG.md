@@ -1,3 +1,10 @@
+## [5.23.1](https://github.com/tillhub/schemas/compare/v5.23.0...v5.23.1) (2020-07-08)
+
+
+### Bug Fixes
+
+* **storefronts:** add initial profile settings ([8a208a1](https://github.com/tillhub/schemas/commit/8a208a1))
+
 # [5.23.0](https://github.com/tillhub/schemas/compare/v5.22.0...v5.23.0) (2020-07-07)
 
 
