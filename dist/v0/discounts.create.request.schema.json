@@ -155,7 +155,8 @@
       "type": "string",
       "enum": [
         "cart",
-        "customer"
+        "customer",
+        "item"
       ]
     },
     "active": {

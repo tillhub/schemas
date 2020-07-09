@@ -1,3 +1,15 @@
+# [5.25.0](https://github.com/tillhub/schemas/compare/v5.24.0...v5.25.0) (2020-07-09)
+
+
+### Bug Fixes
+
+* **discounts:** rename group enum value item ([a3e9a8a](https://github.com/tillhub/schemas/commit/a3e9a8a))
+
+
+### Features
+
+* **discounts:** add cart item to group for discount application ([251ac16](https://github.com/tillhub/schemas/commit/251ac16))
+
 # [5.24.0](https://github.com/tillhub/schemas/compare/v5.23.1...v5.24.0) (2020-07-08)
 
 
