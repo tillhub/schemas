@@ -1,3 +1,10 @@
+## [5.25.1](https://github.com/tillhub/schemas/compare/v5.25.0...v5.25.1) (2020-07-09)
+
+
+### Bug Fixes
+
+* **staff create schema:** make only staffs lastname required in docs and valications ([cb198f1](https://github.com/tillhub/schemas/commit/cb198f1))
+
 # [5.25.0](https://github.com/tillhub/schemas/compare/v5.24.0...v5.25.0) (2020-07-09)
 
 
