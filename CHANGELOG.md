@@ -1,3 +1,10 @@
+## [5.25.2](https://github.com/tillhub/schemas/compare/v5.25.1...v5.25.2) (2020-07-10)
+
+
+### Bug Fixes
+
+* **staff:** make lastname mandatory ([6b3fb98](https://github.com/tillhub/schemas/commit/6b3fb98))
+
 ## [5.25.1](https://github.com/tillhub/schemas/compare/v5.25.0...v5.25.1) (2020-07-09)
 
 
