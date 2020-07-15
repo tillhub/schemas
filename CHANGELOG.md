@@ -1,3 +1,10 @@
+## [5.25.3](https://github.com/tillhub/schemas/compare/v5.25.2...v5.25.3) (2020-07-15)
+
+
+### Bug Fixes
+
+* **configurations:** add warehub ([4dc2ed4](https://github.com/tillhub/schemas/commit/4dc2ed4))
+
 ## [5.25.2](https://github.com/tillhub/schemas/compare/v5.25.1...v5.25.2) (2020-07-10)
 
 

@@ -5912,6 +5912,16 @@
       "type": "string",
       "format": "date-time",
       "example": "2019-03-17T21:12:04.849Z"
+    },
+    "warehub": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object"
+        }
+      ]
     }
   },
   "required": [
