@@ -261,6 +261,20 @@
           "default": false
         }
       }
+    },
+    "storefronts": {
+      "oneOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "description": "Mapped storefronts external ID for this client account."
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
     }
   }
 }

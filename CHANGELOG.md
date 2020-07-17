@@ -1,3 +1,10 @@
+## [5.26.1](https://github.com/tillhub/schemas/compare/v5.26.0...v5.26.1) (2020-07-17)
+
+
+### Bug Fixes
+
+* **client_accounts:** add storefronts mapping ([#422](https://github.com/tillhub/schemas/issues/422)) ([6809cfe](https://github.com/tillhub/schemas/commit/6809cfe))
+
 # [5.26.0](https://github.com/tillhub/schemas/compare/v5.25.3...v5.26.0) (2020-07-17)
 
 
