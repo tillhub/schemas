@@ -1,3 +1,10 @@
+# [5.26.0](https://github.com/tillhub/schemas/compare/v5.25.3...v5.26.0) (2020-07-17)
+
+
+### Features
+
+* **transactions:** fiscal_signing ([#418](https://github.com/tillhub/schemas/issues/418)) ([d63dcc0](https://github.com/tillhub/schemas/commit/d63dcc0))
+
 ## [5.25.3](https://github.com/tillhub/schemas/compare/v5.25.2...v5.25.3) (2020-07-15)
 
 
