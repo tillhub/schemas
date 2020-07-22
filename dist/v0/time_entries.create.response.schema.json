@@ -113,6 +113,17 @@
         }
       ]
     },
+    "timezone": {
+      "description": "An IANA timezone that will be used to automatically clock out a time entry.",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "id": {
       "type": "string",
       "maxLength": 128

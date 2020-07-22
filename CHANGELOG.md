@@ -1,3 +1,10 @@
+# [5.29.0](https://github.com/tillhub/schemas/compare/v5.28.0...v5.29.0) (2020-07-22)
+
+
+### Features
+
+* **time_tracking:** add timezone ([6e249fb](https://github.com/tillhub/schemas/commit/6e249fb))
+
 # [5.28.0](https://github.com/tillhub/schemas/compare/v5.27.0...v5.28.0) (2020-07-22)
 
 
