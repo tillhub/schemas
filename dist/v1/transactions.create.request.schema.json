@@ -1801,6 +1801,11 @@
                           "type": "null"
                         }
                       ]
+                    },
+                    "is_automatic": {
+                      "type": "boolean",
+                      "default": false,
+                      "description": "If true, this discount was trigger automatically."
                     }
                   },
                   "required": [

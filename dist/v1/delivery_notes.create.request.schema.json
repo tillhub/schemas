@@ -1028,6 +1028,11 @@
                   "type": "string",
                   "minLength": 1,
                   "maxLength": 128
+                },
+                "is_automatic": {
+                  "type": "boolean",
+                  "default": false,
+                  "description": "If true, this discount was trigger automatically."
                 }
               },
               "required": [

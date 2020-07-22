@@ -1,3 +1,10 @@
+# [5.28.0](https://github.com/tillhub/schemas/compare/v5.27.0...v5.28.0) (2020-07-22)
+
+
+### Features
+
+* **transactions:** add is_automatic flag to discounts ([#426](https://github.com/tillhub/schemas/issues/426)) ([58e9d35](https://github.com/tillhub/schemas/commit/58e9d35))
+
 # [5.27.0](https://github.com/tillhub/schemas/compare/v5.26.1...v5.27.0) (2020-07-21)
 
 
