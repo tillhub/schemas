@@ -1,3 +1,10 @@
+# [5.30.0](https://github.com/tillhub/schemas/compare/v5.29.0...v5.30.0) (2020-07-27)
+
+
+### Features
+
+* **time_entries:** add configurations schema ([#427](https://github.com/tillhub/schemas/issues/427)) ([dac4478](https://github.com/tillhub/schemas/commit/dac4478))
+
 # [5.29.0](https://github.com/tillhub/schemas/compare/v5.28.0...v5.29.0) (2020-07-22)
 
 
