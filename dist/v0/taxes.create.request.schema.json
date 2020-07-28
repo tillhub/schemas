@@ -133,6 +133,42 @@
           "type": "null"
         }
       ]
+    },
+    "jurisdiction": {
+      "default": null,
+      "oneOf": [
+        {
+          "description": "Additional regional limits for taxes, e.g. one account with branches in Germany and Switzerland",
+          "type": "string",
+          "enum": [
+            "austria",
+            "czech_republic",
+            "france",
+            "germany",
+            "hungary",
+            "italy",
+            "ireland",
+            "jungholz",
+            "mittelberg",
+            "monaco",
+            "spain",
+            "switzerland"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "rate_class": {
+      "default": "normal",
+      "description": "Rate class according to international standards, used in Germany to map types for e.g. fiscalization",
+      "type": "string",
+      "enum": [
+        "normal",
+        "reduced",
+        "super_reduced"
+      ]
     }
   },
   "type": "object"

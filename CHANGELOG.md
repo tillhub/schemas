@@ -1,3 +1,19 @@
+# [5.32.0](https://github.com/tillhub/schemas/compare/v5.31.0...v5.32.0) (2020-07-28)
+
+
+### Bug Fixes
+
+* **taxes:** jurisdictions ([650b0db](https://github.com/tillhub/schemas/commit/650b0db))
+
+
+### Features
+
+* **taxes:** rate_classes ([fcc6668](https://github.com/tillhub/schemas/commit/fcc6668))
+* **taxes:** rate_classes ([7d19599](https://github.com/tillhub/schemas/commit/7d19599))
+* **transactions:** cart items ([3181762](https://github.com/tillhub/schemas/commit/3181762))
+* **transactions:** cart items ([d29112a](https://github.com/tillhub/schemas/commit/d29112a))
+* **transactions:** cart_items ([72bfeb1](https://github.com/tillhub/schemas/commit/72bfeb1))
+
 # [5.31.0](https://github.com/tillhub/schemas/compare/v5.30.0...v5.31.0) (2020-07-28)
 
 

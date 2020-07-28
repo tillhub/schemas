@@ -2783,6 +2783,23 @@
                     }
                   ]
                 },
+                "_vat_rate_class": {
+                  "oneOf": [
+                    {
+                      "default": "normal",
+                      "description": "Rate class from 'taxes.rate_class' according to international standards, used in Germany to map types for e.g. fiscalization",
+                      "type": "string",
+                      "enum": [
+                        "normal",
+                        "reduced",
+                        "super_reduced"
+                      ]
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
                 "branch": {
                   "oneOf": [
                     {
