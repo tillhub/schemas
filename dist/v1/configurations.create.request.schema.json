@@ -2614,7 +2614,9 @@
                               "enum": [
                                 "number",
                                 "name",
-                                "none"
+                                "none",
+                                "first_name",
+                                "last_name"
                               ]
                             },
                             {
@@ -2661,7 +2663,9 @@
                               "enum": [
                                 "number",
                                 "name",
-                                "none"
+                                "none",
+                                "first_name",
+                                "last_name"
                               ]
                             },
                             {
@@ -2962,7 +2966,9 @@
                               "enum": [
                                 "number",
                                 "name",
-                                "none"
+                                "none",
+                                "first_name",
+                                "last_name"
                               ]
                             },
                             {
@@ -3263,7 +3269,9 @@
                               "enum": [
                                 "number",
                                 "name",
-                                "none"
+                                "none",
+                                "first_name",
+                                "last_name"
                               ]
                             },
                             {
@@ -3564,7 +3572,9 @@
                               "enum": [
                                 "number",
                                 "name",
-                                "none"
+                                "none",
+                                "first_name",
+                                "last_name"
                               ]
                             },
                             {
@@ -3841,7 +3851,9 @@
                               "enum": [
                                 "number",
                                 "name",
-                                "none"
+                                "none",
+                                "first_name",
+                                "last_name"
                               ]
                             },
                             {
@@ -3924,7 +3936,9 @@
                               "enum": [
                                 "number",
                                 "name",
-                                "none"
+                                "none",
+                                "first_name",
+                                "last_name"
                               ]
                             },
                             {
@@ -4007,7 +4021,9 @@
                               "enum": [
                                 "number",
                                 "name",
-                                "none"
+                                "none",
+                                "first_name",
+                                "last_name"
                               ]
                             },
                             {
@@ -4114,7 +4130,9 @@
                               "enum": [
                                 "number",
                                 "name",
-                                "none"
+                                "none",
+                                "first_name",
+                                "last_name"
                               ]
                             },
                             {
@@ -4132,7 +4150,9 @@
                           "enum": [
                             "number",
                             "name",
-                            "none"
+                            "none",
+                            "first_name",
+                            "last_name"
                           ]
                         },
                         {
