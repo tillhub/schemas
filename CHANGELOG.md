@@ -1,3 +1,10 @@
+# [5.33.0](https://github.com/tillhub/schemas/compare/v5.32.0...v5.33.0) (2020-07-28)
+
+
+### Features
+
+* **registers:** fiscalization ([#420](https://github.com/tillhub/schemas/issues/420)) ([020ac13](https://github.com/tillhub/schemas/commit/020ac13))
+
 # [5.32.0](https://github.com/tillhub/schemas/compare/v5.31.0...v5.32.0) (2020-07-28)
 
 

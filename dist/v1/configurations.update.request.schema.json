@@ -1988,13 +1988,16 @@
                 "type": {
                   "type": "string",
                   "enum": [
-                    "fiskaltrust"
+                    "fiskaltrust",
+                    "tse_fiskaly",
+                    "tse_epson"
                   ]
                 },
                 "resource_type": {
                   "type": "string",
                   "enum": [
-                    "branches"
+                    "branches",
+                    "registers"
                   ]
                 }
               }

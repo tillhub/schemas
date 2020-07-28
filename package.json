@@ -1,6 +1,6 @@
 {
   "name": "@tillhub/schemas",
-  "version": "5.32.0",
+  "version": "5.33.0",
   "private": false,
   "description": "All Tillhub API OpenAPI 3 compatible JSON Schemas.",
   "main": "./lib/index.js",
