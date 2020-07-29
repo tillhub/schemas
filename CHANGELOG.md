@@ -1,3 +1,10 @@
+# [5.35.0](https://github.com/tillhub/schemas/compare/v5.34.0...v5.35.0) (2020-07-29)
+
+
+### Features
+
+* **configurations:** settings ([77ab1c4](https://github.com/tillhub/schemas/commit/77ab1c4))
+
 # [5.34.0](https://github.com/tillhub/schemas/compare/v5.33.0...v5.34.0) (2020-07-29)
 
 

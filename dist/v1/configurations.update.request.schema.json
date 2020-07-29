@@ -1233,7 +1233,10 @@
                         "parameters": {
                           "items": {
                             "type": "string",
-                            "example": "branch"
+                            "example": "branch",
+                            "enum": [
+                              "branch"
+                            ]
                           }
                         },
                         "token": {
