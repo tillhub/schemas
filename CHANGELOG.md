@@ -1,3 +1,10 @@
+## [5.35.1](https://github.com/tillhub/schemas/compare/v5.35.0...v5.35.1) (2020-07-31)
+
+
+### Bug Fixes
+
+* **registers:** fiscal_signing ([314582d](https://github.com/tillhub/schemas/commit/314582d))
+
 # [5.35.0](https://github.com/tillhub/schemas/compare/v5.34.0...v5.35.0) (2020-07-29)
 
 

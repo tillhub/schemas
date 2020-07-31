@@ -139,11 +139,6 @@
               "oneOf": [
                 {
                   "type": "object",
-                  "description": "existing configuartion object for Austria: Fiskaltrust (this might still be read from branches)",
-                  "properties": {}
-                },
-                {
-                  "type": "object",
                   "description": "Configuration object for Germany: TSE Fiskaly",
                   "properties": {
                     "tss_id": {
