@@ -1,3 +1,10 @@
+## [5.35.2](https://github.com/tillhub/schemas/compare/v5.35.1...v5.35.2) (2020-08-03)
+
+
+### Bug Fixes
+
+* **registers:** fix fiscal_signing property on device_configuration ([56a8463](https://github.com/tillhub/schemas/commit/56a8463))
+
 ## [5.35.1](https://github.com/tillhub/schemas/compare/v5.35.0...v5.35.1) (2020-07-31)
 
 

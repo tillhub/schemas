@@ -111,7 +111,7 @@
       "type": "boolean"
     },
     "device_configuration": {
-      "oneOf": [
+      "anyOf": [
         {
           "type": "object",
           "additionalProperties": false,
@@ -136,7 +136,7 @@
             },
             "fiscal_signing": {
               "description": "Necessary core or allowed authentication data for financial signing systems. This is an opt-in feature.\n\nNOTE: Depending on the respective configuration (transactions.signing.resource_type) this will be looked up\nhere or on branch level (signing_configuration).",
-              "oneOf": [
+              "anyOf": [
                 {
                   "type": "object",
                   "description": "Configuration object for Germany: TSE Fiskaly",
