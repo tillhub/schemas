@@ -1,3 +1,10 @@
+# [5.37.0](https://github.com/tillhub/schemas/compare/v5.36.0...v5.37.0) (2020-08-06)
+
+
+### Features
+
+* **configurations:** add tenants ([#438](https://github.com/tillhub/schemas/issues/438)) ([12f6c8a](https://github.com/tillhub/schemas/commit/12f6c8a))
+
 # [5.36.0](https://github.com/tillhub/schemas/compare/v5.35.3...v5.36.0) (2020-08-06)
 
 
