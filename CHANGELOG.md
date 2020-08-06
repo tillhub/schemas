@@ -1,3 +1,10 @@
+## [5.37.1](https://github.com/tillhub/schemas/compare/v5.37.0...v5.37.1) (2020-08-06)
+
+
+### Bug Fixes
+
+* **transactions:** discounts ([#439](https://github.com/tillhub/schemas/issues/439)) ([b23f2fa](https://github.com/tillhub/schemas/commit/b23f2fa))
+
 # [5.37.0](https://github.com/tillhub/schemas/compare/v5.36.0...v5.37.0) (2020-08-06)
 
 
