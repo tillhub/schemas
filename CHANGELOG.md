@@ -1,3 +1,10 @@
+## [5.35.3](https://github.com/tillhub/schemas/compare/v5.35.2...v5.35.3) (2020-08-06)
+
+
+### Bug Fixes
+
+* **configurations:** add item for discounts group ([#436](https://github.com/tillhub/schemas/issues/436)) ([bd8a1e1](https://github.com/tillhub/schemas/commit/bd8a1e1))
+
 ## [5.35.2](https://github.com/tillhub/schemas/compare/v5.35.1...v5.35.2) (2020-08-03)
 
 

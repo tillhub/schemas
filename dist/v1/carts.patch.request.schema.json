@@ -1005,7 +1005,8 @@
                         "staff",
                         "cart",
                         "product_set",
-                        "sconto"
+                        "sconto",
+                        "item"
                       ]
                     },
                     "source_id": {
@@ -1244,7 +1245,8 @@
                             "customer",
                             "staff",
                             "cart",
-                            "product_set"
+                            "product_set",
+                            "item"
                           ]
                         },
                         "name": {
@@ -1292,7 +1294,8 @@
                             "customer",
                             "staff",
                             "cart",
-                            "product_set"
+                            "product_set",
+                            "item"
                           ]
                         },
                         "name": {
@@ -1332,7 +1335,8 @@
                             "customer",
                             "staff",
                             "cart",
-                            "product_set"
+                            "product_set",
+                            "item"
                           ]
                         },
                         "name": {
@@ -1372,7 +1376,8 @@
                             "customer",
                             "staff",
                             "cart",
-                            "product_set"
+                            "product_set",
+                            "item"
                           ]
                         },
                         "name": {
@@ -1555,7 +1560,8 @@
                             "customer",
                             "staff",
                             "cart",
-                            "product_set"
+                            "product_set",
+                            "item"
                           ]
                         },
                         "name": {
@@ -1603,7 +1609,8 @@
                             "customer",
                             "staff",
                             "cart",
-                            "product_set"
+                            "product_set",
+                            "item"
                           ]
                         },
                         "name": {
@@ -1643,7 +1650,8 @@
                             "customer",
                             "staff",
                             "cart",
-                            "product_set"
+                            "product_set",
+                            "item"
                           ]
                         },
                         "name": {
@@ -1683,7 +1691,8 @@
                             "customer",
                             "staff",
                             "cart",
-                            "product_set"
+                            "product_set",
+                            "item"
                           ]
                         },
                         "name": {
