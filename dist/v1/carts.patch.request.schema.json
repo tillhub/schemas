@@ -1059,6 +1059,14 @@
                       "type": "boolean",
                       "default": false,
                       "description": "If true, this discount was trigger automatically."
+                    },
+                    "order": {
+                      "type": "string",
+                      "enum": [
+                        "first",
+                        "last"
+                      ],
+                      "default": "last"
                     }
                   },
                   "anyOf": [

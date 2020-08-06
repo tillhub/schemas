@@ -1,3 +1,10 @@
+# [5.36.0](https://github.com/tillhub/schemas/compare/v5.35.3...v5.36.0) (2020-08-06)
+
+
+### Features
+
+* **discounts:** add order property ([#437](https://github.com/tillhub/schemas/issues/437)) ([30274e0](https://github.com/tillhub/schemas/commit/30274e0))
+
 ## [5.35.3](https://github.com/tillhub/schemas/compare/v5.35.2...v5.35.3) (2020-08-06)
 
 

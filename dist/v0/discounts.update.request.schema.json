@@ -607,6 +607,14 @@
           "type": "null"
         }
       ]
+    },
+    "order": {
+      "type": "string",
+      "enum": [
+        "first",
+        "last"
+      ],
+      "default": "last"
     }
   }
 }

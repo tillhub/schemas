@@ -3135,7 +3135,8 @@
                                   "cart",
                                   "product_set",
                                   "promotion",
-                                  "sconto"
+                                  "sconto",
+                                  "item"
                                 ]
                               },
                               {
@@ -3194,6 +3195,14 @@
                             "type": "boolean",
                             "default": false,
                             "description": "If true, this discount was trigger automatically."
+                          },
+                          "order": {
+                            "type": "string",
+                            "enum": [
+                              "first",
+                              "last"
+                            ],
+                            "default": "last"
                           }
                         },
                         "required": [
