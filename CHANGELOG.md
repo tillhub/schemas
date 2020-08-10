@@ -1,3 +1,10 @@
+# [5.38.0](https://github.com/tillhub/schemas/compare/v5.37.1...v5.38.0) (2020-08-10)
+
+
+### Features
+
+* **countout config:** config for countout ([271c3da](https://github.com/tillhub/schemas/commit/271c3da))
+
 ## [5.37.1](https://github.com/tillhub/schemas/compare/v5.37.0...v5.37.1) (2020-08-06)
 
 
