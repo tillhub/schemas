@@ -2075,8 +2075,10 @@
           "properties": {
             "signing": {
               "type": "object",
+              "description": "Decides if and how transactions will be fiscally signed and where the specific configuration can be found",
               "properties": {
                 "type": {
+                  "description": "The fiscal signing type to use, e.g. Fiskaltrust in Austria or EposnTSE in Germany",
                   "type": "string",
                   "enum": [
                     "fiskaltrust",
@@ -2085,6 +2087,7 @@
                   ]
                 },
                 "resource_type": {
+                  "description": "Decides where the specific device configuration will be looked up",
                   "type": "string",
                   "enum": [
                     "branches",

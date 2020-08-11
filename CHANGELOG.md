@@ -1,3 +1,10 @@
+# [5.42.0](https://github.com/tillhub/schemas/compare/v5.41.0...v5.42.0) (2020-08-11)
+
+
+### Features
+
+* **fiscalisation:** add tse states resource ([#444](https://github.com/tillhub/schemas/issues/444)) ([8f6674f](https://github.com/tillhub/schemas/commit/8f6674f))
+
 # [5.41.0](https://github.com/tillhub/schemas/compare/v5.40.0...v5.41.0) (2020-08-11)
 
 
