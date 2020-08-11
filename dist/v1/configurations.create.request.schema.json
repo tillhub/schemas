@@ -3020,6 +3020,18 @@
                               "type": "null"
                             }
                           ]
+                        },
+                        "minimize_signing_footer": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if signing footer is printed without any spaces and line breaks",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
                         }
                       }
                     },
@@ -3316,6 +3328,18 @@
                           "oneOf": [
                             {
                               "description": "Defines if the total net will be printed on (e.g. customer, merchant)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "minimize_signing_footer": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if signing footer is printed without any spaces and line breaks",
                               "type": "boolean",
                               "default": true
                             },
@@ -3626,6 +3650,18 @@
                               "type": "null"
                             }
                           ]
+                        },
+                        "minimize_signing_footer": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if signing footer is printed without any spaces and line breaks",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
                         }
                       }
                     },
@@ -3922,6 +3958,18 @@
                           "oneOf": [
                             {
                               "description": "Defines if the total net will be printed on (e.g. customer, merchant)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "minimize_signing_footer": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if signing footer is printed without any spaces and line breaks",
                               "type": "boolean",
                               "default": true
                             },
@@ -5496,6 +5544,26 @@
                     "on_none"
                   ]
                 },
+                "no_result_action": {
+                  "description": "Trigger a specific behavior if the search ended without results",
+                  "type": "string",
+                  "enum": [
+                    "none",
+                    "toast",
+                    "modal"
+                  ]
+                },
+                "no_result_sound": {
+                  "description": "If true - triggers a specific sound if the search ended without results",
+                  "type": "boolean",
+                  "default": false
+                },
+                "timeout": {
+                  "description": "Timeout (in seconds) to end a search if there are no results",
+                  "type": "number",
+                  "minimum": 0,
+                  "default": 60
+                },
                 "search_entities": {
                   "description": "Entities that should be searched in a specific context. Searches will be performed in parallel (within an entity per defined behavior).",
                   "type": "array",
@@ -5543,6 +5611,26 @@
                     "on_unique",
                     "on_none"
                   ]
+                },
+                "no_result_action": {
+                  "description": "Trigger a specific behavior if the search ended without results",
+                  "type": "string",
+                  "enum": [
+                    "none",
+                    "toast",
+                    "modal"
+                  ]
+                },
+                "no_result_sound": {
+                  "description": "If true - triggers a specific sound if the search ended without results",
+                  "type": "boolean",
+                  "default": false
+                },
+                "timeout": {
+                  "description": "Timeout (in seconds) to end a search if there are no results",
+                  "type": "number",
+                  "minimum": 0,
+                  "default": 60
                 },
                 "search_entities": {
                   "description": "Entities that should be searched in a specific context. Searches will be performed in parallel (within an entity per defined behavior).",

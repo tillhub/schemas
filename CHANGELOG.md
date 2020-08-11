@@ -1,3 +1,17 @@
+# [5.41.0](https://github.com/tillhub/schemas/compare/v5.40.0...v5.41.0) (2020-08-11)
+
+
+### Bug Fixes
+
+* **discounts:** order ([a0ac37b](https://github.com/tillhub/schemas/commit/a0ac37b))
+
+
+### Features
+
+* **configurations:** receipts ([20af876](https://github.com/tillhub/schemas/commit/20af876))
+* **configurations:** searches ([18e508a](https://github.com/tillhub/schemas/commit/18e508a))
+* **configurations:** searches ([dcbac47](https://github.com/tillhub/schemas/commit/dcbac47))
+
 # [5.40.0](https://github.com/tillhub/schemas/compare/v5.39.0...v5.40.0) (2020-08-11)
 
 
