@@ -295,6 +295,22 @@
           "type": "object",
           "additionalProperties": true,
           "properties": {
+            "balance_proposal": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "description": "defines the value prefilling of the bank expense at the time of a balance",
+                  "enum": [
+                    "zero",
+                    "keep_change",
+                    "all_cash"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
             "image_expense": {
               "oneOf": [
                 {
