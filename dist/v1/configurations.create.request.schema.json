@@ -6146,7 +6146,7 @@
               "maxLength": 128
             },
             "tax_number": {
-              "type": "number"
+              "type": "string"
             },
             "commercial_id": {
               "type": "string",

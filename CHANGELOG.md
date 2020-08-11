@@ -1,3 +1,10 @@
+## [5.42.1](https://github.com/tillhub/schemas/compare/v5.42.0...v5.42.1) (2020-08-11)
+
+
+### Bug Fixes
+
+* **configurations:** set tax_number as string on tenant ([1b637ca](https://github.com/tillhub/schemas/commit/1b637ca))
+
 # [5.42.0](https://github.com/tillhub/schemas/compare/v5.41.0...v5.42.0) (2020-08-11)
 
 
