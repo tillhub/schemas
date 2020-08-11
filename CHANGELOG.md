@@ -1,3 +1,45 @@
+## [5.42.1](https://github.com/tillhub/schemas/compare/v5.42.0...v5.42.1) (2020-08-11)
+
+
+### Bug Fixes
+
+* **configurations:** set tax_number as string on tenant ([1b637ca](https://github.com/tillhub/schemas/commit/1b637ca))
+
+# [5.42.0](https://github.com/tillhub/schemas/compare/v5.41.0...v5.42.0) (2020-08-11)
+
+
+### Features
+
+* **fiscalisation:** add tse states resource ([#444](https://github.com/tillhub/schemas/issues/444)) ([8f6674f](https://github.com/tillhub/schemas/commit/8f6674f))
+
+# [5.41.0](https://github.com/tillhub/schemas/compare/v5.40.0...v5.41.0) (2020-08-11)
+
+
+### Bug Fixes
+
+* **discounts:** order ([a0ac37b](https://github.com/tillhub/schemas/commit/a0ac37b))
+
+
+### Features
+
+* **configurations:** receipts ([20af876](https://github.com/tillhub/schemas/commit/20af876))
+* **configurations:** searches ([18e508a](https://github.com/tillhub/schemas/commit/18e508a))
+* **configurations:** searches ([dcbac47](https://github.com/tillhub/schemas/commit/dcbac47))
+
+# [5.40.0](https://github.com/tillhub/schemas/compare/v5.39.0...v5.40.0) (2020-08-11)
+
+
+### Features
+
+* **configurations:** expenses ([c457db4](https://github.com/tillhub/schemas/commit/c457db4))
+
+# [5.39.0](https://github.com/tillhub/schemas/compare/v5.38.0...v5.39.0) (2020-08-11)
+
+
+### Features
+
+* **configurations:** expenses ([140ea7b](https://github.com/tillhub/schemas/commit/140ea7b))
+
 # [5.38.0](https://github.com/tillhub/schemas/compare/v5.37.1...v5.38.0) (2020-08-10)
 
 

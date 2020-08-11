@@ -295,6 +295,22 @@
           "type": "object",
           "additionalProperties": true,
           "properties": {
+            "balance_proposal": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "description": "defines the value prefilling of the bank expense at the time of a balance",
+                  "enum": [
+                    "zero",
+                    "keep_change",
+                    "all_cash"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
             "image_expense": {
               "oneOf": [
                 {
@@ -2059,8 +2075,10 @@
           "properties": {
             "signing": {
               "type": "object",
+              "description": "Decides if and how transactions will be fiscally signed and where the specific configuration can be found",
               "properties": {
                 "type": {
+                  "description": "The fiscal signing type to use, e.g. Fiskaltrust in Austria or EposnTSE in Germany",
                   "type": "string",
                   "enum": [
                     "fiskaltrust",
@@ -2069,6 +2087,7 @@
                   ]
                 },
                 "resource_type": {
+                  "description": "Decides where the specific device configuration will be looked up",
                   "type": "string",
                   "enum": [
                     "branches",
@@ -3004,6 +3023,18 @@
                               "type": "null"
                             }
                           ]
+                        },
+                        "minimize_signing_footer": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if signing footer is printed without any spaces and line breaks",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
                         }
                       }
                     },
@@ -3300,6 +3331,18 @@
                           "oneOf": [
                             {
                               "description": "Defines if the total net will be printed on (e.g. customer, merchant)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "minimize_signing_footer": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if signing footer is printed without any spaces and line breaks",
                               "type": "boolean",
                               "default": true
                             },
@@ -3610,6 +3653,18 @@
                               "type": "null"
                             }
                           ]
+                        },
+                        "minimize_signing_footer": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if signing footer is printed without any spaces and line breaks",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
                         }
                       }
                     },
@@ -3906,6 +3961,18 @@
                           "oneOf": [
                             {
                               "description": "Defines if the total net will be printed on (e.g. customer, merchant)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "minimize_signing_footer": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if signing footer is printed without any spaces and line breaks",
                               "type": "boolean",
                               "default": true
                             },
@@ -5480,6 +5547,26 @@
                     "on_none"
                   ]
                 },
+                "no_result_action": {
+                  "description": "Trigger a specific behavior if the search ended without results",
+                  "type": "string",
+                  "enum": [
+                    "none",
+                    "toast",
+                    "modal"
+                  ]
+                },
+                "no_result_sound": {
+                  "description": "If true - triggers a specific sound if the search ended without results",
+                  "type": "boolean",
+                  "default": false
+                },
+                "timeout": {
+                  "description": "Timeout (in seconds) to end a search if there are no results",
+                  "type": "number",
+                  "minimum": 0,
+                  "default": 60
+                },
                 "search_entities": {
                   "description": "Entities that should be searched in a specific context. Searches will be performed in parallel (within an entity per defined behavior).",
                   "type": "array",
@@ -5527,6 +5614,26 @@
                     "on_unique",
                     "on_none"
                   ]
+                },
+                "no_result_action": {
+                  "description": "Trigger a specific behavior if the search ended without results",
+                  "type": "string",
+                  "enum": [
+                    "none",
+                    "toast",
+                    "modal"
+                  ]
+                },
+                "no_result_sound": {
+                  "description": "If true - triggers a specific sound if the search ended without results",
+                  "type": "boolean",
+                  "default": false
+                },
+                "timeout": {
+                  "description": "Timeout (in seconds) to end a search if there are no results",
+                  "type": "number",
+                  "minimum": 0,
+                  "default": 60
                 },
                 "search_entities": {
                   "description": "Entities that should be searched in a specific context. Searches will be performed in parallel (within an entity per defined behavior).",
@@ -6039,7 +6146,7 @@
               "maxLength": 128
             },
             "tax_number": {
-              "type": "number"
+              "type": "string"
             },
             "commercial_id": {
               "type": "string",

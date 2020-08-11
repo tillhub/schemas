@@ -623,12 +623,18 @@
       ]
     },
     "order": {
-      "type": "string",
-      "enum": [
-        "first",
-        "last"
-      ],
-      "default": "last"
+      "oneOf": [
+        {
+          "type": "string",
+          "enum": [
+            "first",
+            "last"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
     }
   },
   "type": "object"
