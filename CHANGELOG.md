@@ -1,3 +1,10 @@
+# [5.39.0](https://github.com/tillhub/schemas/compare/v5.38.0...v5.39.0) (2020-08-11)
+
+
+### Features
+
+* **configurations:** expenses ([140ea7b](https://github.com/tillhub/schemas/commit/140ea7b))
+
 # [5.38.0](https://github.com/tillhub/schemas/compare/v5.37.1...v5.38.0) (2020-08-10)
 
 
