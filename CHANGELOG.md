@@ -1,3 +1,11 @@
+# [5.44.0](https://github.com/tillhub/schemas/compare/v5.43.0...v5.44.0) (2020-08-12)
+
+
+### Features
+
+* explicit flag for printing used discounts ([1079694](https://github.com/tillhub/schemas/commit/1079694))
+* **discounts:** description for receipt ([1bea4d7](https://github.com/tillhub/schemas/commit/1bea4d7))
+
 # [5.43.0](https://github.com/tillhub/schemas/compare/v5.42.1...v5.43.0) (2020-08-12)
 
 

@@ -204,6 +204,22 @@
                   "type": "null"
                 }
               ]
+            },
+            "receipt": {
+              "description": "Describing the behaviour of the discount on the receipt.",
+              "oneOf": [
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "print_explicitely": {
+                      "description": "Printing the grouped amount of this discount applied on the receipt, if the discount is found in one or more cartitems.",
+                      "type": "boolean",
+                      "default": false
+                    }
+                  }
+                }
+              ]
             }
           }
         },
