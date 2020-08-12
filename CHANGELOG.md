@@ -1,3 +1,14 @@
+# [5.43.0](https://github.com/tillhub/schemas/compare/v5.42.1...v5.43.0) (2020-08-12)
+
+
+### Features
+
+* **context_branch_groups:** add create schema ([a83af5c](https://github.com/tillhub/schemas/commit/a83af5c))
+* **context_locations:** add route ([94bf4bf](https://github.com/tillhub/schemas/commit/94bf4bf))
+* **context_locations:** fix lint ([8e730f4](https://github.com/tillhub/schemas/commit/8e730f4))
+* **context_locations:** rename ([205702e](https://github.com/tillhub/schemas/commit/205702e))
+* **context_locations:** required fields ([8d630d5](https://github.com/tillhub/schemas/commit/8d630d5))
+
 ## [5.42.1](https://github.com/tillhub/schemas/compare/v5.42.0...v5.42.1) (2020-08-11)
 
 
