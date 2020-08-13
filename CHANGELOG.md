@@ -1,3 +1,10 @@
+# [5.46.0](https://github.com/tillhub/schemas/compare/v5.45.0...v5.46.0) (2020-08-13)
+
+
+### Features
+
+* **registers:** fiscalization ([efcf21b](https://github.com/tillhub/schemas/commit/efcf21b))
+
 # [5.45.0](https://github.com/tillhub/schemas/compare/v5.44.0...v5.45.0) (2020-08-13)
 
 

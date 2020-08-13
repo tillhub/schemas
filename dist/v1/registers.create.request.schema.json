@@ -134,6 +134,22 @@
                 "ip"
               ]
             },
+            "fiscal_signing_type": {
+              "oneOf": [
+                {
+                  "description": "The fiscal signing type to use, e.g. Fiskaltrust in Austria or EposnTSE in Germany",
+                  "type": "string",
+                  "enum": [
+                    "fiskaltrust",
+                    "tse_fiskaly",
+                    "tse_epson"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
             "fiscal_signing": {
               "description": "Necessary core or allowed authentication data for financial signing systems. This is an opt-in feature.\n\nNOTE: Depending on the respective configuration (transactions.signing.resource_type) this will be looked up\nhere or on branch level (signing_configuration).",
               "anyOf": [
