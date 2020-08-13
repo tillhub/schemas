@@ -1,3 +1,13 @@
+# [5.45.0](https://github.com/tillhub/schemas/compare/v5.44.0...v5.45.0) (2020-08-13)
+
+
+### Features
+
+* **discounts:** Add external reference id ([7f1d9bd](https://github.com/tillhub/schemas/commit/7f1d9bd))
+* **discounts:** carts external_reference_id ([9e6bd0b](https://github.com/tillhub/schemas/commit/9e6bd0b))
+* **discounts:** External ref on delivery_notes ([0c5af64](https://github.com/tillhub/schemas/commit/0c5af64))
+* **discounts:** external_reference_id-tx discount ([34b01c0](https://github.com/tillhub/schemas/commit/34b01c0))
+
 # [5.44.0](https://github.com/tillhub/schemas/compare/v5.43.0...v5.44.0) (2020-08-12)
 
 

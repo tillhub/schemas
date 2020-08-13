@@ -1032,6 +1032,18 @@
                   "type": "string",
                   "maxLength": 128
                 },
+                "external_reference_id": {
+                  "description": "A caller defined custom ID for the purpose of syncing from external resources, or to use in analytics.",
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "maxLength": 128
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
                 "group": {
                   "type": "string",
                   "enum": [
