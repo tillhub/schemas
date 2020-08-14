@@ -1,3 +1,10 @@
+# [5.48.0](https://github.com/tillhub/schemas/compare/v5.47.0...v5.48.0) (2020-08-14)
+
+
+### Features
+
+* **vouchers:** bound customer voucher ([#451](https://github.com/tillhub/schemas/issues/451)) ([d0282d1](https://github.com/tillhub/schemas/commit/d0282d1))
+
 # [5.47.0](https://github.com/tillhub/schemas/compare/v5.46.0...v5.47.0) (2020-08-14)
 
 
