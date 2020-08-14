@@ -1,3 +1,10 @@
+# [5.47.0](https://github.com/tillhub/schemas/compare/v5.46.0...v5.47.0) (2020-08-14)
+
+
+### Features
+
+* **discounts:** added external_ref_id to legacy ([b2bfecb](https://github.com/tillhub/schemas/commit/b2bfecb))
+
 # [5.46.0](https://github.com/tillhub/schemas/compare/v5.45.0...v5.46.0) (2020-08-13)
 
 
