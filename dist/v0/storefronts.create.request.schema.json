@@ -160,6 +160,17 @@
         }
       ]
     },
+    "default_location": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "string",
+          "example": "936835f7-2d75-41d2-9001-38ed6e458328"
+        }
+      ]
+    },
     "active": {
       "description": "Soft disable or enable this storefronts.",
       "type": "boolean",

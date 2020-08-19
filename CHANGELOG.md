@@ -1,3 +1,10 @@
+# [5.50.0](https://github.com/tillhub/schemas/compare/v5.49.0...v5.50.0) (2020-08-19)
+
+
+### Features
+
+* **storefronts:** add default location ([85a0dd6](https://github.com/tillhub/schemas/commit/85a0dd6))
+
 # [5.49.0](https://github.com/tillhub/schemas/compare/v5.48.0...v5.49.0) (2020-08-19)
 
 
