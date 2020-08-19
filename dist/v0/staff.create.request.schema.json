@@ -244,6 +244,7 @@
                   "staff:staff:carts:update",
                   "staff:staff:carts:read",
                   "staff:staff:carts:delete",
+                  "staff:staff:carts:edit_price_without_note",
                   "staff:staff:selections",
                   "staff:staff:selections:create",
                   "staff:staff:selections:update",

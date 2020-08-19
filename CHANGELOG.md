@@ -1,3 +1,10 @@
+# [5.49.0](https://github.com/tillhub/schemas/compare/v5.48.0...v5.49.0) (2020-08-19)
+
+
+### Features
+
+* **staffs:** add permission key for price edit without note ([31e9d73](https://github.com/tillhub/schemas/commit/31e9d73))
+
 # [5.48.0](https://github.com/tillhub/schemas/compare/v5.47.0...v5.48.0) (2020-08-14)
 
 
