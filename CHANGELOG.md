@@ -1,3 +1,13 @@
+# [5.51.0](https://github.com/tillhub/schemas/compare/v5.50.0...v5.51.0) (2020-08-24)
+
+
+### Features
+
+* **configurations:** settings ([fbf78b1](https://github.com/tillhub/schemas/commit/fbf78b1))
+* **configurations:** settings ([6bb2dc3](https://github.com/tillhub/schemas/commit/6bb2dc3))
+* **registers:** device_configuration ([47cc708](https://github.com/tillhub/schemas/commit/47cc708))
+* **registers:** device_configuration ([6c8bf09](https://github.com/tillhub/schemas/commit/6c8bf09))
+
 # [5.50.0](https://github.com/tillhub/schemas/compare/v5.49.0...v5.50.0) (2020-08-19)
 
 
