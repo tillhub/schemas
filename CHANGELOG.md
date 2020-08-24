@@ -1,3 +1,10 @@
+# [5.52.0](https://github.com/tillhub/schemas/compare/v5.51.0...v5.52.0) (2020-08-24)
+
+
+### Features
+
+* **registers:** device_configuration ([76df87e](https://github.com/tillhub/schemas/commit/76df87e))
+
 # [5.51.0](https://github.com/tillhub/schemas/compare/v5.50.0...v5.51.0) (2020-08-24)
 
 
