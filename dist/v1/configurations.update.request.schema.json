@@ -2695,6 +2695,29 @@
                 }
               ]
             },
+            "printing_behavior": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "merchant_main": {
+                      "description": "States if the main merchant receipt will be printed",
+                      "type": "boolean",
+                      "default": true
+                    },
+                    "merchant_terminal": {
+                      "description": "States if the terminal merchant receipt will be printed",
+                      "type": "boolean",
+                      "default": true
+                    }
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
             "configurable_receipt": {
               "oneOf": [
                 {
