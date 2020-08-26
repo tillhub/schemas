@@ -1,3 +1,10 @@
+## [5.54.1](https://github.com/tillhub/schemas/compare/v5.54.0...v5.54.1) (2020-08-26)
+
+
+### Bug Fixes
+
+* **transactions:** discounts ([6512f46](https://github.com/tillhub/schemas/commit/6512f46))
+
 # [5.54.0](https://github.com/tillhub/schemas/compare/v5.53.0...v5.54.0) (2020-08-26)
 
 
