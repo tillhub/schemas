@@ -1,3 +1,10 @@
+# [5.54.0](https://github.com/tillhub/schemas/compare/v5.53.0...v5.54.0) (2020-08-26)
+
+
+### Features
+
+* **counting:** couting protocole discrepancz ([eba5757](https://github.com/tillhub/schemas/commit/eba5757))
+
 # [5.53.0](https://github.com/tillhub/schemas/compare/v5.52.0...v5.53.0) (2020-08-26)
 
 

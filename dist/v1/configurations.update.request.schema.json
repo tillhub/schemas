@@ -474,6 +474,29 @@
               "description": "defines whether a receipt is printed on cashing ups or not",
               "default": "false"
             },
+            "discrepancy": {
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "warning": {
+                      "type": "boolean",
+                      "description": "defines whether warning is displayed in case of discrepancy",
+                      "default": "false"
+                    },
+                    "recount_permission": {
+                      "type": "boolean",
+                      "description": "defines whether recounting is allowed",
+                      "default": "false"
+                    }
+                  }
+                }
+              ]
+            },
             "automatic_countout": {
               "oneOf": [
                 {
