@@ -1,3 +1,11 @@
+# [5.55.0](https://github.com/tillhub/schemas/compare/v5.54.1...v5.55.0) (2020-08-27)
+
+
+### Features
+
+* **balance:** extension of balance ([a4a69a0](https://github.com/tillhub/schemas/commit/a4a69a0))
+* **configurations:** balances ([bec512a](https://github.com/tillhub/schemas/commit/bec512a))
+
 ## [5.54.1](https://github.com/tillhub/schemas/compare/v5.54.0...v5.54.1) (2020-08-26)
 
 

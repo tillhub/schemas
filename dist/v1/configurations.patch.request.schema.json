@@ -5241,7 +5241,7 @@
               ]
             },
             "extended_report": {
-              "description": "If true, adds extended balance information to the UI and the receipts.",
+              "description": "If true, adds extended balance information to the UI.",
               "default": false,
               "oneOf": [
                 {
@@ -5249,6 +5249,82 @@
                 },
                 {
                   "type": "boolean"
+                }
+              ]
+            },
+            "print_extended": {
+              "description": "If true and extended_report = true - prints extended balance information on the receipt.",
+              "default": false,
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "boolean"
+                }
+              ]
+            },
+            "extended_data_layout": {
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "description": "data to be displayed and printed if extended_report = true",
+                  "properties": {
+                    "revenue_net": {
+                      "type": "boolean",
+                      "description": "Total amount gross - VAT",
+                      "default": "true"
+                    },
+                    "average_amount_gross_per_cart": {
+                      "type": "boolean",
+                      "description": "Total amount tx gross / (number of sales- sales cancelled) ",
+                      "default": "true"
+                    },
+                    "average_cart_items_count_per_cart": {
+                      "type": "boolean",
+                      "description": "Average number of cart items per sale, total count of product sold / count of transaction",
+                      "default": "true"
+                    },
+                    "first_last_transaction_number": {
+                      "type": "boolean",
+                      "description": "first and last transaction number",
+                      "default": "true"
+                    },
+                    "first_last_expense_deposit": {
+                      "type": "boolean",
+                      "description": "first and last expense and deposit",
+                      "default": "true"
+                    },
+                    "vat_details": {
+                      "type": "boolean",
+                      "description": "Display the Total, gross, net per VAT account",
+                      "default": "true"
+                    },
+                    "discount_amount": {
+                      "type": "boolean",
+                      "description": "Sum of discounts amounts - Cancelled discounts ",
+                      "default": "true"
+                    },
+                    "total_quantity": {
+                      "type": "boolean",
+                      "description": "All quantities in transactions summed up → This figure might not be representative in the case of decimal products (Example: 900 gr) ",
+                      "default": "true"
+                    },
+                    "cart_items_count": {
+                      "type": "boolean",
+                      "description": "count of cart items",
+                      "default": "true"
+                    },
+                    "voucher_amount": {
+                      "type": "boolean",
+                      "description": "sum of the amounts of vouchers sold (positive values only)",
+                      "default": "true"
+                    }
+                  }
                 }
               ]
             },
