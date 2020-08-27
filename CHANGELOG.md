@@ -1,3 +1,15 @@
+# [5.56.0](https://github.com/tillhub/schemas/compare/v5.55.0...v5.56.0) (2020-08-27)
+
+
+### Bug Fixes
+
+* Faulty description - no types in one address ([7e393d7](https://github.com/tillhub/schemas/commit/7e393d7))
+
+
+### Features
+
+* TM-7245 tenant missing fields ([d663664](https://github.com/tillhub/schemas/commit/d663664))
+
 # [5.55.0](https://github.com/tillhub/schemas/compare/v5.54.1...v5.55.0) (2020-08-27)
 
 
