@@ -1,3 +1,10 @@
+# [5.57.0](https://github.com/tillhub/schemas/compare/v5.56.0...v5.57.0) (2020-08-27)
+
+
+### Features
+
+* **confogurations:** settings ([8d502a2](https://github.com/tillhub/schemas/commit/8d502a2))
+
 # [5.56.0](https://github.com/tillhub/schemas/compare/v5.55.0...v5.56.0) (2020-08-27)
 
 

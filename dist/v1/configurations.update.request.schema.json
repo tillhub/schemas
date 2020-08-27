@@ -678,15 +678,6 @@
                   "description": "defines epson tse state updates (local retrieval plus upload)",
                   "type": "object",
                   "properties": {
-                    "trigger": {
-                      "type": "string",
-                      "description": "defines when the conditions (transactions, minutes) will be checked (can be at rather irregular times)",
-                      "enum": [
-                        "never",
-                        "new_sale"
-                      ],
-                      "default": "new_sale"
-                    },
                     "transactions": {
                       "type": "integer",
                       "description": "If more transactions have been done since the last update - a new update will be tried",
