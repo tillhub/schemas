@@ -632,6 +632,10 @@
           "type": "null"
         }
       ]
+    },
+    "group_on_receipt": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

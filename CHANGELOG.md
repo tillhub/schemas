@@ -1,3 +1,10 @@
+# [5.59.0](https://github.com/tillhub/schemas/compare/v5.58.0...v5.59.0) (2020-09-01)
+
+
+### Features
+
+* **discounts:** toggle grouping on the receipt ([#470](https://github.com/tillhub/schemas/issues/470)) ([65da606](https://github.com/tillhub/schemas/commit/65da606))
+
 # [5.58.0](https://github.com/tillhub/schemas/compare/v5.57.0...v5.58.0) (2020-09-01)
 
 
