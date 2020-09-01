@@ -3104,6 +3104,94 @@
                               "type": "null"
                             }
                           ]
+                        },
+                        "refund_options": {
+                          "oneOf": [
+                            {
+                              "description": "If the sale is a refund - the following options will be considered",
+                              "type": "object",
+                              "additionalProperties": false,
+                              "properties": {
+                                "header": {
+                                  "oneOf": [
+                                    {
+                                      "type": "object",
+                                      "additionalProperties": false,
+                                      "properties": {
+                                        "print_title": {
+                                          "oneOf": [
+                                            {
+                                              "description": "If true - adds a refund specific title to the receipt header, e.g. 'Refund' or 'Rückerstattungsbeleg'",
+                                              "type": "boolean",
+                                              "default": false
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "footer": {
+                                  "oneOf": [
+                                    {
+                                      "type": "object",
+                                      "additionalProperties": false,
+                                      "properties": {
+                                        "print_name_field": {
+                                          "oneOf": [
+                                            {
+                                              "description": "If true  - adds a name field to the footer",
+                                              "type": "boolean",
+                                              "default": false
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        },
+                                        "print_address_field": {
+                                          "oneOf": [
+                                            {
+                                              "description": "If true  - adds an address field to the footer",
+                                              "type": "boolean",
+                                              "default": false
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        },
+                                        "print_signature_field": {
+                                          "oneOf": [
+                                            {
+                                              "description": "If true  - adds a signature field to the footer",
+                                              "type": "boolean",
+                                              "default": false
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                }
+                              }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
                         }
                       }
                     },
@@ -3414,6 +3502,94 @@
                               "description": "Defines if signing footer is printed without any spaces and line breaks",
                               "type": "boolean",
                               "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "refund_options": {
+                          "oneOf": [
+                            {
+                              "description": "If the sale is a refund - the following options will be considered",
+                              "type": "object",
+                              "additionalProperties": false,
+                              "properties": {
+                                "header": {
+                                  "oneOf": [
+                                    {
+                                      "type": "object",
+                                      "additionalProperties": false,
+                                      "properties": {
+                                        "print_title": {
+                                          "oneOf": [
+                                            {
+                                              "description": "If true - adds a refund specific title to the receipt header, e.g. 'Refund' or 'Rückerstattungsbeleg'",
+                                              "type": "boolean",
+                                              "default": false
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "footer": {
+                                  "oneOf": [
+                                    {
+                                      "type": "object",
+                                      "additionalProperties": false,
+                                      "properties": {
+                                        "print_name_field": {
+                                          "oneOf": [
+                                            {
+                                              "description": "If true  - adds a name field to the footer",
+                                              "type": "boolean",
+                                              "default": false
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        },
+                                        "print_address_field": {
+                                          "oneOf": [
+                                            {
+                                              "description": "If true  - adds an address field to the footer",
+                                              "type": "boolean",
+                                              "default": false
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        },
+                                        "print_signature_field": {
+                                          "oneOf": [
+                                            {
+                                              "description": "If true  - adds a signature field to the footer",
+                                              "type": "boolean",
+                                              "default": false
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                }
+                              }
                             },
                             {
                               "type": "null"
@@ -3734,6 +3910,94 @@
                               "type": "null"
                             }
                           ]
+                        },
+                        "refund_options": {
+                          "oneOf": [
+                            {
+                              "description": "If the sale is a refund - the following options will be considered",
+                              "type": "object",
+                              "additionalProperties": false,
+                              "properties": {
+                                "header": {
+                                  "oneOf": [
+                                    {
+                                      "type": "object",
+                                      "additionalProperties": false,
+                                      "properties": {
+                                        "print_title": {
+                                          "oneOf": [
+                                            {
+                                              "description": "If true - adds a refund specific title to the receipt header, e.g. 'Refund' or 'Rückerstattungsbeleg'",
+                                              "type": "boolean",
+                                              "default": false
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "footer": {
+                                  "oneOf": [
+                                    {
+                                      "type": "object",
+                                      "additionalProperties": false,
+                                      "properties": {
+                                        "print_name_field": {
+                                          "oneOf": [
+                                            {
+                                              "description": "If true  - adds a name field to the footer",
+                                              "type": "boolean",
+                                              "default": false
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        },
+                                        "print_address_field": {
+                                          "oneOf": [
+                                            {
+                                              "description": "If true  - adds an address field to the footer",
+                                              "type": "boolean",
+                                              "default": false
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        },
+                                        "print_signature_field": {
+                                          "oneOf": [
+                                            {
+                                              "description": "If true  - adds a signature field to the footer",
+                                              "type": "boolean",
+                                              "default": false
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                }
+                              }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
                         }
                       }
                     },
@@ -4044,6 +4308,94 @@
                               "description": "Defines if signing footer is printed without any spaces and line breaks",
                               "type": "boolean",
                               "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "refund_options": {
+                          "oneOf": [
+                            {
+                              "description": "If the sale is a refund - the following options will be considered",
+                              "type": "object",
+                              "additionalProperties": false,
+                              "properties": {
+                                "header": {
+                                  "oneOf": [
+                                    {
+                                      "type": "object",
+                                      "additionalProperties": false,
+                                      "properties": {
+                                        "print_title": {
+                                          "oneOf": [
+                                            {
+                                              "description": "If true - adds a refund specific title to the receipt header, e.g. 'Refund' or 'Rückerstattungsbeleg'",
+                                              "type": "boolean",
+                                              "default": false
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "footer": {
+                                  "oneOf": [
+                                    {
+                                      "type": "object",
+                                      "additionalProperties": false,
+                                      "properties": {
+                                        "print_name_field": {
+                                          "oneOf": [
+                                            {
+                                              "description": "If true  - adds a name field to the footer",
+                                              "type": "boolean",
+                                              "default": false
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        },
+                                        "print_address_field": {
+                                          "oneOf": [
+                                            {
+                                              "description": "If true  - adds an address field to the footer",
+                                              "type": "boolean",
+                                              "default": false
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        },
+                                        "print_signature_field": {
+                                          "oneOf": [
+                                            {
+                                              "description": "If true  - adds a signature field to the footer",
+                                              "type": "boolean",
+                                              "default": false
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                }
+                              }
                             },
                             {
                               "type": "null"
