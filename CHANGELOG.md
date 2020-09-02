@@ -1,3 +1,10 @@
+## [5.61.1](https://github.com/tillhub/schemas/compare/v5.61.0...v5.61.1) (2020-09-02)
+
+
+### Bug Fixes
+
+* **registers:** device_configuration ([ab582e0](https://github.com/tillhub/schemas/commit/ab582e0))
+
 # [5.61.0](https://github.com/tillhub/schemas/compare/v5.60.0...v5.61.0) (2020-09-02)
 
 
