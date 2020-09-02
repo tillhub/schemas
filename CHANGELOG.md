@@ -1,3 +1,15 @@
+# [5.62.0](https://github.com/tillhub/schemas/compare/v5.61.1...v5.62.0) (2020-09-02)
+
+
+### Bug Fixes
+
+* **transactions_v1:** legacy_discounts ([a873e3a](https://github.com/tillhub/schemas/commit/a873e3a))
+
+
+### Features
+
+* **carts:** discounts ([7ee620b](https://github.com/tillhub/schemas/commit/7ee620b))
+
 ## [5.61.1](https://github.com/tillhub/schemas/compare/v5.61.0...v5.61.1) (2020-09-02)
 
 

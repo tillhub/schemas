@@ -974,6 +974,14 @@
                       "minLength": 3,
                       "maxLength": 3
                     },
+                    "type_name": {
+                      "type": "string",
+                      "enum": [
+                        "percentage",
+                        "value"
+                      ],
+                      "description": "The type of the discount, needed to map from transaction legacy discounts and back, value and rate will be still respected"
+                    },
                     "value": {
                       "oneOf": [
                         {

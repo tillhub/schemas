@@ -1890,7 +1890,7 @@
                       "minimum": 0,
                       "description": "Position of that discount inside the list (application used to have unordered set previously)"
                     },
-                    "type": {
+                    "type_name": {
                       "type": "string",
                       "enum": [
                         "percentage",
