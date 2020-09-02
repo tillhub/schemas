@@ -1,3 +1,10 @@
+# [5.61.0](https://github.com/tillhub/schemas/compare/v5.60.0...v5.61.0) (2020-09-02)
+
+
+### Features
+
+* **vouchers:** add properties to support discount vouchers ([e40f52c](https://github.com/tillhub/schemas/commit/e40f52c))
+
 # [5.60.0](https://github.com/tillhub/schemas/compare/v5.59.0...v5.60.0) (2020-09-01)
 
 

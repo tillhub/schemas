@@ -288,7 +288,7 @@
       "type": "boolean"
     },
     "bound_to_customer": {
-      "description": "Customer number to bound this voucher to.",
+      "description": "Customer UUID to bound this voucher to.",
       "oneOf": [
         {
           "type": "string"
@@ -868,6 +868,16 @@
           "type": "null"
         }
       ]
+    },
+    "redeemed": {
+      "description": "If a voucher has been redeemed or not.",
+      "type": "boolean",
+      "default": false
+    },
+    "is_usable_only_once": {
+      "description": "If a voucher can be used only once or multiple times.",
+      "type": "boolean",
+      "default": false
     }
   },
   "required": [
