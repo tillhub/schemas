@@ -2782,7 +2782,7 @@
                                 }
                               ]
                             },
-                            "has_refunds": {
+                            "on_refunds": {
                               "oneOf": [
                                 {
                                   "description": "... if the transaction contains refunded items",
@@ -3193,6 +3193,23 @@
                               "type": "object",
                               "additionalProperties": false,
                               "properties": {
+                                "condition": {
+                                  "oneOf": [
+                                    {
+                                      "description": "If the transaction contains refunded items, consider the layout options respecting this condition",
+                                      "type": "string",
+                                      "enum": [
+                                        "never",
+                                        "always",
+                                        "payout"
+                                      ],
+                                      "default": "payout"
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
                                 "header": {
                                   "oneOf": [
                                     {
@@ -3596,6 +3613,23 @@
                               "type": "object",
                               "additionalProperties": false,
                               "properties": {
+                                "condition": {
+                                  "oneOf": [
+                                    {
+                                      "description": "If the transaction contains refunded items, consider the layout options respecting this condition",
+                                      "type": "string",
+                                      "enum": [
+                                        "never",
+                                        "always",
+                                        "payout"
+                                      ],
+                                      "default": "payout"
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
                                 "header": {
                                   "oneOf": [
                                     {
@@ -3999,6 +4033,23 @@
                               "type": "object",
                               "additionalProperties": false,
                               "properties": {
+                                "condition": {
+                                  "oneOf": [
+                                    {
+                                      "description": "If the transaction contains refunded items, consider the layout options respecting this condition",
+                                      "type": "string",
+                                      "enum": [
+                                        "never",
+                                        "always",
+                                        "payout"
+                                      ],
+                                      "default": "payout"
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
                                 "header": {
                                   "oneOf": [
                                     {
@@ -4402,6 +4453,23 @@
                               "type": "object",
                               "additionalProperties": false,
                               "properties": {
+                                "condition": {
+                                  "oneOf": [
+                                    {
+                                      "description": "If the transaction contains refunded items, consider the layout options respecting this condition",
+                                      "type": "string",
+                                      "enum": [
+                                        "never",
+                                        "always",
+                                        "payout"
+                                      ],
+                                      "default": "payout"
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
                                 "header": {
                                   "oneOf": [
                                     {
