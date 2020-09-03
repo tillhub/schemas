@@ -2716,14 +2716,95 @@
                   "additionalProperties": false,
                   "properties": {
                     "merchant_main": {
-                      "description": "States if the main merchant receipt will be printed",
-                      "type": "boolean",
-                      "default": true
+                      "oneOf": [
+                        {
+                          "description": "States if the main merchant receipt will be printed",
+                          "type": "boolean",
+                          "default": true
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
                     },
                     "merchant_terminal": {
-                      "description": "States if the terminal merchant receipt will be printed",
-                      "type": "boolean",
-                      "default": true
+                      "oneOf": [
+                        {
+                          "description": "States if the terminal merchant receipt will be printed",
+                          "type": "boolean",
+                          "default": true
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "merchant_triggers": {
+                      "oneOf": [
+                        {
+                          "type": "object",
+                          "description": "States which conditions will trigger automatic printing of the merchant receipt",
+                          "additionalProperties": false,
+                          "properties": {
+                            "terminal_payments": {
+                              "oneOf": [
+                                {
+                                  "description": "... if the transaction contains payments from a terminal",
+                                  "type": "boolean",
+                                  "default": true
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "signing_failed": {
+                              "oneOf": [
+                                {
+                                  "description": "... if fiscal signing failed",
+                                  "type": "boolean",
+                                  "default": true
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "has_tips": {
+                              "oneOf": [
+                                {
+                                  "description": "... if tips were given",
+                                  "type": "boolean",
+                                  "default": true
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "has_refunds": {
+                              "oneOf": [
+                                {
+                                  "description": "... if the transaction contains refunded items",
+                                  "type": "string",
+                                  "enum": [
+                                    "never",
+                                    "always",
+                                    "payout"
+                                  ],
+                                  "default": "never"
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            }
+                          }
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
                     }
                   }
                 },
