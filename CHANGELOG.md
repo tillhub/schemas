@@ -1,3 +1,10 @@
+## [5.67.1](https://github.com/tillhub/schemas/compare/v5.67.0...v5.67.1) (2020-09-07)
+
+
+### Bug Fixes
+
+* **vouchers:** fix typo on discounts ([ef5aa1d](https://github.com/tillhub/schemas/commit/ef5aa1d))
+
 # [5.67.0](https://github.com/tillhub/schemas/compare/v5.66.0...v5.67.0) (2020-09-07)
 
 

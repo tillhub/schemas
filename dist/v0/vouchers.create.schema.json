@@ -57,7 +57,7 @@
         }
       ]
     },
-    "dicount_order": {
+    "discount_order": {
       "oneOf": [
         {
           "description": "If type is 'discount' - this will keep the resulting discount entry ordered per cart item as always first or always last.",
