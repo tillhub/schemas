@@ -778,7 +778,8 @@
                       "fleurop_externa_sell_and_activate",
                       "tillhub_create",
                       "tillhub_recharge",
-                      "tillhub_reedeem"
+                      "tillhub_reedeem",
+                      "tillhub_percentage"
                     ]
                   },
                   "status": {

@@ -1,3 +1,10 @@
+# [5.66.0](https://github.com/tillhub/schemas/compare/v5.65.0...v5.66.0) (2020-09-07)
+
+
+### Features
+
+* **transactions:** items ([570595e](https://github.com/tillhub/schemas/commit/570595e))
+
 # [5.65.0](https://github.com/tillhub/schemas/compare/v5.64.0...v5.65.0) (2020-09-07)
 
 
