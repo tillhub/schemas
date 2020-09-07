@@ -1982,7 +1982,6 @@
                         "voucher_is_locked",
                         "voucher_message",
                         "voucher_title",
-                        "voucher_type",
                         "voucher_type"
                       ]
                     },

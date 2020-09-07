@@ -1,3 +1,10 @@
+# [5.65.0](https://github.com/tillhub/schemas/compare/v5.64.0...v5.65.0) (2020-09-07)
+
+
+### Features
+
+* **transactions:** legacy ([ed580f8](https://github.com/tillhub/schemas/commit/ed580f8))
+
 # [5.64.0](https://github.com/tillhub/schemas/compare/v5.63.0...v5.64.0) (2020-09-03)
 
 
