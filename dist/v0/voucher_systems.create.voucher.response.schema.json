@@ -46,28 +46,30 @@
         }
       ]
     },
-    "discount_type": {
-      "description": "Define the value type of the discount if one exists.",
+    "discount_rate": {
       "oneOf": [
         {
-          "type": "string",
-          "enum": [
-            "percentage",
-            "value"
-          ]
+          "description": "If type is 'discount' - the discount rate that will be applied to the cart.",
+          "example": "0.15",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
         },
         {
           "type": "null"
         }
       ]
     },
-    "discount_amount": {
-      "description": "The discount amount on a voucher is either a percentage or money value corresponding to the currency. A voucher discount is mostly an accounting construct, whereas the amount defines the portion of the applied voucher that will be booked against discounts accounts.",
-      "example": "10.99",
-      "anyOf": [
+    "dicount_order": {
+      "oneOf": [
         {
-          "type": "number",
-          "minimum": 0
+          "description": "If type is 'discount' - this will keep the resulting discount entry ordered per cart item as always first or always last.",
+          "type": "string",
+          "enum": [
+            "first",
+            "last"
+          ],
+          "default": "last"
         },
         {
           "type": "null"
