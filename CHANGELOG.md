@@ -1,3 +1,10 @@
+# [5.67.0](https://github.com/tillhub/schemas/compare/v5.66.0...v5.67.0) (2020-09-07)
+
+
+### Features
+
+* **vouchers:** discount ([#480](https://github.com/tillhub/schemas/issues/480)) ([7237c59](https://github.com/tillhub/schemas/commit/7237c59))
+
 # [5.66.0](https://github.com/tillhub/schemas/compare/v5.65.0...v5.66.0) (2020-09-07)
 
 
