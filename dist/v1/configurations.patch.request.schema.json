@@ -3174,6 +3174,18 @@
                             }
                           ]
                         },
+                        "print_discount_groups": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if groupable discounts are printed",
+                              "type": "boolean",
+                              "default": false
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
                         "minimize_signing_footer": {
                           "oneOf": [
                             {
@@ -3588,6 +3600,18 @@
                               "description": "Defines if the total net will be printed on (e.g. customer, merchant)",
                               "type": "boolean",
                               "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_discount_groups": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if groupable discounts are printed",
+                              "type": "boolean",
+                              "default": false
                             },
                             {
                               "type": "null"
@@ -4014,6 +4038,18 @@
                             }
                           ]
                         },
+                        "print_discount_groups": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if groupable discounts are printed",
+                              "type": "boolean",
+                              "default": false
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
                         "minimize_signing_footer": {
                           "oneOf": [
                             {
@@ -4428,6 +4464,18 @@
                               "description": "Defines if the total net will be printed on (e.g. customer, merchant)",
                               "type": "boolean",
                               "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_discount_groups": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if groupable discounts are printed",
+                              "type": "boolean",
+                              "default": false
                             },
                             {
                               "type": "null"
