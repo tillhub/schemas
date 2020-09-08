@@ -1,3 +1,10 @@
+# [5.68.0](https://github.com/tillhub/schemas/compare/v5.67.1...v5.68.0) (2020-09-08)
+
+
+### Features
+
+* **configurations:** discounts ([95edf6e](https://github.com/tillhub/schemas/commit/95edf6e))
+
 ## [5.67.1](https://github.com/tillhub/schemas/compare/v5.67.0...v5.67.1) (2020-09-07)
 
 
