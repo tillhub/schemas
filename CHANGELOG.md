@@ -1,3 +1,10 @@
+# [5.69.0](https://github.com/tillhub/schemas/compare/v5.68.0...v5.69.0) (2020-09-08)
+
+
+### Features
+
+* **storefronts:** add auto sync and whitelisted config ([f4a480c](https://github.com/tillhub/schemas/commit/f4a480c))
+
 # [5.68.0](https://github.com/tillhub/schemas/compare/v5.67.1...v5.68.0) (2020-09-08)
 
 
