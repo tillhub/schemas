@@ -664,6 +664,15 @@
                         "cash",
                         "always"
                       ]
+                    },
+                    "transaction_signing": {
+                      "type": "string",
+                      "description": "If Printer TSE signing is active and all other conditions are met - define the opening in relation to the signing process",
+                      "enum": [
+                        "before",
+                        "after"
+                      ],
+                      "default": "before"
                     }
                   }
                 },
