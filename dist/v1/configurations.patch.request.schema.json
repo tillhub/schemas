@@ -2724,6 +2724,32 @@
                   "type": "object",
                   "additionalProperties": false,
                   "properties": {
+                    "customer_triggers": {
+                      "oneOf": [
+                        {
+                          "type": "object",
+                          "description": "States which conditions will trigger automatic printing of the customer receipt",
+                          "additionalProperties": false,
+                          "properties": {
+                            "fiscal_signing": {
+                              "oneOf": [
+                                {
+                                  "description": "... if the transaction is supposed to be fiskally signed.",
+                                  "type": "boolean",
+                                  "default": false
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            }
+                          }
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
                     "merchant_main": {
                       "oneOf": [
                         {
