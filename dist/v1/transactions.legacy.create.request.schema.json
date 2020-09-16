@@ -1881,7 +1881,9 @@
                         "cart",
                         "product_set",
                         "sconto",
-                        "promotion"
+                        "item",
+                        "promotion",
+                        "voucher"
                       ],
                       "description": "The group type of discount (type was taken)"
                     },
@@ -3029,9 +3031,10 @@
                             "staff",
                             "cart",
                             "product_set",
-                            "promotion",
                             "sconto",
-                            "item"
+                            "item",
+                            "promotion",
+                            "voucher"
                           ]
                         },
                         {

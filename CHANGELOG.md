@@ -1,3 +1,10 @@
+# [5.73.0](https://github.com/tillhub/schemas/compare/v5.72.1...v5.73.0) (2020-09-16)
+
+
+### Features
+
+* **discounts:** voucher ([d5af51b](https://github.com/tillhub/schemas/commit/d5af51b))
+
 ## [5.72.1](https://github.com/tillhub/schemas/compare/v5.72.0...v5.72.1) (2020-09-16)
 
 

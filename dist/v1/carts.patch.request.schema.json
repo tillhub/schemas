@@ -979,7 +979,21 @@
                         "percentage",
                         "value"
                       ],
-                      "description": "The type of the discount, needed to map from transaction legacy discounts and back, value and rate will be still respected"
+                      "description": "The value interpretation type of the discount, needed to map from transaction legacy discounts and back, value and rate will be still respected"
+                    },
+                    "group": {
+                      "type": "string",
+                      "enum": [
+                        "customer",
+                        "staff",
+                        "cart",
+                        "product_set",
+                        "sconto",
+                        "item",
+                        "promotion",
+                        "voucher"
+                      ],
+                      "description": "The logical group type of the discount, reflecting it's origin."
                     },
                     "value": {
                       "oneOf": [
@@ -1006,17 +1020,6 @@
                     "client_id": {
                       "type": "string",
                       "maxLength": 128
-                    },
-                    "group": {
-                      "type": "string",
-                      "enum": [
-                        "customer",
-                        "staff",
-                        "cart",
-                        "product_set",
-                        "sconto",
-                        "item"
-                      ]
                     },
                     "external_reference_id": {
                       "description": "A caller defined custom ID for the purpose of syncing from external resources, or to use in analytics.",
@@ -1060,10 +1063,14 @@
                         {
                           "type": "string",
                           "enum": [
-                            "cart",
-                            "item",
                             "customer",
-                            "sconto"
+                            "staff",
+                            "cart",
+                            "product_set",
+                            "sconto",
+                            "item",
+                            "promotion",
+                            "voucher"
                           ]
                         },
                         {

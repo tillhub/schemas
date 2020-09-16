@@ -1758,9 +1758,10 @@
                             "staff",
                             "cart",
                             "product_set",
-                            "promotion",
                             "sconto",
-                            "item"
+                            "item",
+                            "promotion",
+                            "voucher"
                           ]
                         },
                         {
