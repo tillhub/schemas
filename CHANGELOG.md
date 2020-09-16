@@ -1,3 +1,10 @@
+## [5.72.1](https://github.com/tillhub/schemas/compare/v5.72.0...v5.72.1) (2020-09-16)
+
+
+### Bug Fixes
+
+* **registers:** remove mandatory bundle_id not all clients will have this value ([43959ec](https://github.com/tillhub/schemas/commit/43959ec))
+
 # [5.72.0](https://github.com/tillhub/schemas/compare/v5.71.0...v5.72.0) (2020-09-15)
 
 

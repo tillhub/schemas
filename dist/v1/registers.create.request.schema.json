@@ -129,9 +129,16 @@
               ]
             },
             "bundle_id": {
-              "type": "string",
-              "description": "The bundle identifier of the client application",
-              "example": "de.tillhub.tillhubstage"
+              "oneOf": [
+                {
+                  "type": "string",
+                  "description": "The bundle identifier of the client application",
+                  "example": "de.tillhub.tillhubstage"
+                },
+                {
+                  "type": "null"
+                }
+              ]
             },
             "network": {
               "oneOf": [
@@ -247,10 +254,7 @@
                 }
               ]
             }
-          },
-          "required": [
-            "bundle_id"
-          ]
+          }
         },
         {
           "type": "null"
