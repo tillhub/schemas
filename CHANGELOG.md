@@ -1,3 +1,10 @@
+# [5.74.0](https://github.com/tillhub/schemas/compare/v5.73.0...v5.74.0) (2020-09-17)
+
+
+### Features
+
+* **items:** discounts ([#484](https://github.com/tillhub/schemas/issues/484)) ([087e76d](https://github.com/tillhub/schemas/commit/087e76d))
+
 # [5.73.0](https://github.com/tillhub/schemas/compare/v5.72.1...v5.73.0) (2020-09-16)
 
 

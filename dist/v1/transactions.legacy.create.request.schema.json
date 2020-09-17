@@ -1942,6 +1942,50 @@
                           "type": "null"
                         }
                       ]
+                    },
+                    "is_automatic": {
+                      "oneOf": [
+                        {
+                          "type": "boolean",
+                          "default": false,
+                          "description": "If true, this discount was trigger automatically."
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "order": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "enum": [
+                            "first",
+                            "last"
+                          ],
+                          "default": "last"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "vat_rate_class": {
+                      "oneOf": [
+                        {
+                          "default": "normal",
+                          "description": "Rate class from 'taxes.rate_class' according to international standards, used in Germany to map types for e.g. fiscalization",
+                          "type": "string",
+                          "enum": [
+                            "normal",
+                            "reduced",
+                            "super_reduced"
+                          ]
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
                     }
                   }
                 },
