@@ -1,3 +1,15 @@
+# [5.75.0](https://github.com/tillhub/schemas/compare/v5.74.0...v5.75.0) (2020-09-21)
+
+
+### Bug Fixes
+
+* **tenants:** fix type null ([d78c745](https://github.com/tillhub/schemas/commit/d78c745))
+
+
+### Features
+
+* **tenants:** add vat_id property ([eee5cfa](https://github.com/tillhub/schemas/commit/eee5cfa))
+
 # [5.74.0](https://github.com/tillhub/schemas/compare/v5.73.0...v5.74.0) (2020-09-17)
 
 

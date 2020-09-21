@@ -6977,6 +6977,16 @@
             "tax_number": {
               "type": "string"
             },
+            "vat_id": {
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
             "commercial_id": {
               "type": "string",
               "description": "Commercial identification number"
