@@ -1,3 +1,10 @@
+# [5.76.0](https://github.com/tillhub/schemas/compare/v5.75.0...v5.76.0) (2020-09-23)
+
+
+### Features
+
+* **transactions:** add payback_number to metadata ([d41c86b](https://github.com/tillhub/schemas/commit/d41c86b))
+
 # [5.75.0](https://github.com/tillhub/schemas/compare/v5.74.0...v5.75.0) (2020-09-21)
 
 
