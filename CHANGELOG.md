@@ -1,3 +1,11 @@
+# [5.80.0](https://github.com/tillhub/schemas/compare/v5.79.0...v5.80.0) (2020-09-24)
+
+
+### Features
+
+* **configurations:** settings ([c3144f6](https://github.com/tillhub/schemas/commit/c3144f6))
+* **vouchers:** support multiple customers ([#488](https://github.com/tillhub/schemas/issues/488)) ([629f076](https://github.com/tillhub/schemas/commit/629f076))
+
 # [5.79.0](https://github.com/tillhub/schemas/compare/v5.78.0...v5.79.0) (2020-09-24)
 
 

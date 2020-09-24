@@ -289,19 +289,8 @@
       "description": "Define whether to limit this voucher in a particular region.",
       "type": "boolean"
     },
-    "bound_to_customer": {
-      "description": "Customer UUID to bound this voucher to.",
-      "oneOf": [
-        {
-          "type": "string"
-        },
-        {
-          "type": "null"
-        }
-      ]
-    },
-    "limited_to_customer": {
-      "description": "Define whether to limit this voucher in a particular customer.",
+    "limited_to_customers": {
+      "description": "Define whether to limit this voucher to customers or not.",
       "type": "boolean"
     },
     "refundable": {

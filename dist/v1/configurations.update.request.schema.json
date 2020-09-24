@@ -1338,6 +1338,13 @@
                               "format": "regex",
                               "example": "^[_A-Za-z0-9-+]+(\\.[_A-Za-z0-9-+]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z‌​]{2,})$",
                               "default": "^[0-9]{10}$"
+                            },
+                            "number_length_max": {
+                              "description": "The maxiumum length of a customer payback number (as a helper for the UI)",
+                              "type": "integer",
+                              "minimum": 2,
+                              "maximum": 99,
+                              "default": 10
                             }
                           }
                         },
