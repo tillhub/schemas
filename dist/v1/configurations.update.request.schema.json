@@ -1320,6 +1320,25 @@
                   "type": "object",
                   "additionalProperties": false,
                   "properties": {
+                    "payback": {
+                      "oneOf": [
+                        {
+                          "description": "Payback behavior configuration",
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "prompt": {
+                              "description": "If true - show a prompt that asks the customer for a payback number",
+                              "type": "boolean",
+                              "default": false
+                            }
+                          }
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
                     "custom_order_receipt": {
                       "description": "Temporary feature for the Apollo test phase",
                       "type": "object",
