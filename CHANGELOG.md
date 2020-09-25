@@ -1,3 +1,10 @@
+## [5.80.1](https://github.com/tillhub/schemas/compare/v5.80.0...v5.80.1) (2020-09-25)
+
+
+### Bug Fixes
+
+* **vouchers:** keep old property to bound customer and deprecated it ([c629b92](https://github.com/tillhub/schemas/commit/c629b92))
+
 # [5.80.0](https://github.com/tillhub/schemas/compare/v5.79.0...v5.80.0) (2020-09-24)
 
 
