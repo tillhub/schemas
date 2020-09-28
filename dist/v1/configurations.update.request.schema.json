@@ -5574,6 +5574,16 @@
               }
             }
           }
+        },
+        "aggregate_tips": {
+          "description": "A flag to determine whether to include tips in analytics reports",
+          "type": "boolean",
+          "default": false
+        },
+        "aggregate_vouchers": {
+          "description": "A flag to determine whether to include vouchers in analytics reports",
+          "type": "boolean",
+          "default": false
         }
       }
     },

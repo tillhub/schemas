@@ -1,3 +1,10 @@
+# [5.82.0](https://github.com/tillhub/schemas/compare/v5.81.0...v5.82.0) (2020-09-28)
+
+
+### Features
+
+* **tips/vouchers:** add flags to analytics configurations ([5c32048](https://github.com/tillhub/schemas/commit/5c32048))
+
 # [5.81.0](https://github.com/tillhub/schemas/compare/v5.80.1...v5.81.0) (2020-09-28)
 
 
