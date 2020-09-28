@@ -165,6 +165,46 @@
           "type": "null"
         }
       ]
+    },
+    "price_range": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "description": "Define a price range where the payment option is available.",
+          "properties": {
+            "min_amount": {
+              "description": "Defines the minimum gross amount for this payment option availability.",
+              "oneOf": [
+                {
+                  "example": "9.99",
+                  "type": "number",
+                  "multipleOf": 0.01
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "max_amount": {
+              "description": "Defines the maximum gross amount for this payment option availability.",
+              "oneOf": [
+                {
+                  "example": "16550.99",
+                  "type": "number",
+                  "multipleOf": 0.01
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
     }
   }
 }

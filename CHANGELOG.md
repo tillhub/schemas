@@ -1,3 +1,16 @@
+# [5.81.0](https://github.com/tillhub/schemas/compare/v5.80.1...v5.81.0) (2020-09-28)
+
+
+### Bug Fixes
+
+* **payment_options:** fix docs ([db43512](https://github.com/tillhub/schemas/commit/db43512))
+* **payment_options:** remove blank lines ([9e52728](https://github.com/tillhub/schemas/commit/9e52728))
+
+
+### Features
+
+* **payment_options:** add price range ([fd11c8a](https://github.com/tillhub/schemas/commit/fd11c8a))
+
 ## [5.80.1](https://github.com/tillhub/schemas/compare/v5.80.0...v5.80.1) (2020-09-25)
 
 
