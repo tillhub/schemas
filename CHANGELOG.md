@@ -1,3 +1,10 @@
+## [5.82.1](https://github.com/tillhub/schemas/compare/v5.82.0...v5.82.1) (2020-09-29)
+
+
+### Bug Fixes
+
+* **tse_state:** add serial number to body ([cff2e2d](https://github.com/tillhub/schemas/commit/cff2e2d))
+
 # [5.82.0](https://github.com/tillhub/schemas/compare/v5.81.0...v5.82.0) (2020-09-28)
 
 
