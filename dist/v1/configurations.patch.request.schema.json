@@ -1701,7 +1701,9 @@
                   "type": "string",
                   "enum": [
                     "required",
-                    "none"
+                    "none",
+                    "after",
+                    "before"
                   ]
                 },
                 {

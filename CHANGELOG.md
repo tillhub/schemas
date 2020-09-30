@@ -1,3 +1,10 @@
+# [5.83.0](https://github.com/tillhub/schemas/compare/v5.82.1...v5.83.0) (2020-09-30)
+
+
+### Features
+
+* **staffs:** Cashier prompt on new cart ([420d810](https://github.com/tillhub/schemas/commit/420d810))
+
 ## [5.82.1](https://github.com/tillhub/schemas/compare/v5.82.0...v5.82.1) (2020-09-29)
 
 
