@@ -1,3 +1,10 @@
+## [5.83.1](https://github.com/tillhub/schemas/compare/v5.83.0...v5.83.1) (2020-09-30)
+
+
+### Bug Fixes
+
+* **carts:** remove mandatorily  product_group on items since cart item might not have one ([01195c2](https://github.com/tillhub/schemas/commit/01195c2))
+
 # [5.83.0](https://github.com/tillhub/schemas/compare/v5.82.1...v5.83.0) (2020-09-30)
 
 

@@ -292,6 +292,17 @@
         }
       ]
     },
+    "payback_number": {
+      "oneOf": [
+        {
+          "type": "string",
+          "description": "Payback customer number, transaction apollo payback bridge service can call the apollo payback backend."
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "signed_transactions": {
       "deprecated": true,
       "oneOf": [
@@ -342,10 +353,6 @@
                   ]
                 }
               }
-            },
-            "payback_number": {
-              "type": "string",
-              "description": "Payback customer number, transaction apollo payback bridge service can call the apollo payback backend."
             }
           },
           "description": "Is not used"
