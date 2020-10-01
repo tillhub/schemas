@@ -1,3 +1,10 @@
+# [5.84.0](https://github.com/tillhub/schemas/compare/v5.83.1...v5.84.0) (2020-10-01)
+
+
+### Features
+
+* **configurations:** settings ([edab0f3](https://github.com/tillhub/schemas/commit/edab0f3))
+
 ## [5.83.1](https://github.com/tillhub/schemas/compare/v5.83.0...v5.83.1) (2020-09-30)
 
 
