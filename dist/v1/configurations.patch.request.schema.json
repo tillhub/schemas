@@ -707,14 +707,14 @@
                           "description": "defines epson self test conditions",
                           "type": "object",
                           "properties": {
-                            "info_retention_minutes": {
+                            "info_minutes": {
                               "type": "integer",
                               "description": "If more minutes have passed since the last update - a new storage info will be requested from the hardware",
                               "default": 1440,
                               "minimum": 5,
                               "maximum": 2880
                             },
-                            "test_threshold_minutes": {
+                            "threshold_minutes": {
                               "type": "integer",
                               "description": "If fewer minutes are left before a mandotory test - a self test will be performed on the hardware",
                               "default": 2,
