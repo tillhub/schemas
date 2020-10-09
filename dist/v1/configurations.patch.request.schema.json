@@ -2163,8 +2163,13 @@
               ]
             },
             "auto_customer_number_enabled": {
-              "type": "boolean",
-              "default": false
+              "type": "string",
+              "enum": [
+                "true",
+                "false",
+                "optional"
+              ],
+              "default": "false"
             },
             "customers_per_branch": {
               "type": "boolean",
@@ -2554,8 +2559,13 @@
               ]
             },
             "auto_customer_number_enabled": {
-              "type": "boolean",
-              "default": false
+              "type": "string",
+              "enum": [
+                "true",
+                "false",
+                "optional"
+              ],
+              "default": "false"
             },
             "customers_per_branch": {
               "type": "boolean",

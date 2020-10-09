@@ -1,3 +1,10 @@
+# [5.86.0](https://github.com/tillhub/schemas/compare/v5.85.0...v5.86.0) (2020-10-09)
+
+
+### Features
+
+* **configurations:** switch "auto_customer_number_enabled" to an enum ([#421](https://github.com/tillhub/schemas/issues/421)) ([e5d53cd](https://github.com/tillhub/schemas/commit/e5d53cd))
+
 # [5.85.0](https://github.com/tillhub/schemas/compare/v5.84.0...v5.85.0) (2020-10-06)
 
 
