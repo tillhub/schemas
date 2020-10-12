@@ -1,3 +1,10 @@
+# [5.87.0](https://github.com/tillhub/schemas/compare/v5.86.0...v5.87.0) (2020-10-12)
+
+
+### Features
+
+* **configurations:** sync ([1cb940a](https://github.com/tillhub/schemas/commit/1cb940a))
+
 # [5.86.0](https://github.com/tillhub/schemas/compare/v5.85.0...v5.86.0) (2020-10-09)
 
 

@@ -1029,6 +1029,25 @@
                     }
                   }
                 },
+                "carts": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "limit": {
+                      "description": "Initial page size for syncing with GET all calls. In-app default is 500. Set this if you run into memory issues.",
+                      "oneOf": [
+                        {
+                          "type": "integer",
+                          "minimum": 1,
+                          "maximum": 1000
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  }
+                },
                 "balances": {
                   "type": "object",
                   "additionalProperties": false,
