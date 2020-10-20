@@ -1,3 +1,15 @@
+# [5.88.0](https://github.com/tillhub/schemas/compare/v5.87.1...v5.88.0) (2020-10-20)
+
+
+### Bug Fixes
+
+* **notifications:** fix device_configuration schema ([26e822f](https://github.com/tillhub/schemas/commit/26e822f))
+
+
+### Features
+
+* **configurations:** payments ([387a6da](https://github.com/tillhub/schemas/commit/387a6da))
+
 ## [5.87.1](https://github.com/tillhub/schemas/compare/v5.87.0...v5.87.1) (2020-10-15)
 
 
