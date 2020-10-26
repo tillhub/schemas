@@ -1,3 +1,10 @@
+# [5.89.0](https://github.com/tillhub/schemas/compare/v5.88.0...v5.89.0) (2020-10-26)
+
+
+### Features
+
+* **invoices:** add show_customer_number flag ([db3ef0b](https://github.com/tillhub/schemas/commit/db3ef0b))
+
 # [5.88.0](https://github.com/tillhub/schemas/compare/v5.87.1...v5.88.0) (2020-10-20)
 
 
