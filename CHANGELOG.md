@@ -1,3 +1,29 @@
+# [5.91.0](https://github.com/tillhub/schemas/compare/v5.90.0...v5.91.0) (2020-10-27)
+
+
+### Bug Fixes
+
+* **configurations:** interfaces ([6fad07d](https://github.com/tillhub/schemas/commit/6fad07d))
+
+
+### Features
+
+* **configuration:** interfaces ([586c4b9](https://github.com/tillhub/schemas/commit/586c4b9))
+
+# [5.90.0](https://github.com/tillhub/schemas/compare/v5.89.0...v5.90.0) (2020-10-27)
+
+
+### Features
+
+* **invoices:** force release ([ada5586](https://github.com/tillhub/schemas/commit/ada5586))
+
+# [5.89.0](https://github.com/tillhub/schemas/compare/v5.88.0...v5.89.0) (2020-10-26)
+
+
+### Features
+
+* **invoices:** add show_customer_number flag ([db3ef0b](https://github.com/tillhub/schemas/commit/db3ef0b))
+
 # [5.88.0](https://github.com/tillhub/schemas/compare/v5.87.1...v5.88.0) (2020-10-20)
 
 

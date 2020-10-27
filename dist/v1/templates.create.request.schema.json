@@ -238,6 +238,9 @@
             "show_main_text": {
               "type": "boolean"
             },
+            "show_customer_number": {
+              "type": "boolean"
+            },
             "map": {
               "type": "object",
               "additionalProperties": false,
@@ -904,6 +907,9 @@
             "show_main_text": {
               "type": "boolean"
             },
+            "show_customer_number": {
+              "type": "boolean"
+            },
             "map": {
               "type": "object",
               "additionalProperties": false,
@@ -1568,6 +1574,9 @@
               "type": "boolean"
             },
             "show_main_text": {
+              "type": "boolean"
+            },
+            "show_customer_number": {
               "type": "boolean"
             },
             "map": {
