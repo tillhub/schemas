@@ -1,3 +1,15 @@
+# [5.92.0](https://github.com/tillhub/schemas/compare/v5.91.0...v5.92.0) (2020-10-27)
+
+
+### Features
+
+* **big-query:** Realign transaction v1 legacy schema ([46ccf94](https://github.com/tillhub/schemas/commit/46ccf94))
+* **transactions:** add missing fields due to deadletter ([294d8b9](https://github.com/tillhub/schemas/commit/294d8b9))
+* **transactions:** add missing fields due to deadletter ([1f6f0f8](https://github.com/tillhub/schemas/commit/1f6f0f8))
+* **transactions:** fix review comments ([24594f2](https://github.com/tillhub/schemas/commit/24594f2))
+* **transactions:** fix review comments ([e2fcffc](https://github.com/tillhub/schemas/commit/e2fcffc))
+* **transactions:** fix review comments ([9141d93](https://github.com/tillhub/schemas/commit/9141d93))
+
 # [5.91.0](https://github.com/tillhub/schemas/compare/v5.90.0...v5.91.0) (2020-10-27)
 
 
