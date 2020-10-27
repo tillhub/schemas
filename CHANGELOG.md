@@ -1,3 +1,15 @@
+# [5.91.0](https://github.com/tillhub/schemas/compare/v5.90.0...v5.91.0) (2020-10-27)
+
+
+### Bug Fixes
+
+* **configurations:** interfaces ([6fad07d](https://github.com/tillhub/schemas/commit/6fad07d))
+
+
+### Features
+
+* **configuration:** interfaces ([586c4b9](https://github.com/tillhub/schemas/commit/586c4b9))
+
 # [5.90.0](https://github.com/tillhub/schemas/compare/v5.89.0...v5.90.0) (2020-10-27)
 
 
