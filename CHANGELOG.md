@@ -1,3 +1,10 @@
+# [5.93.0](https://github.com/tillhub/schemas/compare/v5.92.0...v5.93.0) (2020-10-30)
+
+
+### Features
+
+* **functions:** linked_vouchers ([674edcf](https://github.com/tillhub/schemas/commit/674edcf))
+
 # [5.92.0](https://github.com/tillhub/schemas/compare/v5.91.0...v5.92.0) (2020-10-27)
 
 

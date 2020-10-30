@@ -112,7 +112,8 @@
           "description": "Define which e.g. client local function implementation to use.",
           "enum": [
             "instant_checkout",
-            "add_to_cart"
+            "add_to_cart",
+            "linked_voucher"
           ]
         }
       },
@@ -383,7 +384,284 @@
           }
         }
       },
-      "else": false
+      "else": {
+        "if": {
+          "properties": {
+            "class": {
+              "type": "string",
+              "enum": [
+                "linked_voucher"
+              ]
+            }
+          }
+        },
+        "then": {
+          "properties": {
+            "description": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 128
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "resources": {
+              "description": "Store static resources e.g. products that this function will be bound to.",
+              "oneOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "additionalProperties": false,
+                    "type": "object",
+                    "properties": {
+                      "type": {
+                        "description": "Type of the Tillhub resource.",
+                        "type": "string",
+                        "enum": [
+                          "product",
+                          "discount",
+                          "voucher_action",
+                          "customer"
+                        ]
+                      },
+                      "object_id": {
+                        "description": "Identifier of the Tillhub resource.",
+                        "type": "string",
+                        "format": "uuid"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "images": {
+              "description": "Images to be used as thumbnail etc.",
+              "oneOf": [
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "original": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "format": "uri"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "default": null
+                    },
+                    "1x": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "format": "uri"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "default": null
+                    },
+                    "2x": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "format": "uri"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "default": null
+                    },
+                    "3x": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "format": "uri"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "default": null
+                    },
+                    "lia_1x": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "format": "uri"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "default": null
+                    },
+                    "lia_2x": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "format": "uri"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "default": null
+                    },
+                    "lia_3x": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "format": "uri"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "default": null
+                    },
+                    "square_1x": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "format": "uri"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "default": null
+                    },
+                    "square_2x": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "format": "uri"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "default": null
+                    },
+                    "square_3x": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "format": "uri"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "default": null
+                    },
+                    "avatar": {
+                      "type": "string",
+                      "format": "uri"
+                    }
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "payload": {
+              "oneOf": [
+                {
+                  "description": "Specific description of the linked voucher function (2 specific vouchers added together with specific amounts and one with discount).",
+                  "additionalProperties": false,
+                  "type": "object",
+                  "required": [
+                    "products"
+                  ],
+                  "properties": {
+                    "linked_voucher": {
+                      "type": "object",
+                      "description": "The applicable Tillhub product resource.",
+                      "additionalProperties": false,
+                      "properties": {
+                        "action": {
+                          "type": "string",
+                          "format": "uuid",
+                          "description": "The primaray voucher action ressource ID.",
+                          "example": "3fe039d8-e38d-4333-86d8-48334da189a8"
+                        },
+                        "amount": {
+                          "example": 50,
+                          "description": "The primaray voucher amount (.2Decimal e.g. 50.00€).",
+                          "type": "number",
+                          "minimum": -1000000,
+                          "maximum": 1000000,
+                          "multipleOf": 0.01
+                        },
+                        "linked_action": {
+                          "type": "string",
+                          "format": "uuid",
+                          "description": "The secondary voucher action ressource ID.",
+                          "example": "fc7cc46a-ebe2-4b62-9b1b-0f849680b49"
+                        },
+                        "linked_amount": {
+                          "example": 10,
+                          "description": "The secondary voucher amount (.2Decimal e.g. 10.0€).",
+                          "type": "number",
+                          "minimum": -1000000,
+                          "maximum": 1000000,
+                          "multipleOf": 0.01
+                        },
+                        "linked_discount": {
+                          "oneOf": [
+                            {
+                              "description": "Discount template applied to the secondary voucher ().",
+                              "additionalProperties": false,
+                              "type": "object",
+                              "properties": {
+                                "name": {
+                                  "description": "Printable name of the discount.",
+                                  "type": "string",
+                                  "example": "X-mas discount"
+                                },
+                                "rate": {
+                                  "type": "number",
+                                  "description": "The rate of the discount",
+                                  "example": "1.0",
+                                  "minimum": 0,
+                                  "maximum": 1,
+                                  "multipleOf": 0.001
+                                }
+                              }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        },
+        "else": false
+      }
     }
   },
   "type": "object"
