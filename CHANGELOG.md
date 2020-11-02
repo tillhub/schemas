@@ -1,3 +1,10 @@
+# [5.94.0](https://github.com/tillhub/schemas/compare/v5.93.0...v5.94.0) (2020-11-02)
+
+
+### Features
+
+* **vouchers:** add name field ([22874a0](https://github.com/tillhub/schemas/commit/22874a0))
+
 # [5.93.0](https://github.com/tillhub/schemas/compare/v5.92.0...v5.93.0) (2020-10-30)
 
 
