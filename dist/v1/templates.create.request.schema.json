@@ -217,6 +217,10 @@
               "type": "string",
               "maxLength": 32
             },
+            "show_customer_title": {
+              "type": "string",
+              "maxLength": 32
+            },
             "date_of_issue_title": {
               "type": "string",
               "maxLength": 32
@@ -236,6 +240,9 @@
               "type": "boolean"
             },
             "show_main_text": {
+              "type": "boolean"
+            },
+            "show_customer_number": {
               "type": "boolean"
             },
             "map": {
@@ -883,6 +890,10 @@
               "type": "string",
               "maxLength": 32
             },
+            "show_customer_title": {
+              "type": "string",
+              "maxLength": 32
+            },
             "date_of_issue_title": {
               "type": "string",
               "maxLength": 32
@@ -902,6 +913,9 @@
               "type": "boolean"
             },
             "show_main_text": {
+              "type": "boolean"
+            },
+            "show_customer_number": {
               "type": "boolean"
             },
             "map": {
@@ -1549,6 +1563,10 @@
               "type": "string",
               "maxLength": 32
             },
+            "show_customer_title": {
+              "type": "string",
+              "maxLength": 32
+            },
             "date_of_issue_title": {
               "type": "string",
               "maxLength": 32
@@ -1568,6 +1586,9 @@
               "type": "boolean"
             },
             "show_main_text": {
+              "type": "boolean"
+            },
+            "show_customer_number": {
               "type": "boolean"
             },
             "map": {

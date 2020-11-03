@@ -1,3 +1,62 @@
+## [5.94.1](https://github.com/tillhub/schemas/compare/v5.94.0...v5.94.1) (2020-11-03)
+
+
+### Bug Fixes
+
+* **invoices:** add title for customer number on templates ([3cf0494](https://github.com/tillhub/schemas/commit/3cf0494))
+
+# [5.94.0](https://github.com/tillhub/schemas/compare/v5.93.0...v5.94.0) (2020-11-02)
+
+
+### Features
+
+* **vouchers:** add name field ([22874a0](https://github.com/tillhub/schemas/commit/22874a0))
+
+# [5.93.0](https://github.com/tillhub/schemas/compare/v5.92.0...v5.93.0) (2020-10-30)
+
+
+### Features
+
+* **functions:** linked_vouchers ([674edcf](https://github.com/tillhub/schemas/commit/674edcf))
+
+# [5.92.0](https://github.com/tillhub/schemas/compare/v5.91.0...v5.92.0) (2020-10-27)
+
+
+### Features
+
+* **big-query:** Realign transaction v1 legacy schema ([46ccf94](https://github.com/tillhub/schemas/commit/46ccf94))
+* **transactions:** add missing fields due to deadletter ([294d8b9](https://github.com/tillhub/schemas/commit/294d8b9))
+* **transactions:** add missing fields due to deadletter ([1f6f0f8](https://github.com/tillhub/schemas/commit/1f6f0f8))
+* **transactions:** fix review comments ([24594f2](https://github.com/tillhub/schemas/commit/24594f2))
+* **transactions:** fix review comments ([e2fcffc](https://github.com/tillhub/schemas/commit/e2fcffc))
+* **transactions:** fix review comments ([9141d93](https://github.com/tillhub/schemas/commit/9141d93))
+
+# [5.91.0](https://github.com/tillhub/schemas/compare/v5.90.0...v5.91.0) (2020-10-27)
+
+
+### Bug Fixes
+
+* **configurations:** interfaces ([6fad07d](https://github.com/tillhub/schemas/commit/6fad07d))
+
+
+### Features
+
+* **configuration:** interfaces ([586c4b9](https://github.com/tillhub/schemas/commit/586c4b9))
+
+# [5.90.0](https://github.com/tillhub/schemas/compare/v5.89.0...v5.90.0) (2020-10-27)
+
+
+### Features
+
+* **invoices:** force release ([ada5586](https://github.com/tillhub/schemas/commit/ada5586))
+
+# [5.89.0](https://github.com/tillhub/schemas/compare/v5.88.0...v5.89.0) (2020-10-26)
+
+
+### Features
+
+* **invoices:** add show_customer_number flag ([db3ef0b](https://github.com/tillhub/schemas/commit/db3ef0b))
+
 # [5.88.0](https://github.com/tillhub/schemas/compare/v5.87.1...v5.88.0) (2020-10-20)
 
 

@@ -149,7 +149,7 @@
         {
           "type": "integer",
           "example": 3500,
-          "description": "The total amount of this transaction in the lowest (available) fraction of that currency -> 35.00 EUR or 3500 HUF respectively"
+          "description": "The total amount of this transaction in the lowest (available) fraction of that currency -> 35.00 EUR or 3500 HUF respectively (represented as integer)"
         },
         {
           "type": "null"
@@ -162,31 +162,7 @@
         {
           "type": "integer",
           "example": 500,
-          "description": "The total amount of change given back -> change = Sum(payment_amounts) - total"
-        },
-        {
-          "type": "null"
-        }
-      ]
-    },
-    "fr_receipt_id": {
-      "deprecated": true,
-      "oneOf": [
-        {
-          "type": "integer",
-          "description": "Is not used"
-        },
-        {
-          "type": "null"
-        }
-      ]
-    },
-    "customer_id": {
-      "deprecated": true,
-      "oneOf": [
-        {
-          "type": "integer",
-          "description": "Is not used"
+          "description": "The total amount of change given back -> change = Sum(payment_amounts) - total (represented as integer)"
         },
         {
           "type": "null"
@@ -204,18 +180,6 @@
       ],
       "description": "Description of the transaction type"
     },
-    "receipt_text": {
-      "deprecated": true,
-      "oneOf": [
-        {
-          "type": "string",
-          "description": "Is not used"
-        },
-        {
-          "type": "null"
-        }
-      ]
-    },
     "customer_number": {
       "deprecated": true,
       "oneOf": [
@@ -223,19 +187,6 @@
           "type": "string",
           "example": "0000000000171088",
           "description": "Custom id of the customer if there is one"
-        },
-        {
-          "type": "null"
-        }
-      ]
-    },
-    "refunded_at": {
-      "deprecated": true,
-      "oneOf": [
-        {
-          "type": "string",
-          "format": "date-time",
-          "description": "Not used"
         },
         {
           "type": "null"
@@ -303,18 +254,6 @@
         }
       ]
     },
-    "signed_transactions": {
-      "deprecated": true,
-      "oneOf": [
-        {
-          "type": "string",
-          "description": "Is not used"
-        },
-        {
-          "type": "null"
-        }
-      ]
-    },
     "metadata": {
       "deprecated": true,
       "oneOf": [
@@ -325,6 +264,15 @@
               "type": "integer",
               "example": 13,
               "description": "If signing fails this represents the number of transactions since signing last succeded"
+            },
+            "payback_number": {
+              "type": "string"
+            },
+            "previous_tx_client_id": {
+              "type": "string",
+              "format": "uuid",
+              "example": "5ad2351d-9a67-45f9-ad4f-0abcbefa9037",
+              "description": "TODO"
             },
             "origin": {
               "type": "object",
@@ -419,7 +367,7 @@
               "type": "string",
               "format": "uuid",
               "example": "09a9a469-c16b-4b54-835d-692d05d218f9",
-              "description": "If sfes are involved, the Tillhub resource identifier of that safe"
+              "description": "If safes are involved, the Tillhub resource identifier of that safe (currently ignored by the API)"
             }
           }
         },
@@ -476,7 +424,15 @@
         {
           "type": "array",
           "items": {
-            "type": "object"
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
+              }
+            }
           }
         },
         {
@@ -1065,6 +1021,18 @@
               ],
               "default": null
             },
+            "previous_tx_client_id": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "description": "Previous transaction client id."
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null
+            },
             "counters": {
               "oneOf": [
                 {
@@ -1445,6 +1413,7 @@
         "properties": {
           "quantity": {
             "deprecated": true,
+            "type": "number",
             "oneOf": [
               {
                 "description": "Quantity of the product in that item, supports floating point for e.g. 2.73 kg. The POS sends it currently as string."
@@ -1456,6 +1425,7 @@
           },
           "article_number": {
             "deprecated": true,
+            "type": "integer",
             "oneOf": [
               {
                 "description": "Apparently not used"
@@ -1467,6 +1437,7 @@
           },
           "article_attr_desc": {
             "deprecated": true,
+            "type": "string",
             "oneOf": [
               {
                 "description": "Apparently not used"
@@ -1482,7 +1453,7 @@
               {
                 "type": "integer",
                 "example": 799,
-                "description": "The per qty=1 raw price of the product in the lowest (available) fraction of that currency -> 7.99 EUR or 799 HUF respectively"
+                "description": "The per qty=1 raw price of the product in the lowest (available) fraction of that currency -> 7.99 EUR or 799 HUF respectively (represented as integer)"
               },
               {
                 "type": "null"
@@ -1495,7 +1466,7 @@
               {
                 "type": "integer",
                 "example": 612,
-                "description": "The per qty=1 (disocunted) price of the product in the lowest (available) fraction of that currency -> 6.12 EUR or 612 HUF respectively"
+                "description": "The per qty=1 (disocunted) price of the product in the lowest (available) fraction of that currency -> 6.12 EUR or 612 HUF respectively (represented as integer)"
               },
               {
                 "type": "null"
@@ -1508,7 +1479,7 @@
               {
                 "type": "integer",
                 "example": 1671,
-                "description": "The total (disocunted) revenue of the item, before or after taxes depending on the scheme, 16.71 EUR or 1671 HUF respectively"
+                "description": "The total (disocunted) revenue of the item, before or after taxes depending on the scheme, 16.71 EUR or 1671 HUF respectively (represented as integer)"
               },
               {
                 "type": "null"
@@ -1560,7 +1531,7 @@
               {
                 "type": "integer",
                 "example": 267,
-                "description": "The total amount of VAT on the item, 2.67 EUR or 267 HUF respectively"
+                "description": "The total amount of VAT on the item, 2.67 EUR or 267 HUF respectively (represented as integer)"
               },
               {
                 "type": "null"
@@ -1594,6 +1565,7 @@
             ]
           },
           "article_id": {
+            "type": "integer",
             "deprecated": true,
             "oneOf": [
               {
@@ -1605,6 +1577,7 @@
             ]
           },
           "vat_amount_euro": {
+            "type": "string",
             "deprecated": true,
             "oneOf": [
               {
@@ -1621,7 +1594,7 @@
               {
                 "type": "integer",
                 "example": 187,
-                "description": "Discount amount (per qty 1) = article_price - selling_price, 1.87 EUR or 187 HUF respectively"
+                "description": "Discount amount (per qty 1) = article_price - selling_price, 1.87 EUR or 187 HUF respectively (represented as integer)"
               },
               {
                 "type": "null"
@@ -1642,6 +1615,7 @@
             ]
           },
           "guid": {
+            "type": "string",
             "deprecated": true,
             "oneOf": [
               {
@@ -1666,6 +1640,7 @@
             ]
           },
           "product_group_id": {
+            "type": "integer",
             "deprecated": true,
             "oneOf": [
               {
@@ -1691,7 +1666,7 @@
             "deprecated": true,
             "oneOf": [
               {
-                "type": "number",
+                "type": "integer",
                 "description": "If true, the item was created by (partially) refunding a previous sale. The POS sends 0 for false and 1 for true."
               },
               {
@@ -1922,12 +1897,12 @@
                     "amount": {
                       "type": "integer",
                       "example": 43,
-                      "description": "The per qty=1 effective discount amount -> 0.43 EUR or 43 HUF respectively"
+                      "description": "The per qty=1 effective discount amount -> 0.43 EUR or 43 HUF respectively (represented as integer)"
                     },
                     "amount_total": {
                       "type": "integer",
                       "example": 312,
-                      "description": "The total effective discount amount -> 3.12 EUR or 312 HUF respectively"
+                      "description": "The total effective discount amount -> 3.12 EUR or 312 HUF respectively (represented as integer)"
                     },
                     "external_reference_id": {
                       "description": "A caller defined custom ID for the purpose of syncing from external resources, or to use in analytics.",
@@ -1975,23 +1950,6 @@
                             "last"
                           ],
                           "default": "last"
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ]
-                    },
-                    "vat_rate_class": {
-                      "oneOf": [
-                        {
-                          "default": "normal",
-                          "description": "Rate class from 'taxes.rate_class' according to international standards, used in Germany to map types for e.g. fiscalization",
-                          "type": "string",
-                          "enum": [
-                            "normal",
-                            "reduced",
-                            "super_reduced"
-                          ]
                         },
                         {
                           "type": "null"
@@ -3657,7 +3615,7 @@
               {
                 "type": "integer",
                 "example": 2000,
-                "description": "The given amount via this payment, 20.00 EUR or 2000 HUF respectively"
+                "description": "The given amount via this payment, 20.00 EUR or 2000 HUF respectively (represented as integer)"
               },
               {
                 "type": "null"
@@ -3695,9 +3653,9 @@
             "deprecated": true,
             "oneOf": [
               {
-                "type": "string",
-                "example": "2.315",
-                "description": "String encoded number, not used"
+                "type": "number",
+                "example": 2.315,
+                "description": "not used"
               },
               {
                 "type": "null"
@@ -3747,7 +3705,7 @@
                 "type": "string",
                 "format": "uuid",
                 "example": "96b619a6-6189-4f03-a135-e1b307d664de",
-                "description": "The Tillhub payment option resource used for this payment"
+                "description": "The Tillhub payment option resource used for this payment. Not used by the API"
               },
               {
                 "type": "null"
@@ -3784,7 +3742,7 @@
               {
                 "type": "integer",
                 "example": 110,
-                "description": "The given tip via this payment, 1.10 EUR or 110 HUF respectively"
+                "description": "The given tip via this payment, 1.10 EUR or 110 HUF respectively (represented as integer)"
               },
               {
                 "type": "null"
@@ -4269,11 +4227,11 @@
           "_position": {
             "oneOf": [
               {
-                "type": "number",
+                "type": "integer",
                 "description": "The position of the payment item. E.g. positon 1 (2, 3 etc.) in the transaction.",
                 "minimum": 0,
                 "maximum": 300,
-                "example": "1"
+                "example": 1
               },
               {
                 "type": "null"
