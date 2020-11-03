@@ -1,3 +1,10 @@
+## [5.94.1](https://github.com/tillhub/schemas/compare/v5.94.0...v5.94.1) (2020-11-03)
+
+
+### Bug Fixes
+
+* **invoices:** add title for customer number on templates ([3cf0494](https://github.com/tillhub/schemas/commit/3cf0494))
+
 # [5.94.0](https://github.com/tillhub/schemas/compare/v5.93.0...v5.94.0) (2020-11-02)
 
 

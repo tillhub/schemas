@@ -217,6 +217,10 @@
               "type": "string",
               "maxLength": 32
             },
+            "show_customer_title": {
+              "type": "string",
+              "maxLength": 32
+            },
             "date_of_issue_title": {
               "type": "string",
               "maxLength": 32
@@ -886,6 +890,10 @@
               "type": "string",
               "maxLength": 32
             },
+            "show_customer_title": {
+              "type": "string",
+              "maxLength": 32
+            },
             "date_of_issue_title": {
               "type": "string",
               "maxLength": 32
@@ -1552,6 +1560,10 @@
               "maxLength": 32
             },
             "cashier_title": {
+              "type": "string",
+              "maxLength": 32
+            },
+            "show_customer_title": {
               "type": "string",
               "maxLength": 32
             },
