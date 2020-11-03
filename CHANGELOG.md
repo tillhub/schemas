@@ -1,3 +1,10 @@
+## [5.94.2](https://github.com/tillhub/schemas/compare/v5.94.1...v5.94.2) (2020-11-03)
+
+
+### Bug Fixes
+
+* **invoices:** fix customer number title ([a5ca13e](https://github.com/tillhub/schemas/commit/a5ca13e))
+
 ## [5.94.1](https://github.com/tillhub/schemas/compare/v5.94.0...v5.94.1) (2020-11-03)
 
 
