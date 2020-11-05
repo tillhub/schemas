@@ -1,3 +1,10 @@
+## [5.94.3](https://github.com/tillhub/schemas/compare/v5.94.2...v5.94.3) (2020-11-05)
+
+
+### Bug Fixes
+
+* **time_tracking:** add required field ([4a785de](https://github.com/tillhub/schemas/commit/4a785de))
+
 ## [5.94.2](https://github.com/tillhub/schemas/compare/v5.94.1...v5.94.2) (2020-11-03)
 
 
