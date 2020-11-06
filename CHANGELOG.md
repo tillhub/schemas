@@ -1,3 +1,10 @@
+# [5.96.0](https://github.com/tillhub/schemas/compare/v5.95.0...v5.96.0) (2020-11-06)
+
+
+### Features
+
+* **time_entries:** add patch schema ([031a64c](https://github.com/tillhub/schemas/commit/031a64c))
+
 # [5.95.0](https://github.com/tillhub/schemas/compare/v5.94.3...v5.95.0) (2020-11-05)
 
 
