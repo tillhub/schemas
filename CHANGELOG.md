@@ -1,3 +1,10 @@
+# [5.95.0](https://github.com/tillhub/schemas/compare/v5.94.3...v5.95.0) (2020-11-05)
+
+
+### Features
+
+* **timetracking_config:** Make automatic clock-out time configurable ([b184074](https://github.com/tillhub/schemas/commit/b184074))
+
 ## [5.94.3](https://github.com/tillhub/schemas/compare/v5.94.2...v5.94.3) (2020-11-05)
 
 

@@ -52,8 +52,8 @@
   "/transactions_ext.create.response.schema.json",
   "/vouchers.patch.schema.json",
   "/accounts.create.request.schema.json",
-  "/analytics.create.request.body.schema.json",
   "/accounts.update.request.schema.json",
+  "/analytics.create.request.body.schema.json",
   "/analytics.create.request.query.schema.json",
   "/analytics.create.response.schema.json",
   "/branch_groups.create.request.schema.json",
@@ -237,8 +237,8 @@
   "/taxes.create.request.schema.json",
   "/taxes.update.request.schema.json",
   "/things.notification.create.request.schema.json",
-  "/time_entries.create.response.schema.json",
   "/time_entries.create.request.schema.json",
+  "/time_entries.create.response.schema.json",
   "/time_entries.update.request.schema.json",
   "/time_entries.update.response.schema.json",
   "/tokens.block.request.schema.json",
@@ -264,8 +264,8 @@
   "/voucher_systems.templates.update.request.schema.json",
   "/voucher_systems.templates.update.response.schema.json",
   "/voucher_systems.update.request.schema.json",
-  "/voucher_systems.update.templates.request.schema.json",
   "/voucher_systems.update.response.schema.json",
+  "/voucher_systems.update.templates.request.schema.json",
   "/voucher_systems.update.templates.response.schema.json",
   "/vouchers.create.schema.json",
   "/vouchers.customers.create.schema.json",
@@ -278,6 +278,6 @@
   "/configurations.create.request.schema.json",
   "/configurations.update.request.schema.json",
   "/profile.create.request.schema.json",
-  "/support.create.request.schema.json",
-  "/profile.update.request.schema.json"
+  "/profile.update.request.schema.json",
+  "/support.create.request.schema.json"
 ]
