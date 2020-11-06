@@ -1,3 +1,10 @@
+## [5.96.1](https://github.com/tillhub/schemas/compare/v5.96.0...v5.96.1) (2020-11-06)
+
+
+### Bug Fixes
+
+* **time_tracking:** revert required fields on update ([022068e](https://github.com/tillhub/schemas/commit/022068e))
+
 # [5.96.0](https://github.com/tillhub/schemas/compare/v5.95.0...v5.96.0) (2020-11-06)
 
 

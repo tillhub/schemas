@@ -3,10 +3,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "additionalProperties": false,
   "type": "object",
-  "required": [
-    "started_at",
-    "staff"
-  ],
+  "required": [],
   "properties": {
     "type": {
       "description": "The type of the time entry.",
