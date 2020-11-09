@@ -65,7 +65,7 @@
             "type": "string",
             "format": "date-time",
             "example": "2018-11-04T23:18:43.075Z",
-            "description": "The server creation time of this transaction."
+            "description": "The server update time of this transaction."
           },
           "temporary_id": {
             "oneOf": [
@@ -108,7 +108,7 @@
               {
                 "type": "string",
                 "example": "886eef646bc1c4d79eb8495321bbd472",
-                "description": "Initialized as the iPAD's UIDevice.current.identifierForVendor?.uuidString.md5() and stored in the Keychain for the Tillhub application"
+                "description": "Unique identifier for the physical device which is bound to a license\n\nInitialized as the iPAD's UIDevice.current.identifierForVendor?.uuidString.md5() and stored in the Keychain for the Tillhub application.\nMachineGuid (win) or IOPlatformUUID (mac) in electron pos."
               },
               {
                 "type": "null"
@@ -134,7 +134,7 @@
               {
                 "type": "integer",
                 "example": 5,
-                "description": "The associated balance's counting number (receipt number) of this transaction"
+                "description": "The associated balance's counting number (receipt number) of this transaction. A sequential counter that may be reset in error cases."
               },
               {
                 "type": "null"
@@ -1530,7 +1530,7 @@
                   "type": "string",
                   "format": "date-time",
                   "example": "2018-11-04T23:18:43.075Z",
-                  "description": "The server creation time of this transaction."
+                  "description": "The server update time of this transaction."
                 },
                 "_id": {
                   "oneOf": [
@@ -3793,7 +3793,7 @@
                   "type": "string",
                   "format": "date-time",
                   "example": "2018-11-04T23:18:43.075Z",
-                  "description": "The server creation time of this transaction."
+                  "description": "The server upodate time of this transaction."
                 },
                 "fa_account_number": {
                   "deprecated": true,

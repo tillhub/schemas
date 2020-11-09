@@ -1,3 +1,18 @@
+# [5.99.0](https://github.com/tillhub/schemas/compare/v5.98.0...v5.99.0) (2020-11-09)
+
+
+### Bug Fixes
+
+* **balances:** extended ([06ec68b](https://github.com/tillhub/schemas/commit/06ec68b))
+* **cash_units:** revert unrelated changes ([f5b9449](https://github.com/tillhub/schemas/commit/f5b9449))
+
+
+### Features
+
+* **balances:** extended ([9b6067f](https://github.com/tillhub/schemas/commit/9b6067f))
+* **balances:** legacy ([194546c](https://github.com/tillhub/schemas/commit/194546c))
+* **balances_v1:** legacy ([a36411a](https://github.com/tillhub/schemas/commit/a36411a))
+
 # [5.98.0](https://github.com/tillhub/schemas/compare/v5.97.0...v5.98.0) (2020-11-09)
 
 

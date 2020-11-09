@@ -16,7 +16,7 @@
         {
           "type": "string",
           "example": "886eef646bc1c4d79eb8495321bbd472",
-          "description": "Initialized as the iPAD's UIDevice.current.identifierForVendor?.uuidString.md5() and stored in the Keychain for the Tillhub application"
+          "description": "Unique identifier for the physical device which is bound to a license\n\nInitialized as the iPAD's UIDevice.current.identifierForVendor?.uuidString.md5() and stored in the Keychain for the Tillhub application.\nMachineGuid (win) or IOPlatformUUID (mac) in electron pos."
         },
         {
           "type": "null"
@@ -42,7 +42,7 @@
         {
           "type": "integer",
           "example": 5,
-          "description": "The associated balance's counting number (receipt number) of this transaction"
+          "description": "The associated balance's counting number (receipt number) of this transaction. A sequential counter that may be reset in error cases."
         },
         {
           "type": "null"
