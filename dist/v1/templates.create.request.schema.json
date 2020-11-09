@@ -217,7 +217,7 @@
               "type": "string",
               "maxLength": 32
             },
-            "show_customer_title": {
+            "customer_number_title": {
               "type": "string",
               "maxLength": 32
             },
@@ -890,7 +890,7 @@
               "type": "string",
               "maxLength": 32
             },
-            "show_customer_title": {
+            "customer_number_title": {
               "type": "string",
               "maxLength": 32
             },
@@ -1563,7 +1563,7 @@
               "type": "string",
               "maxLength": 32
             },
-            "show_customer_title": {
+            "customer_number_title": {
               "type": "string",
               "maxLength": 32
             },

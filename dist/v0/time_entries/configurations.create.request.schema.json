@@ -60,9 +60,22 @@
       ]
     },
     "auto_clock_out_at_midnight": {
-      "description": "Automatically clock out at midnight.",
+      "description": "DEPRECATED: do not use - Automatically clock out at midnight.",
       "type": "boolean",
       "default": false
+    },
+    "auto_clock_out_at": {
+      "description": "Automatically clock out at specific time.",
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "time",
+          "example": "20:20:39+00:00"
+        },
+        {
+          "type": "null"
+        }
+      ]
     }
   }
 }

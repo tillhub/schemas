@@ -1,3 +1,45 @@
+# [5.97.0](https://github.com/tillhub/schemas/compare/v5.96.1...v5.97.0) (2020-11-09)
+
+
+### Features
+
+* **staff:** add external reference id ([264bdf4](https://github.com/tillhub/schemas/commit/264bdf4))
+
+## [5.96.1](https://github.com/tillhub/schemas/compare/v5.96.0...v5.96.1) (2020-11-06)
+
+
+### Bug Fixes
+
+* **time_tracking:** revert required fields on update ([022068e](https://github.com/tillhub/schemas/commit/022068e))
+
+# [5.96.0](https://github.com/tillhub/schemas/compare/v5.95.0...v5.96.0) (2020-11-06)
+
+
+### Features
+
+* **time_entries:** add patch schema ([031a64c](https://github.com/tillhub/schemas/commit/031a64c))
+
+# [5.95.0](https://github.com/tillhub/schemas/compare/v5.94.3...v5.95.0) (2020-11-05)
+
+
+### Features
+
+* **timetracking_config:** Make automatic clock-out time configurable ([b184074](https://github.com/tillhub/schemas/commit/b184074))
+
+## [5.94.3](https://github.com/tillhub/schemas/compare/v5.94.2...v5.94.3) (2020-11-05)
+
+
+### Bug Fixes
+
+* **time_tracking:** add required field ([4a785de](https://github.com/tillhub/schemas/commit/4a785de))
+
+## [5.94.2](https://github.com/tillhub/schemas/compare/v5.94.1...v5.94.2) (2020-11-03)
+
+
+### Bug Fixes
+
+* **invoices:** fix customer number title ([a5ca13e](https://github.com/tillhub/schemas/commit/a5ca13e))
+
 ## [5.94.1](https://github.com/tillhub/schemas/compare/v5.94.0...v5.94.1) (2020-11-03)
 
 
