@@ -5901,70 +5901,79 @@
           "type": "object",
           "properties": {
             "skip_x_report": {
-              "description": "If true, skips the x-report and directly goes to conduct a balance.",
-              "default": false,
               "oneOf": [
                 {
-                  "type": "null"
+                  "description": "If true, skips the x-report and directly goes to conduct a balance.",
+                  "type": "boolean",
+                  "default": false
                 },
                 {
-                  "type": "boolean"
+                  "type": "null"
                 }
               ]
             },
             "sales_required": {
-              "description": "If true, balances are not conductable without fiat/cash cashflows.",
-              "default": true,
               "oneOf": [
                 {
-                  "type": "null"
+                  "description": "If true, balances are not conductable without fiat/cash cashflows.",
+                  "type": "boolean",
+                  "default": true
                 },
                 {
-                  "type": "boolean"
+                  "type": "null"
                 }
               ]
             },
             "discrepancy_warning": {
-              "description": "If true, warns the user when cash counted is not equal to cash calculated.",
-              "default": true,
               "oneOf": [
                 {
-                  "type": "null"
+                  "description": "If true, warns the user when cash counted is not equal to cash calculated.",
+                  "type": "boolean",
+                  "default": true
                 },
                 {
-                  "type": "boolean"
+                  "type": "null"
                 }
               ]
             },
             "extended_report": {
-              "description": "If true, adds extended balance information to the UI.",
-              "default": false,
               "oneOf": [
                 {
-                  "type": "null"
+                  "description": "If true, adds extended balance information to the UI.",
+                  "type": "boolean",
+                  "default": false
                 },
                 {
-                  "type": "boolean"
+                  "type": "null"
                 }
               ]
             },
             "print_extended": {
-              "description": "If true and extended_report = true - prints extended balance information on the receipt.",
-              "default": false,
               "oneOf": [
                 {
-                  "type": "null"
+                  "description": "If true and extended_report = true - prints extended balance information on the receipt.",
+                  "type": "boolean",
+                  "default": false
                 },
                 {
-                  "type": "boolean"
+                  "type": "null"
+                }
+              ]
+            },
+            "extended_excludes_vouchers": {
+              "oneOf": [
+                {
+                  "description": "If true and extended_report = true - excludes vouchers from the calculation (switches to a different set of properties).",
+                  "type": "boolean",
+                  "default": false
+                },
+                {
+                  "type": "null"
                 }
               ]
             },
             "extended_data_layout": {
               "oneOf": [
-                {
-                  "type": "null"
-                },
                 {
                   "type": "object",
                   "additionalProperties": false,
@@ -6021,6 +6030,9 @@
                       "default": "true"
                     }
                   }
+                },
+                {
+                  "type": "null"
                 }
               ]
             },

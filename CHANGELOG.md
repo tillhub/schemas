@@ -1,3 +1,10 @@
+# [5.98.0](https://github.com/tillhub/schemas/compare/v5.97.0...v5.98.0) (2020-11-09)
+
+
+### Features
+
+* **configurations:** balances ([1b7862f](https://github.com/tillhub/schemas/commit/1b7862f))
+
 # [5.97.0](https://github.com/tillhub/schemas/compare/v5.96.1...v5.97.0) (2020-11-09)
 
 
