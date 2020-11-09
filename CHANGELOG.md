@@ -1,3 +1,10 @@
+# [5.97.0](https://github.com/tillhub/schemas/compare/v5.96.1...v5.97.0) (2020-11-09)
+
+
+### Features
+
+* **staff:** add external reference id ([264bdf4](https://github.com/tillhub/schemas/commit/264bdf4))
+
 ## [5.96.1](https://github.com/tillhub/schemas/compare/v5.96.0...v5.96.1) (2020-11-06)
 
 
