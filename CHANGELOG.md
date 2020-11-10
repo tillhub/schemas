@@ -1,3 +1,10 @@
+# [5.100.0](https://github.com/tillhub/schemas/compare/v5.99.0...v5.100.0) (2020-11-10)
+
+
+### Features
+
+* **configurations:** products ([aec572e](https://github.com/tillhub/schemas/commit/aec572e))
+
 # [5.99.0](https://github.com/tillhub/schemas/compare/v5.98.0...v5.99.0) (2020-11-09)
 
 
