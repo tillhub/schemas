@@ -32,6 +32,7 @@
       "type": "string",
       "enum": [
         "tillhub_shop",
+        "localsearch_shop",
         "ecwid",
         "shopify"
       ]

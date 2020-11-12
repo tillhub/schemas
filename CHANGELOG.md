@@ -1,3 +1,10 @@
+# [5.101.0](https://github.com/tillhub/schemas/compare/v5.100.0...v5.101.0) (2020-11-12)
+
+
+### Features
+
+* **storefronts:** add localsearch_shop type ([#500](https://github.com/tillhub/schemas/issues/500)) ([b7e83ca](https://github.com/tillhub/schemas/commit/b7e83ca))
+
 # [5.100.0](https://github.com/tillhub/schemas/compare/v5.99.0...v5.100.0) (2020-11-10)
 
 
