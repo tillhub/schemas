@@ -1,3 +1,31 @@
+# [5.105.0](https://github.com/tillhub/schemas/compare/v5.104.0...v5.105.0) (2020-12-03)
+
+
+### Features
+
+* **counting_numbers:** decision ([#501](https://github.com/tillhub/schemas/issues/501)) ([9b60483](https://github.com/tillhub/schemas/commit/9b60483))
+
+# [5.104.0](https://github.com/tillhub/schemas/compare/v5.103.0...v5.104.0) (2020-12-03)
+
+
+### Features
+
+* **payment_options:** add new type for terminal gifz cards ([be44903](https://github.com/tillhub/schemas/commit/be44903))
+
+# [5.103.0](https://github.com/tillhub/schemas/compare/v5.102.0...v5.103.0) (2020-11-26)
+
+
+### Features
+
+* **configurations:** receipts ([1c1eb29](https://github.com/tillhub/schemas/commit/1c1eb29))
+
+# [5.102.0](https://github.com/tillhub/schemas/compare/v5.101.0...v5.102.0) (2020-11-19)
+
+
+### Features
+
+* **staff:** permissions ([7240589](https://github.com/tillhub/schemas/commit/7240589))
+
 # [5.101.0](https://github.com/tillhub/schemas/compare/v5.100.0...v5.101.0) (2020-11-12)
 
 

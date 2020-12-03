@@ -38,8 +38,8 @@
   "/registers.create.request.schema.json",
   "/registers.notification.create.request.schema.json",
   "/registers.update.request.schema.json",
-  "/templates.put.request.schema.json",
   "/templates.create.request.schema.json",
+  "/templates.put.request.schema.json",
   "/transacions_ext.update.request.schema.json",
   "/transacions_ext.update.response.schema.json",
   "/transactions.create.request.schema.json",
@@ -99,8 +99,8 @@
   "/customers.create.request.schema.json",
   "/customers.ext.create.request.schema.json",
   "/customers.ext.update.request.schema.json",
-  "/customers.notes.create.request.schema.json",
   "/customers.update.request.schema.json",
+  "/customers.notes.create.request.schema.json",
   "/deliveries.create.request.schema.json",
   "/deliveries.items.update.request.schema.json",
   "/deliveries.update.request.schema.json",
@@ -279,7 +279,7 @@
   "/webhooks.update.request.schema.json",
   "/configurations.create.request.schema.json",
   "/configurations.update.request.schema.json",
-  "/profile.update.request.schema.json",
   "/profile.create.request.schema.json",
+  "/profile.update.request.schema.json",
   "/support.create.request.schema.json"
 ]
