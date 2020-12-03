@@ -1,3 +1,10 @@
+## [5.105.1](https://github.com/tillhub/schemas/compare/v5.105.0...v5.105.1) (2020-12-03)
+
+
+### Bug Fixes
+
+* **transactions:** counting_numbers ([a30ed2b](https://github.com/tillhub/schemas/commit/a30ed2b))
+
 # [5.105.0](https://github.com/tillhub/schemas/compare/v5.104.0...v5.105.0) (2020-12-03)
 
 
