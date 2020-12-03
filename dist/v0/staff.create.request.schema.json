@@ -263,6 +263,7 @@
                   "staff:staff:settings:printer:update",
                   "staff:staff:settings:printer:read",
                   "staff:staff:settings:printer:delete",
+                  "staff:staff:settings:printer:drawer:open",
                   "staff:staff:settings:terminal",
                   "staff:staff:settings:terminal:create",
                   "staff:staff:settings:terminal:update",

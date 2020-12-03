@@ -23,6 +23,7 @@
         "card_tim",
         "card_adyen",
         "gift_card",
+        "terminal_gift_card",
         "default",
         "undefined",
         "voucher",

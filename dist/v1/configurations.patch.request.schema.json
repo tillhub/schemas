@@ -2973,10 +2973,22 @@
                       "type": "object",
                       "additionalProperties": false,
                       "properties": {
+                        "print_branch_logo": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the branch logo will be printed (for types that support it)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
                         "print_branch_header": {
                           "oneOf": [
                             {
-                              "description": "Defines if the branch header will be rpinted",
+                              "description": "Defines if the branch header will be printed",
                               "type": "boolean",
                               "default": true
                             },
@@ -2988,7 +3000,7 @@
                         "print_branch_footer": {
                           "oneOf": [
                             {
-                              "description": "Defines if the branch footer will be rpinted",
+                              "description": "Defines if the branch footer will be printed (for types that support it)",
                               "type": "boolean",
                               "default": true
                             },
@@ -3022,10 +3034,22 @@
                       "type": "object",
                       "additionalProperties": false,
                       "properties": {
+                        "print_branch_logo": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the branch logo will be printed (for types that support it)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
                         "print_branch_header": {
                           "oneOf": [
                             {
-                              "description": "Defines if the branch header will be rpinted",
+                              "description": "Defines if the branch header will be printed",
                               "type": "boolean",
                               "default": true
                             },
@@ -3037,7 +3061,7 @@
                         "print_branch_footer": {
                           "oneOf": [
                             {
-                              "description": "Defines if the branch footer will be rpinted",
+                              "description": "Defines if the branch footer will be printed (for types that support it)",
                               "type": "boolean",
                               "default": true
                             },
@@ -3454,10 +3478,22 @@
                       "type": "object",
                       "additionalProperties": false,
                       "properties": {
+                        "print_branch_logo": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the branch logo will be printed (for types that support it)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
                         "print_branch_header": {
                           "oneOf": [
                             {
-                              "description": "Defines if the branch header will be rpinted",
+                              "description": "Defines if the branch header will be printed",
                               "type": "boolean",
                               "default": true
                             },
@@ -3469,7 +3505,7 @@
                         "print_branch_footer": {
                           "oneOf": [
                             {
-                              "description": "Defines if the branch footer will be rpinted",
+                              "description": "Defines if the branch footer will be printed (for types that support it)",
                               "type": "boolean",
                               "default": true
                             },
@@ -3886,10 +3922,22 @@
                       "type": "object",
                       "additionalProperties": false,
                       "properties": {
+                        "print_branch_logo": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the branch logo will be printed (for types that support it)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
                         "print_branch_header": {
                           "oneOf": [
                             {
-                              "description": "Defines if the branch header will be rpinted",
+                              "description": "Defines if the branch header will be printed",
                               "type": "boolean",
                               "default": true
                             },
@@ -3901,7 +3949,7 @@
                         "print_branch_footer": {
                           "oneOf": [
                             {
-                              "description": "Defines if the branch footer will be rpinted",
+                              "description": "Defines if the branch footer will be printed (for types that support it)",
                               "type": "boolean",
                               "default": true
                             },
@@ -4318,10 +4366,22 @@
                       "type": "object",
                       "additionalProperties": false,
                       "properties": {
+                        "print_branch_logo": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the branch logo will be printed (for types that support it)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
                         "print_branch_header": {
                           "oneOf": [
                             {
-                              "description": "Defines if the branch header will be rpinted",
+                              "description": "Defines if the branch header will be printed",
                               "type": "boolean",
                               "default": true
                             },
@@ -4333,7 +4393,7 @@
                         "print_branch_footer": {
                           "oneOf": [
                             {
-                              "description": "Defines if the branch footer will be rpinted",
+                              "description": "Defines if the branch footer will be printed (for types that support it)",
                               "type": "boolean",
                               "default": true
                             },
@@ -5005,10 +5065,22 @@
                       "type": "object",
                       "additionalProperties": false,
                       "properties": {
+                        "print_branch_logo": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the branch logo will be printed (for types that support it)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
                         "print_branch_header": {
                           "oneOf": [
                             {
-                              "description": "Defines if the branch header will be rpinted",
+                              "description": "Defines if the branch header will be printed",
                               "type": "boolean",
                               "default": true
                             },
@@ -5020,7 +5092,7 @@
                         "print_branch_footer": {
                           "oneOf": [
                             {
-                              "description": "Defines if the branch footer will be rpinted",
+                              "description": "Defines if the branch footer will be printed (for types that support it)",
                               "type": "boolean",
                               "default": true
                             },
