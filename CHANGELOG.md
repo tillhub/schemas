@@ -1,3 +1,10 @@
+## [5.105.2](https://github.com/tillhub/schemas/compare/v5.105.1...v5.105.2) (2020-12-03)
+
+
+### Bug Fixes
+
+* **time_tracking:** fix configurations default ([7e7a194](https://github.com/tillhub/schemas/commit/7e7a194))
+
 ## [5.105.1](https://github.com/tillhub/schemas/compare/v5.105.0...v5.105.1) (2020-12-03)
 
 
