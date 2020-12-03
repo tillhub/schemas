@@ -3888,7 +3888,8 @@
                         "card_concardis",
                         "card_tim",
                         "card_adyen",
-                        "card"
+                        "card",
+                        "terminal_gift_card"
                       ],
                       "description": "Payment option type"
                     },
@@ -4039,6 +4040,7 @@
                       "description": "",
                       "enum": [
                         "card",
+                        "terminal_gift_card",
                         "cash",
                         "expense",
                         "voucher",

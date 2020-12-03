@@ -1,3 +1,10 @@
+# [5.104.0](https://github.com/tillhub/schemas/compare/v5.103.0...v5.104.0) (2020-12-03)
+
+
+### Features
+
+* **payment_options:** add new type for terminal gifz cards ([be44903](https://github.com/tillhub/schemas/commit/be44903))
+
 # [5.103.0](https://github.com/tillhub/schemas/compare/v5.102.0...v5.103.0) (2020-11-26)
 
 
