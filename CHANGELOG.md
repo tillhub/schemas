@@ -1,3 +1,10 @@
+# [5.105.0](https://github.com/tillhub/schemas/compare/v5.104.0...v5.105.0) (2020-12-03)
+
+
+### Features
+
+* **counting_numbers:** decision ([#501](https://github.com/tillhub/schemas/issues/501)) ([9b60483](https://github.com/tillhub/schemas/commit/9b60483))
+
 # [5.104.0](https://github.com/tillhub/schemas/compare/v5.103.0...v5.104.0) (2020-12-03)
 
 
