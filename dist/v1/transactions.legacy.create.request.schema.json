@@ -26,12 +26,13 @@
     "counting_decision": {
       "oneOf": [
         {
-          "description": "Describes a non-negative monetary value in a specific currency.",
+          "description": "Describes a very inrequent new decision about the state of a specific counting number.",
           "type": "object",
           "additionalProperties": false,
           "required": [
+            "date",
             "type",
-            "currency"
+            "decision"
           ],
           "properties": {
             "date": {

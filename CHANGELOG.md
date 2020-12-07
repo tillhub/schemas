@@ -1,3 +1,24 @@
+## [5.105.3](https://github.com/tillhub/schemas/compare/v5.105.2...v5.105.3) (2020-12-07)
+
+
+### Bug Fixes
+
+* **pricebook/entry:** allow 4 decimals for discounts ([40b477a](https://github.com/tillhub/schemas/commit/40b477a))
+
+## [5.105.2](https://github.com/tillhub/schemas/compare/v5.105.1...v5.105.2) (2020-12-03)
+
+
+### Bug Fixes
+
+* **time_tracking:** fix configurations default ([7e7a194](https://github.com/tillhub/schemas/commit/7e7a194))
+
+## [5.105.1](https://github.com/tillhub/schemas/compare/v5.105.0...v5.105.1) (2020-12-03)
+
+
+### Bug Fixes
+
+* **transactions:** counting_numbers ([a30ed2b](https://github.com/tillhub/schemas/commit/a30ed2b))
+
 # [5.105.0](https://github.com/tillhub/schemas/compare/v5.104.0...v5.105.0) (2020-12-03)
 
 
