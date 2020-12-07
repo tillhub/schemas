@@ -524,7 +524,7 @@
       "oneOf": [
         {
           "type": "number",
-          "multipleOf": 0.001
+          "multipleOf": 0.0001
         },
         {
           "type": "null"
@@ -536,7 +536,7 @@
       "oneOf": [
         {
           "type": "number",
-          "multipleOf": 0.001
+          "multipleOf": 0.0001
         },
         {
           "type": "null"
