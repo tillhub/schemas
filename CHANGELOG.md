@@ -1,3 +1,11 @@
+# [5.106.0](https://github.com/tillhub/schemas/compare/v5.105.3...v5.106.0) (2020-12-10)
+
+
+### Features
+
+* **configurations:** receipts ([1fcaba5](https://github.com/tillhub/schemas/commit/1fcaba5))
+* change default allow_disconnected_terminals ([#506](https://github.com/tillhub/schemas/issues/506)) ([29aea56](https://github.com/tillhub/schemas/commit/29aea56))
+
 ## [5.105.3](https://github.com/tillhub/schemas/compare/v5.105.2...v5.105.3) (2020-12-07)
 
 
