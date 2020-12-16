@@ -1,3 +1,10 @@
+# [6.1.0](https://github.com/tillhub/schemas/compare/v6.0.0...v6.1.0) (2020-12-16)
+
+
+### Features
+
+* **templates:** add transaction receipt ([8de9a90](https://github.com/tillhub/schemas/commit/8de9a90))
+
 # [6.0.0](https://github.com/tillhub/schemas/compare/v5.106.0...v6.0.0) (2020-12-16)
 
 
