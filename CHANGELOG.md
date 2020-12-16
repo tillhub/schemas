@@ -1,3 +1,17 @@
+# [6.0.0](https://github.com/tillhub/schemas/compare/v5.106.0...v6.0.0) (2020-12-16)
+
+
+### Features
+
+* **branches:** add cost_center ([0b6c978](https://github.com/tillhub/schemas/commit/0b6c978))
+
+
+### BREAKING CHANGES
+
+* **branches:** new field in branches
+
+API-306
+
 # [5.106.0](https://github.com/tillhub/schemas/compare/v5.105.3...v5.106.0) (2020-12-10)
 
 
