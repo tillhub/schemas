@@ -40,6 +40,26 @@
             }
           ]
         },
+        "salesman": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "salesman_number": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
         "transaction_number": {
           "anyOf": [
             {
