@@ -1,3 +1,10 @@
+## [6.2.3](https://github.com/tillhub/schemas/compare/v6.2.2...v6.2.3) (2020-12-18)
+
+
+### Bug Fixes
+
+* **templates:** add summary items ([ccd1f54](https://github.com/tillhub/schemas/commit/ccd1f54))
+
 ## [6.2.2](https://github.com/tillhub/schemas/compare/v6.2.1...v6.2.2) (2020-12-18)
 
 

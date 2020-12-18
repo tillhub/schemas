@@ -527,7 +527,7 @@
               "total_discount",
               "VAT",
               "change_total",
-              "payment_method"
+              "payment"
             ]
           },
           "description": {
@@ -537,6 +537,11 @@
                 "description": "If name == VAT percentage encodig",
                 "example": "19.0",
                 "multipleOf": 0.01
+              },
+              {
+                "type": "string",
+                "description": "If name == payment the payment method given",
+                "example": "Cash"
               },
               {
                 "type": "null"
