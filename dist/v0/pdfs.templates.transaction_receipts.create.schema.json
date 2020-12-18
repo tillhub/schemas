@@ -525,7 +525,9 @@
               "net_total",
               "total",
               "total_discount",
-              "VAT"
+              "VAT",
+              "change_total",
+              "payment_method"
             ]
           },
           "description": {
