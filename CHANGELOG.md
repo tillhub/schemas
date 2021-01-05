@@ -1,3 +1,10 @@
+# [6.3.0](https://github.com/tillhub/schemas/compare/v6.2.3...v6.3.0) (2021-01-05)
+
+
+### Features
+
+* **configurations:** settings ([acaa52c](https://github.com/tillhub/schemas/commit/acaa52c))
+
 ## [6.2.3](https://github.com/tillhub/schemas/compare/v6.2.2...v6.2.3) (2020-12-18)
 
 
