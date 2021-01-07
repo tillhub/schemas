@@ -1,3 +1,10 @@
+# [6.4.0](https://github.com/tillhub/schemas/compare/v6.3.0...v6.4.0) (2021-01-07)
+
+
+### Features
+
+* **interfaces:** default payment types to true ([e73e789](https://github.com/tillhub/schemas/commit/e73e789))
+
 # [6.3.0](https://github.com/tillhub/schemas/compare/v6.2.3...v6.3.0) (2021-01-05)
 
 

@@ -5836,7 +5836,7 @@
                   "properties": {
                     "enabled": {
                       "type": "boolean",
-                      "default": false
+                      "default": true
                     }
                   }
                 },
@@ -5845,7 +5845,7 @@
                   "properties": {
                     "enabled": {
                       "type": "boolean",
-                      "default": false
+                      "default": true
                     }
                   }
                 },
@@ -5854,7 +5854,7 @@
                   "properties": {
                     "enabled": {
                       "type": "boolean",
-                      "default": false
+                      "default": true
                     }
                   }
                 },
@@ -5863,7 +5863,7 @@
                   "properties": {
                     "enabled": {
                       "type": "boolean",
-                      "default": false
+                      "default": true
                     }
                   }
                 },
@@ -5872,7 +5872,7 @@
                   "properties": {
                     "enabled": {
                       "type": "boolean",
-                      "default": false
+                      "default": true
                     }
                   }
                 }
