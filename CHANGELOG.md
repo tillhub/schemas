@@ -1,3 +1,10 @@
+# [6.5.0](https://github.com/tillhub/schemas/compare/v6.4.0...v6.5.0) (2021-01-21)
+
+
+### Features
+
+* **registers:** counting_decision ([#512](https://github.com/tillhub/schemas/issues/512)) ([87832bd](https://github.com/tillhub/schemas/commit/87832bd))
+
 # [6.4.0](https://github.com/tillhub/schemas/compare/v6.3.0...v6.4.0) (2021-01-07)
 
 
