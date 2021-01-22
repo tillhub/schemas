@@ -5864,6 +5864,20 @@
                     "enabled": {
                       "type": "boolean",
                       "default": true
+                    },
+                    "refresh_minutes": {
+                      "oneOf": [
+                        {
+                          "description": "Heartbeat interval (minutes) to refresh the sumup access token (best effort) - currently it expires after 1h",
+                          "type": "integer",
+                          "minimum": 2,
+                          "maximum": 60,
+                          "default": 10
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
                     }
                   }
                 },
