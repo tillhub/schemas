@@ -1,3 +1,10 @@
+# [6.7.0](https://github.com/tillhub/schemas/compare/v6.6.0...v6.7.0) (2021-01-28)
+
+
+### Features
+
+* **configurations:** transactions ([b6bbd5d](https://github.com/tillhub/schemas/commit/b6bbd5d))
+
 # [6.6.0](https://github.com/tillhub/schemas/compare/v6.5.0...v6.6.0) (2021-01-22)
 
 
