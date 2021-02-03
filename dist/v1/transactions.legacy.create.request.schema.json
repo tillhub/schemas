@@ -3470,7 +3470,7 @@
           "_amount_net": {
             "oneOf": [
               {
-                "description": "The payable net amount on the units qty base of 1,\nafter decrementing applicable discounts (meaning including discounts) etc. This value needs\nto be lower than or equal to the respective unit amount.\n\nNOTE: the effective financial value is `amount_net_total`. This value here is bankers rounded.\n\nWHEN TO USE: in analytics it is likely sometimes wanted to avergage the effective net product price, to e.g. compare\nit to undiscounted prices (unit price).",
+                "description": "The payable net amount (unit * qty) of this cartitem, after decrementing applicable discounts (meaning including discounts) etc.\nThis value needs to be lower than or equal to the respective `_amount_total_net`.\n(unit * qty) - _discount_amount_total",
                 "type": "number",
                 "minimum": -1000000,
                 "maximum": 1000000,
@@ -3484,7 +3484,7 @@
           "_amount_gross": {
             "oneOf": [
               {
-                "description": "The payable gross amount on the units qty base of 1, after decrementing\napplicable discounts etc.\nThis value needs to be lower than or equal to the respective unit amount.\n\nNOTE: the effective financial value is `amount_gross_total`. This value here is bankers rounded.\n\nWHEN TO USE: in analytics it is likely sometimes wanted to avergage the effective gross product price, to e.g. compare\nit to undiscounted prices (unit price).",
+                "description": "The payable gross amount (unit * qty) of this cartitem, after decrementing applicable discounts (meaning including discounts) etc.\nThis value needs to be lower than or equal to the respective `_amount_total_gross`.\n(unit * qty) - _discount_amount_total",
                 "type": "number",
                 "minimum": -1000000,
                 "maximum": 1000000,
@@ -3498,7 +3498,7 @@
           "_amount_total_net": {
             "oneOf": [
               {
-                "description": "The payable net amount total, after decrementing applicable discounts (meaning including discounts) etc.\nThis value needs to be lower than or equal to the respective unit amount.\n\nNOTE: this is the effective financial value in taxation.",
+                "description": "The payable net amount total, before decrementing applicable discounts etc.\n(unit * qty)",
                 "type": "number",
                 "minimum": -1000000,
                 "maximum": 1000000,
@@ -3512,7 +3512,7 @@
           "_amount_total_gross": {
             "oneOf": [
               {
-                "description": "The payable gross amount total, after decrementing applicable discounts (meaning\nincluding discounts) etc. This value needs to be lower than or equal to the respective unit amount.\n\nNOTE: this is the effective financial value in taxation.",
+                "description": "The payable gross amount total, before decrementing applicable discounts etc.\n(unit * qty)",
                 "type": "number",
                 "minimum": -1000000,
                 "maximum": 1000000,

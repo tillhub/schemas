@@ -1,3 +1,10 @@
+## [6.7.1](https://github.com/tillhub/schemas/compare/v6.7.0...v6.7.1) (2021-02-03)
+
+
+### Bug Fixes
+
+* tx_v1 cartitem field description ([cf1eaa2](https://github.com/tillhub/schemas/commit/cf1eaa2))
+
 # [6.7.0](https://github.com/tillhub/schemas/compare/v6.6.0...v6.7.0) (2021-01-28)
 
 
