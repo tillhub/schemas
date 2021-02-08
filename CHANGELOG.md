@@ -1,3 +1,13 @@
+# [6.8.0](https://github.com/tillhub/schemas/compare/v6.7.1...v6.8.0) (2021-02-08)
+
+
+### Features
+
+* **configurations:** transactions ([86b5108](https://github.com/tillhub/schemas/commit/86b5108))
+* **registers:** fiscal_signing ([cee0aa8](https://github.com/tillhub/schemas/commit/cee0aa8))
+* **registers:** fiscal_signing ([866b0fe](https://github.com/tillhub/schemas/commit/866b0fe))
+* **transactions:** statuses ([8194815](https://github.com/tillhub/schemas/commit/8194815))
+
 ## [6.7.1](https://github.com/tillhub/schemas/compare/v6.7.0...v6.7.1) (2021-02-03)
 
 

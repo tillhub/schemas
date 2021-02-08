@@ -2252,7 +2252,8 @@
                   "enum": [
                     "fiskaltrust",
                     "tse_fiskaly",
-                    "tse_epson"
+                    "tse_epson",
+                    "fr_NF525"
                   ]
                 },
                 "resource_type": {

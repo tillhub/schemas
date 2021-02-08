@@ -241,7 +241,8 @@
                   "enum": [
                     "fiskaltrust",
                     "tse_fiskaly",
-                    "tse_epson"
+                    "tse_epson",
+                    "fr_NF525"
                   ]
                 },
                 {
@@ -318,6 +319,17 @@
                           "type": "null"
                         }
                       ]
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "description": "Configuration object for France: NF525",
+                  "properties": {
+                    "enabled": {
+                      "type": "boolean",
+                      "description": "Activates the french signing process.",
+                      "default": true
                     }
                   }
                 },
