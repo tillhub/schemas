@@ -330,7 +330,7 @@
                 "maxLength": 3
               },
               "amount": {
-                "description": "the currency / amount object combination is the Tillhub Money object.",
+                "description": "The gross/net input price per quantity of 1.0 and before any discounts",
                 "type": "object",
                 "additionalProperties": false,
                 "anyOf": [
@@ -353,10 +353,18 @@
                 ],
                 "properties": {
                   "net": {
-                    "type": "number"
+                    "description": "A monetary value as .2Decimal excluding taxes, $10 = 10.00",
+                    "type": "number",
+                    "minimum": -1000000,
+                    "maximum": 1000000,
+                    "multipleOf": 0.01
                   },
                   "gross": {
-                    "type": "number"
+                    "description": "A monetary value as .2Decimal including taxes, 10€ = 10.00",
+                    "type": "number",
+                    "minimum": -1000000,
+                    "maximum": 1000000,
+                    "multipleOf": 0.01
                   }
                 }
               },
@@ -1259,10 +1267,18 @@
                 ],
                 "properties": {
                   "net": {
-                    "type": "number"
+                    "description": "A monetary value as .2Decimal excluding taxes, $10 = 10.00",
+                    "type": "number",
+                    "minimum": -1000000,
+                    "maximum": 1000000,
+                    "multipleOf": 0.01
                   },
                   "gross": {
-                    "type": "number"
+                    "description": "A monetary value as .2Decimal including taxes, 10€ = 10.00",
+                    "type": "number",
+                    "minimum": -1000000,
+                    "maximum": 1000000,
+                    "multipleOf": 0.01
                   }
                 }
               },

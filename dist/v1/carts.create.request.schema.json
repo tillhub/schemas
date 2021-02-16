@@ -19,6 +19,7 @@
       ]
     },
     "done_at": {
+      "description": "Date when this cart was used in a transaction (currently). If date is not null, this cart must not be used.",
       "oneOf": [
         {
           "type": "string",
@@ -63,6 +64,7 @@
       ]
     },
     "temporary_staff": {
+      "description": "Staff who was lending permissions temporarily (in case that 'cashier_staff' did not have that permission)",
       "oneOf": [
         {
           "type": "string",
@@ -86,9 +88,11 @@
       ]
     },
     "custom_id": {
+      "description": "User defined (human readable) identifier for the cart, e.g. counting number 1, 2, 3 ...",
       "oneOf": [
         {
           "type": "string",
+          "example": "17",
           "maxLength": 128
         },
         {
@@ -97,9 +101,11 @@
       ]
     },
     "client_id": {
+      "description": "Producer side unique identifier to resolve downstream mapping targets, e.g. GUID or UUID",
       "oneOf": [
         {
           "type": "string",
+          "example": "00060968000420200624004214945",
           "minLength": 12,
           "maxLength": 64
         },
@@ -332,7 +338,7 @@
                 "maxLength": 3
               },
               "amount": {
-                "description": "the currency / amount object combination is the Tillhub Money object.",
+                "description": "The gross/net input price per quantity of 1.0 and before any discounts",
                 "type": "object",
                 "additionalProperties": false,
                 "anyOf": [
@@ -355,10 +361,18 @@
                 ],
                 "properties": {
                   "net": {
-                    "type": "number"
+                    "description": "A monetary value as .2Decimal excluding taxes, $10 = 10.00",
+                    "type": "number",
+                    "minimum": -1000000,
+                    "maximum": 1000000,
+                    "multipleOf": 0.01
                   },
                   "gross": {
-                    "type": "number"
+                    "description": "A monetary value as .2Decimal including taxes, 10€ = 10.00",
+                    "type": "number",
+                    "minimum": -1000000,
+                    "maximum": 1000000,
+                    "multipleOf": 0.01
                   }
                 }
               },
@@ -1261,10 +1275,18 @@
                 ],
                 "properties": {
                   "net": {
-                    "type": "number"
+                    "description": "A monetary value as .2Decimal excluding taxes, $10 = 10.00",
+                    "type": "number",
+                    "minimum": -1000000,
+                    "maximum": 1000000,
+                    "multipleOf": 0.01
                   },
                   "gross": {
-                    "type": "number"
+                    "description": "A monetary value as .2Decimal including taxes, 10€ = 10.00",
+                    "type": "number",
+                    "minimum": -1000000,
+                    "maximum": 1000000,
+                    "multipleOf": 0.01
                   }
                 }
               },
@@ -1787,6 +1809,7 @@
       "type": "object"
     },
     "opened_at": {
+      "description": "Date when this cart was opened. If date is not null, this cart must not be used.",
       "oneOf": [
         {
           "type": "string",
