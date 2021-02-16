@@ -715,9 +715,11 @@
       ]
     },
     "custom_id": {
+      "description": "The product number",
       "anyOf": [
         {
-          "type": "string"
+          "type": "string",
+          "example": "0000000028-000008"
         },
         {
           "type": "null"

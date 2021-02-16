@@ -1194,8 +1194,16 @@
             ],
             "properties": {
               "product": {
+                "description": "The Tillhub product unique identifier",
                 "type": "string",
-                "format": "uuid"
+                "format": "uuid",
+                "example": "aa165950-26f1-4a59-a85a-1c6017b3cb79"
+              },
+              "custom_id": {
+                "description": "The product.custom_id as stated in https://tillhub.atlassian.net/browse/TM-5665",
+                "type": "string",
+                "maxLength": 128,
+                "example": "260620-727-DE"
               },
               "product_supplier_name": {
                 "oneOf": [
@@ -1233,10 +1241,6 @@
               },
               "qty": {
                 "type": "number"
-              },
-              "custom_id": {
-                "type": "string",
-                "maxLength": 128
               },
               "currency": {
                 "type": "string",

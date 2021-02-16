@@ -1,3 +1,10 @@
+## [6.9.1](https://github.com/tillhub/schemas/compare/v6.9.0...v6.9.1) (2021-02-16)
+
+
+### Bug Fixes
+
+* force release ([d07493f](https://github.com/tillhub/schemas/commit/d07493f))
+
 # [6.9.0](https://github.com/tillhub/schemas/compare/v6.8.0...v6.9.0) (2021-02-16)
 
 
