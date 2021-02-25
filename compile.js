@@ -16,7 +16,7 @@ function iterate (obj) {
 }
 
 function compileObject (prop, object) {
-  const parsedUrl = url.parse(prop)
+  const parsedUrl = url.URL(prop)
   const pathname = path.parse(parsedUrl.pathname)
   const targetDir = `dist${pathname.dir}`
   maybeMkdir(targetDir)
