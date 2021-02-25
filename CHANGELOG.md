@@ -1,3 +1,11 @@
+## [6.10.1](https://github.com/tillhub/schemas/compare/v6.10.0...v6.10.1) (2021-02-25)
+
+
+### Bug Fixes
+
+* **compile:** ignore eslint ([af1f4fb](https://github.com/tillhub/schemas/commit/af1f4fb))
+* **dependecies:** update eslint and fix errors ([088194c](https://github.com/tillhub/schemas/commit/088194c))
+
 # [6.10.0](https://github.com/tillhub/schemas/compare/v6.9.1...v6.10.0) (2021-02-18)
 
 
