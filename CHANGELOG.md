@@ -1,3 +1,10 @@
+# [6.11.0](https://github.com/tillhub/schemas/compare/v6.10.1...v6.11.0) (2021-03-01)
+
+
+### Features
+
+* **countings:** set discrepancy defaults to true ([7db93a5](https://github.com/tillhub/schemas/commit/7db93a5))
+
 ## [6.10.1](https://github.com/tillhub/schemas/compare/v6.10.0...v6.10.1) (2021-02-25)
 
 

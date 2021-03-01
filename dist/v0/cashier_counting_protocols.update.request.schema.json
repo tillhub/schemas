@@ -1035,6 +1035,7 @@
     "balance_number": {
       "oneOf": [
         {
+          "description": "The counting number of the balance that this protocol will be contained in",
           "type": "integer"
         },
         {
@@ -1048,7 +1049,7 @@
           "type": "string",
           "format": "uuid",
           "example": "9d20d799-b6e0-46a0-9e48-7ca372af13d4",
-          "description": "The Tillhub balance resource ID of the last balance."
+          "description": "The Tillhub balance resource ID of the previous balance"
         },
         {
           "type": "null"

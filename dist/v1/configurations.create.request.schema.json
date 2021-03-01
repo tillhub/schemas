@@ -486,12 +486,12 @@
                     "warning": {
                       "type": "boolean",
                       "description": "defines whether warning is displayed in case of discrepancy",
-                      "default": "false"
+                      "default": "true"
                     },
                     "recount_permission": {
                       "type": "boolean",
                       "description": "defines whether recounting is allowed",
-                      "default": "false"
+                      "default": "true"
                     }
                   }
                 }
