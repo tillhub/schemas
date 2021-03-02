@@ -251,16 +251,6 @@
         }
       ]
     },
-    "user_permission_template_id": {
-      "oneOf": [
-        {
-          "type": "string"
-        },
-        {
-          "type": "null"
-        }
-      ]
-    },
     "scopes": {
       "oneOf": [
         {
@@ -399,6 +389,16 @@
               }
             ]
           }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "user_permission_template_id": {
+      "oneOf": [
+        {
+          "type": "string"
         },
         {
           "type": "null"

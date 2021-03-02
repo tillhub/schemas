@@ -1,3 +1,10 @@
+# [6.14.0](https://github.com/tillhub/schemas/compare/v6.13.0...v6.14.0) (2021-03-02)
+
+
+### Features
+
+* **users:** add permission template ([8d88cd0](https://github.com/tillhub/schemas/commit/8d88cd0))
+
 # [6.13.0](https://github.com/tillhub/schemas/compare/v6.12.0...v6.13.0) (2021-03-02)
 
 
