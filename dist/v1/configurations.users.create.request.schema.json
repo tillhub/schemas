@@ -81,6 +81,16 @@
     "configuration_id": {
       "type": "string"
     },
+    "user_permission_template_id": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "groups": {
       "oneOf": [
         {
