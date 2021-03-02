@@ -1,3 +1,10 @@
+# [6.13.0](https://github.com/tillhub/schemas/compare/v6.12.0...v6.13.0) (2021-03-02)
+
+
+### Features
+
+* **users:** add user_permission_template_id ([9b7dba5](https://github.com/tillhub/schemas/commit/9b7dba5))
+
 # [6.12.0](https://github.com/tillhub/schemas/compare/v6.11.0...v6.12.0) (2021-03-02)
 
 
