@@ -1,3 +1,10 @@
+# [6.12.0](https://github.com/tillhub/schemas/compare/v6.11.0...v6.12.0) (2021-03-02)
+
+
+### Features
+
+* **users:** add permission termplate to users ([74afc9b](https://github.com/tillhub/schemas/commit/74afc9b))
+
 # [6.11.0](https://github.com/tillhub/schemas/compare/v6.10.1...v6.11.0) (2021-03-01)
 
 
