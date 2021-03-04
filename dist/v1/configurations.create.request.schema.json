@@ -486,12 +486,12 @@
                     "warning": {
                       "type": "boolean",
                       "description": "defines whether warning is displayed in case of discrepancy",
-                      "default": "false"
+                      "default": "true"
                     },
                     "recount_permission": {
                       "type": "boolean",
                       "description": "defines whether recounting is allowed",
-                      "default": "false"
+                      "default": "true"
                     }
                   }
                 }
@@ -2345,6 +2345,22 @@
                             "default",
                             "pricebook",
                             "user"
+                          ]
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "inheritance": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "description": "Defines how variant-children inherit pricebook entries from their parents",
+                          "enum": [
+                            "none",
+                            "parent",
+                            "optional"
                           ]
                         },
                         {

@@ -395,6 +395,16 @@
         }
       ]
     },
+    "user_permission_template_id": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "date_of_birth": {
       "oneOf": [
         {

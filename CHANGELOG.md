@@ -1,3 +1,38 @@
+# [6.15.0](https://github.com/tillhub/schemas/compare/v6.14.0...v6.15.0) (2021-03-04)
+
+
+### Features
+
+* **configurations:** products ([b344cb7](https://github.com/tillhub/schemas/commit/b344cb7))
+
+# [6.14.0](https://github.com/tillhub/schemas/compare/v6.13.0...v6.14.0) (2021-03-02)
+
+
+### Features
+
+* **users:** add permission template ([8d88cd0](https://github.com/tillhub/schemas/commit/8d88cd0))
+
+# [6.13.0](https://github.com/tillhub/schemas/compare/v6.12.0...v6.13.0) (2021-03-02)
+
+
+### Features
+
+* **users:** add user_permission_template_id ([9b7dba5](https://github.com/tillhub/schemas/commit/9b7dba5))
+
+# [6.12.0](https://github.com/tillhub/schemas/compare/v6.11.0...v6.12.0) (2021-03-02)
+
+
+### Features
+
+* **users:** add permission termplate to users ([74afc9b](https://github.com/tillhub/schemas/commit/74afc9b))
+
+# [6.11.0](https://github.com/tillhub/schemas/compare/v6.10.1...v6.11.0) (2021-03-01)
+
+
+### Features
+
+* **countings:** set discrepancy defaults to true ([7db93a5](https://github.com/tillhub/schemas/commit/7db93a5))
+
 ## [6.10.1](https://github.com/tillhub/schemas/compare/v6.10.0...v6.10.1) (2021-02-25)
 
 
