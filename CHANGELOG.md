@@ -1,3 +1,10 @@
+# [6.15.0](https://github.com/tillhub/schemas/compare/v6.14.0...v6.15.0) (2021-03-04)
+
+
+### Features
+
+* **configurations:** products ([b344cb7](https://github.com/tillhub/schemas/commit/b344cb7))
+
 # [6.14.0](https://github.com/tillhub/schemas/compare/v6.13.0...v6.14.0) (2021-03-02)
 
 
