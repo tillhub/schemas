@@ -1934,7 +1934,7 @@
                         {
                           "type": "boolean",
                           "default": false,
-                          "description": "If true, this discount was trigger automatically."
+                          "description": "If true, this discount was triggered automatically (source disount was automatic and automatic application enabled)"
                         },
                         {
                           "type": "null"
@@ -1949,7 +1949,8 @@
                             "first",
                             "last"
                           ],
-                          "default": "last"
+                          "default": "last",
+                          "description": "(Copied) property of the source discount which defined the (re)ordering when applied: order=='first' > order=='null' > order=='last' > group=='customer'"
                         },
                         {
                           "type": "null"

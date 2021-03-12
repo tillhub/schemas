@@ -1,3 +1,20 @@
+# [6.16.0](https://github.com/tillhub/schemas/compare/v6.15.0...v6.16.0) (2021-03-12)
+
+
+### Bug Fixes
+
+* **packages:** revert packages update ([4f71b7e](https://github.com/tillhub/schemas/commit/4f71b7e))
+
+
+### Features
+
+* **configurations:** add onboarding object configuration ([3ff580e](https://github.com/tillhub/schemas/commit/3ff580e))
+* **configurations:** features ([331f260](https://github.com/tillhub/schemas/commit/331f260))
+* **configurations:** features ([34aa8e3](https://github.com/tillhub/schemas/commit/34aa8e3))
+* **configurations:** features ([efae027](https://github.com/tillhub/schemas/commit/efae027))
+* **configurations:** receipts ([7490023](https://github.com/tillhub/schemas/commit/7490023))
+* **configurations:** receipts ([0a856ca](https://github.com/tillhub/schemas/commit/0a856ca))
+
 # [6.15.0](https://github.com/tillhub/schemas/compare/v6.14.0...v6.15.0) (2021-03-04)
 
 
