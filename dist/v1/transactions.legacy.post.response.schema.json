@@ -3876,7 +3876,6 @@
                   ]
                 },
                 "payment_option_type_name": {
-                  "deprecated": true,
                   "oneOf": [
                     {
                       "type": "string",

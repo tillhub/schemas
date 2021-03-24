@@ -1,3 +1,10 @@
+# [6.17.0](https://github.com/tillhub/schemas/compare/v6.16.0...v6.17.0) (2021-03-24)
+
+
+### Features
+
+* **features:** add flag for pagers & kitchen_printers ([258b50b](https://github.com/tillhub/schemas/commit/258b50b))
+
 # [6.16.0](https://github.com/tillhub/schemas/compare/v6.15.0...v6.16.0) (2021-03-12)
 
 

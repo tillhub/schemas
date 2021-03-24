@@ -261,6 +261,14 @@
         "timetracking": {
           "type": "boolean",
           "default": false
+        },
+        "pagers": {
+          "type": "boolean",
+          "default": false
+        },
+        "kitchen_printers": {
+          "type": "boolean",
+          "default": false
         }
       }
     },
