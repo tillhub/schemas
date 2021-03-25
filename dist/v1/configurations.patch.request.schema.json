@@ -574,6 +574,18 @@
                     }
                   ]
                 },
+                "allow_voucher_reprint": {
+                  "oneOf": [
+                    {
+                      "description": "Specifies if vouchers can be printed again from e.g. the history details.",
+                      "type": "boolean",
+                      "default": false
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
                 "cancellation_receipt": {
                   "oneOf": [
                     {

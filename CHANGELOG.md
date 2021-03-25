@@ -1,3 +1,10 @@
+# [6.18.0](https://github.com/tillhub/schemas/compare/v6.17.0...v6.18.0) (2021-03-25)
+
+
+### Features
+
+* **configurations:** settings ([0faae11](https://github.com/tillhub/schemas/commit/0faae11))
+
 # [6.17.0](https://github.com/tillhub/schemas/compare/v6.16.0...v6.17.0) (2021-03-24)
 
 
