@@ -1044,8 +1044,21 @@
     "balance_number": {
       "oneOf": [
         {
-          "description": "The counting number of the balance that this protocol will be contained in",
-          "type": "integer"
+          "description": "The counting number of the balance that this protocol will be contained in (balance number at the end of the day)",
+          "type": "integer",
+          "example": 3
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "balance_custom_id_last": {
+      "oneOf": [
+        {
+          "type": "string",
+          "example": "2",
+          "description": "The previous balance's `custom_id`, that usually fiscally referred to as the balance number (balance number from the previous evening)"
         },
         {
           "type": "null"
@@ -1058,19 +1071,7 @@
           "type": "string",
           "format": "uuid",
           "example": "9d20d799-b6e0-46a0-9e48-7ca372af13d4",
-          "description": "The Tillhub balance resource ID of the previous balance"
-        },
-        {
-          "type": "null"
-        }
-      ]
-    },
-    "balance_custom_id_last": {
-      "oneOf": [
-        {
-          "type": "string",
-          "example": "12",
-          "description": "The last balance's `custom_id`, that usually fiscally referred to as the balance number."
+          "description": "The Tillhub balance resource ID of the previous balance (`_id` in fr_balance of balance 2)"
         },
         {
           "type": "null"

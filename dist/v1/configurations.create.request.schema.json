@@ -1381,6 +1381,35 @@
                 }
               }
             },
+            "counting_numbers": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "preferred_initialization": {
+                      "oneOf": [
+                        {
+                          "description": "When local data ís missing - counting numbers can be initialized from the api table or - if available - from a secondary local storage (e.g. keychain on iOS)",
+                          "type": "string",
+                          "enum": [
+                            "remote",
+                            "local"
+                          ],
+                          "default": "remote"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
             "voucher_systems_source": {
               "description": "Defines how the voucher systems table on the client will be filled, either from configurations or from the voucher_systems table",
               "type": "string",
