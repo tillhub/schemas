@@ -173,15 +173,15 @@
   "/pdfs.templates.deliveries.create.schema.json",
   "/pdfs.templates.delivery_notes.create.schema.json",
   "/pdfs.templates.full_receipts.create.schema.json",
-  "/pdfs.templates.transaction_receipts.create.schema.json",
   "/pdfs.templates.invoices.create.schema.json",
+  "/pdfs.templates.transaction_receipts.create.schema.json",
   "/product_service_question_groups.create.request.schema.json",
   "/product_service_question_groups.create.response.schema.json",
   "/product_service_question_groups.get.query.schema.json",
   "/product_service_question_groups.update.request.schema.json",
   "/product_service_question_groups.update.response.schema.json",
-  "/product_service_questions.create.response.schema.json",
   "/product_service_questions.create.request.schema.json",
+  "/product_service_questions.create.response.schema.json",
   "/product_service_questions.get.query.schema.json",
   "/product_service_questions.update.request.schema.json",
   "/product_service_questions.update.response.schema.json",
@@ -281,6 +281,6 @@
   "/configurations.create.request.schema.json",
   "/configurations.update.request.schema.json",
   "/profile.create.request.schema.json",
-  "/profile.update.request.schema.json",
-  "/support.create.request.schema.json"
+  "/support.create.request.schema.json",
+  "/profile.update.request.schema.json"
 ]
