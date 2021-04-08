@@ -419,18 +419,29 @@
       ]
     },
     "context": {
-      "deprecated": true,
       "oneOf": [
         {
           "type": "array",
+          "description": "Key-value-container with API-predefined keys (fr_transaction_context_option), e.g. [ {\"name\":\"name\",\"value\":\"Title of the transaction\"}, {\"name\":\"desc\",\"value\":\"Note of the transaction\"} ]",
           "items": {
             "type": "object",
             "properties": {
               "name": {
-                "type": "string"
+                "type": "string",
+                "examples": [
+                  "name",
+                  "desc"
+                ]
               },
               "value": {
-                "type": "string"
+                "oneOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
               }
             }
           }
@@ -1967,10 +1978,10 @@
             ]
           },
           "context": {
-            "deprecated": true,
             "oneOf": [
               {
                 "type": "array",
+                "description": "Key-value-container with API-predefined keys (fr_transaction_cartitem_context_option), e.g. [ {\"name\":\"return_reason\",\"value\":\"Damaged product\"}, {\"name\":\"note\",\"value\":\"Note of the cart item\"} ]",
                 "items": {
                   "type": "object",
                   "properties": {
@@ -3768,6 +3779,7 @@
             "oneOf": [
               {
                 "type": "array",
+                "description": "Key-value-container with API-predefined keys (fr_transaction_payment_context_option), e.g. [ {\"name\":\"cardCircuit\",\"value\":\"VISA\"}, {\"name\":\"cardTerminalID\",\"value\":\"123456\"}, ... ]",
                 "items": {
                   "type": "object",
                   "properties": {

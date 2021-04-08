@@ -1,8 +1,8 @@
 [
   "/index.json",
-  "/currency.available.schema.json",
   "/custom_properties.definition.schema.json",
   "/patch.request.schema.json",
+  "/currency.available.schema.json",
   "/timezone.schema.json",
   "/balances.create.request.schema.json",
   "/balances.get-all.response.schema.json",
@@ -281,6 +281,6 @@
   "/configurations.create.request.schema.json",
   "/configurations.update.request.schema.json",
   "/profile.create.request.schema.json",
-  "/support.create.request.schema.json",
-  "/profile.update.request.schema.json"
+  "/profile.update.request.schema.json",
+  "/support.create.request.schema.json"
 ]

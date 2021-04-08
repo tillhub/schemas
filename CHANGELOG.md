@@ -1,3 +1,10 @@
+# [6.21.0](https://github.com/tillhub/schemas/compare/v6.20.0...v6.21.0) (2021-04-08)
+
+
+### Features
+
+* **products:** schema changes for composed products (https://tillhub.atlassian.net/browse/API-488) ([60c05d6](https://github.com/tillhub/schemas/commit/60c05d6))
+
 # [6.20.0](https://github.com/tillhub/schemas/compare/v6.19.0...v6.20.0) (2021-04-06)
 
 
