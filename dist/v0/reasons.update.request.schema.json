@@ -71,7 +71,9 @@
       "type": "string",
       "enum": [
         "refund",
-        "stock_change"
+        "stock_change",
+        "expense",
+        "deposit"
       ]
     },
     "noted_required": {

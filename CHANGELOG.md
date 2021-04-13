@@ -1,3 +1,10 @@
+# [6.22.0](https://github.com/tillhub/schemas/compare/v6.21.0...v6.22.0) (2021-04-13)
+
+
+### Features
+
+* **reasons:** add expense/deposit VV ([812bb55](https://github.com/tillhub/schemas/commit/812bb55))
+
 # [6.21.0](https://github.com/tillhub/schemas/compare/v6.20.0...v6.21.0) (2021-04-08)
 
 
