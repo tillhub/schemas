@@ -1,3 +1,10 @@
+# [6.23.0](https://github.com/tillhub/schemas/compare/v6.22.0...v6.23.0) (2021-04-13)
+
+
+### Features
+
+* **reasons:** allow null behavior ([faea94b](https://github.com/tillhub/schemas/commit/faea94b))
+
 # [6.22.0](https://github.com/tillhub/schemas/compare/v6.21.0...v6.22.0) (2021-04-13)
 
 
