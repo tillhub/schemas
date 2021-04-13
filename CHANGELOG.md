@@ -1,3 +1,10 @@
+# [6.24.0](https://github.com/tillhub/schemas/compare/v6.23.0...v6.24.0) (2021-04-13)
+
+
+### Features
+
+* **tx:** add expense context ([a46fe9b](https://github.com/tillhub/schemas/commit/a46fe9b))
+
 # [6.23.0](https://github.com/tillhub/schemas/compare/v6.22.0...v6.23.0) (2021-04-13)
 
 

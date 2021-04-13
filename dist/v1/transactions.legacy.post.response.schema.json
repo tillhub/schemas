@@ -460,6 +460,35 @@
                     "format": "uuid",
                     "example": "09a9a469-c16b-4b54-835d-692d05d218f9",
                     "description": "If safes are involved, the Tillhub resource identifier of that safe (currently ignored by the API)"
+                  },
+                  "context": {
+                    "oneOf": [
+                      {
+                        "type": "array",
+                        "description": "Key-value-container with API-predefined keys (fr_transaction_expense_context_option)",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "name": {
+                              "type": "string"
+                            },
+                            "value": {
+                              "oneOf": [
+                                {
+                                  "type": "string"
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
                   }
                 }
               },
