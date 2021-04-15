@@ -1,3 +1,11 @@
+# [6.25.0](https://github.com/tillhub/schemas/compare/v6.24.0...v6.25.0) (2021-04-15)
+
+
+### Features
+
+* **products:** add product serial number input requirement ([81b8360](https://github.com/tillhub/schemas/commit/81b8360))
+* **products:** change field name ([097712e](https://github.com/tillhub/schemas/commit/097712e))
+
 # [6.24.0](https://github.com/tillhub/schemas/compare/v6.23.0...v6.24.0) (2021-04-13)
 
 

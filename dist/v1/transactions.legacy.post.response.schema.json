@@ -470,7 +470,10 @@
                           "type": "object",
                           "properties": {
                             "name": {
-                              "type": "string"
+                              "type": "string",
+                              "examples": [
+                                "reason"
+                              ]
                             },
                             "value": {
                               "oneOf": [

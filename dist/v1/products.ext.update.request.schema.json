@@ -1608,6 +1608,11 @@
         }
       ]
     },
+    "serial_number_input_required": {
+      "description": "Define whether a product requires to enter a serial number during the sale",
+      "type": "boolean",
+      "default": false
+    },
     "shipping_required": {
       "description": "Define whether this item requires shipping. This usually the case except for digital goods. Tax and tax splits may apply based on region.",
       "default": true,

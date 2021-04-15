@@ -1,7 +1,7 @@
 [
   "/index.json",
-  "/custom_properties.definition.schema.json",
   "/currency.available.schema.json",
+  "/custom_properties.definition.schema.json",
   "/patch.request.schema.json",
   "/timezone.schema.json",
   "/balances.create.request.schema.json",
@@ -32,8 +32,8 @@
   "/products.ext.update.request.schema.json",
   "/products.prices.book.create.request.schema.json",
   "/products.prices.book.entry.create.request.schema.json",
-  "/products.prices.book.update.request.schema.json",
   "/products.prices.book.entry.update.request.schema.json",
+  "/products.prices.book.update.request.schema.json",
   "/products.update.request.schema.json",
   "/registers.create.request.schema.json",
   "/registers.notification.create.request.schema.json",
@@ -208,8 +208,8 @@
   "/register_opening_protocols.get.latest.response.schema.json",
   "/register_opening_protocols.update.request.schema.json",
   "/register_opening_protocols.update.response.schema.json",
-  "/safes.create.request.schema.json",
   "/safes.book.request.schema.json",
+  "/safes.create.request.schema.json",
   "/safes.create.response.schema.json",
   "/safes.update.request.schema.json",
   "/safes.update.response.schema.json",
@@ -278,9 +278,9 @@
   "/warehouses.update.request.schema.json",
   "/webhooks.create.request.schema.json",
   "/webhooks.update.request.schema.json",
-  "/configurations.create.request.schema.json",
-  "/configurations.update.request.schema.json",
   "/profile.create.request.schema.json",
   "/profile.update.request.schema.json",
-  "/support.create.request.schema.json"
+  "/support.create.request.schema.json",
+  "/configurations.create.request.schema.json",
+  "/configurations.update.request.schema.json"
 ]
