@@ -2024,6 +2024,7 @@
                         "product_service_questions",
                         "note",
                         "related_transaction_guid",
+                        "serial_number",
                         "voucher_value",
                         "voucher_id",
                         "voucher_client_id",

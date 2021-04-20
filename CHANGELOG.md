@@ -1,3 +1,10 @@
+# [6.26.0](https://github.com/tillhub/schemas/compare/v6.25.0...v6.26.0) (2021-04-20)
+
+
+### Features
+
+* **transactions:** add 'serial_number' as cart item context option value ([726900e](https://github.com/tillhub/schemas/commit/726900e))
+
 # [6.25.0](https://github.com/tillhub/schemas/compare/v6.24.0...v6.25.0) (2021-04-15)
 
 

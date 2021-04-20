@@ -126,8 +126,8 @@
   "/expense_accounts.update.response.schema.json",
   "/exports.create.request.schema.json",
   "/exports.update.request.schema.json",
-  "/favourites.create.request.schema.json",
   "/favourites.put.request.schema.json",
+  "/favourites.create.request.schema.json",
   "/functions.create.request.schema.json",
   "/functions.update.request.schema.json",
   "/invoices.create.request.schema.json",
@@ -224,8 +224,8 @@
   "/staff_permission_templates.update.request.schema.json",
   "/stock.create.request.schema.json",
   "/stock.create.response.schema.json",
-  "/stock.transfer.request.schema.json",
   "/stock.transfer.response.schema.json",
+  "/stock.transfer.request.schema.json",
   "/stock.update.request.schema.json",
   "/stock.update.response.schema.json",
   "/storefronts.create.request.schema.json",
@@ -278,9 +278,9 @@
   "/warehouses.update.request.schema.json",
   "/webhooks.create.request.schema.json",
   "/webhooks.update.request.schema.json",
+  "/configurations.create.request.schema.json",
+  "/configurations.update.request.schema.json",
   "/profile.create.request.schema.json",
   "/profile.update.request.schema.json",
-  "/support.create.request.schema.json",
-  "/configurations.create.request.schema.json",
-  "/configurations.update.request.schema.json"
+  "/support.create.request.schema.json"
 ]
