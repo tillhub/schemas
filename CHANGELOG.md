@@ -1,3 +1,62 @@
+# [6.27.0](https://github.com/tillhub/schemas/compare/v6.26.0...v6.27.0) (2021-04-21)
+
+
+### Features
+
+* **french-cert:** add schemas for aggregated balances ([061b506](https://github.com/tillhub/schemas/commit/061b506))
+* **french-cert:** dates could by null ([eaa6c3a](https://github.com/tillhub/schemas/commit/eaa6c3a))
+* **french-cert:** remove empty row ([d24e364](https://github.com/tillhub/schemas/commit/d24e364))
+
+# [6.26.0](https://github.com/tillhub/schemas/compare/v6.25.0...v6.26.0) (2021-04-20)
+
+
+### Features
+
+* **transactions:** add 'serial_number' as cart item context option value ([726900e](https://github.com/tillhub/schemas/commit/726900e))
+
+# [6.25.0](https://github.com/tillhub/schemas/compare/v6.24.0...v6.25.0) (2021-04-15)
+
+
+### Features
+
+* **products:** add product serial number input requirement ([81b8360](https://github.com/tillhub/schemas/commit/81b8360))
+* **products:** change field name ([097712e](https://github.com/tillhub/schemas/commit/097712e))
+
+# [6.24.0](https://github.com/tillhub/schemas/compare/v6.23.0...v6.24.0) (2021-04-13)
+
+
+### Features
+
+* **tx:** add expense context ([a46fe9b](https://github.com/tillhub/schemas/commit/a46fe9b))
+
+# [6.23.0](https://github.com/tillhub/schemas/compare/v6.22.0...v6.23.0) (2021-04-13)
+
+
+### Features
+
+* **reasons:** allow null behavior ([faea94b](https://github.com/tillhub/schemas/commit/faea94b))
+
+# [6.22.0](https://github.com/tillhub/schemas/compare/v6.21.0...v6.22.0) (2021-04-13)
+
+
+### Features
+
+* **reasons:** add expense/deposit VV ([812bb55](https://github.com/tillhub/schemas/commit/812bb55))
+
+# [6.21.0](https://github.com/tillhub/schemas/compare/v6.20.0...v6.21.0) (2021-04-08)
+
+
+### Features
+
+* **products:** schema changes for composed products (https://tillhub.atlassian.net/browse/API-488) ([60c05d6](https://github.com/tillhub/schemas/commit/60c05d6))
+
+# [6.20.0](https://github.com/tillhub/schemas/compare/v6.19.0...v6.20.0) (2021-04-06)
+
+
+### Features
+
+* **payments:** allow_disconnected_terminals default never ([33d71d2](https://github.com/tillhub/schemas/commit/33d71d2))
+
 # [6.19.0](https://github.com/tillhub/schemas/compare/v6.18.0...v6.19.0) (2021-04-01)
 
 

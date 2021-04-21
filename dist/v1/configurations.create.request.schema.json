@@ -1390,7 +1390,7 @@
                     "preferred_initialization": {
                       "oneOf": [
                         {
-                          "description": "When local data ís missing - counting numbers can be initialized from the api table or - if available - from a secondary local storage (e.g. keychain on iOS)",
+                          "description": "When local data ís missing - counting numbers can be initialized from the corresponding API table or - if available - from a secondary local storage (e.g. keychain on iOS)",
                           "type": "string",
                           "enum": [
                             "remote",

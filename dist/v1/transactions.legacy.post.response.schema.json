@@ -460,6 +460,38 @@
                     "format": "uuid",
                     "example": "09a9a469-c16b-4b54-835d-692d05d218f9",
                     "description": "If safes are involved, the Tillhub resource identifier of that safe (currently ignored by the API)"
+                  },
+                  "context": {
+                    "oneOf": [
+                      {
+                        "type": "array",
+                        "description": "Key-value-container with API-predefined keys (fr_transaction_expense_context_option)",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "name": {
+                              "type": "string",
+                              "examples": [
+                                "reason"
+                              ]
+                            },
+                            "value": {
+                              "oneOf": [
+                                {
+                                  "type": "string"
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
                   }
                 }
               },
@@ -511,18 +543,29 @@
             ]
           },
           "context": {
-            "deprecated": true,
             "oneOf": [
               {
                 "type": "array",
+                "description": "Key-value-container with API-predefined keys (fr_transaction_context_option), e.g. [ {\"name\":\"name\",\"value\":\"Title of the transaction\"}, {\"name\":\"desc\",\"value\":\"Note of the transaction\"} ]",
                 "items": {
                   "type": "object",
                   "properties": {
                     "name": {
-                      "type": "string"
+                      "type": "string",
+                      "examples": [
+                        "name",
+                        "desc"
+                      ]
                     },
                     "value": {
-                      "type": "string"
+                      "oneOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
                     }
                   }
                 }
@@ -2099,10 +2142,10 @@
                   ]
                 },
                 "context": {
-                  "deprecated": true,
                   "oneOf": [
                     {
                       "type": "array",
+                      "description": "Key-value-container with API-predefined keys (fr_transaction_cartitem_context_option), e.g. [ {\"name\":\"return_reason\",\"value\":\"Damaged product\"}, {\"name\":\"note\",\"value\":\"Note of the cart item\"} ]",
                       "items": {
                         "type": "object",
                         "properties": {
@@ -2113,6 +2156,7 @@
                               "product_service_questions",
                               "note",
                               "related_transaction_guid",
+                              "serial_number",
                               "voucher_value",
                               "voucher_id",
                               "voucher_client_id",
@@ -3967,6 +4011,7 @@
                   "oneOf": [
                     {
                       "type": "array",
+                      "description": "Key-value-container with API-predefined keys (fr_transaction_payment_context_option), e.g. [ {\"name\":\"cardCircuit\",\"value\":\"VISA\"}, {\"name\":\"cardTerminalID\",\"value\":\"123456\"}, ... ]",
                       "items": {
                         "type": "object",
                         "properties": {
