@@ -1,3 +1,12 @@
+# [6.27.0](https://github.com/tillhub/schemas/compare/v6.26.0...v6.27.0) (2021-04-21)
+
+
+### Features
+
+* **french-cert:** add schemas for aggregated balances ([061b506](https://github.com/tillhub/schemas/commit/061b506))
+* **french-cert:** dates could by null ([eaa6c3a](https://github.com/tillhub/schemas/commit/eaa6c3a))
+* **french-cert:** remove empty row ([d24e364](https://github.com/tillhub/schemas/commit/d24e364))
+
 # [6.26.0](https://github.com/tillhub/schemas/compare/v6.25.0...v6.26.0) (2021-04-20)
 
 
