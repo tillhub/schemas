@@ -1,7 +1,7 @@
 {
   "$id": "https://schemas.tillhub.com/v0/french-cert.balances.aggregated.response.schema.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "additionalProperties": true,
+  "additionalProperties": false,
   "type": "object",
   "properties": {
     "begin_date": {
@@ -17,7 +17,7 @@
       "description": "The end date of requested period in ISO 8601 compliant format"
     },
     "data": {
-      "additionalProperties": true,
+      "additionalProperties": false,
       "type": "object",
       "properties": {
         "first_id": {

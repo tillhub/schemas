@@ -1,3 +1,10 @@
+# [6.28.0](https://github.com/tillhub/schemas/compare/v6.27.0...v6.28.0) (2021-04-22)
+
+
+### Features
+
+* **french-cert:** no additional properties in response ([870df20](https://github.com/tillhub/schemas/commit/870df20))
+
 # [6.27.0](https://github.com/tillhub/schemas/compare/v6.26.0...v6.27.0) (2021-04-21)
 
 
