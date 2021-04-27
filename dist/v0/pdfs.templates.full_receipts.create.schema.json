@@ -90,7 +90,6 @@
               "required": [
                 "lines",
                 "street",
-                "street_number",
                 "locality",
                 "region",
                 "postal_code",
@@ -246,7 +245,6 @@
               "required": [
                 "lines",
                 "street",
-                "street_number",
                 "locality",
                 "region",
                 "postal_code",
@@ -425,6 +423,26 @@
             "maxLength": 3
           },
           "comments": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "product_number": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "attributes": {
             "oneOf": [
               {
                 "type": "string"

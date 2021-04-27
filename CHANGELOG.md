@@ -1,3 +1,1235 @@
+# [6.29.0](https://github.com/tillhub/schemas/compare/v6.28.1...v6.29.0) (2021-04-27)
+
+
+### Features
+
+* **features:** add gastro_tables ([6822cf1](https://github.com/tillhub/schemas/commit/6822cf1))
+
+## [6.28.1](https://github.com/tillhub/schemas/compare/v6.28.0...v6.28.1) (2021-04-23)
+
+
+### Bug Fixes
+
+* **address:** make street number optional ([4a17243](https://github.com/tillhub/schemas/commit/4a17243))
+
+# [6.28.0](https://github.com/tillhub/schemas/compare/v6.27.0...v6.28.0) (2021-04-22)
+
+
+### Features
+
+* **french-cert:** no additional properties in response ([870df20](https://github.com/tillhub/schemas/commit/870df20))
+
+# [6.27.0](https://github.com/tillhub/schemas/compare/v6.26.0...v6.27.0) (2021-04-21)
+
+
+### Features
+
+* **french-cert:** add schemas for aggregated balances ([061b506](https://github.com/tillhub/schemas/commit/061b506))
+* **french-cert:** dates could by null ([eaa6c3a](https://github.com/tillhub/schemas/commit/eaa6c3a))
+* **french-cert:** remove empty row ([d24e364](https://github.com/tillhub/schemas/commit/d24e364))
+
+# [6.26.0](https://github.com/tillhub/schemas/compare/v6.25.0...v6.26.0) (2021-04-20)
+
+
+### Features
+
+* **transactions:** add 'serial_number' as cart item context option value ([726900e](https://github.com/tillhub/schemas/commit/726900e))
+
+# [6.25.0](https://github.com/tillhub/schemas/compare/v6.24.0...v6.25.0) (2021-04-15)
+
+
+### Features
+
+* **products:** add product serial number input requirement ([81b8360](https://github.com/tillhub/schemas/commit/81b8360))
+* **products:** change field name ([097712e](https://github.com/tillhub/schemas/commit/097712e))
+
+# [6.24.0](https://github.com/tillhub/schemas/compare/v6.23.0...v6.24.0) (2021-04-13)
+
+
+### Features
+
+* **tx:** add expense context ([a46fe9b](https://github.com/tillhub/schemas/commit/a46fe9b))
+
+# [6.23.0](https://github.com/tillhub/schemas/compare/v6.22.0...v6.23.0) (2021-04-13)
+
+
+### Features
+
+* **reasons:** allow null behavior ([faea94b](https://github.com/tillhub/schemas/commit/faea94b))
+
+# [6.22.0](https://github.com/tillhub/schemas/compare/v6.21.0...v6.22.0) (2021-04-13)
+
+
+### Features
+
+* **reasons:** add expense/deposit VV ([812bb55](https://github.com/tillhub/schemas/commit/812bb55))
+
+# [6.21.0](https://github.com/tillhub/schemas/compare/v6.20.0...v6.21.0) (2021-04-08)
+
+
+### Features
+
+* **products:** schema changes for composed products (https://tillhub.atlassian.net/browse/API-488) ([60c05d6](https://github.com/tillhub/schemas/commit/60c05d6))
+
+# [6.20.0](https://github.com/tillhub/schemas/compare/v6.19.0...v6.20.0) (2021-04-06)
+
+
+### Features
+
+* **payments:** allow_disconnected_terminals default never ([33d71d2](https://github.com/tillhub/schemas/commit/33d71d2))
+
+# [6.19.0](https://github.com/tillhub/schemas/compare/v6.18.0...v6.19.0) (2021-04-01)
+
+
+### Features
+
+* **configurations:** settings ([89c6a0d](https://github.com/tillhub/schemas/commit/89c6a0d))
+
+# [6.18.0](https://github.com/tillhub/schemas/compare/v6.17.0...v6.18.0) (2021-03-25)
+
+
+### Features
+
+* **configurations:** settings ([0faae11](https://github.com/tillhub/schemas/commit/0faae11))
+
+# [6.17.0](https://github.com/tillhub/schemas/compare/v6.16.0...v6.17.0) (2021-03-24)
+
+
+### Features
+
+* **features:** add flag for pagers & kitchen_printers ([258b50b](https://github.com/tillhub/schemas/commit/258b50b))
+
+# [6.16.0](https://github.com/tillhub/schemas/compare/v6.15.0...v6.16.0) (2021-03-12)
+
+
+### Bug Fixes
+
+* **packages:** revert packages update ([4f71b7e](https://github.com/tillhub/schemas/commit/4f71b7e))
+
+
+### Features
+
+* **configurations:** add onboarding object configuration ([3ff580e](https://github.com/tillhub/schemas/commit/3ff580e))
+* **configurations:** features ([331f260](https://github.com/tillhub/schemas/commit/331f260))
+* **configurations:** features ([34aa8e3](https://github.com/tillhub/schemas/commit/34aa8e3))
+* **configurations:** features ([efae027](https://github.com/tillhub/schemas/commit/efae027))
+* **configurations:** receipts ([7490023](https://github.com/tillhub/schemas/commit/7490023))
+* **configurations:** receipts ([0a856ca](https://github.com/tillhub/schemas/commit/0a856ca))
+
+# [6.15.0](https://github.com/tillhub/schemas/compare/v6.14.0...v6.15.0) (2021-03-04)
+
+
+### Features
+
+* **configurations:** products ([b344cb7](https://github.com/tillhub/schemas/commit/b344cb7))
+
+# [6.14.0](https://github.com/tillhub/schemas/compare/v6.13.0...v6.14.0) (2021-03-02)
+
+
+### Features
+
+* **users:** add permission template ([8d88cd0](https://github.com/tillhub/schemas/commit/8d88cd0))
+
+# [6.13.0](https://github.com/tillhub/schemas/compare/v6.12.0...v6.13.0) (2021-03-02)
+
+
+### Features
+
+* **users:** add user_permission_template_id ([9b7dba5](https://github.com/tillhub/schemas/commit/9b7dba5))
+
+# [6.12.0](https://github.com/tillhub/schemas/compare/v6.11.0...v6.12.0) (2021-03-02)
+
+
+### Features
+
+* **users:** add permission termplate to users ([74afc9b](https://github.com/tillhub/schemas/commit/74afc9b))
+
+# [6.11.0](https://github.com/tillhub/schemas/compare/v6.10.1...v6.11.0) (2021-03-01)
+
+
+### Features
+
+* **countings:** set discrepancy defaults to true ([7db93a5](https://github.com/tillhub/schemas/commit/7db93a5))
+
+## [6.10.1](https://github.com/tillhub/schemas/compare/v6.10.0...v6.10.1) (2021-02-25)
+
+
+### Bug Fixes
+
+* **compile:** ignore eslint ([af1f4fb](https://github.com/tillhub/schemas/commit/af1f4fb))
+* **dependecies:** update eslint and fix errors ([088194c](https://github.com/tillhub/schemas/commit/088194c))
+
+# [6.10.0](https://github.com/tillhub/schemas/compare/v6.9.1...v6.10.0) (2021-02-18)
+
+
+### Features
+
+* **configurations:** interfaces ([8642444](https://github.com/tillhub/schemas/commit/8642444))
+
+## [6.9.1](https://github.com/tillhub/schemas/compare/v6.9.0...v6.9.1) (2021-02-16)
+
+
+### Bug Fixes
+
+* force release ([d07493f](https://github.com/tillhub/schemas/commit/d07493f))
+
+# [6.9.0](https://github.com/tillhub/schemas/compare/v6.8.0...v6.9.0) (2021-02-16)
+
+
+### Features
+
+* **configurations:** payments ([8c96eee](https://github.com/tillhub/schemas/commit/8c96eee))
+
+# [6.8.0](https://github.com/tillhub/schemas/compare/v6.7.1...v6.8.0) (2021-02-08)
+
+
+### Features
+
+* **configurations:** transactions ([86b5108](https://github.com/tillhub/schemas/commit/86b5108))
+* **registers:** fiscal_signing ([cee0aa8](https://github.com/tillhub/schemas/commit/cee0aa8))
+* **registers:** fiscal_signing ([866b0fe](https://github.com/tillhub/schemas/commit/866b0fe))
+* **transactions:** statuses ([8194815](https://github.com/tillhub/schemas/commit/8194815))
+
+## [6.7.1](https://github.com/tillhub/schemas/compare/v6.7.0...v6.7.1) (2021-02-03)
+
+
+### Bug Fixes
+
+* tx_v1 cartitem field description ([cf1eaa2](https://github.com/tillhub/schemas/commit/cf1eaa2))
+
+# [6.7.0](https://github.com/tillhub/schemas/compare/v6.6.0...v6.7.0) (2021-01-28)
+
+
+### Features
+
+* **configurations:** transactions ([b6bbd5d](https://github.com/tillhub/schemas/commit/b6bbd5d))
+
+# [6.6.0](https://github.com/tillhub/schemas/compare/v6.5.0...v6.6.0) (2021-01-22)
+
+
+### Features
+
+* **configurations:** interfaces ([3d82e30](https://github.com/tillhub/schemas/commit/3d82e30))
+
+# [6.5.0](https://github.com/tillhub/schemas/compare/v6.4.0...v6.5.0) (2021-01-21)
+
+
+### Features
+
+* **registers:** counting_decision ([#512](https://github.com/tillhub/schemas/issues/512)) ([87832bd](https://github.com/tillhub/schemas/commit/87832bd))
+
+# [6.4.0](https://github.com/tillhub/schemas/compare/v6.3.0...v6.4.0) (2021-01-07)
+
+
+### Features
+
+* **interfaces:** default payment types to true ([e73e789](https://github.com/tillhub/schemas/commit/e73e789))
+
+# [6.3.0](https://github.com/tillhub/schemas/compare/v6.2.3...v6.3.0) (2021-01-05)
+
+
+### Features
+
+* **configurations:** settings ([acaa52c](https://github.com/tillhub/schemas/commit/acaa52c))
+
+## [6.2.3](https://github.com/tillhub/schemas/compare/v6.2.2...v6.2.3) (2020-12-18)
+
+
+### Bug Fixes
+
+* **templates:** add summary items ([ccd1f54](https://github.com/tillhub/schemas/commit/ccd1f54))
+
+## [6.2.2](https://github.com/tillhub/schemas/compare/v6.2.1...v6.2.2) (2020-12-18)
+
+
+### Bug Fixes
+
+* **templates:** add summary items ([76c7f1c](https://github.com/tillhub/schemas/commit/76c7f1c))
+
+## [6.2.1](https://github.com/tillhub/schemas/compare/v6.2.0...v6.2.1) (2020-12-18)
+
+
+### Bug Fixes
+
+* **templates:** add salesman ([05a0ff3](https://github.com/tillhub/schemas/commit/05a0ff3))
+
+# [6.2.0](https://github.com/tillhub/schemas/compare/v6.1.0...v6.2.0) (2020-12-17)
+
+
+### Features
+
+* **templates:** add transaction receipt ([c65bd7a](https://github.com/tillhub/schemas/commit/c65bd7a))
+
+# [6.1.0](https://github.com/tillhub/schemas/compare/v6.0.0...v6.1.0) (2020-12-16)
+
+
+### Features
+
+* **templates:** add transaction receipt ([8de9a90](https://github.com/tillhub/schemas/commit/8de9a90))
+
+# [6.0.0](https://github.com/tillhub/schemas/compare/v5.106.0...v6.0.0) (2020-12-16)
+
+
+### Features
+
+* **branches:** add cost_center ([0b6c978](https://github.com/tillhub/schemas/commit/0b6c978))
+
+
+### BREAKING CHANGES
+
+* **branches:** new field in branches
+
+API-306
+
+# [5.106.0](https://github.com/tillhub/schemas/compare/v5.105.3...v5.106.0) (2020-12-10)
+
+
+### Features
+
+* **configurations:** receipts ([1fcaba5](https://github.com/tillhub/schemas/commit/1fcaba5))
+* change default allow_disconnected_terminals ([#506](https://github.com/tillhub/schemas/issues/506)) ([29aea56](https://github.com/tillhub/schemas/commit/29aea56))
+
+## [5.105.3](https://github.com/tillhub/schemas/compare/v5.105.2...v5.105.3) (2020-12-07)
+
+
+### Bug Fixes
+
+* **pricebook/entry:** allow 4 decimals for discounts ([40b477a](https://github.com/tillhub/schemas/commit/40b477a))
+
+## [5.105.2](https://github.com/tillhub/schemas/compare/v5.105.1...v5.105.2) (2020-12-03)
+
+
+### Bug Fixes
+
+* **time_tracking:** fix configurations default ([7e7a194](https://github.com/tillhub/schemas/commit/7e7a194))
+
+## [5.105.1](https://github.com/tillhub/schemas/compare/v5.105.0...v5.105.1) (2020-12-03)
+
+
+### Bug Fixes
+
+* **transactions:** counting_numbers ([a30ed2b](https://github.com/tillhub/schemas/commit/a30ed2b))
+
+# [5.105.0](https://github.com/tillhub/schemas/compare/v5.104.0...v5.105.0) (2020-12-03)
+
+
+### Features
+
+* **counting_numbers:** decision ([#501](https://github.com/tillhub/schemas/issues/501)) ([9b60483](https://github.com/tillhub/schemas/commit/9b60483))
+
+# [5.104.0](https://github.com/tillhub/schemas/compare/v5.103.0...v5.104.0) (2020-12-03)
+
+
+### Features
+
+* **payment_options:** add new type for terminal gifz cards ([be44903](https://github.com/tillhub/schemas/commit/be44903))
+
+# [5.103.0](https://github.com/tillhub/schemas/compare/v5.102.0...v5.103.0) (2020-11-26)
+
+
+### Features
+
+* **configurations:** receipts ([1c1eb29](https://github.com/tillhub/schemas/commit/1c1eb29))
+
+# [5.102.0](https://github.com/tillhub/schemas/compare/v5.101.0...v5.102.0) (2020-11-19)
+
+
+### Features
+
+* **staff:** permissions ([7240589](https://github.com/tillhub/schemas/commit/7240589))
+
+# [5.101.0](https://github.com/tillhub/schemas/compare/v5.100.0...v5.101.0) (2020-11-12)
+
+
+### Features
+
+* **storefronts:** add localsearch_shop type ([#500](https://github.com/tillhub/schemas/issues/500)) ([b7e83ca](https://github.com/tillhub/schemas/commit/b7e83ca))
+
+# [5.100.0](https://github.com/tillhub/schemas/compare/v5.99.0...v5.100.0) (2020-11-10)
+
+
+### Features
+
+* **configurations:** products ([aec572e](https://github.com/tillhub/schemas/commit/aec572e))
+
+# [5.99.0](https://github.com/tillhub/schemas/compare/v5.98.0...v5.99.0) (2020-11-09)
+
+
+### Bug Fixes
+
+* **balances:** extended ([06ec68b](https://github.com/tillhub/schemas/commit/06ec68b))
+* **cash_units:** revert unrelated changes ([f5b9449](https://github.com/tillhub/schemas/commit/f5b9449))
+
+
+### Features
+
+* **balances:** extended ([9b6067f](https://github.com/tillhub/schemas/commit/9b6067f))
+* **balances:** legacy ([194546c](https://github.com/tillhub/schemas/commit/194546c))
+* **balances_v1:** legacy ([a36411a](https://github.com/tillhub/schemas/commit/a36411a))
+
+# [5.98.0](https://github.com/tillhub/schemas/compare/v5.97.0...v5.98.0) (2020-11-09)
+
+
+### Features
+
+* **configurations:** balances ([1b7862f](https://github.com/tillhub/schemas/commit/1b7862f))
+
+# [5.97.0](https://github.com/tillhub/schemas/compare/v5.96.1...v5.97.0) (2020-11-09)
+
+
+### Features
+
+* **staff:** add external reference id ([264bdf4](https://github.com/tillhub/schemas/commit/264bdf4))
+
+## [5.96.1](https://github.com/tillhub/schemas/compare/v5.96.0...v5.96.1) (2020-11-06)
+
+
+### Bug Fixes
+
+* **time_tracking:** revert required fields on update ([022068e](https://github.com/tillhub/schemas/commit/022068e))
+
+# [5.96.0](https://github.com/tillhub/schemas/compare/v5.95.0...v5.96.0) (2020-11-06)
+
+
+### Features
+
+* **time_entries:** add patch schema ([031a64c](https://github.com/tillhub/schemas/commit/031a64c))
+
+# [5.95.0](https://github.com/tillhub/schemas/compare/v5.94.3...v5.95.0) (2020-11-05)
+
+
+### Features
+
+* **timetracking_config:** Make automatic clock-out time configurable ([b184074](https://github.com/tillhub/schemas/commit/b184074))
+
+## [5.94.3](https://github.com/tillhub/schemas/compare/v5.94.2...v5.94.3) (2020-11-05)
+
+
+### Bug Fixes
+
+* **time_tracking:** add required field ([4a785de](https://github.com/tillhub/schemas/commit/4a785de))
+
+## [5.94.2](https://github.com/tillhub/schemas/compare/v5.94.1...v5.94.2) (2020-11-03)
+
+
+### Bug Fixes
+
+* **invoices:** fix customer number title ([a5ca13e](https://github.com/tillhub/schemas/commit/a5ca13e))
+
+## [5.94.1](https://github.com/tillhub/schemas/compare/v5.94.0...v5.94.1) (2020-11-03)
+
+
+### Bug Fixes
+
+* **invoices:** add title for customer number on templates ([3cf0494](https://github.com/tillhub/schemas/commit/3cf0494))
+
+# [5.94.0](https://github.com/tillhub/schemas/compare/v5.93.0...v5.94.0) (2020-11-02)
+
+
+### Features
+
+* **vouchers:** add name field ([22874a0](https://github.com/tillhub/schemas/commit/22874a0))
+
+# [5.93.0](https://github.com/tillhub/schemas/compare/v5.92.0...v5.93.0) (2020-10-30)
+
+
+### Features
+
+* **functions:** linked_vouchers ([674edcf](https://github.com/tillhub/schemas/commit/674edcf))
+
+# [5.92.0](https://github.com/tillhub/schemas/compare/v5.91.0...v5.92.0) (2020-10-27)
+
+
+### Features
+
+* **big-query:** Realign transaction v1 legacy schema ([46ccf94](https://github.com/tillhub/schemas/commit/46ccf94))
+* **transactions:** add missing fields due to deadletter ([294d8b9](https://github.com/tillhub/schemas/commit/294d8b9))
+* **transactions:** add missing fields due to deadletter ([1f6f0f8](https://github.com/tillhub/schemas/commit/1f6f0f8))
+* **transactions:** fix review comments ([24594f2](https://github.com/tillhub/schemas/commit/24594f2))
+* **transactions:** fix review comments ([e2fcffc](https://github.com/tillhub/schemas/commit/e2fcffc))
+* **transactions:** fix review comments ([9141d93](https://github.com/tillhub/schemas/commit/9141d93))
+
+# [5.91.0](https://github.com/tillhub/schemas/compare/v5.90.0...v5.91.0) (2020-10-27)
+
+
+### Bug Fixes
+
+* **configurations:** interfaces ([6fad07d](https://github.com/tillhub/schemas/commit/6fad07d))
+
+
+### Features
+
+* **configuration:** interfaces ([586c4b9](https://github.com/tillhub/schemas/commit/586c4b9))
+
+# [5.90.0](https://github.com/tillhub/schemas/compare/v5.89.0...v5.90.0) (2020-10-27)
+
+
+### Features
+
+* **invoices:** force release ([ada5586](https://github.com/tillhub/schemas/commit/ada5586))
+
+# [5.89.0](https://github.com/tillhub/schemas/compare/v5.88.0...v5.89.0) (2020-10-26)
+
+
+### Features
+
+* **invoices:** add show_customer_number flag ([db3ef0b](https://github.com/tillhub/schemas/commit/db3ef0b))
+
+# [5.88.0](https://github.com/tillhub/schemas/compare/v5.87.1...v5.88.0) (2020-10-20)
+
+
+### Bug Fixes
+
+* **notifications:** fix device_configuration schema ([26e822f](https://github.com/tillhub/schemas/commit/26e822f))
+
+
+### Features
+
+* **configurations:** payments ([387a6da](https://github.com/tillhub/schemas/commit/387a6da))
+
+## [5.87.1](https://github.com/tillhub/schemas/compare/v5.87.0...v5.87.1) (2020-10-15)
+
+
+### Bug Fixes
+
+* **vouchers_customers:** allow empty array of customers ([f9b368d](https://github.com/tillhub/schemas/commit/f9b368d))
+
+# [5.87.0](https://github.com/tillhub/schemas/compare/v5.86.0...v5.87.0) (2020-10-12)
+
+
+### Features
+
+* **configurations:** sync ([1cb940a](https://github.com/tillhub/schemas/commit/1cb940a))
+
+# [5.86.0](https://github.com/tillhub/schemas/compare/v5.85.0...v5.86.0) (2020-10-09)
+
+
+### Features
+
+* **configurations:** switch "auto_customer_number_enabled" to an enum ([#421](https://github.com/tillhub/schemas/issues/421)) ([e5d53cd](https://github.com/tillhub/schemas/commit/e5d53cd))
+
+# [5.85.0](https://github.com/tillhub/schemas/compare/v5.84.0...v5.85.0) (2020-10-06)
+
+
+### Features
+
+* **voucher_systems:** action ([4fdab08](https://github.com/tillhub/schemas/commit/4fdab08))
+
+# [5.84.0](https://github.com/tillhub/schemas/compare/v5.83.1...v5.84.0) (2020-10-01)
+
+
+### Features
+
+* **configurations:** settings ([edab0f3](https://github.com/tillhub/schemas/commit/edab0f3))
+
+## [5.83.1](https://github.com/tillhub/schemas/compare/v5.83.0...v5.83.1) (2020-09-30)
+
+
+### Bug Fixes
+
+* **carts:** remove mandatorily  product_group on items since cart item might not have one ([01195c2](https://github.com/tillhub/schemas/commit/01195c2))
+
+# [5.83.0](https://github.com/tillhub/schemas/compare/v5.82.1...v5.83.0) (2020-09-30)
+
+
+### Features
+
+* **staffs:** Cashier prompt on new cart ([420d810](https://github.com/tillhub/schemas/commit/420d810))
+
+## [5.82.1](https://github.com/tillhub/schemas/compare/v5.82.0...v5.82.1) (2020-09-29)
+
+
+### Bug Fixes
+
+* **tse_state:** add serial number to body ([cff2e2d](https://github.com/tillhub/schemas/commit/cff2e2d))
+
+# [5.82.0](https://github.com/tillhub/schemas/compare/v5.81.0...v5.82.0) (2020-09-28)
+
+
+### Features
+
+* **tips/vouchers:** add flags to analytics configurations ([5c32048](https://github.com/tillhub/schemas/commit/5c32048))
+
+# [5.81.0](https://github.com/tillhub/schemas/compare/v5.80.1...v5.81.0) (2020-09-28)
+
+
+### Bug Fixes
+
+* **payment_options:** fix docs ([db43512](https://github.com/tillhub/schemas/commit/db43512))
+* **payment_options:** remove blank lines ([9e52728](https://github.com/tillhub/schemas/commit/9e52728))
+
+
+### Features
+
+* **payment_options:** add price range ([fd11c8a](https://github.com/tillhub/schemas/commit/fd11c8a))
+
+## [5.80.1](https://github.com/tillhub/schemas/compare/v5.80.0...v5.80.1) (2020-09-25)
+
+
+### Bug Fixes
+
+* **vouchers:** keep old property to bound customer and deprecated it ([c629b92](https://github.com/tillhub/schemas/commit/c629b92))
+
+# [5.80.0](https://github.com/tillhub/schemas/compare/v5.79.0...v5.80.0) (2020-09-24)
+
+
+### Features
+
+* **configurations:** settings ([c3144f6](https://github.com/tillhub/schemas/commit/c3144f6))
+* **vouchers:** support multiple customers ([#488](https://github.com/tillhub/schemas/issues/488)) ([629f076](https://github.com/tillhub/schemas/commit/629f076))
+
+# [5.79.0](https://github.com/tillhub/schemas/compare/v5.78.0...v5.79.0) (2020-09-24)
+
+
+### Features
+
+* **configurations:** settings ([ed0d8a2](https://github.com/tillhub/schemas/commit/ed0d8a2))
+
+# [5.78.0](https://github.com/tillhub/schemas/compare/v5.77.0...v5.78.0) (2020-09-24)
+
+
+### Features
+
+* **configurations:** settings ([75e132f](https://github.com/tillhub/schemas/commit/75e132f))
+
+# [5.77.0](https://github.com/tillhub/schemas/compare/v5.76.0...v5.77.0) (2020-09-24)
+
+
+### Features
+
+* **configurations:** settings ([d015265](https://github.com/tillhub/schemas/commit/d015265))
+
+# [5.76.0](https://github.com/tillhub/schemas/compare/v5.75.0...v5.76.0) (2020-09-23)
+
+
+### Features
+
+* **transactions:** add payback_number to metadata ([d41c86b](https://github.com/tillhub/schemas/commit/d41c86b))
+
+# [5.75.0](https://github.com/tillhub/schemas/compare/v5.74.0...v5.75.0) (2020-09-21)
+
+
+### Bug Fixes
+
+* **tenants:** fix type null ([d78c745](https://github.com/tillhub/schemas/commit/d78c745))
+
+
+### Features
+
+* **tenants:** add vat_id property ([eee5cfa](https://github.com/tillhub/schemas/commit/eee5cfa))
+
+# [5.74.0](https://github.com/tillhub/schemas/compare/v5.73.0...v5.74.0) (2020-09-17)
+
+
+### Features
+
+* **items:** discounts ([#484](https://github.com/tillhub/schemas/issues/484)) ([087e76d](https://github.com/tillhub/schemas/commit/087e76d))
+
+# [5.73.0](https://github.com/tillhub/schemas/compare/v5.72.1...v5.73.0) (2020-09-16)
+
+
+### Features
+
+* **discounts:** voucher ([d5af51b](https://github.com/tillhub/schemas/commit/d5af51b))
+
+## [5.72.1](https://github.com/tillhub/schemas/compare/v5.72.0...v5.72.1) (2020-09-16)
+
+
+### Bug Fixes
+
+* **registers:** remove mandatory bundle_id not all clients will have this value ([43959ec](https://github.com/tillhub/schemas/commit/43959ec))
+
+# [5.72.0](https://github.com/tillhub/schemas/compare/v5.71.0...v5.72.0) (2020-09-15)
+
+
+### Features
+
+* **configurations:** receipts ([9cb57a3](https://github.com/tillhub/schemas/commit/9cb57a3))
+
+# [5.71.0](https://github.com/tillhub/schemas/compare/v5.70.0...v5.71.0) (2020-09-11)
+
+
+### Features
+
+* **configurations:** settings ([5f7ba4b](https://github.com/tillhub/schemas/commit/5f7ba4b))
+
+# [5.70.0](https://github.com/tillhub/schemas/compare/v5.69.0...v5.70.0) (2020-09-08)
+
+
+### Features
+
+* **configurations:** receipts ([d20cd6d](https://github.com/tillhub/schemas/commit/d20cd6d))
+
+# [5.69.0](https://github.com/tillhub/schemas/compare/v5.68.0...v5.69.0) (2020-09-08)
+
+
+### Features
+
+* **storefronts:** add auto sync and whitelisted config ([f4a480c](https://github.com/tillhub/schemas/commit/f4a480c))
+
+# [5.68.0](https://github.com/tillhub/schemas/compare/v5.67.1...v5.68.0) (2020-09-08)
+
+
+### Features
+
+* **configurations:** discounts ([95edf6e](https://github.com/tillhub/schemas/commit/95edf6e))
+
+## [5.67.1](https://github.com/tillhub/schemas/compare/v5.67.0...v5.67.1) (2020-09-07)
+
+
+### Bug Fixes
+
+* **vouchers:** fix typo on discounts ([ef5aa1d](https://github.com/tillhub/schemas/commit/ef5aa1d))
+
+# [5.67.0](https://github.com/tillhub/schemas/compare/v5.66.0...v5.67.0) (2020-09-07)
+
+
+### Features
+
+* **vouchers:** discount ([#480](https://github.com/tillhub/schemas/issues/480)) ([7237c59](https://github.com/tillhub/schemas/commit/7237c59))
+
+# [5.66.0](https://github.com/tillhub/schemas/compare/v5.65.0...v5.66.0) (2020-09-07)
+
+
+### Features
+
+* **transactions:** items ([570595e](https://github.com/tillhub/schemas/commit/570595e))
+
+# [5.65.0](https://github.com/tillhub/schemas/compare/v5.64.0...v5.65.0) (2020-09-07)
+
+
+### Features
+
+* **transactions:** legacy ([ed580f8](https://github.com/tillhub/schemas/commit/ed580f8))
+
+# [5.64.0](https://github.com/tillhub/schemas/compare/v5.63.0...v5.64.0) (2020-09-03)
+
+
+### Features
+
+* **configurations:** receipts ([c8aa251](https://github.com/tillhub/schemas/commit/c8aa251))
+* **configurations:** receipts ([c2854cf](https://github.com/tillhub/schemas/commit/c2854cf))
+* **configurations:** receipts ([179a108](https://github.com/tillhub/schemas/commit/179a108))
+
+# [5.63.0](https://github.com/tillhub/schemas/compare/v5.62.0...v5.63.0) (2020-09-03)
+
+
+### Features
+
+* **configurations:** receipts ([f4447c5](https://github.com/tillhub/schemas/commit/f4447c5))
+
+# [5.62.0](https://github.com/tillhub/schemas/compare/v5.61.1...v5.62.0) (2020-09-02)
+
+
+### Bug Fixes
+
+* **transactions_v1:** legacy_discounts ([a873e3a](https://github.com/tillhub/schemas/commit/a873e3a))
+
+
+### Features
+
+* **carts:** discounts ([7ee620b](https://github.com/tillhub/schemas/commit/7ee620b))
+
+## [5.61.1](https://github.com/tillhub/schemas/compare/v5.61.0...v5.61.1) (2020-09-02)
+
+
+### Bug Fixes
+
+* **registers:** device_configuration ([ab582e0](https://github.com/tillhub/schemas/commit/ab582e0))
+
+# [5.61.0](https://github.com/tillhub/schemas/compare/v5.60.0...v5.61.0) (2020-09-02)
+
+
+### Features
+
+* **vouchers:** add properties to support discount vouchers ([e40f52c](https://github.com/tillhub/schemas/commit/e40f52c))
+
+# [5.60.0](https://github.com/tillhub/schemas/compare/v5.59.0...v5.60.0) (2020-09-01)
+
+
+### Features
+
+* **discounts:** toggle grouping on receipt ([838b14d](https://github.com/tillhub/schemas/commit/838b14d))
+
+# [5.59.0](https://github.com/tillhub/schemas/compare/v5.58.0...v5.59.0) (2020-09-01)
+
+
+### Features
+
+* **discounts:** toggle grouping on the receipt ([#470](https://github.com/tillhub/schemas/issues/470)) ([65da606](https://github.com/tillhub/schemas/commit/65da606))
+
+# [5.58.0](https://github.com/tillhub/schemas/compare/v5.57.0...v5.58.0) (2020-09-01)
+
+
+### Features
+
+* **configurations:** receipts ([03e65bc](https://github.com/tillhub/schemas/commit/03e65bc))
+
+# [5.57.0](https://github.com/tillhub/schemas/compare/v5.56.0...v5.57.0) (2020-08-27)
+
+
+### Features
+
+* **confogurations:** settings ([8d502a2](https://github.com/tillhub/schemas/commit/8d502a2))
+
+# [5.56.0](https://github.com/tillhub/schemas/compare/v5.55.0...v5.56.0) (2020-08-27)
+
+
+### Bug Fixes
+
+* Faulty description - no types in one address ([7e393d7](https://github.com/tillhub/schemas/commit/7e393d7))
+
+
+### Features
+
+* TM-7245 tenant missing fields ([d663664](https://github.com/tillhub/schemas/commit/d663664))
+
+# [5.55.0](https://github.com/tillhub/schemas/compare/v5.54.1...v5.55.0) (2020-08-27)
+
+
+### Features
+
+* **balance:** extension of balance ([a4a69a0](https://github.com/tillhub/schemas/commit/a4a69a0))
+* **configurations:** balances ([bec512a](https://github.com/tillhub/schemas/commit/bec512a))
+
+## [5.54.1](https://github.com/tillhub/schemas/compare/v5.54.0...v5.54.1) (2020-08-26)
+
+
+### Bug Fixes
+
+* **transactions:** discounts ([6512f46](https://github.com/tillhub/schemas/commit/6512f46))
+
+# [5.54.0](https://github.com/tillhub/schemas/compare/v5.53.0...v5.54.0) (2020-08-26)
+
+
+### Features
+
+* **counting:** couting protocole discrepancz ([eba5757](https://github.com/tillhub/schemas/commit/eba5757))
+
+# [5.53.0](https://github.com/tillhub/schemas/compare/v5.52.0...v5.53.0) (2020-08-26)
+
+
+### Features
+
+* **configuartions:** receipts ([1f951ea](https://github.com/tillhub/schemas/commit/1f951ea))
+
+# [5.52.0](https://github.com/tillhub/schemas/compare/v5.51.0...v5.52.0) (2020-08-24)
+
+
+### Features
+
+* **registers:** device_configuration ([76df87e](https://github.com/tillhub/schemas/commit/76df87e))
+
+# [5.51.0](https://github.com/tillhub/schemas/compare/v5.50.0...v5.51.0) (2020-08-24)
+
+
+### Features
+
+* **configurations:** settings ([fbf78b1](https://github.com/tillhub/schemas/commit/fbf78b1))
+* **configurations:** settings ([6bb2dc3](https://github.com/tillhub/schemas/commit/6bb2dc3))
+* **registers:** device_configuration ([47cc708](https://github.com/tillhub/schemas/commit/47cc708))
+* **registers:** device_configuration ([6c8bf09](https://github.com/tillhub/schemas/commit/6c8bf09))
+
+# [5.50.0](https://github.com/tillhub/schemas/compare/v5.49.0...v5.50.0) (2020-08-19)
+
+
+### Features
+
+* **storefronts:** add default location ([85a0dd6](https://github.com/tillhub/schemas/commit/85a0dd6))
+
+# [5.49.0](https://github.com/tillhub/schemas/compare/v5.48.0...v5.49.0) (2020-08-19)
+
+
+### Features
+
+* **staffs:** add permission key for price edit without note ([31e9d73](https://github.com/tillhub/schemas/commit/31e9d73))
+
+# [5.48.0](https://github.com/tillhub/schemas/compare/v5.47.0...v5.48.0) (2020-08-14)
+
+
+### Features
+
+* **vouchers:** bound customer voucher ([#451](https://github.com/tillhub/schemas/issues/451)) ([d0282d1](https://github.com/tillhub/schemas/commit/d0282d1))
+
+# [5.47.0](https://github.com/tillhub/schemas/compare/v5.46.0...v5.47.0) (2020-08-14)
+
+
+### Features
+
+* **discounts:** added external_ref_id to legacy ([b2bfecb](https://github.com/tillhub/schemas/commit/b2bfecb))
+
+# [5.46.0](https://github.com/tillhub/schemas/compare/v5.45.0...v5.46.0) (2020-08-13)
+
+
+### Features
+
+* **registers:** fiscalization ([efcf21b](https://github.com/tillhub/schemas/commit/efcf21b))
+
+# [5.45.0](https://github.com/tillhub/schemas/compare/v5.44.0...v5.45.0) (2020-08-13)
+
+
+### Features
+
+* **discounts:** Add external reference id ([7f1d9bd](https://github.com/tillhub/schemas/commit/7f1d9bd))
+* **discounts:** carts external_reference_id ([9e6bd0b](https://github.com/tillhub/schemas/commit/9e6bd0b))
+* **discounts:** External ref on delivery_notes ([0c5af64](https://github.com/tillhub/schemas/commit/0c5af64))
+* **discounts:** external_reference_id-tx discount ([34b01c0](https://github.com/tillhub/schemas/commit/34b01c0))
+
+# [5.44.0](https://github.com/tillhub/schemas/compare/v5.43.0...v5.44.0) (2020-08-12)
+
+
+### Features
+
+* explicit flag for printing used discounts ([1079694](https://github.com/tillhub/schemas/commit/1079694))
+* **discounts:** description for receipt ([1bea4d7](https://github.com/tillhub/schemas/commit/1bea4d7))
+
+# [5.43.0](https://github.com/tillhub/schemas/compare/v5.42.1...v5.43.0) (2020-08-12)
+
+
+### Features
+
+* **context_branch_groups:** add create schema ([a83af5c](https://github.com/tillhub/schemas/commit/a83af5c))
+* **context_locations:** add route ([94bf4bf](https://github.com/tillhub/schemas/commit/94bf4bf))
+* **context_locations:** fix lint ([8e730f4](https://github.com/tillhub/schemas/commit/8e730f4))
+* **context_locations:** rename ([205702e](https://github.com/tillhub/schemas/commit/205702e))
+* **context_locations:** required fields ([8d630d5](https://github.com/tillhub/schemas/commit/8d630d5))
+
+## [5.42.1](https://github.com/tillhub/schemas/compare/v5.42.0...v5.42.1) (2020-08-11)
+
+
+### Bug Fixes
+
+* **configurations:** set tax_number as string on tenant ([1b637ca](https://github.com/tillhub/schemas/commit/1b637ca))
+
+# [5.42.0](https://github.com/tillhub/schemas/compare/v5.41.0...v5.42.0) (2020-08-11)
+
+
+### Features
+
+* **fiscalisation:** add tse states resource ([#444](https://github.com/tillhub/schemas/issues/444)) ([8f6674f](https://github.com/tillhub/schemas/commit/8f6674f))
+
+# [5.41.0](https://github.com/tillhub/schemas/compare/v5.40.0...v5.41.0) (2020-08-11)
+
+
+### Bug Fixes
+
+* **discounts:** order ([a0ac37b](https://github.com/tillhub/schemas/commit/a0ac37b))
+
+
+### Features
+
+* **configurations:** receipts ([20af876](https://github.com/tillhub/schemas/commit/20af876))
+* **configurations:** searches ([18e508a](https://github.com/tillhub/schemas/commit/18e508a))
+* **configurations:** searches ([dcbac47](https://github.com/tillhub/schemas/commit/dcbac47))
+
+# [5.40.0](https://github.com/tillhub/schemas/compare/v5.39.0...v5.40.0) (2020-08-11)
+
+
+### Features
+
+* **configurations:** expenses ([c457db4](https://github.com/tillhub/schemas/commit/c457db4))
+
+# [5.39.0](https://github.com/tillhub/schemas/compare/v5.38.0...v5.39.0) (2020-08-11)
+
+
+### Features
+
+* **configurations:** expenses ([140ea7b](https://github.com/tillhub/schemas/commit/140ea7b))
+
+# [5.38.0](https://github.com/tillhub/schemas/compare/v5.37.1...v5.38.0) (2020-08-10)
+
+
+### Features
+
+* **countout config:** config for countout ([271c3da](https://github.com/tillhub/schemas/commit/271c3da))
+
+## [5.37.1](https://github.com/tillhub/schemas/compare/v5.37.0...v5.37.1) (2020-08-06)
+
+
+### Bug Fixes
+
+* **transactions:** discounts ([#439](https://github.com/tillhub/schemas/issues/439)) ([b23f2fa](https://github.com/tillhub/schemas/commit/b23f2fa))
+
+# [5.37.0](https://github.com/tillhub/schemas/compare/v5.36.0...v5.37.0) (2020-08-06)
+
+
+### Features
+
+* **configurations:** add tenants ([#438](https://github.com/tillhub/schemas/issues/438)) ([12f6c8a](https://github.com/tillhub/schemas/commit/12f6c8a))
+
+# [5.36.0](https://github.com/tillhub/schemas/compare/v5.35.3...v5.36.0) (2020-08-06)
+
+
+### Features
+
+* **discounts:** add order property ([#437](https://github.com/tillhub/schemas/issues/437)) ([30274e0](https://github.com/tillhub/schemas/commit/30274e0))
+
+## [5.35.3](https://github.com/tillhub/schemas/compare/v5.35.2...v5.35.3) (2020-08-06)
+
+
+### Bug Fixes
+
+* **configurations:** add item for discounts group ([#436](https://github.com/tillhub/schemas/issues/436)) ([bd8a1e1](https://github.com/tillhub/schemas/commit/bd8a1e1))
+
+## [5.35.2](https://github.com/tillhub/schemas/compare/v5.35.1...v5.35.2) (2020-08-03)
+
+
+### Bug Fixes
+
+* **registers:** fix fiscal_signing property on device_configuration ([56a8463](https://github.com/tillhub/schemas/commit/56a8463))
+
+## [5.35.1](https://github.com/tillhub/schemas/compare/v5.35.0...v5.35.1) (2020-07-31)
+
+
+### Bug Fixes
+
+* **registers:** fiscal_signing ([314582d](https://github.com/tillhub/schemas/commit/314582d))
+
+# [5.35.0](https://github.com/tillhub/schemas/compare/v5.34.0...v5.35.0) (2020-07-29)
+
+
+### Features
+
+* **configurations:** settings ([77ab1c4](https://github.com/tillhub/schemas/commit/77ab1c4))
+
+# [5.34.0](https://github.com/tillhub/schemas/compare/v5.33.0...v5.34.0) (2020-07-29)
+
+
+### Features
+
+* **configurations:** settings ([5cc7941](https://github.com/tillhub/schemas/commit/5cc7941))
+
+# [5.33.0](https://github.com/tillhub/schemas/compare/v5.32.0...v5.33.0) (2020-07-28)
+
+
+### Features
+
+* **registers:** fiscalization ([#420](https://github.com/tillhub/schemas/issues/420)) ([020ac13](https://github.com/tillhub/schemas/commit/020ac13))
+
+# [5.32.0](https://github.com/tillhub/schemas/compare/v5.31.0...v5.32.0) (2020-07-28)
+
+
+### Bug Fixes
+
+* **taxes:** jurisdictions ([650b0db](https://github.com/tillhub/schemas/commit/650b0db))
+
+
+### Features
+
+* **taxes:** rate_classes ([fcc6668](https://github.com/tillhub/schemas/commit/fcc6668))
+* **taxes:** rate_classes ([7d19599](https://github.com/tillhub/schemas/commit/7d19599))
+* **transactions:** cart items ([3181762](https://github.com/tillhub/schemas/commit/3181762))
+* **transactions:** cart items ([d29112a](https://github.com/tillhub/schemas/commit/d29112a))
+* **transactions:** cart_items ([72bfeb1](https://github.com/tillhub/schemas/commit/72bfeb1))
+
+# [5.31.0](https://github.com/tillhub/schemas/compare/v5.30.0...v5.31.0) (2020-07-28)
+
+
+### Features
+
+* **configurations:** receipts ([3443a79](https://github.com/tillhub/schemas/commit/3443a79))
+
+# [5.30.0](https://github.com/tillhub/schemas/compare/v5.29.0...v5.30.0) (2020-07-27)
+
+
+### Features
+
+* **time_entries:** add configurations schema ([#427](https://github.com/tillhub/schemas/issues/427)) ([dac4478](https://github.com/tillhub/schemas/commit/dac4478))
+
+# [5.29.0](https://github.com/tillhub/schemas/compare/v5.28.0...v5.29.0) (2020-07-22)
+
+
+### Features
+
+* **time_tracking:** add timezone ([6e249fb](https://github.com/tillhub/schemas/commit/6e249fb))
+
+# [5.28.0](https://github.com/tillhub/schemas/compare/v5.27.0...v5.28.0) (2020-07-22)
+
+
+### Features
+
+* **transactions:** add is_automatic flag to discounts ([#426](https://github.com/tillhub/schemas/issues/426)) ([58e9d35](https://github.com/tillhub/schemas/commit/58e9d35))
+
+# [5.27.0](https://github.com/tillhub/schemas/compare/v5.26.1...v5.27.0) (2020-07-21)
+
+
+### Features
+
+* **favourites:** add is_local flag ([#425](https://github.com/tillhub/schemas/issues/425)) ([5de2a2c](https://github.com/tillhub/schemas/commit/5de2a2c))
+
+## [5.26.1](https://github.com/tillhub/schemas/compare/v5.26.0...v5.26.1) (2020-07-17)
+
+
+### Bug Fixes
+
+* **client_accounts:** add storefronts mapping ([#422](https://github.com/tillhub/schemas/issues/422)) ([6809cfe](https://github.com/tillhub/schemas/commit/6809cfe))
+
+# [5.26.0](https://github.com/tillhub/schemas/compare/v5.25.3...v5.26.0) (2020-07-17)
+
+
+### Features
+
+* **transactions:** fiscal_signing ([#418](https://github.com/tillhub/schemas/issues/418)) ([d63dcc0](https://github.com/tillhub/schemas/commit/d63dcc0))
+
+## [5.25.3](https://github.com/tillhub/schemas/compare/v5.25.2...v5.25.3) (2020-07-15)
+
+
+### Bug Fixes
+
+* **configurations:** add warehub ([4dc2ed4](https://github.com/tillhub/schemas/commit/4dc2ed4))
+
+## [5.25.2](https://github.com/tillhub/schemas/compare/v5.25.1...v5.25.2) (2020-07-10)
+
+
+### Bug Fixes
+
+* **staff:** make lastname mandatory ([6b3fb98](https://github.com/tillhub/schemas/commit/6b3fb98))
+
+## [5.25.1](https://github.com/tillhub/schemas/compare/v5.25.0...v5.25.1) (2020-07-09)
+
+
+### Bug Fixes
+
+* **staff create schema:** make only staffs lastname required in docs and valications ([cb198f1](https://github.com/tillhub/schemas/commit/cb198f1))
+
+# [5.25.0](https://github.com/tillhub/schemas/compare/v5.24.0...v5.25.0) (2020-07-09)
+
+
+### Bug Fixes
+
+* **discounts:** rename group enum value item ([a3e9a8a](https://github.com/tillhub/schemas/commit/a3e9a8a))
+
+
+### Features
+
+* **discounts:** add cart item to group for discount application ([251ac16](https://github.com/tillhub/schemas/commit/251ac16))
+
+# [5.24.0](https://github.com/tillhub/schemas/compare/v5.23.1...v5.24.0) (2020-07-08)
+
+
+### Features
+
+* **configurations:** sync ([29dead7](https://github.com/tillhub/schemas/commit/29dead7))
+
+## [5.23.1](https://github.com/tillhub/schemas/compare/v5.23.0...v5.23.1) (2020-07-08)
+
+
+### Bug Fixes
+
+* **storefronts:** add initial profile settings ([8a208a1](https://github.com/tillhub/schemas/commit/8a208a1))
+
+# [5.23.0](https://github.com/tillhub/schemas/compare/v5.22.0...v5.23.0) (2020-07-07)
+
+
+### Features
+
+* **users:** add user_permission_templates schema ([#412](https://github.com/tillhub/schemas/issues/412)) ([a5d8b96](https://github.com/tillhub/schemas/commit/a5d8b96))
+
+# [5.22.0](https://github.com/tillhub/schemas/compare/v5.21.0...v5.22.0) (2020-07-01)
+
+
+### Bug Fixes
+
+* **delivery_notes:** add customProperties ([4f34df7](https://github.com/tillhub/schemas/commit/4f34df7))
+* **items:** add custom_properties field ([6052909](https://github.com/tillhub/schemas/commit/6052909))
+* **transactions:** fix custom_properties route ([edc2406](https://github.com/tillhub/schemas/commit/edc2406))
+
+
+### Features
+
+* **transactions:** fiscalization ([9dec790](https://github.com/tillhub/schemas/commit/9dec790))
+
+# [5.21.0](https://github.com/tillhub/schemas/compare/v5.20.2...v5.21.0) (2020-07-01)
+
+
+### Features
+
+* **discounts:** change rate to percision 3 ([a77013f](https://github.com/tillhub/schemas/commit/a77013f))
+
+## [5.20.2](https://github.com/tillhub/schemas/compare/v5.20.1...v5.20.2) (2020-06-30)
+
+
+### Bug Fixes
+
+* **discounts:** match any of amount types correctly ([a05a851](https://github.com/tillhub/schemas/commit/a05a851))
+
+## [5.20.1](https://github.com/tillhub/schemas/compare/v5.20.0...v5.20.1) (2020-06-30)
+
+
+### Bug Fixes
+
+* **discounts:** force null on dep'ed field ([d2b6eac](https://github.com/tillhub/schemas/commit/d2b6eac))
+
+# [5.20.0](https://github.com/tillhub/schemas/compare/v5.19.1...v5.20.0) (2020-06-30)
+
+
+### Features
+
+* **discounts:** add require of rate or value ([b52446b](https://github.com/tillhub/schemas/commit/b52446b))
+
+## [5.19.1](https://github.com/tillhub/schemas/compare/v5.19.0...v5.19.1) (2020-06-30)
+
+
+### Bug Fixes
+
+* **discounts:** remove one of rate or value ([9e96f36](https://github.com/tillhub/schemas/commit/9e96f36))
+
+# [5.19.0](https://github.com/tillhub/schemas/compare/v5.18.0...v5.19.0) (2020-06-30)
+
+
+### Features
+
+* **discounts:** replace amount with rate, value and require only one ([01ac32d](https://github.com/tillhub/schemas/commit/01ac32d))
+
+# [5.18.0](https://github.com/tillhub/schemas/compare/v5.17.0...v5.18.0) (2020-06-30)
+
+
+### Features
+
+* **transactions:** signing ([a409a79](https://github.com/tillhub/schemas/commit/a409a79))
+
+# [5.17.0](https://github.com/tillhub/schemas/compare/v5.16.0...v5.17.0) (2020-06-24)
+
+
+### Features
+
+* **permissions:** discounts ([4ea5f1b](https://github.com/tillhub/schemas/commit/4ea5f1b))
+
+# [5.16.0](https://github.com/tillhub/schemas/compare/v5.15.0...v5.16.0) (2020-06-24)
+
+
+### Features
+
+* **pdfs:** add attributes to pdfs templates items ([46e2df7](https://github.com/tillhub/schemas/commit/46e2df7))
+
+# [5.15.0](https://github.com/tillhub/schemas/compare/v5.14.1...v5.15.0) (2020-06-22)
+
+
+### Features
+
+* **discounts:** automatic_application ([cdc0595](https://github.com/tillhub/schemas/commit/cdc0595))
+
+## [5.14.1](https://github.com/tillhub/schemas/compare/v5.14.0...v5.14.1) (2020-06-19)
+
+
+### Bug Fixes
+
+* **cashier_counting_protocols:** allow empty cash units ([#401](https://github.com/tillhub/schemas/issues/401)) ([5e06e04](https://github.com/tillhub/schemas/commit/5e06e04))
+
+# [5.14.0](https://github.com/tillhub/schemas/compare/v5.13.0...v5.14.0) (2020-06-18)
+
+
+### Features
+
+* **transactions:** payments ([2fd94f1](https://github.com/tillhub/schemas/commit/2fd94f1))
+
+# [5.13.0](https://github.com/tillhub/schemas/compare/v5.12.0...v5.13.0) (2020-06-18)
+
+
+### Features
+
+* **configurations:** ui_configurations ([28655dc](https://github.com/tillhub/schemas/commit/28655dc))
+
 # [5.12.0](https://github.com/tillhub/schemas/compare/v5.11.0...v5.12.0) (2020-06-16)
 
 

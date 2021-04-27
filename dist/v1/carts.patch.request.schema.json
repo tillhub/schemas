@@ -244,7 +244,6 @@
               "salesman_staff",
               "tax",
               "account",
-              "product_group",
               "name",
               "discounts",
               "amount",
@@ -308,13 +307,30 @@
                 "minimum": 0,
                 "maximum": 1
               },
+              "vat_rate_class": {
+                "oneOf": [
+                  {
+                    "default": "normal",
+                    "description": "Rate class from 'taxes.rate_class' according to international standards, used in Germany to map types for e.g. fiscalization",
+                    "type": "string",
+                    "enum": [
+                      "normal",
+                      "reduced",
+                      "super_reduced"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
               "currency": {
                 "type": "string",
                 "minLength": 3,
                 "maxLength": 3
               },
               "amount": {
-                "description": "the currency / amount object combination is the Tillhub Money object.",
+                "description": "The gross/net input price per quantity of 1.0 and before any discounts",
                 "type": "object",
                 "additionalProperties": false,
                 "anyOf": [
@@ -337,10 +353,18 @@
                 ],
                 "properties": {
                   "net": {
-                    "type": "number"
+                    "description": "A monetary value as .2Decimal excluding taxes, $10 = 10.00",
+                    "type": "number",
+                    "minimum": -1000000,
+                    "maximum": 1000000,
+                    "multipleOf": 0.01
                   },
                   "gross": {
-                    "type": "number"
+                    "description": "A monetary value as .2Decimal including taxes, 10€ = 10.00",
+                    "type": "number",
+                    "minimum": -1000000,
+                    "maximum": 1000000,
+                    "multipleOf": 0.01
                   }
                 }
               },
@@ -668,7 +692,8 @@
                           "fleurop_externa_sell_and_activate",
                           "tillhub_create",
                           "tillhub_recharge",
-                          "tillhub_reedeem"
+                          "tillhub_reedeem",
+                          "tillhub_percentage"
                         ]
                       },
                       "status": {
@@ -876,6 +901,36 @@
                 "type": "string",
                 "maxLength": 128
               },
+              "custom_properties": {
+                "oneOf": [
+                  {
+                    "type": "null"
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "maxProperties": 30,
+                    "patternProperties": {
+                      "^.{1,128}$": {
+                        "anyOf": [
+                          {
+                            "type": "string"
+                          },
+                          {
+                            "type": "number"
+                          },
+                          {
+                            "type": "boolean"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              },
               "salesman_staff": {
                 "oneOf": [
                   {
@@ -925,6 +980,28 @@
                       "minLength": 3,
                       "maxLength": 3
                     },
+                    "type_name": {
+                      "type": "string",
+                      "enum": [
+                        "percentage",
+                        "value"
+                      ],
+                      "description": "The value interpretation type of the discount, needed to map from transaction legacy discounts and back, value and rate will be still respected"
+                    },
+                    "group": {
+                      "type": "string",
+                      "enum": [
+                        "customer",
+                        "staff",
+                        "cart",
+                        "product_set",
+                        "sconto",
+                        "item",
+                        "promotion",
+                        "voucher"
+                      ],
+                      "description": "The logical group type of the discount, reflecting it's origin."
+                    },
                     "value": {
                       "oneOf": [
                         {
@@ -951,14 +1028,16 @@
                       "type": "string",
                       "maxLength": 128
                     },
-                    "group": {
-                      "type": "string",
-                      "enum": [
-                        "customer",
-                        "staff",
-                        "cart",
-                        "product_set",
-                        "sconto"
+                    "external_reference_id": {
+                      "description": "A caller defined custom ID for the purpose of syncing from external resources, or to use in analytics.",
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "maxLength": 128
+                        },
+                        {
+                          "type": "null"
+                        }
                       ]
                     },
                     "source_id": {
@@ -991,10 +1070,14 @@
                         {
                           "type": "string",
                           "enum": [
-                            "cart",
-                            "item",
                             "customer",
-                            "sconto"
+                            "staff",
+                            "cart",
+                            "product_set",
+                            "sconto",
+                            "item",
+                            "promotion",
+                            "voucher"
                           ]
                         },
                         {
@@ -1006,6 +1089,50 @@
                       "type": "string",
                       "minLength": 1,
                       "maxLength": 128
+                    },
+                    "is_automatic": {
+                      "oneOf": [
+                        {
+                          "type": "boolean",
+                          "default": false,
+                          "description": "If true, this discount was trigger automatically."
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "order": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "enum": [
+                            "first",
+                            "last"
+                          ],
+                          "default": "last"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "vat_rate_class": {
+                      "oneOf": [
+                        {
+                          "default": "normal",
+                          "description": "Rate class from 'taxes.rate_class' according to international standards, used in Germany to map types for e.g. fiscalization",
+                          "type": "string",
+                          "enum": [
+                            "normal",
+                            "reduced",
+                            "super_reduced"
+                          ]
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
                     }
                   },
                   "anyOf": [
@@ -1067,8 +1194,16 @@
             ],
             "properties": {
               "product": {
+                "description": "The Tillhub product unique identifier",
                 "type": "string",
-                "format": "uuid"
+                "format": "uuid",
+                "example": "aa165950-26f1-4a59-a85a-1c6017b3cb79"
+              },
+              "custom_id": {
+                "description": "The product.custom_id as stated in https://tillhub.atlassian.net/browse/TM-5665",
+                "type": "string",
+                "maxLength": 128,
+                "example": "260620-727-DE"
               },
               "product_supplier_name": {
                 "oneOf": [
@@ -1107,10 +1242,6 @@
               "qty": {
                 "type": "number"
               },
-              "custom_id": {
-                "type": "string",
-                "maxLength": 128
-              },
               "currency": {
                 "type": "string",
                 "minLength": 3,
@@ -1140,10 +1271,18 @@
                 ],
                 "properties": {
                   "net": {
-                    "type": "number"
+                    "description": "A monetary value as .2Decimal excluding taxes, $10 = 10.00",
+                    "type": "number",
+                    "minimum": -1000000,
+                    "maximum": 1000000,
+                    "multipleOf": 0.01
                   },
                   "gross": {
-                    "type": "number"
+                    "description": "A monetary value as .2Decimal including taxes, 10€ = 10.00",
+                    "type": "number",
+                    "minimum": -1000000,
+                    "maximum": 1000000,
+                    "multipleOf": 0.01
                   }
                 }
               },
@@ -1192,7 +1331,8 @@
                             "customer",
                             "staff",
                             "cart",
-                            "product_set"
+                            "product_set",
+                            "item"
                           ]
                         },
                         "name": {
@@ -1240,7 +1380,8 @@
                             "customer",
                             "staff",
                             "cart",
-                            "product_set"
+                            "product_set",
+                            "item"
                           ]
                         },
                         "name": {
@@ -1280,7 +1421,8 @@
                             "customer",
                             "staff",
                             "cart",
-                            "product_set"
+                            "product_set",
+                            "item"
                           ]
                         },
                         "name": {
@@ -1320,7 +1462,8 @@
                             "customer",
                             "staff",
                             "cart",
-                            "product_set"
+                            "product_set",
+                            "item"
                           ]
                         },
                         "name": {
@@ -1362,6 +1505,36 @@
               "client_id": {
                 "type": "string",
                 "maxLength": 128
+              },
+              "custom_properties": {
+                "oneOf": [
+                  {
+                    "type": "null"
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "maxProperties": 30,
+                    "patternProperties": {
+                      "^.{1,128}$": {
+                        "anyOf": [
+                          {
+                            "type": "string"
+                          },
+                          {
+                            "type": "number"
+                          },
+                          {
+                            "type": "boolean"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
               },
               "salesman_staff": {
                 "oneOf": [
@@ -1473,7 +1646,8 @@
                             "customer",
                             "staff",
                             "cart",
-                            "product_set"
+                            "product_set",
+                            "item"
                           ]
                         },
                         "name": {
@@ -1521,7 +1695,8 @@
                             "customer",
                             "staff",
                             "cart",
-                            "product_set"
+                            "product_set",
+                            "item"
                           ]
                         },
                         "name": {
@@ -1561,7 +1736,8 @@
                             "customer",
                             "staff",
                             "cart",
-                            "product_set"
+                            "product_set",
+                            "item"
                           ]
                         },
                         "name": {
@@ -1601,7 +1777,8 @@
                             "customer",
                             "staff",
                             "cart",
-                            "product_set"
+                            "product_set",
+                            "item"
                           ]
                         },
                         "name": {

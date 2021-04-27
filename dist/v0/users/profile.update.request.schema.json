@@ -303,6 +303,7 @@
                   "staff:staff:carts:update",
                   "staff:staff:carts:read",
                   "staff:staff:carts:delete",
+                  "staff:staff:carts:edit_price_without_note",
                   "staff:staff:selections",
                   "staff:staff:selections:create",
                   "staff:staff:selections:update",
@@ -321,6 +322,7 @@
                   "staff:staff:settings:printer:update",
                   "staff:staff:settings:printer:read",
                   "staff:staff:settings:printer:delete",
+                  "staff:staff:settings:printer:drawer:open",
                   "staff:staff:settings:terminal",
                   "staff:staff:settings:terminal:create",
                   "staff:staff:settings:terminal:update",
@@ -332,6 +334,7 @@
                   "staff:staff:settings:dashboard",
                   "staff:staff:settings:database",
                   "staff:staff:settings:history",
+                  "staff:staff:settings:discounts",
                   "staff:staff:analytics",
                   "staff:staff:analytics:journals",
                   "staff:staff:products",
@@ -387,6 +390,16 @@
               }
             ]
           }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "user_permission_template_id": {
+      "oneOf": [
+        {
+          "type": "string"
         },
         {
           "type": "null"

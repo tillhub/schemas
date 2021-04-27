@@ -4,6 +4,17 @@
   "type": "object",
   "additionalProperties": false,
   "properties": {
+    "name": {
+      "oneOf": [
+        {
+          "description": "A voucher name which can be displayed on receipt.",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "code": {
       "description": "The chosen or generated voucher code.",
       "example": "1234 1234 1234",
@@ -43,28 +54,30 @@
         }
       ]
     },
-    "discount_type": {
-      "description": "Define the value type of the discount if one exists.",
+    "discount_rate": {
       "oneOf": [
         {
-          "type": "string",
-          "enum": [
-            "percentage",
-            "value"
-          ]
+          "description": "If type is 'discount' - the discount rate that will be applied to the cart.",
+          "example": "0.15",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
         },
         {
           "type": "null"
         }
       ]
     },
-    "discount_amount": {
-      "description": "The discount amount on a voucher is either a percentage or money value corresponding to the currency. A voucher discount is mostly an accounting construct, whereas the amount defines the portion of the applied voucher that will be booked against discounts accounts.",
-      "example": "10.99",
-      "anyOf": [
+    "discount_order": {
+      "oneOf": [
         {
-          "type": "number",
-          "minimum": 0
+          "description": "If type is 'discount' - this will keep the resulting discount entry ordered per cart item as always first or always last.",
+          "type": "string",
+          "enum": [
+            "first",
+            "last"
+          ],
+          "default": "last"
         },
         {
           "type": "null"
@@ -285,6 +298,21 @@
     },
     "limited_to_region": {
       "description": "Define whether to limit this voucher in a particular region.",
+      "type": "boolean"
+    },
+    "bound_to_customer": {
+      "description": "DEPRECATED. Please use many to many relation on /voucher/customers.",
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "limited_to_customer": {
+      "description": "Define whether to limit this voucher to customers or not.",
       "type": "boolean"
     },
     "refundable": {
@@ -853,6 +881,16 @@
           "type": "null"
         }
       ]
+    },
+    "redeemed": {
+      "description": "If a voucher has been redeemed or not.",
+      "type": "boolean",
+      "default": false
+    },
+    "is_usable_only_once": {
+      "description": "If a voucher can be used only once or multiple times.",
+      "type": "boolean",
+      "default": false
     }
   },
   "required": []

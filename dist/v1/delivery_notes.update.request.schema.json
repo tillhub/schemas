@@ -327,6 +327,23 @@
             "minimum": 0,
             "maximum": 1
           },
+          "vat_rate_class": {
+            "oneOf": [
+              {
+                "default": "normal",
+                "description": "Rate class from 'taxes.rate_class' according to international standards, used in Germany to map types for e.g. fiscalization",
+                "type": "string",
+                "enum": [
+                  "normal",
+                  "reduced",
+                  "super_reduced"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
           "currency": {
             "type": "string",
             "minLength": 3,
@@ -761,7 +778,8 @@
                       "fleurop_externa_sell_and_activate",
                       "tillhub_create",
                       "tillhub_recharge",
-                      "tillhub_reedeem"
+                      "tillhub_reedeem",
+                      "tillhub_percentage"
                     ]
                   },
                   "status": {
@@ -1013,19 +1031,133 @@
                   "type": "string",
                   "maxLength": 128
                 },
+                "external_reference_id": {
+                  "description": "A caller defined custom ID for the purpose of syncing from external resources, or to use in analytics.",
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "maxLength": 128
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "type_name": {
+                  "type": "string",
+                  "enum": [
+                    "percentage",
+                    "value"
+                  ],
+                  "description": "The value interpretation type of the discount, needed to map from transaction legacy discounts and back, value and rate will be still respected"
+                },
                 "group": {
                   "type": "string",
                   "enum": [
                     "customer",
                     "staff",
                     "cart",
-                    "product_set"
+                    "product_set",
+                    "sconto",
+                    "item",
+                    "promotion",
+                    "voucher"
+                  ],
+                  "description": "The logical group type of the discount, reflecting it's origin."
+                },
+                "source_id": {
+                  "description": "The Tillhub discount resource (if available)",
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "format": "uuid"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "assignment_id": {
+                  "description": "Identification of the process that created this discount",
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "maxLength": 128
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "assignment_source": {
+                  "description": "Identification of the source of the process that created this discount",
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "enum": [
+                        "customer",
+                        "staff",
+                        "cart",
+                        "product_set",
+                        "sconto",
+                        "item",
+                        "promotion",
+                        "voucher"
+                      ]
+                    },
+                    {
+                      "type": "null"
+                    }
                   ]
                 },
                 "name": {
                   "type": "string",
                   "minLength": 1,
                   "maxLength": 128
+                },
+                "is_automatic": {
+                  "oneOf": [
+                    {
+                      "type": "boolean",
+                      "default": false,
+                      "description": "If true, this discount was trigger automatically."
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "order": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "enum": [
+                        "first",
+                        "last"
+                      ],
+                      "default": "last"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "vat_rate_class": {
+                  "oneOf": [
+                    {
+                      "default": "normal",
+                      "description": "Rate class from 'taxes.rate_class' according to international standards, used in Germany to map types for e.g. fiscalization",
+                      "type": "string",
+                      "enum": [
+                        "normal",
+                        "reduced",
+                        "super_reduced"
+                      ]
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
                 }
               },
               "required": [
@@ -1072,6 +1204,36 @@
               },
               {
                 "type": "null"
+              }
+            ]
+          },
+          "custom_properties": {
+            "oneOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "maxProperties": 30,
+                "patternProperties": {
+                  "^.{1,128}$": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "number"
+                      },
+                      {
+                        "type": "boolean"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                }
               }
             ]
           },

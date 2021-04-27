@@ -65,7 +65,7 @@
             "type": "string",
             "format": "date-time",
             "example": "2018-11-04T23:18:43.075Z",
-            "description": "The server creation time of this transaction."
+            "description": "The server update time of this transaction."
           },
           "temporary_id": {
             "oneOf": [
@@ -108,7 +108,7 @@
               {
                 "type": "string",
                 "example": "886eef646bc1c4d79eb8495321bbd472",
-                "description": "Initialized as the iPAD's UIDevice.current.identifierForVendor?.uuidString.md5() and stored in the Keychain for the Tillhub application"
+                "description": "Unique identifier for the physical device which is bound to a license\n\nInitialized as the iPAD's UIDevice.current.identifierForVendor?.uuidString.md5() and stored in the Keychain for the Tillhub application.\nMachineGuid (win) or IOPlatformUUID (mac) in electron pos."
               },
               {
                 "type": "null"
@@ -134,7 +134,7 @@
               {
                 "type": "integer",
                 "example": 5,
-                "description": "The associated balance's counting number (receipt number) of this transaction"
+                "description": "The associated balance's counting number (receipt number) of this transaction. A sequential counter that may be reset in error cases."
               },
               {
                 "type": "null"
@@ -241,7 +241,7 @@
               {
                 "type": "integer",
                 "example": 3500,
-                "description": "The total amount of this transaction in the lowest (available) fraction of that currency -> 35.00 EUR or 3500 HUF respectively"
+                "description": "The total amount of this transaction in the lowest (available) fraction of that currency -> 35.00 EUR or 3500 HUF respectively (represented as integer)"
               },
               {
                 "type": "null"
@@ -254,31 +254,7 @@
               {
                 "type": "integer",
                 "example": 500,
-                "description": "The total amount of change given back -> change = Sum(payment_amounts) - total"
-              },
-              {
-                "type": "null"
-              }
-            ]
-          },
-          "fr_receipt_id": {
-            "deprecated": true,
-            "oneOf": [
-              {
-                "type": "integer",
-                "description": "Is not used"
-              },
-              {
-                "type": "null"
-              }
-            ]
-          },
-          "customer_id": {
-            "deprecated": true,
-            "oneOf": [
-              {
-                "type": "integer",
-                "description": "Is not used"
+                "description": "The total amount of change given back -> change = Sum(payment_amounts) - total (represented as integer)"
               },
               {
                 "type": "null"
@@ -296,18 +272,6 @@
             ],
             "description": "Description of the transaction type"
           },
-          "receipt_text": {
-            "deprecated": true,
-            "oneOf": [
-              {
-                "type": "string",
-                "description": "Is not used"
-              },
-              {
-                "type": "null"
-              }
-            ]
-          },
           "customer_number": {
             "deprecated": true,
             "oneOf": [
@@ -315,19 +279,6 @@
                 "type": "string",
                 "example": "0000000000171088",
                 "description": "Custom id of the customer if there is one"
-              },
-              {
-                "type": "null"
-              }
-            ]
-          },
-          "refunded_at": {
-            "deprecated": true,
-            "oneOf": [
-              {
-                "type": "string",
-                "format": "date-time",
-                "description": "Not used"
               },
               {
                 "type": "null"
@@ -384,12 +335,11 @@
               }
             ]
           },
-          "signed_transactions": {
-            "deprecated": true,
+          "payback_number": {
             "oneOf": [
               {
                 "type": "string",
-                "description": "Is not used"
+                "description": "Payback customer number, transaction apollo payback bridge service can call the apollo payback backend."
               },
               {
                 "type": "null"
@@ -406,6 +356,15 @@
                     "type": "integer",
                     "example": 13,
                     "description": "If signing fails this represents the number of transactions since signing last succeded"
+                  },
+                  "payback_number": {
+                    "type": "string"
+                  },
+                  "previous_tx_client_id": {
+                    "type": "string",
+                    "format": "uuid",
+                    "example": "5ad2351d-9a67-45f9-ad4f-0abcbefa9037",
+                    "description": "TODO"
                   },
                   "origin": {
                     "type": "object",
@@ -500,7 +459,39 @@
                     "type": "string",
                     "format": "uuid",
                     "example": "09a9a469-c16b-4b54-835d-692d05d218f9",
-                    "description": "If sfes are involved, the Tillhub resource identifier of that safe"
+                    "description": "If safes are involved, the Tillhub resource identifier of that safe (currently ignored by the API)"
+                  },
+                  "context": {
+                    "oneOf": [
+                      {
+                        "type": "array",
+                        "description": "Key-value-container with API-predefined keys (fr_transaction_expense_context_option)",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "name": {
+                              "type": "string",
+                              "examples": [
+                                "reason"
+                              ]
+                            },
+                            "value": {
+                              "oneOf": [
+                                {
+                                  "type": "string"
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
                   }
                 }
               },
@@ -552,12 +543,31 @@
             ]
           },
           "context": {
-            "deprecated": true,
             "oneOf": [
               {
                 "type": "array",
+                "description": "Key-value-container with API-predefined keys (fr_transaction_context_option), e.g. [ {\"name\":\"name\",\"value\":\"Title of the transaction\"}, {\"name\":\"desc\",\"value\":\"Note of the transaction\"} ]",
                 "items": {
-                  "type": "object"
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "examples": [
+                        "name",
+                        "desc"
+                      ]
+                    },
+                    "value": {
+                      "oneOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  }
                 }
               },
               {
@@ -1146,6 +1156,18 @@
                     ],
                     "default": null
                   },
+                  "previous_tx_client_id": {
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "description": "Previous transaction client id."
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
                   "counters": {
                     "oneOf": [
                       {
@@ -1551,7 +1573,7 @@
                   "type": "string",
                   "format": "date-time",
                   "example": "2018-11-04T23:18:43.075Z",
-                  "description": "The server creation time of this transaction."
+                  "description": "The server update time of this transaction."
                 },
                 "_id": {
                   "oneOf": [
@@ -1579,6 +1601,7 @@
                 },
                 "quantity": {
                   "deprecated": true,
+                  "type": "number",
                   "oneOf": [
                     {
                       "description": "Quantity of the product in that item, supports floating point for e.g. 2.73 kg. The POS sends it currently as string."
@@ -1590,6 +1613,7 @@
                 },
                 "article_number": {
                   "deprecated": true,
+                  "type": "integer",
                   "oneOf": [
                     {
                       "description": "Apparently not used"
@@ -1601,6 +1625,7 @@
                 },
                 "article_attr_desc": {
                   "deprecated": true,
+                  "type": "string",
                   "oneOf": [
                     {
                       "description": "Apparently not used"
@@ -1616,7 +1641,7 @@
                     {
                       "type": "integer",
                       "example": 799,
-                      "description": "The per qty=1 raw price of the product in the lowest (available) fraction of that currency -> 7.99 EUR or 799 HUF respectively"
+                      "description": "The per qty=1 raw price of the product in the lowest (available) fraction of that currency -> 7.99 EUR or 799 HUF respectively (represented as integer)"
                     },
                     {
                       "type": "null"
@@ -1629,7 +1654,7 @@
                     {
                       "type": "integer",
                       "example": 612,
-                      "description": "The per qty=1 (disocunted) price of the product in the lowest (available) fraction of that currency -> 6.12 EUR or 612 HUF respectively"
+                      "description": "The per qty=1 (disocunted) price of the product in the lowest (available) fraction of that currency -> 6.12 EUR or 612 HUF respectively (represented as integer)"
                     },
                     {
                       "type": "null"
@@ -1642,7 +1667,7 @@
                     {
                       "type": "integer",
                       "example": 1671,
-                      "description": "The total (disocunted) revenue of the item, before or after taxes depending on the scheme, 16.71 EUR or 1671 HUF respectively"
+                      "description": "The total (disocunted) revenue of the item, before or after taxes depending on the scheme, 16.71 EUR or 1671 HUF respectively (represented as integer)"
                     },
                     {
                       "type": "null"
@@ -1694,7 +1719,7 @@
                     {
                       "type": "integer",
                       "example": 267,
-                      "description": "The total amount of VAT on the item, 2.67 EUR or 267 HUF respectively"
+                      "description": "The total amount of VAT on the item, 2.67 EUR or 267 HUF respectively (represented as integer)"
                     },
                     {
                       "type": "null"
@@ -1728,6 +1753,7 @@
                   ]
                 },
                 "article_id": {
+                  "type": "integer",
                   "deprecated": true,
                   "oneOf": [
                     {
@@ -1739,6 +1765,7 @@
                   ]
                 },
                 "vat_amount_euro": {
+                  "type": "string",
                   "deprecated": true,
                   "oneOf": [
                     {
@@ -1755,7 +1782,7 @@
                     {
                       "type": "integer",
                       "example": 187,
-                      "description": "Discount amount (per qty 1) = article_price - selling_price, 1.87 EUR or 187 HUF respectively"
+                      "description": "Discount amount (per qty 1) = article_price - selling_price, 1.87 EUR or 187 HUF respectively (represented as integer)"
                     },
                     {
                       "type": "null"
@@ -1776,6 +1803,7 @@
                   ]
                 },
                 "guid": {
+                  "type": "string",
                   "deprecated": true,
                   "oneOf": [
                     {
@@ -1800,6 +1828,7 @@
                   ]
                 },
                 "product_group_id": {
+                  "type": "integer",
                   "deprecated": true,
                   "oneOf": [
                     {
@@ -1825,7 +1854,7 @@
                   "deprecated": true,
                   "oneOf": [
                     {
-                      "type": "number",
+                      "type": "integer",
                       "description": "If true, the item was created by (partially) refunding a previous sale. The POS sends 0 for false and 1 for true."
                     },
                     {
@@ -2013,7 +2042,9 @@
                               "cart",
                               "product_set",
                               "sconto",
-                              "promotion"
+                              "item",
+                              "promotion",
+                              "voucher"
                             ],
                             "description": "The group type of discount (type was taken)"
                           },
@@ -2022,7 +2053,7 @@
                             "minimum": 0,
                             "description": "Position of that discount inside the list (application used to have unordered set previously)"
                           },
-                          "type": {
+                          "type_name": {
                             "type": "string",
                             "enum": [
                               "percentage",
@@ -2031,19 +2062,34 @@
                             "description": "The type of the discount, decides the meaning of amount (absolut or relative value)"
                           },
                           "value": {
-                            "type": "integer",
-                            "example": "25",
-                            "description": "Source discount info, depending on type this means for 'percentage': 25% and for 'value': 0.25 EUR or 25 HUF respectively"
+                            "type": "number",
+                            "minimum": -1000000,
+                            "maximum": 1000000,
+                            "multipleOf": 0.001,
+                            "example": "25.137",
+                            "description": "Source discount info, depending on type this means for 'percentage': 25.137 % and for 'value': 0.25137 EUR (sic!) or 25.137 HUF (sic!) respectively"
                           },
                           "amount": {
                             "type": "integer",
                             "example": 43,
-                            "description": "The per qty=1 effective discount amount -> 0.43 EUR or 43 HUF respectively"
+                            "description": "The per qty=1 effective discount amount -> 0.43 EUR or 43 HUF respectively (represented as integer)"
                           },
                           "amount_total": {
                             "type": "integer",
                             "example": 312,
-                            "description": "The total effective discount amount -> 3.12 EUR or 312 HUF respectively"
+                            "description": "The total effective discount amount -> 3.12 EUR or 312 HUF respectively (represented as integer)"
+                          },
+                          "external_reference_id": {
+                            "description": "A caller defined custom ID for the purpose of syncing from external resources, or to use in analytics.",
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "maxLength": 128
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
                           },
                           "source_id": {
                             "oneOf": [
@@ -2052,6 +2098,34 @@
                                 "format": "uuid",
                                 "example": "03063bbe-e44d-42f6-8bbf-971f5d88f848",
                                 "description": "The Tillhub discount resource identifier for the discount used"
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          },
+                          "is_automatic": {
+                            "oneOf": [
+                              {
+                                "type": "boolean",
+                                "default": false,
+                                "description": "If true, this discount was triggered automatically (source disount was automatic and automatic application enabled)"
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          },
+                          "order": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "enum": [
+                                  "first",
+                                  "last"
+                                ],
+                                "default": "last",
+                                "description": "(Copied) property of the source discount which defined the (re)ordering when applied: order=='first' > order=='null' > order=='last' > group=='customer'"
                               },
                               {
                                 "type": "null"
@@ -2068,10 +2142,10 @@
                   ]
                 },
                 "context": {
-                  "deprecated": true,
                   "oneOf": [
                     {
                       "type": "array",
+                      "description": "Key-value-container with API-predefined keys (fr_transaction_cartitem_context_option), e.g. [ {\"name\":\"return_reason\",\"value\":\"Damaged product\"}, {\"name\":\"note\",\"value\":\"Note of the cart item\"} ]",
                       "items": {
                         "type": "object",
                         "properties": {
@@ -2082,6 +2156,7 @@
                               "product_service_questions",
                               "note",
                               "related_transaction_guid",
+                              "serial_number",
                               "voucher_value",
                               "voucher_id",
                               "voucher_client_id",
@@ -2099,7 +2174,6 @@
                               "voucher_is_locked",
                               "voucher_message",
                               "voucher_title",
-                              "voucher_type",
                               "voucher_type"
                             ]
                           },
@@ -2486,7 +2560,8 @@
                                     "fleurop_externa_sell_and_activate",
                                     "tillhub_create",
                                     "tillhub_recharge",
-                                    "tillhub_reedeem"
+                                    "tillhub_reedeem",
+                                    "tillhub_percentage"
                                   ]
                                 },
                                 "status": {
@@ -2777,6 +2852,23 @@
                       "minimum": 0,
                       "maximum": 1,
                       "multipleOf": 0.001
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "_vat_rate_class": {
+                  "oneOf": [
+                    {
+                      "default": "normal",
+                      "description": "Rate class from 'taxes.rate_class' according to international standards, used in Germany to map types for e.g. fiscalization",
+                      "type": "string",
+                      "enum": [
+                        "normal",
+                        "reduced",
+                        "super_reduced"
+                      ]
                     },
                     {
                       "type": "null"
@@ -3107,6 +3199,18 @@
                             "type": "string",
                             "maxLength": 128
                           },
+                          "external_reference_id": {
+                            "description": "A caller defined custom ID for the purpose of syncing from external resources, or to use in analytics.",
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "maxLength": 128
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          },
                           "group": {
                             "oneOf": [
                               {
@@ -3117,8 +3221,10 @@
                                   "staff",
                                   "cart",
                                   "product_set",
+                                  "sconto",
+                                  "item",
                                   "promotion",
-                                  "sconto"
+                                  "voucher"
                                 ]
                               },
                               {
@@ -3172,6 +3278,19 @@
                                 "type": "null"
                               }
                             ]
+                          },
+                          "is_automatic": {
+                            "type": "boolean",
+                            "default": false,
+                            "description": "If true, this discount was trigger automatically."
+                          },
+                          "order": {
+                            "type": "string",
+                            "enum": [
+                              "first",
+                              "last"
+                            ],
+                            "default": "last"
                           }
                         },
                         "required": [
@@ -3528,7 +3647,7 @@
                 "_amount_net": {
                   "oneOf": [
                     {
-                      "description": "The payable net amount on the units qty base of 1,\nafter decrementing applicable discounts (meaning including discounts) etc. This value needs\nto be lower than or equal to the respective unit amount.\n\nNOTE: the effective financial value is `amount_net_total`. This value here is bankers rounded.\n\nWHEN TO USE: in analytics it is likely sometimes wanted to avergage the effective net product price, to e.g. compare\nit to undiscounted prices (unit price).",
+                      "description": "The payable net amount (unit * qty) of this cartitem, after decrementing applicable discounts (meaning including discounts) etc.\nThis value needs to be lower than or equal to the respective `_amount_total_net`.\n(unit * qty) - _discount_amount_total",
                       "type": "number",
                       "minimum": -1000000,
                       "maximum": 1000000,
@@ -3542,7 +3661,7 @@
                 "_amount_gross": {
                   "oneOf": [
                     {
-                      "description": "The payable gross amount on the units qty base of 1, after decrementing\napplicable discounts etc.\nThis value needs to be lower than or equal to the respective unit amount.\n\nNOTE: the effective financial value is `amount_gross_total`. This value here is bankers rounded.\n\nWHEN TO USE: in analytics it is likely sometimes wanted to avergage the effective gross product price, to e.g. compare\nit to undiscounted prices (unit price).",
+                      "description": "The payable gross amount (unit * qty) of this cartitem, after decrementing applicable discounts (meaning including discounts) etc.\nThis value needs to be lower than or equal to the respective `_amount_total_gross`.\n(unit * qty) - _discount_amount_total",
                       "type": "number",
                       "minimum": -1000000,
                       "maximum": 1000000,
@@ -3556,7 +3675,7 @@
                 "_amount_total_net": {
                   "oneOf": [
                     {
-                      "description": "The payable net amount total, after decrementing applicable discounts (meaning including discounts) etc.\nThis value needs to be lower than or equal to the respective unit amount.\n\nNOTE: this is the effective financial value in taxation.",
+                      "description": "The payable net amount total, before decrementing applicable discounts etc.\n(unit * qty)",
                       "type": "number",
                       "minimum": -1000000,
                       "maximum": 1000000,
@@ -3570,7 +3689,7 @@
                 "_amount_total_gross": {
                   "oneOf": [
                     {
-                      "description": "The payable gross amount total, after decrementing applicable discounts (meaning\nincluding discounts) etc. This value needs to be lower than or equal to the respective unit amount.\n\nNOTE: this is the effective financial value in taxation.",
+                      "description": "The payable gross amount total, before decrementing applicable discounts etc.\n(unit * qty)",
                       "type": "number",
                       "minimum": -1000000,
                       "maximum": 1000000,
@@ -3613,6 +3732,36 @@
                   "description": "Flag to denote a refund item in a sale.",
                   "type": "boolean",
                   "default": true
+                },
+                "custom_properties": {
+                  "oneOf": [
+                    {
+                      "type": "null"
+                    },
+                    {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "maxProperties": 30,
+                      "patternProperties": {
+                        "^.{1,128}$": {
+                          "anyOf": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "number"
+                            },
+                            {
+                              "type": "boolean"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  ]
                 },
                 "account": {
                   "type": "string",
@@ -3689,7 +3838,7 @@
                   "type": "string",
                   "format": "date-time",
                   "example": "2018-11-04T23:18:43.075Z",
-                  "description": "The server creation time of this transaction."
+                  "description": "The server upodate time of this transaction."
                 },
                 "fa_account_number": {
                   "deprecated": true,
@@ -3710,7 +3859,7 @@
                     {
                       "type": "integer",
                       "example": 2000,
-                      "description": "The given amount via this payment, 20.00 EUR or 2000 HUF respectively"
+                      "description": "The given amount via this payment, 20.00 EUR or 2000 HUF respectively (represented as integer)"
                     },
                     {
                       "type": "null"
@@ -3748,9 +3897,9 @@
                   "deprecated": true,
                   "oneOf": [
                     {
-                      "type": "string",
-                      "example": "2.315",
-                      "description": "String encoded number, not used"
+                      "type": "number",
+                      "example": 2.315,
+                      "description": "not used"
                     },
                     {
                       "type": "null"
@@ -3771,7 +3920,6 @@
                   ]
                 },
                 "payment_option_type_name": {
-                  "deprecated": true,
                   "oneOf": [
                     {
                       "type": "string",
@@ -3784,7 +3932,8 @@
                         "card_concardis",
                         "card_tim",
                         "card_adyen",
-                        "card"
+                        "card",
+                        "terminal_gift_card"
                       ],
                       "description": "Payment option type"
                     },
@@ -3800,7 +3949,7 @@
                       "type": "string",
                       "format": "uuid",
                       "example": "96b619a6-6189-4f03-a135-e1b307d664de",
-                      "description": "The Tillhub payment option resource used for this payment"
+                      "description": "The Tillhub payment option resource used for this payment. Not used by the API"
                     },
                     {
                       "type": "null"
@@ -3837,7 +3986,7 @@
                     {
                       "type": "integer",
                       "example": 110,
-                      "description": "The given tip via this payment, 1.10 EUR or 110 HUF respectively"
+                      "description": "The given tip via this payment, 1.10 EUR or 110 HUF respectively (represented as integer)"
                     },
                     {
                       "type": "null"
@@ -3845,6 +3994,7 @@
                   ]
                 },
                 "terminal_response": {
+                  "deprecated": true,
                   "oneOf": [
                     {
                       "type": "string",
@@ -3861,6 +4011,7 @@
                   "oneOf": [
                     {
                       "type": "array",
+                      "description": "Key-value-container with API-predefined keys (fr_transaction_payment_context_option), e.g. [ {\"name\":\"cardCircuit\",\"value\":\"VISA\"}, {\"name\":\"cardTerminalID\",\"value\":\"123456\"}, ... ]",
                       "items": {
                         "type": "object",
                         "properties": {
@@ -3934,6 +4085,7 @@
                       "description": "",
                       "enum": [
                         "card",
+                        "terminal_gift_card",
                         "cash",
                         "expense",
                         "voucher",
@@ -4022,11 +4174,13 @@
                                 },
                                 "api": {
                                   "type": "string",
+                                  "description": "The API used to talk to the terminal.",
                                   "enum": [
                                     "adyen",
                                     "concardis",
                                     "opi",
-                                    "tim"
+                                    "tim",
+                                    "sumup"
                                   ]
                                 },
                                 "payment_provider": {
@@ -4081,6 +4235,11 @@
                                   "description": "The raw response of the terminal for finalizing the card payment. Might contain additional information.",
                                   "type": "string",
                                   "maxLength": 16384
+                                },
+                                "is_connected": {
+                                  "default": null,
+                                  "description": "If true - the terminal was connected during the payment process and data must have arrived in the POS.\nIf true - a cancellation must be connected to the termianla as well.\nIf false - the terminal was used independently - responsibility is with the cashier to handle data properly.\nIf false - a cancellation will not connect to a device.",
+                                  "type": "boolean"
                                 }
                               }
                             },
@@ -4256,7 +4415,8 @@
                                     "fleurop_externa_sell_and_activate",
                                     "tillhub_create",
                                     "tillhub_recharge",
-                                    "tillhub_reedeem"
+                                    "tillhub_reedeem",
+                                    "tillhub_percentage"
                                   ]
                                 },
                                 "status": {
@@ -4313,11 +4473,11 @@
                 "_position": {
                   "oneOf": [
                     {
-                      "type": "number",
+                      "type": "integer",
                       "description": "The position of the payment item. E.g. positon 1 (2, 3 etc.) in the transaction.",
                       "minimum": 0,
                       "maximum": 300,
-                      "example": "1"
+                      "example": 1
                     },
                     {
                       "type": "null"
@@ -4687,24 +4847,6 @@
             "additionalProperties": false,
             "required": [],
             "properties": {
-              "id": {
-                "type": "string",
-                "format": "uuid",
-                "description": "The item resource reference ID."
-              },
-              "created_at": {
-                "type": "string",
-                "format": "date-time",
-                "example": "2018-11-04T23:18:43.075Z",
-                "description": "The server creation time of this transaction."
-              },
-              "updated_at": {
-                "type": "string",
-                "format": "date-time",
-                "example": "2018-11-04T23:18:43.075Z",
-                "description": "The server update time of this transaction. Transactions are immutable in and out themselves, however statuses might change, which is reflected in this value. This can for example happen if a signing request for this transaction was not possible and needed to be dealt with later."
-              },
-              "status": {},
               "metadata": {
                 "oneOf": [
                   {
@@ -4743,54 +4885,6 @@
                   }
                 ]
               },
-              "signature": {
-                "oneOf": [
-                  {
-                    "type": "object",
-                    "description": "The singing data that can be used to print singing results or as fiscal reference.",
-                    "properties": {
-                      "format": {
-                        "type": "string",
-                        "enum": [
-                          "qr",
-                          "aztec",
-                          "code128"
-                        ]
-                      },
-                      "data": {
-                        "type": "string",
-                        "example": "{\"data_for_a\": \"qr_code\"}",
-                        "maxLength": 16384,
-                        "description": "A barcade container of any type with which this transaction is associated."
-                      },
-                      "caption": {
-                        "default": null,
-                        "type": "string",
-                        "minLength": 1,
-                        "maxLength": 128
-                      },
-                      "payload": {
-                        "description": "The original signing response by the signing provider.",
-                        "default": null,
-                        "oneOf": [
-                          {
-                            "type": "string"
-                          },
-                          {
-                            "type": "object"
-                          },
-                          {
-                            "type": "null"
-                          }
-                        ]
-                      }
-                    }
-                  },
-                  {
-                    "type": "null"
-                  }
-                ]
-              },
               "signed_at": {
                 "oneOf": [
                   {
@@ -4804,19 +4898,282 @@
                   }
                 ]
               },
+              "status": {
+                "type": "string",
+                "description": "The current signing status of this transaction. A regular transaction will receive the status `complete` immediately. When signing is requested `complete` will only be assigned after signing.",
+                "enum": [
+                  "signing_requested",
+                  "complete"
+                ]
+              },
               "signature_type": {
                 "oneOf": [
                   {
                     "type": "string",
                     "description": "Any allowed singing system provider as type.",
                     "enum": [
-                      "fiskaltrust"
+                      "fiskaltrust",
+                      "tse_fiskaly",
+                      "tse_epson",
+                      "fr_NF525"
                     ]
                   },
                   {
                     "type": "null"
                   }
                 ]
+              },
+              "signature": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "description": "The singing data that can be used to print singing results or as fiscal reference.",
+                    "properties": {
+                      "format": {
+                        "type": "string",
+                        "enum": [
+                          "qr",
+                          "aztec",
+                          "code128",
+                          "utf8"
+                        ]
+                      },
+                      "data": {
+                        "type": "string",
+                        "example": "MEQCIAy4P9k+7x9saDO0uRZ4El8QwN+qTgYiv1DIaJIMWRiuAiAt+saFDGjK2Yi5Cxgy7PprXQ5O0seRgx4ltdpW9REvwA==",
+                        "maxLength": 16384,
+                        "description": "The actual signature from the signing provider (data for backwards compatibility)"
+                      },
+                      "qr_code_data": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "example": "V0;955002-00;Kassenbeleg-V1;Beleg^0.00_2.55_0.00_0.00_0.00^2.55:Bar;18;112;2019-07-10T18:41:04.000Z;2019-07-10T18:41:04.000Z;ecdsa-plain-SHA256;unixTime;MEQCIAy4P9k+7x9saDO0uRZ4El8QwN+qTgYiv1DIaJIMWRiuAiAt+saFDGjK2Yi5Cxgy7PprXQ5O0seRgx4ltdpW9REvwA==;BHhWOeisRpPBTGQ1W4VUH95TXx2GARf8e2NYZXJoInjtGqnxJ8sZ3CQpYgjI+LYEmW5A37sLWHsyU7nSJUBemyU=",
+                            "maxLength": 16384,
+                            "description": "The extended signature that can be printed additionally (e.g. as QR-Code according to DSFinV- K vs. signature as string)"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "caption": {
+                        "oneOf": [
+                          {
+                            "default": null,
+                            "type": "string",
+                            "description": "Optional caption if the signature by itself will be printed as QR-Code",
+                            "minLength": 1,
+                            "maxLength": 128
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "payload": {
+                        "description": "The original signing response by the signing provider.",
+                        "default": null,
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "description": "The stringified version of any raw response from any signing provider.",
+                            "example": "{\"function\":\"FinishTransaction\",\"output\":{\"logTime\":\"2020-07-10T23:12:21Z\",\"signature\":\"HRTC0sv6HhIcMY+l8MWk9DavvF8CAHwfOaONfN5sdCvyS8zSMHXOx4829DHtTLPyOKPDe+IgT4qbbiktuj0JF9Tc4QH\\/iZ0TQSEd4rCNrPMjfOQvJpLv8ybjAy7zWs4B\",\"signatureCounter\":227},\"result\":\"EXECUTION_OK\"}"
+                          },
+                          {
+                            "type": "object"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "request_payload": {
+                        "description": "The original signing request to the signing provider.",
+                        "default": null,
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "example": "{\"storage\":{\"type\":\"TSE\",\"vendor\":\"TSE1\"},\"function\":\"FinishTransaction\",\"input\":{\"clientId\":\"c5a3ce2d-61a9-4c63-8d63-17d83e\",\"processType\":\"Finish\",\"processData\":\"QmVsZWdeMjAuMDBfMC4wMF8wLjAwXzAuMDBfMC4wMF4yMC4wMDpVbmJhcg==\",\"transactionNumber\":16,\"additionalData\":\"\"},\"compress\":{\"type\":\"zip_deflate\",\"required\":true}}"
+                          },
+                          {
+                            "type": "object"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "client_id": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "description": "ID of the register according to the signing unit. Will deviate from the Tillhub register UUID!",
+                            "example": "955002-00"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "counter": {
+                        "oneOf": [
+                          {
+                            "type": "integer",
+                            "minimum": 0,
+                            "description": "Internal counter of the signing unit (signature counter)",
+                            "example": 227
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "unit": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "description": "ID of the used signing unit (e.g. Fiskaly: tss_id (UUID4), Epson: serialNumber (base64))",
+                            "example": "soTFFH9xiZP9JYWCPRgvpw6xhZ3ttbWDjfS4ky4AMEk="
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "public_key": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "description": "Public key of the signing unit according to BSI TR-03111 (e.g. tsePublicKey for Epson)"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "algorithm": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "description": "The algorithm type used by the signing unit",
+                            "example": "ecdsa-plain-SHA256"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "process_type": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "description": "A string describing the local type of the signing process",
+                            "example": "Kassenbeleg-V1"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "process_data": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "example": "Beleg^0.00_2.55_0.00_0.00_0.00^2.55:Bar",
+                            "maxLength": 1024,
+                            "description": "The transaction relevant content as input for the signing algorithm"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "transaction_number": {
+                        "oneOf": [
+                          {
+                            "type": "integer",
+                            "minimum": 0,
+                            "description": "The transaction number according to the signing unit, required in final input data",
+                            "example": 16
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "transaction_id": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "description": "The transaction id according to the signing unit (Fiskaly: _id)",
+                            "example": "00000000-0000-0000-0000-000000000000"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "started_at": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "format": "date-time",
+                            "example": "2019-07-10T18:41:02.000Z",
+                            "description": "A signing system defined [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) compliant date e.g. 2018-01-29T14:55:05.000Z. This represents the time of any inital signing request (e.g. start_transaction according to DSFinV-K, Fiskaly: time_start)"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "error": {
+                        "default": null,
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "description": "Optional error reporting"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "error_counter": {
+                        "oneOf": [
+                          {
+                            "type": "integer",
+                            "minimum": 0,
+                            "description": "Internal counter of succeeding errors, must be reset on next success."
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "id": {
+                "type": "string",
+                "format": "uuid",
+                "description": "The item resource reference ID."
+              },
+              "created_at": {
+                "type": "string",
+                "format": "date-time",
+                "example": "2018-11-04T23:18:43.075Z",
+                "description": "The server creation time of this transaction."
+              },
+              "updated_at": {
+                "type": "string",
+                "format": "date-time",
+                "example": "2018-11-04T23:18:43.075Z",
+                "description": "The server update time of this transaction. Transactions are immutable in and out themselves, however statuses might change, which is reflected in this value. This can for example happen if a signing request for this transaction was not possible and needed to be dealt with later."
               }
             }
           }

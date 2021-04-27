@@ -111,34 +111,234 @@
       "type": "boolean"
     },
     "device_configuration": {
-      "oneOf": [
+      "anyOf": [
         {
           "type": "object",
           "additionalProperties": false,
           "properties": {
             "device_token": {
-              "type": "string"
+              "oneOf": [
+                {
+                  "type": "string",
+                  "description": "The Apple Push Notification Service (APNS) token that can be used to send push notifications to the device",
+                  "example": "da6f9c820ca73df7680675134b64641f46520a0ee0e93b15b25cf131cb2e29f6"
+                },
+                {
+                  "type": "null"
+                }
+              ]
             },
             "bundle_id": {
-              "type": "string"
+              "oneOf": [
+                {
+                  "type": "string",
+                  "description": "The bundle identifier of the client application",
+                  "example": "de.tillhub.tillhubstage"
+                },
+                {
+                  "type": "null"
+                }
+              ]
             },
             "network": {
-              "type": "object",
-              "additionalProperties": false,
-              "properties": {
-                "ip": {
-                  "type": "string"
+              "oneOf": [
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "ip": {
+                      "type": "string",
+                      "description": "The local IP-address of the client application",
+                      "example": "192.168.1.147"
+                    }
+                  },
+                  "required": [
+                    "ip"
+                  ]
+                },
+                {
+                  "type": "null"
                 }
-              },
-              "required": [
-                "ip"
+              ]
+            },
+            "counting_decisions": {
+              "oneOf": [
+                {
+                  "type": "array",
+                  "description": "Reports a one-time decision about the register's counting numbers (set when initializing a safe storage, e.g. keychain)",
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "description": "Describes a very infrequent decision about the state of a specific counting number.",
+                    "required": [
+                      "date",
+                      "type",
+                      "decision"
+                    ],
+                    "properties": {
+                      "date": {
+                        "description": "Date of a counting number decision",
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2019-01-23 16:51:29.143+00"
+                      },
+                      "type": {
+                        "type": "string",
+                        "description": "The affected transaction type",
+                        "enum": [
+                          "sale",
+                          "expense",
+                          "balance",
+                          "delivery_note",
+                          "saved_cart"
+                        ]
+                      },
+                      "local": {
+                        "oneOf": [
+                          {
+                            "type": "integer",
+                            "description": "The local number at the time of the decision.",
+                            "example": 7,
+                            "minimum": 0
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "remote": {
+                        "oneOf": [
+                          {
+                            "type": "integer",
+                            "description": "The remote number at the time of the decision.",
+                            "example": 7,
+                            "minimum": 0
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "decision": {
+                        "type": "integer",
+                        "description": "The effective number after the decision.",
+                        "example": 7,
+                        "minimum": 0
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "fiscal_signing_type": {
+              "oneOf": [
+                {
+                  "description": "The fiscal signing type to use, e.g. Fiskaltrust in Austria or EposnTSE in Germany",
+                  "type": "string",
+                  "enum": [
+                    "fiskaltrust",
+                    "tse_fiskaly",
+                    "tse_epson",
+                    "fr_NF525"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "fiscal_signing": {
+              "description": "Necessary core or allowed authentication data for financial signing systems. This is an opt-in feature.\n\nNOTE: Depending on the respective configuration (transactions.signing.resource_type) this will be looked up\nhere or on branch level (signing_configuration).",
+              "anyOf": [
+                {
+                  "type": "object",
+                  "description": "Configuration object for Germany: TSE Fiskaly",
+                  "properties": {
+                    "tss_id": {
+                      "type": "string",
+                      "description": "UUID4 of the technical security system (TSS). Must be uniquely generated on the dashboard.",
+                      "example": "cfb5afbb-dcce-4376-9152-6bb7ee01a0dd",
+                      "format": "uuid"
+                    },
+                    "client_id": {
+                      "type": "string",
+                      "description": "UUID4 of the register according to the signing unit. Must be uniquely generated on the dashboard.",
+                      "example": "cec990a1-34ca-447f-8f39-6128da8fdbf2",
+                      "format": "uuid"
+                    },
+                    "client_serial_number": {
+                      "type": "string",
+                      "description": "Prefix + generated UUID4 according to https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Publikationen/TechnischeRichtlinien/TR03153/TR-03153.pdf?__blob=publicationFile. Must be uniquely generated on the dashboard.",
+                      "example": "ERS 84eba3e2-14d2-4e69-ab53-447676a0df1b"
+                    },
+                    "api_key": {
+                      "type": "string",
+                      "description": "Per fiskaly account: key for their API",
+                      "example": "test_dttfadyyenial79q8yga9ww0k_tillhub"
+                    },
+                    "api_secret": {
+                      "type": "string",
+                      "description": "Per fiskaly account: secret for their API",
+                      "example": "QmSgQtMNfm0uZjVedM1BvqGRIQ3D9wjclLYDZcXPZve"
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "description": "Configuration object for Germany: TSE Epson",
+                  "properties": {
+                    "client_id": {
+                      "type": "string",
+                      "description": "ID of the register according to the signing unit. This is NOT the Tillhub register UUID!",
+                      "example": "TillhubPOS_0012_0002",
+                      "maxLength": 30
+                    },
+                    "unit": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "description": "ID of the signing unit (Epson.serialNumber) - should be updated after client is initialized",
+                          "example": "soTFFH9xiZP9JYWCPRgvpw6xhZ3ttbWDjfS4ky4AMEk="
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "target": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "description": "TSE target address (MAC) - should be updated after client is initialized",
+                          "example": "TCPS:38:9D:92:FC:2B:2A[local_TSE]"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "description": "Configuration object for France: NF525",
+                  "properties": {
+                    "enabled": {
+                      "type": "boolean",
+                      "description": "Activates the french signing process.",
+                      "default": true
+                    }
+                  }
+                },
+                {
+                  "type": "null"
+                }
               ]
             }
-          },
-          "required": [
-            "device_token",
-            "bundle_id"
-          ]
+          }
         },
         {
           "type": "null"

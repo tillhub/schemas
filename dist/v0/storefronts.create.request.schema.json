@@ -35,6 +35,7 @@
       "type": "string",
       "enum": [
         "tillhub_shop",
+        "localsearch_shop",
         "ecwid",
         "shopify"
       ]
@@ -160,6 +161,17 @@
         }
       ]
     },
+    "default_location": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "string",
+          "example": "936835f7-2d75-41d2-9001-38ed6e458328"
+        }
+      ]
+    },
     "active": {
       "description": "Soft disable or enable this storefronts.",
       "type": "boolean",
@@ -179,6 +191,44 @@
           "type": "object"
         }
       ]
+    },
+    "profile": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "currency": {
+              "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this storefront.",
+              "type": "string",
+              "default": "EUR"
+            },
+            "language": {
+              "description": "The code representation of the language (https://en.wikipedia.org/wiki/ISO_639-1) of this storefront.",
+              "type": "string",
+              "default": "de"
+            },
+            "tax": {
+              "description": "Tax value in %.",
+              "type": "number",
+              "default": 19
+            }
+          }
+        }
+      ]
+    },
+    "auto_sync": {
+      "description": "Sets wether the storefront's resources should be automatically sync.",
+      "type": "boolean",
+      "default": false
+    },
+    "whitelisted": {
+      "description": "Sets wether the storefront's products are whitelisted.",
+      "type": "boolean",
+      "default": false
     }
   },
   "if": {

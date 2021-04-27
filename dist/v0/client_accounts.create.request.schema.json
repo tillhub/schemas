@@ -261,8 +261,34 @@
         "timetracking": {
           "type": "boolean",
           "default": false
+        },
+        "pagers": {
+          "type": "boolean",
+          "default": false
+        },
+        "kitchen_printers": {
+          "type": "boolean",
+          "default": false
+        },
+        "gastro_tables": {
+          "type": "boolean",
+          "default": false
         }
       }
+    },
+    "storefronts": {
+      "oneOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "description": "Mapped storefronts external ID for this client account."
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
     }
   },
   "type": "object"

@@ -4,14 +4,33 @@
   "additionalProperties": false,
   "required": [
     "group",
-    "type",
-    "amount"
+    "type"
+  ],
+  "anyOf": [
+    {
+      "required": [
+        "rate"
+      ]
+    },
+    {
+      "required": [
+        "value"
+      ]
+    }
   ],
   "properties": {
     "amount": {
-      "description": "DEPRECATED: use value or rate in order to avoid polymorphism",
-      "type": "number",
-      "minimum": 0
+      "default": null,
+      "oneOf": [
+        {
+          "description": "DEPRECATED: use value or rate in order to avoid polymorphism",
+          "type": "number",
+          "minimum": 0
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "currency": {
       "description": "The currency selector for a discount. NOTE: currency will be enforced soon if value is set",
@@ -47,7 +66,7 @@
           "type": "number",
           "minimum": 0,
           "maximum": 1,
-          "multipleOf": 0.001
+          "multipleOf": 0.00001
         },
         {
           "type": "null"
@@ -67,6 +86,11 @@
           "type": "object",
           "additionalProperties": false,
           "properties": {
+            "automatic": {
+              "description": "If true - this discount will be automatically applied to a cart item according to it's constraints and ordering",
+              "type": "boolean",
+              "default": false
+            },
             "display": {
               "oneOf": [
                 {
@@ -131,7 +155,8 @@
       "type": "string",
       "enum": [
         "cart",
-        "customer"
+        "customer",
+        "item"
       ]
     },
     "active": {
@@ -146,6 +171,51 @@
           "type": "object",
           "additionalProperties": false,
           "properties": {
+            "products": {
+              "description": "The tillhub product ressources the discount can be applied to (NULL == all)",
+              "oneOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "product_groups": {
+              "description": "The tillhub product group ressources the discount can be applied to (NULL == all)",
+              "oneOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "taxes": {
+              "description": "The tillhub tax ressources the discount can be applied to (NULL == all)",
+              "oneOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
             "time": {
               "type": "object",
               "additionalProperties": false,
@@ -551,6 +621,37 @@
           "type": "null"
         }
       ]
+    },
+    "order": {
+      "oneOf": [
+        {
+          "description": "Defines the (re)ordering of discounts when applied as: order=='first' > order=='null' > order=='last' > group=='customer'",
+          "type": "string",
+          "enum": [
+            "first",
+            "last"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "external_reference_id": {
+      "description": "A caller defined custom ID for the purpose of syncing from external resources, or to use in analytics.",
+      "oneOf": [
+        {
+          "type": "string",
+          "maxLength": 128
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "group_on_receipt": {
+      "type": "boolean",
+      "default": false
     }
   },
   "type": "object"

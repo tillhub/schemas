@@ -1736,6 +1736,18 @@
                       "type": "string",
                       "maxLength": 128
                     },
+                    "external_reference_id": {
+                      "description": "A caller defined custom ID for the purpose of syncing from external resources, or to use in analytics.",
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "maxLength": 128
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
                     "group": {
                       "oneOf": [
                         {
@@ -1746,8 +1758,10 @@
                             "staff",
                             "cart",
                             "product_set",
+                            "sconto",
+                            "item",
                             "promotion",
-                            "sconto"
+                            "voucher"
                           ]
                         },
                         {
@@ -1801,6 +1815,19 @@
                           "type": "null"
                         }
                       ]
+                    },
+                    "is_automatic": {
+                      "type": "boolean",
+                      "default": false,
+                      "description": "If true, this discount was trigger automatically."
+                    },
+                    "order": {
+                      "type": "string",
+                      "enum": [
+                        "first",
+                        "last"
+                      ],
+                      "default": "last"
                     }
                   },
                   "required": [
@@ -2444,7 +2471,8 @@
                               "fleurop_externa_sell_and_activate",
                               "tillhub_create",
                               "tillhub_recharge",
-                              "tillhub_reedeem"
+                              "tillhub_reedeem",
+                              "tillhub_percentage"
                             ]
                           },
                           "status": {
@@ -2987,11 +3015,13 @@
                           },
                           "api": {
                             "type": "string",
+                            "description": "The API used to talk to the terminal.",
                             "enum": [
                               "adyen",
                               "concardis",
                               "opi",
-                              "tim"
+                              "tim",
+                              "sumup"
                             ]
                           },
                           "payment_provider": {
@@ -3046,6 +3076,11 @@
                             "description": "The raw response of the terminal for finalizing the card payment. Might contain additional information.",
                             "type": "string",
                             "maxLength": 16384
+                          },
+                          "is_connected": {
+                            "default": null,
+                            "description": "If true - the terminal was connected during the payment process and data must have arrived in the POS.\nIf true - a cancellation must be connected to the termianla as well.\nIf false - the terminal was used independently - responsibility is with the cashier to handle data properly.\nIf false - a cancellation will not connect to a device.",
+                            "type": "boolean"
                           }
                         }
                       },
@@ -3221,7 +3256,8 @@
                               "fleurop_externa_sell_and_activate",
                               "tillhub_create",
                               "tillhub_recharge",
-                              "tillhub_reedeem"
+                              "tillhub_reedeem",
+                              "tillhub_percentage"
                             ]
                           },
                           "status": {
@@ -3543,9 +3579,278 @@
             }
           ]
         },
-        "status": {},
+        "signed_at": {
+          "oneOf": [
+            {
+              "type": "string",
+              "format": "date-time",
+              "example": "2018-01-29T14:55:05.000Z",
+              "description": "A signing system defined [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) compliant date e.g. 2018-01-29T14:55:05.000Z. The date will be set after having fully signed this transaction."
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "status": {
+          "type": "string",
+          "description": "The current signing status of this transaction. A regular transaction will receive the status `complete` immediately. When signing is requested `complete` will only be assigned after signing.",
+          "enum": [
+            "signing_requested",
+            "complete"
+          ]
+        },
+        "signature_type": {
+          "oneOf": [
+            {
+              "type": "string",
+              "description": "Any allowed singing system provider as type.",
+              "enum": [
+                "fiskaltrust",
+                "tse_fiskaly",
+                "tse_epson",
+                "fr_NF525"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
         "signature": {
-          "type": "object"
+          "oneOf": [
+            {
+              "type": "object",
+              "description": "The singing data that can be used to print singing results or as fiscal reference.",
+              "properties": {
+                "format": {
+                  "type": "string",
+                  "enum": [
+                    "qr",
+                    "aztec",
+                    "code128",
+                    "utf8"
+                  ]
+                },
+                "data": {
+                  "type": "string",
+                  "example": "MEQCIAy4P9k+7x9saDO0uRZ4El8QwN+qTgYiv1DIaJIMWRiuAiAt+saFDGjK2Yi5Cxgy7PprXQ5O0seRgx4ltdpW9REvwA==",
+                  "maxLength": 16384,
+                  "description": "The actual signature from the signing provider (data for backwards compatibility)"
+                },
+                "qr_code_data": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "example": "V0;955002-00;Kassenbeleg-V1;Beleg^0.00_2.55_0.00_0.00_0.00^2.55:Bar;18;112;2019-07-10T18:41:04.000Z;2019-07-10T18:41:04.000Z;ecdsa-plain-SHA256;unixTime;MEQCIAy4P9k+7x9saDO0uRZ4El8QwN+qTgYiv1DIaJIMWRiuAiAt+saFDGjK2Yi5Cxgy7PprXQ5O0seRgx4ltdpW9REvwA==;BHhWOeisRpPBTGQ1W4VUH95TXx2GARf8e2NYZXJoInjtGqnxJ8sZ3CQpYgjI+LYEmW5A37sLWHsyU7nSJUBemyU=",
+                      "maxLength": 16384,
+                      "description": "The extended signature that can be printed additionally (e.g. as QR-Code according to DSFinV- K vs. signature as string)"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "caption": {
+                  "oneOf": [
+                    {
+                      "default": null,
+                      "type": "string",
+                      "description": "Optional caption if the signature by itself will be printed as QR-Code",
+                      "minLength": 1,
+                      "maxLength": 128
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "payload": {
+                  "description": "The original signing response by the signing provider.",
+                  "default": null,
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "description": "The stringified version of any raw response from any signing provider.",
+                      "example": "{\"function\":\"FinishTransaction\",\"output\":{\"logTime\":\"2020-07-10T23:12:21Z\",\"signature\":\"HRTC0sv6HhIcMY+l8MWk9DavvF8CAHwfOaONfN5sdCvyS8zSMHXOx4829DHtTLPyOKPDe+IgT4qbbiktuj0JF9Tc4QH\\/iZ0TQSEd4rCNrPMjfOQvJpLv8ybjAy7zWs4B\",\"signatureCounter\":227},\"result\":\"EXECUTION_OK\"}"
+                    },
+                    {
+                      "type": "object"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "request_payload": {
+                  "description": "The original signing request to the signing provider.",
+                  "default": null,
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "example": "{\"storage\":{\"type\":\"TSE\",\"vendor\":\"TSE1\"},\"function\":\"FinishTransaction\",\"input\":{\"clientId\":\"c5a3ce2d-61a9-4c63-8d63-17d83e\",\"processType\":\"Finish\",\"processData\":\"QmVsZWdeMjAuMDBfMC4wMF8wLjAwXzAuMDBfMC4wMF4yMC4wMDpVbmJhcg==\",\"transactionNumber\":16,\"additionalData\":\"\"},\"compress\":{\"type\":\"zip_deflate\",\"required\":true}}"
+                    },
+                    {
+                      "type": "object"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "client_id": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "description": "ID of the register according to the signing unit. Will deviate from the Tillhub register UUID!",
+                      "example": "955002-00"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "counter": {
+                  "oneOf": [
+                    {
+                      "type": "integer",
+                      "minimum": 0,
+                      "description": "Internal counter of the signing unit (signature counter)",
+                      "example": 227
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "unit": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "description": "ID of the used signing unit (e.g. Fiskaly: tss_id (UUID4), Epson: serialNumber (base64))",
+                      "example": "soTFFH9xiZP9JYWCPRgvpw6xhZ3ttbWDjfS4ky4AMEk="
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "public_key": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "description": "Public key of the signing unit according to BSI TR-03111 (e.g. tsePublicKey for Epson)"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "algorithm": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "description": "The algorithm type used by the signing unit",
+                      "example": "ecdsa-plain-SHA256"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "process_type": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "description": "A string describing the local type of the signing process",
+                      "example": "Kassenbeleg-V1"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "process_data": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "example": "Beleg^0.00_2.55_0.00_0.00_0.00^2.55:Bar",
+                      "maxLength": 1024,
+                      "description": "The transaction relevant content as input for the signing algorithm"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "transaction_number": {
+                  "oneOf": [
+                    {
+                      "type": "integer",
+                      "minimum": 0,
+                      "description": "The transaction number according to the signing unit, required in final input data",
+                      "example": 16
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "transaction_id": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "description": "The transaction id according to the signing unit (Fiskaly: _id)",
+                      "example": "00000000-0000-0000-0000-000000000000"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "started_at": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "format": "date-time",
+                      "example": "2019-07-10T18:41:02.000Z",
+                      "description": "A signing system defined [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) compliant date e.g. 2018-01-29T14:55:05.000Z. This represents the time of any inital signing request (e.g. start_transaction according to DSFinV-K, Fiskaly: time_start)"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "error": {
+                  "default": null,
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "description": "Optional error reporting"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "error_counter": {
+                  "oneOf": [
+                    {
+                      "type": "integer",
+                      "minimum": 0,
+                      "description": "Internal counter of succeeding errors, must be reset on next success."
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
         }
       }
     }

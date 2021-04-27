@@ -2,7 +2,9 @@
   "$id": "https://schemas.tillhub.com/v0/staff.create.request.schema.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "additionalProperties": false,
-  "required": [],
+  "required": [
+    "lastname"
+  ],
   "properties": {
     "firstname": {
       "anyOf": [
@@ -17,16 +19,9 @@
       ]
     },
     "lastname": {
-      "anyOf": [
-        {
-          "type": "string",
-          "maxLength": 32,
-          "minLength": 1
-        },
-        {
-          "type": "null"
-        }
-      ]
+      "type": "string",
+      "maxLength": 32,
+      "minLength": 1
     },
     "displayname": {
       "anyOf": [
@@ -249,6 +244,7 @@
                   "staff:staff:carts:update",
                   "staff:staff:carts:read",
                   "staff:staff:carts:delete",
+                  "staff:staff:carts:edit_price_without_note",
                   "staff:staff:selections",
                   "staff:staff:selections:create",
                   "staff:staff:selections:update",
@@ -267,6 +263,7 @@
                   "staff:staff:settings:printer:update",
                   "staff:staff:settings:printer:read",
                   "staff:staff:settings:printer:delete",
+                  "staff:staff:settings:printer:drawer:open",
                   "staff:staff:settings:terminal",
                   "staff:staff:settings:terminal:create",
                   "staff:staff:settings:terminal:update",
@@ -278,6 +275,7 @@
                   "staff:staff:settings:dashboard",
                   "staff:staff:settings:database",
                   "staff:staff:settings:history",
+                  "staff:staff:settings:discounts",
                   "staff:staff:analytics",
                   "staff:staff:analytics:journals",
                   "staff:staff:products",
@@ -607,19 +605,19 @@
     },
     "default": {
       "type": "boolean"
+    },
+    "external_reference_id": {
+      "description": "A caller defined custom ID for the purpose of syncing from external resources, or to use in analytics.",
+      "oneOf": [
+        {
+          "type": "string",
+          "maxLength": 128
+        },
+        {
+          "type": "null"
+        }
+      ]
     }
   },
-  "type": "object",
-  "anyOf": [
-    {
-      "required": [
-        "firstname"
-      ]
-    },
-    {
-      "required": [
-        "lastname"
-      ]
-    }
-  ]
+  "type": "object"
 }

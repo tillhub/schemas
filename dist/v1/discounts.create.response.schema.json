@@ -199,6 +199,22 @@
                   "type": "null"
                 }
               ]
+            },
+            "receipt": {
+              "description": "Describing the behaviour of the discount on the receipt.",
+              "oneOf": [
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "print_explicitely": {
+                      "description": "Printing the grouped amount of this discount applied on the receipt, if the discount is found in one or more cartitems.",
+                      "type": "boolean",
+                      "default": false
+                    }
+                  }
+                }
+              ]
             }
           }
         },
@@ -604,6 +620,22 @@
           "type": "null"
         }
       ]
+    },
+    "external_reference_id": {
+      "description": "A caller defined custom ID for the purpose of syncing from external resources, or to use in analytics.",
+      "oneOf": [
+        {
+          "type": "string",
+          "maxLength": 128
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "group_on_receipt": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
