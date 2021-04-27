@@ -77,7 +77,6 @@
               "required": [
                 "lines",
                 "street",
-                "street_number",
                 "locality",
                 "region",
                 "postal_code",
@@ -233,7 +232,6 @@
               "required": [
                 "lines",
                 "street",
-                "street_number",
                 "locality",
                 "region",
                 "postal_code",
