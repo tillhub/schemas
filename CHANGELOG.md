@@ -1,3 +1,10 @@
+# [6.29.0](https://github.com/tillhub/schemas/compare/v6.28.1...v6.29.0) (2021-04-27)
+
+
+### Features
+
+* **features:** add gastro_tables ([6822cf1](https://github.com/tillhub/schemas/commit/6822cf1))
+
 ## [6.28.1](https://github.com/tillhub/schemas/compare/v6.28.0...v6.28.1) (2021-04-23)
 
 
