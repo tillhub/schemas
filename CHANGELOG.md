@@ -1,3 +1,10 @@
+# [6.30.0](https://github.com/tillhub/schemas/compare/v6.29.0...v6.30.0) (2021-04-28)
+
+
+### Features
+
+* **pricebook:** add products and product_groups ([dd6b7dc](https://github.com/tillhub/schemas/commit/dd6b7dc))
+
 # [6.29.0](https://github.com/tillhub/schemas/compare/v6.28.1...v6.29.0) (2021-04-27)
 
 
