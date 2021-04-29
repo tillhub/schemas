@@ -1,3 +1,11 @@
+# [6.32.0](https://github.com/tillhub/schemas/compare/v6.31.0...v6.32.0) (2021-04-29)
+
+
+### Features
+
+* **common:** permissions ([2589c83](https://github.com/tillhub/schemas/commit/2589c83))
+* **common:** permissions ([ffab5a2](https://github.com/tillhub/schemas/commit/ffab5a2))
+
 # [6.31.0](https://github.com/tillhub/schemas/compare/v6.30.0...v6.31.0) (2021-04-29)
 
 

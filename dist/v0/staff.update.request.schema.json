@@ -284,6 +284,7 @@
                   "staff:staff:products:name",
                   "staff:staff:products:summary",
                   "staff:staff:products:description",
+                  "staff:staff:products:purchase_price",
                   "staff:staff:customers",
                   "staff:staff:customers:create",
                   "staff:staff:customers:update",
