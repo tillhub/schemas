@@ -3526,7 +3526,19 @@
                         "print_discount_groups": {
                           "oneOf": [
                             {
-                              "description": "Defines if groupable discounts are printed",
+                              "description": "Defines if groupable discounts are additionally printed",
+                              "type": "boolean",
+                              "default": false
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_applied_vouchers": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if applied vouchers are additionally printed",
                               "type": "boolean",
                               "default": false
                             },
@@ -3994,7 +4006,19 @@
                         "print_discount_groups": {
                           "oneOf": [
                             {
-                              "description": "Defines if groupable discounts are printed",
+                              "description": "Defines if groupable discounts are additionally printed",
+                              "type": "boolean",
+                              "default": false
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_applied_vouchers": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if applied vouchers are additionally printed",
                               "type": "boolean",
                               "default": false
                             },
@@ -4462,7 +4486,19 @@
                         "print_discount_groups": {
                           "oneOf": [
                             {
-                              "description": "Defines if groupable discounts are printed",
+                              "description": "Defines if groupable discounts are additionally printed",
+                              "type": "boolean",
+                              "default": false
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_applied_vouchers": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if applied vouchers are additionally printed",
                               "type": "boolean",
                               "default": false
                             },
@@ -4930,7 +4966,19 @@
                         "print_discount_groups": {
                           "oneOf": [
                             {
-                              "description": "Defines if groupable discounts are printed",
+                              "description": "Defines if groupable discounts are additionally printed",
+                              "type": "boolean",
+                              "default": false
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_applied_vouchers": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if applied vouchers are additionally printed",
                               "type": "boolean",
                               "default": false
                             },
@@ -5398,7 +5446,19 @@
                         "print_discount_groups": {
                           "oneOf": [
                             {
-                              "description": "Defines if groupable discounts are printed",
+                              "description": "Defines if groupable discounts are additionally printed",
+                              "type": "boolean",
+                              "default": false
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_applied_vouchers": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if applied vouchers are additionally printed",
                               "type": "boolean",
                               "default": false
                             },
