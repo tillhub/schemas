@@ -1884,6 +1884,16 @@
               "type": "boolean",
               "default": false
             },
+            "expense_reason_required": {
+              "type": "boolean",
+              "description": "Defines whether selecting a predefined reason is required when booking an expense",
+              "default": false
+            },
+            "deposit_reason_required": {
+              "type": "boolean",
+              "description": "Defines whether selecting a predefined reason is required when booking a deposit",
+              "default": false
+            },
             "price_change_note_required": {
               "description": "Defines if a note is mandatory on price changes on the register ",
               "type": "boolean",
@@ -2962,13 +2972,22 @@
                         "type": "object",
                         "properties": {
                           "tags": {
+                            "deprecated": true,
                             "type": "array",
                             "items": {
-                              "description": "Tags from cart item products that will cause assignment to this specific receipt.",
+                              "description": "Legacy tags (metadata plain text) from cart item products that will cause assignment to this specific receipt.",
                               "type": "string",
                               "example": "food",
                               "minLength": 3,
                               "maxLength": 64
+                            }
+                          },
+                          "tag_ids": {
+                            "type": "array",
+                            "items": {
+                              "description": "The tag resource ids which will be tested for intersection with the cart item's product tag ids",
+                              "type": "string",
+                              "format": "uuid"
                             }
                           },
                           "title": {
@@ -2979,7 +2998,13 @@
                             "maxLength": 64
                           },
                           "coaster": {
+                            "deprecated": true,
                             "description": "If true - print the coaster(number) on the specified receipt",
+                            "type": "boolean",
+                            "default": true
+                          },
+                          "pager": {
+                            "description": "If true - print the pager(number) on the specified receipt",
                             "type": "boolean",
                             "default": true
                           }

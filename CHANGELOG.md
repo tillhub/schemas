@@ -1,3 +1,11 @@
+# [6.35.0](https://github.com/tillhub/schemas/compare/v6.34.0...v6.35.0) (2021-04-29)
+
+
+### Features
+
+* **configurations:** receipts ([3e2ff74](https://github.com/tillhub/schemas/commit/3e2ff74))
+* **expense deposit reason:** configuration for expense, deposit reason ([c91e7bd](https://github.com/tillhub/schemas/commit/c91e7bd))
+
 # [6.34.0](https://github.com/tillhub/schemas/compare/v6.33.0...v6.34.0) (2021-04-29)
 
 
