@@ -590,6 +590,16 @@
           }
         ]
       },
+      "sellable": {
+        "description": "Define whether a product should be sellable (appears in use cases which assume sale)",
+        "type": "boolean",
+        "default": true
+      },
+      "purchasable": {
+        "description": "Define whether a product should be purchasable (appears in use cases which assume purchase)",
+        "type": "boolean",
+        "default": true
+      },
       "stockable": {
         "description": "Define whether to keep track of stock of this product.",
         "oneOf": [
@@ -827,9 +837,10 @@
       },
       "type": {
         "type": "string",
-        "description": "variant is a child of variant_product, and has a parent property containing the ID of a variant_product typed parent product",
+        "description": "variant of a product (product|voucher) or a parent (variant_product|linked_product|composed_product) or a child (variant|linked) where child has \"parent\" property containing the ID of a parent product",
         "enum": [
           "product",
+          "composed_product",
           "voucher",
           "linked",
           "linked_product",
@@ -1558,6 +1569,30 @@
           }
         ]
       },
+      "components": {
+        "description": "An array of components for composed product (the type is \"composed_product\")",
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "product",
+            "quantity"
+          ],
+          "properties": {
+            "product": {
+              "description": "Linked product UUID which is a component of composed product",
+              "type": "string",
+              "format": "uuid"
+            },
+            "quantity": {
+              "description": "The quantity of component in a composed product",
+              "type": "number",
+              "minimum": 0
+            }
+          }
+        }
+      },
       "delegatable": {
         "description": "Define whether the product can be delegated to other users at all.",
         "oneOf": [
@@ -1580,6 +1615,11 @@
             "type": "null"
           }
         ]
+      },
+      "serial_number_input_required": {
+        "description": "Define whether a product requires to enter a serial number during the sale",
+        "type": "boolean",
+        "default": false
       },
       "shipping_required": {
         "description": "Define whether this item requires shipping. This usually the case except for digital goods. Tax and tax splits may apply based on region.",

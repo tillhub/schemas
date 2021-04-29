@@ -1390,7 +1390,7 @@
                     "preferred_initialization": {
                       "oneOf": [
                         {
-                          "description": "When local data ís missing - counting numbers can be initialized from the api table or - if available - from a secondary local storage (e.g. keychain on iOS)",
+                          "description": "When local data ís missing - counting numbers can be initialized from the corresponding API table or - if available - from a secondary local storage (e.g. keychain on iOS)",
                           "type": "string",
                           "enum": [
                             "remote",
@@ -2242,6 +2242,24 @@
                   "type": "null"
                 }
               ]
+            },
+            "gastro_tables": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "enabled": {
+                      "description": "Specifies if gastro tables feature is available.",
+                      "type": "boolean",
+                      "default": false
+                    }
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
             }
           }
         },
@@ -2548,7 +2566,27 @@
                       "description": "Search string extraction rules.\n\nDefines how a search string can be extracted from a scanned barcode (that might contain additional, non-search-related data).",
                       "type": "string",
                       "format": "regex",
-                      "example": "^.{2}(.{8}).{4,6}$",
+                      "examples": [
+                        "^.{2}(.{8}).{4,6}$",
+                        "^(?:[0-9]{2}){0,1}([0-9]{8})[0-9]{6}$"
+                      ],
+                      "default": "null"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "serial_number_extraction_pattern": {
+                  "oneOf": [
+                    {
+                      "description": "Seroal number extraction rules.\n\nDefines how a serial number will potentially be extracted from a scanned barcode.",
+                      "type": "string",
+                      "format": "regex",
+                      "examples": [
+                        "^.{2}.{8}.({4,6})$",
+                        "^(?:[0-9]{2}){0,1}[0-9]{8}([0-9]{6})$"
+                      ],
                       "default": "null"
                     },
                     {
@@ -3463,6 +3501,30 @@
                             }
                           ]
                         },
+                        "print_product_number": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the product number (in case of options) will be printed (e.g. just for the merchant)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_product_name": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the product name (in case of options) will be printed (e.g. just for the merchant)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
                         "print_customer_name": {
                           "oneOf": [
                             {
@@ -3526,7 +3588,19 @@
                         "print_discount_groups": {
                           "oneOf": [
                             {
-                              "description": "Defines if groupable discounts are printed",
+                              "description": "Defines if groupable discounts are additionally printed",
+                              "type": "boolean",
+                              "default": false
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_applied_vouchers": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if applied vouchers are additionally printed",
                               "type": "boolean",
                               "default": false
                             },
@@ -3931,6 +4005,30 @@
                             }
                           ]
                         },
+                        "print_product_number": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the product number (in case of options) will be printed (e.g. just for the merchant)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_product_name": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the product name (in case of options) will be printed (e.g. just for the merchant)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
                         "print_customer_name": {
                           "oneOf": [
                             {
@@ -3994,7 +4092,19 @@
                         "print_discount_groups": {
                           "oneOf": [
                             {
-                              "description": "Defines if groupable discounts are printed",
+                              "description": "Defines if groupable discounts are additionally printed",
+                              "type": "boolean",
+                              "default": false
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_applied_vouchers": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if applied vouchers are additionally printed",
                               "type": "boolean",
                               "default": false
                             },
@@ -4399,6 +4509,30 @@
                             }
                           ]
                         },
+                        "print_product_number": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the product number (in case of options) will be printed (e.g. just for the merchant)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_product_name": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the product name (in case of options) will be printed (e.g. just for the merchant)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
                         "print_customer_name": {
                           "oneOf": [
                             {
@@ -4462,7 +4596,19 @@
                         "print_discount_groups": {
                           "oneOf": [
                             {
-                              "description": "Defines if groupable discounts are printed",
+                              "description": "Defines if groupable discounts are additionally printed",
+                              "type": "boolean",
+                              "default": false
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_applied_vouchers": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if applied vouchers are additionally printed",
                               "type": "boolean",
                               "default": false
                             },
@@ -4867,6 +5013,30 @@
                             }
                           ]
                         },
+                        "print_product_number": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the product number (in case of options) will be printed (e.g. just for the merchant)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_product_name": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the product name (in case of options) will be printed (e.g. just for the merchant)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
                         "print_customer_name": {
                           "oneOf": [
                             {
@@ -4930,7 +5100,19 @@
                         "print_discount_groups": {
                           "oneOf": [
                             {
-                              "description": "Defines if groupable discounts are printed",
+                              "description": "Defines if groupable discounts are additionally printed",
+                              "type": "boolean",
+                              "default": false
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_applied_vouchers": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if applied vouchers are additionally printed",
                               "type": "boolean",
                               "default": false
                             },
@@ -5335,6 +5517,30 @@
                             }
                           ]
                         },
+                        "print_product_number": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the product number (in case of options) will be printed (e.g. just for the merchant)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_product_name": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the product name (in case of options) will be printed (e.g. just for the merchant)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
                         "print_customer_name": {
                           "oneOf": [
                             {
@@ -5398,7 +5604,19 @@
                         "print_discount_groups": {
                           "oneOf": [
                             {
-                              "description": "Defines if groupable discounts are printed",
+                              "description": "Defines if groupable discounts are additionally printed",
+                              "type": "boolean",
+                              "default": false
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_applied_vouchers": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if applied vouchers are additionally printed",
                               "type": "boolean",
                               "default": false
                             },

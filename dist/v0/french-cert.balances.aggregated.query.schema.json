@@ -1,0 +1,33 @@
+{
+  "$id": "https://schemas.tillhub.com/v0/french-cert.balances.aggregated.query.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": [
+        "month",
+        "year"
+      ],
+      "example": "month",
+      "description": "The period type"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "example": "2021-01-03",
+      "description": "The date of period (any date within the required period type) in Url safe ISO 8601 compliant format"
+    },
+    "cashierNumber": {
+      "type": "string",
+      "example": "007",
+      "description": "The cashier number who created this balance"
+    }
+  },
+  "required": [
+    "type",
+    "date",
+    "cashierNumber"
+  ]
+}
