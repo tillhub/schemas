@@ -2242,6 +2242,24 @@
                   "type": "null"
                 }
               ]
+            },
+            "gastro_tables": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "enabled": {
+                      "description": "Specifies if gastro tables feature is available.",
+                      "type": "boolean",
+                      "default": false
+                    }
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
             }
           }
         },

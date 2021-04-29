@@ -1,3 +1,10 @@
+# [6.33.0](https://github.com/tillhub/schemas/compare/v6.32.0...v6.33.0) (2021-04-29)
+
+
+### Features
+
+* **gastroTables:** add feature flag for gastro tables ([a05ff2c](https://github.com/tillhub/schemas/commit/a05ff2c))
+
 # [6.32.0](https://github.com/tillhub/schemas/compare/v6.31.0...v6.32.0) (2021-04-29)
 
 
