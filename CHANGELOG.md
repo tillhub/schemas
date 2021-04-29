@@ -1,3 +1,11 @@
+# [6.34.0](https://github.com/tillhub/schemas/compare/v6.33.0...v6.34.0) (2021-04-29)
+
+
+### Features
+
+* **configurations:** products ([7bc1b83](https://github.com/tillhub/schemas/commit/7bc1b83))
+* **configurations:** receipts ([7f2c247](https://github.com/tillhub/schemas/commit/7f2c247))
+
 # [6.33.0](https://github.com/tillhub/schemas/compare/v6.32.0...v6.33.0) (2021-04-29)
 
 
