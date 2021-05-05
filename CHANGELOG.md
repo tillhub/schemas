@@ -1,3 +1,10 @@
+## [6.36.1](https://github.com/tillhub/schemas/compare/v6.36.0...v6.36.1) (2021-05-05)
+
+
+### Bug Fixes
+
+* **balances:** legacy ([7a84775](https://github.com/tillhub/schemas/commit/7a84775))
+
 # [6.36.0](https://github.com/tillhub/schemas/compare/v6.35.0...v6.36.0) (2021-04-29)
 
 
