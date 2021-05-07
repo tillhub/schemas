@@ -1,3 +1,13 @@
+# [6.37.0](https://github.com/tillhub/schemas/compare/v6.36.1...v6.37.0) (2021-05-07)
+
+
+### Features
+
+* **products:** add barcodes field and schemas for response as well ([d30becf](https://github.com/tillhub/schemas/commit/d30becf))
+* **products:** fix linter errors ([3b1de9f](https://github.com/tillhub/schemas/commit/3b1de9f))
+* **products:** fix linter errors ([3e1ff5a](https://github.com/tillhub/schemas/commit/3e1ff5a))
+* **products:** fix tests ([2d9f6dd](https://github.com/tillhub/schemas/commit/2d9f6dd))
+
 ## [6.36.1](https://github.com/tillhub/schemas/compare/v6.36.0...v6.36.1) (2021-05-05)
 
 
