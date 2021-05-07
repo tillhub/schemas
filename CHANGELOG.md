@@ -1,3 +1,10 @@
+# [6.38.0](https://github.com/tillhub/schemas/compare/v6.37.0...v6.38.0) (2021-05-07)
+
+
+### Features
+
+* **products:** align response schema ([0998b06](https://github.com/tillhub/schemas/commit/0998b06))
+
 # [6.37.0](https://github.com/tillhub/schemas/compare/v6.36.1...v6.37.0) (2021-05-07)
 
 
