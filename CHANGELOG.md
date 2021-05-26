@@ -1,3 +1,10 @@
+## [6.38.1](https://github.com/tillhub/schemas/compare/v6.38.0...v6.38.1) (2021-05-26)
+
+
+### Bug Fixes
+
+* **voucher_systems:** Allow to save empty array for branches ([7e8438d](https://github.com/tillhub/schemas/commit/7e8438d))
+
 # [6.38.0](https://github.com/tillhub/schemas/compare/v6.37.0...v6.38.0) (2021-05-07)
 
 

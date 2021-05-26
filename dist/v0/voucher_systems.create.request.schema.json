@@ -36,7 +36,6 @@
         {
           "type": "array",
           "description": "This is deprecated. Please use \"locations\" instead.",
-          "minItems": 1,
           "items": {
             "type": "string",
             "format": "uuid"

@@ -441,6 +441,34 @@
       "description": "Soft delete this user_profiles.",
       "type": "boolean",
       "default": false
+    },
+    "locations": {
+      "oneOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "branch_groups": {
+      "oneOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
     }
   }
 }
