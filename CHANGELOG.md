@@ -1,3 +1,10 @@
+# [6.39.0](https://github.com/tillhub/schemas/compare/v6.38.1...v6.39.0) (2021-05-28)
+
+
+### Features
+
+* **customers:** Extend customers for VAT identification number ([#553](https://github.com/tillhub/schemas/issues/553)) ([2a7597c](https://github.com/tillhub/schemas/commit/2a7597c))
+
 ## [6.38.1](https://github.com/tillhub/schemas/compare/v6.38.0...v6.38.1) (2021-05-26)
 
 

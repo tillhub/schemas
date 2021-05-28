@@ -636,6 +636,18 @@
           "type": "null"
         }
       ]
+    },
+    "vat": {
+      "oneOf": [
+        {
+          "type": "string",
+          "maxLength": 20,
+          "minLength": 5
+        },
+        {
+          "type": "null"
+        }
+      ]
     }
   },
   "required": []

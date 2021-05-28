@@ -638,6 +638,18 @@
         }
       ]
     },
+    "vat": {
+      "oneOf": [
+        {
+          "type": "string",
+          "maxLength": 20,
+          "minLength": 5
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "analytics": {
       "description": "A number of aggregated customer centric analytics data. Usually this data is being compiled at transaction time. Rehydrating data or adding missing data, requires a transaction with this customer.",
       "oneOf": [
