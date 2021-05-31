@@ -638,7 +638,7 @@
         }
       ]
     },
-    "vat": {
+    "vat_id": {
       "oneOf": [
         {
           "type": "string",

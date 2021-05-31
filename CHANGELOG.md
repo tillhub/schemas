@@ -1,3 +1,10 @@
+# [6.40.0](https://github.com/tillhub/schemas/compare/v6.39.0...v6.40.0) (2021-05-31)
+
+
+### Features
+
+* **docs:** readme updated ([54ef571](https://github.com/tillhub/schemas/commit/54ef571))
+
 # [6.39.0](https://github.com/tillhub/schemas/compare/v6.38.1...v6.39.0) (2021-05-28)
 
 
