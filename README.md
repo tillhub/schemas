@@ -50,3 +50,7 @@ Feel free to edit any files you need and don't forget to add the custom properti
 ## License
 
 Apache-2.0
+
+## Notice
+
+For triggering a new release, commit message must be started from "feat" or "fix" prefix 
