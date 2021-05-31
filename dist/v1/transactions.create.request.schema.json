@@ -2327,7 +2327,7 @@
                             "description": "The Tillhub or Fleurop Id of the source voucher."
                           },
                           "delta_amount": {
-                            "description": "The effective change in the value of the voucher or it's creation amount.",
+                            "description": "The effective change in the value of the voucher or it's creation amount $1.37 = 1.37.",
                             "type": "number",
                             "minimum": -1000000,
                             "maximum": 1000000,
@@ -3112,7 +3112,7 @@
                             "description": "The Tillhub or Fleurop Id of the source voucher."
                           },
                           "delta_amount": {
-                            "description": "The effective change in the value of the voucher or it's creation amount.",
+                            "description": "The effective change in the value of the voucher or it's creation amount $1.37 = 1.37.",
                             "type": "number",
                             "minimum": -1000000,
                             "maximum": 1000000,
@@ -3608,7 +3608,8 @@
               "enum": [
                 "fiskaltrust",
                 "tse_fiskaly",
-                "tse_epson"
+                "tse_epson",
+                "fr_NF525"
               ]
             },
             {

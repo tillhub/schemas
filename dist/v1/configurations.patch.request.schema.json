@@ -486,12 +486,12 @@
                     "warning": {
                       "type": "boolean",
                       "description": "defines whether warning is displayed in case of discrepancy",
-                      "default": "false"
+                      "default": "true"
                     },
                     "recount_permission": {
                       "type": "boolean",
                       "description": "defines whether recounting is allowed",
-                      "default": "false"
+                      "default": "true"
                     }
                   }
                 }
@@ -566,6 +566,18 @@
                   "oneOf": [
                     {
                       "description": "Specifies if hiding of cart sum is enabled.",
+                      "type": "boolean",
+                      "default": false
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "allow_voucher_reprint": {
+                  "oneOf": [
+                    {
+                      "description": "Specifies if vouchers can be printed again from e.g. the history details.",
                       "type": "boolean",
                       "default": false
                     },
@@ -1369,6 +1381,35 @@
                 }
               }
             },
+            "counting_numbers": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "preferred_initialization": {
+                      "oneOf": [
+                        {
+                          "description": "When local data ís missing - counting numbers can be initialized from the corresponding API table or - if available - from a secondary local storage (e.g. keychain on iOS)",
+                          "type": "string",
+                          "enum": [
+                            "remote",
+                            "local"
+                          ],
+                          "default": "remote"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
             "voucher_systems_source": {
               "description": "Defines how the voucher systems table on the client will be filled, either from configurations or from the voucher_systems table",
               "type": "string",
@@ -1843,6 +1884,16 @@
               "type": "boolean",
               "default": false
             },
+            "expense_reason_required": {
+              "type": "boolean",
+              "description": "Defines whether selecting a predefined reason is required when booking an expense",
+              "default": false
+            },
+            "deposit_reason_required": {
+              "type": "boolean",
+              "description": "Defines whether selecting a predefined reason is required when booking a deposit",
+              "default": false
+            },
             "price_change_note_required": {
               "description": "Defines if a note is mandatory on price changes on the register ",
               "type": "boolean",
@@ -2116,18 +2167,12 @@
       ]
     },
     "features": {
-      "anyOf": [
-        {
-          "type": "null"
-        },
+      "oneOf": [
         {
           "type": "object",
           "properties": {
             "library_view": {
-              "anyOf": [
-                {
-                  "type": "null"
-                },
+              "oneOf": [
                 {
                   "type": "object",
                   "additionalProperties": false,
@@ -2138,14 +2183,14 @@
                       "default": true
                     }
                   }
+                },
+                {
+                  "type": "null"
                 }
               ]
             },
             "scan_view": {
-              "anyOf": [
-                {
-                  "type": "null"
-                },
+              "oneOf": [
                 {
                   "type": "object",
                   "additionalProperties": false,
@@ -2156,10 +2201,99 @@
                       "default": true
                     }
                   }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "pagers": {
+              "oneOf": [
+                {
+                  "description": "Restaurant case: pagers/coasters/buzzers",
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "enabled": {
+                      "description": "Specifies if the feature is available.",
+                      "type": "boolean",
+                      "default": false
+                    },
+                    "max": {
+                      "oneOf": [
+                        {
+                          "type": "integer",
+                          "description": "Largest pager number - serves as a helper to contrain the input component.",
+                          "minimum": 10,
+                          "maximum": 1000,
+                          "example": 54,
+                          "default": 99
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "prompt": {
+                      "oneOf": [
+                        {
+                          "description": "If true and not previously assigned - show a prompt that asks the cashier to add a pager number on cart checkout",
+                          "type": "boolean",
+                          "default": false
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "split_receipt": {
+              "oneOf": [
+                {
+                  "description": "Restaurant case: split bill between a group of guests",
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "enabled": {
+                      "description": "Specifies if the feature is available.",
+                      "type": "boolean",
+                      "default": false
+                    }
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "gastro_tables": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "enabled": {
+                      "description": "Specifies if gastro tables feature is available.",
+                      "type": "boolean",
+                      "default": false
+                    }
+                  }
+                },
+                {
+                  "type": "null"
                 }
               ]
             }
           }
+        },
+        {
+          "type": "null"
         }
       ]
     },
@@ -2252,7 +2386,8 @@
                   "enum": [
                     "fiskaltrust",
                     "tse_fiskaly",
-                    "tse_epson"
+                    "tse_epson",
+                    "fr_NF525"
                   ]
                 },
                 "resource_type": {
@@ -2344,6 +2479,22 @@
                             "default",
                             "pricebook",
                             "user"
+                          ]
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "inheritance": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "description": "Defines how variant-children inherit pricebook entries from their parents",
+                          "enum": [
+                            "none",
+                            "parent",
+                            "optional"
                           ]
                         },
                         {
@@ -2444,7 +2595,27 @@
                       "description": "Search string extraction rules.\n\nDefines how a search string can be extracted from a scanned barcode (that might contain additional, non-search-related data).",
                       "type": "string",
                       "format": "regex",
-                      "example": "^.{2}(.{8}).{4,6}$",
+                      "examples": [
+                        "^.{2}(.{8}).{4,6}$",
+                        "^(?:[0-9]{2}){0,1}([0-9]{8})[0-9]{6}$"
+                      ],
+                      "default": "null"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "serial_number_extraction_pattern": {
+                  "oneOf": [
+                    {
+                      "description": "Seroal number extraction rules.\n\nDefines how a serial number will potentially be extracted from a scanned barcode.",
+                      "type": "string",
+                      "format": "regex",
+                      "examples": [
+                        "^.{2}.{8}.({4,6})$",
+                        "^(?:[0-9]{2}){0,1}[0-9]{8}([0-9]{6})$"
+                      ],
                       "default": "null"
                     },
                     {
@@ -2820,13 +2991,22 @@
                         "type": "object",
                         "properties": {
                           "tags": {
+                            "deprecated": true,
                             "type": "array",
                             "items": {
-                              "description": "Tags from cart item products that will cause assignment to this specific receipt.",
+                              "description": "Legacy tags (metadata plain text) from cart item products that will cause assignment to this specific receipt.",
                               "type": "string",
                               "example": "food",
                               "minLength": 3,
                               "maxLength": 64
+                            }
+                          },
+                          "tag_ids": {
+                            "type": "array",
+                            "items": {
+                              "description": "The tag resource ids which will be tested for intersection with the cart item's product tag ids",
+                              "type": "string",
+                              "format": "uuid"
                             }
                           },
                           "title": {
@@ -2837,7 +3017,13 @@
                             "maxLength": 64
                           },
                           "coaster": {
+                            "deprecated": true,
                             "description": "If true - print the coaster(number) on the specified receipt",
+                            "type": "boolean",
+                            "default": true
+                          },
+                          "pager": {
+                            "description": "If true - print the pager(number) on the specified receipt",
                             "type": "boolean",
                             "default": true
                           }
@@ -2894,6 +3080,18 @@
                               ]
                             }
                           }
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "pagers": {
+                      "oneOf": [
+                        {
+                          "description": "If a pager number is assigned - states if a pager receipt will be printed on the main printer",
+                          "type": "boolean",
+                          "default": true
                         },
                         {
                           "type": "null"
@@ -3062,6 +3260,510 @@
                                 "first_name",
                                 "last_name"
                               ]
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    "pager": {
+                      "description": "Defines receipt printing for cart item based transactions, e.g. sale, order, digital",
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "print_branch_logo": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the branch logo will be printed (for types that support it)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_branch_header": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the branch header will be printed",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_branch_footer": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the branch footer will be printed (for types that support it)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_cashier_policy": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if and how the cashier will be printed on the receipt",
+                              "type": "string",
+                              "enum": [
+                                "number",
+                                "name",
+                                "none",
+                                "first_name",
+                                "last_name"
+                              ]
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_salesperson": {
+                          "oneOf": [
+                            {
+                              "type": "object",
+                              "description": "Defines salesperson printing on cart receipts",
+                              "additionalProperties": false,
+                              "properties": {
+                                "header": {
+                                  "oneOf": [
+                                    {
+                                      "description": "Defines salesperson printing in the header section",
+                                      "type": "object",
+                                      "additionalProperties": false,
+                                      "properties": {
+                                        "style": {
+                                          "oneOf": [
+                                            {
+                                              "description": "Defines how the salesperson will be printed, it will not be printed at all if NULL",
+                                              "type": "string",
+                                              "enum": [
+                                                "number",
+                                                "name"
+                                              ]
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        },
+                                        "conditions": {
+                                          "oneOf": [
+                                            {
+                                              "description": "Defines the conditions, e.g. is_unique for header level, does stack - empty means: no restrictions, depends on style then alone",
+                                              "type": "array",
+                                              "items": {
+                                                "type": "string",
+                                                "enum": [
+                                                  "is_unique",
+                                                  "not_unique",
+                                                  "not_cashier"
+                                                ]
+                                              }
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "footer": {
+                                  "oneOf": [
+                                    {
+                                      "description": "Defines salesperson printing in the footer section",
+                                      "type": "object",
+                                      "additionalProperties": false,
+                                      "properties": {
+                                        "style": {
+                                          "oneOf": [
+                                            {
+                                              "description": "Defines how the salesperson will be printed, it will not be printed at all if NULL",
+                                              "type": "string",
+                                              "enum": [
+                                                "number",
+                                                "name"
+                                              ]
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        },
+                                        "conditions": {
+                                          "oneOf": [
+                                            {
+                                              "description": "Defines the conditions, e.g. is_unique for header level, does stack - empty means: no restrictions, depends on style then alone",
+                                              "type": "array",
+                                              "items": {
+                                                "type": "string",
+                                                "enum": [
+                                                  "is_unique",
+                                                  "not_unique",
+                                                  "not_cashier"
+                                                ]
+                                              }
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "item": {
+                                  "oneOf": [
+                                    {
+                                      "description": "Defines salesperson printing on cart items",
+                                      "type": "object",
+                                      "additionalProperties": false,
+                                      "properties": {
+                                        "style": {
+                                          "oneOf": [
+                                            {
+                                              "description": "Defines how the salesperson will be printed, it will not be printed at all if NULL",
+                                              "type": "string",
+                                              "enum": [
+                                                "number",
+                                                "name"
+                                              ]
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        },
+                                        "conditions": {
+                                          "oneOf": [
+                                            {
+                                              "description": "Defines the conditions, e.g. is_unique for header level, does stack - empty means: no restrictions, depends on style then alone",
+                                              "type": "array",
+                                              "items": {
+                                                "type": "string",
+                                                "enum": [
+                                                  "is_unique",
+                                                  "not_unique",
+                                                  "not_cashier"
+                                                ]
+                                              }
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                }
+                              }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_pager_number": {
+                          "oneOf": [
+                            {
+                              "description": "If a pager number is assigned - Defines if it will be printed (e.g. just for the customer)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_order_number": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the order number will be printed (e.g. just for the customer)",
+                              "type": "boolean",
+                              "default": false
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_product_attributes": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the product attributes (in case of options) will be printed (e.g. just for the customer)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_product_description": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the product description will be printed (e.g. just for the customer)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_product_group": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the product group will be printed (e.g. just for the merchant)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_product_number": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the product number (in case of options) will be printed (e.g. just for the merchant)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_product_name": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the product name (in case of options) will be printed (e.g. just for the merchant)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_customer_name": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the customer name will be printed on (e.g. just for the merchant)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_customer_address": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the customer address will be printed (e.g. just for the merchant)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_customer_number": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the customer number will be printed (e.g. just for the merchant)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_total_discount": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the accumulated discount will be printed (e.g. customer, merchant)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_total_net": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the total net will be printed (e.g. customer, merchant)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_discount_groups": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if groupable discounts are additionally printed",
+                              "type": "boolean",
+                              "default": false
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_applied_vouchers": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if applied vouchers are additionally printed",
+                              "type": "boolean",
+                              "default": false
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "minimize_signing_footer": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if signing footer is printed without any spaces and line breaks",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "refund_options": {
+                          "oneOf": [
+                            {
+                              "description": "If the sale is a refund - the following options will be considered",
+                              "type": "object",
+                              "additionalProperties": false,
+                              "properties": {
+                                "condition": {
+                                  "oneOf": [
+                                    {
+                                      "description": "If the transaction contains refunded items, consider the layout options respecting this condition",
+                                      "type": "string",
+                                      "enum": [
+                                        "never",
+                                        "always",
+                                        "payout"
+                                      ],
+                                      "default": "payout"
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "header": {
+                                  "oneOf": [
+                                    {
+                                      "type": "object",
+                                      "additionalProperties": false,
+                                      "properties": {
+                                        "print_title": {
+                                          "oneOf": [
+                                            {
+                                              "description": "If true - adds a refund specific title to the receipt header, e.g. 'Refund' or 'Rückerstattungsbeleg'",
+                                              "type": "boolean",
+                                              "default": false
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "footer": {
+                                  "oneOf": [
+                                    {
+                                      "type": "object",
+                                      "additionalProperties": false,
+                                      "properties": {
+                                        "print_name_field": {
+                                          "oneOf": [
+                                            {
+                                              "description": "If true  - adds a name field to the footer",
+                                              "type": "boolean",
+                                              "default": false
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        },
+                                        "print_address_field": {
+                                          "oneOf": [
+                                            {
+                                              "description": "If true  - adds an address field to the footer",
+                                              "type": "boolean",
+                                              "default": false
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        },
+                                        "print_signature_field": {
+                                          "oneOf": [
+                                            {
+                                              "description": "If true  - adds a signature field to the footer",
+                                              "type": "boolean",
+                                              "default": false
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                }
+                              }
                             },
                             {
                               "type": "null"
@@ -3287,10 +3989,34 @@
                             }
                           ]
                         },
+                        "print_pager_number": {
+                          "oneOf": [
+                            {
+                              "description": "If a pager number is assigned - Defines if it will be printed (e.g. just for the customer)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_order_number": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the order number will be printed (e.g. just for the customer)",
+                              "type": "boolean",
+                              "default": false
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
                         "print_product_attributes": {
                           "oneOf": [
                             {
-                              "description": "Defines if the product attributes (in case of options) will be printed on (e.g. just for the customer)",
+                              "description": "Defines if the product attributes (in case of options) will be printed (e.g. just for the customer)",
                               "type": "boolean",
                               "default": true
                             },
@@ -3302,7 +4028,7 @@
                         "print_product_description": {
                           "oneOf": [
                             {
-                              "description": "Defines if the product description will be printed on (e.g. just for the customer)",
+                              "description": "Defines if the product description will be printed (e.g. just for the customer)",
                               "type": "boolean",
                               "default": true
                             },
@@ -3314,7 +4040,31 @@
                         "print_product_group": {
                           "oneOf": [
                             {
-                              "description": "Defines if the product group will be printed on (e.g. just for the merchant)",
+                              "description": "Defines if the product group will be printed (e.g. just for the merchant)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_product_number": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the product number (in case of options) will be printed (e.g. just for the merchant)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_product_name": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the product name (in case of options) will be printed (e.g. just for the merchant)",
                               "type": "boolean",
                               "default": true
                             },
@@ -3338,7 +4088,7 @@
                         "print_customer_address": {
                           "oneOf": [
                             {
-                              "description": "Defines if the customer address will be printed on (e.g. just for the merchant)",
+                              "description": "Defines if the customer address will be printed (e.g. just for the merchant)",
                               "type": "boolean",
                               "default": true
                             },
@@ -3350,7 +4100,7 @@
                         "print_customer_number": {
                           "oneOf": [
                             {
-                              "description": "Defines if the customer number will be printed on (e.g. just for the merchant)",
+                              "description": "Defines if the customer number will be printed (e.g. just for the merchant)",
                               "type": "boolean",
                               "default": true
                             },
@@ -3362,7 +4112,7 @@
                         "print_total_discount": {
                           "oneOf": [
                             {
-                              "description": "Defines if the accumulated discount will be printed on (e.g. customer, merchant)",
+                              "description": "Defines if the accumulated discount will be printed (e.g. customer, merchant)",
                               "type": "boolean",
                               "default": true
                             },
@@ -3374,7 +4124,7 @@
                         "print_total_net": {
                           "oneOf": [
                             {
-                              "description": "Defines if the total net will be printed on (e.g. customer, merchant)",
+                              "description": "Defines if the total net will be printed (e.g. customer, merchant)",
                               "type": "boolean",
                               "default": true
                             },
@@ -3386,7 +4136,19 @@
                         "print_discount_groups": {
                           "oneOf": [
                             {
-                              "description": "Defines if groupable discounts are printed",
+                              "description": "Defines if groupable discounts are additionally printed",
+                              "type": "boolean",
+                              "default": false
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_applied_vouchers": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if applied vouchers are additionally printed",
                               "type": "boolean",
                               "default": false
                             },
@@ -3731,10 +4493,34 @@
                             }
                           ]
                         },
+                        "print_pager_number": {
+                          "oneOf": [
+                            {
+                              "description": "If a pager number is assigned - Defines if it will be printed (e.g. just for the customer)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_order_number": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the order number will be printed (e.g. just for the customer)",
+                              "type": "boolean",
+                              "default": false
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
                         "print_product_attributes": {
                           "oneOf": [
                             {
-                              "description": "Defines if the product attributes (in case of options) will be printed on (e.g. just for the customer)",
+                              "description": "Defines if the product attributes (in case of options) will be printed (e.g. just for the customer)",
                               "type": "boolean",
                               "default": true
                             },
@@ -3746,7 +4532,7 @@
                         "print_product_description": {
                           "oneOf": [
                             {
-                              "description": "Defines if the product description will be printed on (e.g. just for the customer)",
+                              "description": "Defines if the product description will be printed (e.g. just for the customer)",
                               "type": "boolean",
                               "default": true
                             },
@@ -3758,7 +4544,31 @@
                         "print_product_group": {
                           "oneOf": [
                             {
-                              "description": "Defines if the product group will be printed on (e.g. just for the merchant)",
+                              "description": "Defines if the product group will be printed (e.g. just for the merchant)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_product_number": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the product number (in case of options) will be printed (e.g. just for the merchant)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_product_name": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the product name (in case of options) will be printed (e.g. just for the merchant)",
                               "type": "boolean",
                               "default": true
                             },
@@ -3782,7 +4592,7 @@
                         "print_customer_address": {
                           "oneOf": [
                             {
-                              "description": "Defines if the customer address will be printed on (e.g. just for the merchant)",
+                              "description": "Defines if the customer address will be printed (e.g. just for the merchant)",
                               "type": "boolean",
                               "default": true
                             },
@@ -3794,7 +4604,7 @@
                         "print_customer_number": {
                           "oneOf": [
                             {
-                              "description": "Defines if the customer number will be printed on (e.g. just for the merchant)",
+                              "description": "Defines if the customer number will be printed (e.g. just for the merchant)",
                               "type": "boolean",
                               "default": true
                             },
@@ -3806,7 +4616,7 @@
                         "print_total_discount": {
                           "oneOf": [
                             {
-                              "description": "Defines if the accumulated discount will be printed on (e.g. customer, merchant)",
+                              "description": "Defines if the accumulated discount will be printed (e.g. customer, merchant)",
                               "type": "boolean",
                               "default": true
                             },
@@ -3818,7 +4628,7 @@
                         "print_total_net": {
                           "oneOf": [
                             {
-                              "description": "Defines if the total net will be printed on (e.g. customer, merchant)",
+                              "description": "Defines if the total net will be printed (e.g. customer, merchant)",
                               "type": "boolean",
                               "default": true
                             },
@@ -3830,7 +4640,19 @@
                         "print_discount_groups": {
                           "oneOf": [
                             {
-                              "description": "Defines if groupable discounts are printed",
+                              "description": "Defines if groupable discounts are additionally printed",
+                              "type": "boolean",
+                              "default": false
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_applied_vouchers": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if applied vouchers are additionally printed",
                               "type": "boolean",
                               "default": false
                             },
@@ -4175,10 +4997,34 @@
                             }
                           ]
                         },
+                        "print_pager_number": {
+                          "oneOf": [
+                            {
+                              "description": "If a pager number is assigned - Defines if it will be printed (e.g. just for the customer)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_order_number": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the order number will be printed (e.g. just for the customer)",
+                              "type": "boolean",
+                              "default": false
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
                         "print_product_attributes": {
                           "oneOf": [
                             {
-                              "description": "Defines if the product attributes (in case of options) will be printed on (e.g. just for the customer)",
+                              "description": "Defines if the product attributes (in case of options) will be printed (e.g. just for the customer)",
                               "type": "boolean",
                               "default": true
                             },
@@ -4190,7 +5036,7 @@
                         "print_product_description": {
                           "oneOf": [
                             {
-                              "description": "Defines if the product description will be printed on (e.g. just for the customer)",
+                              "description": "Defines if the product description will be printed (e.g. just for the customer)",
                               "type": "boolean",
                               "default": true
                             },
@@ -4202,7 +5048,31 @@
                         "print_product_group": {
                           "oneOf": [
                             {
-                              "description": "Defines if the product group will be printed on (e.g. just for the merchant)",
+                              "description": "Defines if the product group will be printed (e.g. just for the merchant)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_product_number": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the product number (in case of options) will be printed (e.g. just for the merchant)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_product_name": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the product name (in case of options) will be printed (e.g. just for the merchant)",
                               "type": "boolean",
                               "default": true
                             },
@@ -4226,7 +5096,7 @@
                         "print_customer_address": {
                           "oneOf": [
                             {
-                              "description": "Defines if the customer address will be printed on (e.g. just for the merchant)",
+                              "description": "Defines if the customer address will be printed (e.g. just for the merchant)",
                               "type": "boolean",
                               "default": true
                             },
@@ -4238,7 +5108,7 @@
                         "print_customer_number": {
                           "oneOf": [
                             {
-                              "description": "Defines if the customer number will be printed on (e.g. just for the merchant)",
+                              "description": "Defines if the customer number will be printed (e.g. just for the merchant)",
                               "type": "boolean",
                               "default": true
                             },
@@ -4250,7 +5120,7 @@
                         "print_total_discount": {
                           "oneOf": [
                             {
-                              "description": "Defines if the accumulated discount will be printed on (e.g. customer, merchant)",
+                              "description": "Defines if the accumulated discount will be printed (e.g. customer, merchant)",
                               "type": "boolean",
                               "default": true
                             },
@@ -4262,7 +5132,7 @@
                         "print_total_net": {
                           "oneOf": [
                             {
-                              "description": "Defines if the total net will be printed on (e.g. customer, merchant)",
+                              "description": "Defines if the total net will be printed (e.g. customer, merchant)",
                               "type": "boolean",
                               "default": true
                             },
@@ -4274,7 +5144,19 @@
                         "print_discount_groups": {
                           "oneOf": [
                             {
-                              "description": "Defines if groupable discounts are printed",
+                              "description": "Defines if groupable discounts are additionally printed",
+                              "type": "boolean",
+                              "default": false
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_applied_vouchers": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if applied vouchers are additionally printed",
                               "type": "boolean",
                               "default": false
                             },
@@ -4619,10 +5501,34 @@
                             }
                           ]
                         },
+                        "print_pager_number": {
+                          "oneOf": [
+                            {
+                              "description": "If a pager number is assigned - Defines if it will be printed (e.g. just for the customer)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_order_number": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the order number will be printed (e.g. just for the customer)",
+                              "type": "boolean",
+                              "default": false
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
                         "print_product_attributes": {
                           "oneOf": [
                             {
-                              "description": "Defines if the product attributes (in case of options) will be printed on (e.g. just for the customer)",
+                              "description": "Defines if the product attributes (in case of options) will be printed (e.g. just for the customer)",
                               "type": "boolean",
                               "default": true
                             },
@@ -4634,7 +5540,7 @@
                         "print_product_description": {
                           "oneOf": [
                             {
-                              "description": "Defines if the product description will be printed on (e.g. just for the customer)",
+                              "description": "Defines if the product description will be printed (e.g. just for the customer)",
                               "type": "boolean",
                               "default": true
                             },
@@ -4646,7 +5552,31 @@
                         "print_product_group": {
                           "oneOf": [
                             {
-                              "description": "Defines if the product group will be printed on (e.g. just for the merchant)",
+                              "description": "Defines if the product group will be printed (e.g. just for the merchant)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_product_number": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the product number (in case of options) will be printed (e.g. just for the merchant)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_product_name": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the product name (in case of options) will be printed (e.g. just for the merchant)",
                               "type": "boolean",
                               "default": true
                             },
@@ -4670,7 +5600,7 @@
                         "print_customer_address": {
                           "oneOf": [
                             {
-                              "description": "Defines if the customer address will be printed on (e.g. just for the merchant)",
+                              "description": "Defines if the customer address will be printed (e.g. just for the merchant)",
                               "type": "boolean",
                               "default": true
                             },
@@ -4682,7 +5612,7 @@
                         "print_customer_number": {
                           "oneOf": [
                             {
-                              "description": "Defines if the customer number will be printed on (e.g. just for the merchant)",
+                              "description": "Defines if the customer number will be printed (e.g. just for the merchant)",
                               "type": "boolean",
                               "default": true
                             },
@@ -4694,7 +5624,7 @@
                         "print_total_discount": {
                           "oneOf": [
                             {
-                              "description": "Defines if the accumulated discount will be printed on (e.g. customer, merchant)",
+                              "description": "Defines if the accumulated discount will be printed (e.g. customer, merchant)",
                               "type": "boolean",
                               "default": true
                             },
@@ -4706,7 +5636,7 @@
                         "print_total_net": {
                           "oneOf": [
                             {
-                              "description": "Defines if the total net will be printed on (e.g. customer, merchant)",
+                              "description": "Defines if the total net will be printed (e.g. customer, merchant)",
                               "type": "boolean",
                               "default": true
                             },
@@ -4718,7 +5648,19 @@
                         "print_discount_groups": {
                           "oneOf": [
                             {
-                              "description": "Defines if groupable discounts are printed",
+                              "description": "Defines if groupable discounts are additionally printed",
+                              "type": "boolean",
+                              "default": false
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_applied_vouchers": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if applied vouchers are additionally printed",
                               "type": "boolean",
                               "default": false
                             },
@@ -5833,6 +6775,24 @@
                     "enabled": {
                       "type": "boolean",
                       "default": true
+                    },
+                    "pre_connect": {
+                      "oneOf": [
+                        {
+                          "description": "Try connecting to the printer without an actual printing task",
+                          "type": "array",
+                          "items": {
+                            "description": "Views or conditions where a printer connection is tried just in case",
+                            "type": "string",
+                            "enum": [
+                              "payment_view"
+                            ]
+                          }
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
                     }
                   }
                 }
@@ -5874,20 +6834,6 @@
                     "enabled": {
                       "type": "boolean",
                       "default": true
-                    },
-                    "refresh_minutes": {
-                      "oneOf": [
-                        {
-                          "description": "Heartbeat interval (minutes) to refresh the sumup access token (best effort) - currently it expires after 1h",
-                          "type": "integer",
-                          "minimum": 2,
-                          "maximum": 60,
-                          "default": 10
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ]
                     }
                   }
                 },
@@ -7268,6 +8214,45 @@
             "phone": {
               "type": "string",
               "description": "Phone number of commercial contact"
+            }
+          }
+        }
+      ]
+    },
+    "onboarding": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "stages": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "account_information": {
+                  "type": "boolean",
+                  "default": false
+                },
+                "branches": {
+                  "type": "boolean",
+                  "default": false
+                },
+                "register": {
+                  "type": "boolean",
+                  "default": false
+                },
+                "staff": {
+                  "type": "boolean",
+                  "default": false
+                }
+              }
+            },
+            "completed": {
+              "type": "boolean",
+              "default": false
             }
           }
         }
