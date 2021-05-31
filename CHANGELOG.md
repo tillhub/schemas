@@ -1,3 +1,10 @@
+# [6.41.0](https://github.com/tillhub/schemas/compare/v6.40.0...v6.41.0) (2021-05-31)
+
+
+### Features
+
+* **settings:** In-app searches limits changed ([#555](https://github.com/tillhub/schemas/issues/555)) ([5532ccf](https://github.com/tillhub/schemas/commit/5532ccf))
+
 # [6.40.0](https://github.com/tillhub/schemas/compare/v6.39.0...v6.40.0) (2021-05-31)
 
 

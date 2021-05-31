@@ -126,8 +126,8 @@
   "/discounts.update.request.schema.json",
   "/expense_accounts.create.request.schema.json",
   "/expense_accounts.create.response.schema.json",
-  "/expense_accounts.update.response.schema.json",
   "/expense_accounts.update.request.schema.json",
+  "/expense_accounts.update.response.schema.json",
   "/exports.create.request.schema.json",
   "/exports.update.request.schema.json",
   "/favourites.create.request.schema.json",
@@ -287,9 +287,9 @@
   "/warehouses.update.request.schema.json",
   "/webhooks.create.request.schema.json",
   "/webhooks.update.request.schema.json",
-  "/configurations.update.request.schema.json",
   "/configurations.create.request.schema.json",
-  "/profile.update.request.schema.json",
+  "/configurations.update.request.schema.json",
   "/profile.create.request.schema.json",
+  "/profile.update.request.schema.json",
   "/support.create.request.schema.json"
 ]
