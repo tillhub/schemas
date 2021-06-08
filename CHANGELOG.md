@@ -1,3 +1,10 @@
+# [6.43.0](https://github.com/tillhub/schemas/compare/v6.42.0...v6.43.0) (2021-06-08)
+
+
+### Features
+
+* **products:** add bulk create products ([fbc4f07](https://github.com/tillhub/schemas/commit/fbc4f07))
+
 # [6.42.0](https://github.com/tillhub/schemas/compare/v6.41.0...v6.42.0) (2021-06-03)
 
 
