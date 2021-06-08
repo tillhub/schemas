@@ -1,0 +1,84 @@
+{
+  "$id": "https://schemas.tillhub.com/v0/table_layouts.upsert.request.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "type": "object",
+  "required": [
+    "register",
+    "name",
+    "rooms"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "example": "d0d40841-b1a7-438a-9d1e-2bfec590d2e3",
+      "description": "unique ID of this table layout"
+    },
+    "client_id": {
+      "type": "string",
+      "example": "d0d40841-b1a7-438a-9d1e-2bfec590d2e3",
+      "description": "unique ID of this table layout"
+    },
+    "name": {
+      "type": "string",
+      "description": "a descriptive name for the layout"
+    },
+    "register": {
+      "type": "string",
+      "example": "d0d40841-b1a7-438a-9d1e-2bfec590d2e3",
+      "description": "ID of the register that contains this table layout"
+    },
+    "rooms": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "an unique ID for this room, set by the client"
+          },
+          "name": {
+            "type": "string",
+            "description": "a descriptive name for the room"
+          },
+          "columns": {
+            "type": "number",
+            "description": "number of columns when displaying layout"
+          },
+          "tables": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "description": "unique ID for this table, set by the client"
+                },
+                "index": {
+                  "type": "number",
+                  "description": "position of the table"
+                },
+                "name": {
+                  "type": "string",
+                  "description": "a descriptive name for the table"
+                }
+              },
+              "required": [
+                "id",
+                "index",
+                "name"
+              ]
+            }
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "tables"
+        ]
+      }
+    }
+  }
+}

@@ -63,6 +63,10 @@
     "kitchen_printers": {
       "type": "boolean",
       "default": false
+    },
+    "gastro_tables": {
+      "type": "boolean",
+      "default": false
     }
   },
   "type": "object"

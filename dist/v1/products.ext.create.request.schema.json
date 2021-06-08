@@ -524,7 +524,25 @@
         }
       ]
     },
+    "barcodes": {
+      "description": "Product barcodes",
+      "anyOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 1024,
+            "example": "ABC-abc-1234"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "barcode": {
+      "description": "Deprecated, use 'barcodes' instead",
+      "deprecated": true,
       "anyOf": [
         {
           "type": "string"
@@ -905,6 +923,20 @@
         }
       ]
     },
+    "branch_groups": {
+      "oneOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "condition": {
       "anyOf": [
         {
@@ -1119,7 +1151,9 @@
     "codes": {
       "oneOf": [
         {
+          "description": "Deprecated, use 'barcodes' instead",
           "type": "array",
+          "deprecated": true,
           "additionalProperties": false,
           "items": {
             "anyOf": [

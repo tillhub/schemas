@@ -50,11 +50,19 @@
               ]
             },
             "navigation": {
-              "type": "string",
-              "enum": [
-                "payment_view",
-                "carts",
-                "ask"
+              "oneOf": [
+                {
+                  "description": "defines automatic navigation, e.g. directly navigating to payments when a reason for an item refund was given",
+                  "type": "string",
+                  "enum": [
+                    "payment_view",
+                    "carts",
+                    "ask"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
               ]
             }
           }

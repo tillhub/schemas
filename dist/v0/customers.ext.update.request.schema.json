@@ -610,6 +610,20 @@
         }
       ]
     },
+    "branch_groups": {
+      "oneOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "gender": {
       "oneOf": [
         {
@@ -618,6 +632,18 @@
             "male",
             "female"
           ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "vat_id": {
+      "oneOf": [
+        {
+          "type": "string",
+          "maxLength": 20,
+          "minLength": 5
         },
         {
           "type": "null"

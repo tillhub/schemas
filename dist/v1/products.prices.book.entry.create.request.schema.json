@@ -14,9 +14,46 @@
       "format": "uuid"
     },
     "product": {
-      "description": "The reference to the product",
-      "type": "string",
-      "format": "uuid"
+      "oneOf": [
+        {
+          "description": "The reference to the product",
+          "type": "string",
+          "format": "uuid"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "products": {
+      "oneOf": [
+        {
+          "description": "The reference to a bulk of products",
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "product_groups": {
+      "oneOf": [
+        {
+          "description": "The reference to a bulk of products",
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "name": {
       "oneOf": [

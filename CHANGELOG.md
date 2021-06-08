@@ -1,3 +1,121 @@
+# [6.42.0](https://github.com/tillhub/schemas/compare/v6.41.0...v6.42.0) (2021-06-03)
+
+
+### Features
+
+* **docs:** readme updated ([c0bc68d](https://github.com/tillhub/schemas/commit/c0bc68d))
+
+# [6.41.0](https://github.com/tillhub/schemas/compare/v6.40.0...v6.41.0) (2021-05-31)
+
+
+### Features
+
+* **settings:** In-app searches limits changed ([#555](https://github.com/tillhub/schemas/issues/555)) ([5532ccf](https://github.com/tillhub/schemas/commit/5532ccf))
+
+# [6.40.0](https://github.com/tillhub/schemas/compare/v6.39.0...v6.40.0) (2021-05-31)
+
+
+### Features
+
+* **docs:** readme updated ([54ef571](https://github.com/tillhub/schemas/commit/54ef571))
+
+# [6.39.0](https://github.com/tillhub/schemas/compare/v6.38.1...v6.39.0) (2021-05-28)
+
+
+### Features
+
+* **customers:** Extend customers for VAT identification number ([#553](https://github.com/tillhub/schemas/issues/553)) ([2a7597c](https://github.com/tillhub/schemas/commit/2a7597c))
+
+## [6.38.1](https://github.com/tillhub/schemas/compare/v6.38.0...v6.38.1) (2021-05-26)
+
+
+### Bug Fixes
+
+* **voucher_systems:** Allow to save empty array for branches ([7e8438d](https://github.com/tillhub/schemas/commit/7e8438d))
+
+# [6.38.0](https://github.com/tillhub/schemas/compare/v6.37.0...v6.38.0) (2021-05-07)
+
+
+### Features
+
+* **products:** align response schema ([0998b06](https://github.com/tillhub/schemas/commit/0998b06))
+
+# [6.37.0](https://github.com/tillhub/schemas/compare/v6.36.1...v6.37.0) (2021-05-07)
+
+
+### Features
+
+* **products:** add barcodes field and schemas for response as well ([d30becf](https://github.com/tillhub/schemas/commit/d30becf))
+* **products:** fix linter errors ([3b1de9f](https://github.com/tillhub/schemas/commit/3b1de9f))
+* **products:** fix linter errors ([3e1ff5a](https://github.com/tillhub/schemas/commit/3e1ff5a))
+* **products:** fix tests ([2d9f6dd](https://github.com/tillhub/schemas/commit/2d9f6dd))
+
+## [6.36.1](https://github.com/tillhub/schemas/compare/v6.36.0...v6.36.1) (2021-05-05)
+
+
+### Bug Fixes
+
+* **balances:** legacy ([7a84775](https://github.com/tillhub/schemas/commit/7a84775))
+
+# [6.36.0](https://github.com/tillhub/schemas/compare/v6.35.0...v6.36.0) (2021-04-29)
+
+
+### Features
+
+* **configurations:** settings ([07857b0](https://github.com/tillhub/schemas/commit/07857b0))
+
+# [6.35.0](https://github.com/tillhub/schemas/compare/v6.34.0...v6.35.0) (2021-04-29)
+
+
+### Features
+
+* **configurations:** receipts ([3e2ff74](https://github.com/tillhub/schemas/commit/3e2ff74))
+* **expense deposit reason:** configuration for expense, deposit reason ([c91e7bd](https://github.com/tillhub/schemas/commit/c91e7bd))
+
+# [6.34.0](https://github.com/tillhub/schemas/compare/v6.33.0...v6.34.0) (2021-04-29)
+
+
+### Features
+
+* **configurations:** products ([7bc1b83](https://github.com/tillhub/schemas/commit/7bc1b83))
+* **configurations:** receipts ([7f2c247](https://github.com/tillhub/schemas/commit/7f2c247))
+
+# [6.33.0](https://github.com/tillhub/schemas/compare/v6.32.0...v6.33.0) (2021-04-29)
+
+
+### Features
+
+* **gastroTables:** add feature flag for gastro tables ([a05ff2c](https://github.com/tillhub/schemas/commit/a05ff2c))
+
+# [6.32.0](https://github.com/tillhub/schemas/compare/v6.31.0...v6.32.0) (2021-04-29)
+
+
+### Features
+
+* **common:** permissions ([2589c83](https://github.com/tillhub/schemas/commit/2589c83))
+* **common:** permissions ([ffab5a2](https://github.com/tillhub/schemas/commit/ffab5a2))
+
+# [6.31.0](https://github.com/tillhub/schemas/compare/v6.30.0...v6.31.0) (2021-04-29)
+
+
+### Features
+
+* **configurations:** receipts ([0596fe0](https://github.com/tillhub/schemas/commit/0596fe0))
+
+# [6.30.0](https://github.com/tillhub/schemas/compare/v6.29.0...v6.30.0) (2021-04-28)
+
+
+### Features
+
+* **pricebook:** add products and product_groups ([dd6b7dc](https://github.com/tillhub/schemas/commit/dd6b7dc))
+
+# [6.29.0](https://github.com/tillhub/schemas/compare/v6.28.1...v6.29.0) (2021-04-27)
+
+
+### Features
+
+* **features:** add gastro_tables ([6822cf1](https://github.com/tillhub/schemas/commit/6822cf1))
+
 ## [6.28.1](https://github.com/tillhub/schemas/compare/v6.28.0...v6.28.1) (2021-04-23)
 
 
