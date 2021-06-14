@@ -19,10 +19,6 @@
       "example": "d0d40841-b1a7-438a-9d1e-2bfec590d2e3",
       "description": "unique ID of this table layout"
     },
-    "name": {
-      "type": "string",
-      "description": "a descriptive name for the layout"
-    },
     "register": {
       "type": "string",
       "example": "d0d40841-b1a7-438a-9d1e-2bfec590d2e3",
