@@ -118,7 +118,6 @@
           "id",
           "client_id",
           "register",
-          "name",
           "rooms"
         ]
       }

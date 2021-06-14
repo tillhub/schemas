@@ -1,3 +1,10 @@
+# [6.45.0](https://github.com/tillhub/schemas/compare/v6.44.0...v6.45.0) (2021-06-14)
+
+
+### Features
+
+* **table_layouts:** API-749: Delete 'name' in gastro table sync ([1848287](https://github.com/tillhub/schemas/commit/1848287))
+
 # [6.44.0](https://github.com/tillhub/schemas/compare/v6.43.0...v6.44.0) (2021-06-14)
 
 
