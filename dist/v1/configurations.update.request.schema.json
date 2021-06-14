@@ -7000,6 +7000,18 @@
                 }
               ]
             },
+            "print_automatically": {
+              "oneOf": [
+                {
+                  "description": "If true - print the balance automatically after closing the register.",
+                  "type": "boolean",
+                  "default": false
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
             "sales_required": {
               "oneOf": [
                 {

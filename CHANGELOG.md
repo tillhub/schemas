@@ -1,3 +1,10 @@
+# [6.46.0](https://github.com/tillhub/schemas/compare/v6.45.0...v6.46.0) (2021-06-14)
+
+
+### Features
+
+* **configurations:** balances ([a93e5d8](https://github.com/tillhub/schemas/commit/a93e5d8))
+
 # [6.45.0](https://github.com/tillhub/schemas/compare/v6.44.0...v6.45.0) (2021-06-14)
 
 
