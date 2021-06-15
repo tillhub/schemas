@@ -1,3 +1,21 @@
+# [6.47.0](https://github.com/tillhub/schemas/compare/v6.46.0...v6.47.0) (2021-06-15)
+
+
+### Bug Fixes
+
+* **gastro_orders:** deltas ([185d66a](https://github.com/tillhub/schemas/commit/185d66a))
+* **transactions:** legacy ([499928d](https://github.com/tillhub/schemas/commit/499928d))
+* **transactions:** legacy ([4b6fe44](https://github.com/tillhub/schemas/commit/4b6fe44))
+* **transactions:** legacy ([ceb3372](https://github.com/tillhub/schemas/commit/ceb3372))
+* **transactions:** legacy ([7b52c11](https://github.com/tillhub/schemas/commit/7b52c11))
+
+
+### Features
+
+* **gastro_orders:** deltas ([50b827a](https://github.com/tillhub/schemas/commit/50b827a))
+* **gastro_orders:** deltas ([c75e8cf](https://github.com/tillhub/schemas/commit/c75e8cf))
+* **transactions:** metadata ([03767ba](https://github.com/tillhub/schemas/commit/03767ba))
+
 # [6.46.0](https://github.com/tillhub/schemas/compare/v6.45.0...v6.46.0) (2021-06-14)
 
 
