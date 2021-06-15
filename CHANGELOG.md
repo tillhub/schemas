@@ -1,3 +1,10 @@
+# [6.50.0](https://github.com/tillhub/schemas/compare/v6.49.1...v6.50.0) (2021-06-15)
+
+
+### Features
+
+* **gastro:** add gastro configuration ([#562](https://github.com/tillhub/schemas/issues/562)) ([890a106](https://github.com/tillhub/schemas/commit/890a106))
+
 ## [6.49.1](https://github.com/tillhub/schemas/compare/v6.49.0...v6.49.1) (2021-06-15)
 
 
