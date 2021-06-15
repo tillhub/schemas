@@ -23,6 +23,11 @@ console.log(createCartSchema)
 // }
 ```
 
+## Release flow
+
+Releases are automated with @semantic-release. 
+For triggering a new release just use commit messages started from "feat" or "fix" prefix which is part of [proper message format](https://github.com/semantic-release/semantic-release#commit-message-format).
+
 ## Contributing
 
 Contributions are welcome in the case of falsy information. Those schemas are used as internaly driven data logic and quality.
@@ -49,9 +54,4 @@ Feel free to edit any files you need and don't forget to add the custom properti
 
 ## License
 
-
 Apache-2.0
-
-## Notice
-
-For triggering a new release, commit message must be started from "feat" or "fix" prefix 

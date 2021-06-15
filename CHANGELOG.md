@@ -1,3 +1,49 @@
+# [6.47.0](https://github.com/tillhub/schemas/compare/v6.46.0...v6.47.0) (2021-06-15)
+
+
+### Bug Fixes
+
+* **gastro_orders:** deltas ([185d66a](https://github.com/tillhub/schemas/commit/185d66a))
+* **transactions:** legacy ([499928d](https://github.com/tillhub/schemas/commit/499928d))
+* **transactions:** legacy ([4b6fe44](https://github.com/tillhub/schemas/commit/4b6fe44))
+* **transactions:** legacy ([ceb3372](https://github.com/tillhub/schemas/commit/ceb3372))
+* **transactions:** legacy ([7b52c11](https://github.com/tillhub/schemas/commit/7b52c11))
+
+
+### Features
+
+* **gastro_orders:** deltas ([50b827a](https://github.com/tillhub/schemas/commit/50b827a))
+* **gastro_orders:** deltas ([c75e8cf](https://github.com/tillhub/schemas/commit/c75e8cf))
+* **transactions:** metadata ([03767ba](https://github.com/tillhub/schemas/commit/03767ba))
+
+# [6.46.0](https://github.com/tillhub/schemas/compare/v6.45.0...v6.46.0) (2021-06-14)
+
+
+### Features
+
+* **configurations:** balances ([a93e5d8](https://github.com/tillhub/schemas/commit/a93e5d8))
+
+# [6.45.0](https://github.com/tillhub/schemas/compare/v6.44.0...v6.45.0) (2021-06-14)
+
+
+### Features
+
+* **table_layouts:** API-749: Delete 'name' in gastro table sync ([1848287](https://github.com/tillhub/schemas/commit/1848287))
+
+# [6.44.0](https://github.com/tillhub/schemas/compare/v6.43.0...v6.44.0) (2021-06-14)
+
+
+### Features
+
+* **docs:** readme updated ([1ae360c](https://github.com/tillhub/schemas/commit/1ae360c))
+
+# [6.43.0](https://github.com/tillhub/schemas/compare/v6.42.0...v6.43.0) (2021-06-08)
+
+
+### Features
+
+* **products:** add bulk create products ([fbc4f07](https://github.com/tillhub/schemas/commit/fbc4f07))
+
 # [6.42.0](https://github.com/tillhub/schemas/compare/v6.41.0...v6.42.0) (2021-06-03)
 
 
