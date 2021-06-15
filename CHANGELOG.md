@@ -1,3 +1,11 @@
+# [6.48.0](https://github.com/tillhub/schemas/compare/v6.47.0...v6.48.0) (2021-06-15)
+
+
+### Features
+
+* **payments:** allow_disconnected_terminals default never ([4748a82](https://github.com/tillhub/schemas/commit/4748a82))
+* **pricebook:** entry product not required ([634a753](https://github.com/tillhub/schemas/commit/634a753))
+
 # [6.47.0](https://github.com/tillhub/schemas/compare/v6.46.0...v6.47.0) (2021-06-15)
 
 
