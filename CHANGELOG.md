@@ -1,3 +1,10 @@
+# [6.53.0](https://github.com/tillhub/schemas/compare/v6.52.0...v6.53.0) (2021-06-16)
+
+
+### Features
+
+* **permissions:** add modifying orders permission for staff ([f30cdee](https://github.com/tillhub/schemas/commit/f30cdee))
+
 # [6.52.0](https://github.com/tillhub/schemas/compare/v6.51.0...v6.52.0) (2021-06-16)
 
 
