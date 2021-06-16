@@ -1,3 +1,10 @@
+# [6.51.0](https://github.com/tillhub/schemas/compare/v6.50.0...v6.51.0) (2021-06-16)
+
+
+### Features
+
+* **warehouses:** type local ([fa1c052](https://github.com/tillhub/schemas/commit/fa1c052))
+
 # [6.50.0](https://github.com/tillhub/schemas/compare/v6.49.1...v6.50.0) (2021-06-15)
 
 
