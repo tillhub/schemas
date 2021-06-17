@@ -28,21 +28,13 @@ console.log(createCartSchema)
 Releases are automated with @semantic-release. 
 For triggering a new release just use commit messages started from "feat" or "fix" prefix which is part of [proper message format](https://github.com/semantic-release/semantic-release#commit-message-format).
 
-To trigger a deploment procedure of a new application version in any repository you have to tag the release branch ('develop' or 'master') with a new version number. To do so run following command:
-```bash
-SKIP_TESTS=true npm version patch
-```
-
-As there are two commands for `preversion` and `postversion` inside `package.json`, running this commad will result in follwing actions:
-
-1. It will run the linter and tests and add the changes in the working directory to the staging area.
-2. Version will be updated.
-3. A new git tag will be created and pushed.
-4. By pushing a new tag, CircleCI will start the deployment process:
+CricleCI takes care of publishing the package. it will only trigger on the master branch.
+After the PR is merged into master, CircleCI will start the deployment process:
    1. It will checkout the project and installs the dependencies.
    2. Linter will check the code.
    3. It will run the tests to make sure everything runs perfectly.
-   4. Then it will publish the new version.
+   4. Code will be compiled.
+   4. Finally, it will publish the new version by running `semantic-release`.
 
 ## Contributing
 
