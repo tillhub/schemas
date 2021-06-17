@@ -1,3 +1,10 @@
+## [6.54.1](https://github.com/tillhub/schemas/compare/v6.54.0...v6.54.1) (2021-06-17)
+
+
+### Bug Fixes
+
+* **gastro_orders:** change source type and add import gastro orders branch to v1 ([dea7d11](https://github.com/tillhub/schemas/commit/dea7d11))
+
 # [6.54.0](https://github.com/tillhub/schemas/compare/v6.53.0...v6.54.0) (2021-06-17)
 
 
