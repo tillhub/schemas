@@ -1,3 +1,10 @@
+# [6.54.0](https://github.com/tillhub/schemas/compare/v6.53.0...v6.54.0) (2021-06-17)
+
+
+### Features
+
+* **voucher_systems_template:** add discount_rate ([05ca794](https://github.com/tillhub/schemas/commit/05ca794))
+
 # [6.53.0](https://github.com/tillhub/schemas/compare/v6.52.0...v6.53.0) (2021-06-16)
 
 
