@@ -1,3 +1,10 @@
+## [6.54.3](https://github.com/tillhub/schemas/compare/v6.54.2...v6.54.3) (2021-06-18)
+
+
+### Bug Fixes
+
+* **docs:** deploy brute force ([06f5b39](https://github.com/tillhub/schemas/commit/06f5b39))
+
 ## [6.54.1](https://github.com/tillhub/schemas/compare/v6.54.0...v6.54.1) (2021-06-17)
 
 
