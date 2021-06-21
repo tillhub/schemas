@@ -5396,7 +5396,7 @@
                 "enum": [
                   "transaction",
                   "balance",
-                  "order"
+                  "gastro_order_delta"
                 ],
                 "description": "The type of the source that was signed."
               }

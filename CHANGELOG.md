@@ -1,3 +1,31 @@
+# [6.55.0](https://github.com/tillhub/schemas/compare/v6.54.3...v6.55.0) (2021-06-21)
+
+
+### Features
+
+* **customers:** Add Unspecified gender value for customers ([#572](https://github.com/tillhub/schemas/issues/572)) ([a5b1598](https://github.com/tillhub/schemas/commit/a5b1598))
+
+## [6.54.3](https://github.com/tillhub/schemas/compare/v6.54.2...v6.54.3) (2021-06-18)
+
+
+### Bug Fixes
+
+* **docs:** deploy brute force ([06f5b39](https://github.com/tillhub/schemas/commit/06f5b39))
+
+## [6.54.1](https://github.com/tillhub/schemas/compare/v6.54.0...v6.54.1) (2021-06-17)
+
+
+### Bug Fixes
+
+* **gastro_orders:** change source type and add import gastro orders branch to v1 ([dea7d11](https://github.com/tillhub/schemas/commit/dea7d11))
+
+# [6.54.0](https://github.com/tillhub/schemas/compare/v6.53.0...v6.54.0) (2021-06-17)
+
+
+### Features
+
+* **voucher_systems_template:** add discount_rate ([05ca794](https://github.com/tillhub/schemas/commit/05ca794))
+
 # [6.53.0](https://github.com/tillhub/schemas/compare/v6.52.0...v6.53.0) (2021-06-16)
 
 
