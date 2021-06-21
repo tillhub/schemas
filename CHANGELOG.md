@@ -1,3 +1,10 @@
+# [6.55.0](https://github.com/tillhub/schemas/compare/v6.54.3...v6.55.0) (2021-06-21)
+
+
+### Features
+
+* **customers:** Add Unspecified gender value for customers ([#572](https://github.com/tillhub/schemas/issues/572)) ([a5b1598](https://github.com/tillhub/schemas/commit/a5b1598))
+
 ## [6.54.3](https://github.com/tillhub/schemas/compare/v6.54.2...v6.54.3) (2021-06-18)
 
 
