@@ -3599,6 +3599,18 @@
                             }
                           ]
                         },
+                        "print_serial_number": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if an exsiting serial number will be printed on the specific receipt.",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
                         "print_customer_name": {
                           "oneOf": [
                             {
@@ -4095,6 +4107,18 @@
                           "oneOf": [
                             {
                               "description": "Defines if the product name (in case of options) will be printed (e.g. just for the merchant)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_serial_number": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if an exsiting serial number will be printed on the specific receipt.",
                               "type": "boolean",
                               "default": true
                             },
@@ -4607,6 +4631,18 @@
                             }
                           ]
                         },
+                        "print_serial_number": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if an exsiting serial number will be printed on the specific receipt.",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
                         "print_customer_name": {
                           "oneOf": [
                             {
@@ -5111,6 +5147,18 @@
                             }
                           ]
                         },
+                        "print_serial_number": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if an exsiting serial number will be printed on the specific receipt.",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
                         "print_customer_name": {
                           "oneOf": [
                             {
@@ -5607,6 +5655,18 @@
                           "oneOf": [
                             {
                               "description": "Defines if the product name (in case of options) will be printed (e.g. just for the merchant)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_serial_number": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if an exsiting serial number will be printed on the specific receipt.",
                               "type": "boolean",
                               "default": true
                             },
@@ -7156,6 +7216,11 @@
                     "voucher_amount": {
                       "type": "boolean",
                       "description": "sum of the amounts of vouchers sold (positive values only)",
+                      "default": "true"
+                    },
+                    "cashier_stats": {
+                      "type": "boolean",
+                      "description": "Per cashier payment stats",
                       "default": "true"
                     }
                   }
