@@ -1471,6 +1471,34 @@
                     "type": "null"
                   }
                 ]
+              },
+              "location_type": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "description": "Type of stock to be created (supported only for bulk creation of products with stock)",
+                    "enum": [
+                      "client",
+                      "branch",
+                      "warehouse",
+                      "warehouse_shelf"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "qty": {
+                "oneOf": [
+                  {
+                    "description": "The amount/quantity of stock to be created (supported only for bulk creation of products with stock)",
+                    "type": "number"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
               }
             }
           }

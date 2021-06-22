@@ -1,3 +1,10 @@
+# [6.56.0](https://github.com/tillhub/schemas/compare/v6.55.0...v6.56.0) (2021-06-22)
+
+
+### Features
+
+* **bulk_create:** support sending the qty and location_type to bulk create stock on product bulk creation ([f9dd54c](https://github.com/tillhub/schemas/commit/f9dd54c))
+
 # [6.55.0](https://github.com/tillhub/schemas/compare/v6.54.3...v6.55.0) (2021-06-21)
 
 
