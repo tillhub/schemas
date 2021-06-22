@@ -1,3 +1,11 @@
+## [6.58.1](https://github.com/tillhub/schemas/compare/v6.58.0...v6.58.1) (2021-06-22)
+
+
+### Bug Fixes
+
+* **balances:** import missing schemas for legacy balances ([241188c](https://github.com/tillhub/schemas/commit/241188c))
+* **balances:** restore broken imports ([de3f25c](https://github.com/tillhub/schemas/commit/de3f25c))
+
 # [6.58.0](https://github.com/tillhub/schemas/compare/v6.57.0...v6.58.0) (2021-06-22)
 
 

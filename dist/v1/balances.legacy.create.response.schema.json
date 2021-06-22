@@ -1,0 +1,2470 @@
+{
+  "$id": "https://schemas.tillhub.com/v1/balances.legacy.create.response.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "msg": {
+      "type": "string",
+      "minLength": 1,
+      "example": "Queried transactions sucessefully.",
+      "description": "Any English sentence, meant as information for developers and implementers. Avoid displaying this to the users and especially do not expect thos messages to stay stable."
+    },
+    "msg_localised": {
+      "type": "string",
+      "minLength": 1,
+      "example": "Queried transactions sucessefully.",
+      "description": "Optional localised message that can be displayed to the user if existing. The language can be set by in the request or will fallback to English."
+    },
+    "request": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Information about the request itself.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "The request uuid that can be used to identify and trace API calls.",
+          "format": "uuid"
+        },
+        "host": {
+          "type": "string",
+          "minLength": 1,
+          "example": "https://api.tillhub.com",
+          "description": "Server host and protocol from which request was handled."
+        }
+      }
+    },
+    "count": {
+      "type": "number",
+      "description": "the length of the results array.",
+      "example": 1
+    },
+    "results": {
+      "type": "array",
+      "description": "The envelope of items, that are usually objects. We are generally sending back arrays even if there was just one requested resource.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "860defb8-5598-421d-9da4-f0826e767536",
+            "format": "uuid",
+            "description": "The uuid v4 that is generated on the API when a balance is received. This id can be used for idempotency"
+          },
+          "update_id": {
+            "type": "integer"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2018-11-04T23:18:43.075Z",
+            "description": "The server creation time of this balance."
+          },
+          "updated_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2018-11-04T23:18:43.075Z",
+            "description": "The server update time of this balance."
+          },
+          "_id": {
+            "deprecated": true,
+            "oneOf": [
+              {
+                "type": "string",
+                "format": "uuid",
+                "example": "97074aa7-ed27-464c-890e-0b47ab153b8a",
+                "description": "Temporary hack for id-functionality (which is Int)"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "dev_uuid": {
+            "oneOf": [
+              {
+                "type": "string",
+                "example": "886eef646bc1c4d79eb8495321bbd472",
+                "description": "Unique identifier for the physical device which is bound to a license\n\nInitialized as the iPAD's UIDevice.current.identifierForVendor?.uuidString.md5() and stored in the Keychain for the Tillhub application.\nMachineGuid (win) or IOPlatformUUID (mac) in electron pos."
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "balance_number": {
+            "oneOf": [
+              {
+                "type": "integer",
+                "example": 5,
+                "description": "The balance's counting number. A sequential counter that may be reset in error cases."
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "branch": {
+            "oneOf": [
+              {
+                "type": "string",
+                "format": "uuid",
+                "description": "UUID of the Tillhub branch resource"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "register": {
+            "oneOf": [
+              {
+                "type": "string",
+                "format": "uuid",
+                "description": "UUID of the Tillhub register resource"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "branch_number": {
+            "deprecated": true,
+            "oneOf": [
+              {
+                "type": "integer",
+                "example": 7,
+                "description": "The branch number"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "register_number": {
+            "deprecated": true,
+            "oneOf": [
+              {
+                "type": "integer",
+                "example": 3,
+                "description": "The register number"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "client": {
+            "oneOf": [
+              {
+                "type": "string",
+                "format": "uuid",
+                "example": "5ad2351d-9a67-45f9-ad4f-0abcbefa9037",
+                "description": "The associated Tillhub client resource identifier (Mandant in German) - rarely used."
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "guid": {
+            "oneOf": [
+              {
+                "type": "string",
+                "example": "00110002000120190123175129150",
+                "description": "The balance's unique identifier built on the client: 0011 + register(%04lu) + branch(%04lu) + yyyyMMddHHmmssSSS"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "client_id": {
+            "oneOf": [
+              {
+                "type": "string",
+                "description": "The unique identifier within the client application (balance producer, POS)\n\nNote: this will be used as idempotency mechanism."
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2019-01-23 16:51:29.143+00",
+            "description": "Closing date of the balance"
+          },
+          "date_begin": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2019-01-23 16:51:29.143+00",
+            "description": "Opening date of the balance"
+          },
+          "cashier_staff": {
+            "oneOf": [
+              {
+                "type": "string",
+                "format": "uuid",
+                "example": "5ad2351d-9a67-45f9-ad4f-0abcbefa9037",
+                "description": "The staff ressource id of the responsible cashier"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "cashier_staff_number": {
+            "oneOf": [
+              {
+                "type": "string",
+                "example": "0018",
+                "description": "The staff custom id of the responsible cashier"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "temp_staff": {
+            "oneOf": [
+              {
+                "type": "string",
+                "format": "uuid",
+                "example": "5ad2351d-9a67-45f9-ad4f-0abcbefa9037",
+                "description": "Id of temporary/secondary Tillhub staff resource - lending permissions"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "branch_fa_ident": {
+            "deprecated": true,
+            "oneOf": [
+              {
+                "description": "Is not used at all"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "geo_data": {
+            "deprecated": true,
+            "oneOf": [
+              {
+                "description": "Not yet used, layout missing"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "cash_begin": {
+            "oneOf": [
+              {
+                "type": "integer",
+                "example": 50000,
+                "description": "The amount of cash when the register was opened (e.g. 50.00€)"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "cash_revenue": {
+            "oneOf": [
+              {
+                "type": "integer",
+                "example": 230000,
+                "description": "The daily cash revenue, POS: cashPaymentTotal - changeTotal - tipsCash"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "total_revenue": {
+            "oneOf": [
+              {
+                "type": "integer",
+                "example": 430000,
+                "description": "The daily total revenue, POS: revenueGrossTotal (all cart item totals that are not tip), includes vouchers"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "expenses_cash_total": {
+            "deprecated": true,
+            "oneOf": [
+              {
+                "type": "integer",
+                "example": 1200,
+                "description": "The daily expenses, POS: expensesCashTotal, API: transactionTotal(type: expense), includes tip expenses"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "expenses_tips_total": {
+            "oneOf": [
+              {
+                "type": "integer",
+                "example": 1850,
+                "description": "The daily tip pay outs, POS: expensesTipsTotal, API: transactionTotal(type: expense, expense.expense_account_type: tip_expense)"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "cash_total_calculated": {
+            "oneOf": [
+              {
+                "type": "integer",
+                "example": 281000,
+                "description": "The calulated (should be) cash amount when closing the register, POS: cash_begin + cash_revenue + expenses_cash_total + tips_cash"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "cash_total_counted": {
+            "oneOf": [
+              {
+                "type": "integer",
+                "example": 280000,
+                "description": "The (is) cash amount - counted by a cashier - when closing the register, POS: user input"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "cash_discrepancy": {
+            "oneOf": [
+              {
+                "type": "integer",
+                "example": 1000,
+                "description": "The discrepancy between calculated and counted cash: cash_total_counted - cash_total_calculated"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "tips_total": {
+            "oneOf": [
+              {
+                "type": "integer",
+                "example": 3405,
+                "description": "The total amount of all tips for that balance. (carry over not included)"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "tips_cash": {
+            "oneOf": [
+              {
+                "type": "integer",
+                "example": 2850,
+                "description": "The total amount of all cash tips for that balance. (carry over not included)"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "tips_begin": {
+            "oneOf": [
+              {
+                "type": "integer",
+                "example": 560,
+                "description": "The total carry-over of tips from the previous balance (tips at opening)."
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "tips_balance": {
+            "oneOf": [
+              {
+                "type": "integer",
+                "example": 2850,
+                "description": "The total carry-over of tips for the next balance (tips that are not yet payed out via expenses at register closing)."
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "sales_count": {
+            "oneOf": [
+              {
+                "type": "integer",
+                "example": 26,
+                "description": "Daily balance count of transactions of type_name 'sale' and 'sale_cancel', POS: salesCount - salesCancelCount"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "currency_iso_code": {
+            "oneOf": [
+              {
+                "type": "string",
+                "example": "EUR",
+                "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this balance."
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "receipt_text": {
+            "oneOf": [
+              {
+                "type": "string",
+                "description": "Receipt printable plaintext of the balance."
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "fr_receipt_id": {
+            "deprecated": true,
+            "oneOf": [
+              {
+                "type": "integer",
+                "description": "Is not used"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "revenues": {
+            "oneOf": [
+              {
+                "type": "array",
+                "description": "Revenues grouped by financial account",
+                "items": {
+                  "description": "Revenues grouped by revenue fa_account",
+                  "additionalProperties": false,
+                  "type": "object",
+                  "required": [
+                    "fa_account",
+                    "amount"
+                  ],
+                  "properties": {
+                    "client_id": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "example": "d0d40841-b1a7-438a-9d1e-2bfec590d2e3",
+                          "minLength": 6,
+                          "maxLength": 64,
+                          "description": "A implementer defined identifier. This can be used for local resource matching and has no business implication."
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "default": null
+                    },
+                    "fa_account": {
+                      "type": "string",
+                      "example": "1505",
+                      "description": "Custom identifier for the revenue financial account"
+                    },
+                    "amount": {
+                      "type": "integer",
+                      "example": 1850,
+                      "description": "The per fa_account daily revenue amount"
+                    }
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "vats": {
+            "oneOf": [
+              {
+                "type": "array",
+                "description": "Taxes grouped by VAT account",
+                "items": {
+                  "description": "VATs grouped by VAT fa_account",
+                  "additionalProperties": false,
+                  "type": "object",
+                  "required": [
+                    "fa_account",
+                    "percentage",
+                    "amount"
+                  ],
+                  "properties": {
+                    "client_id": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "example": "d0d40841-b1a7-438a-9d1e-2bfec590d2e3",
+                          "minLength": 6,
+                          "maxLength": 64,
+                          "description": "A implementer defined identifier. This can be used for local resource matching and has no business implication."
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "default": null
+                    },
+                    "fa_account": {
+                      "type": "string",
+                      "example": "1505",
+                      "description": "Custom identifier for the revenue financial account"
+                    },
+                    "percentage": {
+                      "type": "integer",
+                      "example": "1900",
+                      "description": "Millis representattion for the VAT percentage, 1900 == 19% == 0.19"
+                    },
+                    "amount": {
+                      "type": "number",
+                      "example": 18.5,
+                      "description": "The per fa_account daily VAT amount. 18.50 == 18.50 CHF"
+                    },
+                    "amount_gross": {
+                      "oneOf": [
+                        {
+                          "type": "object",
+                          "example": "{\"amount\": 666.7, \"currency\": \"CHF\"}",
+                          "description": "Describes a non-negative monetary value in a specific currency.",
+                          "additionalProperties": false,
+                          "required": [
+                            "amount",
+                            "currency"
+                          ],
+                          "properties": {
+                            "currency": {
+                              "type": "string",
+                              "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                              "example": "EUR",
+                              "minLength": 3,
+                              "maxLength": 3
+                            },
+                            "amount": {
+                              "type": "number",
+                              "description": "The value as .2-Decimal.",
+                              "example": "47.02",
+                              "minimum": 0,
+                              "multipleOf": 0.01
+                            }
+                          }
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "amount_net": {
+                      "oneOf": [
+                        {
+                          "type": "object",
+                          "example": "{\"amount\": 634.96, \"currency\": \"CHF\"}",
+                          "description": "Describes a non-negative monetary value in a specific currency.",
+                          "additionalProperties": false,
+                          "required": [
+                            "amount",
+                            "currency"
+                          ],
+                          "properties": {
+                            "currency": {
+                              "type": "string",
+                              "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                              "example": "EUR",
+                              "minLength": 3,
+                              "maxLength": 3
+                            },
+                            "amount": {
+                              "type": "number",
+                              "description": "The value as .2-Decimal.",
+                              "example": "47.02",
+                              "minimum": 0,
+                              "multipleOf": 0.01
+                            }
+                          }
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "expenses": {
+            "oneOf": [
+              {
+                "type": "array",
+                "description": "Expenses grouped by financial account",
+                "items": {
+                  "description": "Expenses grouped by expense fa_account",
+                  "additionalProperties": false,
+                  "type": "object",
+                  "required": [
+                    "fa_account",
+                    "amount"
+                  ],
+                  "properties": {
+                    "client_id": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "example": "d0d40841-b1a7-438a-9d1e-2bfec590d2e3",
+                          "minLength": 6,
+                          "maxLength": 64,
+                          "description": "A implementer defined identifier. This can be used for local resource matching and has no business implication."
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "default": null
+                    },
+                    "fa_account": {
+                      "type": "string",
+                      "example": "1505",
+                      "description": "Custom identifier for the expense financial account (number)"
+                    },
+                    "name": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "example": "Berlin cash deposit account",
+                          "description": "Custom identifier for the expense financial accounts name"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "amount": {
+                      "type": "integer",
+                      "example": 1850,
+                      "description": "The per fa_account daily expense amount in 'cents'-format, 1233 == 12.33€ "
+                    }
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "payments": {
+            "oneOf": [
+              {
+                "type": "array",
+                "description": "Payments grouped by payment option",
+                "items": {
+                  "description": "Payments grouped by payment_option",
+                  "additionalProperties": false,
+                  "type": "object",
+                  "required": [
+                    "payment_option",
+                    "currency",
+                    "amount"
+                  ],
+                  "properties": {
+                    "client_id": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "example": "d0d40841-b1a7-438a-9d1e-2bfec590d2e3",
+                          "minLength": 6,
+                          "maxLength": 64,
+                          "description": "A implementer defined identifier. This can be used for local resource matching and has no business implication."
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "default": null
+                    },
+                    "payment_option": {
+                      "type": "string",
+                      "format": "uuid",
+                      "example": "5ad2351d-9a67-45f9-ad4f-0abcbefa9037",
+                      "description": "The payment_option ressource id"
+                    },
+                    "payment_option_id": {
+                      "oneOf": [
+                        {
+                          "type": "integer",
+                          "example": 131,
+                          "description": "Legacy id of the payment option"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "payment_option_name": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "example": "American Express",
+                          "description": "Name of the used payment option"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "payment_option_type_name": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "enum": [
+                            "undefined",
+                            "cash",
+                            "invoice",
+                            "gift_card",
+                            "card_opi",
+                            "card_concardis",
+                            "card_tim",
+                            "card_adyen",
+                            "card",
+                            "terminal_gift_card"
+                          ],
+                          "description": "Payment option type"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "fa_account": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "example": "1505",
+                          "description": "Custom identifier for the payment option financial account"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "cost_center": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "example": "0005",
+                          "description": "Custom identifier for the payment option cost center"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "currency_iso_code": {
+                      "type": "string",
+                      "example": "EUR",
+                      "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this balance payment."
+                    },
+                    "amount": {
+                      "type": "integer",
+                      "example": 1850,
+                      "description": "The daily amount for this payment option, tips included (in cent-format: 1267 == 12.67€)"
+                    },
+                    "amount_tip": {
+                      "oneOf": [
+                        {
+                          "type": "integer",
+                          "example": 1850,
+                          "description": "The daily tip amount for this payment option (in cent-format: 1267 == 12.67€)"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "discrepancy": {
+                      "oneOf": [
+                        {
+                          "type": "integer",
+                          "example": 1850,
+                          "description": "The daily discrepancy between calculated and counted amounts, POS: counted - calculated, not available anymore for non-cash types (e.g. terminal) (in cent-format: 1267 == 12.67€)"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "exchangeRate": {
+                      "oneOf": [
+                        {
+                          "type": "number",
+                          "example": 1.403,
+                          "description": "Exchange rate of the payment option, not used."
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "tips": {
+            "oneOf": [
+              {
+                "type": "array",
+                "description": "Tips grouped by salesperson",
+                "items": {
+                  "description": "Tips grouped by staff",
+                  "additionalProperties": false,
+                  "type": "object",
+                  "required": [
+                    "staff",
+                    "amount"
+                  ],
+                  "properties": {
+                    "client_id": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "example": "d0d40841-b1a7-438a-9d1e-2bfec590d2e3",
+                          "minLength": 6,
+                          "maxLength": 64,
+                          "description": "A implementer defined identifier. This can be used for local resource matching and has no business implication."
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "default": null
+                    },
+                    "staff": {
+                      "type": "string",
+                      "format": "uuid",
+                      "example": "b3465a62-62e9-46de-9df7-4d3009c46068",
+                      "description": "The Tillhub staff (as salesman) resource ID."
+                    },
+                    "fa_account": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "example": "1505",
+                          "description": "Custom identifier for the tip financial account"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "default": null
+                    },
+                    "amount": {
+                      "type": "integer",
+                      "example": 1850,
+                      "description": "The per fa_account daily revenue amount (in cent-format: 1267 == 12.67€)"
+                    },
+                    "vat_fa_account_number": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "example": "9977",
+                          "description": "Custom identifier for the VAT financial account"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "default": null
+                    },
+                    "vat_percentage": {
+                      "oneOf": [
+                        {
+                          "type": "integer",
+                          "example": "1900",
+                          "description": "Millis representattion for the VAT percentage, 1900 == 19% == 0.19"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "default": null
+                    }
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "cash_units": {
+            "oneOf": [
+              {
+                "description": "Counted cash units.",
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                  "currency",
+                  "units"
+                ],
+                "properties": {
+                  "client_id": {
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "example": "d0d40841-b1a7-438a-9d1e-2bfec590d2e3",
+                        "minLength": 6,
+                        "maxLength": 64,
+                        "description": "A implementer defined identifier. This can be used for local resource matching and has no business implication."
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
+                  "currency_iso_code": {
+                    "type": "string",
+                    "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                    "example": "EUR",
+                    "minLength": 3,
+                    "maxLength": 3
+                  },
+                  "units": {
+                    "type": "array",
+                    "additionalProperties": false,
+                    "description": "units.",
+                    "items": {
+                      "type": "object",
+                      "description": "Cash unit details pre e.g. 7 pieces of 10 Cents coins.",
+                      "properties": {
+                        "type": {
+                          "type": "string",
+                          "example": "coin",
+                          "enum": [
+                            "bill",
+                            "coin"
+                          ]
+                        },
+                        "qty": {
+                          "default": null,
+                          "oneOf": [
+                            {
+                              "type": "number",
+                              "description": "The quantity of this unit.",
+                              "example": "7",
+                              "minimum": 0,
+                              "maximum": 32767,
+                              "multipleOf": 1
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "value": {
+                          "example": "0.10",
+                          "description": "The amount by summing all tips for that configuration in that balance.",
+                          "type": "number",
+                          "minimum": 0,
+                          "maximum": 1000000,
+                          "multipleOf": 0.01
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "extended": {
+            "oneOf": [
+              {
+                "description": "Extended balance stats",
+                "additionalProperties": false,
+                "type": "object",
+                "required": [],
+                "properties": {
+                  "cancellation_amount": {
+                    "description": "Revenue total of sale cancellations",
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "description": "Describes a non-negative monetary value in a specific currency.",
+                        "required": [
+                          "amount",
+                          "currency"
+                        ],
+                        "properties": {
+                          "currency": {
+                            "type": "string",
+                            "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                            "example": "EUR",
+                            "minLength": 3,
+                            "maxLength": 3
+                          },
+                          "amount": {
+                            "type": "number",
+                            "description": "The value as .2-Decimal.",
+                            "example": "47.02",
+                            "minimum": 0,
+                            "multipleOf": 0.01
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
+                  "cancellation_count": {
+                    "oneOf": [
+                      {
+                        "description": "Count of sale cancellations",
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 5000
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
+                  "transaction_stats": {
+                    "oneOf": [
+                      {
+                        "type": "array",
+                        "description": "Stats per time intervals - e.g. hourly stats",
+                        "items": {
+                          "description": "Stats per time interval - e.g. stats per thisd specific hour",
+                          "additionalProperties": false,
+                          "type": "object",
+                          "properties": {
+                            "start_date": {
+                              "type": "string",
+                              "format": "date-time",
+                              "example": "2018-01-29T14:55:05.000Z",
+                              "description": "Date when this payment was created"
+                            },
+                            "end_date": {
+                              "type": "string",
+                              "format": "date-time",
+                              "example": "2018-01-29T14:55:05.000Z",
+                              "description": "Date when this payment was created"
+                            },
+                            "count": {
+                              "description": "Count of sales between start and end",
+                              "type": "integer",
+                              "minimum": 0,
+                              "maximum": 5000
+                            },
+                            "amount": {
+                              "description": "Describes a non-negative monetary value in a specific currency.",
+                              "type": "object",
+                              "additionalProperties": false,
+                              "required": [
+                                "amount",
+                                "currency"
+                              ],
+                              "properties": {
+                                "currency": {
+                                  "type": "string",
+                                  "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                                  "example": "EUR",
+                                  "minLength": 3,
+                                  "maxLength": 3
+                                },
+                                "amount": {
+                                  "type": "number",
+                                  "description": "The value as .2-Decimal.",
+                                  "example": "47.02",
+                                  "minimum": 0,
+                                  "multipleOf": 0.01
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "discount_stats": {
+                    "oneOf": [
+                      {
+                        "type": "array",
+                        "description": "Stats per source discount",
+                        "items": {
+                          "description": "Stats per this specific source discount",
+                          "additionalProperties": false,
+                          "type": "object",
+                          "properties": {
+                            "source_id": {
+                              "type": "string",
+                              "format": "uuid",
+                              "example": "03063bbe-e44d-42f6-8bbf-971f5d88f848",
+                              "description": "The Tillhub discount resource identifier"
+                            },
+                            "name": {
+                              "type": "string",
+                              "example": "Christmas Bonus",
+                              "description": "The Tillhub discount name"
+                            },
+                            "count": {
+                              "description": "Count of applications",
+                              "type": "integer",
+                              "minimum": 0,
+                              "maximum": 5000
+                            },
+                            "amount": {
+                              "description": "Describes a non-negative monetary value in a specific currency.",
+                              "type": "object",
+                              "additionalProperties": false,
+                              "required": [
+                                "amount",
+                                "currency"
+                              ],
+                              "properties": {
+                                "currency": {
+                                  "type": "string",
+                                  "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                                  "example": "EUR",
+                                  "minLength": 3,
+                                  "maxLength": 3
+                                },
+                                "amount": {
+                                  "type": "number",
+                                  "description": "The value as .2-Decimal.",
+                                  "example": "47.02",
+                                  "minimum": 0,
+                                  "multipleOf": 0.01
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "first_transaction_date": {
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2018-01-29T14:55:05.000Z",
+                        "description": "Date of the first transaction (including expenses)"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "last_transaction_date": {
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2018-01-29T14:55:05.000Z",
+                        "description": "Date of the last transaction (including expenses)"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "first_transaction_number": {
+                    "oneOf": [
+                      {
+                        "type": "integer",
+                        "example": 221,
+                        "description": "Counting number of the first transaction (including expenses)"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "last_transaction_number": {
+                    "oneOf": [
+                      {
+                        "type": "integer",
+                        "example": 234,
+                        "description": "Counting number of the last transaction (including expenses)"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "first_sale_transaction_number": {
+                    "oneOf": [
+                      {
+                        "type": "integer",
+                        "example": 221,
+                        "description": "Counting number of the first sale (thus excluding expenses)"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "last_sale_transaction_number": {
+                    "oneOf": [
+                      {
+                        "type": "integer",
+                        "example": 234,
+                        "description": "Counting number of the last sale (thus excluding expenses)"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "first_expense_transaction_number": {
+                    "oneOf": [
+                      {
+                        "type": "integer",
+                        "example": 221,
+                        "description": "Counting number of the first expense"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "last_expense_transaction_number": {
+                    "oneOf": [
+                      {
+                        "type": "integer",
+                        "example": 234,
+                        "description": "Counting number of the last expense"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "revenue_gross": {
+                    "oneOf": [
+                      {
+                        "description": "Describes a non-negative monetary value in a specific currency.",
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "amount",
+                          "currency"
+                        ],
+                        "properties": {
+                          "currency": {
+                            "type": "string",
+                            "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                            "example": "EUR",
+                            "minLength": 3,
+                            "maxLength": 3
+                          },
+                          "amount": {
+                            "type": "number",
+                            "description": "The value as .2-Decimal.",
+                            "example": "47.02",
+                            "minimum": 0,
+                            "multipleOf": 0.01
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "revenue_net": {
+                    "oneOf": [
+                      {
+                        "description": "Describes a non-negative monetary value in a specific currency.",
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "amount",
+                          "currency"
+                        ],
+                        "properties": {
+                          "currency": {
+                            "type": "string",
+                            "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                            "example": "EUR",
+                            "minLength": 3,
+                            "maxLength": 3
+                          },
+                          "amount": {
+                            "type": "number",
+                            "description": "The value as .2-Decimal.",
+                            "example": "47.02",
+                            "minimum": 0,
+                            "multipleOf": 0.01
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "average_amount_gross_per_cart": {
+                    "oneOf": [
+                      {
+                        "description": "Describes a non-negative monetary value in a specific currency.",
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "amount",
+                          "currency"
+                        ],
+                        "properties": {
+                          "currency": {
+                            "type": "string",
+                            "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                            "example": "EUR",
+                            "minLength": 3,
+                            "maxLength": 3
+                          },
+                          "amount": {
+                            "type": "number",
+                            "description": "The value as .2-Decimal.",
+                            "example": "47.02",
+                            "minimum": 0,
+                            "multipleOf": 0.01
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "cart_items_count": {
+                    "oneOf": [
+                      {
+                        "description": "Total count of cart items of that day/balance period",
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 5000
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "total_quantity": {
+                    "oneOf": [
+                      {
+                        "description": "Total item quantity of that day/balance period",
+                        "type": "number",
+                        "example": 245.73
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "average_quantity_per_cart": {
+                    "oneOf": [
+                      {
+                        "type": "number",
+                        "example": 4.73,
+                        "description": "total_quantity / sales_count"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "average_cart_items_count_per_cart": {
+                    "oneOf": [
+                      {
+                        "type": "number",
+                        "example": 3.108,
+                        "description": "cart_items_count / sales_count"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "discount_amount": {
+                    "oneOf": [
+                      {
+                        "description": "Describes a non-negative monetary value in a specific currency.",
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "amount",
+                          "currency"
+                        ],
+                        "properties": {
+                          "currency": {
+                            "type": "string",
+                            "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                            "example": "EUR",
+                            "minLength": 3,
+                            "maxLength": 3
+                          },
+                          "amount": {
+                            "type": "number",
+                            "description": "The value as .2-Decimal.",
+                            "example": "47.02",
+                            "minimum": 0,
+                            "multipleOf": 0.01
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "voucher_amount": {
+                    "oneOf": [
+                      {
+                        "description": "Describes a non-negative monetary value in a specific currency.",
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "amount",
+                          "currency"
+                        ],
+                        "properties": {
+                          "currency": {
+                            "type": "string",
+                            "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                            "example": "EUR",
+                            "minLength": 3,
+                            "maxLength": 3
+                          },
+                          "amount": {
+                            "type": "number",
+                            "description": "The value as .2-Decimal.",
+                            "example": "47.02",
+                            "minimum": 0,
+                            "multipleOf": 0.01
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "excluded_vouchers": {
+                    "oneOf": [
+                      {
+                        "description": "values that exclude voucher-items from their calculation",
+                        "type": "object",
+                        "properties": {
+                          "average_cart_items_count_per_cart": {
+                            "oneOf": [
+                              {
+                                "type": "number",
+                                "example": 3.108,
+                                "description": "cart_items_count / excluded_vouchers.sales_count"
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          },
+                          "average_quantity_per_cart": {
+                            "oneOf": [
+                              {
+                                "type": "number",
+                                "example": 4.73,
+                                "description": "total_quantity / excluded_vouchers.sales_count"
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          },
+                          "cart_items_count": {
+                            "oneOf": [
+                              {
+                                "description": "Count of all cart items that are not vouchers",
+                                "type": "integer",
+                                "minimum": 0,
+                                "maximum": 5000
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          },
+                          "revenue_gross": {
+                            "oneOf": [
+                              {
+                                "description": "Describes a non-negative monetary value in a specific currency.",
+                                "type": "object",
+                                "additionalProperties": false,
+                                "required": [
+                                  "amount",
+                                  "currency"
+                                ],
+                                "properties": {
+                                  "currency": {
+                                    "type": "string",
+                                    "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                                    "example": "EUR",
+                                    "minLength": 3,
+                                    "maxLength": 3
+                                  },
+                                  "amount": {
+                                    "type": "number",
+                                    "description": "The value as .2-Decimal.",
+                                    "example": "47.02",
+                                    "minimum": 0,
+                                    "multipleOf": 0.01
+                                  }
+                                }
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          },
+                          "revenue_net": {
+                            "oneOf": [
+                              {
+                                "description": "Describes a non-negative monetary value in a specific currency.",
+                                "type": "object",
+                                "additionalProperties": false,
+                                "required": [
+                                  "amount",
+                                  "currency"
+                                ],
+                                "properties": {
+                                  "currency": {
+                                    "type": "string",
+                                    "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                                    "example": "EUR",
+                                    "minLength": 3,
+                                    "maxLength": 3
+                                  },
+                                  "amount": {
+                                    "type": "number",
+                                    "description": "The value as .2-Decimal.",
+                                    "example": "47.02",
+                                    "minimum": 0,
+                                    "multipleOf": 0.01
+                                  }
+                                }
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          },
+                          "sales_count": {
+                            "oneOf": [
+                              {
+                                "type": "integer",
+                                "example": 26,
+                                "description": "Daily balance count of sales, excluding sales that have ONLY vocuher items"
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          },
+                          "total_quantity": {
+                            "oneOf": [
+                              {
+                                "description": "Total item quantity of all items that are not vouchers",
+                                "type": "number",
+                                "example": 245.73
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "cashier_name": {
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "example": "Baris Atamaer",
+                        "description": "Name of the cashier that conducted the balance."
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "expense_amount_excluding_bank": {
+                    "oneOf": [
+                      {
+                        "description": "Describes a non-negative monetary value in a specific currency.",
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "amount",
+                          "currency"
+                        ],
+                        "properties": {
+                          "currency": {
+                            "type": "string",
+                            "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                            "example": "EUR",
+                            "minLength": 3,
+                            "maxLength": 3
+                          },
+                          "amount": {
+                            "type": "number",
+                            "description": "The value as .2-Decimal.",
+                            "example": "47.02",
+                            "minimum": 0,
+                            "multipleOf": 0.01
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "deposit_amount_excluding_bank": {
+                    "oneOf": [
+                      {
+                        "description": "Describes a non-negative monetary value in a specific currency.",
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "amount",
+                          "currency"
+                        ],
+                        "properties": {
+                          "currency": {
+                            "type": "string",
+                            "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                            "example": "EUR",
+                            "minLength": 3,
+                            "maxLength": 3
+                          },
+                          "amount": {
+                            "type": "number",
+                            "description": "The value as .2-Decimal.",
+                            "example": "47.02",
+                            "minimum": 0,
+                            "multipleOf": 0.01
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "refund_count": {
+                    "oneOf": [
+                      {
+                        "type": "integer",
+                        "example": 4,
+                        "description": "Daily count of refunded cart items"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "refund_net": {
+                    "oneOf": [
+                      {
+                        "description": "Describes a non-negative monetary value in a specific currency.",
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "amount",
+                          "currency"
+                        ],
+                        "properties": {
+                          "currency": {
+                            "type": "string",
+                            "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                            "example": "EUR",
+                            "minLength": 3,
+                            "maxLength": 3
+                          },
+                          "amount": {
+                            "type": "number",
+                            "description": "The value as .2-Decimal.",
+                            "example": "47.02",
+                            "minimum": 0,
+                            "multipleOf": 0.01
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "refund_gross": {
+                    "oneOf": [
+                      {
+                        "description": "Describes a non-negative monetary value in a specific currency.",
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "amount",
+                          "currency"
+                        ],
+                        "properties": {
+                          "currency": {
+                            "type": "string",
+                            "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                            "example": "EUR",
+                            "minLength": 3,
+                            "maxLength": 3
+                          },
+                          "amount": {
+                            "type": "number",
+                            "description": "The value as .2-Decimal.",
+                            "example": "47.02",
+                            "minimum": 0,
+                            "multipleOf": 0.01
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "cashier_stats": {
+                    "oneOf": [
+                      {
+                        "type": "array",
+                        "description": "Stats per cashier",
+                        "items": {
+                          "description": "Balance stats per a single cashier",
+                          "additionalProperties": false,
+                          "type": "object",
+                          "required": [
+                            "staff"
+                          ],
+                          "properties": {
+                            "staff": {
+                              "type": "string",
+                              "format": "uuid",
+                              "example": "d0d40841-b1a7-438a-9d1e-2bfec590d2e3",
+                              "description": "The Tillhub staff (as cashier) resource ID, that the statistics apply to."
+                            },
+                            "staff_name": {
+                              "oneOf": [
+                                {
+                                  "type": "string",
+                                  "example": "John Smith",
+                                  "description": "The Tillhub staff's display name (as cashier), that the statistics apply to."
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "staff_number": {
+                              "oneOf": [
+                                {
+                                  "type": "string",
+                                  "example": "0018",
+                                  "description": "The Tillhub staff's custom id (as cashier), that the statistics apply to."
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "sales": {
+                              "oneOf": [
+                                {
+                                  "description": "Describes a non-negative monetary value in a specific currency.",
+                                  "type": "object",
+                                  "additionalProperties": false,
+                                  "required": [
+                                    "amount",
+                                    "currency"
+                                  ],
+                                  "properties": {
+                                    "currency": {
+                                      "type": "string",
+                                      "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                                      "example": "EUR",
+                                      "minLength": 3,
+                                      "maxLength": 3
+                                    },
+                                    "amount": {
+                                      "type": "number",
+                                      "description": "The value as .2-Decimal.",
+                                      "example": "47.02",
+                                      "minimum": 0,
+                                      "multipleOf": 0.01
+                                    }
+                                  }
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "change": {
+                              "oneOf": [
+                                {
+                                  "description": "Describes a non-negative monetary value in a specific currency.",
+                                  "type": "object",
+                                  "additionalProperties": false,
+                                  "required": [
+                                    "amount",
+                                    "currency"
+                                  ],
+                                  "properties": {
+                                    "currency": {
+                                      "type": "string",
+                                      "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                                      "example": "EUR",
+                                      "minLength": 3,
+                                      "maxLength": 3
+                                    },
+                                    "amount": {
+                                      "type": "number",
+                                      "description": "The value as .2-Decimal.",
+                                      "example": "47.02",
+                                      "minimum": 0,
+                                      "multipleOf": 0.01
+                                    }
+                                  }
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "cash_payments": {
+                              "oneOf": [
+                                {
+                                  "description": "Describes a non-negative monetary value in a specific currency.",
+                                  "type": "object",
+                                  "additionalProperties": false,
+                                  "required": [
+                                    "amount",
+                                    "currency"
+                                  ],
+                                  "properties": {
+                                    "currency": {
+                                      "type": "string",
+                                      "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                                      "example": "EUR",
+                                      "minLength": 3,
+                                      "maxLength": 3
+                                    },
+                                    "amount": {
+                                      "type": "number",
+                                      "description": "The value as .2-Decimal.",
+                                      "example": "47.02",
+                                      "minimum": 0,
+                                      "multipleOf": 0.01
+                                    }
+                                  }
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "expenses": {
+                              "oneOf": [
+                                {
+                                  "description": "Describes a non-negative monetary value in a specific currency.",
+                                  "type": "object",
+                                  "additionalProperties": false,
+                                  "required": [
+                                    "amount",
+                                    "currency"
+                                  ],
+                                  "properties": {
+                                    "currency": {
+                                      "type": "string",
+                                      "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                                      "example": "EUR",
+                                      "minLength": 3,
+                                      "maxLength": 3
+                                    },
+                                    "amount": {
+                                      "type": "number",
+                                      "description": "The value as .2-Decimal.",
+                                      "example": "47.02",
+                                      "minimum": 0,
+                                      "multipleOf": 0.01
+                                    }
+                                  }
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "cash_balance": {
+                              "oneOf": [
+                                {
+                                  "description": "Describes a non-negative monetary value in a specific currency.",
+                                  "type": "object",
+                                  "additionalProperties": false,
+                                  "required": [
+                                    "amount",
+                                    "currency"
+                                  ],
+                                  "properties": {
+                                    "currency": {
+                                      "type": "string",
+                                      "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                                      "example": "EUR",
+                                      "minLength": 3,
+                                      "maxLength": 3
+                                    },
+                                    "amount": {
+                                      "type": "number",
+                                      "description": "The value as .2-Decimal.",
+                                      "example": "47.02",
+                                      "minimum": 0,
+                                      "multipleOf": 0.01
+                                    }
+                                  }
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "non_cash_payments": {
+                              "oneOf": [
+                                {
+                                  "description": "Describes a non-negative monetary value in a specific currency.",
+                                  "type": "object",
+                                  "additionalProperties": false,
+                                  "required": [
+                                    "amount",
+                                    "currency"
+                                  ],
+                                  "properties": {
+                                    "currency": {
+                                      "type": "string",
+                                      "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                                      "example": "EUR",
+                                      "minLength": 3,
+                                      "maxLength": 3
+                                    },
+                                    "amount": {
+                                      "type": "number",
+                                      "description": "The value as .2-Decimal.",
+                                      "example": "47.02",
+                                      "minimum": 0,
+                                      "multipleOf": 0.01
+                                    }
+                                  }
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "tips_total": {
+                              "oneOf": [
+                                {
+                                  "description": "Describes a non-negative monetary value in a specific currency.",
+                                  "type": "object",
+                                  "additionalProperties": false,
+                                  "required": [
+                                    "amount",
+                                    "currency"
+                                  ],
+                                  "properties": {
+                                    "currency": {
+                                      "type": "string",
+                                      "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                                      "example": "EUR",
+                                      "minLength": 3,
+                                      "maxLength": 3
+                                    },
+                                    "amount": {
+                                      "type": "number",
+                                      "description": "The value as .2-Decimal.",
+                                      "example": "47.02",
+                                      "minimum": 0,
+                                      "multipleOf": 0.01
+                                    }
+                                  }
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "tips_cash": {
+                              "oneOf": [
+                                {
+                                  "description": "Describes a non-negative monetary value in a specific currency.",
+                                  "type": "object",
+                                  "additionalProperties": false,
+                                  "required": [
+                                    "amount",
+                                    "currency"
+                                  ],
+                                  "properties": {
+                                    "currency": {
+                                      "type": "string",
+                                      "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                                      "example": "EUR",
+                                      "minLength": 3,
+                                      "maxLength": 3
+                                    },
+                                    "amount": {
+                                      "type": "number",
+                                      "description": "The value as .2-Decimal.",
+                                      "example": "47.02",
+                                      "minimum": 0,
+                                      "multipleOf": 0.01
+                                    }
+                                  }
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "tips_balance": {
+                              "oneOf": [
+                                {
+                                  "description": "Describes a non-negative monetary value in a specific currency.",
+                                  "type": "object",
+                                  "additionalProperties": false,
+                                  "required": [
+                                    "amount",
+                                    "currency"
+                                  ],
+                                  "properties": {
+                                    "currency": {
+                                      "type": "string",
+                                      "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                                      "example": "EUR",
+                                      "minLength": 3,
+                                      "maxLength": 3
+                                    },
+                                    "amount": {
+                                      "type": "number",
+                                      "description": "The value as .2-Decimal.",
+                                      "example": "47.02",
+                                      "minimum": 0,
+                                      "multipleOf": 0.01
+                                    }
+                                  }
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "payments": {
+                              "oneOf": [
+                                {
+                                  "type": "array",
+                                  "description": "Payments grouped by payment option",
+                                  "items": {
+                                    "description": "Payments grouped by payment_option",
+                                    "additionalProperties": false,
+                                    "type": "object",
+                                    "required": [
+                                      "payment_option",
+                                      "currency",
+                                      "amount"
+                                    ],
+                                    "properties": {
+                                      "payment_option": {
+                                        "type": "string",
+                                        "format": "uuid",
+                                        "example": "5ad2351d-9a67-45f9-ad4f-0abcbefa9037",
+                                        "description": "The payment_option ressource id"
+                                      },
+                                      "payment_option_name": {
+                                        "oneOf": [
+                                          {
+                                            "type": "string",
+                                            "example": "American Express",
+                                            "description": "Name of the used payment option"
+                                          },
+                                          {
+                                            "type": "null"
+                                          }
+                                        ]
+                                      },
+                                      "payment_option_type_name": {
+                                        "oneOf": [
+                                          {
+                                            "type": "string",
+                                            "enum": [
+                                              "undefined",
+                                              "cash",
+                                              "invoice",
+                                              "card",
+                                              "terminal_gift_card"
+                                            ],
+                                            "description": "Payment option type"
+                                          },
+                                          {
+                                            "type": "null"
+                                          }
+                                        ]
+                                      },
+                                      "amount_given": {
+                                        "oneOf": [
+                                          {
+                                            "description": "Describes a non-negative monetary value in a specific currency.",
+                                            "type": "object",
+                                            "additionalProperties": false,
+                                            "required": [
+                                              "amount",
+                                              "currency"
+                                            ],
+                                            "properties": {
+                                              "currency": {
+                                                "type": "string",
+                                                "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                                                "example": "EUR",
+                                                "minLength": 3,
+                                                "maxLength": 3
+                                              },
+                                              "amount": {
+                                                "type": "number",
+                                                "description": "The value as .2-Decimal.",
+                                                "example": "47.02",
+                                                "minimum": 0,
+                                                "multipleOf": 0.01
+                                              }
+                                            }
+                                          },
+                                          {
+                                            "type": "null"
+                                          }
+                                        ]
+                                      },
+                                      "amount": {
+                                        "oneOf": [
+                                          {
+                                            "description": "Describes a non-negative monetary value in a specific currency.",
+                                            "type": "object",
+                                            "additionalProperties": false,
+                                            "required": [
+                                              "amount",
+                                              "currency"
+                                            ],
+                                            "properties": {
+                                              "currency": {
+                                                "type": "string",
+                                                "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                                                "example": "EUR",
+                                                "minLength": 3,
+                                                "maxLength": 3
+                                              },
+                                              "amount": {
+                                                "type": "number",
+                                                "description": "The value as .2-Decimal.",
+                                                "example": "47.02",
+                                                "minimum": 0,
+                                                "multipleOf": 0.01
+                                              }
+                                            }
+                                          },
+                                          {
+                                            "type": "null"
+                                          }
+                                        ]
+                                      },
+                                      "amount_tip": {
+                                        "oneOf": [
+                                          {
+                                            "description": "Describes a non-negative monetary value in a specific currency.",
+                                            "type": "object",
+                                            "additionalProperties": false,
+                                            "required": [
+                                              "amount",
+                                              "currency"
+                                            ],
+                                            "properties": {
+                                              "currency": {
+                                                "type": "string",
+                                                "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                                                "example": "EUR",
+                                                "minLength": 3,
+                                                "maxLength": 3
+                                              },
+                                              "amount": {
+                                                "type": "number",
+                                                "description": "The value as .2-Decimal.",
+                                                "example": "47.02",
+                                                "minimum": 0,
+                                                "multipleOf": 0.01
+                                              }
+                                            }
+                                          },
+                                          {
+                                            "type": "null"
+                                          }
+                                        ]
+                                      },
+                                      "fa_account": {
+                                        "oneOf": [
+                                          {
+                                            "type": "string",
+                                            "example": "1505",
+                                            "description": "Custom identifier for the payment option financial account"
+                                          },
+                                          {
+                                            "type": "null"
+                                          }
+                                        ]
+                                      },
+                                      "cost_center": {
+                                        "oneOf": [
+                                          {
+                                            "type": "string",
+                                            "example": "0005",
+                                            "description": "Custom identifier for the payment option cost center"
+                                          },
+                                          {
+                                            "type": "null"
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  }
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "_metadata": {
+            "oneOf": [
+              {
+                "description": "Extended balance stats",
+                "additionalProperties": false,
+                "type": "object",
+                "required": [],
+                "properties": {
+                  "cancellation_amount": {
+                    "description": "Revenue total of sale cancellations",
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "description": "Describes a non-negative monetary value in a specific currency.",
+                        "required": [
+                          "amount",
+                          "currency"
+                        ],
+                        "properties": {
+                          "currency": {
+                            "type": "string",
+                            "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                            "example": "EUR",
+                            "minLength": 3,
+                            "maxLength": 3
+                          },
+                          "amount": {
+                            "type": "number",
+                            "description": "The value as .2-Decimal.",
+                            "example": "47.02",
+                            "minimum": 0,
+                            "multipleOf": 0.01
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
+                  "total_count_transactions": {
+                    "oneOf": [
+                      {
+                        "description": "Count of all transactions (sale, expense ... cancel)",
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 5000
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "total_count_expenses": {
+                    "oneOf": [
+                      {
+                        "description": "Count of all expenses ... cancel)",
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 5000
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "first_transaction_timestamp": {
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2018-01-29T14:55:05.000Z",
+                        "description": "Date of the first transaction"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "last_transaction_timestamp": {
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2018-01-29T14:55:05.000Z",
+                        "description": "Date of the last transaction"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "first_transaction_client_uuid": {
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "example": "fd5bf507-e0e0-48f5-b322-619b6712b719",
+                        "minLength": 6,
+                        "maxLength": 64,
+                        "description": "client id of the first transaction"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "last_transaction_client_uuid": {
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "example": "d0d40841-b1a7-438a-9d1e-2bfec590d2e3",
+                        "minLength": 6,
+                        "maxLength": 64,
+                        "description": "client id of the last transaction"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "first_transaction_number": {
+                    "oneOf": [
+                      {
+                        "type": "integer",
+                        "example": 221,
+                        "description": "Counting number of the first transaction"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "last_transaction_number": {
+                    "oneOf": [
+                      {
+                        "type": "integer",
+                        "example": 234,
+                        "description": "Counting number of the last transaction"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}
