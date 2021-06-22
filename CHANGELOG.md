@@ -1,3 +1,14 @@
+# [6.58.0](https://github.com/tillhub/schemas/compare/v6.57.0...v6.58.0) (2021-06-22)
+
+
+### Features
+
+* **balances:** extended ([f1110be](https://github.com/tillhub/schemas/commit/f1110be))
+* **balances:** extended ([b2e3734](https://github.com/tillhub/schemas/commit/b2e3734))
+* **balances:** extended ([84260cf](https://github.com/tillhub/schemas/commit/84260cf))
+* **balances:** extended ([8874e21](https://github.com/tillhub/schemas/commit/8874e21))
+* **balances:** extended ([61a1671](https://github.com/tillhub/schemas/commit/61a1671))
+
 # [6.57.0](https://github.com/tillhub/schemas/compare/v6.56.0...v6.57.0) (2021-06-22)
 
 
