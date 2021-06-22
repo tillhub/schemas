@@ -23,6 +23,19 @@ console.log(createCartSchema)
 // }
 ```
 
+## Release flow
+
+Releases are automated with @semantic-release. 
+For triggering a new release just use commit messages started from "feat" or "fix" prefix which is part of [proper message format](https://github.com/semantic-release/semantic-release#commit-message-format).
+
+CricleCI takes care of publishing the package. it will only trigger on the master branch.
+After the PR is merged into master, CircleCI will start the deployment process:
+   1. It will checkout the project and installs the dependencies.
+   2. Linter will check the code.
+   3. It will run the tests to make sure everything runs perfectly.
+   4. Code will be compiled.
+   4. Finally, it will publish the new version by running `semantic-release`.
+
 ## Contributing
 
 Contributions are welcome in the case of falsy information. Those schemas are used as internaly driven data logic and quality.
@@ -50,7 +63,3 @@ Feel free to edit any files you need and don't forget to add the custom properti
 ## License
 
 Apache-2.0
-
-## Notice
-
-For triggering a new release, commit message must be started from "feat" or "fix" prefix 

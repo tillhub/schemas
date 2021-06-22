@@ -1,3 +1,161 @@
+# [6.57.0](https://github.com/tillhub/schemas/compare/v6.56.0...v6.57.0) (2021-06-22)
+
+
+### Bug Fixes
+
+* **date_object:** required ([79e444e](https://github.com/tillhub/schemas/commit/79e444e))
+* **statuses:** signatures ([7ceaa5f](https://github.com/tillhub/schemas/commit/7ceaa5f))
+
+
+### Features
+
+* **gastro:** metatdata ([1219eb4](https://github.com/tillhub/schemas/commit/1219eb4))
+
+# [6.56.0](https://github.com/tillhub/schemas/compare/v6.55.0...v6.56.0) (2021-06-22)
+
+
+### Features
+
+* **bulk_create:** support sending the qty and location_type to bulk create stock on product bulk creation ([f9dd54c](https://github.com/tillhub/schemas/commit/f9dd54c))
+
+# [6.55.0](https://github.com/tillhub/schemas/compare/v6.54.3...v6.55.0) (2021-06-21)
+
+
+### Features
+
+* **customers:** Add Unspecified gender value for customers ([#572](https://github.com/tillhub/schemas/issues/572)) ([a5b1598](https://github.com/tillhub/schemas/commit/a5b1598))
+
+## [6.54.3](https://github.com/tillhub/schemas/compare/v6.54.2...v6.54.3) (2021-06-18)
+
+
+### Bug Fixes
+
+* **docs:** deploy brute force ([06f5b39](https://github.com/tillhub/schemas/commit/06f5b39))
+
+## [6.54.1](https://github.com/tillhub/schemas/compare/v6.54.0...v6.54.1) (2021-06-17)
+
+
+### Bug Fixes
+
+* **gastro_orders:** change source type and add import gastro orders branch to v1 ([dea7d11](https://github.com/tillhub/schemas/commit/dea7d11))
+
+# [6.54.0](https://github.com/tillhub/schemas/compare/v6.53.0...v6.54.0) (2021-06-17)
+
+
+### Features
+
+* **voucher_systems_template:** add discount_rate ([05ca794](https://github.com/tillhub/schemas/commit/05ca794))
+
+# [6.53.0](https://github.com/tillhub/schemas/compare/v6.52.0...v6.53.0) (2021-06-16)
+
+
+### Features
+
+* **permissions:** add modifying orders permission for staff ([f30cdee](https://github.com/tillhub/schemas/commit/f30cdee))
+
+# [6.52.0](https://github.com/tillhub/schemas/compare/v6.51.0...v6.52.0) (2021-06-16)
+
+
+### Features
+
+* **gastro_orders:** deltas ([0f6341e](https://github.com/tillhub/schemas/commit/0f6341e))
+
+# [6.51.0](https://github.com/tillhub/schemas/compare/v6.50.0...v6.51.0) (2021-06-16)
+
+
+### Features
+
+* **warehouses:** type local ([fa1c052](https://github.com/tillhub/schemas/commit/fa1c052))
+
+# [6.50.0](https://github.com/tillhub/schemas/compare/v6.49.1...v6.50.0) (2021-06-15)
+
+
+### Features
+
+* **gastro:** add gastro configuration ([#562](https://github.com/tillhub/schemas/issues/562)) ([890a106](https://github.com/tillhub/schemas/commit/890a106))
+
+## [6.49.1](https://github.com/tillhub/schemas/compare/v6.49.0...v6.49.1) (2021-06-15)
+
+
+### Bug Fixes
+
+* **gastro_orders:** deltas ([63a65ad](https://github.com/tillhub/schemas/commit/63a65ad))
+
+# [6.49.0](https://github.com/tillhub/schemas/compare/v6.48.0...v6.49.0) (2021-06-15)
+
+
+### Features
+
+* **gastro_orders:** deltas ([1ddc2aa](https://github.com/tillhub/schemas/commit/1ddc2aa))
+
+# [6.48.0](https://github.com/tillhub/schemas/compare/v6.47.0...v6.48.0) (2021-06-15)
+
+
+### Features
+
+* **payments:** allow_disconnected_terminals default never ([4748a82](https://github.com/tillhub/schemas/commit/4748a82))
+* **pricebook:** entry product not required ([634a753](https://github.com/tillhub/schemas/commit/634a753))
+
+# [6.47.0](https://github.com/tillhub/schemas/compare/v6.46.0...v6.47.0) (2021-06-15)
+
+
+### Bug Fixes
+
+* **gastro_orders:** deltas ([185d66a](https://github.com/tillhub/schemas/commit/185d66a))
+* **transactions:** legacy ([499928d](https://github.com/tillhub/schemas/commit/499928d))
+* **transactions:** legacy ([4b6fe44](https://github.com/tillhub/schemas/commit/4b6fe44))
+* **transactions:** legacy ([ceb3372](https://github.com/tillhub/schemas/commit/ceb3372))
+* **transactions:** legacy ([7b52c11](https://github.com/tillhub/schemas/commit/7b52c11))
+
+
+### Features
+
+* **gastro_orders:** deltas ([50b827a](https://github.com/tillhub/schemas/commit/50b827a))
+* **gastro_orders:** deltas ([c75e8cf](https://github.com/tillhub/schemas/commit/c75e8cf))
+* **transactions:** metadata ([03767ba](https://github.com/tillhub/schemas/commit/03767ba))
+
+# [6.46.0](https://github.com/tillhub/schemas/compare/v6.45.0...v6.46.0) (2021-06-14)
+
+
+### Features
+
+* **configurations:** balances ([a93e5d8](https://github.com/tillhub/schemas/commit/a93e5d8))
+
+# [6.45.0](https://github.com/tillhub/schemas/compare/v6.44.0...v6.45.0) (2021-06-14)
+
+
+### Features
+
+* **table_layouts:** API-749: Delete 'name' in gastro table sync ([1848287](https://github.com/tillhub/schemas/commit/1848287))
+
+# [6.44.0](https://github.com/tillhub/schemas/compare/v6.43.0...v6.44.0) (2021-06-14)
+
+
+### Features
+
+* **docs:** readme updated ([1ae360c](https://github.com/tillhub/schemas/commit/1ae360c))
+
+# [6.43.0](https://github.com/tillhub/schemas/compare/v6.42.0...v6.43.0) (2021-06-08)
+
+
+### Features
+
+* **products:** add bulk create products ([fbc4f07](https://github.com/tillhub/schemas/commit/fbc4f07))
+
+# [6.42.0](https://github.com/tillhub/schemas/compare/v6.41.0...v6.42.0) (2021-06-03)
+
+
+### Features
+
+* **docs:** readme updated ([c0bc68d](https://github.com/tillhub/schemas/commit/c0bc68d))
+
+# [6.41.0](https://github.com/tillhub/schemas/compare/v6.40.0...v6.41.0) (2021-05-31)
+
+
+### Features
+
+* **settings:** In-app searches limits changed ([#555](https://github.com/tillhub/schemas/issues/555)) ([5532ccf](https://github.com/tillhub/schemas/commit/5532ccf))
+
 # [6.40.0](https://github.com/tillhub/schemas/compare/v6.39.0...v6.40.0) (2021-05-31)
 
 

@@ -4,8 +4,7 @@
   "additionalProperties": false,
   "type": "object",
   "required": [
-    "price_book",
-    "product"
+    "price_book"
   ],
   "properties": {
     "price_book": {

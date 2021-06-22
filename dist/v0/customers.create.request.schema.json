@@ -629,7 +629,8 @@
           "type": "string",
           "enum": [
             "male",
-            "female"
+            "female",
+            "unspecified"
           ]
         },
         {

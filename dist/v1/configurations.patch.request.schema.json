@@ -1162,7 +1162,8 @@
                         {
                           "type": "integer",
                           "minimum": 1,
-                          "maximum": 20
+                          "maximum": 100,
+                          "default": 20
                         },
                         {
                           "type": "null"
@@ -2296,6 +2297,35 @@
           "type": "null"
         }
       ]
+    },
+    "gastro": {
+      "type": "object",
+      "properties": {
+        "orders": {
+          "oneOf": [
+            {
+              "type": "object",
+              "properties": {
+                "lock_to_waiters": {
+                  "oneOf": [
+                    {
+                      "type": "boolean",
+                      "description": "defines whether orders are locked to the waiters",
+                      "default": "false"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
     },
     "stock": {
       "oneOf": [
@@ -6991,6 +7021,18 @@
               "oneOf": [
                 {
                   "description": "If true, skips the x-report and directly goes to conduct a balance.",
+                  "type": "boolean",
+                  "default": false
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "print_automatically": {
+              "oneOf": [
+                {
+                  "description": "If true - print the balance automatically after closing the register.",
                   "type": "boolean",
                   "default": false
                 },
