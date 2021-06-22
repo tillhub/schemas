@@ -48,8 +48,8 @@
           "type": "object",
           "additionalProperties": false,
           "required": [
-            "amount",
-            "currency"
+            "iso",
+            "unix"
           ],
           "properties": {
             "iso": {
@@ -70,8 +70,8 @@
           "type": "object",
           "additionalProperties": false,
           "required": [
-            "amount",
-            "currency"
+            "iso",
+            "unix"
           ],
           "properties": {
             "iso": {
@@ -172,7 +172,7 @@
                         "qr",
                         "aztec",
                         "code128",
-                        "utf8"
+                        "text"
                       ],
                       "description": "The formatting info for potential qr-code-data"
                     },
@@ -535,52 +535,65 @@
           "type": "object",
           "description": "A container for storing arbitrary metadata.",
           "properties": {
-            "table": {
+            "origin": {
               "oneOf": [
                 {
-                  "type": "string",
-                  "format": "uuid",
-                  "example": "ead2351d-ea67-45f9-ad4f-0abcbefa9037",
-                  "description": "Id of the gastro table that this process belongs to, NULL for \"Bar\""
-                },
-                {
-                  "type": "null"
-                }
-              ]
-            },
-            "table_name": {
-              "oneOf": [
-                {
-                  "type": "string",
-                  "maxLength": 128,
-                  "example": "Table 23",
-                  "description": "Human readable name of the table"
-                },
-                {
-                  "type": "null"
-                }
-              ]
-            },
-            "room": {
-              "oneOf": [
-                {
-                  "type": "string",
-                  "format": "uuid",
-                  "example": "00d2351d-ea67-05f9-ad4f-0abcbefa903a",
-                  "description": "Id of the gastro room that this process belongs to"
-                },
-                {
-                  "type": "null"
-                }
-              ]
-            },
-            "room_name": {
-              "oneOf": [
-                {
-                  "type": "string",
-                  "maxLength": 128,
-                  "example": "Table 23",
-                  "description": "Human readable name of the room"
+                  "description": "The origin of a gastro order (table and room (if assigned))",
+                  "type": "object",
+                  "properties": {
+                    "table": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "format": "uuid",
+                          "example": "ead2351d-ea67-45f9-ad4f-0abcbefa9037",
+                          "description": "Id of the most recent gastro table that this process belongs to, NULL for \"Bar\""
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "table_name": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "maxLength": 128,
+                          "example": "Table 23",
+                          "description": "Human readable name of the table"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "room": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "format": "uuid",
+                          "example": "00d2351d-ea67-05f9-ad4f-0abcbefa903a",
+                          "description": "Id of the most recent gastro room that this process belongs to"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "room_name": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "maxLength": 128,
+                          "example": "Garden",
+                          "description": "Human readable name of the room"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  }
                 },
                 {
                   "type": "null"

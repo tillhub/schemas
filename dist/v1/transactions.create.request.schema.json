@@ -3626,7 +3626,7 @@
                         "qr",
                         "aztec",
                         "code128",
-                        "utf8"
+                        "text"
                       ],
                       "description": "The formatting info for potential qr-code-data"
                     },

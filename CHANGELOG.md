@@ -1,3 +1,16 @@
+# [6.57.0](https://github.com/tillhub/schemas/compare/v6.56.0...v6.57.0) (2021-06-22)
+
+
+### Bug Fixes
+
+* **date_object:** required ([79e444e](https://github.com/tillhub/schemas/commit/79e444e))
+* **statuses:** signatures ([7ceaa5f](https://github.com/tillhub/schemas/commit/7ceaa5f))
+
+
+### Features
+
+* **gastro:** metatdata ([1219eb4](https://github.com/tillhub/schemas/commit/1219eb4))
+
 # [6.56.0](https://github.com/tillhub/schemas/compare/v6.55.0...v6.56.0) (2021-06-22)
 
 

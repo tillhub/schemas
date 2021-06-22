@@ -3818,8 +3818,8 @@
                 "type": "object",
                 "additionalProperties": false,
                 "required": [
-                  "amount",
-                  "currency"
+                  "iso",
+                  "unix"
                 ],
                 "properties": {
                   "iso": {
@@ -3840,8 +3840,8 @@
                 "type": "object",
                 "additionalProperties": false,
                 "required": [
-                  "amount",
-                  "currency"
+                  "iso",
+                  "unix"
                 ],
                 "properties": {
                   "iso": {
@@ -3942,7 +3942,7 @@
                               "qr",
                               "aztec",
                               "code128",
-                              "utf8"
+                              "text"
                             ],
                             "description": "The formatting info for potential qr-code-data"
                           },
