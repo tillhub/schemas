@@ -1,3 +1,10 @@
+## [6.59.1](https://github.com/tillhub/schemas/compare/v6.59.0...v6.59.1) (2021-06-28)
+
+
+### Bug Fixes
+
+* **trash:** Allow users to be restored from recently deleted ([b86307c](https://github.com/tillhub/schemas/commit/b86307c))
+
 # [6.59.0](https://github.com/tillhub/schemas/compare/v6.58.1...v6.59.0) (2021-06-22)
 
 
