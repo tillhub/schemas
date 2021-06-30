@@ -1,3 +1,10 @@
+# [6.60.0](https://github.com/tillhub/schemas/compare/v6.59.1...v6.60.0) (2021-06-30)
+
+
+### Features
+
+* **registers:** Add register type ([#576](https://github.com/tillhub/schemas/issues/576)) ([78918ad](https://github.com/tillhub/schemas/commit/78918ad))
+
 ## [6.59.1](https://github.com/tillhub/schemas/compare/v6.59.0...v6.59.1) (2021-06-28)
 
 

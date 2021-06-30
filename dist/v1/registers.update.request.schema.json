@@ -17,6 +17,22 @@
         }
       ]
     },
+    "type": {
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "fullpos-mobile",
+            "gastropos-mobile",
+            "fullpos-stationary",
+            "litepos-mobile"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "description": {
       "anyOf": [
         {
