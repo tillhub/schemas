@@ -1,3 +1,10 @@
+# [6.61.0](https://github.com/tillhub/schemas/compare/v6.60.0...v6.61.0) (2021-06-30)
+
+
+### Features
+
+* **customers:** bulk create ([9dba467](https://github.com/tillhub/schemas/commit/9dba467))
+
 # [6.60.0](https://github.com/tillhub/schemas/compare/v6.59.1...v6.60.0) (2021-06-30)
 
 

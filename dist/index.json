@@ -109,6 +109,7 @@
   "/correspondences.update.request.schema.json",
   "/custom_hooks.create.request.schema.json",
   "/custom_hooks.update.request.schema.json",
+  "/customers.bulk.create.request.schema.json",
   "/customers.create.request.schema.json",
   "/customers.ext.create.request.schema.json",
   "/customers.ext.update.request.schema.json",
