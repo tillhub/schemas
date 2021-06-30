@@ -4,6 +4,17 @@
   "additionalProperties": false,
   "type": "object",
   "properties": {
+    "name": {
+      "oneOf": [
+        {
+          "description": "A voucher name which can be displayed on receipt.",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "code": {
       "description": "The chosen or generated voucher code.",
       "example": "1234 1234 1234",

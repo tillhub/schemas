@@ -4,8 +4,7 @@
   "additionalProperties": false,
   "type": "object",
   "required": [
-    "price_book",
-    "product"
+    "price_book"
   ],
   "properties": {
     "price_book": {
@@ -14,9 +13,46 @@
       "format": "uuid"
     },
     "product": {
-      "description": "The reference to the product",
-      "type": "string",
-      "format": "uuid"
+      "oneOf": [
+        {
+          "description": "The reference to the product",
+          "type": "string",
+          "format": "uuid"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "products": {
+      "oneOf": [
+        {
+          "description": "The reference to a bulk of products",
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "product_groups": {
+      "oneOf": [
+        {
+          "description": "The reference to a bulk of products",
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "name": {
       "oneOf": [
@@ -527,7 +563,7 @@
       "oneOf": [
         {
           "type": "number",
-          "multipleOf": 0.001
+          "multipleOf": 0.0001
         },
         {
           "type": "null"
@@ -539,7 +575,7 @@
       "oneOf": [
         {
           "type": "number",
-          "multipleOf": 0.001
+          "multipleOf": 0.0001
         },
         {
           "type": "null"

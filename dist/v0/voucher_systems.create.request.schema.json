@@ -36,7 +36,6 @@
         {
           "type": "array",
           "description": "This is deprecated. Please use \"locations\" instead.",
-          "minItems": 1,
           "items": {
             "type": "string",
             "format": "uuid"
@@ -1106,6 +1105,20 @@
                             ]
                           }
                         }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "discount_rate": {
+                    "oneOf": [
+                      {
+                        "description": "If type is 'discount' - the discount rate that will be applied to the cart.",
+                        "example": "0.15",
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1
                       },
                       {
                         "type": "null"

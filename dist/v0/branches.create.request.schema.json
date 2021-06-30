@@ -205,6 +205,18 @@
         }
       ]
     },
+    "cost_center": {
+      "anyOf": [
+        {
+          "type": "string",
+          "maxLength": 128,
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "addresses": {
       "description": "A Tillhub address object, with different types of addresses. More description in the properties...",
       "anyOf": [

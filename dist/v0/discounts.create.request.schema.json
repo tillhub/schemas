@@ -87,7 +87,7 @@
           "additionalProperties": false,
           "properties": {
             "automatic": {
-              "description": "If true - this discount will be automatically applied to a cart item according to it's constraints",
+              "description": "If true - this discount will be automatically applied to a cart item according to it's constraints and ordering",
               "type": "boolean",
               "default": false
             },
@@ -625,6 +625,7 @@
     "order": {
       "oneOf": [
         {
+          "description": "Defines the (re)ordering of discounts when applied as: order=='first' > order=='null' > order=='last' > group=='customer'",
           "type": "string",
           "enum": [
             "first",

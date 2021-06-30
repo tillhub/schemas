@@ -43,6 +43,7 @@
         "tags",
         "taxes",
         "templates",
+        "users",
         "warehouses"
       ]
     },

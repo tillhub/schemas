@@ -81,6 +81,7 @@
                   "staff:staff:settings:printer:update",
                   "staff:staff:settings:printer:read",
                   "staff:staff:settings:printer:delete",
+                  "staff:staff:settings:printer:drawer:open",
                   "staff:staff:settings:terminal",
                   "staff:staff:settings:terminal:create",
                   "staff:staff:settings:terminal:update",
@@ -103,6 +104,7 @@
                   "staff:staff:products:name",
                   "staff:staff:products:summary",
                   "staff:staff:products:description",
+                  "staff:staff:products:purchase_price",
                   "staff:staff:customers",
                   "staff:staff:customers:create",
                   "staff:staff:customers:update",
@@ -140,7 +142,8 @@
                   "staff:staff:licenses:create",
                   "staff:staff:licenses:delete",
                   "staff:staff:processes:all_staff",
-                  "staff:staff:processes:all_locations"
+                  "staff:staff:processes:all_locations",
+                  "staff:staff:orders:others:locked:modify"
                 ]
               },
               {

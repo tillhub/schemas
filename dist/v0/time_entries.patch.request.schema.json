@@ -1,0 +1,126 @@
+{
+  "$id": "https://schemas.tillhub.com/v0/time_entries.patch.request.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "type": "object",
+  "required": [],
+  "properties": {
+    "type": {
+      "description": "The type of the time entry.",
+      "type": "string",
+      "enum": [
+        "day",
+        "break"
+      ]
+    },
+    "description": {
+      "description": "The description about the task.",
+      "anyOf": [
+        {
+          "type": "string",
+          "maxLength": 64,
+          "minLength": 0
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "started_at": {
+      "description": "The start of the time entry.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "ended_at": {
+      "description": "The end of the time entry.",
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date-time"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "staff": {
+      "description": "The staff member which is clocking in/out.",
+      "type": "string",
+      "maxLength": 64
+    },
+    "owner": {
+      "description": "The client account id",
+      "type": "string",
+      "maxLength": 128
+    },
+    "client_id": {
+      "description": "A identifier used locally on POS for their own reference.",
+      "anyOf": [
+        {
+          "type": "string",
+          "maxLength": 128
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "custom_properties": {
+      "description": "Arbitrary custom properties for this time entry.",
+      "anyOf": [
+        {
+          "type": "string",
+          "maxLength": 128
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "active": {
+      "description": "Soft disable or enabled this time entry.",
+      "type": "boolean",
+      "default": true
+    },
+    "deleted": {
+      "description": "Soft delete this time entry.",
+      "type": "boolean",
+      "default": false
+    },
+    "metadata": {
+      "description": "Arbitrary user defined data.",
+      "anyOf": [
+        {
+          "type": "object",
+          "maxProperties": 10
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "location": {
+      "description": "Arbitrary user location.",
+      "anyOf": [
+        {
+          "type": "string",
+          "maxLength": 255
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "timezone": {
+      "description": "An IANA timezone that will be used to automatically clock out a time entry.",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  }
+}

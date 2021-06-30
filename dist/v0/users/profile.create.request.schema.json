@@ -321,6 +321,7 @@
                   "staff:staff:settings:printer:update",
                   "staff:staff:settings:printer:read",
                   "staff:staff:settings:printer:delete",
+                  "staff:staff:settings:printer:drawer:open",
                   "staff:staff:settings:terminal",
                   "staff:staff:settings:terminal:create",
                   "staff:staff:settings:terminal:update",
@@ -343,6 +344,7 @@
                   "staff:staff:products:name",
                   "staff:staff:products:summary",
                   "staff:staff:products:description",
+                  "staff:staff:products:purchase_price",
                   "staff:staff:customers",
                   "staff:staff:customers:create",
                   "staff:staff:customers:update",
@@ -380,7 +382,8 @@
                   "staff:staff:licenses:create",
                   "staff:staff:licenses:delete",
                   "staff:staff:processes:all_staff",
-                  "staff:staff:processes:all_locations"
+                  "staff:staff:processes:all_locations",
+                  "staff:staff:orders:others:locked:modify"
                 ]
               },
               {
@@ -388,6 +391,16 @@
               }
             ]
           }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "user_permission_template_id": {
+      "oneOf": [
+        {
+          "type": "string"
         },
         {
           "type": "null"
@@ -428,6 +441,34 @@
       "description": "Soft delete this user_profiles.",
       "type": "boolean",
       "default": false
+    },
+    "locations": {
+      "oneOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "branch_groups": {
+      "oneOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
     }
   },
   "type": "object"
