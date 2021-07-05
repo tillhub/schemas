@@ -1,3 +1,10 @@
+# [6.62.0](https://github.com/tillhub/schemas/compare/v6.61.0...v6.62.0) (2021-07-05)
+
+
+### Features
+
+* **trash:** add type users ([9779bfc](https://github.com/tillhub/schemas/commit/9779bfc))
+
 # [6.61.0](https://github.com/tillhub/schemas/compare/v6.60.0...v6.61.0) (2021-06-30)
 
 

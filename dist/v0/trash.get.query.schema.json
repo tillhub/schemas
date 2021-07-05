@@ -46,6 +46,7 @@
         "storefronts",
         "tags",
         "taxes",
+        "users",
         "templates",
         "warehouses"
       ]
