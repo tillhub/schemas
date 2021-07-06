@@ -3611,6 +3611,18 @@
                             }
                           ]
                         },
+                        "print_service_question_answers": {
+                          "oneOf": [
+                            {
+                              "description": "States if the product customization answers and questions will be printed",
+                              "type": "boolean",
+                              "default": false
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
                         "print_customer_name": {
                           "oneOf": [
                             {
@@ -4121,6 +4133,18 @@
                               "description": "Defines if an exsiting serial number will be printed on the specific receipt.",
                               "type": "boolean",
                               "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_service_question_answers": {
+                          "oneOf": [
+                            {
+                              "description": "States if the product customization answers and questions will be printed",
+                              "type": "boolean",
+                              "default": false
                             },
                             {
                               "type": "null"
@@ -4643,6 +4667,18 @@
                             }
                           ]
                         },
+                        "print_service_question_answers": {
+                          "oneOf": [
+                            {
+                              "description": "States if the product customization answers and questions will be printed",
+                              "type": "boolean",
+                              "default": false
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
                         "print_customer_name": {
                           "oneOf": [
                             {
@@ -5159,6 +5195,18 @@
                             }
                           ]
                         },
+                        "print_service_question_answers": {
+                          "oneOf": [
+                            {
+                              "description": "States if the product customization answers and questions will be printed",
+                              "type": "boolean",
+                              "default": false
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
                         "print_customer_name": {
                           "oneOf": [
                             {
@@ -5669,6 +5717,18 @@
                               "description": "Defines if an exsiting serial number will be printed on the specific receipt.",
                               "type": "boolean",
                               "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_service_question_answers": {
+                          "oneOf": [
+                            {
+                              "description": "States if the product customization answers and questions will be printed",
+                              "type": "boolean",
+                              "default": false
                             },
                             {
                               "type": "null"

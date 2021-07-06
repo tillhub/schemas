@@ -1,3 +1,10 @@
+# [6.63.0](https://github.com/tillhub/schemas/compare/v6.62.0...v6.63.0) (2021-07-06)
+
+
+### Features
+
+* **receipts:** add conf. for service question answers on receipts ([9e711ee](https://github.com/tillhub/schemas/commit/9e711ee))
+
 # [6.62.0](https://github.com/tillhub/schemas/compare/v6.61.0...v6.62.0) (2021-07-05)
 
 
