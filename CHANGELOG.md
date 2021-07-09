@@ -1,3 +1,17 @@
+# [6.64.0](https://github.com/tillhub/schemas/compare/v6.63.0...v6.64.0) (2021-07-09)
+
+
+### Bug Fixes
+
+* **tse_exports:** wrong path ([3bdb6ba](https://github.com/tillhub/schemas/commit/3bdb6ba))
+
+
+### Features
+
+* **tse_exports:** add response schema ([1542846](https://github.com/tillhub/schemas/commit/1542846))
+* **tse_exports:** init ([bfc41f6](https://github.com/tillhub/schemas/commit/bfc41f6))
+* **tse_exports:** init ([6ca7113](https://github.com/tillhub/schemas/commit/6ca7113))
+
 # [6.63.0](https://github.com/tillhub/schemas/compare/v6.62.0...v6.63.0) (2021-07-06)
 
 
