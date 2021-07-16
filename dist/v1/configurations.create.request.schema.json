@@ -7060,6 +7060,23 @@
                     "enabled": {
                       "type": "boolean",
                       "default": true
+                    },
+                    "webserver": {
+                      "oneOf": [
+                        {
+                          "description": "Defines which webserver implementation to use for secondary cashier messages (terminal -> POS)",
+                          "type": "string",
+                          "enum": [
+                            "none",
+                            "criollo",
+                            "telegraph"
+                          ],
+                          "default": "criollo"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
                     }
                   }
                 },
