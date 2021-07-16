@@ -3056,6 +3056,49 @@
                             "description": "If true - print the pager(number) on the specified receipt",
                             "type": "boolean",
                             "default": true
+                          },
+                          "triggers": {
+                            "oneOf": [
+                              {
+                                "type": "object",
+                                "additionalProperties": false,
+                                "properties": {
+                                  "sale": {
+                                    "oneOf": [
+                                      {
+                                        "description": "If true - print the complete set of items after a sale (filtered by tags)",
+                                        "type": "boolean",
+                                        "default": false
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
+                                  },
+                                  "booking": {
+                                    "oneOf": [
+                                      {
+                                        "description": "How to print items (filtered by tags) after intermediate changes to the order",
+                                        "type": "string",
+                                        "enum": [
+                                          "none",
+                                          "delta",
+                                          "additions",
+                                          "complete"
+                                        ],
+                                        "default": "delta"
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
+                                  }
+                                }
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
                           }
                         }
                       }
@@ -3509,6 +3552,18 @@
                                   ]
                                 }
                               }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_note": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if notes from a cart item will be printed (if available)",
+                              "type": "boolean",
+                              "default": true
                             },
                             {
                               "type": "null"
@@ -4043,6 +4098,18 @@
                             }
                           ]
                         },
+                        "print_note": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if notes from a cart item will be printed (if available)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
                         "print_pager_number": {
                           "oneOf": [
                             {
@@ -4565,6 +4632,18 @@
                                   ]
                                 }
                               }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_note": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if notes from a cart item will be printed (if available)",
+                              "type": "boolean",
+                              "default": true
                             },
                             {
                               "type": "null"
@@ -5099,6 +5178,18 @@
                             }
                           ]
                         },
+                        "print_note": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if notes from a cart item will be printed (if available)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
                         "print_pager_number": {
                           "oneOf": [
                             {
@@ -5621,6 +5712,18 @@
                                   ]
                                 }
                               }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_note": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if notes from a cart item will be printed (if available)",
+                              "type": "boolean",
+                              "default": true
                             },
                             {
                               "type": "null"
