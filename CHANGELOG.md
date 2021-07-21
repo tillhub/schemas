@@ -1,3 +1,10 @@
+# [6.68.0](https://github.com/tillhub/schemas/compare/v6.67.0...v6.68.0) (2021-07-21)
+
+
+### Features
+
+* **addon_groups:** API-827 addon group schema ([#585](https://github.com/tillhub/schemas/issues/585)) ([8743b0a](https://github.com/tillhub/schemas/commit/8743b0a))
+
 # [6.67.0](https://github.com/tillhub/schemas/compare/v6.66.0...v6.67.0) (2021-07-21)
 
 

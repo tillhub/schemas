@@ -1,0 +1,64 @@
+{
+  "$id": "https://schemas.tillhub.com/v0/product_addon_groups.update.request.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": [],
+  "properties": {
+    "name": {
+      "description": "any arbitrary name for an addon group that can be displayed in applications.",
+      "type": "string",
+      "maxLength": 64,
+      "minLength": 1
+    },
+    "multiselect": {
+      "oneOf": [
+        {
+          "description": "can the cashier select multiple addons or just a single addon.",
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "max_selected": {
+      "oneOf": [
+        {
+          "description": "how many addons can there be selected. Only applicable if multiselect is selected. use -1 for unlimited.",
+          "type": "integer",
+          "minimum": 1
+        },
+        {
+          "description": "how many addons can there be selected. Only applicable if multiselect is selected. use -1 for unlimited.",
+          "type": "integer",
+          "minimum": -1,
+          "maximum": -1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "skipable": {
+      "oneOf": [
+        {
+          "description": "can the cashier skip this addon group or if he must select an addon",
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "active": {
+      "description": "Soft disable or enabled this branch.",
+      "type": "boolean",
+      "default": true
+    },
+    "deleted": {
+      "description": "Soft delete this branch.",
+      "type": "boolean",
+      "default": false
+    }
+  }
+}
