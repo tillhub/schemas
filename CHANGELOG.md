@@ -1,3 +1,15 @@
+# [6.67.0](https://github.com/tillhub/schemas/compare/v6.66.0...v6.67.0) (2021-07-21)
+
+
+### Features
+
+* **addon:** add schema for addons ([b795177](https://github.com/tillhub/schemas/commit/b795177))
+* **addons:** add test ([cac9df6](https://github.com/tillhub/schemas/commit/cac9df6))
+* **addons:** add to index of v0 ([8896f18](https://github.com/tillhub/schemas/commit/8896f18))
+* **addons:** change $id ([25d5475](https://github.com/tillhub/schemas/commit/25d5475))
+* **addons:** fix test ([46fd51f](https://github.com/tillhub/schemas/commit/46fd51f))
+* **addons:** take out get and required id ([9efcb4f](https://github.com/tillhub/schemas/commit/9efcb4f))
+
 # [6.66.0](https://github.com/tillhub/schemas/compare/v6.65.0...v6.66.0) (2021-07-16)
 
 

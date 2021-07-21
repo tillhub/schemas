@@ -1,0 +1,135 @@
+{
+  "$id": "https://schemas.tillhub.com/v0/product_addons.create.response.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "msg": {
+      "type": "string",
+      "minLength": 1,
+      "example": "Queried transactions sucessefully.",
+      "description": "Any English sentence, meant as information for developers and implementers. Avoid displaying this to the users and especially do not expect thos messages to stay stable."
+    },
+    "msg_localised": {
+      "type": "string",
+      "minLength": 1,
+      "example": "Queried transactions sucessefully.",
+      "description": "Optional localised message that can be displayed to the user if existing. The language can be set by in the request or will fallback to English."
+    },
+    "request": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Information about the request itself.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "The request uuid that can be used to identify and trace API calls.",
+          "format": "uuid"
+        },
+        "host": {
+          "type": "string",
+          "minLength": 1,
+          "example": "https://api.tillhub.com",
+          "description": "Server host and protocol from which request was handled."
+        }
+      }
+    },
+    "count": {
+      "type": "number",
+      "description": "the length of the results array.",
+      "example": 1
+    },
+    "results": {
+      "type": "array",
+      "description": "The envelope of items, that are usually objects. We are generally sending back arrays even if there was just one requested resource.",
+      "items": {
+        "additionalProperties": false,
+        "type": "object",
+        "properties": {
+          "name": {
+            "description": "Product Addon name",
+            "type": "string",
+            "maxLength": 512
+          },
+          "addon_group": {
+            "oneOf": [
+              {
+                "type": "string",
+                "format": "uuid",
+                "description": "Group that was assigned the Addon, can be assigned up to one Group"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "product": {
+            "oneOf": [
+              {
+                "type": "string",
+                "format": "uuid",
+                "description": "Addon could reference a product"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "price_change": {
+            "oneOf": [
+              {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "currency": {
+                      "type": "string",
+                      "minLength": 3,
+                      "maxLength": 3
+                    },
+                    "amount": {
+                      "example": "27633.02",
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 1000000,
+                      "multipleOf": 0.01
+                    }
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "quantity": {
+            "type": "number",
+            "description": "How much of the product stock will be moved  (defaults to 1 - only important if it affects stock). This value can be negative number!",
+            "default": 1
+          },
+          "add_to_cart": {
+            "type": "boolean",
+            "description": "Only applicable if the price and {{product}}is set. It will instruct the POS to add the product as a separate cart item - upsell rather than an addon.",
+            "default": false
+          },
+          "allow_quantity_edit": {
+            "type": "boolean",
+            "description": "Can the cashier edit the quantity of the addon selected (only important if it affects stock)",
+            "default": false
+          },
+          "order_index": {
+            "type": "number",
+            "description": "Display the Addon in a specific order",
+            "default": 1
+          },
+          "active": {
+            "type": "boolean"
+          },
+          "deleted": {
+            "type": "boolean"
+          }
+        }
+      }
+    }
+  }
+}
