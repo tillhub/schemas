@@ -1,3 +1,11 @@
+# [6.69.0](https://github.com/tillhub/schemas/compare/v6.68.0...v6.69.0) (2021-07-26)
+
+
+### Features
+
+* **registers:** device_configuration ([52a5cf4](https://github.com/tillhub/schemas/commit/52a5cf4))
+* **registers:** device_configuration ([c2ffcb3](https://github.com/tillhub/schemas/commit/c2ffcb3))
+
 # [6.68.0](https://github.com/tillhub/schemas/compare/v6.67.0...v6.68.0) (2021-07-21)
 
 
