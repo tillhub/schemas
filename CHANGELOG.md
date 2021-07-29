@@ -1,3 +1,10 @@
+## [6.69.1](https://github.com/tillhub/schemas/compare/v6.69.0...v6.69.1) (2021-07-29)
+
+
+### Bug Fixes
+
+* **addonGroup:** API-827 fixing wrong version inside update response ([#590](https://github.com/tillhub/schemas/issues/590)) ([d889a97](https://github.com/tillhub/schemas/commit/d889a97))
+
 # [6.69.0](https://github.com/tillhub/schemas/compare/v6.68.0...v6.69.0) (2021-07-26)
 
 

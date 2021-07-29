@@ -1,0 +1,109 @@
+{
+  "$id": "https://schemas.tillhub.com/v0/product_addon_groups.update.response.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "msg": {
+      "type": "string",
+      "minLength": 1,
+      "example": "Queried transactions sucessefully.",
+      "description": "Any English sentence, meant as information for developers and implementers. Avoid displaying this to the users and especially do not expect thos messages to stay stable."
+    },
+    "msg_localised": {
+      "type": "string",
+      "minLength": 1,
+      "example": "Queried transactions sucessefully.",
+      "description": "Optional localised message that can be displayed to the user if existing. The language can be set by in the request or will fallback to English."
+    },
+    "request": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Information about the request itself.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "The request uuid that can be used to identify and trace API calls.",
+          "format": "uuid"
+        },
+        "host": {
+          "type": "string",
+          "minLength": 1,
+          "example": "https://api.tillhub.com",
+          "description": "Server host and protocol from which request was handled."
+        }
+      }
+    },
+    "count": {
+      "type": "number",
+      "description": "the length of the results array.",
+      "example": 1
+    },
+    "results": {
+      "type": "array",
+      "description": "The envelope of items, that are usually objects. We are generally sending back arrays even if there was just one requested resource.",
+      "items": {
+        "additionalProperties": false,
+        "type": "object",
+        "properties": {
+          "name": {
+            "description": "any arbitrary name for an addon group that can be displayed in applications.",
+            "type": "string",
+            "maxLength": 64,
+            "minLength": 1
+          },
+          "multiselect": {
+            "oneOf": [
+              {
+                "description": "can the cashier select multiple addons or just a single addon.",
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "max_selected": {
+            "oneOf": [
+              {
+                "description": "how many addons can there be selected. Only applicable if multiselect is selected. use -1 for unlimited.",
+                "type": "integer",
+                "minimum": 1
+              },
+              {
+                "description": "how many addons can there be selected. Only applicable if multiselect is selected. use -1 for unlimited.",
+                "type": "integer",
+                "minimum": -1,
+                "maximum": -1
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "skipable": {
+            "oneOf": [
+              {
+                "description": "can the cashier skip this addon group or if he must select an addon",
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "active": {
+            "description": "Soft disable or enabled this branch.",
+            "type": "boolean",
+            "default": true
+          },
+          "deleted": {
+            "description": "Soft delete this branch.",
+            "type": "boolean",
+            "default": false
+          }
+        }
+      }
+    }
+  }
+}
