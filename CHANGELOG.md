@@ -1,3 +1,10 @@
+## [6.69.2](https://github.com/tillhub/schemas/compare/v6.69.1...v6.69.2) (2021-07-30)
+
+
+### Bug Fixes
+
+* **addonGroups:** API-936 fixing typo in addon group schema ([#591](https://github.com/tillhub/schemas/issues/591)) ([27f4dbb](https://github.com/tillhub/schemas/commit/27f4dbb))
+
 ## [6.69.1](https://github.com/tillhub/schemas/compare/v6.69.0...v6.69.1) (2021-07-29)
 
 
