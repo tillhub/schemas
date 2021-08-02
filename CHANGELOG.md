@@ -1,3 +1,17 @@
+# [6.71.0](https://github.com/tillhub/schemas/compare/v6.70.0...v6.71.0) (2021-08-02)
+
+
+### Bug Fixes
+
+* **transactions:** legacy ([fbd213f](https://github.com/tillhub/schemas/commit/fbd213f))
+
+
+### Features
+
+* **transactions:** add examples for product addon fields ([045eda5](https://github.com/tillhub/schemas/commit/045eda5))
+* **transactions:** legacy ([dcad30d](https://github.com/tillhub/schemas/commit/dcad30d))
+* **transactions:** legacy ([9099c9f](https://github.com/tillhub/schemas/commit/9099c9f))
+
 # [6.70.0](https://github.com/tillhub/schemas/compare/v6.69.2...v6.70.0) (2021-08-02)
 
 
