@@ -1,3 +1,10 @@
+# [6.70.0](https://github.com/tillhub/schemas/compare/v6.69.2...v6.70.0) (2021-08-02)
+
+
+### Features
+
+* **configurations:** extend language code up to 12 characters ([2f28e1a](https://github.com/tillhub/schemas/commit/2f28e1a))
+
 ## [6.69.2](https://github.com/tillhub/schemas/compare/v6.69.1...v6.69.2) (2021-07-30)
 
 

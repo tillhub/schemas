@@ -655,8 +655,10 @@
             },
             "language": {
               "type": "string",
+              "description": "Specifies the preferable language code based on IETF language tag: https://en.wikipedia.org/wiki/IETF_language_tag",
+              "example": "en-US",
               "minLength": 1,
-              "maxLength": 5
+              "maxLength": 12
             },
             "invoice_generation": {
               "description": "waiting period for transaction to be sync, passed this parameter the invoice will be generated offline SECONDS",
