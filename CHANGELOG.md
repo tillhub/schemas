@@ -1,3 +1,10 @@
+# [6.72.0](https://github.com/tillhub/schemas/compare/v6.71.0...v6.72.0) (2021-08-03)
+
+
+### Features
+
+* **pricebook:** discounted_by maximum ([2f2681d](https://github.com/tillhub/schemas/commit/2f2681d))
+
 # [6.71.0](https://github.com/tillhub/schemas/compare/v6.70.0...v6.71.0) (2021-08-02)
 
 
