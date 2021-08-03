@@ -1,3 +1,10 @@
+# [6.73.0](https://github.com/tillhub/schemas/compare/v6.72.0...v6.73.0) (2021-08-03)
+
+
+### Features
+
+* **settings:** move customer_add_policy from staff to customers ([2987af5](https://github.com/tillhub/schemas/commit/2987af5))
+
 # [6.72.0](https://github.com/tillhub/schemas/compare/v6.71.0...v6.72.0) (2021-08-03)
 
 

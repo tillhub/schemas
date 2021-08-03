@@ -1786,22 +1786,6 @@
                 }
               ]
             },
-            "customer_add_policy": {
-              "description": "The customer selection screen will be presented automatically before or after a sale (or not in case of none).",
-              "oneOf": [
-                {
-                  "type": "string",
-                  "enum": [
-                    "after",
-                    "before",
-                    "none"
-                  ]
-                },
-                {
-                  "type": "null"
-                }
-              ]
-            },
             "cashier_pin_policy": {
               "description": "If required, the client shows a non-discardable login view (staff selection + login).",
               "oneOf": [
@@ -2388,6 +2372,22 @@
             "custom_export": {
               "type": "boolean",
               "default": false
+            },
+            "customer_add_policy": {
+              "description": "The customer selection screen will be presented automatically before or after a sale (or not in case of none).",
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "after",
+                    "before",
+                    "none"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
             }
           }
         }
@@ -2845,6 +2845,22 @@
             "custom_export": {
               "type": "boolean",
               "default": false
+            },
+            "customer_add_policy": {
+              "description": "The customer selection screen will be presented automatically before or after a sale (or not in case of none).",
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "after",
+                    "before",
+                    "none"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
             }
           }
         }
