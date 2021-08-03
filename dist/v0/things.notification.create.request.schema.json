@@ -78,6 +78,78 @@
         "device_token": {
           "type": "string"
         },
+        "counting_decisions": {
+          "oneOf": [
+            {
+              "type": "array",
+              "description": "Reports a one-time decision about the register's counting numbers (set when initializing a safe storage, e.g. keychain)",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "description": "Describes a very infrequent decision about the state of a specific counting number.",
+                "required": [
+                  "date",
+                  "type",
+                  "decision"
+                ],
+                "properties": {
+                  "date": {
+                    "description": "Date of a counting number decision",
+                    "type": "string",
+                    "format": "date-time",
+                    "example": "2019-01-23 16:51:29.143+00"
+                  },
+                  "type": {
+                    "type": "string",
+                    "description": "The affected transaction type",
+                    "enum": [
+                      "sale",
+                      "expense",
+                      "balance",
+                      "delivery_note",
+                      "saved_cart"
+                    ]
+                  },
+                  "local": {
+                    "oneOf": [
+                      {
+                        "type": "integer",
+                        "description": "The local number at the time of the decision.",
+                        "example": 7,
+                        "minimum": 0
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "remote": {
+                    "oneOf": [
+                      {
+                        "type": "integer",
+                        "description": "The remote number at the time of the decision.",
+                        "example": 7,
+                        "minimum": 0
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "decision": {
+                    "type": "integer",
+                    "description": "The effective number after the decision.",
+                    "example": 7,
+                    "minimum": 0
+                  }
+                }
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
         "fiscal_signing_type": {
           "oneOf": [
             {
