@@ -1,7 +1,7 @@
 [
   "/index.json",
-  "/currency.available.schema.json",
   "/custom_properties.definition.schema.json",
+  "/currency.available.schema.json",
   "/patch.request.schema.json",
   "/timezone.schema.json",
   "/balances.create.request.schema.json",
@@ -35,8 +35,8 @@
   "/product_service_questions.answer_validation.simple_select",
   "/products.bulk.create.request.schema.json",
   "/products.bulk.update.request.schema.json",
-  "/products.create.response.schema.json",
   "/products.create.request.schema.json",
+  "/products.create.response.schema.json",
   "/products.customizations.create.request.schema.json",
   "/products.customizations.update.request.schema.json",
   "/products.ext.create.request.schema.json",

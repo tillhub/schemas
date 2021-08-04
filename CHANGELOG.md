@@ -1,3 +1,10 @@
+## [6.73.1](https://github.com/tillhub/schemas/compare/v6.73.0...v6.73.1) (2021-08-04)
+
+
+### Bug Fixes
+
+* **registers/notification:** Added counting_decisions property to device_configuration ([#597](https://github.com/tillhub/schemas/issues/597)) ([c9f771c](https://github.com/tillhub/schemas/commit/c9f771c))
+
 # [6.73.0](https://github.com/tillhub/schemas/compare/v6.72.0...v6.73.0) (2021-08-03)
 
 
