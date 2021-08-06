@@ -2303,6 +2303,30 @@
                       "type": "null"
                     }
                   ]
+                },
+                "reassignment": {
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "requires_pin": {
+                          "oneOf": [
+                            {
+                              "type": "boolean",
+                              "description": "defines whether the pin from the next waiter will be required in the reassignment.",
+                              "default": "false"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
                 }
               }
             },
