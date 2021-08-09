@@ -1544,6 +1544,29 @@
           }
         ]
       },
+      "addon_groups": {
+        "oneOf": [
+          {
+            "type": "array",
+            "description": "An array of the product addon groups",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "name": {
+                  "description": "any arbitrary name for an addon group that can be displayed in applications.",
+                  "type": "string",
+                  "maxLength": 64,
+                  "minLength": 1
+                }
+              }
+            }
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
       "configuration": {
         "description": "Defines various product behaviours.",
         "default": {

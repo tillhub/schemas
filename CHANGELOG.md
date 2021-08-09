@@ -1,3 +1,10 @@
+# [6.75.0](https://github.com/tillhub/schemas/compare/v6.74.0...v6.75.0) (2021-08-09)
+
+
+### Features
+
+* **products:** add addon groups to products (API-830) ([9ffe77a](https://github.com/tillhub/schemas/commit/9ffe77a))
+
 # [6.74.0](https://github.com/tillhub/schemas/compare/v6.73.2...v6.74.0) (2021-08-06)
 
 

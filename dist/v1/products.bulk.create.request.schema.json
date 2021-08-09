@@ -1543,6 +1543,22 @@
           }
         ]
       },
+      "addon_groups": {
+        "oneOf": [
+          {
+            "type": "array",
+            "description": "An array of uuids of the product addon groups",
+            "items": {
+              "type": "string",
+              "format": "uuid",
+              "example": "66c3a88d-1825-4eb6-a1ad-1691140cf140"
+            }
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
       "configuration": {
         "description": "Defines various product behaviours.",
         "default": {
