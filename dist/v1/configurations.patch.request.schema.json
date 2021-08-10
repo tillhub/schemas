@@ -7335,6 +7335,59 @@
                 }
               ]
             },
+            "strict_submission": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "description": "Defines if and how balances require direct uploading.",
+                  "properties": {
+                    "enabled": {
+                      "oneOf": [
+                        {
+                          "description": "If true, balances need to be uploaded directly (best effort with retries).",
+                          "type": "boolean",
+                          "default": true
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "retries": {
+                      "oneOf": [
+                        {
+                          "type": "integer",
+                          "description": "If strict submission is enabled - the number of retries before handing over to the sync-manager",
+                          "example": "5",
+                          "maximum": 15,
+                          "minimum": 0,
+                          "default": 5
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "unsubmitted_transaction_warning": {
+              "oneOf": [
+                {
+                  "description": "If true, shows a warning for pending transactions on the balance view",
+                  "type": "boolean",
+                  "default": false
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
             "discrepancy_warning": {
               "oneOf": [
                 {
@@ -7351,6 +7404,18 @@
               "oneOf": [
                 {
                   "description": "If true, adds extended balance information to the UI.",
+                  "type": "boolean",
+                  "default": false
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "grouped_expenses": {
+              "oneOf": [
+                {
+                  "description": "If true - show the expenses grouped by their financial accounts, otherwise only the total.",
                   "type": "boolean",
                   "default": false
                 },

@@ -1,3 +1,11 @@
+# [6.76.0](https://github.com/tillhub/schemas/compare/v6.75.0...v6.76.0) (2021-08-10)
+
+
+### Features
+
+* **configurations:** balances ([fab70f7](https://github.com/tillhub/schemas/commit/fab70f7))
+* **configurations:** balances ([885fd75](https://github.com/tillhub/schemas/commit/885fd75))
+
 # [6.75.0](https://github.com/tillhub/schemas/compare/v6.74.0...v6.75.0) (2021-08-09)
 
 
