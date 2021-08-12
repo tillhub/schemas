@@ -1,3 +1,10 @@
+# [6.77.0](https://github.com/tillhub/schemas/compare/v6.76.0...v6.77.0) (2021-08-12)
+
+
+### Features
+
+* **registers:** counting_decisions ([71ded2e](https://github.com/tillhub/schemas/commit/71ded2e))
+
 # [6.76.0](https://github.com/tillhub/schemas/compare/v6.75.0...v6.76.0) (2021-08-10)
 
 

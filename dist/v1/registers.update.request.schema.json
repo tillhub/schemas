@@ -206,7 +206,8 @@
                           "expense",
                           "balance",
                           "delivery_note",
-                          "saved_cart"
+                          "saved_cart",
+                          "order"
                         ]
                       },
                       "local": {
