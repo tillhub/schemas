@@ -1,3 +1,10 @@
+# [6.78.0](https://github.com/tillhub/schemas/compare/v6.77.0...v6.78.0) (2021-08-13)
+
+
+### Features
+
+* **products:** add price book entries #API-928 ([08bccee](https://github.com/tillhub/schemas/commit/08bccee)), closes [#API-928](https://github.com/tillhub/schemas/issues/API-928)
+
 # [6.77.0](https://github.com/tillhub/schemas/compare/v6.76.0...v6.77.0) (2021-08-12)
 
 
