@@ -1,3 +1,10 @@
+# [6.79.0](https://github.com/tillhub/schemas/compare/v6.78.0...v6.79.0) (2021-08-20)
+
+
+### Features
+
+* **price-books:** add description #API-969 ([2c438a6](https://github.com/tillhub/schemas/commit/2c438a6)), closes [#API-969](https://github.com/tillhub/schemas/issues/API-969)
+
 # [6.78.0](https://github.com/tillhub/schemas/compare/v6.77.0...v6.78.0) (2021-08-13)
 
 
