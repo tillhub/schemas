@@ -273,6 +273,10 @@
         "gastro_tables": {
           "type": "boolean",
           "default": false
+        },
+        "takeaway": {
+          "type": "boolean",
+          "default": false
         }
       }
     },

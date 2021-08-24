@@ -1,3 +1,10 @@
+# [6.80.0](https://github.com/tillhub/schemas/compare/v6.79.0...v6.80.0) (2021-08-24)
+
+
+### Features
+
+* **client-accounts:** add 'takeaway' flag #API-959 ([7de20fc](https://github.com/tillhub/schemas/commit/7de20fc)), closes [#API-959](https://github.com/tillhub/schemas/issues/API-959)
+
 # [6.79.0](https://github.com/tillhub/schemas/compare/v6.78.0...v6.79.0) (2021-08-20)
 
 
