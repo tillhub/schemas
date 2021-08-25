@@ -8378,6 +8378,44 @@
                             }
                           }
                         },
+                        "cart": {
+                          "oneOf": [
+                            {
+                              "description": "Currently active cart in the sale view",
+                              "type": "object",
+                              "properties": {
+                                "items": {
+                                  "oneOf": [
+                                    {
+                                      "description": "Active sale-items in the current cart",
+                                      "type": "object",
+                                      "properties": {
+                                        "display_salesperson": {
+                                          "oneOf": [
+                                            {
+                                              "description": "If true - display the salesperson assigned to that item",
+                                              "type": "boolean",
+                                              "default": false
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                }
+                              }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
                         "carts": {
                           "description": "Carts tab in the sale view (contains saved carts and delivery notes)",
                           "type": "object",

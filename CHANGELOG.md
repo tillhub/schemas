@@ -1,3 +1,10 @@
+# [6.82.0](https://github.com/tillhub/schemas/compare/v6.81.0...v6.82.0) (2021-08-25)
+
+
+### Features
+
+* **configurations:** ui ([5effe1e](https://github.com/tillhub/schemas/commit/5effe1e))
+
 # [6.81.0](https://github.com/tillhub/schemas/compare/v6.80.0...v6.81.0) (2021-08-25)
 
 
