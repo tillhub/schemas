@@ -1,3 +1,10 @@
+# [6.81.0](https://github.com/tillhub/schemas/compare/v6.80.0...v6.81.0) (2021-08-25)
+
+
+### Features
+
+* **products:** add tax and revenue account reference for takeaway to… ([#610](https://github.com/tillhub/schemas/issues/610)) ([39e712b](https://github.com/tillhub/schemas/commit/39e712b)), closes [#API-960](https://github.com/tillhub/schemas/issues/API-960) [#API-960](https://github.com/tillhub/schemas/issues/API-960)
+
 # [6.80.0](https://github.com/tillhub/schemas/compare/v6.79.0...v6.80.0) (2021-08-24)
 
 
