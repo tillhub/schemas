@@ -1,3 +1,11 @@
+# [6.83.0](https://github.com/tillhub/schemas/compare/v6.82.0...v6.83.0) (2021-08-27)
+
+
+### Features
+
+* **financials:** move sale_cancellation_note_required ([d769845](https://github.com/tillhub/schemas/commit/d769845))
+* **transactions:** configuration for transaction cancellation requires note ([e8e9e00](https://github.com/tillhub/schemas/commit/e8e9e00))
+
 # [6.82.0](https://github.com/tillhub/schemas/compare/v6.81.0...v6.82.0) (2021-08-25)
 
 
