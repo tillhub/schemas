@@ -1,3 +1,10 @@
+# [6.84.0](https://github.com/tillhub/schemas/compare/v6.83.0...v6.84.0) (2021-09-07)
+
+
+### Features
+
+* **vouchers:** bulk add ([029118b](https://github.com/tillhub/schemas/commit/029118b))
+
 # [6.83.0](https://github.com/tillhub/schemas/compare/v6.82.0...v6.83.0) (2021-08-27)
 
 

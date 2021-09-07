@@ -1,0 +1,904 @@
+{
+  "$id": "https://schemas.tillhub.com/v0/vouchers.bulk.create.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "format",
+      "format_type"
+    ],
+    "properties": {
+      "name": {
+        "oneOf": [
+          {
+            "description": "A voucher name which can be displayed on receipt.",
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "code": {
+        "description": "The chosen or generated voucher code.",
+        "example": "1234 1234 1234",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "format": {
+        "description": "The visual format this voucher conforms to.",
+        "example": "xxxx xxxx xxxx",
+        "type": "string"
+      },
+      "format_type": {
+        "description": "Define which characters can be used during a voucher creation. E.g. numeric XXXX XXXX will be a voucher code with 8 random numbers divided by a space. The lookup on the voucher will be made on code and code_normalised equally (if defined).",
+        "type": "string",
+        "enum": [
+          "numeric",
+          "alphanumeric",
+          "alphabetic"
+        ]
+      },
+      "amount": {
+        "description": "The current value of this voucher.",
+        "example": "10.99",
+        "anyOf": [
+          {
+            "type": "number",
+            "minimum": 0
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "discount_rate": {
+        "oneOf": [
+          {
+            "description": "If type is 'discount' - the discount rate that will be applied to the cart.",
+            "example": "0.15",
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "discount_order": {
+        "oneOf": [
+          {
+            "description": "If type is 'discount' - this will keep the resulting discount entry ordered per cart item as always first or always last.",
+            "type": "string",
+            "enum": [
+              "first",
+              "last"
+            ],
+            "default": "last"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "amount_issued_at": {
+        "description": "decimal type",
+        "example": "10.99",
+        "anyOf": [
+          {
+            "type": "number",
+            "minimum": 0
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "amount_cents": {
+        "description": "",
+        "anyOf": [
+          {
+            "type": "integer",
+            "minimum": 0
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "amount_max": {
+        "description": "",
+        "anyOf": [
+          {
+            "type": "number",
+            "minimum": 0
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "increment_amount_minimum": {
+        "description": "Define a server / client side increment restriction. E.g. only allow a a voucher to be issued or altered with 5 EUR minimum.",
+        "anyOf": [
+          {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100000
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "currency": {
+        "description": "",
+        "type": "string"
+      },
+      "custom": {
+        "description": "",
+        "type": "object"
+      },
+      "metadata": {
+        "oneOf": [
+          {
+            "type": "object",
+            "description": "",
+            "properties": {
+              "issuer": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "oneOf": [
+                          {
+                            "type": "string"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "client": {
+                        "oneOf": [
+                          {
+                            "type": "string"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "issuable": {
+        "description": "",
+        "type": "boolean"
+      },
+      "reissuable": {
+        "description": "",
+        "type": "boolean"
+      },
+      "issuer": {
+        "oneOf": [
+          {
+            "description": "defualt issuer",
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "customer": {
+        "description": "The reference to a customer. The layout is an object to allow for imported vouchers to include any kind of customer reference. In the Tillhub voucher case the object will have at least an ID reference to the customer if existing.",
+        "anyOf": [
+          {
+            "type": "object"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "comment": {
+        "description": "An arbitrary comment from a user for this voucher.",
+        "oneOf": [
+          {
+            "type": "string",
+            "maxLength": 1024
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "expires_at": {
+        "description": "Define until when this voucher should be usable. This will be hard validated on the API when incrementing / decrementing a voucher.",
+        "oneOf": [
+          {
+            "type": "string",
+            "format": "date-time"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "barcodes": {
+        "description": "",
+        "type": "object"
+      },
+      "title": {
+        "description": "",
+        "type": "string"
+      },
+      "partial_redemption": {
+        "description": "If true, the voucher can be used partially and the remainder amount will stay on the voucher.",
+        "type": "boolean"
+      },
+      "active": {
+        "description": "Define whether this voucher is currently active.",
+        "type": "boolean"
+      },
+      "deleted": {
+        "description": "Define whether this voucher is \"soft\" deleted. This is different than a \"hard\" delete where the resource is eliminated from the database.",
+        "type": "boolean",
+        "default": false
+      },
+      "bound_to": {
+        "description": "",
+        "type": "object"
+      },
+      "namespace": {
+        "description": "",
+        "type": "string"
+      },
+      "type": {
+        "description": "",
+        "type": "string",
+        "enum": [
+          "amount",
+          "discount",
+          "product"
+        ]
+      },
+      "regions": {
+        "description": "Regions to limit this voucher to.",
+        "oneOf": [
+          {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 2,
+              "maxLength": 2,
+              "pattern": "^[A-Z]{2}$"
+            }
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "limited_to_region": {
+        "description": "Define whether to limit this voucher in a particular region.",
+        "type": "boolean"
+      },
+      "bound_to_customer": {
+        "description": "DEPRECATED. Please use many to many relation on /voucher/customers.",
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "limited_to_customer": {
+        "description": "Define whether to limit this voucher to customers or not.",
+        "type": "boolean"
+      },
+      "refundable": {
+        "description": "Define whether this voucher can be refunded or be used in a refund scenario.",
+        "type": "boolean"
+      },
+      "mutable": {
+        "description": "",
+        "type": "boolean"
+      },
+      "exchange_for_cash": {
+        "description": "Define whether the value or rest value can be paid out with cash.",
+        "type": "boolean"
+      },
+      "restriction_single_transaction": {
+        "description": "",
+        "type": "boolean"
+      },
+      "is_campaign": {
+        "description": "Mark this voucher to be a campaign itself. This should be used if you issue multiple vouchers with the same code and do not want to deduct value from it.",
+        "type": "boolean"
+      },
+      "system": {
+        "description": "The voucher system this voucher gets it's behaviour from and and will be matched upon lookup.",
+        "default": null,
+        "oneOf": [
+          {
+            "type": "string",
+            "format": "uuid",
+            "description": "The Tillhub sub-system resource reference ID associated with this voucher (system.system in configurations).",
+            "example": "43847a66-97dc-4ac2-8e8a-c44920e1f22f"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "product": {
+        "default": null,
+        "oneOf": [
+          {
+            "type": "string",
+            "format": "uuid",
+            "description": "The Tillhub product resource reference ID associated with this voucher.",
+            "example": "43847a66-97dc-4ac2-8e8a-c44920e1f22f"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "constraints": {
+        "oneOf": [
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "time": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "scheduled": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "day_of_week": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                          "enabled": {
+                            "type": "boolean",
+                            "default": true
+                          },
+                          "monday": {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                              "slots": {
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "additionalProperties": false,
+                                  "properties": {
+                                    "enabled": {
+                                      "type": "boolean",
+                                      "default": true
+                                    },
+                                    "start": {
+                                      "oneOf": [
+                                        {
+                                          "type": "string",
+                                          "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    },
+                                    "end": {
+                                      "oneOf": [
+                                        {
+                                          "type": "string",
+                                          "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "tuesday": {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                              "slots": {
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "additionalProperties": false,
+                                  "properties": {
+                                    "enabled": {
+                                      "type": "boolean",
+                                      "default": true
+                                    },
+                                    "start": {
+                                      "oneOf": [
+                                        {
+                                          "type": "string",
+                                          "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    },
+                                    "end": {
+                                      "oneOf": [
+                                        {
+                                          "type": "string",
+                                          "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "wednesday": {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                              "slots": {
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "additionalProperties": false,
+                                  "properties": {
+                                    "enabled": {
+                                      "type": "boolean",
+                                      "default": true
+                                    },
+                                    "start": {
+                                      "oneOf": [
+                                        {
+                                          "type": "string",
+                                          "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    },
+                                    "end": {
+                                      "oneOf": [
+                                        {
+                                          "type": "string",
+                                          "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "thursday": {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                              "slots": {
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "additionalProperties": false,
+                                  "properties": {
+                                    "enabled": {
+                                      "type": "boolean",
+                                      "default": true
+                                    },
+                                    "start": {
+                                      "oneOf": [
+                                        {
+                                          "type": "string",
+                                          "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    },
+                                    "end": {
+                                      "oneOf": [
+                                        {
+                                          "type": "string",
+                                          "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "friday": {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                              "slots": {
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "additionalProperties": false,
+                                  "properties": {
+                                    "enabled": {
+                                      "type": "boolean",
+                                      "default": true
+                                    },
+                                    "start": {
+                                      "oneOf": [
+                                        {
+                                          "type": "string",
+                                          "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    },
+                                    "end": {
+                                      "oneOf": [
+                                        {
+                                          "type": "string",
+                                          "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "saturday": {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                              "slots": {
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "additionalProperties": false,
+                                  "properties": {
+                                    "enabled": {
+                                      "type": "boolean",
+                                      "default": true
+                                    },
+                                    "start": {
+                                      "oneOf": [
+                                        {
+                                          "type": "string",
+                                          "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    },
+                                    "end": {
+                                      "oneOf": [
+                                        {
+                                          "type": "string",
+                                          "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "sunday": {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                              "slots": {
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "additionalProperties": false,
+                                  "properties": {
+                                    "enabled": {
+                                      "type": "boolean",
+                                      "default": true
+                                    },
+                                    "start": {
+                                      "oneOf": [
+                                        {
+                                          "type": "string",
+                                          "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    },
+                                    "end": {
+                                      "oneOf": [
+                                        {
+                                          "type": "string",
+                                          "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "date_range": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                          "enabled": {
+                            "type": "boolean",
+                            "default": true
+                          },
+                          "start": {
+                            "oneOf": [
+                              {
+                                "type": "object",
+                                "additionalProperties": false,
+                                "properties": {
+                                  "enabled": {
+                                    "type": "boolean",
+                                    "default": true
+                                  },
+                                  "value": {
+                                    "oneOf": [
+                                      {
+                                        "type": "string",
+                                        "format": "date-time"
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
+                                  }
+                                }
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          },
+                          "end": {
+                            "oneOf": [
+                              {
+                                "type": "object",
+                                "additionalProperties": false,
+                                "properties": {
+                                  "enabled": {
+                                    "type": "boolean",
+                                    "default": true
+                                  },
+                                  "value": {
+                                    "oneOf": [
+                                      {
+                                        "type": "string",
+                                        "format": "date-time"
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
+                                  }
+                                }
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          },
+                          "tz": {
+                            "oneOf": [
+                              {
+                                "type": "string"
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "scan_prefix": {
+        "default": null,
+        "oneOf": [
+          {
+            "type": "object",
+            "required": [
+              "prefix",
+              "name"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "prefix": {
+                "description": "The prefix to look up and remove from scan results before requesting the voucher.",
+                "type": "string",
+                "maxLength": 16,
+                "example": "bsh"
+              },
+              "name": {
+                "default": null,
+                "oneOf": [
+                  {
+                    "description": "The display string for presenting the selection of available prefixes.",
+                    "type": "string",
+                    "maxLength": 64,
+                    "example": "BSH - Marketing"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "display_format": {
+                "default": null,
+                "oneOf": [
+                  {
+                    "description": "'X' will be filled with digits/characters from a scan result.",
+                    "type": "string",
+                    "maxLength": 64,
+                    "example": "XXXX-XXXX-XXXX-XXXX"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "min_identifier_length": {
+                "description": "This is deprecated, as it conflicts with \"format\" from voucher templates.",
+                "default": null,
+                "oneOf": [
+                  {
+                    "description": "The minimum length before a lookup can be performed.",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 32
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "redemption_valid_from": {
+        "default": null,
+        "oneOf": [
+          {
+            "type": "string",
+            "format": "date-time"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "charge_valid_from": {
+        "default": null,
+        "oneOf": [
+          {
+            "type": "string",
+            "format": "date-time"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "validity_period": {
+        "default": null,
+        "oneOf": [
+          {
+            "description": "A user defined timeframe (e.g. 3 years) that is used to determine the next expires_at value after a charge (top-up).",
+            "type": "object",
+            "properties": {
+              "unit": {
+                "description": "Unit of the validity period.",
+                "type": "string",
+                "enum": [
+                  "days",
+                  "weeks",
+                  "months",
+                  "years"
+                ]
+              },
+              "value": {
+                "description": "The value of the validity period, defines a timeframe together with the set unit.",
+                "type": "integer",
+                "minimum": 1
+              }
+            }
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "redeemed": {
+        "description": "If a voucher has been redeemed or not.",
+        "type": "boolean",
+        "default": false
+      },
+      "is_usable_only_once": {
+        "description": "If a voucher can be used only once or multiple times.",
+        "type": "boolean",
+        "default": false
+      }
+    }
+  }
+}
