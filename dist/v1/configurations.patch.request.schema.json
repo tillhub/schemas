@@ -598,26 +598,6 @@
                     }
                   ]
                 },
-                "visibilty_of_sum": {
-                  "oneOf": [
-                    {
-                      "description": "Specifies which sums are displayed on cart view if hide_sum_cart is enabled",
-                      "type": "array",
-                      "items": {
-                        "type": "string",
-                        "enum": [
-                          "subtotal",
-                          "discount",
-                          "total",
-                          "tax"
-                        ]
-                      }
-                    },
-                    {
-                      "type": "null"
-                    }
-                  ]
-                },
                 "balance_reconciliation": {
                   "oneOf": [
                     {

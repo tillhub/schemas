@@ -1,3 +1,10 @@
+# [6.85.0](https://github.com/tillhub/schemas/compare/v6.84.0...v6.85.0) (2021-09-14)
+
+
+### Features
+
+* **configuration:** remove visibility of sum ([48c2a44](https://github.com/tillhub/schemas/commit/48c2a44))
+
 # [6.84.0](https://github.com/tillhub/schemas/compare/v6.83.0...v6.84.0) (2021-09-07)
 
 
