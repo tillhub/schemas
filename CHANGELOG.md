@@ -1,3 +1,10 @@
+# [6.86.0](https://github.com/tillhub/schemas/compare/v6.85.0...v6.86.0) (2021-09-16)
+
+
+### Features
+
+* **configurations:** Advertisement opt-out config ([#617](https://github.com/tillhub/schemas/issues/617)) ([8d4dd60](https://github.com/tillhub/schemas/commit/8d4dd60))
+
 # [6.85.0](https://github.com/tillhub/schemas/compare/v6.84.0...v6.85.0) (2021-09-14)
 
 

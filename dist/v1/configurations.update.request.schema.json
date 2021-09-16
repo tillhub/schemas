@@ -562,6 +562,18 @@
               "type": "object",
               "additionalProperties": false,
               "properties": {
+                "ad_opt_out": {
+                  "oneOf": [
+                    {
+                      "description": "Specifies if advertisement opt-out is enabled.",
+                      "type": "boolean",
+                      "default": false
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
                 "hide_sum_cart": {
                   "oneOf": [
                     {
