@@ -1,3 +1,14 @@
+# [6.87.0](https://github.com/tillhub/schemas/compare/v6.86.0...v6.87.0) (2021-09-17)
+
+
+### Features
+
+* **loyalties-abocard-systems:** add abocard systems schema #API-1017 ([af58999](https://github.com/tillhub/schemas/commit/af58999)), closes [#API-1017](https://github.com/tillhub/schemas/issues/API-1017)
+* **loyalties-abocard-systems:** add description #API-1017 ([e74bc61](https://github.com/tillhub/schemas/commit/e74bc61)), closes [#API-1017](https://github.com/tillhub/schemas/issues/API-1017)
+* **loyalties-abocard-systems:** add more details and examples #API-1017 ([301578e](https://github.com/tillhub/schemas/commit/301578e)), closes [#API-1017](https://github.com/tillhub/schemas/issues/API-1017)
+* **loyalties-abocard-systems:** differ request and response properties set #API-1017 ([9ba50fe](https://github.com/tillhub/schemas/commit/9ba50fe)), closes [#API-1017](https://github.com/tillhub/schemas/issues/API-1017)
+* **loyalty_systems:** abocards ([7715d14](https://github.com/tillhub/schemas/commit/7715d14))
+
 # [6.86.0](https://github.com/tillhub/schemas/compare/v6.85.0...v6.86.0) (2021-09-16)
 
 

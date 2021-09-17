@@ -1,0 +1,1520 @@
+{
+  "$id": "https://schemas.tillhub.com/v0/loyalty_abocard_systems.update.response.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "msg": {
+      "type": "string",
+      "minLength": 1,
+      "example": "Queried transactions sucessefully.",
+      "description": "Any English sentence, meant as information for developers and implementers. Avoid displaying this to the users and especially do not expect thos messages to stay stable."
+    },
+    "msg_localised": {
+      "type": "string",
+      "minLength": 1,
+      "example": "Queried transactions sucessefully.",
+      "description": "Optional localised message that can be displayed to the user if existing. The language can be set by in the request or will fallback to English."
+    },
+    "request": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Information about the request itself.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "The request uuid that can be used to identify and trace API calls.",
+          "format": "uuid"
+        },
+        "host": {
+          "type": "string",
+          "minLength": 1,
+          "example": "https://api.tillhub.com",
+          "description": "Server host and protocol from which request was handled."
+        }
+      }
+    },
+    "count": {
+      "type": "number",
+      "description": "the length of the results array.",
+      "example": 1
+    },
+    "results": {
+      "type": "array",
+      "description": "The envelope of items, that are usually objects. We are generally sending back arrays even if there was just one requested resource.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "deleted": {
+            "type": "boolean"
+          },
+          "system_type": {
+            "description": "The type of abocard system",
+            "type": "string",
+            "enum": [
+              "voucher"
+            ],
+            "example": "voucher"
+          },
+          "name": {
+            "oneOf": [
+              {
+                "description": "The abocard system name",
+                "example": "Buy 3 haircuts and get next 1 for free",
+                "type": "string",
+                "maxLength": 255
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "voucher_system": {
+            "oneOf": [
+              {
+                "description": "Referenced voucher system when system_type == \"voucher\". 1 to 1 relationship with voucher system instance.",
+                "type": "object",
+                "additionalProperties": false,
+                "required": [],
+                "properties": {
+                  "id": {
+                    "description": "Voucher system primary key (should be omitted for creation but required for update)",
+                    "example": "ad572a0d-301a-4270-8a49-5f720f2b277d",
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  "description": {
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 4096
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "deleted": {
+                    "type": "boolean"
+                  },
+                  "active": {
+                    "type": "boolean"
+                  },
+                  "branches": {
+                    "oneOf": [
+                      {
+                        "type": "array",
+                        "description": "This is deprecated. Please use \"locations\" instead.",
+                        "items": {
+                          "type": "string",
+                          "format": "uuid"
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "region": {
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "description": "The international format for regional sub category of a country e.g. a state or province."
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "country": {
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "description": "A country as ISO Alpha-2 code.",
+                        "minLength": 2,
+                        "maxLength": 2,
+                        "pattern": "^[A-Z]{2}$"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "metadata": {
+                    "oneOf": [
+                      {
+                        "type": "object"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "hooks": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                          "get": {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                              "incoming": {
+                                "oneOf": [
+                                  {
+                                    "type": "object",
+                                    "additionalProperties": false,
+                                    "required": [
+                                      "endpoint",
+                                      "method"
+                                    ],
+                                    "properties": {
+                                      "endpoint": {
+                                        "type": "string",
+                                        "description": "The url of the cloud based function",
+                                        "example": "https://us-central1-<project-id>.cloudfunctions.net/date"
+                                      },
+                                      "method": {
+                                        "oneOf": [
+                                          {
+                                            "type": "string",
+                                            "enum": [
+                                              "GET",
+                                              "POST",
+                                              "PUT"
+                                            ]
+                                          },
+                                          {
+                                            "type": "null"
+                                          }
+                                        ]
+                                      },
+                                      "auth": {
+                                        "type": "object",
+                                        "additionalProperties": false,
+                                        "required": [
+                                          "type"
+                                        ],
+                                        "properties": {
+                                          "type": {
+                                            "type": "string",
+                                            "enum": [
+                                              "basic",
+                                              "token",
+                                              "bearer_token"
+                                            ]
+                                          },
+                                          "token": {
+                                            "type": "string"
+                                          },
+                                          "user": {
+                                            "type": "string"
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "example": {
+                                      "endpoint": "https://us-central1-<project-id>.cloudfunctions.net/date",
+                                      "method": "GET",
+                                      "auth": {
+                                        "type": "basic",
+                                        "user": "some_user_name_123123",
+                                        "token": "abc123456789"
+                                      }
+                                    },
+                                    "description": "This hook is intended for the case when a voucher is queried by voucher-code in the endpoint \"/api/v0/vouchers/:voucher_id\" or \"/api/v0/vouchers/lookup\". This hook allows to modify the code before the query continues and it receives the code in the request body in the form of { code: \"some string\" }. The endpoint expects from the hook response a simple string, e.g. \"123456abc\"."
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ]
+                              },
+                              "outgoing": {
+                                "oneOf": [
+                                  {
+                                    "type": "object",
+                                    "additionalProperties": false,
+                                    "required": [
+                                      "endpoint",
+                                      "method"
+                                    ],
+                                    "properties": {
+                                      "endpoint": {
+                                        "type": "string",
+                                        "description": "The url of the cloud based function",
+                                        "example": "https://us-central1-<project-id>.cloudfunctions.net/date"
+                                      },
+                                      "method": {
+                                        "oneOf": [
+                                          {
+                                            "type": "string",
+                                            "enum": [
+                                              "GET",
+                                              "POST",
+                                              "PUT"
+                                            ]
+                                          },
+                                          {
+                                            "type": "null"
+                                          }
+                                        ]
+                                      },
+                                      "auth": {
+                                        "type": "object",
+                                        "additionalProperties": false,
+                                        "required": [
+                                          "type"
+                                        ],
+                                        "properties": {
+                                          "type": {
+                                            "type": "string",
+                                            "enum": [
+                                              "basic",
+                                              "token",
+                                              "bearer_token"
+                                            ]
+                                          },
+                                          "token": {
+                                            "type": "string"
+                                          },
+                                          "user": {
+                                            "type": "string"
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "example": {
+                                      "endpoint": "https://us-central1-<project-id>.cloudfunctions.net/date",
+                                      "method": "GET",
+                                      "auth": {
+                                        "type": "basic",
+                                        "user": "some_user_name_123123",
+                                        "token": "abc123456789"
+                                      }
+                                    },
+                                    "description": "This hook is used in the endpoint \"/api/v0/vouchers/:voucher_id\" or \"/api/v0/vouchers/lookup\" and is applied after the results returned from the database query and before they are returned to the caller. The hook receives the voucher in the request body in the format of { vouchers: [{ <voucherData> }] }. The response from the hook is expected to be an array of (voucher) objects."
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "increments": {
+                    "description": "Define a client side increment restriction. E.g. only allow a a voucher to be issued with 5 EUR minimum.",
+                    "oneOf": [
+                      {
+                        "type": "array",
+                        "items": {
+                          "oneOf": [
+                            {
+                              "type": "object",
+                              "additionalProperties": false,
+                              "required": [
+                                "type",
+                                "currency",
+                                "value"
+                              ],
+                              "properties": {
+                                "currency": {
+                                  "type": "string",
+                                  "minLength": 3,
+                                  "maxLength": 3
+                                },
+                                "type": {
+                                  "type": "string",
+                                  "enum": [
+                                    "amount"
+                                  ]
+                                },
+                                "value": {
+                                  "type": "number",
+                                  "minimum": 0,
+                                  "maximum": 100000,
+                                  "multipleOf": 0.01
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "scan_prefixes": {
+                    "description": "Define whether and now the POS should cut of a prefix from a scan to understand those vouchers.",
+                    "oneOf": [
+                      {
+                        "type": "array",
+                        "items": {
+                          "description": "Available scan prefixes for this system"
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "external": {
+                    "description": "Make this voucher to follow external logic",
+                    "type": "boolean",
+                    "default": false
+                  },
+                  "external_system_type": {
+                    "description": "Define which voucher API implementation to follow",
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "enum": [
+                          "tillhub-voucher-api",
+                          "fleurop",
+                          "zalando"
+                        ]
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "external_system_id": {
+                    "description": "Define here whether this voucher system is an external one and which ID it references at the provider. E.g. a Tillhub Account can talk to another one, but permissions and this reference need to be set.",
+                    "default": null,
+                    "oneOf": [
+                      {
+                        "description": "Replace own accountId with external_system_id in requests when external=true, i.e. /vouchers/external_system_id/voucher_id. If external=false use accountId as usual, i.e. /vouchers/accountId/voucher_id",
+                        "type": "string",
+                        "maxLength": 128,
+                        "example": "0023903408"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "external_voucher_system_id": {
+                    "description": "If using a parent's voucher system, this is the voucher system id of the delegating parent. external_voucher_system_id is to be sent in requests as a query parameter, whenever external_system_id (instead of the own accountId) is used in the url, e.g. vouchers/{external_system_id}/lookup?code=xyz123&system={external_voucher_system_id}.",
+                    "default": null,
+                    "oneOf": [
+                      {
+                        "description": "Additional parameter for external voucher systems, e.g. Fleurop Voucher Type specifier or id inside external system",
+                        "type": "string",
+                        "maxLength": 128,
+                        "example": "0023903408"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "templates": {
+                    "oneOf": [
+                      {
+                        "description": "Define attribute templates for vouchers that will be created from this system. Behaviour of vouchers can always be overriden.",
+                        "type": "array",
+                        "items": {
+                          "description": "Define voucher templates that can inherit attributes and be bound to e.g. creation actions.",
+                          "type": "object",
+                          "additionalProperties": false,
+                          "required": [
+                            "name",
+                            "attributes",
+                            "id"
+                          ],
+                          "properties": {
+                            "id": {
+                              "type": "string",
+                              "format": "uuid"
+                            },
+                            "name": {
+                              "type": "string",
+                              "minLength": 1,
+                              "maxLength": 256
+                            },
+                            "description": {
+                              "oneOf": [
+                                {
+                                  "type": "string",
+                                  "minLength": 1,
+                                  "maxLength": 4096
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "code_generation": {
+                              "default": "request",
+                              "description": "Information if code should be picked from existing barcodes (scan) or requested from the API (request)",
+                              "oneOf": [
+                                {
+                                  "type": "string",
+                                  "enum": [
+                                    "scan",
+                                    "request"
+                                  ]
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "creation_context": {
+                              "default": "required",
+                              "description": "Information if a voucher creation will be processed within a transaction or standalone (without a transaction and without any records)",
+                              "oneOf": [
+                                {
+                                  "type": "string",
+                                  "enum": [
+                                    "transaction",
+                                    "standalone"
+                                  ]
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "attributes": {
+                              "type": "object",
+                              "additionalProperties": false,
+                              "description": "Inheritable properties from Tillhub Vouchers",
+                              "required": [
+                                "format",
+                                "format_type"
+                              ],
+                              "properties": {
+                                "format": {
+                                  "description": "The visual format this voucher conforms to.",
+                                  "example": "xxxx xxxx xxxx",
+                                  "type": "string"
+                                },
+                                "format_type": {
+                                  "description": "Define which characters can be used during a voucher creation. E.g. numeric XXXX XXXX will be a voucher code with 8 random numbers divided by a space. The lookup on the voucher will be made on code and code_normalised equally (if defined).",
+                                  "type": "string",
+                                  "enum": [
+                                    "numeric",
+                                    "alphanumeric",
+                                    "alphabetic"
+                                  ]
+                                },
+                                "amount_max": {
+                                  "description": "",
+                                  "anyOf": [
+                                    {
+                                      "type": "number",
+                                      "minimum": 0
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "amount": {
+                                  "description": "The current value of this voucher.",
+                                  "example": "10.99",
+                                  "anyOf": [
+                                    {
+                                      "type": "number",
+                                      "minimum": 0
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "increment_amount_minimum": {
+                                  "description": "Define a server / client side increment restriction. E.g. only allow a a voucher to be issued or altered with 5 EUR minimum.",
+                                  "anyOf": [
+                                    {
+                                      "type": "number",
+                                      "minimum": 0,
+                                      "maximum": 100000
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "issuable": {
+                                  "description": "",
+                                  "type": "boolean"
+                                },
+                                "reissuable": {
+                                  "description": "",
+                                  "type": "boolean"
+                                },
+                                "comment": {
+                                  "description": "An arbitrary comment from a user for this voucher.",
+                                  "oneOf": [
+                                    {
+                                      "type": "string",
+                                      "maxLength": 1024
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "expires_at": {
+                                  "description": "Define until when this voucher should be usable. This will be hard validated on the API when incrementing / decrementing a voucher.",
+                                  "oneOf": [
+                                    {
+                                      "type": "string",
+                                      "format": "date-time"
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "redemption_valid_from": {
+                                  "default": null,
+                                  "oneOf": [
+                                    {
+                                      "type": "string",
+                                      "format": "date-time"
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "charge_valid_from": {
+                                  "default": null,
+                                  "oneOf": [
+                                    {
+                                      "type": "string",
+                                      "format": "date-time"
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "customer": {
+                                  "description": "The reference to a customer. The layout is an object to allow for imported vouchers to include any kind of customer reference. In the Tillhub voucher case the object will have at least an ID reference to the customer if existing.",
+                                  "anyOf": [
+                                    {
+                                      "type": "object"
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "title": {
+                                  "description": "",
+                                  "type": "string"
+                                },
+                                "partial_redemption": {
+                                  "description": "If true, the voucher can be used partially and the remainder amount will stay on the voucher.",
+                                  "type": "boolean"
+                                },
+                                "active": {
+                                  "description": "Define whether this voucher is currently active.",
+                                  "type": "boolean"
+                                },
+                                "bound_to": {
+                                  "description": "",
+                                  "type": "object"
+                                },
+                                "namespace": {
+                                  "description": "",
+                                  "type": "string"
+                                },
+                                "regions": {
+                                  "description": "Regions to limit this voucher to.",
+                                  "oneOf": [
+                                    {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string",
+                                        "minLength": 2,
+                                        "maxLength": 2,
+                                        "pattern": "^[A-Z]{2}$"
+                                      }
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "limited_to_region": {
+                                  "description": "Define whether to limit this voucher in a particular region.",
+                                  "type": "boolean"
+                                },
+                                "refundable": {
+                                  "description": "Define whether this voucher can be refunded or be used in a refund scenario.",
+                                  "type": "boolean"
+                                },
+                                "mutable": {
+                                  "description": "",
+                                  "type": "boolean"
+                                },
+                                "exchange_for_cash": {
+                                  "description": "Define whether the value or rest value can be paid out with cash.",
+                                  "type": "boolean"
+                                },
+                                "restriction_single_transaction": {
+                                  "description": "",
+                                  "type": "boolean"
+                                },
+                                "is_campaign": {
+                                  "description": "Mark this voucher to be a campaign itself. This should be used if you issue multiple vouchers with the same code and do not want to deduct value from it.",
+                                  "type": "boolean"
+                                },
+                                "product": {
+                                  "default": null,
+                                  "oneOf": [
+                                    {
+                                      "type": "string",
+                                      "format": "uuid",
+                                      "description": "The Tillhub product resource reference ID associated with this voucher.",
+                                      "example": "43847a66-97dc-4ac2-8e8a-c44920e1f22f"
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "constraints": {
+                                  "oneOf": [
+                                    {
+                                      "type": "object",
+                                      "additionalProperties": false,
+                                      "properties": {
+                                        "time": {
+                                          "type": "object",
+                                          "additionalProperties": false,
+                                          "properties": {
+                                            "scheduled": {
+                                              "type": "object",
+                                              "additionalProperties": false,
+                                              "properties": {
+                                                "day_of_week": {
+                                                  "type": "object",
+                                                  "additionalProperties": false,
+                                                  "properties": {
+                                                    "enabled": {
+                                                      "type": "boolean",
+                                                      "default": true
+                                                    },
+                                                    "monday": {
+                                                      "type": "object",
+                                                      "additionalProperties": false,
+                                                      "properties": {
+                                                        "slots": {
+                                                          "type": "array",
+                                                          "items": {
+                                                            "type": "object",
+                                                            "additionalProperties": false,
+                                                            "properties": {
+                                                              "enabled": {
+                                                                "type": "boolean",
+                                                                "default": true
+                                                              },
+                                                              "start": {
+                                                                "oneOf": [
+                                                                  {
+                                                                    "type": "string",
+                                                                    "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                                                  },
+                                                                  {
+                                                                    "type": "null"
+                                                                  }
+                                                                ]
+                                                              },
+                                                              "end": {
+                                                                "oneOf": [
+                                                                  {
+                                                                    "type": "string",
+                                                                    "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                                                  },
+                                                                  {
+                                                                    "type": "null"
+                                                                  }
+                                                                ]
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    },
+                                                    "tuesday": {
+                                                      "type": "object",
+                                                      "additionalProperties": false,
+                                                      "properties": {
+                                                        "slots": {
+                                                          "type": "array",
+                                                          "items": {
+                                                            "type": "object",
+                                                            "additionalProperties": false,
+                                                            "properties": {
+                                                              "enabled": {
+                                                                "type": "boolean",
+                                                                "default": true
+                                                              },
+                                                              "start": {
+                                                                "oneOf": [
+                                                                  {
+                                                                    "type": "string",
+                                                                    "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                                                  },
+                                                                  {
+                                                                    "type": "null"
+                                                                  }
+                                                                ]
+                                                              },
+                                                              "end": {
+                                                                "oneOf": [
+                                                                  {
+                                                                    "type": "string",
+                                                                    "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                                                  },
+                                                                  {
+                                                                    "type": "null"
+                                                                  }
+                                                                ]
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    },
+                                                    "wednesday": {
+                                                      "type": "object",
+                                                      "additionalProperties": false,
+                                                      "properties": {
+                                                        "slots": {
+                                                          "type": "array",
+                                                          "items": {
+                                                            "type": "object",
+                                                            "additionalProperties": false,
+                                                            "properties": {
+                                                              "enabled": {
+                                                                "type": "boolean",
+                                                                "default": true
+                                                              },
+                                                              "start": {
+                                                                "oneOf": [
+                                                                  {
+                                                                    "type": "string",
+                                                                    "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                                                  },
+                                                                  {
+                                                                    "type": "null"
+                                                                  }
+                                                                ]
+                                                              },
+                                                              "end": {
+                                                                "oneOf": [
+                                                                  {
+                                                                    "type": "string",
+                                                                    "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                                                  },
+                                                                  {
+                                                                    "type": "null"
+                                                                  }
+                                                                ]
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    },
+                                                    "thursday": {
+                                                      "type": "object",
+                                                      "additionalProperties": false,
+                                                      "properties": {
+                                                        "slots": {
+                                                          "type": "array",
+                                                          "items": {
+                                                            "type": "object",
+                                                            "additionalProperties": false,
+                                                            "properties": {
+                                                              "enabled": {
+                                                                "type": "boolean",
+                                                                "default": true
+                                                              },
+                                                              "start": {
+                                                                "oneOf": [
+                                                                  {
+                                                                    "type": "string",
+                                                                    "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                                                  },
+                                                                  {
+                                                                    "type": "null"
+                                                                  }
+                                                                ]
+                                                              },
+                                                              "end": {
+                                                                "oneOf": [
+                                                                  {
+                                                                    "type": "string",
+                                                                    "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                                                  },
+                                                                  {
+                                                                    "type": "null"
+                                                                  }
+                                                                ]
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    },
+                                                    "friday": {
+                                                      "type": "object",
+                                                      "additionalProperties": false,
+                                                      "properties": {
+                                                        "slots": {
+                                                          "type": "array",
+                                                          "items": {
+                                                            "type": "object",
+                                                            "additionalProperties": false,
+                                                            "properties": {
+                                                              "enabled": {
+                                                                "type": "boolean",
+                                                                "default": true
+                                                              },
+                                                              "start": {
+                                                                "oneOf": [
+                                                                  {
+                                                                    "type": "string",
+                                                                    "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                                                  },
+                                                                  {
+                                                                    "type": "null"
+                                                                  }
+                                                                ]
+                                                              },
+                                                              "end": {
+                                                                "oneOf": [
+                                                                  {
+                                                                    "type": "string",
+                                                                    "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                                                  },
+                                                                  {
+                                                                    "type": "null"
+                                                                  }
+                                                                ]
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    },
+                                                    "saturday": {
+                                                      "type": "object",
+                                                      "additionalProperties": false,
+                                                      "properties": {
+                                                        "slots": {
+                                                          "type": "array",
+                                                          "items": {
+                                                            "type": "object",
+                                                            "additionalProperties": false,
+                                                            "properties": {
+                                                              "enabled": {
+                                                                "type": "boolean",
+                                                                "default": true
+                                                              },
+                                                              "start": {
+                                                                "oneOf": [
+                                                                  {
+                                                                    "type": "string",
+                                                                    "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                                                  },
+                                                                  {
+                                                                    "type": "null"
+                                                                  }
+                                                                ]
+                                                              },
+                                                              "end": {
+                                                                "oneOf": [
+                                                                  {
+                                                                    "type": "string",
+                                                                    "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                                                  },
+                                                                  {
+                                                                    "type": "null"
+                                                                  }
+                                                                ]
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    },
+                                                    "sunday": {
+                                                      "type": "object",
+                                                      "additionalProperties": false,
+                                                      "properties": {
+                                                        "slots": {
+                                                          "type": "array",
+                                                          "items": {
+                                                            "type": "object",
+                                                            "additionalProperties": false,
+                                                            "properties": {
+                                                              "enabled": {
+                                                                "type": "boolean",
+                                                                "default": true
+                                                              },
+                                                              "start": {
+                                                                "oneOf": [
+                                                                  {
+                                                                    "type": "string",
+                                                                    "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                                                  },
+                                                                  {
+                                                                    "type": "null"
+                                                                  }
+                                                                ]
+                                                              },
+                                                              "end": {
+                                                                "oneOf": [
+                                                                  {
+                                                                    "type": "string",
+                                                                    "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                                                  },
+                                                                  {
+                                                                    "type": "null"
+                                                                  }
+                                                                ]
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                },
+                                                "date_range": {
+                                                  "type": "object",
+                                                  "additionalProperties": false,
+                                                  "properties": {
+                                                    "enabled": {
+                                                      "type": "boolean",
+                                                      "default": true
+                                                    },
+                                                    "start": {
+                                                      "oneOf": [
+                                                        {
+                                                          "type": "object",
+                                                          "additionalProperties": false,
+                                                          "properties": {
+                                                            "enabled": {
+                                                              "type": "boolean",
+                                                              "default": true
+                                                            },
+                                                            "value": {
+                                                              "oneOf": [
+                                                                {
+                                                                  "type": "string",
+                                                                  "format": "date-time"
+                                                                },
+                                                                {
+                                                                  "type": "null"
+                                                                }
+                                                              ]
+                                                            }
+                                                          }
+                                                        },
+                                                        {
+                                                          "type": "null"
+                                                        }
+                                                      ]
+                                                    },
+                                                    "end": {
+                                                      "oneOf": [
+                                                        {
+                                                          "type": "object",
+                                                          "additionalProperties": false,
+                                                          "properties": {
+                                                            "enabled": {
+                                                              "type": "boolean",
+                                                              "default": true
+                                                            },
+                                                            "value": {
+                                                              "oneOf": [
+                                                                {
+                                                                  "type": "string",
+                                                                  "format": "date-time"
+                                                                },
+                                                                {
+                                                                  "type": "null"
+                                                                }
+                                                              ]
+                                                            }
+                                                          }
+                                                        },
+                                                        {
+                                                          "type": "null"
+                                                        }
+                                                      ]
+                                                    },
+                                                    "tz": {
+                                                      "oneOf": [
+                                                        {
+                                                          "type": "string"
+                                                        },
+                                                        {
+                                                          "type": "null"
+                                                        }
+                                                      ]
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "scan_prefix": {
+                                  "default": null,
+                                  "oneOf": [
+                                    {
+                                      "type": "object",
+                                      "required": [
+                                        "prefix",
+                                        "name"
+                                      ],
+                                      "additionalProperties": false,
+                                      "properties": {
+                                        "prefix": {
+                                          "description": "The prefix to look up and remove from scan results before requesting the voucher.",
+                                          "type": "string",
+                                          "maxLength": 16,
+                                          "example": "bsh"
+                                        },
+                                        "name": {
+                                          "default": null,
+                                          "oneOf": [
+                                            {
+                                              "description": "The display string for presenting the selection of available prefixes.",
+                                              "type": "string",
+                                              "maxLength": 64,
+                                              "example": "BSH - Marketing"
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        },
+                                        "display_format": {
+                                          "default": null,
+                                          "oneOf": [
+                                            {
+                                              "description": "'X' will be filled with digits/characters from a scan result.",
+                                              "type": "string",
+                                              "maxLength": 64,
+                                              "example": "XXXX-XXXX-XXXX-XXXX"
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        },
+                                        "min_identifier_length": {
+                                          "description": "This is deprecated, as it conflicts with \"format\" from voucher templates.",
+                                          "default": null,
+                                          "oneOf": [
+                                            {
+                                              "description": "The minimum length before a lookup can be performed.",
+                                              "type": "integer",
+                                              "minimum": 1,
+                                              "maximum": 32
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "discount_rate": {
+                                  "oneOf": [
+                                    {
+                                      "description": "If type is 'discount' - the discount rate that will be applied to the cart.",
+                                      "example": "0.15",
+                                      "type": "number",
+                                      "minimum": 0,
+                                      "maximum": 1
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "currency": {
+                                  "oneOf": [
+                                    {
+                                      "type": "string",
+                                      "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                                      "example": "EUR",
+                                      "minLength": 3,
+                                      "maxLength": 3
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "type": {
+                                  "oneOf": [
+                                    {
+                                      "description": "",
+                                      "type": "string",
+                                      "enum": [
+                                        "amount",
+                                        "discount",
+                                        "product"
+                                      ]
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "redemption_valid_from": {
+                    "default": null,
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "charge_valid_from": {
+                    "default": null,
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "actions": {
+            "description": "Defines actions for various abocard system life cycle events",
+            "oneOf": [
+              {
+                "type": "array",
+                "items": {
+                  "description": "The abocard action",
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "id",
+                    "type"
+                  ],
+                  "properties": {
+                    "id": {
+                      "description": "The abocard action reference ID",
+                      "type": "string",
+                      "format": "uuid",
+                      "example": "43847a66-97dc-4ac2-8e8a-c44920e1f22f"
+                    },
+                    "type": {
+                      "description": "The abocard action type",
+                      "type": "string",
+                      "enum": [
+                        "sell"
+                      ]
+                    },
+                    "product": {
+                      "description": "The product associated with this action. Product creates automatically along with abocard system and based on \"linked_product\" and \"system_revenue_account\" field values.",
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "format": "uuid",
+                          "example": "43847a66-97dc-4ac2-8e8a-c44920e1f22f"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "context": {
+                      "description": "Specifies from where this action can be triggered",
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "enum": [
+                            "library"
+                          ]
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "linked_product": {
+            "oneOf": [
+              {
+                "description": "Product linked to abocard system. New products (abocards) being created for \"actions[...].product\" and \"voucher_system.product\" based on this value (VAT ID reference is most important part).",
+                "example": "3610eb8a-2d21-4034-9aa6-0a097a2ce5f2",
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "system_revenue_account": {
+            "oneOf": [
+              {
+                "description": "Referenced revenue account. New products being created for \"actions[...].product\" and \"voucher_system.product\" will use this revenue account.",
+                "example": "075a2f42-c29f-44d2-9ed3-2d636888e9b5",
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "system_tax_account": {
+            "oneOf": [
+              {
+                "description": "Referenced tax account. New products being created for \"actions[...].product\" and \"voucher_system.product\" will use this tax account.",
+                "example": "075a2f42-c29f-44d2-9ed3-2d636888e9b5",
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "system_tax_rate": {
+            "oneOf": [
+              {
+                "description": "New products being created for \"actions[...].product\" and \"voucher_system.product\" will use this tax rate.",
+                "example": "075a2f42-c29f-44d2-9ed3-2d636888e9b5",
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "used_product_price": {
+            "oneOf": [
+              {
+                "description": "The price of the product being used",
+                "example": 12.99,
+                "type": "number",
+                "minimum": 0,
+                "multipleOf": 0.01
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "price_source": {
+            "oneOf": [
+              {
+                "description": "The source of which product price was taken.",
+                "type": "string",
+                "enum": [
+                  "product",
+                  "pricebook_entry"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "price_id": {
+            "oneOf": [
+              {
+                "description": "The price reference inside the price source. For JSONB fields use path.",
+                "example": "default_prices[0]",
+                "type": "string",
+                "maxLength": 255
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "selling_price": {
+            "oneOf": [
+              {
+                "description": "The selling price of the abocard",
+                "example": 11.99,
+                "type": "number",
+                "minimum": 0,
+                "multipleOf": 0.01
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "discount_value": {
+            "oneOf": [
+              {
+                "description": "The discount value",
+                "example": 2,
+                "type": "number",
+                "minimum": 0,
+                "multipleOf": 0.01
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "total_value": {
+            "oneOf": [
+              {
+                "description": "The total amount value",
+                "example": 9.99,
+                "type": "number",
+                "minimum": 0,
+                "multipleOf": 0.01
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "units": {
+            "oneOf": [
+              {
+                "description": "The amount of vouchers that we issue on creation of the abocard.",
+                "type": "number",
+                "minimum": 0
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "voucher_value_per_unit": {
+            "oneOf": [
+              {
+                "description": "The voucher value per unit (when system_type == \"voucher\")",
+                "example": 3,
+                "type": "number",
+                "minimum": 0,
+                "multipleOf": 0.01
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "discount_value_per_unit": {
+            "oneOf": [
+              {
+                "description": "The discount value per unit",
+                "example": 1.33,
+                "type": "number",
+                "minimum": 0,
+                "multipleOf": 0.01
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "locations": {
+            "oneOf": [
+              {
+                "description": "Locations where abocard system is applicable",
+                "example": [
+                  "6d541143-2ada-4ece-9cc1-1260e7e5f718"
+                ],
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "location_groups": {
+            "oneOf": [
+              {
+                "description": "Location groups where abocard system is applicable",
+                "example": [
+                  "25812497-4559-458c-ab0e-faa93e513d3e"
+                ],
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

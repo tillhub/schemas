@@ -21,8 +21,8 @@
   "/delivery_notes.create.request.schema.json",
   "/delivery_notes.update.request.schema.json",
   "/discounts.create.request.schema.json",
-  "/discounts.create.response.schema.json",
   "/discounts.update.request.schema.json",
+  "/discounts.create.response.schema.json",
   "/gastro_orders.deltas.create.request.schema.json",
   "/gastro_orders.deltas.create.response.schema.json",
   "/gastro_orders.deltas.post.response.schema.json",
@@ -149,6 +149,11 @@
   "/functions.update.request.schema.json",
   "/invoices.create.request.schema.json",
   "/invoices.update.request.schema.json",
+  "/loyalty_abocard_systems.create.request.schema.json",
+  "/loyalty_abocard_systems.create.response.schema.json",
+  "/loyalty_abocard_systems.get.query.schema.json",
+  "/loyalty_abocard_systems.update.request.schema.json",
+  "/loyalty_abocard_systems.update.response.schema.json",
   "/loyalty_accounts.create.request.schema.json",
   "/loyalty_accounts.create.response.schema.json",
   "/loyalty_accounts.get.query.schema.json",
@@ -316,6 +321,6 @@
   "/configurations.create.request.schema.json",
   "/configurations.update.request.schema.json",
   "/profile.create.request.schema.json",
-  "/profile.update.request.schema.json",
-  "/support.create.request.schema.json"
+  "/support.create.request.schema.json",
+  "/profile.update.request.schema.json"
 ]
