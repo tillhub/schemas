@@ -1,3 +1,10 @@
+## [6.89.1](https://github.com/tillhub/schemas/compare/v6.89.0...v6.89.1) (2021-09-21)
+
+
+### Bug Fixes
+
+* hijacked configuration param properly described ([c21090c](https://github.com/tillhub/schemas/commit/c21090c))
+
 # [6.89.0](https://github.com/tillhub/schemas/compare/v6.88.0...v6.89.0) (2021-09-21)
 
 
