@@ -7134,6 +7134,18 @@
                     "enabled": {
                       "type": "boolean",
                       "default": true
+                    },
+                    "swiss": {
+                      "oneOf": [
+                        {
+                          "description": "Defines if swiss-specific handling of the OPI protocol will be used",
+                          "type": "boolean",
+                          "default": false
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
                     }
                   }
                 },

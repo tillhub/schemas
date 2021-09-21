@@ -1170,7 +1170,21 @@
         {
           "type": "array",
           "description": "If defined then only these locations will be using this system. If not defined, there will be no restrictions on which locations can use this system.",
-          "minItems": 1,
+          "items": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "branch_groups": {
+      "oneOf": [
+        {
+          "type": "array",
+          "description": "If defined then only these branch groups (plus specified locations if any) will be using this system.",
           "items": {
             "type": "string",
             "format": "uuid"
