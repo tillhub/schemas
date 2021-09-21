@@ -1,3 +1,11 @@
+# [6.89.0](https://github.com/tillhub/schemas/compare/v6.88.0...v6.89.0) (2021-09-21)
+
+
+### Features
+
+* **fiscal signing:** add base_url ([90d2f67](https://github.com/tillhub/schemas/commit/90d2f67))
+* **fiscal_signing:** add api version ([b1dc80f](https://github.com/tillhub/schemas/commit/b1dc80f))
+
 # [6.88.0](https://github.com/tillhub/schemas/compare/v6.87.1...v6.88.0) (2021-09-21)
 
 
