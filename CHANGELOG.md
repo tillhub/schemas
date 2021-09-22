@@ -1,3 +1,10 @@
+## [6.89.2](https://github.com/tillhub/schemas/compare/v6.89.1...v6.89.2) (2021-09-22)
+
+
+### Bug Fixes
+
+* **loyalty_systems:** promote base object for base response for abocrds system #API-1017 ([5a8e7e4](https://github.com/tillhub/schemas/commit/5a8e7e4)), closes [#API-1017](https://github.com/tillhub/schemas/issues/API-1017)
+
 ## [6.89.1](https://github.com/tillhub/schemas/compare/v6.89.0...v6.89.1) (2021-09-21)
 
 
