@@ -2582,6 +2582,11 @@
                     }
                   ]
                 },
+                "attributes_in_name": {
+                  "description": "Defines whether a child product inherits attributes as part of the product name",
+                  "type": "boolean",
+                  "default": true
+                },
                 "auto_product_number_enabled": {
                   "description": "If true, product id will be generated automatically",
                   "oneOf": [

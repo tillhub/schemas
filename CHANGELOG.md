@@ -1,3 +1,10 @@
+# [6.90.0](https://github.com/tillhub/schemas/compare/v6.89.2...v6.90.0) (2021-09-22)
+
+
+### Features
+
+* **configurations:** products ([#621](https://github.com/tillhub/schemas/issues/621)) ([ebc8268](https://github.com/tillhub/schemas/commit/ebc8268))
+
 ## [6.89.2](https://github.com/tillhub/schemas/compare/v6.89.1...v6.89.2) (2021-09-22)
 
 
