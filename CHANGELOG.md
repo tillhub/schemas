@@ -1,3 +1,10 @@
+## [6.90.2](https://github.com/tillhub/schemas/compare/v6.90.1...v6.90.2) (2021-09-23)
+
+
+### Bug Fixes
+
+* **loyalty_systems:** adjust min value for abocard system validity pe… ([#624](https://github.com/tillhub/schemas/issues/624)) ([be1b62e](https://github.com/tillhub/schemas/commit/be1b62e)), closes [#API-1017](https://github.com/tillhub/schemas/issues/API-1017)
+
 ## [6.90.1](https://github.com/tillhub/schemas/compare/v6.90.0...v6.90.1) (2021-09-23)
 
 
