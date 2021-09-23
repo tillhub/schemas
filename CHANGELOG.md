@@ -1,3 +1,10 @@
+## [6.90.3](https://github.com/tillhub/schemas/compare/v6.90.2...v6.90.3) (2021-09-23)
+
+
+### Bug Fixes
+
+* **loyalty_systems:** add abocard create schema #API-1020 ([#623](https://github.com/tillhub/schemas/issues/623)) ([a1fbc45](https://github.com/tillhub/schemas/commit/a1fbc45)), closes [#API-1020](https://github.com/tillhub/schemas/issues/API-1020) [#API-1020](https://github.com/tillhub/schemas/issues/API-1020)
+
 ## [6.90.2](https://github.com/tillhub/schemas/compare/v6.90.1...v6.90.2) (2021-09-23)
 
 
