@@ -1,3 +1,10 @@
+## [6.90.1](https://github.com/tillhub/schemas/compare/v6.90.0...v6.90.1) (2021-09-23)
+
+
+### Bug Fixes
+
+* **loyalty_systems:** add validity_period to abocard system #API-1017 ([e172dd2](https://github.com/tillhub/schemas/commit/e172dd2)), closes [#API-1017](https://github.com/tillhub/schemas/issues/API-1017)
+
 # [6.90.0](https://github.com/tillhub/schemas/compare/v6.89.2...v6.90.0) (2021-09-22)
 
 

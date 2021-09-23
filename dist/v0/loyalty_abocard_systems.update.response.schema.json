@@ -84,6 +84,31 @@
               }
             ]
           },
+          "validity_period": {
+            "description": "Validity period of issued abocrads",
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "unit",
+              "value"
+            ],
+            "properties": {
+              "unit": {
+                "description": "The type of period",
+                "example": "years",
+                "type": "string",
+                "enum": [
+                  "years"
+                ]
+              },
+              "value": {
+                "description": "The period value in given units",
+                "example": 3,
+                "type": "number",
+                "minimum": 0
+              }
+            }
+          },
           "voucher_system": {
             "oneOf": [
               {
