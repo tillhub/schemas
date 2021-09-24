@@ -1,3 +1,10 @@
+# [6.91.0](https://github.com/tillhub/schemas/compare/v6.90.3...v6.91.0) (2021-09-24)
+
+
+### Features
+
+* **client-accounts:** add 'abocard_system' flag ([67e9e42](https://github.com/tillhub/schemas/commit/67e9e42))
+
 ## [6.90.3](https://github.com/tillhub/schemas/compare/v6.90.2...v6.90.3) (2021-09-23)
 
 
