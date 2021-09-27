@@ -1,3 +1,13 @@
+# [6.93.0](https://github.com/tillhub/schemas/compare/v6.92.0...v6.93.0) (2021-09-27)
+
+
+### Features
+
+* **configurations:** financials ([6c45475](https://github.com/tillhub/schemas/commit/6c45475))
+* **configurations:** searches ([274daa0](https://github.com/tillhub/schemas/commit/274daa0))
+* **configurations:** settings ([13890a3](https://github.com/tillhub/schemas/commit/13890a3))
+* **stock:** add configuration for negative stock behavior ([62d5df0](https://github.com/tillhub/schemas/commit/62d5df0))
+
 # [6.92.0](https://github.com/tillhub/schemas/compare/v6.91.0...v6.92.0) (2021-09-27)
 
 
