@@ -1,3 +1,12 @@
+# [6.92.0](https://github.com/tillhub/schemas/compare/v6.91.0...v6.92.0) (2021-09-27)
+
+
+### Features
+
+* API-1048 ([9970357](https://github.com/tillhub/schemas/commit/9970357))
+* **product:** external id also as uuid ([1fc9c81](https://github.com/tillhub/schemas/commit/1fc9c81))
+* **products:** change storefront uuid to external id ([32a2925](https://github.com/tillhub/schemas/commit/32a2925))
+
 # [6.91.0](https://github.com/tillhub/schemas/compare/v6.90.3...v6.91.0) (2021-09-24)
 
 

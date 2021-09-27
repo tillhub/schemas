@@ -1913,9 +1913,17 @@
             "type": "object",
             "properties": {
               "store_front": {
-                "description": "uuid of the Tillhub storeFront",
-                "type": "string",
-                "format": "uuid"
+                "description": "external storeFront id",
+                "oneOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "description": "uuid format for legacy reasons, knowing that the previous type contains it eitherway.",
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                ]
               },
               "product_id": {
                 "description": "the product ID given by external system, e.g. Ecwid",
