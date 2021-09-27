@@ -431,6 +431,18 @@
                             "format": "uuid",
                             "description": "The common identifier of this order process (to be found on all deltas as well -> \"order\")"
                           },
+                          "number": {
+                            "oneOf": [
+                              {
+                                "type": "integer",
+                                "example": 34,
+                                "description": "The counting number of the underlying order"
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          },
                           "started_at": {
                             "type": "string",
                             "format": "date-time",

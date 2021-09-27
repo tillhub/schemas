@@ -1,3 +1,10 @@
+# [6.94.0](https://github.com/tillhub/schemas/compare/v6.93.0...v6.94.0) (2021-09-27)
+
+
+### Features
+
+* **transactions:** legacy ([b2b9697](https://github.com/tillhub/schemas/commit/b2b9697))
+
 # [6.93.0](https://github.com/tillhub/schemas/compare/v6.92.0...v6.93.0) (2021-09-27)
 
 
