@@ -1,3 +1,10 @@
+# [6.96.0](https://github.com/tillhub/schemas/compare/v6.95.0...v6.96.0) (2021-09-28)
+
+
+### Features
+
+* **abocards:** remove reuired field abocard_system #API-1020 ([a78100a](https://github.com/tillhub/schemas/commit/a78100a)), closes [#API-1020](https://github.com/tillhub/schemas/issues/API-1020)
+
 # [6.95.0](https://github.com/tillhub/schemas/compare/v6.94.0...v6.95.0) (2021-09-28)
 
 

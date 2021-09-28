@@ -3,9 +3,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "additionalProperties": false,
   "type": "object",
-  "required": [
-    "abocard_system"
-  ],
+  "required": [],
   "properties": {
     "customer": {
       "oneOf": [
