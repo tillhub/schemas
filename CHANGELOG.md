@@ -1,3 +1,10 @@
+# [6.95.0](https://github.com/tillhub/schemas/compare/v6.94.0...v6.95.0) (2021-09-28)
+
+
+### Features
+
+* **abocards:** move abocard system to the response object #API-1020 ([20bc538](https://github.com/tillhub/schemas/commit/20bc538)), closes [#API-1020](https://github.com/tillhub/schemas/issues/API-1020)
+
 # [6.94.0](https://github.com/tillhub/schemas/compare/v6.93.0...v6.94.0) (2021-09-27)
 
 

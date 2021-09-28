@@ -60,12 +60,6 @@
             "format": "date-time",
             "example": "2019-03-17T21:12:04.849Z"
           },
-          "abocard_system": {
-            "description": "The abocard system UUID abocard belongs to",
-            "example": "3610eb8a-2d21-4034-9aa6-0a097a2ce5f2",
-            "type": "string",
-            "format": "uuid"
-          },
           "customer": {
             "oneOf": [
               {
@@ -78,6 +72,12 @@
                 "type": "null"
               }
             ]
+          },
+          "abocard_system": {
+            "description": "The abocard system UUID abocard belongs to",
+            "example": "3610eb8a-2d21-4034-9aa6-0a097a2ce5f2",
+            "type": "string",
+            "format": "uuid"
           },
           "active": {
             "description": "The abocard is active",

@@ -7,12 +7,6 @@
     "abocard_system"
   ],
   "properties": {
-    "abocard_system": {
-      "description": "The abocard system UUID abocard belongs to",
-      "example": "3610eb8a-2d21-4034-9aa6-0a097a2ce5f2",
-      "type": "string",
-      "format": "uuid"
-    },
     "customer": {
       "oneOf": [
         {
