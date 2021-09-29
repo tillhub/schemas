@@ -1,3 +1,10 @@
+# [6.97.0](https://github.com/tillhub/schemas/compare/v6.96.0...v6.97.0) (2021-09-29)
+
+
+### Features
+
+* **loyalty_abocard_systems:** properties ([5312463](https://github.com/tillhub/schemas/commit/5312463))
+
 # [6.96.0](https://github.com/tillhub/schemas/compare/v6.95.0...v6.96.0) (2021-09-28)
 
 
