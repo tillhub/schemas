@@ -275,6 +275,10 @@
         "takeaway": {
           "type": "boolean",
           "default": false
+        },
+        "abocard": {
+          "type": "boolean",
+          "default": false
         }
       }
     },

@@ -45,6 +45,21 @@
       "items": {
         "type": "object",
         "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "example": "936835f7-2d75-41d2-9001-38ed6e458328"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2019-03-17T21:12:04.849Z"
+          },
+          "updated_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2019-03-17T21:12:04.849Z"
+          },
           "deleted": {
             "type": "boolean"
           },
@@ -68,6 +83,33 @@
                 "type": "null"
               }
             ]
+          },
+          "validity_period": {
+            "description": "Validity period of issued abocrads",
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "unit",
+              "value"
+            ],
+            "properties": {
+              "unit": {
+                "description": "The type of period",
+                "example": "years",
+                "type": "string",
+                "enum": [
+                  "years"
+                ],
+                "default": "years"
+              },
+              "value": {
+                "description": "The period value in given units",
+                "example": 3,
+                "type": "number",
+                "minimum": 1,
+                "default": 3
+              }
+            }
           },
           "voucher_system": {
             "oneOf": [
@@ -1522,6 +1564,25 @@
                   "type": "string",
                   "format": "uuid"
                 }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "currency_iso_code": {
+            "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this abocard system.",
+            "example": "EUR",
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 3
+          },
+          "requires_customer": {
+            "oneOf": [
+              {
+                "description": "Defines whether assigning a customer is required for creation actions within this system.",
+                "type": "boolean",
+                "default": "false"
               },
               {
                 "type": "null"

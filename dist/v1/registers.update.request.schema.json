@@ -280,6 +280,21 @@
                       "example": "cfb5afbb-dcce-4376-9152-6bb7ee01a0dd",
                       "format": "uuid"
                     },
+                    "tss_admin_puk": {
+                      "type": "string",
+                      "description": "PUK for setting PIN.",
+                      "example": "9076066923"
+                    },
+                    "tss_admin_pin": {
+                      "type": "string",
+                      "description": "PIN for authentication of admin requests.",
+                      "example": "1234567890"
+                    },
+                    "time_creation_s": {
+                      "type": "integer",
+                      "description": "The Unix epoch timestamp in seconds",
+                      "example": 1632384153
+                    },
                     "client_id": {
                       "type": "string",
                       "description": "UUID4 of the register according to the signing unit. Must be uniquely generated on the dashboard.",
@@ -300,6 +315,35 @@
                       "type": "string",
                       "description": "Per fiskaly account: secret for their API",
                       "example": "QmSgQtMNfm0uZjVedM1BvqGRIQ3D9wjclLYDZcXPZve"
+                    },
+                    "api_version": {
+                      "oneOf": [
+                        {
+                          "description": "Fiskaly account API version",
+                          "type": "string",
+                          "enum": [
+                            "v1",
+                            "v2"
+                          ],
+                          "default": "v1"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "base_url": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "description": "A custom Fiskaly API endpoint. If not set, the POS will use the version specific default endpoint.",
+                          "example": "https://kassensichv-middleware.fiskaly.com/api/v2/",
+                          "default": null
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
                     },
                     "client_timeout_ms": {
                       "oneOf": [

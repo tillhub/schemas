@@ -1,3 +1,107 @@
+# [6.97.0](https://github.com/tillhub/schemas/compare/v6.96.0...v6.97.0) (2021-09-29)
+
+
+### Features
+
+* **loyalty_abocard_systems:** properties ([5312463](https://github.com/tillhub/schemas/commit/5312463))
+
+# [6.96.0](https://github.com/tillhub/schemas/compare/v6.95.0...v6.96.0) (2021-09-28)
+
+
+### Features
+
+* **abocards:** remove reuired field abocard_system #API-1020 ([a78100a](https://github.com/tillhub/schemas/commit/a78100a)), closes [#API-1020](https://github.com/tillhub/schemas/issues/API-1020)
+
+# [6.95.0](https://github.com/tillhub/schemas/compare/v6.94.0...v6.95.0) (2021-09-28)
+
+
+### Features
+
+* **abocards:** move abocard system to the response object #API-1020 ([20bc538](https://github.com/tillhub/schemas/commit/20bc538)), closes [#API-1020](https://github.com/tillhub/schemas/issues/API-1020)
+
+# [6.94.0](https://github.com/tillhub/schemas/compare/v6.93.0...v6.94.0) (2021-09-27)
+
+
+### Features
+
+* **transactions:** legacy ([b2b9697](https://github.com/tillhub/schemas/commit/b2b9697))
+
+# [6.93.0](https://github.com/tillhub/schemas/compare/v6.92.0...v6.93.0) (2021-09-27)
+
+
+### Features
+
+* **configurations:** financials ([6c45475](https://github.com/tillhub/schemas/commit/6c45475))
+* **configurations:** searches ([274daa0](https://github.com/tillhub/schemas/commit/274daa0))
+* **configurations:** settings ([13890a3](https://github.com/tillhub/schemas/commit/13890a3))
+* **stock:** add configuration for negative stock behavior ([62d5df0](https://github.com/tillhub/schemas/commit/62d5df0))
+
+# [6.92.0](https://github.com/tillhub/schemas/compare/v6.91.0...v6.92.0) (2021-09-27)
+
+
+### Features
+
+* API-1048 ([9970357](https://github.com/tillhub/schemas/commit/9970357))
+* **product:** external id also as uuid ([1fc9c81](https://github.com/tillhub/schemas/commit/1fc9c81))
+* **products:** change storefront uuid to external id ([32a2925](https://github.com/tillhub/schemas/commit/32a2925))
+
+# [6.91.0](https://github.com/tillhub/schemas/compare/v6.90.3...v6.91.0) (2021-09-24)
+
+
+### Features
+
+* **client-accounts:** add 'abocard_system' flag ([67e9e42](https://github.com/tillhub/schemas/commit/67e9e42))
+
+## [6.90.3](https://github.com/tillhub/schemas/compare/v6.90.2...v6.90.3) (2021-09-23)
+
+
+### Bug Fixes
+
+* **loyalty_systems:** add abocard create schema #API-1020 ([#623](https://github.com/tillhub/schemas/issues/623)) ([a1fbc45](https://github.com/tillhub/schemas/commit/a1fbc45)), closes [#API-1020](https://github.com/tillhub/schemas/issues/API-1020) [#API-1020](https://github.com/tillhub/schemas/issues/API-1020)
+
+## [6.90.2](https://github.com/tillhub/schemas/compare/v6.90.1...v6.90.2) (2021-09-23)
+
+
+### Bug Fixes
+
+* **loyalty_systems:** adjust min value for abocard system validity pe… ([#624](https://github.com/tillhub/schemas/issues/624)) ([be1b62e](https://github.com/tillhub/schemas/commit/be1b62e)), closes [#API-1017](https://github.com/tillhub/schemas/issues/API-1017)
+
+## [6.90.1](https://github.com/tillhub/schemas/compare/v6.90.0...v6.90.1) (2021-09-23)
+
+
+### Bug Fixes
+
+* **loyalty_systems:** add validity_period to abocard system #API-1017 ([e172dd2](https://github.com/tillhub/schemas/commit/e172dd2)), closes [#API-1017](https://github.com/tillhub/schemas/issues/API-1017)
+
+# [6.90.0](https://github.com/tillhub/schemas/compare/v6.89.2...v6.90.0) (2021-09-22)
+
+
+### Features
+
+* **configurations:** products ([#621](https://github.com/tillhub/schemas/issues/621)) ([ebc8268](https://github.com/tillhub/schemas/commit/ebc8268))
+
+## [6.89.2](https://github.com/tillhub/schemas/compare/v6.89.1...v6.89.2) (2021-09-22)
+
+
+### Bug Fixes
+
+* **loyalty_systems:** promote base object for base response for abocrds system #API-1017 ([5a8e7e4](https://github.com/tillhub/schemas/commit/5a8e7e4)), closes [#API-1017](https://github.com/tillhub/schemas/issues/API-1017)
+
+## [6.89.1](https://github.com/tillhub/schemas/compare/v6.89.0...v6.89.1) (2021-09-21)
+
+
+### Bug Fixes
+
+* hijacked configuration param properly described ([c21090c](https://github.com/tillhub/schemas/commit/c21090c))
+
+# [6.89.0](https://github.com/tillhub/schemas/compare/v6.88.0...v6.89.0) (2021-09-21)
+
+
+### Features
+
+* **fiscal signing:** add base_url ([90d2f67](https://github.com/tillhub/schemas/commit/90d2f67))
+* **fiscal_signing:** add api version ([b1dc80f](https://github.com/tillhub/schemas/commit/b1dc80f))
+
 # [6.88.0](https://github.com/tillhub/schemas/compare/v6.87.1...v6.88.0) (2021-09-21)
 
 

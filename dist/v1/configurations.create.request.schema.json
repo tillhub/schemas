@@ -642,6 +642,18 @@
                       "type": "null"
                     }
                   ]
+                },
+                "allow_editing_refund_items": {
+                  "oneOf": [
+                    {
+                      "description": "In case of refund items - specifies if quantity and price can be edited",
+                      "type": "boolean",
+                      "default": false
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
                 }
               }
             },
@@ -2035,6 +2047,22 @@
                 }
               ]
             },
+            "vat_base": {
+              "oneOf": [
+                {
+                  "description": "Specifies on which level the precise VAT calculation is performed (before rounding)",
+                  "type": "string",
+                  "enum": [
+                    "items",
+                    "cart"
+                  ],
+                  "default": "items"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
             "roundings": {
               "oneOf": [
                 {
@@ -2341,69 +2369,64 @@
         },
         {
           "type": "object",
+          "additionalProperties": true,
           "properties": {
-            "customer_number_template": {
-              "description": "A Tillhub string pattern that allows for parameterized customer number generation",
+            "minimum_check_enabled": {
+              "description": "Enable email notifications on the client accounts email address, when a product's stock sinks below the defined stock minimum.",
               "oneOf": [
                 {
                   "type": "null"
                 },
-                {
-                  "type": "string",
-                  "minLength": 4,
-                  "maxLength": 512
-                }
-              ]
-            },
-            "generate_customer_number": {
-              "description": "The toggle to opt-in or -out of the customer number generation. Send this as query parameter on creation: ?generate_customer_number=true",
-              "type": "boolean",
-              "default": "false"
-            },
-            "customer_number_type": {
-              "type": "string",
-              "enum": [
-                "franchise"
-              ]
-            },
-            "auto_customer_number_enabled": {
-              "type": "string",
-              "enum": [
-                "true",
-                "false",
-                "optional"
-              ],
-              "default": "false"
-            },
-            "customers_per_branch": {
-              "type": "boolean",
-              "default": false
-            },
-            "default_branch": {
-              "oneOf": [
-                {
-                  "type": "string",
-                  "format": "uuid"
-                },
-                {
-                  "type": "null"
-                }
-              ]
-            },
-            "custom_export": {
-              "type": "boolean",
-              "default": false
-            },
-            "customer_add_policy": {
-              "description": "The customer selection screen will be presented automatically before or after a sale (or not in case of none).",
-              "oneOf": [
                 {
                   "type": "string",
                   "enum": [
-                    "after",
-                    "before",
-                    "none"
+                    "false",
+                    "true"
                   ]
+                },
+                {
+                  "type": "boolean"
+                }
+              ]
+            },
+            "pos": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "description": "Stock configurations for POS clients",
+                  "properties": {
+                    "sale": {
+                      "oneOf": [
+                        {
+                          "type": "object",
+                          "description": "Sale stock restrictions",
+                          "additionalProperties": true,
+                          "properties": {
+                            "negative_stock_behavior": {
+                              "oneOf": [
+                                {
+                                  "type": "string",
+                                  "description": "Defines behavior if products with negative stock can be sold.",
+                                  "enum": [
+                                    "ignore",
+                                    "warning",
+                                    "block"
+                                  ],
+                                  "default": "ignore"
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            }
+                          }
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  }
                 },
                 {
                   "type": "null"
@@ -2581,6 +2604,11 @@
                       "default": false
                     }
                   ]
+                },
+                "attributes_in_name": {
+                  "description": "Defines whether a child product inherits attributes as part of the product name",
+                  "type": "boolean",
+                  "default": true
                 },
                 "auto_product_number_enabled": {
                   "description": "If true, product id will be generated automatically",
@@ -8030,6 +8058,56 @@
                   }
                 }
               }
+            },
+            "history": {
+              "oneOf": [
+                {
+                  "description": "Transaction history view",
+                  "type": "object",
+                  "properties": {
+                    "search_field": {
+                      "oneOf": [
+                        {
+                          "description": "Search text field for the full list",
+                          "type": "object",
+                          "properties": {
+                            "transaction_number": {
+                              "oneOf": [
+                                {
+                                  "description": "If true and the search text qualifies as an integer number - search for transactions with that transaction number",
+                                  "type": "boolean",
+                                  "default": true
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "transaction_total": {
+                              "oneOf": [
+                                {
+                                  "description": "If true and the search text qualifies as a decimal number - search for transactions with that total amount",
+                                  "type": "boolean",
+                                  "default": false
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            }
+                          }
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
             }
           }
         }
