@@ -2425,6 +2425,43 @@
                           "type": "null"
                         }
                       ]
+                    },
+                    "booking": {
+                      "oneOf": [
+                        {
+                          "type": "object",
+                          "description": "Restrictions on actively booking stock from th POS",
+                          "properties": {
+                            "increment_reason_required": {
+                              "oneOf": [
+                                {
+                                  "type": "boolean",
+                                  "description": "Defines if reasons are mandatory for increasing stock",
+                                  "default": false
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "decrement_reason_required": {
+                              "oneOf": [
+                                {
+                                  "type": "boolean",
+                                  "description": "Defines if reasons are mandatory for lowering stock",
+                                  "default": false
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            }
+                          }
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
                     }
                   }
                 },
@@ -2451,6 +2488,18 @@
               "description": "Allows refunding transactions from different branches",
               "type": "boolean",
               "default": false
+            },
+            "refund_reason_required": {
+              "oneOf": [
+                {
+                  "type": "boolean",
+                  "description": "Defines if reasons are mandatory for refunding items from a previous transaction",
+                  "default": true
+                },
+                {
+                  "type": "null"
+                }
+              ]
             },
             "signing": {
               "type": "object",

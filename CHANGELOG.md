@@ -1,3 +1,11 @@
+# [6.98.0](https://github.com/tillhub/schemas/compare/v6.97.0...v6.98.0) (2021-10-06)
+
+
+### Features
+
+* **configurations:** stock ([80ce87a](https://github.com/tillhub/schemas/commit/80ce87a))
+* **configurations:** transactions ([1dd97fb](https://github.com/tillhub/schemas/commit/1dd97fb))
+
 # [6.97.0](https://github.com/tillhub/schemas/compare/v6.96.0...v6.97.0) (2021-09-29)
 
 
