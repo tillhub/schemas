@@ -1,3 +1,10 @@
+## [6.98.1](https://github.com/tillhub/schemas/compare/v6.98.0...v6.98.1) (2021-10-08)
+
+
+### Bug Fixes
+
+* **configurations:** payback ([da10e00](https://github.com/tillhub/schemas/commit/da10e00))
+
 # [6.98.0](https://github.com/tillhub/schemas/compare/v6.97.0...v6.98.0) (2021-10-06)
 
 

@@ -1425,81 +1425,6 @@
                 "voucher_systems"
               ],
               "default": "configurations"
-            },
-            "apollo": {
-              "oneOf": [
-                {
-                  "type": "object",
-                  "additionalProperties": false,
-                  "properties": {
-                    "payback": {
-                      "oneOf": [
-                        {
-                          "description": "Payback behavior configuration",
-                          "type": "object",
-                          "additionalProperties": false,
-                          "properties": {
-                            "prompt": {
-                              "description": "If true - show a prompt that asks the customer for a payback number",
-                              "type": "boolean",
-                              "default": false
-                            },
-                            "number_format": {
-                              "description": "The format of the customer payback number that is being validated against the input",
-                              "type": "string",
-                              "format": "regex",
-                              "example": "^[_A-Za-z0-9-+]+(\\.[_A-Za-z0-9-+]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z‌​]{2,})$",
-                              "default": "^[0-9]{10}$"
-                            },
-                            "number_length_max": {
-                              "description": "The maxiumum length of a customer payback number (as a helper for the UI)",
-                              "type": "integer",
-                              "minimum": 2,
-                              "maximum": 99,
-                              "default": 10
-                            }
-                          }
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ]
-                    },
-                    "custom_order_receipt": {
-                      "description": "Temporary feature for the Apollo test phase",
-                      "type": "object",
-                      "additionalProperties": false,
-                      "properties": {
-                        "enabled": {
-                          "type": "boolean",
-                          "default": false
-                        },
-                        "endpoint": {
-                          "type": "string",
-                          "format": "url",
-                          "example": "https://arboreal-groove-198520.appspot.com/orders"
-                        },
-                        "parameters": {
-                          "items": {
-                            "type": "string",
-                            "example": "branch",
-                            "enum": [
-                              "branch"
-                            ]
-                          }
-                        },
-                        "token": {
-                          "type": "string",
-                          "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImluZm9AYXBvbGxvLmRlIiwiZXhwIjoxNjAwNTE4MzMwLCJpYXQiOjE1OTA1MTgzMzAsImlqdCI6IjY5Yzc1ZTBlLWM4MTMtNGFkMS1hMDU1LWJjZDYyODA4MTYyMSIsImlzcyI6ImV5SmhiR2NpT2lKSVV6STFOaUlzSW5SNWNDSTZJa3BYVkNKOSIsIm5iZiI6MTU5MDUxODMzMCwidWlkIjoiNjljNzVlMGUtYzgxMy00YWQxLWEwNTUtYmNkNjI4MDgxNjIxIiwidXVpZCI6IjY5Yzc1ZTBlLWM4MTMtNGFkMS1hMDU1LWJjZDYyODA4MTYyMSJ9.3_WlUPW8mFza-VDne425EP40QeWmtkmh8Q7sjBu2W_4"
-                        }
-                      }
-                    }
-                  }
-                },
-                {
-                  "type": "null"
-                }
-              ]
             }
           }
         }
@@ -2257,6 +2182,39 @@
                           "type": "null"
                         }
                       ]
+                    }
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "payback": {
+              "oneOf": [
+                {
+                  "description": "Payback.de behavior configuration",
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "prompt": {
+                      "description": "If true - show a prompt that asks the customer for a payback number",
+                      "type": "boolean",
+                      "default": false
+                    },
+                    "number_format": {
+                      "description": "The format of the customer payback number that is being validated against the input",
+                      "type": "string",
+                      "format": "regex",
+                      "example": "^[_A-Za-z0-9-+]+(\\.[_A-Za-z0-9-+]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z‌​]{2,})$",
+                      "default": "^[0-9]{10}$"
+                    },
+                    "number_length_max": {
+                      "description": "The maxiumum length of a customer payback number (as a helper for the UI)",
+                      "type": "integer",
+                      "minimum": 2,
+                      "maximum": 99,
+                      "default": 10
                     }
                   }
                 },
