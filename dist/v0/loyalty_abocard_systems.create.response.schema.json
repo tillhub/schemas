@@ -1569,6 +1569,25 @@
                 "type": "null"
               }
             ]
+          },
+          "currency_iso_code": {
+            "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this abocard system.",
+            "example": "EUR",
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 3
+          },
+          "requires_customer": {
+            "oneOf": [
+              {
+                "description": "Defines whether assigning a customer is required for creation actions within this system.",
+                "type": "boolean",
+                "default": "false"
+              },
+              {
+                "type": "null"
+              }
+            ]
           }
         }
       }

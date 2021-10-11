@@ -1,3 +1,25 @@
+## [6.98.1](https://github.com/tillhub/schemas/compare/v6.98.0...v6.98.1) (2021-10-08)
+
+
+### Bug Fixes
+
+* **configurations:** payback ([da10e00](https://github.com/tillhub/schemas/commit/da10e00))
+
+# [6.98.0](https://github.com/tillhub/schemas/compare/v6.97.0...v6.98.0) (2021-10-06)
+
+
+### Features
+
+* **configurations:** stock ([80ce87a](https://github.com/tillhub/schemas/commit/80ce87a))
+* **configurations:** transactions ([1dd97fb](https://github.com/tillhub/schemas/commit/1dd97fb))
+
+# [6.97.0](https://github.com/tillhub/schemas/compare/v6.96.0...v6.97.0) (2021-09-29)
+
+
+### Features
+
+* **loyalty_abocard_systems:** properties ([5312463](https://github.com/tillhub/schemas/commit/5312463))
+
 # [6.96.0](https://github.com/tillhub/schemas/compare/v6.95.0...v6.96.0) (2021-09-28)
 
 

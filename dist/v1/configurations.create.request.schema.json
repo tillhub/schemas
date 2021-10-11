@@ -1425,81 +1425,6 @@
                 "voucher_systems"
               ],
               "default": "configurations"
-            },
-            "apollo": {
-              "oneOf": [
-                {
-                  "type": "object",
-                  "additionalProperties": false,
-                  "properties": {
-                    "payback": {
-                      "oneOf": [
-                        {
-                          "description": "Payback behavior configuration",
-                          "type": "object",
-                          "additionalProperties": false,
-                          "properties": {
-                            "prompt": {
-                              "description": "If true - show a prompt that asks the customer for a payback number",
-                              "type": "boolean",
-                              "default": false
-                            },
-                            "number_format": {
-                              "description": "The format of the customer payback number that is being validated against the input",
-                              "type": "string",
-                              "format": "regex",
-                              "example": "^[_A-Za-z0-9-+]+(\\.[_A-Za-z0-9-+]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z‌​]{2,})$",
-                              "default": "^[0-9]{10}$"
-                            },
-                            "number_length_max": {
-                              "description": "The maxiumum length of a customer payback number (as a helper for the UI)",
-                              "type": "integer",
-                              "minimum": 2,
-                              "maximum": 99,
-                              "default": 10
-                            }
-                          }
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ]
-                    },
-                    "custom_order_receipt": {
-                      "description": "Temporary feature for the Apollo test phase",
-                      "type": "object",
-                      "additionalProperties": false,
-                      "properties": {
-                        "enabled": {
-                          "type": "boolean",
-                          "default": false
-                        },
-                        "endpoint": {
-                          "type": "string",
-                          "format": "url",
-                          "example": "https://arboreal-groove-198520.appspot.com/orders"
-                        },
-                        "parameters": {
-                          "items": {
-                            "type": "string",
-                            "example": "branch",
-                            "enum": [
-                              "branch"
-                            ]
-                          }
-                        },
-                        "token": {
-                          "type": "string",
-                          "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImluZm9AYXBvbGxvLmRlIiwiZXhwIjoxNjAwNTE4MzMwLCJpYXQiOjE1OTA1MTgzMzAsImlqdCI6IjY5Yzc1ZTBlLWM4MTMtNGFkMS1hMDU1LWJjZDYyODA4MTYyMSIsImlzcyI6ImV5SmhiR2NpT2lKSVV6STFOaUlzSW5SNWNDSTZJa3BYVkNKOSIsIm5iZiI6MTU5MDUxODMzMCwidWlkIjoiNjljNzVlMGUtYzgxMy00YWQxLWEwNTUtYmNkNjI4MDgxNjIxIiwidXVpZCI6IjY5Yzc1ZTBlLWM4MTMtNGFkMS1hMDU1LWJjZDYyODA4MTYyMSJ9.3_WlUPW8mFza-VDne425EP40QeWmtkmh8Q7sjBu2W_4"
-                        }
-                      }
-                    }
-                  }
-                },
-                {
-                  "type": "null"
-                }
-              ]
             }
           }
         }
@@ -2265,6 +2190,39 @@
                 }
               ]
             },
+            "payback": {
+              "oneOf": [
+                {
+                  "description": "Payback.de behavior configuration",
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "prompt": {
+                      "description": "If true - show a prompt that asks the customer for a payback number",
+                      "type": "boolean",
+                      "default": false
+                    },
+                    "number_format": {
+                      "description": "The format of the customer payback number that is being validated against the input",
+                      "type": "string",
+                      "format": "regex",
+                      "example": "^[_A-Za-z0-9-+]+(\\.[_A-Za-z0-9-+]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z‌​]{2,})$",
+                      "default": "^[0-9]{10}$"
+                    },
+                    "number_length_max": {
+                      "description": "The maxiumum length of a customer payback number (as a helper for the UI)",
+                      "type": "integer",
+                      "minimum": 2,
+                      "maximum": 99,
+                      "default": 10
+                    }
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
             "split_receipt": {
               "oneOf": [
                 {
@@ -2425,6 +2383,43 @@
                           "type": "null"
                         }
                       ]
+                    },
+                    "booking": {
+                      "oneOf": [
+                        {
+                          "type": "object",
+                          "description": "Restrictions on actively booking stock from th POS",
+                          "properties": {
+                            "increment_reason_required": {
+                              "oneOf": [
+                                {
+                                  "type": "boolean",
+                                  "description": "Defines if reasons are mandatory for increasing stock",
+                                  "default": false
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "decrement_reason_required": {
+                              "oneOf": [
+                                {
+                                  "type": "boolean",
+                                  "description": "Defines if reasons are mandatory for lowering stock",
+                                  "default": false
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            }
+                          }
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
                     }
                   }
                 },
@@ -2451,6 +2446,18 @@
               "description": "Allows refunding transactions from different branches",
               "type": "boolean",
               "default": false
+            },
+            "refund_reason_required": {
+              "oneOf": [
+                {
+                  "type": "boolean",
+                  "description": "Defines if reasons are mandatory for refunding items from a previous transaction",
+                  "default": true
+                },
+                {
+                  "type": "null"
+                }
+              ]
             },
             "signing": {
               "type": "object",
