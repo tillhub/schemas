@@ -87,19 +87,33 @@
       "default": []
     },
     "registers": {
-      "type": "array",
-      "items": {
-        "type": "string",
-        "format": "uuid"
-      },
+      "oneOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ],
       "default": []
     },
     "branches": {
-      "type": "array",
-      "items": {
-        "type": "string",
-        "format": "uuid"
-      },
+      "oneOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ],
       "default": []
     },
     "name": {

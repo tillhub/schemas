@@ -1,3 +1,10 @@
+## [6.98.2](https://github.com/tillhub/schemas/compare/v6.98.1...v6.98.2) (2021-10-13)
+
+
+### Bug Fixes
+
+* **favourites:** Allow null values for some fields on favourite creation ([#637](https://github.com/tillhub/schemas/issues/637)) ([5989cad](https://github.com/tillhub/schemas/commit/5989cad))
+
 ## [6.98.1](https://github.com/tillhub/schemas/compare/v6.98.0...v6.98.1) (2021-10-08)
 
 
