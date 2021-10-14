@@ -7379,6 +7379,23 @@
                 }
               ]
             },
+            "open_orders_policy": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "description": "Defines behavior if there are open orders when conducting a balance.",
+                  "enum": [
+                    "ignore",
+                    "warning",
+                    "block"
+                  ],
+                  "default": "ignore"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
             "strict_submission": {
               "oneOf": [
                 {
