@@ -1713,8 +1713,15 @@
       ]
     },
     "serial_number_input_required": {
-      "description": "Define whether a product requires to enter a serial number during the sale",
-      "type": "boolean",
+      "oneOf": [
+        {
+          "description": "Define whether a product requires to enter a serial number during the sale",
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ],
       "default": false
     },
     "shipping_required": {

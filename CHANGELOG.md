@@ -1,3 +1,10 @@
+# [6.100.0](https://github.com/tillhub/schemas/compare/v6.99.0...v6.100.0) (2021-10-20)
+
+
+### Features
+
+* **products:** making `serial_number_input_required` optional ([#638](https://github.com/tillhub/schemas/issues/638)) ([2248cff](https://github.com/tillhub/schemas/commit/2248cff))
+
 # [6.99.0](https://github.com/tillhub/schemas/compare/v6.98.2...v6.99.0) (2021-10-14)
 
 
