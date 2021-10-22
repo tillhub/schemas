@@ -1,3 +1,10 @@
+## [6.100.1](https://github.com/tillhub/schemas/compare/v6.100.0...v6.100.1) (2021-10-22)
+
+
+### Bug Fixes
+
+* **products:** Products search request schema added ([#639](https://github.com/tillhub/schemas/issues/639)) ([2f0eef0](https://github.com/tillhub/schemas/commit/2f0eef0))
+
 # [6.100.0](https://github.com/tillhub/schemas/compare/v6.99.0...v6.100.0) (2021-10-20)
 
 
