@@ -1,3 +1,10 @@
+## [6.100.3](https://github.com/tillhub/schemas/compare/v6.100.2...v6.100.3) (2021-10-22)
+
+
+### Bug Fixes
+
+* **products:** q is required property in products search request chema ([#641](https://github.com/tillhub/schemas/issues/641)) ([ceb3019](https://github.com/tillhub/schemas/commit/ceb3019))
+
 ## [6.100.2](https://github.com/tillhub/schemas/compare/v6.100.1...v6.100.2) (2021-10-22)
 
 
