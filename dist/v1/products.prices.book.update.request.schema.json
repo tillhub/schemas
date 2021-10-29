@@ -434,6 +434,21 @@
         }
       ]
     },
+    "branch_groups": {
+      "oneOf": [
+        {
+          "description": "If defined then only these branch groups (plus specified locations if any) will be using this price book",
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "active": {
       "type": "boolean"
     },

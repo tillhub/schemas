@@ -1,3 +1,10 @@
+# [6.101.0](https://github.com/tillhub/schemas/compare/v6.100.3...v6.101.0) (2021-10-29)
+
+
+### Features
+
+* **pricebooks:** add branch groups #API-1115 ([fac9fd0](https://github.com/tillhub/schemas/commit/fac9fd0)), closes [#API-1115](https://github.com/tillhub/schemas/issues/API-1115)
+
 ## [6.100.3](https://github.com/tillhub/schemas/compare/v6.100.2...v6.100.3) (2021-10-22)
 
 
