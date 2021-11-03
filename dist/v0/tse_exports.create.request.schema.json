@@ -4,32 +4,32 @@
   "additionalProperties": false,
   "required": [
     "tse_serial_number",
-    "balance_client_id"
+    "export"
   ],
   "properties": {
     "client_id": {
-      "description": "An identifier used locally on POS for their own reference.",
+      "description": "An identifier used locally on POS for their own reference. Guaranteed to be there",
+      "type": "string",
+      "maxLength": 128
+    },
+    "balance_client_id": {
       "oneOf": [
         {
           "type": "string",
-          "maxLength": 128
+          "maxLength": 128,
+          "description": "A reference to the balance this exports belongs to. Can be omitted for archives."
         },
         {
           "type": "null"
         }
       ]
     },
-    "balance_client_id": {
-      "type": "string",
-      "maxLength": 128,
-      "description": "A reference to the balance this exports belongs to."
-    },
     "balance_number": {
       "oneOf": [
         {
           "type": "integer",
           "example": 5,
-          "description": "The associated balance's counting number (receipt number) of this export"
+          "description": "The associated balance's counting number (receipt number) of this export. Can be omitted for archives."
         },
         {
           "type": "null"
@@ -86,21 +86,18 @@
     "export": {
       "type": "object",
       "properties": {
-        "transaction_number_first": {
-          "type": "integer",
-          "example": 15,
-          "description": "The first TSE transaction number in this export"
-        },
-        "transaction_number_last": {
-          "type": "integer",
-          "example": 19,
-          "description": "The last TSE transaction number in this export"
-        },
         "date_start": {
-          "description": "Daterange start of the export.",
-          "type": "string",
-          "format": "date-time",
-          "example": "2020-10-17T08:12:04.849Z"
+          "oneOf": [
+            {
+              "description": "Daterange start of the export, omitted for archives.",
+              "type": "string",
+              "format": "date-time",
+              "example": "2020-10-17T08:12:04.849Z"
+            },
+            {
+              "type": "null"
+            }
+          ]
         },
         "date_end": {
           "description": "Daterange end of the export.",
@@ -109,24 +106,24 @@
           "example": "2020-10-17T21:12:04.849Z"
         },
         "url": {
-          "description": "URL of the uploaded export tar file.",
-          "type": "string",
-          "format": "uri"
+          "oneOf": [
+            {
+              "description": "URL of the uploaded export tar file.",
+              "type": "string",
+              "format": "uri"
+            },
+            {
+              "type": "null"
+            }
+          ]
         },
         "type": {
           "type": "string",
           "enum": [
             "archive",
-            "number",
-            "number_interval",
             "time_period"
           ],
           "default": "time_period"
-        },
-        "client_id": {
-          "description": "An identifier used locally on the POS for their own reference.",
-          "type": "string",
-          "maxLength": 128
         }
       }
     }

@@ -1,3 +1,10 @@
+# [6.102.0](https://github.com/tillhub/schemas/compare/v6.101.0...v6.102.0) (2021-11-03)
+
+
+### Features
+
+* **pricebook:** add lowest_price, highest_price ([2c55b20](https://github.com/tillhub/schemas/commit/2c55b20))
+
 # [6.101.0](https://github.com/tillhub/schemas/compare/v6.100.3...v6.101.0) (2021-10-29)
 
 
