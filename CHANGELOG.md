@@ -1,3 +1,10 @@
+# [6.103.0](https://github.com/tillhub/schemas/compare/v6.102.0...v6.103.0) (2021-11-08)
+
+
+### Features
+
+* **product_addons:** Extend add-ons with editable quantity functionality ([#645](https://github.com/tillhub/schemas/issues/645)) ([ba8a564](https://github.com/tillhub/schemas/commit/ba8a564))
+
 # [6.102.0](https://github.com/tillhub/schemas/compare/v6.101.0...v6.102.0) (2021-11-03)
 
 
