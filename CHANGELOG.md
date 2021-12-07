@@ -1,3 +1,10 @@
+# [6.104.0](https://github.com/tillhub/schemas/compare/v6.103.0...v6.104.0) (2021-12-07)
+
+
+### Features
+
+* **safes:** add pos_to_safe_cancel ([2f0dfda](https://github.com/tillhub/schemas/commit/2f0dfda))
+
 # [6.103.0](https://github.com/tillhub/schemas/compare/v6.102.0...v6.103.0) (2021-11-08)
 
 
