@@ -1,3 +1,16 @@
+# [6.106.0](https://github.com/tillhub/schemas/compare/v6.105.0...v6.106.0) (2021-12-13)
+
+
+### Bug Fixes
+
+* **transactions:** items ([876dc02](https://github.com/tillhub/schemas/commit/876dc02))
+
+
+### Features
+
+* **transactions:** legacy ([eb5ae77](https://github.com/tillhub/schemas/commit/eb5ae77))
+* **transactions:** legacy ([910471b](https://github.com/tillhub/schemas/commit/910471b))
+
 # [6.105.0](https://github.com/tillhub/schemas/compare/v6.104.0...v6.105.0) (2021-12-13)
 
 
