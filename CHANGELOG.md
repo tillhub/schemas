@@ -1,3 +1,16 @@
+# [6.105.0](https://github.com/tillhub/schemas/compare/v6.104.0...v6.105.0) (2021-12-13)
+
+
+### Bug Fixes
+
+* **abocard-systems:** fixes due to linter ([49ddbc3](https://github.com/tillhub/schemas/commit/49ddbc3))
+
+
+### Features
+
+* **abocard:** Add "discount_type" and "selling_price_method" ([#649](https://github.com/tillhub/schemas/issues/649)) ([b2024de](https://github.com/tillhub/schemas/commit/b2024de))
+* **prices:** add actual prices schema #API-1257 ([2260e72](https://github.com/tillhub/schemas/commit/2260e72)), closes [#API-1257](https://github.com/tillhub/schemas/issues/API-1257)
+
 # [6.104.0](https://github.com/tillhub/schemas/compare/v6.103.0...v6.104.0) (2021-12-07)
 
 
