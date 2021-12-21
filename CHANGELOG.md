@@ -1,3 +1,10 @@
+# [6.107.0](https://github.com/tillhub/schemas/compare/v6.106.0...v6.107.0) (2021-12-21)
+
+
+### Features
+
+* **staffs:** Staff permissions from template instead of scopes ([#653](https://github.com/tillhub/schemas/issues/653)) ([821e7c5](https://github.com/tillhub/schemas/commit/821e7c5))
+
 # [6.106.0](https://github.com/tillhub/schemas/compare/v6.105.0...v6.106.0) (2021-12-13)
 
 
