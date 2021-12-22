@@ -1,3 +1,10 @@
+# [6.108.0](https://github.com/tillhub/schemas/compare/v6.107.0...v6.108.0) (2021-12-22)
+
+
+### Features
+
+* **pricebooks:** Add Price Books to untrash ([#654](https://github.com/tillhub/schemas/issues/654)) ([d7850b5](https://github.com/tillhub/schemas/commit/d7850b5))
+
 # [6.107.0](https://github.com/tillhub/schemas/compare/v6.106.0...v6.107.0) (2021-12-21)
 
 
