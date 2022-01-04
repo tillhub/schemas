@@ -1,3 +1,10 @@
+# [6.109.0](https://github.com/tillhub/schemas/compare/v6.108.0...v6.109.0) (2022-01-04)
+
+
+### Features
+
+* **expense_accounts:** add branch_groups ([8c8cefc](https://github.com/tillhub/schemas/commit/8c8cefc))
+
 # [6.108.0](https://github.com/tillhub/schemas/compare/v6.107.0...v6.108.0) (2021-12-22)
 
 

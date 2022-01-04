@@ -144,6 +144,20 @@
         }
       ]
     },
+    "branch_groups": {
+      "oneOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "accepts_booking_from_safe": {
       "type": "boolean",
       "default": false
