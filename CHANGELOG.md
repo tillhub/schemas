@@ -1,3 +1,15 @@
+# [6.110.0](https://github.com/tillhub/schemas/compare/v6.109.0...v6.110.0) (2022-01-04)
+
+
+### Bug Fixes
+
+* **abocard-systems:** add action name #API-1169 ([38e7d7f](https://github.com/tillhub/schemas/commit/38e7d7f)), closes [#API-1169](https://github.com/tillhub/schemas/issues/API-1169)
+
+
+### Features
+
+* **carts:** customers ([07cf41e](https://github.com/tillhub/schemas/commit/07cf41e))
+
 # [6.109.0](https://github.com/tillhub/schemas/compare/v6.108.0...v6.109.0) (2022-01-04)
 
 

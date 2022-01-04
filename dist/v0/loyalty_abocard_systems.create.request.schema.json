@@ -1268,6 +1268,11 @@
                   "sell"
                 ]
               },
+              "name": {
+                "description": "The abocard action name (usually the same as linked product)",
+                "type": "string",
+                "example": "Brainwashing"
+              },
               "product": {
                 "description": "The product associated with this action. Product gets created automatically when creating a abocard system and based on \"linked_product\" vat and \"system_revenue_account\" field values.",
                 "oneOf": [
