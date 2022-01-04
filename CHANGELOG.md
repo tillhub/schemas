@@ -1,3 +1,24 @@
+# [6.109.0](https://github.com/tillhub/schemas/compare/v6.108.0...v6.109.0) (2022-01-04)
+
+
+### Features
+
+* **expense_accounts:** add branch_groups ([8c8cefc](https://github.com/tillhub/schemas/commit/8c8cefc))
+
+# [6.108.0](https://github.com/tillhub/schemas/compare/v6.107.0...v6.108.0) (2021-12-22)
+
+
+### Features
+
+* **pricebooks:** Add Price Books to untrash ([#654](https://github.com/tillhub/schemas/issues/654)) ([d7850b5](https://github.com/tillhub/schemas/commit/d7850b5))
+
+# [6.107.0](https://github.com/tillhub/schemas/compare/v6.106.0...v6.107.0) (2021-12-21)
+
+
+### Features
+
+* **staffs:** Staff permissions from template instead of scopes ([#653](https://github.com/tillhub/schemas/issues/653)) ([821e7c5](https://github.com/tillhub/schemas/commit/821e7c5))
+
 # [6.106.0](https://github.com/tillhub/schemas/compare/v6.105.0...v6.106.0) (2021-12-13)
 
 
