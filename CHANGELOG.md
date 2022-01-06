@@ -1,3 +1,10 @@
+# [6.111.0](https://github.com/tillhub/schemas/compare/v6.110.0...v6.111.0) (2022-01-06)
+
+
+### Features
+
+* **discounts:** add branch_groups to discounts ([39cbd66](https://github.com/tillhub/schemas/commit/39cbd66))
+
 # [6.110.0](https://github.com/tillhub/schemas/compare/v6.109.0...v6.110.0) (2022-01-04)
 
 
