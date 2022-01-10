@@ -1,3 +1,10 @@
+# [6.112.0](https://github.com/tillhub/schemas/compare/v6.111.0...v6.112.0) (2022-01-10)
+
+
+### Features
+
+* **voucher_systems:** Add support for validity_period ([#660](https://github.com/tillhub/schemas/issues/660)) ([9ffdee4](https://github.com/tillhub/schemas/commit/9ffdee4))
+
 # [6.111.0](https://github.com/tillhub/schemas/compare/v6.110.0...v6.111.0) (2022-01-06)
 
 
