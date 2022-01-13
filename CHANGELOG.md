@@ -1,3 +1,10 @@
+## [6.112.1](https://github.com/tillhub/schemas/compare/v6.112.0...v6.112.1) (2022-01-13)
+
+
+### Bug Fixes
+
+* **staffs:** renaming user_permission_template_id to staff_permission_template_id ([#661](https://github.com/tillhub/schemas/issues/661)) ([6fbedb4](https://github.com/tillhub/schemas/commit/6fbedb4))
+
 # [6.112.0](https://github.com/tillhub/schemas/compare/v6.111.0...v6.112.0) (2022-01-10)
 
 
