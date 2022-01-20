@@ -1,3 +1,11 @@
+# [6.114.0](https://github.com/tillhub/schemas/compare/v6.113.0...v6.114.0) (2022-01-20)
+
+
+### Features
+
+* **configuration:** add background_release_seconds ([5ffec4d](https://github.com/tillhub/schemas/commit/5ffec4d))
+* **configurations:** gastro ([bdc4f0a](https://github.com/tillhub/schemas/commit/bdc4f0a))
+
 # [6.113.0](https://github.com/tillhub/schemas/compare/v6.112.1...v6.113.0) (2022-01-20)
 
 

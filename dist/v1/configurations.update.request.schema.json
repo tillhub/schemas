@@ -2306,6 +2306,31 @@
             {
               "type": "object",
               "properties": {
+                "remote_access": {
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "enabled": {
+                          "type": "boolean",
+                          "description": "defines whether remote access is available on the main POS.",
+                          "default": "false"
+                        },
+                        "background_release_seconds": {
+                          "description": "The time in seconds that the Local Server will stay available when the app is send to the background.",
+                          "type": "integer",
+                          "example": 15,
+                          "minimum": 0,
+                          "maximum": 3600,
+                          "default": 25
+                        }
+                      }
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
                 "lock_to_waiters": {
                   "oneOf": [
                     {
