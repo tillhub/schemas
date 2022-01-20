@@ -1,3 +1,14 @@
+# [6.115.0](https://github.com/tillhub/schemas/compare/v6.114.0...v6.115.0) (2022-01-20)
+
+
+### Features
+
+* **configurations:** gastro ([8d42bed](https://github.com/tillhub/schemas/commit/8d42bed))
+* **configurations:** gastro ([22a71cf](https://github.com/tillhub/schemas/commit/22a71cf))
+* **configurations:** gastro ([bf8546e](https://github.com/tillhub/schemas/commit/bf8546e))
+* **configurations:** interfaces ([25ffd1b](https://github.com/tillhub/schemas/commit/25ffd1b))
+* **configurations:** receipts ([2caf476](https://github.com/tillhub/schemas/commit/2caf476))
+
 # [6.114.0](https://github.com/tillhub/schemas/compare/v6.113.0...v6.114.0) (2022-01-20)
 
 

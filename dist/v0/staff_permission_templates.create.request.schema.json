@@ -143,7 +143,8 @@
                   "staff:staff:licenses:delete",
                   "staff:staff:processes:all_staff",
                   "staff:staff:processes:all_locations",
-                  "staff:staff:orders:others:locked:modify"
+                  "staff:staff:orders:others:locked:modify",
+                  "staff:staff:orders:preview:print"
                 ]
               },
               {
