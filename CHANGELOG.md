@@ -1,3 +1,11 @@
+# [6.113.0](https://github.com/tillhub/schemas/compare/v6.112.1...v6.113.0) (2022-01-20)
+
+
+### Features
+
+* **configurations:** features ([6cd1289](https://github.com/tillhub/schemas/commit/6cd1289))
+* **configurations:** features ([139876d](https://github.com/tillhub/schemas/commit/139876d))
+
 ## [6.112.1](https://github.com/tillhub/schemas/compare/v6.112.0...v6.112.1) (2022-01-13)
 
 
