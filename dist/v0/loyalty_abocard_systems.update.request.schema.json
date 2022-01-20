@@ -1233,6 +1233,35 @@
                   "type": "null"
                 }
               ]
+            },
+            "validity_period": {
+              "default": null,
+              "oneOf": [
+                {
+                  "description": "A user defined timeframe (e.g. 3 years) that is used to determine the next expires_at value after a charge (top-up).",
+                  "type": "object",
+                  "properties": {
+                    "unit": {
+                      "description": "Unit of the validity period.",
+                      "type": "string",
+                      "enum": [
+                        "days",
+                        "weeks",
+                        "months",
+                        "years"
+                      ]
+                    },
+                    "value": {
+                      "description": "The value of the validity period, defines a timeframe together with the set unit.",
+                      "type": "integer",
+                      "minimum": 1
+                    }
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
             }
           }
         },
@@ -1267,6 +1296,11 @@
                 "enum": [
                   "sell"
                 ]
+              },
+              "name": {
+                "description": "The abocard action name (usually the same as linked product)",
+                "type": "string",
+                "example": "Brainwashing"
               },
               "product": {
                 "description": "The product associated with this action. Product gets created automatically when creating a abocard system and based on \"linked_product\" vat and \"system_revenue_account\" field values.",
@@ -1533,6 +1567,30 @@
           "type": "null"
         }
       ]
+    },
+    "discount_type": {
+      "oneOf": [
+        {
+          "description": "\n      the calculation type of the discount of the Purpose Product (Zweck/Artikel).\n      * `relative` - stores discount absolute in currency of system\n      * `absolute` - stores relative discount value in percent (e.g.: 12,58%) to allow two decimals on percent if necessary (which wouldn’t be possible with a rate)\n    ",
+          "type": "string",
+          "enum": [
+            "relative",
+            "absolute"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "selling_price_method": {
+      "description": "\n      \"static\", \"dynamic\" configuration of selling price.\n      * `static` - For \"static\" we use the current behavior of our implementation.\n      * `dynamic` - For \"dynamic\" we calculate the selling price according to this document\n    ",
+      "enum": [
+        "static",
+        "dynamic"
+      ],
+      "default": "static"
     }
   }
 }

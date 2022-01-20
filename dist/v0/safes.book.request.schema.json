@@ -75,6 +75,7 @@
         "safe_to_safe",
         "safe_to_bank",
         "pos_to_safe",
+        "pos_to_safe_cancel",
         "safe_to_expense"
       ]
     },
@@ -111,7 +112,8 @@
       "transfer_type": {
         "type": "string",
         "enum": [
-          "pos_to_safe"
+          "pos_to_safe",
+          "pos_to_safe_cancel"
         ]
       }
     }

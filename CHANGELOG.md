@@ -1,3 +1,98 @@
+# [6.113.0](https://github.com/tillhub/schemas/compare/v6.112.1...v6.113.0) (2022-01-20)
+
+
+### Features
+
+* **configurations:** features ([6cd1289](https://github.com/tillhub/schemas/commit/6cd1289))
+* **configurations:** features ([139876d](https://github.com/tillhub/schemas/commit/139876d))
+
+## [6.112.1](https://github.com/tillhub/schemas/compare/v6.112.0...v6.112.1) (2022-01-13)
+
+
+### Bug Fixes
+
+* **staffs:** renaming user_permission_template_id to staff_permission_template_id ([#661](https://github.com/tillhub/schemas/issues/661)) ([6fbedb4](https://github.com/tillhub/schemas/commit/6fbedb4))
+
+# [6.112.0](https://github.com/tillhub/schemas/compare/v6.111.0...v6.112.0) (2022-01-10)
+
+
+### Features
+
+* **voucher_systems:** Add support for validity_period ([#660](https://github.com/tillhub/schemas/issues/660)) ([9ffdee4](https://github.com/tillhub/schemas/commit/9ffdee4))
+
+# [6.111.0](https://github.com/tillhub/schemas/compare/v6.110.0...v6.111.0) (2022-01-06)
+
+
+### Features
+
+* **discounts:** add branch_groups to discounts ([39cbd66](https://github.com/tillhub/schemas/commit/39cbd66))
+
+# [6.110.0](https://github.com/tillhub/schemas/compare/v6.109.0...v6.110.0) (2022-01-04)
+
+
+### Bug Fixes
+
+* **abocard-systems:** add action name #API-1169 ([38e7d7f](https://github.com/tillhub/schemas/commit/38e7d7f)), closes [#API-1169](https://github.com/tillhub/schemas/issues/API-1169)
+
+
+### Features
+
+* **carts:** customers ([07cf41e](https://github.com/tillhub/schemas/commit/07cf41e))
+
+# [6.109.0](https://github.com/tillhub/schemas/compare/v6.108.0...v6.109.0) (2022-01-04)
+
+
+### Features
+
+* **expense_accounts:** add branch_groups ([8c8cefc](https://github.com/tillhub/schemas/commit/8c8cefc))
+
+# [6.108.0](https://github.com/tillhub/schemas/compare/v6.107.0...v6.108.0) (2021-12-22)
+
+
+### Features
+
+* **pricebooks:** Add Price Books to untrash ([#654](https://github.com/tillhub/schemas/issues/654)) ([d7850b5](https://github.com/tillhub/schemas/commit/d7850b5))
+
+# [6.107.0](https://github.com/tillhub/schemas/compare/v6.106.0...v6.107.0) (2021-12-21)
+
+
+### Features
+
+* **staffs:** Staff permissions from template instead of scopes ([#653](https://github.com/tillhub/schemas/issues/653)) ([821e7c5](https://github.com/tillhub/schemas/commit/821e7c5))
+
+# [6.106.0](https://github.com/tillhub/schemas/compare/v6.105.0...v6.106.0) (2021-12-13)
+
+
+### Bug Fixes
+
+* **transactions:** items ([876dc02](https://github.com/tillhub/schemas/commit/876dc02))
+
+
+### Features
+
+* **transactions:** legacy ([eb5ae77](https://github.com/tillhub/schemas/commit/eb5ae77))
+* **transactions:** legacy ([910471b](https://github.com/tillhub/schemas/commit/910471b))
+
+# [6.105.0](https://github.com/tillhub/schemas/compare/v6.104.0...v6.105.0) (2021-12-13)
+
+
+### Bug Fixes
+
+* **abocard-systems:** fixes due to linter ([49ddbc3](https://github.com/tillhub/schemas/commit/49ddbc3))
+
+
+### Features
+
+* **abocard:** Add "discount_type" and "selling_price_method" ([#649](https://github.com/tillhub/schemas/issues/649)) ([b2024de](https://github.com/tillhub/schemas/commit/b2024de))
+* **prices:** add actual prices schema #API-1257 ([2260e72](https://github.com/tillhub/schemas/commit/2260e72)), closes [#API-1257](https://github.com/tillhub/schemas/issues/API-1257)
+
+# [6.104.0](https://github.com/tillhub/schemas/compare/v6.103.0...v6.104.0) (2021-12-07)
+
+
+### Features
+
+* **safes:** add pos_to_safe_cancel ([2f0dfda](https://github.com/tillhub/schemas/commit/2f0dfda))
+
 # [6.103.0](https://github.com/tillhub/schemas/compare/v6.102.0...v6.103.0) (2021-11-08)
 
 

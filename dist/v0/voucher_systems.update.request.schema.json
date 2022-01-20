@@ -1216,6 +1216,35 @@
           "type": "null"
         }
       ]
+    },
+    "validity_period": {
+      "default": null,
+      "oneOf": [
+        {
+          "description": "A user defined timeframe (e.g. 3 years) that is used to determine the next expires_at value after a charge (top-up).",
+          "type": "object",
+          "properties": {
+            "unit": {
+              "description": "Unit of the validity period.",
+              "type": "string",
+              "enum": [
+                "days",
+                "weeks",
+                "months",
+                "years"
+              ]
+            },
+            "value": {
+              "description": "The value of the validity period, defines a timeframe together with the set unit.",
+              "type": "integer",
+              "minimum": 1
+            }
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
     }
   }
 }

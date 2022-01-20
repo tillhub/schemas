@@ -1,0 +1,63 @@
+{
+  "$id": "https://schemas.tillhub.com/v1/products.prices.actual.response.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "type": "object",
+  "required": [],
+  "properties": {
+    "amount_net": {
+      "oneOf": [
+        {
+          "example": "27633.02",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1000000,
+          "multipleOf": 0.01
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "amount_gross": {
+      "oneOf": [
+        {
+          "example": "27633.02",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1000000,
+          "multipleOf": 0.01
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "rate": {
+      "description": "Relative value of this product based on any other applicable price.",
+      "oneOf": [
+        {
+          "type": "number",
+          "multipleOf": 0.0001
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "currency": {
+      "oneOf": [
+        {
+          "type": "string",
+          "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+          "example": "EUR",
+          "minLength": 3,
+          "maxLength": 3
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  }
+}

@@ -680,6 +680,17 @@
                         "maxLength": 2048,
                         "description": "Messages from voucher processing."
                       },
+                      "creation": {
+                        "oneOf": [
+                          {
+                            "type": "object",
+                            "description": "Client specified container to store created abocards and/or vouchers."
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
                       "type": {
                         "type": "string",
                         "description": "Mainly legacy support for Fleurop flows.",
@@ -693,7 +704,9 @@
                           "tillhub_create",
                           "tillhub_recharge",
                           "tillhub_reedeem",
-                          "tillhub_percentage"
+                          "tillhub_percentage",
+                          "tillhub_product",
+                          "tillhub_abocard_sell"
                         ]
                       },
                       "status": {
@@ -1077,7 +1090,8 @@
                             "sconto",
                             "item",
                             "promotion",
-                            "voucher"
+                            "voucher",
+                            "product_voucher"
                           ]
                         },
                         {
