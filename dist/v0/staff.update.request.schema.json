@@ -216,6 +216,8 @@
                   "staff:staff:transactions:cancel:row",
                   "staff:staff:transactions:prices",
                   "staff:staff:transactions:qty",
+                  "staff:staff:transactions:qty:positive",
+                  "staff:staff:transactions:qty:negative",
                   "staff:staff:transactions:cash_return",
                   "staff:staff:transactions:vouchers",
                   "staff:staff:transactions:print",

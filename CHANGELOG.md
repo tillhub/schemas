@@ -1,3 +1,10 @@
+# [6.116.0](https://github.com/tillhub/schemas/compare/v6.115.0...v6.116.0) (2022-01-25)
+
+
+### Features
+
+* **scopes:** permissions ([16dfe70](https://github.com/tillhub/schemas/commit/16dfe70))
+
 # [6.115.0](https://github.com/tillhub/schemas/compare/v6.114.0...v6.115.0) (2022-01-20)
 
 
