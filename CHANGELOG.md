@@ -1,3 +1,12 @@
+# [6.117.0](https://github.com/tillhub/schemas/compare/v6.116.0...v6.117.0) (2022-02-08)
+
+
+### Features
+
+* **carts:** customers ([abb5a1e](https://github.com/tillhub/schemas/commit/abb5a1e))
+* **carts:** patch ([b370fac](https://github.com/tillhub/schemas/commit/b370fac))
+* **delivery notes:** customer ([b8aedeb](https://github.com/tillhub/schemas/commit/b8aedeb))
+
 # [6.116.0](https://github.com/tillhub/schemas/compare/v6.115.0...v6.116.0) (2022-01-25)
 
 

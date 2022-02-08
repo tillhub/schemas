@@ -172,6 +172,17 @@
         }
       ]
     },
+    "customer_number": {
+      "oneOf": [
+        {
+          "type": "string",
+          "maxLength": 128
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "name": {
       "oneOf": [
         {
