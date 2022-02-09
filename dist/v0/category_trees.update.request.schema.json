@@ -10,7 +10,7 @@
             "format": "uuid"
           },
           "children": {
-            "$ref": "#/definitions/children"
+            "type": "object"
           }
         }
       }

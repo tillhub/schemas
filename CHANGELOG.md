@@ -1,3 +1,10 @@
+## [6.117.1](https://github.com/tillhub/schemas/compare/v6.117.0...v6.117.1) (2022-02-09)
+
+
+### Bug Fixes
+
+* **documentation:** fixing the circular dependency issue ([b1916ec](https://github.com/tillhub/schemas/commit/b1916ec))
+
 # [6.117.0](https://github.com/tillhub/schemas/compare/v6.116.0...v6.117.0) (2022-02-08)
 
 
