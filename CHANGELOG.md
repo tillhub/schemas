@@ -1,3 +1,12 @@
+# [6.118.0](https://github.com/tillhub/schemas/compare/v6.117.1...v6.118.0) (2022-02-10)
+
+
+### Features
+
+* **configurations:** features ([d9ad71d](https://github.com/tillhub/schemas/commit/d9ad71d))
+* **configurations:** gastro ([d977675](https://github.com/tillhub/schemas/commit/d977675))
+* **configurations:** gastro ([71126be](https://github.com/tillhub/schemas/commit/71126be))
+
 ## [6.117.1](https://github.com/tillhub/schemas/compare/v6.117.0...v6.117.1) (2022-02-09)
 
 

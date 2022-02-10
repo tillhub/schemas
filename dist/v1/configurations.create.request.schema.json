@@ -2283,6 +2283,18 @@
                       "example": "Regiondo",
                       "minLength": 2,
                       "maxLength": 24
+                    },
+                    "log_level": {
+                      "description": "defines the granularity of the web api logging.",
+                      "type": "string",
+                      "enum": [
+                        "error",
+                        "warning",
+                        "info",
+                        "debug",
+                        "verbose"
+                      ],
+                      "default": "info"
                     }
                   }
                 },
@@ -2363,6 +2375,18 @@
                           "minimum": 0,
                           "maximum": 3600,
                           "default": 25
+                        },
+                        "log_level": {
+                          "description": "defines the granularity of the local server logging.",
+                          "type": "string",
+                          "enum": [
+                            "error",
+                            "warning",
+                            "info",
+                            "debug",
+                            "verbose"
+                          ],
+                          "default": "info"
                         }
                       }
                     },
