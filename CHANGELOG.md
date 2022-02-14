@@ -1,3 +1,10 @@
+## [6.118.1](https://github.com/tillhub/schemas/compare/v6.118.0...v6.118.1) (2022-02-14)
+
+
+### Bug Fixes
+
+* **docs:** fixing the children type on category_trees ([141dc8e](https://github.com/tillhub/schemas/commit/141dc8e))
+
 # [6.118.0](https://github.com/tillhub/schemas/compare/v6.117.1...v6.118.0) (2022-02-10)
 
 
