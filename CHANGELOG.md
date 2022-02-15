@@ -1,3 +1,10 @@
+# [6.119.0](https://github.com/tillhub/schemas/compare/v6.118.1...v6.119.0) (2022-02-15)
+
+
+### Features
+
+* **audits:** add audit logs response schema #API-1331 ([#668](https://github.com/tillhub/schemas/issues/668)) ([057c73e](https://github.com/tillhub/schemas/commit/057c73e)), closes [#API-1331](https://github.com/tillhub/schemas/issues/API-1331) [#API-1331](https://github.com/tillhub/schemas/issues/API-1331)
+
 ## [6.118.1](https://github.com/tillhub/schemas/compare/v6.118.0...v6.118.1) (2022-02-14)
 
 

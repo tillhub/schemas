@@ -1,0 +1,213 @@
+{
+  "$id": "https://schemas.tillhub.com/v0/audits.logs.read.response.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "type": "object",
+  "properties": {
+    "msg": {
+      "type": "string",
+      "minLength": 1,
+      "example": "Queried transactions sucessefully.",
+      "description": "Any English sentence, meant as information for developers and implementers. Avoid displaying this to the users and especially do not expect thos messages to stay stable."
+    },
+    "msg_localised": {
+      "type": "string",
+      "minLength": 1,
+      "example": "Queried transactions sucessefully.",
+      "description": "Optional localised message that can be displayed to the user if existing. The language can be set by in the request or will fallback to English."
+    },
+    "request": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Information about the request itself.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "The request uuid that can be used to identify and trace API calls.",
+          "format": "uuid"
+        },
+        "host": {
+          "type": "string",
+          "minLength": 1,
+          "example": "https://api.tillhub.com",
+          "description": "Server host and protocol from which request was handled."
+        }
+      }
+    },
+    "count": {
+      "type": "number",
+      "description": "the length of the results array.",
+      "example": 10
+    },
+    "results": {
+      "type": "array",
+      "description": "The envelope of items, that are usually objects. We are generally sending back arrays even if there was just one requested resource.",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "created_at",
+          "insert_id",
+          "type"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "insert_id": {
+            "oneOf": [
+              {
+                "description": "Sequential counter",
+                "type": "integer",
+                "example": 16259
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "type": {
+            "description": "Log type (entity type and action type)",
+            "type": "string",
+            "example": "product.update"
+          },
+          "old": {
+            "oneOf": [
+              {
+                "description": "Old data",
+                "type": "object",
+                "example": {}
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "new": {
+            "oneOf": [
+              {
+                "description": "New data",
+                "type": "object",
+                "example": {
+                  "id": "0f91b67b-b1eb-4aba-827a-3a83ff967c5e",
+                  "name": "Foo bar"
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "change": {
+            "oneOf": [
+              {
+                "description": "Changes between old and new",
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "op": {
+                      "description": "Operation type",
+                      "type": "string",
+                      "enum": [
+                        "add",
+                        "replace",
+                        "remove"
+                      ]
+                    },
+                    "path": {
+                      "description": "Changed property path (with dot as separator)",
+                      "type": "string",
+                      "example": "images.0.url"
+                    },
+                    "value": {
+                      "description": "Changed value",
+                      "type": "string",
+                      "example": "This is it"
+                    }
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "description": {
+            "oneOf": [
+              {
+                "description": "Description",
+                "type": "string",
+                "example": "Login attempt from service account"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "issuer": {
+            "oneOf": [
+              {
+                "description": "Issuer data",
+                "type": "object",
+                "properties": {
+                  "sub_user": {
+                    "description": "Sub-user (person authorized under organization account) UUID",
+                    "type": "string",
+                    "format": "uuid",
+                    "example": "8ddb94bf-98cf-4832-9833-c118ebf04675"
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "metadata": {
+            "oneOf": [
+              {
+                "description": "Metadata",
+                "type": "object",
+                "properties": {
+                  "user_agent": {
+                    "description": "User-agent data",
+                    "type": "string",
+                    "example": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36"
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "cursor": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Optional cursor in pagable API calls. The cursor next field must be called as fully qualifyable URI in order to hit the next page",
+      "properties": {
+        "next": {
+          "type": "string",
+          "format": "uri",
+          "description": "The URI pointing to the next page.",
+          "example": "https://api.tillhub.com/api/v1/products/061f91a3-eba2-40b8-9a76-115189d6741e?first=2018-07-02T21%3A47%3A44.382Z&page=0&size=10&cursor_field=updated_at"
+        },
+        "first": {
+          "type": "string",
+          "format": "uri",
+          "description": "The URI pointing to the the first page.",
+          "example": "https://api.tillhub.com/api/v1/products/061f91a3-eba2-40b8-9a76-115189d6741e?first=2018-07-02T21%3A47%3A44.382Z&page=1&size=10&cursor_field=updated_at"
+        },
+        "self": {
+          "type": "string",
+          "format": "uri",
+          "description": "The URI pointing to this page.",
+          "example": "https://api.tillhub.com/api/v1/products/061f91a3-eba2-40b8-9a76-115189d6741e?first=2018-07-02T21%3A47%3A44.382Z&page=0&size=10&cursor_field=updated_at"
+        }
+      }
+    }
+  }
+}
