@@ -1,0 +1,87 @@
+{
+  "$id": "https://schemas.tillhub.com/v1/branches.read.all.query.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "type": "object",
+  "required": [
+    "start",
+    "end"
+  ],
+  "properties": {
+    "start": {
+      "description": "The start date to filter entities by \"updated_at\" field value",
+      "example": "2022-02-01T00:00:00.000Z",
+      "type": "string",
+      "format": "date-time"
+    },
+    "end": {
+      "description": "The end date to filter entities by \"updated_at\" field value",
+      "example": "2022-02-28T23:59:59.999Z",
+      "type": "string",
+      "format": "date-time"
+    },
+    "active": {
+      "description": "Filter entities by \"active\" field value",
+      "example": "true",
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "deleted": {
+      "description": "Filter entities which are deleted or not",
+      "example": "true",
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "name": {
+      "description": "Filter branches by name substring",
+      "example": "Head office",
+      "type": "string"
+    },
+    "branch_group": {
+      "description": "Filter branches by branch group ID",
+      "example": "Head office",
+      "type": "string",
+      "format": "uuid"
+    },
+    "branch_number": {
+      "description": "Filter branches by number",
+      "example": 239,
+      "type": "integer"
+    },
+    "postal_code": {
+      "description": "Filter branches by postal code",
+      "example": "10785",
+      "type": "string"
+    },
+    "street": {
+      "description": "Filter branches by street name",
+      "example": "Genthiner Str. 34",
+      "type": "string"
+    },
+    "city": {
+      "description": "Filter branches by city name",
+      "example": "Berlin",
+      "type": "string"
+    },
+    "q": {
+      "description": "Search branches by several fields which match given string",
+      "example": "head",
+      "type": "string"
+    },
+    "total": {
+      "description": "Return the total count of branches (in meta data call)",
+      "example": "true",
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    }
+  }
+}

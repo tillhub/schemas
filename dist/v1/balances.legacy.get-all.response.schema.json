@@ -7,14 +7,14 @@
     "msg": {
       "type": "string",
       "minLength": 1,
-      "example": "Queried transactions sucessefully.",
-      "description": "Any English sentence, meant as information for developers and implementers. Avoid displaying this to the users and especially do not expect thos messages to stay stable."
+      "example": "Queried transactions successfully.",
+      "description": "Any English sentence, meant as information for developers and implementers. Avoid displaying this to the users and especially do not expect those messages to stay stable."
     },
     "msg_localised": {
+      "description": "Optional localized message that can be displayed to the user if existing. The language can be set by in the request or will fallback to English.",
+      "example": "Abgefragte Transaktionen erfolgreich.",
       "type": "string",
-      "minLength": 1,
-      "example": "Queried transactions sucessefully.",
-      "description": "Optional localised message that can be displayed to the user if existing. The language can be set by in the request or will fallback to English."
+      "minLength": 1
     },
     "request": {
       "type": "object",
@@ -2468,8 +2468,11 @@
     },
     "cursor": {
       "type": "object",
+      "description": "Optional cursor in paginated API calls. The cursor next field must be called as fully quantifiable URI in order to hit the next if available.",
       "additionalProperties": false,
-      "description": "Optional cursor in pagable API calls. The cursor next field must be called as fully qualifyable URI in order to hit the next page",
+      "required": [
+        "self"
+      ],
       "properties": {
         "next": {
           "type": "string",

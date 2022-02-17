@@ -7,7 +7,8 @@
   ],
   "properties": {
     "name": {
-      "description": "any arbitrary name for a branch that can be displayed in applications.",
+      "description": "Any arbitrary name for a branch that can be displayed in applications.",
+      "example": "Head office",
       "anyOf": [
         {
           "type": "string",
@@ -20,17 +21,19 @@
       ]
     },
     "phonenumbers": {
-      "description": "A number of valid types of phonenumbers for a branch.",
+      "description": "A number of valid types of phone numbers for a branch.",
       "anyOf": [
         {
           "type": "object",
           "additionalProperties": false,
           "properties": {
             "line_main": {
-              "type": "string"
+              "type": "string",
+              "example": "+49-555-1976"
             },
             "line_1": {
-              "type": "string"
+              "type": "string",
+              "example": "+49-555-1977"
             },
             "line_2": {
               "type": "string"
@@ -61,6 +64,7 @@
     },
     "email": {
       "description": "The main contact email for a branch.",
+      "example": "office@my-incredible-company.to",
       "anyOf": [
         {
           "type": "string",
@@ -74,6 +78,7 @@
     },
     "receipt_header": {
       "description": "An arbitrary string that will be printed on every receipt as the header.",
+      "example": "Perfect socks LTD",
       "anyOf": [
         {
           "type": "string",
@@ -86,6 +91,7 @@
     },
     "receipt_footer": {
       "description": "An arbitrary string that will be printed on every receipt as the footer",
+      "example": "Thank you!",
       "anyOf": [
         {
           "type": "string",
@@ -122,29 +128,39 @@
       ]
     },
     "images": {
-      "description": "A Tillhub image object with URLs to display images this for this branch.",
+      "description": "Images object with URLs of various types of images",
       "anyOf": [
         {
           "type": "object",
           "additionalProperties": true,
           "properties": {
             "1x": {
+              "description": "Image transformed to predefined small size",
+              "example": "https://my-storage.io/images/f5a3cc72-7fb5-4d2c-bda5-9b2983c7e879_1x.png",
               "type": "string",
               "format": "uri"
             },
             "2x": {
+              "description": "Image transformed to predefined medium size",
+              "example": "https://my-storage.io/images/f5a3cc72-7fb5-4d2c-bda5-9b2983c7e879_2x.png",
               "type": "string",
               "format": "uri"
             },
             "3x": {
+              "description": "Image transformed to predefined big size",
+              "example": "https://my-storage.io/images/f5a3cc72-7fb5-4d2c-bda5-9b2983c7e879_1x.png",
               "type": "string",
               "format": "uri"
             },
             "avatar": {
+              "description": "Image transformed to predefined size to use as \"avatar\"",
+              "example": "https://my-storage.io/images/f5a3cc72-7fb5-4d2c-bda5-9b2983c7e879_avatar.png",
               "type": "string",
               "format": "uri"
             },
             "original": {
+              "description": "Original image",
+              "example": "https://my-storage.io/images/f5a3cc72-7fb5-4d2c-bda5-9b2983c7e879.png",
               "type": "string",
               "format": "uri"
             }
@@ -174,11 +190,13 @@
     },
     "active": {
       "description": "Soft disable or enabled this branch.",
+      "example": "true",
       "type": "boolean",
       "default": true
     },
     "deleted": {
       "description": "Soft delete this branch.",
+      "example": "false",
       "type": "boolean",
       "default": false
     },
@@ -190,10 +208,25 @@
     "branch_number": {
       "type": "number",
       "description": "The maximum stems from the fact that is it stored as an postgres int4 type, with 4 bytes of space",
+      "example": 107,
       "minimum": 0,
       "maximum": 2147483647
     },
+    "custom_id": {
+      "description": "Branch custom unique ID.",
+      "example": "dd3234of",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "external_custom_id": {
+      "description": "Unique ID of this branch in external system. Uses for synchronization.",
+      "example": "7882448928329",
       "anyOf": [
         {
           "type": "string",
@@ -206,6 +239,8 @@
       ]
     },
     "cost_center": {
+      "description": "Cost center unique ID",
+      "example": "7882448928329",
       "anyOf": [
         {
           "type": "string",
@@ -246,6 +281,7 @@
               },
               "street": {
                 "description": "A street name",
+                "example": "Downing Street",
                 "oneOf": [
                   {
                     "type": "string",
@@ -258,6 +294,7 @@
               },
               "street_number": {
                 "description": "A street number",
+                "example": "10",
                 "oneOf": [
                   {
                     "type": "string",
@@ -270,6 +307,7 @@
               },
               "locality": {
                 "description": "The international format for a city, village and any other localizable city like place.",
+                "example": "London",
                 "oneOf": [
                   {
                     "type": "string"
@@ -281,6 +319,7 @@
               },
               "region": {
                 "description": "The international format for regional sub category of a country e.g. a state or province.",
+                "example": "Greater London",
                 "oneOf": [
                   {
                     "type": "string"
@@ -292,6 +331,7 @@
               },
               "postal_code": {
                 "description": "A non-validated postal code.",
+                "example": "SW1A",
                 "oneOf": [
                   {
                     "type": "string",
@@ -304,6 +344,7 @@
               },
               "country": {
                 "description": "A country as ISO Alpha-2 code.",
+                "example": "UK",
                 "oneOf": [
                   {
                     "type": "string",
@@ -376,6 +417,7 @@
     },
     "timezone_default": {
       "description": "An IANA timezone that will be used to display local timezones in documents and UI. Validation for the timezone will happen in memory of the server, but not on that schema.",
+      "example": "Europe/London",
       "anyOf": [
         {
           "type": "string"
@@ -387,6 +429,7 @@
     },
     "currency_default": {
       "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this branch.",
+      "example": "GBP",
       "anyOf": [
         {
           "type": "string"
@@ -397,6 +440,7 @@
       ]
     },
     "custom_properties": {
+      "description": "User-defined branch properties",
       "oneOf": [
         {
           "type": "null"
@@ -428,6 +472,7 @@
     },
     "default_favourite": {
       "description": "Define which favourite set to show as default in the POS if none is defined on the register.",
+      "example": "20e89159-28d9-46f2-bda3-d74bb70834e7",
       "anyOf": [
         {
           "type": "string",
@@ -440,6 +485,7 @@
     },
     "default_category_tree": {
       "description": "Define which category tree to use as default in the POS if none is defined on the register.",
+      "example": "c45764ed-fc6d-4b32-b406-59a5e84d2999",
       "anyOf": [
         {
           "type": "string",

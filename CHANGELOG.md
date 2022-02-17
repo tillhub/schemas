@@ -1,3 +1,10 @@
+# [6.120.0](https://github.com/tillhub/schemas/compare/v6.119.0...v6.120.0) (2022-02-17)
+
+
+### Features
+
+* **branches:** add detailed branches schema #API-1392 ([#671](https://github.com/tillhub/schemas/issues/671)) ([3232d2b](https://github.com/tillhub/schemas/commit/3232d2b)), closes [#API-1392](https://github.com/tillhub/schemas/issues/API-1392) [#API-1392](https://github.com/tillhub/schemas/issues/API-1392)
+
 # [6.119.0](https://github.com/tillhub/schemas/compare/v6.118.1...v6.119.0) (2022-02-15)
 
 
