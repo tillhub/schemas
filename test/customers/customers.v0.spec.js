@@ -50,6 +50,22 @@ test('Customers:v0: create ext schema validation', function (t) {
   t.end()
 })
 
+test('Customers:v0: read ext schema validation', function (t) {
+  {
+    const { valid, error } = validate(customers.ext.read.all.response)
+    t.ok(valid, 'read.all ext request schema is valid')
+    t.error(error, 'should not get any error')
+  }
+
+  {
+    const { valid, error } = validate(customers.ext.read.one.response)
+    t.ok(valid, 'read.one ext response schema is valid')
+    t.error(error, 'should not get any error')
+  }
+
+  t.end()
+})
+
 test('Customers:v0: update ext schema validation', function (t) {
   {
     const { valid, error } = validate(customers.ext.update.request)
