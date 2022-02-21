@@ -5,7 +5,18 @@
   "type": "object",
   "required": [],
   "properties": {
+    "active": {
+      "description": "Customer active",
+      "example": "true",
+      "type": "boolean"
+    },
+    "deleted": {
+      "description": "Customer deleted",
+      "type": "boolean"
+    },
     "firstname": {
+      "description": "First name",
+      "example": "Boba",
       "anyOf": [
         {
           "type": "string",
@@ -17,6 +28,8 @@
       ]
     },
     "lastname": {
+      "example": "Fett",
+      "description": "Last name",
       "anyOf": [
         {
           "type": "string",
@@ -28,6 +41,8 @@
       ]
     },
     "middlename": {
+      "description": "Middle name",
+      "example": "Alpha",
       "anyOf": [
         {
           "type": "string",
@@ -39,6 +54,8 @@
       ]
     },
     "displayname": {
+      "description": "Display name",
+      "example": "Boba F.",
       "anyOf": [
         {
           "type": "string",
@@ -51,6 +68,10 @@
       ]
     },
     "phonenumbers": {
+      "description": "Phone numbers",
+      "example": {
+        "main": "+49-555-123-4567"
+      },
       "anyOf": [
         {
           "type": "object",
@@ -98,7 +119,8 @@
       ]
     },
     "email": {
-      "default": null,
+      "description": "Email address",
+      "example": "boba@kamino.empire",
       "anyOf": [
         {
           "type": "string",
@@ -108,9 +130,12 @@
         {
           "type": "null"
         }
-      ]
+      ],
+      "default": null
     },
     "customer_number": {
+      "description": "Unique customer number",
+      "example": "fett-002",
       "anyOf": [
         {
           "type": "string",
@@ -123,6 +148,10 @@
       ]
     },
     "company": {
+      "description": "Company name",
+      "example": {
+        "name": "Bounty Hunter's Guild"
+      },
       "anyOf": [
         {
           "type": "object",
@@ -147,6 +176,8 @@
       ]
     },
     "description": {
+      "description": "Description",
+      "example": "Bounty hunter",
       "anyOf": [
         {
           "type": "string"
@@ -157,6 +188,7 @@
       ]
     },
     "is_b2b": {
+      "description": "Is B2B customer",
       "anyOf": [
         {
           "type": "boolean"
@@ -167,17 +199,7 @@
       ]
     },
     "date_of_birth": {
-      "anyOf": [
-        {
-          "type": "string",
-          "format": "date-time"
-        },
-        {
-          "type": "null"
-        }
-      ]
-    },
-    "update_at": {
+      "description": "Birth date",
       "anyOf": [
         {
           "type": "string",
@@ -189,33 +211,45 @@
       ]
     },
     "images": {
-      "description": "A Tillhub images object with URLs to display images this for this customer.",
+      "description": "Images object with URLs of various types of images",
       "anyOf": [
         {
           "type": "object",
           "additionalProperties": true,
           "properties": {
-            "original": {
-              "type": "string",
-              "format": "uri"
-            },
-            "gallery": {
-              "type": "string",
-              "format": "uri"
-            },
-            "avatar": {
-              "type": "string",
-              "format": "uri"
-            },
             "1x": {
+              "description": "Image transformed to predefined small size",
+              "example": "https://my-storage.io/images/f5a3cc72-7fb5-4d2c-bda5-9b2983c7e879_1x.png",
               "type": "string",
               "format": "uri"
             },
             "2x": {
+              "description": "Image transformed to predefined medium size",
+              "example": "https://my-storage.io/images/f5a3cc72-7fb5-4d2c-bda5-9b2983c7e879_2x.png",
               "type": "string",
               "format": "uri"
             },
             "3x": {
+              "description": "Image transformed to predefined big size",
+              "example": "https://my-storage.io/images/f5a3cc72-7fb5-4d2c-bda5-9b2983c7e879_1x.png",
+              "type": "string",
+              "format": "uri"
+            },
+            "avatar": {
+              "description": "Image transformed to predefined size to use as \"avatar\"",
+              "example": "https://my-storage.io/images/f5a3cc72-7fb5-4d2c-bda5-9b2983c7e879_avatar.png",
+              "type": "string",
+              "format": "uri"
+            },
+            "gallery": {
+              "description": "Image transformed to predefined size to use in gallery",
+              "example": "https://my-storage.io/images/f5a3cc72-7fb5-4d2c-bda5-9b2983c7e879_gallery.png",
+              "type": "string",
+              "format": "uri"
+            },
+            "original": {
+              "description": "Original image",
+              "example": "https://my-storage.io/images/f5a3cc72-7fb5-4d2c-bda5-9b2983c7e879.png",
               "type": "string",
               "format": "uri"
             }
@@ -255,13 +289,8 @@
         }
       ]
     },
-    "active": {
-      "type": "boolean"
-    },
-    "deleted": {
-      "type": "boolean"
-    },
     "contacts": {
+      "description": "Contact info",
       "anyOf": [
         {
           "type": "object",
@@ -311,9 +340,11 @@
       ]
     },
     "metadata": {
+      "description": "Additional metadata",
       "type": "object"
     },
     "addresses": {
+      "description": "Addresses",
       "anyOf": [
         {
           "type": "array",
@@ -321,8 +352,20 @@
           "items": {
             "type": "object",
             "additionalProperties": false,
+            "required": [
+              "lines",
+              "street",
+              "street_number",
+              "locality",
+              "region",
+              "postal_code",
+              "country",
+              "type"
+            ],
             "properties": {
               "lines": {
+                "description": "Address details",
+                "example": "Penthouse",
                 "oneOf": [
                   {
                     "type": "array",
@@ -339,6 +382,8 @@
                 ]
               },
               "street": {
+                "description": "Street name",
+                "example": "Genthiner Str.",
                 "oneOf": [
                   {
                     "type": "string"
@@ -349,6 +394,8 @@
                 ]
               },
               "street_number": {
+                "description": "Building number",
+                "example": "34",
                 "oneOf": [
                   {
                     "type": "string"
@@ -359,6 +406,8 @@
                 ]
               },
               "locality": {
+                "description": "Locality name (city, village, etc.)",
+                "example": "Berlin",
                 "oneOf": [
                   {
                     "type": "string"
@@ -369,6 +418,8 @@
                 ]
               },
               "region": {
+                "description": "Region name",
+                "example": "Branderburg",
                 "oneOf": [
                   {
                     "type": "string"
@@ -379,6 +430,8 @@
                 ]
               },
               "postal_code": {
+                "description": "Postal code",
+                "example": "10785",
                 "oneOf": [
                   {
                     "type": "string",
@@ -390,6 +443,8 @@
                 ]
               },
               "country": {
+                "description": "Country",
+                "example": "Germany",
                 "oneOf": [
                   {
                     "type": "string",
@@ -404,6 +459,8 @@
                 "default": null
               },
               "type": {
+                "description": "Address type",
+                "example": "delivery",
                 "oneOf": [
                   {
                     "type": "string",
@@ -417,17 +474,7 @@
                   }
                 ]
               }
-            },
-            "required": [
-              "lines",
-              "street",
-              "street_number",
-              "locality",
-              "region",
-              "postal_code",
-              "country",
-              "type"
-            ]
+            }
           }
         },
         {
@@ -436,6 +483,7 @@
       ]
     },
     "custom": {
+      "description": "Custom data",
       "anyOf": [
         {
           "type": "object"
@@ -446,6 +494,8 @@
       ]
     },
     "comment": {
+      "description": "Comment",
+      "example": "Don't mess with",
       "anyOf": [
         {
           "type": "string",
@@ -457,6 +507,7 @@
       ]
     },
     "discounts": {
+      "description": "Available discounts",
       "anyOf": [
         {
           "type": "array",
@@ -563,6 +614,7 @@
       ]
     },
     "client_id": {
+      "description": "Client ID",
       "anyOf": [
         {
           "type": "string",
@@ -574,6 +626,7 @@
       ]
     },
     "external_reference": {
+      "description": "External reference",
       "anyOf": [
         {
           "type": "string",
@@ -586,6 +639,7 @@
       ]
     },
     "customer_since": {
+      "description": "Customer since",
       "anyOf": [
         {
           "type": "string",
@@ -597,6 +651,7 @@
       ]
     },
     "locations": {
+      "description": "Locations customer belongs to",
       "oneOf": [
         {
           "type": "array",
@@ -611,6 +666,7 @@
       ]
     },
     "branch_groups": {
+      "description": "Branch groups customer belongs to",
       "oneOf": [
         {
           "type": "array",
@@ -625,6 +681,8 @@
       ]
     },
     "gender": {
+      "description": "Gender",
+      "example": "male",
       "oneOf": [
         {
           "type": "string",
@@ -640,6 +698,7 @@
       ]
     },
     "vat_id": {
+      "description": "Customer VAT ID",
       "oneOf": [
         {
           "type": "string",
@@ -665,7 +724,7 @@
                   "additionalProperties": false,
                   "properties": {
                     "top_seller": {
-                      "description": "Reference to top selling Tillhub staff, based on \"salesman_staff\" on cartitem level. The top results per currency are shown.",
+                      "description": "Reference to top selling staff person, based on \"salesman_staff\" on cart item level. The top results per currency are shown.",
                       "oneOf": [
                         {
                           "type": "array",
@@ -707,7 +766,7 @@
                       ]
                     },
                     "top_branch": {
-                      "description": "Reference to top selling Tillhub branch. The top results per currency are shown.",
+                      "description": "Reference to top selling branch. The top results per currency are shown.",
                       "oneOf": [
                         {
                           "type": "array",
@@ -738,7 +797,7 @@
                               },
                               "branch_number": {
                                 "type": "number",
-                                "min": 0,
+                                "minimum": 0,
                                 "multipleOf": 1
                               },
                               "branch": {
@@ -758,7 +817,7 @@
                       "oneOf": [
                         {
                           "type": "number",
-                          "min": 0
+                          "minimum": 0
                         },
                         {
                           "type": "null"
@@ -770,7 +829,7 @@
                       "oneOf": [
                         {
                           "type": "number",
-                          "min": 0,
+                          "minimum": 0,
                           "multipleOf": 1
                         },
                         {
@@ -783,7 +842,7 @@
                       "oneOf": [
                         {
                           "type": "number",
-                          "min": 0,
+                          "minimum": 0,
                           "multipleOf": 1
                         },
                         {
@@ -834,7 +893,7 @@
                       "oneOf": [
                         {
                           "type": "number",
-                          "min": 0,
+                          "minimum": 0,
                           "multipleOf": 1
                         },
                         {

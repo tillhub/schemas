@@ -1,3 +1,15 @@
+# [6.121.0](https://github.com/tillhub/schemas/compare/v6.120.0...v6.121.0) (2022-02-21)
+
+
+### Bug Fixes
+
+* **tests:** remove require() errors ([f2b6a16](https://github.com/tillhub/schemas/commit/f2b6a16))
+
+
+### Features
+
+* **customers:** add rmissing schemas #API-1393 ([#672](https://github.com/tillhub/schemas/issues/672)) ([a4b8f30](https://github.com/tillhub/schemas/commit/a4b8f30)), closes [#API-1393](https://github.com/tillhub/schemas/issues/API-1393) [#API-1393](https://github.com/tillhub/schemas/issues/API-1393)
+
 # [6.120.0](https://github.com/tillhub/schemas/compare/v6.119.0...v6.120.0) (2022-02-17)
 
 

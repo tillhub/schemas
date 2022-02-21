@@ -560,7 +560,7 @@
           },
           "fa_account_number": {
             "description": "Account number",
-            "anyOf": [
+            "oneOf": [
               {
                 "type": "string"
               },
@@ -571,7 +571,7 @@
           },
           "configurations": {
             "description": "Configurations set",
-            "anyOf": [
+            "oneOf": [
               {
                 "type": "object"
               },
@@ -582,7 +582,7 @@
           },
           "merged_configurations": {
             "description": "Merged configuration of branch and account",
-            "anyOf": [
+            "oneOf": [
               {
                 "type": "object"
               },

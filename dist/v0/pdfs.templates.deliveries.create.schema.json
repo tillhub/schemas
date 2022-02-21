@@ -90,6 +90,8 @@
           ],
           "properties": {
             "lines": {
+              "description": "Address details",
+              "example": "Penthouse",
               "oneOf": [
                 {
                   "type": "array",
@@ -106,6 +108,8 @@
               ]
             },
             "street": {
+              "description": "Street name",
+              "example": "Genthiner Str.",
               "oneOf": [
                 {
                   "type": "string"
@@ -116,6 +120,8 @@
               ]
             },
             "street_number": {
+              "description": "Building number",
+              "example": "34",
               "oneOf": [
                 {
                   "type": "string"
@@ -126,6 +132,8 @@
               ]
             },
             "locality": {
+              "description": "Locality name (city, village, etc.)",
+              "example": "Berlin",
               "oneOf": [
                 {
                   "type": "string"
@@ -136,6 +144,8 @@
               ]
             },
             "region": {
+              "description": "Region name",
+              "example": "Branderburg",
               "oneOf": [
                 {
                   "type": "string"
@@ -146,6 +156,8 @@
               ]
             },
             "postal_code": {
+              "description": "Postal code",
+              "example": "10785",
               "oneOf": [
                 {
                   "type": "string",
@@ -157,6 +169,8 @@
               ]
             },
             "country": {
+              "description": "Country",
+              "example": "Germany",
               "oneOf": [
                 {
                   "type": "string",
@@ -171,6 +185,8 @@
               "default": null
             },
             "type": {
+              "description": "Address type",
+              "example": "delivery",
               "oneOf": [
                 {
                   "type": "string",
@@ -236,6 +252,8 @@
           ],
           "properties": {
             "lines": {
+              "description": "Address details",
+              "example": "Penthouse",
               "oneOf": [
                 {
                   "type": "array",
@@ -252,6 +270,8 @@
               ]
             },
             "street": {
+              "description": "Street name",
+              "example": "Genthiner Str.",
               "oneOf": [
                 {
                   "type": "string"
@@ -262,6 +282,8 @@
               ]
             },
             "street_number": {
+              "description": "Building number",
+              "example": "34",
               "oneOf": [
                 {
                   "type": "string"
@@ -272,6 +294,8 @@
               ]
             },
             "locality": {
+              "description": "Locality name (city, village, etc.)",
+              "example": "Berlin",
               "oneOf": [
                 {
                   "type": "string"
@@ -282,6 +306,8 @@
               ]
             },
             "region": {
+              "description": "Region name",
+              "example": "Branderburg",
               "oneOf": [
                 {
                   "type": "string"
@@ -292,6 +318,8 @@
               ]
             },
             "postal_code": {
+              "description": "Postal code",
+              "example": "10785",
               "oneOf": [
                 {
                   "type": "string",
@@ -303,6 +331,8 @@
               ]
             },
             "country": {
+              "description": "Country",
+              "example": "Germany",
               "oneOf": [
                 {
                   "type": "string",
@@ -317,6 +347,8 @@
               "default": null
             },
             "type": {
+              "description": "Address type",
+              "example": "delivery",
               "oneOf": [
                 {
                   "type": "string",

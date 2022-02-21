@@ -1,0 +1,1229 @@
+{
+  "$id": "https://schemas.tillhub.com/v0/customers.ext.read.one.response.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "type": "object",
+  "properties": {
+    "msg": {
+      "type": "string",
+      "minLength": 1,
+      "example": "Queried transactions successfully.",
+      "description": "Any English sentence, meant as information for developers and implementers. Avoid displaying this to the users and especially do not expect those messages to stay stable."
+    },
+    "msg_localised": {
+      "description": "Optional localized message that can be displayed to the user if existing. The language can be set by in the request or will fallback to English.",
+      "example": "Abgefragte Transaktionen erfolgreich.",
+      "type": "string",
+      "minLength": 1
+    },
+    "request": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Information about the request itself.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "The request uuid that can be used to identify and trace API calls.",
+          "format": "uuid"
+        },
+        "host": {
+          "type": "string",
+          "minLength": 1,
+          "example": "https://api.tillhub.com",
+          "description": "Server host and protocol from which request was handled."
+        }
+      }
+    },
+    "count": {
+      "type": "number",
+      "description": "the length of the results array.",
+      "example": 10
+    },
+    "results": {
+      "type": "array",
+      "description": "The envelope of items, that are usually objects. We are generally sending back arrays even if there was just one requested resource.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "description": "Unique entity ID",
+            "type": "string",
+            "format": "uuid",
+            "example": "936835f7-2d75-41d2-9001-38ed6e458328"
+          },
+          "created_at": {
+            "description": "The date and time entity was created",
+            "type": "string",
+            "format": "date-time",
+            "example": "2019-03-17T21:12:04.849Z"
+          },
+          "updated_at": {
+            "description": "The date and time entity was updated",
+            "type": "string",
+            "format": "date-time",
+            "example": "2019-03-17T21:12:04.849Z"
+          },
+          "active": {
+            "description": "Customer active",
+            "example": "true",
+            "type": "boolean"
+          },
+          "deleted": {
+            "description": "Customer deleted",
+            "type": "boolean"
+          },
+          "firstname": {
+            "description": "First name",
+            "example": "Boba",
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 128
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "lastname": {
+            "example": "Fett",
+            "description": "Last name",
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 128
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "middlename": {
+            "description": "Middle name",
+            "example": "Alpha",
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 128
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "displayname": {
+            "description": "Display name",
+            "example": "Boba F.",
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 32,
+                "minLength": 3
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "phonenumbers": {
+            "description": "Phone numbers",
+            "example": {
+              "main": "+49-555-123-4567"
+            },
+            "anyOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "main": {
+                    "type": "string"
+                  },
+                  "home": {
+                    "type": "string"
+                  },
+                  "mobile": {
+                    "type": "string"
+                  },
+                  "work": {
+                    "type": "string"
+                  }
+                },
+                "anyOf": [
+                  {
+                    "required": [
+                      "main"
+                    ]
+                  },
+                  {
+                    "required": [
+                      "home"
+                    ]
+                  },
+                  {
+                    "required": [
+                      "mobile"
+                    ]
+                  },
+                  {
+                    "required": [
+                      "work"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "email": {
+            "description": "Email address",
+            "example": "boba@kamino.empire",
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 128,
+                "format": "email"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "customer_number": {
+            "description": "Unique customer number",
+            "example": "fett-002",
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 128,
+                "minLength": 1
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "company": {
+            "description": "Company name",
+            "example": {
+              "name": "Bounty Hunter's Guild"
+            },
+            "anyOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "name": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 64
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "description": {
+            "description": "Description",
+            "example": "Bounty hunter",
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "is_b2b": {
+            "description": "Is B2B customer",
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "date_of_birth": {
+            "description": "Birth date",
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "images": {
+            "description": "Images object with URLs of various types of images",
+            "anyOf": [
+              {
+                "type": "object",
+                "additionalProperties": true,
+                "properties": {
+                  "1x": {
+                    "description": "Image transformed to predefined small size",
+                    "example": "https://my-storage.io/images/f5a3cc72-7fb5-4d2c-bda5-9b2983c7e879_1x.png",
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "2x": {
+                    "description": "Image transformed to predefined medium size",
+                    "example": "https://my-storage.io/images/f5a3cc72-7fb5-4d2c-bda5-9b2983c7e879_2x.png",
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "3x": {
+                    "description": "Image transformed to predefined big size",
+                    "example": "https://my-storage.io/images/f5a3cc72-7fb5-4d2c-bda5-9b2983c7e879_1x.png",
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "avatar": {
+                    "description": "Image transformed to predefined size to use as \"avatar\"",
+                    "example": "https://my-storage.io/images/f5a3cc72-7fb5-4d2c-bda5-9b2983c7e879_avatar.png",
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "gallery": {
+                    "description": "Image transformed to predefined size to use in gallery",
+                    "example": "https://my-storage.io/images/f5a3cc72-7fb5-4d2c-bda5-9b2983c7e879_gallery.png",
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "original": {
+                    "description": "Original image",
+                    "example": "https://my-storage.io/images/f5a3cc72-7fb5-4d2c-bda5-9b2983c7e879.png",
+                    "type": "string",
+                    "format": "uri"
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "image": {
+            "description": "DEPRECATED. Omit or set null.",
+            "anyOf": [
+              {
+                "type": "object",
+                "additionalProperties": true,
+                "properties": {
+                  "1x": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "avatar": {
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "format": "uri"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "contacts": {
+            "description": "Contact info",
+            "anyOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "email": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "enabled": {
+                        "type": "boolean"
+                      }
+                    }
+                  },
+                  "newsletter": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "enabled": {
+                        "type": "boolean"
+                      }
+                    }
+                  },
+                  "phone": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "enabled": {
+                        "type": "boolean"
+                      }
+                    }
+                  },
+                  "post": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "enabled": {
+                        "type": "boolean"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "metadata": {
+            "description": "Additional metadata",
+            "type": "object"
+          },
+          "addresses": {
+            "description": "Addresses",
+            "anyOf": [
+              {
+                "type": "array",
+                "maxItems": 3,
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "lines",
+                    "street",
+                    "street_number",
+                    "locality",
+                    "region",
+                    "postal_code",
+                    "country",
+                    "type"
+                  ],
+                  "properties": {
+                    "lines": {
+                      "description": "Address details",
+                      "example": "Penthouse",
+                      "oneOf": [
+                        {
+                          "type": "array",
+                          "minItems": 1,
+                          "maxItems": 4,
+                          "items": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "street": {
+                      "description": "Street name",
+                      "example": "Genthiner Str.",
+                      "oneOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "street_number": {
+                      "description": "Building number",
+                      "example": "34",
+                      "oneOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "locality": {
+                      "description": "Locality name (city, village, etc.)",
+                      "example": "Berlin",
+                      "oneOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "region": {
+                      "description": "Region name",
+                      "example": "Branderburg",
+                      "oneOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "postal_code": {
+                      "description": "Postal code",
+                      "example": "10785",
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "maxLength": 10
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "country": {
+                      "description": "Country",
+                      "example": "Germany",
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "minLength": 2,
+                          "maxLength": 2,
+                          "pattern": "^[A-Z]{2}$"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "default": null
+                    },
+                    "type": {
+                      "description": "Address type",
+                      "example": "delivery",
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "enum": [
+                            "delivery",
+                            "billing"
+                          ]
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "custom": {
+            "description": "Custom data",
+            "anyOf": [
+              {
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "comment": {
+            "description": "Comment",
+            "example": "Don't mess with",
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 1024
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "discounts": {
+            "description": "Available discounts",
+            "anyOf": [
+              {
+                "type": "array",
+                "minItems": 1,
+                "maxItems": 10,
+                "items": {
+                  "anyOf": [
+                    {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "maxLength": 128
+                        },
+                        "amount": {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        "type": {
+                          "type": "string",
+                          "enum": [
+                            "percentage",
+                            "value"
+                          ]
+                        },
+                        "account": {
+                          "anyOf": [
+                            {
+                              "type": "string",
+                              "maxLength": 128
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "name": {
+                          "anyOf": [
+                            {
+                              "type": "string",
+                              "maxLength": 64
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "group": {
+                          "type": "string",
+                          "enum": [
+                            "cart",
+                            "customer"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "group",
+                        "type",
+                        "name",
+                        "amount",
+                        "id"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "amount": {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        "type": {
+                          "type": "string",
+                          "enum": [
+                            "percent",
+                            "percentage",
+                            "value"
+                          ]
+                        },
+                        "group": {
+                          "type": "string",
+                          "enum": [
+                            "cart",
+                            "customer"
+                          ]
+                        },
+                        "name": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "amount",
+                        "type",
+                        "group"
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "client_id": {
+            "description": "Client ID",
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 128
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "external_reference": {
+            "description": "External reference",
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 3,
+                "maxLength": 128
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "customer_since": {
+            "description": "Customer since",
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "locations": {
+            "description": "Locations customer belongs to",
+            "oneOf": [
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "branch_groups": {
+            "description": "Branch groups customer belongs to",
+            "oneOf": [
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "gender": {
+            "description": "Gender",
+            "example": "male",
+            "oneOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "male",
+                  "female",
+                  "unspecified"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "vat_id": {
+            "description": "Customer VAT ID",
+            "oneOf": [
+              {
+                "type": "string",
+                "maxLength": 20,
+                "minLength": 5
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "insert_id": {
+            "description": "Sequential customer index",
+            "type": "integer"
+          },
+          "customer_group": {
+            "description": "Deprecated: The group of customer",
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "price_list": {
+            "description": "Price list",
+            "oneOf": [
+              {
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "delegated_to": {
+            "description": "Entries customer delegated to",
+            "oneOf": [
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "owner": {
+            "description": "Deprecated: Owner",
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "analytics": {
+            "description": "A number of aggregated customer centric analytics data. Usually this data is being compiled at transaction time. Rehydrating data or adding missing data, requires a transaction with this customer.",
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "summary": {
+                    "description": "Global analytics summary of this customer.",
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                          "top_seller": {
+                            "description": "Reference to top selling staff person, based on \"salesman_staff\" on cart item level. The top results per currency are shown.",
+                            "oneOf": [
+                              {
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "additionalProperties": false,
+                                  "properties": {
+                                    "gross": {
+                                      "description": "The sum of selling_price_total generated by this salesman_staff",
+                                      "example": "27633.02",
+                                      "type": "number",
+                                      "minimum": 0,
+                                      "maximum": 1000000,
+                                      "multipleOf": 0.01
+                                    },
+                                    "net": {
+                                      "description": "The sum of selling_price_total minus vat_amount generated by this salesman_staff",
+                                      "example": "27633.02",
+                                      "type": "number",
+                                      "minimum": 0,
+                                      "maximum": 1000000,
+                                      "multipleOf": 0.01
+                                    },
+                                    "currency": {
+                                      "type": "string",
+                                      "minLength": 3,
+                                      "maxLength": 3
+                                    },
+                                    "salesman_staff": {
+                                      "type": "string",
+                                      "format": "uuid"
+                                    }
+                                  }
+                                }
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          },
+                          "top_branch": {
+                            "description": "Reference to top selling branch. The top results per currency are shown.",
+                            "oneOf": [
+                              {
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "additionalProperties": false,
+                                  "properties": {
+                                    "gross": {
+                                      "description": "The sum of selling_price_total generated by this branch",
+                                      "example": "27633.02",
+                                      "type": "number",
+                                      "minimum": 0,
+                                      "maximum": 1000000,
+                                      "multipleOf": 0.01
+                                    },
+                                    "net": {
+                                      "description": "The sum of selling_price_total minus vat_amount generated by this branch",
+                                      "example": "27633.02",
+                                      "type": "number",
+                                      "minimum": 0,
+                                      "maximum": 1000000,
+                                      "multipleOf": 0.01
+                                    },
+                                    "currency": {
+                                      "type": "string",
+                                      "minLength": 3,
+                                      "maxLength": 3
+                                    },
+                                    "branch_number": {
+                                      "type": "number",
+                                      "minimum": 0,
+                                      "multipleOf": 1
+                                    },
+                                    "branch": {
+                                      "type": "string",
+                                      "format": "uuid"
+                                    }
+                                  }
+                                }
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          },
+                          "average_items_per_transaction": {
+                            "description": "The anbsolute number of cart items (products), including the absolute returns. This is meant as \"items handled\" per customer.",
+                            "oneOf": [
+                              {
+                                "type": "number",
+                                "minimum": 0
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          },
+                          "total_quantity_returns": {
+                            "description": "Absolute number of all transactions that include at least a return.",
+                            "oneOf": [
+                              {
+                                "type": "number",
+                                "minimum": 0,
+                                "multipleOf": 1
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          },
+                          "total_quantity_cartitems": {
+                            "description": "Absolute number of all cart items that are of type \"sale\".",
+                            "oneOf": [
+                              {
+                                "type": "number",
+                                "minimum": 0,
+                                "multipleOf": 1
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          },
+                          "total_amount_returns": {
+                            "description": "The revenue (sum of selling_price_total) of all returns.",
+                            "oneOf": [
+                              {
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "additionalProperties": false,
+                                  "properties": {
+                                    "gross": {
+                                      "description": "The sum of selling_price_total of all refunds",
+                                      "example": "27633.02",
+                                      "type": "number",
+                                      "minimum": -1000000,
+                                      "maximum": 0,
+                                      "multipleOf": 0.01
+                                    },
+                                    "net": {
+                                      "description": "The sum of selling_price_total minus vat_amount of all refunds",
+                                      "example": "27633.02",
+                                      "type": "number",
+                                      "minimum": -1000000,
+                                      "maximum": 0,
+                                      "multipleOf": 0.01
+                                    },
+                                    "currency": {
+                                      "type": "string",
+                                      "minLength": 3,
+                                      "maxLength": 3
+                                    }
+                                  }
+                                }
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          },
+                          "total_transactions": {
+                            "description": "Absolute number of all transactions.",
+                            "oneOf": [
+                              {
+                                "type": "number",
+                                "minimum": 0,
+                                "multipleOf": 1
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          },
+                          "total_amount_items_sold": {
+                            "description": "Revenue of all cart items that were a sale.",
+                            "oneOf": [
+                              {
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "additionalProperties": false,
+                                  "properties": {
+                                    "gross": {
+                                      "description": "The sum of selling_price_total of all cartitems of that customer",
+                                      "example": "27633.02",
+                                      "type": "number",
+                                      "minimum": 0,
+                                      "maximum": 1000000,
+                                      "multipleOf": 0.01
+                                    },
+                                    "net": {
+                                      "description": "The sum of selling_price_total minus vat_amount of all cartitems of that customer",
+                                      "example": "27633.02",
+                                      "type": "number",
+                                      "minimum": 0,
+                                      "maximum": 1000000,
+                                      "multipleOf": 0.01
+                                    },
+                                    "currency": {
+                                      "type": "string",
+                                      "minLength": 3,
+                                      "maxLength": 3
+                                    }
+                                  }
+                                }
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          },
+                          "average_purchase_value": {
+                            "description": "Average of revenue of all sales.",
+                            "oneOf": [
+                              {
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "additionalProperties": false,
+                                  "properties": {
+                                    "gross": {
+                                      "description": "The sum of selling_price_total of all cartitems of that customer",
+                                      "example": "27633.02",
+                                      "type": "number",
+                                      "minimum": 0,
+                                      "maximum": 1000000,
+                                      "multipleOf": 0.01
+                                    },
+                                    "net": {
+                                      "description": "The sum of selling_price_total minus vat_amount of all cartitems of that customer",
+                                      "example": "27633.02",
+                                      "type": "number",
+                                      "minimum": 0,
+                                      "maximum": 1000000,
+                                      "multipleOf": 0.01
+                                    },
+                                    "currency": {
+                                      "type": "string",
+                                      "minLength": 3,
+                                      "maxLength": 3
+                                    }
+                                  }
+                                }
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          },
+                          "last_seen": {
+                            "description": "The last interaction with this customer.",
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "format": "date-time"
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "last_transactions_v0": {
+                    "description": "Array of v0 transactions. DEPRECATED.",
+                    "oneOf": [
+                      {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "notes": {
+            "oneOf": [
+              {
+                "type": "array",
+                "items": {
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "required": [
+                        "type",
+                        "payload"
+                      ],
+                      "properties": {
+                        "created_at": {
+                          "type": "string",
+                          "format": "date-time"
+                        },
+                        "updated_at": {
+                          "type": "string",
+                          "format": "date-time"
+                        },
+                        "id": {
+                          "type": "string",
+                          "format": "uuid"
+                        },
+                        "type": {
+                          "type": "string",
+                          "enum": [
+                            "text"
+                          ]
+                        },
+                        "payload": {
+                          "type": "string",
+                          "maxLength": 16384
+                        },
+                        "client_id": {
+                          "anyOf": [
+                            {
+                              "type": "string",
+                              "maxLength": 128
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "date": {
+                          "anyOf": [
+                            {
+                              "type": "string",
+                              "format": "date-time"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "cursor": {
+      "type": "object",
+      "description": "Optional cursor in paginated API calls. The cursor next field must be called as fully quantifiable URI in order to hit the next if available.",
+      "additionalProperties": false,
+      "required": [
+        "self"
+      ],
+      "properties": {
+        "next": {
+          "type": "string",
+          "format": "uri",
+          "description": "The URI pointing to the next page.",
+          "example": "https://api.tillhub.com/api/v1/products/061f91a3-eba2-40b8-9a76-115189d6741e?cursor=2018-07-02T21%3A47%3A44.382Z&size=10&cursor_field=updated_at"
+        },
+        "first": {
+          "type": "string",
+          "format": "uri",
+          "description": "The URI pointing to the the first page.",
+          "example": "https://api.tillhub.com/api/v1/products/061f91a3-eba2-40b8-9a76-115189d6741e?cursor=2018-07-02T21%3A47%3A44.382Z&size=10&cursor_field=updated_at"
+        },
+        "self": {
+          "type": "string",
+          "format": "uri",
+          "description": "The URI pointing to this page.",
+          "example": "https://api.tillhub.com/api/v1/products/061f91a3-eba2-40b8-9a76-115189d6741e?cursor=2018-07-02T21%3A47%3A44.382Z&size=10&cursor_field=updated_at"
+        }
+      }
+    }
+  }
+}
