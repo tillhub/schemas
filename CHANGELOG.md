@@ -1,3 +1,10 @@
+# [6.122.0](https://github.com/tillhub/schemas/compare/v6.121.0...v6.122.0) (2022-02-22)
+
+
+### Features
+
+* **carts:** add detailed schema #API-1394 ([#673](https://github.com/tillhub/schemas/issues/673)) ([774c03b](https://github.com/tillhub/schemas/commit/774c03b)), closes [#API-1394](https://github.com/tillhub/schemas/issues/API-1394) [#API-1394](https://github.com/tillhub/schemas/issues/API-1394)
+
 # [6.121.0](https://github.com/tillhub/schemas/compare/v6.120.0...v6.121.0) (2022-02-21)
 
 

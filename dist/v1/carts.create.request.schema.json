@@ -8,6 +8,8 @@
   ],
   "properties": {
     "date": {
+      "description": "Date of this cart",
+      "example": "2022-02-20T19:41:07.736Z",
       "oneOf": [
         {
           "type": "string",
@@ -20,6 +22,7 @@
     },
     "done_at": {
       "description": "Date when this cart was used in a transaction (currently). If date is not null, this cart must not be used.",
+      "example": "2022-02-21T16:14:55.076Z",
       "oneOf": [
         {
           "type": "string",
@@ -31,6 +34,8 @@
       ]
     },
     "branch": {
+      "description": "The branch cart belongs to",
+      "example": "0eb9ad65-63e5-445e-a7c2-3e13591011de",
       "oneOf": [
         {
           "type": "string",
@@ -42,6 +47,8 @@
       ]
     },
     "register": {
+      "description": "The register cart belongs to",
+      "example": "ede968cc-1ea1-4710-8d81-97d5a5fb166e",
       "oneOf": [
         {
           "type": "string",
@@ -53,6 +60,8 @@
       ]
     },
     "cashier_staff": {
+      "description": "Cashier who handled the cart",
+      "example": "bcd84d35-f887-4c35-bdad-291a154802a7",
       "oneOf": [
         {
           "type": "string",
@@ -65,6 +74,7 @@
     },
     "temporary_staff": {
       "description": "Staff who was lending permissions temporarily (in case that 'cashier_staff' did not have that permission)",
+      "example": "f925ce8c-fd80-40e5-bac4-b269a04bda6f",
       "oneOf": [
         {
           "type": "string",
@@ -76,6 +86,8 @@
       ]
     },
     "currency": {
+      "description": "Currency being used",
+      "example": "EUR",
       "oneOf": [
         {
           "type": "string",
@@ -89,10 +101,10 @@
     },
     "custom_id": {
       "description": "User defined (human readable) identifier for the cart, e.g. counting number 1, 2, 3 ...",
+      "example": "17",
       "oneOf": [
         {
           "type": "string",
-          "example": "17",
           "maxLength": 128
         },
         {
@@ -102,10 +114,10 @@
     },
     "client_id": {
       "description": "Producer side unique identifier to resolve downstream mapping targets, e.g. GUID or UUID",
+      "example": "00060968000420200624004214945",
       "oneOf": [
         {
           "type": "string",
-          "example": "00060968000420200624004214945",
           "minLength": 12,
           "maxLength": 64
         },
@@ -115,6 +127,8 @@
       ]
     },
     "cart_id": {
+      "description": "Cart ID",
+      "example": "4553332",
       "oneOf": [
         {
           "type": "string",
@@ -126,6 +140,8 @@
       ]
     },
     "external_reference_id": {
+      "description": "Cart ID in external system",
+      "example": "4433fg44ghnh4dfdf322",
       "oneOf": [
         {
           "type": "string",
@@ -170,6 +186,8 @@
       ]
     },
     "customer": {
+      "description": "Customer ID cart belongs to",
+      "example": "55ec2da5-f9a4-4868-8f00-65ae0804a9d3",
       "oneOf": [
         {
           "type": "string",
@@ -181,6 +199,8 @@
       ]
     },
     "customer_name": {
+      "description": "Customer name",
+      "example": "Morpheus",
       "oneOf": [
         {
           "type": "string",
@@ -192,6 +212,8 @@
       ]
     },
     "customer_description": {
+      "description": "Customer description",
+      "example": "Color pills seller",
       "oneOf": [
         {
           "type": "string",
@@ -203,6 +225,8 @@
       ]
     },
     "customer_number": {
+      "description": "Customer number",
+      "example": "322223",
       "oneOf": [
         {
           "type": "string",
@@ -214,6 +238,8 @@
       ]
     },
     "name": {
+      "description": "Cart name",
+      "example": "For the chosen one",
       "oneOf": [
         {
           "type": "string",
@@ -225,6 +251,8 @@
       ]
     },
     "description": {
+      "description": "Cart description",
+      "example": "Red or blue",
       "oneOf": [
         {
           "type": "string",
@@ -236,6 +264,8 @@
       ]
     },
     "comments": {
+      "description": "Additional comments",
+      "example": "Just funny choice",
       "oneOf": [
         {
           "type": "string",
@@ -270,14 +300,17 @@
             ],
             "properties": {
               "product": {
+                "description": "Identifier of the product",
+                "example": "cd0a2886-e245-4ed9-a758-443e7e5b3a3f",
                 "type": "string",
                 "format": "uuid"
               },
               "product_supplier_name": {
+                "description": "Custom identifier for the product's supplier",
+                "example": "00555kff34323",
                 "oneOf": [
                   {
                     "type": "string",
-                    "description": "Custom identifier for the product's supplier",
                     "maxLength": 128
                   },
                   {
@@ -286,11 +319,11 @@
                 ]
               },
               "is_service": {
+                "description": "If true, this item represents a service and might come with answers to service questions",
                 "oneOf": [
                   {
                     "type": "boolean",
-                    "default": false,
-                    "description": "If true, this item represents a service and might come with answers to service questions"
+                    "default": false
                   },
                   {
                     "type": "null"
@@ -298,6 +331,7 @@
                 ]
               },
               "discountable": {
+                "description": "Supports correct discount behavior without product lookup",
                 "oneOf": [
                   {
                     "type": "boolean"
@@ -308,9 +342,12 @@
                 ]
               },
               "qty": {
+                "description": "Product quantity in the cart",
+                "example": 2,
                 "type": "number"
               },
               "custom_id": {
+                "description": "Custom cart item ID",
                 "oneOf": [
                   {
                     "type": "string",
@@ -322,15 +359,17 @@
                 ]
               },
               "vat_rate": {
+                "description": "VAT rate",
+                "example": 0.12,
                 "type": "number",
                 "minimum": 0,
                 "maximum": 1
               },
               "vat_rate_class": {
+                "description": "Rate class from 'taxes.rate_class' according to international standards, used in Germany to map types for e.g. fiscalization",
+                "default": "normal",
                 "oneOf": [
                   {
-                    "default": "normal",
-                    "description": "Rate class from 'taxes.rate_class' according to international standards, used in Germany to map types for e.g. fiscalization",
                     "type": "string",
                     "enum": [
                       "normal",
@@ -344,6 +383,8 @@
                 ]
               },
               "currency": {
+                "description": "Currency symbol",
+                "example": "EUR",
                 "type": "string",
                 "minLength": 3,
                 "maxLength": 3
@@ -534,11 +575,11 @@
                 ]
               },
               "is_voucher": {
+                "description": "If true, this item represents a voucher and must come with voucher information in 'voucher'",
+                "default": false,
                 "oneOf": [
                   {
-                    "type": "boolean",
-                    "default": false,
-                    "description": "If true, this item represents a voucher and must come with voucher information in 'voucher'"
+                    "type": "boolean"
                   },
                   {
                     "type": "null"
@@ -759,10 +800,10 @@
                 "default": null
               },
               "is_refund": {
+                "description": "If true, the item was created by (partially) refunding a previous sale.",
                 "oneOf": [
                   {
-                    "type": "boolean",
-                    "description": "If true, the item was created by (partially) refunding a previous sale."
+                    "type": "boolean"
                   },
                   {
                     "type": "null"
@@ -873,11 +914,11 @@
                 "default": null
               },
               "attributes_description": {
+                "description": "A short description of the child attributes in variant products",
+                "example": "red | big | 32",
                 "oneOf": [
                   {
-                    "type": "string",
-                    "example": "red | big | 32",
-                    "description": "A short description of the child attributes in variant products"
+                    "type": "string"
                   },
                   {
                     "type": "null"
@@ -885,11 +926,11 @@
                 ]
               },
               "reference_cartitem_client_id": {
+                "description": "In cases of refund or cancellation, or invoicing a delivery note or selling a saved cart: the client_id of the origin item",
+                "example": "01331B44-130B-45D4-97A7-401247FD5B68",
                 "oneOf": [
                   {
-                    "type": "string",
-                    "example": "01331B44-130B-45D4-97A7-401247FD5B68",
-                    "description": "In cases of refund or cancellation, or invoicing a delivery note or selling a saved cart: the client_id of the origin item"
+                    "type": "string"
                   },
                   {
                     "type": "null"
@@ -897,11 +938,11 @@
                 ]
               },
               "used_barcode": {
+                "description": "The barcode used to trigger putting this item into the cart (defaults to the first available barcode from the product)",
+                "example": "0E9761310XF",
                 "oneOf": [
                   {
-                    "type": "string",
-                    "example": "0E9761310XF",
-                    "description": "The barcode used to trigger putting this item into the cart (defaults to the first available barcode from the product)"
+                    "type": "string"
                   },
                   {
                     "type": "null"
@@ -1228,21 +1269,21 @@
             "properties": {
               "product": {
                 "description": "The Tillhub product unique identifier",
+                "example": "aa165950-26f1-4a59-a85a-1c6017b3cb79",
                 "type": "string",
-                "format": "uuid",
-                "example": "aa165950-26f1-4a59-a85a-1c6017b3cb79"
+                "format": "uuid"
               },
               "custom_id": {
                 "description": "The product.custom_id as stated in https://tillhub.atlassian.net/browse/TM-5665",
+                "example": "260620-727-DE",
                 "type": "string",
-                "maxLength": 128,
-                "example": "260620-727-DE"
+                "maxLength": 128
               },
               "product_supplier_name": {
+                "description": "Custom identifier for the product's supplier",
                 "oneOf": [
                   {
                     "type": "string",
-                    "description": "Custom identifier for the product's supplier",
                     "maxLength": 128
                   },
                   {
@@ -1251,11 +1292,11 @@
                 ]
               },
               "is_service": {
+                "description": "If true, this item represents a service and might come with answers to service questions",
+                "default": false,
                 "oneOf": [
                   {
-                    "type": "boolean",
-                    "default": false,
-                    "description": "If true, this item represents a service and might come with answers to service questions"
+                    "type": "boolean"
                   },
                   {
                     "type": "null"
@@ -1263,6 +1304,7 @@
                 ]
               },
               "discountable": {
+                "description": "Supports correct discount behavior without product lookup",
                 "oneOf": [
                   {
                     "type": "boolean"
@@ -1273,15 +1315,19 @@
                 ]
               },
               "qty": {
+                "description": "Product quantity in the cart",
+                "example": 2,
                 "type": "number"
               },
               "currency": {
+                "description": "Currency symbol",
+                "example": "EUR",
                 "type": "string",
                 "minLength": 3,
                 "maxLength": 3
               },
               "amount": {
-                "description": "the currency / amount object combination is the Tillhub Money object. In this context it is the price of 1 item. The total will price * qty.",
+                "description": "The gross/net input price per quantity of 1.0 and before any discounts",
                 "type": "object",
                 "additionalProperties": false,
                 "anyOf": [
@@ -1320,6 +1366,8 @@
                 }
               },
               "vat_rate": {
+                "description": "VAT rate",
+                "example": 0.12,
                 "type": "number",
                 "minimum": 0,
                 "maximum": 1
@@ -1611,10 +1659,12 @@
             "type": "object",
             "properties": {
               "position": {
+                "description": "Cart item position",
                 "type": "number",
                 "minimum": 0
               },
               "discountable": {
+                "description": "Supports correct discount behavior without product lookup",
                 "oneOf": [
                   {
                     "type": "boolean"
@@ -1625,12 +1675,18 @@
                 ]
               },
               "product": {
+                "description": "Identifier of the product",
+                "example": "cd0a2886-e245-4ed9-a758-443e7e5b3a3f",
                 "type": "string"
               },
               "qty": {
+                "description": "Product quantity in the cart",
+                "example": 2,
                 "type": "number"
               },
               "currency": {
+                "description": "Currency symbol",
+                "example": "EUR",
                 "type": "string",
                 "minLength": 3,
                 "maxLength": 3
@@ -1835,10 +1891,12 @@
       }
     },
     "metadata": {
+      "description": "Additional meta data",
       "type": "object"
     },
     "opened_at": {
       "description": "Date when this cart was opened. If date is not null, this cart must not be used.",
+      "example": "2022-02-19T00:00:00.001Z",
       "oneOf": [
         {
           "type": "string",
