@@ -1,3 +1,10 @@
+# [6.123.0](https://github.com/tillhub/schemas/compare/v6.122.0...v6.123.0) (2022-02-25)
+
+
+### Features
+
+* **carts:** make 'tax' and 'vat_rate' conditional required, add 'acc… ([#674](https://github.com/tillhub/schemas/issues/674)) ([d4e00b6](https://github.com/tillhub/schemas/commit/d4e00b6)), closes [#API-1373](https://github.com/tillhub/schemas/issues/API-1373)
+
 # [6.122.0](https://github.com/tillhub/schemas/compare/v6.121.0...v6.122.0) (2022-02-22)
 
 

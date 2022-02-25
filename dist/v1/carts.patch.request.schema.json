@@ -283,19 +283,6 @@
           {
             "additionalProperties": false,
             "type": "object",
-            "required": [
-              "product",
-              "qty",
-              "custom_id",
-              "vat_rate",
-              "salesman_staff",
-              "tax",
-              "account",
-              "name",
-              "discounts",
-              "amount",
-              "currency"
-            ],
             "properties": {
               "product": {
                 "description": "Identifier of the product",
@@ -948,15 +935,18 @@
                 ]
               },
               "name": {
+                "description": "Cart item display name",
                 "type": "string",
                 "minLength": 1,
                 "maxLength": 128
               },
               "position": {
+                "description": "Cart item position",
                 "type": "number",
                 "minimum": 0
               },
               "comments": {
+                "description": "Additional comments",
                 "anyOf": [
                   {
                     "type": "string",
@@ -1003,6 +993,7 @@
                 ]
               },
               "salesman_staff": {
+                "description": "Staff person ID",
                 "oneOf": [
                   {
                     "type": "string",
@@ -1014,14 +1005,28 @@
                 ]
               },
               "tax": {
+                "description": "Tax rate ID",
                 "type": "string",
                 "format": "uuid"
               },
               "account": {
+                "description": "Account ID",
                 "type": "string",
                 "format": "uuid"
               },
+              "account_number": {
+                "description": "Account number",
+                "oneOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
               "product_group": {
+                "description": "Product group ID",
                 "oneOf": [
                   {
                     "type": "string",
@@ -1250,20 +1255,39 @@
                   }
                 ]
               }
-            }
+            },
+            "anyOf": [
+              {
+                "required": [
+                  "product",
+                  "qty",
+                  "custom_id",
+                  "salesman_staff",
+                  "name",
+                  "discounts",
+                  "amount",
+                  "currency",
+                  "tax"
+                ]
+              },
+              {
+                "required": [
+                  "product",
+                  "qty",
+                  "custom_id",
+                  "salesman_staff",
+                  "name",
+                  "discounts",
+                  "amount",
+                  "currency",
+                  "vat_rate"
+                ]
+              }
+            ]
           },
           {
             "additionalProperties": false,
             "type": "object",
-            "required": [
-              "custom_id",
-              "qty",
-              "name",
-              "currency",
-              "amount",
-              "tax",
-              "account"
-            ],
             "properties": {
               "product": {
                 "description": "The Tillhub product unique identifier",
@@ -1561,15 +1585,18 @@
                 }
               },
               "name": {
+                "description": "Cart item display name",
                 "type": "string",
                 "minLength": 1,
                 "maxLength": 128
               },
               "position": {
+                "description": "Cart item position",
                 "type": "number",
                 "minimum": 0
               },
               "comments": {
+                "description": "Additional comments",
                 "anyOf": [
                   {
                     "type": "string",
@@ -1616,6 +1643,7 @@
                 ]
               },
               "salesman_staff": {
+                "description": "Staff person ID",
                 "oneOf": [
                   {
                     "type": "string",
@@ -1627,14 +1655,28 @@
                 ]
               },
               "tax": {
+                "description": "Tax rate ID",
                 "type": "string",
                 "format": "uuid"
               },
               "account": {
+                "description": "Account ID",
                 "type": "string",
                 "format": "uuid"
               },
+              "account_number": {
+                "description": "Account number",
+                "oneOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
               "product_group": {
+                "description": "Product group ID",
                 "oneOf": [
                   {
                     "type": "string",
@@ -1645,14 +1687,31 @@
                   }
                 ]
               }
-            }
+            },
+            "anyOf": [
+              {
+                "required": [
+                  "custom_id",
+                  "qty",
+                  "name",
+                  "currency",
+                  "amount",
+                  "tax"
+                ]
+              },
+              {
+                "required": [
+                  "custom_id",
+                  "qty",
+                  "name",
+                  "currency",
+                  "amount",
+                  "vat_rate"
+                ]
+              }
+            ]
           },
           {
-            "required": [
-              "product",
-              "currency",
-              "qty"
-            ],
             "additionalProperties": false,
             "type": "object",
             "properties": {
@@ -1883,7 +1942,12 @@
                   ]
                 }
               }
-            }
+            },
+            "required": [
+              "product",
+              "currency",
+              "qty"
+            ]
           }
         ]
       }
