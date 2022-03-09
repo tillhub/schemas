@@ -1,3 +1,10 @@
+# [6.124.0](https://github.com/tillhub/schemas/compare/v6.123.0...v6.124.0) (2022-03-09)
+
+
+### Features
+
+* **discounts:** Discounts export ([#677](https://github.com/tillhub/schemas/issues/677)) ([ced1b07](https://github.com/tillhub/schemas/commit/ced1b07))
+
 # [6.123.0](https://github.com/tillhub/schemas/compare/v6.122.0...v6.123.0) (2022-02-25)
 
 
