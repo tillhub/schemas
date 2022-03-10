@@ -1,3 +1,10 @@
+# [6.125.0](https://github.com/tillhub/schemas/compare/v6.124.0...v6.125.0) (2022-03-10)
+
+
+### Features
+
+* **staff:** unify 'gender' field #API-1412 ([b927123](https://github.com/tillhub/schemas/commit/b927123)), closes [#API-1412](https://github.com/tillhub/schemas/issues/API-1412)
+
 # [6.124.0](https://github.com/tillhub/schemas/compare/v6.123.0...v6.124.0) (2022-03-09)
 
 

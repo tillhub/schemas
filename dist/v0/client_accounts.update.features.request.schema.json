@@ -75,6 +75,10 @@
     "abocard": {
       "type": "boolean",
       "default": false
+    },
+    "cash_book": {
+      "type": "boolean",
+      "default": false
     }
   },
   "type": "object"

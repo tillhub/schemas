@@ -422,12 +422,15 @@
       ]
     },
     "gender": {
+      "description": "Gender",
+      "example": "male",
       "oneOf": [
         {
           "type": "string",
           "enum": [
             "male",
-            "female"
+            "female",
+            "unspecified"
           ]
         },
         {
