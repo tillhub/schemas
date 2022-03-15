@@ -109,555 +109,816 @@
           "enum": [
             "instant_checkout",
             "add_to_cart",
-            "linked_voucher"
+            "linked_voucher",
+            "discounted_voucher"
           ]
         }
       },
-      "if": {
-        "properties": {
-          "class": {
-            "type": "string",
-            "enum": [
-              "instant_checkout",
-              "add_to_cart"
-            ]
-          }
-        }
-      },
-      "then": {
-        "properties": {
-          "description": {
-            "oneOf": [
-              {
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "class": {
                 "type": "string",
-                "minLength": 1,
-                "maxLength": 128
-              },
-              {
-                "type": "null"
+                "enum": [
+                  "instant_checkout",
+                  "add_to_cart"
+                ]
               }
-            ]
+            }
           },
-          "resources": {
-            "description": "Store static resources e.g. products that this function will be bound to.",
-            "oneOf": [
-              {
-                "type": "array",
-                "items": {
-                  "additionalProperties": false,
-                  "type": "object",
-                  "properties": {
-                    "type": {
-                      "description": "Type of the Tillhub resource.",
-                      "type": "string",
-                      "enum": [
-                        "product",
-                        "discount",
-                        "voucher_action",
-                        "customer"
-                      ]
-                    },
-                    "object_id": {
-                      "description": "Identifier of the Tillhub resource.",
-                      "type": "string",
-                      "format": "uuid"
-                    }
-                  }
-                }
-              },
-              {
-                "type": "null"
-              }
-            ]
-          },
-          "images": {
-            "description": "Images to be used as thumbnail etc.",
-            "oneOf": [
-              {
-                "type": "object",
-                "additionalProperties": false,
-                "properties": {
-                  "original": {
-                    "oneOf": [
-                      {
-                        "type": "string",
-                        "format": "uri"
-                      },
-                      {
-                        "type": "null"
-                      }
-                    ],
-                    "default": null
-                  },
-                  "1x": {
-                    "oneOf": [
-                      {
-                        "type": "string",
-                        "format": "uri"
-                      },
-                      {
-                        "type": "null"
-                      }
-                    ],
-                    "default": null
-                  },
-                  "2x": {
-                    "oneOf": [
-                      {
-                        "type": "string",
-                        "format": "uri"
-                      },
-                      {
-                        "type": "null"
-                      }
-                    ],
-                    "default": null
-                  },
-                  "3x": {
-                    "oneOf": [
-                      {
-                        "type": "string",
-                        "format": "uri"
-                      },
-                      {
-                        "type": "null"
-                      }
-                    ],
-                    "default": null
-                  },
-                  "lia_1x": {
-                    "oneOf": [
-                      {
-                        "type": "string",
-                        "format": "uri"
-                      },
-                      {
-                        "type": "null"
-                      }
-                    ],
-                    "default": null
-                  },
-                  "lia_2x": {
-                    "oneOf": [
-                      {
-                        "type": "string",
-                        "format": "uri"
-                      },
-                      {
-                        "type": "null"
-                      }
-                    ],
-                    "default": null
-                  },
-                  "lia_3x": {
-                    "oneOf": [
-                      {
-                        "type": "string",
-                        "format": "uri"
-                      },
-                      {
-                        "type": "null"
-                      }
-                    ],
-                    "default": null
-                  },
-                  "square_1x": {
-                    "oneOf": [
-                      {
-                        "type": "string",
-                        "format": "uri"
-                      },
-                      {
-                        "type": "null"
-                      }
-                    ],
-                    "default": null
-                  },
-                  "square_2x": {
-                    "oneOf": [
-                      {
-                        "type": "string",
-                        "format": "uri"
-                      },
-                      {
-                        "type": "null"
-                      }
-                    ],
-                    "default": null
-                  },
-                  "square_3x": {
-                    "oneOf": [
-                      {
-                        "type": "string",
-                        "format": "uri"
-                      },
-                      {
-                        "type": "null"
-                      }
-                    ],
-                    "default": null
-                  },
-                  "avatar": {
+          "then": {
+            "properties": {
+              "description": {
+                "oneOf": [
+                  {
                     "type": "string",
-                    "format": "uri"
+                    "minLength": 1,
+                    "maxLength": 128
+                  },
+                  {
+                    "type": "null"
                   }
-                }
+                ]
               },
-              {
-                "type": "null"
-              }
-            ]
-          },
-          "payload": {
-            "oneOf": [
-              {
-                "description": "Specific description of the instant product checkout function. Only the default tax-option will be used. Setting a payment is optional.",
-                "additionalProperties": false,
-                "type": "object",
-                "required": [
-                  "products"
-                ],
-                "properties": {
-                  "products": {
+              "resources": {
+                "description": "Store static resources e.g. products that this function will be bound to.",
+                "oneOf": [
+                  {
                     "type": "array",
-                    "minItems": 1,
                     "items": {
-                      "type": "object",
-                      "description": "The applicable Tillhub product resource.",
                       "additionalProperties": false,
+                      "type": "object",
                       "properties": {
-                        "product": {
+                        "type": {
+                          "description": "Type of the Tillhub resource.",
                           "type": "string",
-                          "format": "uuid",
-                          "description": "The Tillhub product resource reference ID.",
-                          "example": "43847a66-97dc-4ac2-8e8a-c44920e1f22f"
+                          "enum": [
+                            "product",
+                            "discount",
+                            "voucher_action",
+                            "customer"
+                          ]
                         },
-                        "qty": {
-                          "type": "number",
-                          "description": "The quantity of this item/product.",
-                          "example": "100",
-                          "minimum": -32767,
-                          "maximum": 32767,
-                          "multipleOf": 0.001
+                        "object_id": {
+                          "description": "Identifier of the Tillhub resource.",
+                          "type": "string",
+                          "format": "uuid"
                         }
                       }
                     }
                   },
-                  "discount": {
-                    "default": null,
-                    "oneOf": [
-                      {
-                        "type": "string",
-                        "format": "uuid",
-                        "description": "The Tillhub discount resource reference ID.",
-                        "example": "bd7d8a90-83d1-4d53-8659-b205b409d6e1"
-                      },
-                      {
-                        "type": "null"
-                      }
-                    ]
-                  },
-                  "payment_option": {
-                    "default": null,
-                    "oneOf": [
-                      {
-                        "type": "string",
-                        "format": "uuid",
-                        "description": "The Tillhub payment option resource reference ID. Can be used to trigger a payment directly",
-                        "example": "bd7d8a90-83d1-4d53-8659-b205b409d6e1"
-                      },
-                      {
-                        "type": "null"
-                      }
-                    ]
+                  {
+                    "type": "null"
                   }
-                }
+                ]
               },
-              {
-                "type": "null"
-              }
-            ]
-          }
-        }
-      },
-      "else": {
-        "if": {
-          "properties": {
-            "class": {
-              "type": "string",
-              "enum": [
-                "linked_voucher"
-              ]
-            }
-          }
-        },
-        "then": {
-          "properties": {
-            "description": {
-              "oneOf": [
-                {
-                  "type": "string",
-                  "minLength": 1,
-                  "maxLength": 128
-                },
-                {
-                  "type": "null"
-                }
-              ]
-            },
-            "resources": {
-              "description": "Store static resources e.g. products that this function will be bound to.",
-              "oneOf": [
-                {
-                  "type": "array",
-                  "items": {
+              "images": {
+                "description": "Images to be used as thumbnail etc.",
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "original": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ],
+                        "default": null
+                      },
+                      "1x": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ],
+                        "default": null
+                      },
+                      "2x": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ],
+                        "default": null
+                      },
+                      "3x": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ],
+                        "default": null
+                      },
+                      "lia_1x": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ],
+                        "default": null
+                      },
+                      "lia_2x": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ],
+                        "default": null
+                      },
+                      "lia_3x": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ],
+                        "default": null
+                      },
+                      "square_1x": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ],
+                        "default": null
+                      },
+                      "square_2x": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ],
+                        "default": null
+                      },
+                      "square_3x": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ],
+                        "default": null
+                      },
+                      "avatar": {
+                        "type": "string",
+                        "format": "uri"
+                      }
+                    }
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "payload": {
+                "oneOf": [
+                  {
+                    "description": "Specific description of the instant product checkout function. Only the default tax-option will be used. Setting a payment is optional.",
                     "additionalProperties": false,
                     "type": "object",
+                    "required": [
+                      "products"
+                    ],
                     "properties": {
-                      "type": {
-                        "description": "Type of the Tillhub resource.",
-                        "type": "string",
-                        "enum": [
-                          "product",
-                          "discount",
-                          "voucher_action",
-                          "customer"
+                      "products": {
+                        "type": "array",
+                        "minItems": 1,
+                        "items": {
+                          "type": "object",
+                          "description": "The applicable Tillhub product resource.",
+                          "additionalProperties": false,
+                          "properties": {
+                            "product": {
+                              "type": "string",
+                              "format": "uuid",
+                              "description": "The Tillhub product resource reference ID.",
+                              "example": "43847a66-97dc-4ac2-8e8a-c44920e1f22f"
+                            },
+                            "qty": {
+                              "type": "number",
+                              "description": "The quantity of this item/product.",
+                              "example": "100",
+                              "minimum": -32767,
+                              "maximum": 32767,
+                              "multipleOf": 0.001
+                            }
+                          }
+                        }
+                      },
+                      "discount": {
+                        "default": null,
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "format": "uuid",
+                            "description": "The Tillhub discount resource reference ID.",
+                            "example": "bd7d8a90-83d1-4d53-8659-b205b409d6e1"
+                          },
+                          {
+                            "type": "null"
+                          }
                         ]
                       },
-                      "object_id": {
-                        "description": "Identifier of the Tillhub resource.",
-                        "type": "string",
-                        "format": "uuid"
+                      "payment_option": {
+                        "default": null,
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "format": "uuid",
+                            "description": "The Tillhub payment option resource reference ID. Can be used to trigger a payment directly",
+                            "example": "bd7d8a90-83d1-4d53-8659-b205b409d6e1"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
                       }
                     }
+                  },
+                  {
+                    "type": "null"
                   }
-                },
-                {
-                  "type": "null"
-                }
-              ]
-            },
-            "images": {
-              "description": "Images to be used as thumbnail etc.",
-              "oneOf": [
-                {
-                  "type": "object",
-                  "additionalProperties": false,
-                  "properties": {
-                    "original": {
-                      "oneOf": [
-                        {
-                          "type": "string",
-                          "format": "uri"
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ],
-                      "default": null
-                    },
-                    "1x": {
-                      "oneOf": [
-                        {
-                          "type": "string",
-                          "format": "uri"
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ],
-                      "default": null
-                    },
-                    "2x": {
-                      "oneOf": [
-                        {
-                          "type": "string",
-                          "format": "uri"
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ],
-                      "default": null
-                    },
-                    "3x": {
-                      "oneOf": [
-                        {
-                          "type": "string",
-                          "format": "uri"
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ],
-                      "default": null
-                    },
-                    "lia_1x": {
-                      "oneOf": [
-                        {
-                          "type": "string",
-                          "format": "uri"
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ],
-                      "default": null
-                    },
-                    "lia_2x": {
-                      "oneOf": [
-                        {
-                          "type": "string",
-                          "format": "uri"
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ],
-                      "default": null
-                    },
-                    "lia_3x": {
-                      "oneOf": [
-                        {
-                          "type": "string",
-                          "format": "uri"
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ],
-                      "default": null
-                    },
-                    "square_1x": {
-                      "oneOf": [
-                        {
-                          "type": "string",
-                          "format": "uri"
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ],
-                      "default": null
-                    },
-                    "square_2x": {
-                      "oneOf": [
-                        {
-                          "type": "string",
-                          "format": "uri"
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ],
-                      "default": null
-                    },
-                    "square_3x": {
-                      "oneOf": [
-                        {
-                          "type": "string",
-                          "format": "uri"
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ],
-                      "default": null
-                    },
-                    "avatar": {
-                      "type": "string",
-                      "format": "uri"
-                    }
-                  }
-                },
-                {
-                  "type": "null"
-                }
-              ]
-            },
-            "payload": {
-              "oneOf": [
-                {
-                  "description": "Specific description of the linked voucher function (2 specific vouchers added together with specific amounts and one with discount).",
-                  "additionalProperties": false,
-                  "type": "object",
-                  "required": [
-                    "products"
-                  ],
-                  "properties": {
-                    "linked_voucher": {
-                      "type": "object",
-                      "description": "The applicable Tillhub product resource.",
-                      "additionalProperties": false,
-                      "properties": {
-                        "action": {
-                          "type": "string",
-                          "format": "uuid",
-                          "description": "The primaray voucher action ressource ID.",
-                          "example": "3fe039d8-e38d-4333-86d8-48334da189a8"
-                        },
-                        "amount": {
-                          "example": 50,
-                          "description": "The primaray voucher amount (.2Decimal e.g. 50.00€).",
-                          "type": "number",
-                          "minimum": -1000000,
-                          "maximum": 1000000,
-                          "multipleOf": 0.01
-                        },
-                        "linked_action": {
-                          "type": "string",
-                          "format": "uuid",
-                          "description": "The secondary voucher action ressource ID.",
-                          "example": "fc7cc46a-ebe2-4b62-9b1b-0f849680b49"
-                        },
-                        "linked_amount": {
-                          "example": 10,
-                          "description": "The secondary voucher amount (.2Decimal e.g. 10.0€).",
-                          "type": "number",
-                          "minimum": -1000000,
-                          "maximum": 1000000,
-                          "multipleOf": 0.01
-                        },
-                        "linked_discount": {
-                          "oneOf": [
-                            {
-                              "description": "Discount template applied to the secondary voucher ().",
-                              "additionalProperties": false,
-                              "type": "object",
-                              "properties": {
-                                "name": {
-                                  "description": "Printable name of the discount.",
-                                  "type": "string",
-                                  "example": "X-mas discount"
-                                },
-                                "rate": {
-                                  "type": "number",
-                                  "description": "The rate of the discount",
-                                  "example": "1.0",
-                                  "minimum": 0,
-                                  "maximum": 1,
-                                  "multipleOf": 0.001
-                                }
-                              }
-                            },
-                            {
-                              "type": "null"
-                            }
-                          ]
-                        }
-                      }
-                    }
-                  }
-                },
-                {
-                  "type": "null"
-                }
-              ]
+                ]
+              }
             }
           }
         },
-        "else": false
-      }
+        {
+          "if": {
+            "properties": {
+              "class": {
+                "type": "string",
+                "enum": [
+                  "linked_voucher"
+                ]
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "description": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 128
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "resources": {
+                "description": "Store static resources e.g. products that this function will be bound to.",
+                "oneOf": [
+                  {
+                    "type": "array",
+                    "items": {
+                      "additionalProperties": false,
+                      "type": "object",
+                      "properties": {
+                        "type": {
+                          "description": "Type of the Tillhub resource.",
+                          "type": "string",
+                          "enum": [
+                            "product",
+                            "discount",
+                            "voucher_action",
+                            "customer"
+                          ]
+                        },
+                        "object_id": {
+                          "description": "Identifier of the Tillhub resource.",
+                          "type": "string",
+                          "format": "uuid"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "images": {
+                "description": "Images to be used as thumbnail etc.",
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "original": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ],
+                        "default": null
+                      },
+                      "1x": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ],
+                        "default": null
+                      },
+                      "2x": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ],
+                        "default": null
+                      },
+                      "3x": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ],
+                        "default": null
+                      },
+                      "lia_1x": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ],
+                        "default": null
+                      },
+                      "lia_2x": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ],
+                        "default": null
+                      },
+                      "lia_3x": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ],
+                        "default": null
+                      },
+                      "square_1x": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ],
+                        "default": null
+                      },
+                      "square_2x": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ],
+                        "default": null
+                      },
+                      "square_3x": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ],
+                        "default": null
+                      },
+                      "avatar": {
+                        "type": "string",
+                        "format": "uri"
+                      }
+                    }
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "payload": {
+                "oneOf": [
+                  {
+                    "description": "Specific description of the linked voucher function (2 specific vouchers added together with specific amounts and one with discount).",
+                    "additionalProperties": false,
+                    "type": "object",
+                    "required": [
+                      "linked_voucher"
+                    ],
+                    "properties": {
+                      "linked_voucher": {
+                        "type": "object",
+                        "description": "The applicable Tillhub product resource.",
+                        "additionalProperties": false,
+                        "properties": {
+                          "action": {
+                            "type": "string",
+                            "format": "uuid",
+                            "description": "The primaray voucher action ressource ID.",
+                            "example": "3fe039d8-e38d-4333-86d8-48334da189a8"
+                          },
+                          "amount": {
+                            "example": 50,
+                            "description": "The primaray voucher amount (.2Decimal e.g. 50.00€).",
+                            "type": "number",
+                            "minimum": -1000000,
+                            "maximum": 1000000,
+                            "multipleOf": 0.01
+                          },
+                          "linked_action": {
+                            "type": "string",
+                            "format": "uuid",
+                            "description": "The secondary voucher action ressource ID.",
+                            "example": "fc7cc46a-ebe2-4b62-9b1b-0f849680b49"
+                          },
+                          "linked_amount": {
+                            "example": 10,
+                            "description": "The secondary voucher amount (.2Decimal e.g. 10.0€).",
+                            "type": "number",
+                            "minimum": -1000000,
+                            "maximum": 1000000,
+                            "multipleOf": 0.01
+                          },
+                          "linked_discount": {
+                            "oneOf": [
+                              {
+                                "description": "Discount template applied to the secondary voucher ().",
+                                "additionalProperties": false,
+                                "type": "object",
+                                "properties": {
+                                  "name": {
+                                    "description": "Printable name of the discount.",
+                                    "type": "string",
+                                    "example": "X-mas discount"
+                                  },
+                                  "rate": {
+                                    "type": "number",
+                                    "description": "The rate of the discount",
+                                    "example": "1.0",
+                                    "minimum": 0,
+                                    "maximum": 1,
+                                    "multipleOf": 0.001
+                                  }
+                                }
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "class": {
+                "type": "string",
+                "enum": [
+                  "discounted_voucher"
+                ]
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "description": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 128
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "resources": {
+                "description": "Store static resources e.g. products that this function will be bound to.",
+                "oneOf": [
+                  {
+                    "type": "array",
+                    "items": {
+                      "additionalProperties": false,
+                      "type": "object",
+                      "properties": {
+                        "type": {
+                          "description": "Type of the Tillhub resource.",
+                          "type": "string",
+                          "enum": [
+                            "product",
+                            "discount",
+                            "voucher_action",
+                            "customer"
+                          ]
+                        },
+                        "object_id": {
+                          "description": "Identifier of the Tillhub resource.",
+                          "type": "string",
+                          "format": "uuid"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "images": {
+                "description": "Images to be used as thumbnail etc.",
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "original": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ],
+                        "default": null
+                      },
+                      "1x": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ],
+                        "default": null
+                      },
+                      "2x": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ],
+                        "default": null
+                      },
+                      "3x": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ],
+                        "default": null
+                      },
+                      "lia_1x": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ],
+                        "default": null
+                      },
+                      "lia_2x": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ],
+                        "default": null
+                      },
+                      "lia_3x": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ],
+                        "default": null
+                      },
+                      "square_1x": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ],
+                        "default": null
+                      },
+                      "square_2x": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ],
+                        "default": null
+                      },
+                      "square_3x": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ],
+                        "default": null
+                      },
+                      "avatar": {
+                        "type": "string",
+                        "format": "uri"
+                      }
+                    }
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "payload": {
+                "oneOf": [
+                  {
+                    "description": "Specific description of the discounted voucher function (1 specific voucher added together with a negative amount product).",
+                    "additionalProperties": false,
+                    "type": "object",
+                    "required": [
+                      "discounted_voucher"
+                    ],
+                    "properties": {
+                      "discounted_voucher": {
+                        "type": "object",
+                        "description": "Describes the necessary fields to sell voucher that is discounted by an additional product.",
+                        "additionalProperties": false,
+                        "properties": {
+                          "action": {
+                            "type": "string",
+                            "format": "uuid",
+                            "description": "The primaray voucher action ressource ID.",
+                            "example": "efe039d8-e38d-4333-86d8-48334da189a8"
+                          },
+                          "amount": {
+                            "example": 50,
+                            "description": "The primaray voucher amount (.2Decimal e.g. 50.00€).",
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 1000000,
+                            "multipleOf": 0.01
+                          },
+                          "linked_product": {
+                            "type": "string",
+                            "format": "uuid",
+                            "description": "The additional product ressource ID.",
+                            "example": "fc7cc46a-ebe2-4b62-9b1b-0f849680b49"
+                          },
+                          "linked_amount": {
+                            "example": 10,
+                            "description": "The unit price of the linked product.",
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 1000000,
+                            "multipleOf": 0.01
+                          },
+                          "linked_quantity": {
+                            "example": -1,
+                            "description": "The quantity of the linked product (typically -1) to act as a discount.",
+                            "type": "integer",
+                            "minimum": -16,
+                            "maximum": 0
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
     },
     "locations": {
       "anyOf": [

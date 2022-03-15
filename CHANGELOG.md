@@ -1,3 +1,16 @@
+# [6.127.0](https://github.com/tillhub/schemas/compare/v6.126.0...v6.127.0) (2022-03-15)
+
+
+### Bug Fixes
+
+* **functions:** vouchers ([caa53d9](https://github.com/tillhub/schemas/commit/caa53d9))
+
+
+### Features
+
+* **functions:** discounted_voucher ([f8ed802](https://github.com/tillhub/schemas/commit/f8ed802))
+* **transactions:** references ([4a70818](https://github.com/tillhub/schemas/commit/4a70818))
+
 # [6.126.0](https://github.com/tillhub/schemas/compare/v6.125.0...v6.126.0) (2022-03-15)
 
 

@@ -1423,7 +1423,8 @@
                   "canceled_expense",
                   "canceled_deposit",
                   "canceled_bank_expense",
-                  "canceled_bank_deposit"
+                  "canceled_bank_deposit",
+                  "linked_item"
                 ]
               },
               "id": {
@@ -3457,7 +3458,8 @@
                         "canceled_expense",
                         "canceled_deposit",
                         "canceled_bank_expense",
-                        "canceled_bank_deposit"
+                        "canceled_bank_deposit",
+                        "linked_item"
                       ]
                     },
                     "id": {
@@ -4755,7 +4757,8 @@
                         "canceled_expense",
                         "canceled_deposit",
                         "canceled_bank_expense",
-                        "canceled_bank_deposit"
+                        "canceled_bank_deposit",
+                        "linked_item"
                       ]
                     },
                     "id": {
