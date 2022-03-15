@@ -1,3 +1,10 @@
+# [6.126.0](https://github.com/tillhub/schemas/compare/v6.125.0...v6.126.0) (2022-03-15)
+
+
+### Features
+
+* **analytics:** transactons overview report v3 schema #API-1042 ([#680](https://github.com/tillhub/schemas/issues/680)) ([e5dc7ba](https://github.com/tillhub/schemas/commit/e5dc7ba)), closes [#API-1042](https://github.com/tillhub/schemas/issues/API-1042) [#API-1042](https://github.com/tillhub/schemas/issues/API-1042)
+
 # [6.125.0](https://github.com/tillhub/schemas/compare/v6.124.0...v6.125.0) (2022-03-10)
 
 
