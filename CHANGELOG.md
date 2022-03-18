@@ -1,3 +1,10 @@
+# [6.128.0](https://github.com/tillhub/schemas/compare/v6.127.0...v6.128.0) (2022-03-18)
+
+
+### Features
+
+* **branches:** add receipt_footer_image to branches model ([#682](https://github.com/tillhub/schemas/issues/682)) ([132523f](https://github.com/tillhub/schemas/commit/132523f))
+
 # [6.127.0](https://github.com/tillhub/schemas/compare/v6.126.0...v6.127.0) (2022-03-15)
 
 
