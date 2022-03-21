@@ -1,0 +1,208 @@
+{
+  "$id": "https://schemas.tillhub.com/v0/reasons.read.all.response.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "msg": {
+      "type": "string",
+      "minLength": 1,
+      "example": "Queried transactions successfully.",
+      "description": "Any English sentence, meant as information for developers and implementers. Avoid displaying this to the users and especially do not expect those messages to stay stable."
+    },
+    "msg_localised": {
+      "description": "Optional localized message that can be displayed to the user if existing. The language can be set by in the request or will fallback to English.",
+      "example": "Abgefragte Transaktionen erfolgreich.",
+      "type": "string",
+      "minLength": 1
+    },
+    "request": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Information about the request itself.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "The request uuid that can be used to identify and trace API calls.",
+          "format": "uuid"
+        },
+        "host": {
+          "type": "string",
+          "minLength": 1,
+          "example": "https://api.tillhub.com",
+          "description": "Server host and protocol from which request was handled."
+        }
+      }
+    },
+    "count": {
+      "type": "number",
+      "description": "the length of the results array.",
+      "example": 1
+    },
+    "results": {
+      "type": "array",
+      "description": "The envelope of items, that are usually objects. We are generally sending back arrays even if there was just one requested resource.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "description": "Unique entity ID",
+            "type": "string",
+            "format": "uuid",
+            "example": "936835f7-2d75-41d2-9001-38ed6e458328"
+          },
+          "created_at": {
+            "type": "object",
+            "additionalProperties": false,
+            "description": "The date and time entity was created",
+            "required": [
+              "iso",
+              "unix"
+            ],
+            "properties": {
+              "iso": {
+                "type": "string",
+                "format": "date-time",
+                "description": "ISO 8601 compliant format.",
+                "example": "2021-06-03T11:18:47.725Z"
+              },
+              "unix": {
+                "type": "integer",
+                "description": "The Unix epoch timestamp in milliseconds.",
+                "example": 1622719127725
+              }
+            }
+          },
+          "updated_at": {
+            "type": "object",
+            "additionalProperties": false,
+            "description": "The date and time entity was updated",
+            "required": [
+              "iso",
+              "unix"
+            ],
+            "properties": {
+              "iso": {
+                "type": "string",
+                "format": "date-time",
+                "description": "ISO 8601 compliant format.",
+                "example": "2021-06-03T11:18:47.725Z"
+              },
+              "unix": {
+                "type": "integer",
+                "description": "The Unix epoch timestamp in milliseconds.",
+                "example": 1622719127725
+              }
+            }
+          },
+          "name": {
+            "oneOf": [
+              {
+                "description": "The reason name",
+                "example": "Returned goods",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 128
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "description": {
+            "oneOf": [
+              {
+                "description": "The reason description",
+                "example": "Goods were returned by the customer",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 4096
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "behavior": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "stock": {
+                    "type": "string",
+                    "enum": [
+                      "restock"
+                    ]
+                  },
+                  "stock_location": {
+                    "type": "string",
+                    "enum": [
+                      "current"
+                    ]
+                  },
+                  "navigation": {
+                    "oneOf": [
+                      {
+                        "description": "defines automatic navigation, e.g. directly navigating to payments when a reason for an item refund was given",
+                        "type": "string",
+                        "enum": [
+                          "payment_view",
+                          "carts",
+                          "ask"
+                        ]
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "null"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "deleted": {
+            "type": "boolean"
+          },
+          "active": {
+            "description": "The reason is active",
+            "type": "boolean"
+          },
+          "type": {
+            "description": "The reason type",
+            "example": "expense",
+            "type": "string",
+            "enum": [
+              "refund",
+              "pos_price_change",
+              "stock_change",
+              "expense",
+              "deposit"
+            ]
+          },
+          "noted_required": {
+            "description": "The action must be noted",
+            "type": "boolean",
+            "default": false
+          },
+          "image_required": {
+            "description": "The image must be enclosed",
+            "type": "boolean",
+            "default": false
+          },
+          "approval_required": {
+            "description": "The action must be approved by supervisor",
+            "type": "boolean",
+            "default": false
+          }
+        }
+      }
+    }
+  }
+}

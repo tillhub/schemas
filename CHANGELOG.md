@@ -1,3 +1,10 @@
+# [6.129.0](https://github.com/tillhub/schemas/compare/v6.128.0...v6.129.0) (2022-03-21)
+
+
+### Features
+
+* **reasons:** add type "POS price change" #API-1409 ([#683](https://github.com/tillhub/schemas/issues/683)) ([1de76ff](https://github.com/tillhub/schemas/commit/1de76ff)), closes [#API-1409](https://github.com/tillhub/schemas/issues/API-1409) [#API-1409](https://github.com/tillhub/schemas/issues/API-1409)
+
 # [6.128.0](https://github.com/tillhub/schemas/compare/v6.127.0...v6.128.0) (2022-03-18)
 
 
