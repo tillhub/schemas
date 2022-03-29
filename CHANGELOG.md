@@ -1,3 +1,11 @@
+# [6.131.0](https://github.com/tillhub/schemas/compare/v6.130.0...v6.131.0) (2022-03-29)
+
+
+### Features
+
+* **customers:** Make bare minimum mandatory in customer creation schema ([#684](https://github.com/tillhub/schemas/issues/684)) ([ebc4273](https://github.com/tillhub/schemas/commit/ebc4273))
+* **customers:** Make bare minimum mandatory in customer creation schema ([#685](https://github.com/tillhub/schemas/issues/685)) ([5d95430](https://github.com/tillhub/schemas/commit/5d95430))
+
 # [6.130.0](https://github.com/tillhub/schemas/compare/v6.129.0...v6.130.0) (2022-03-24)
 
 

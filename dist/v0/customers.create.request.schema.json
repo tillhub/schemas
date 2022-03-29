@@ -29,15 +29,8 @@
     "lastname": {
       "example": "Fett",
       "description": "Last name",
-      "anyOf": [
-        {
-          "type": "string",
-          "maxLength": 128
-        },
-        {
-          "type": "null"
-        }
-      ]
+      "type": "string",
+      "maxLength": 128
     },
     "middlename": {
       "description": "Middle name",
@@ -710,20 +703,7 @@
       ]
     }
   },
-  "anyOf": [
-    {
-      "required": [
-        "firstname"
-      ]
-    },
-    {
-      "required": [
-        "lastname"
-      ]
-    },
-    {
-      "type": "null"
-    }
-  ],
-  "required": []
+  "required": [
+    "lastname"
+  ]
 }
