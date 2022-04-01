@@ -1,3 +1,10 @@
+# [6.133.0](https://github.com/tillhub/schemas/compare/v6.132.0...v6.133.0) (2022-04-01)
+
+
+### Features
+
+* **carts:** add more information about data integrity validation #API-1461 ([19e065b](https://github.com/tillhub/schemas/commit/19e065b)), closes [#API-1461](https://github.com/tillhub/schemas/issues/API-1461)
+
 # [6.132.0](https://github.com/tillhub/schemas/compare/v6.131.0...v6.132.0) (2022-03-30)
 
 
