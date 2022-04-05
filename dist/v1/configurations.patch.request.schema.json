@@ -2913,7 +2913,8 @@
                   ]
                 },
                 "allow_zero_prices": {
-                  "description": "If true, a product can be added to the cart with 0.0 as price or its price can be changed to 0.0.",
+                  "deprecated": true,
+                  "description": "If true, a product can be added to the cart with 0.0 as price or its price can be changed to 0.0.\n\nNOTE: Hard validation will be removed entirely!\nBehavior will be driven by 'v1/products.configuration.pricing.request_input'\nand 'v1/products.configuration.pricing.zero_input_allowed'.",
                   "oneOf": [
                     {
                       "type": "null"

@@ -1,3 +1,10 @@
+# [6.134.0](https://github.com/tillhub/schemas/compare/v6.133.0...v6.134.0) (2022-04-05)
+
+
+### Features
+
+* **products:** configuration ([3050bd5](https://github.com/tillhub/schemas/commit/3050bd5))
+
 # [6.133.0](https://github.com/tillhub/schemas/compare/v6.132.0...v6.133.0) (2022-04-01)
 
 
