@@ -1,3 +1,75 @@
+# [6.134.0](https://github.com/tillhub/schemas/compare/v6.133.0...v6.134.0) (2022-04-05)
+
+
+### Features
+
+* **products:** configuration ([3050bd5](https://github.com/tillhub/schemas/commit/3050bd5))
+
+# [6.133.0](https://github.com/tillhub/schemas/compare/v6.132.0...v6.133.0) (2022-04-01)
+
+
+### Features
+
+* **carts:** add more information about data integrity validation #API-1461 ([19e065b](https://github.com/tillhub/schemas/commit/19e065b)), closes [#API-1461](https://github.com/tillhub/schemas/issues/API-1461)
+
+# [6.132.0](https://github.com/tillhub/schemas/compare/v6.131.0...v6.132.0) (2022-03-30)
+
+
+### Features
+
+* **configurations:** payments ([a96eb88](https://github.com/tillhub/schemas/commit/a96eb88))
+
+# [6.131.0](https://github.com/tillhub/schemas/compare/v6.130.0...v6.131.0) (2022-03-29)
+
+
+### Features
+
+* **customers:** Make bare minimum mandatory in customer creation schema ([#684](https://github.com/tillhub/schemas/issues/684)) ([ebc4273](https://github.com/tillhub/schemas/commit/ebc4273))
+* **customers:** Make bare minimum mandatory in customer creation schema ([#685](https://github.com/tillhub/schemas/issues/685)) ([5d95430](https://github.com/tillhub/schemas/commit/5d95430))
+
+# [6.130.0](https://github.com/tillhub/schemas/compare/v6.129.0...v6.130.0) (2022-03-24)
+
+
+### Features
+
+* **configuration:** features ([e15fedd](https://github.com/tillhub/schemas/commit/e15fedd))
+* **configurations:** features ([bfc0bf2](https://github.com/tillhub/schemas/commit/bfc0bf2))
+* **configurations:** features ([66bcd70](https://github.com/tillhub/schemas/commit/66bcd70))
+
+# [6.129.0](https://github.com/tillhub/schemas/compare/v6.128.0...v6.129.0) (2022-03-21)
+
+
+### Features
+
+* **reasons:** add type "POS price change" #API-1409 ([#683](https://github.com/tillhub/schemas/issues/683)) ([1de76ff](https://github.com/tillhub/schemas/commit/1de76ff)), closes [#API-1409](https://github.com/tillhub/schemas/issues/API-1409) [#API-1409](https://github.com/tillhub/schemas/issues/API-1409)
+
+# [6.128.0](https://github.com/tillhub/schemas/compare/v6.127.0...v6.128.0) (2022-03-18)
+
+
+### Features
+
+* **branches:** add receipt_footer_image to branches model ([#682](https://github.com/tillhub/schemas/issues/682)) ([132523f](https://github.com/tillhub/schemas/commit/132523f))
+
+# [6.127.0](https://github.com/tillhub/schemas/compare/v6.126.0...v6.127.0) (2022-03-15)
+
+
+### Bug Fixes
+
+* **functions:** vouchers ([caa53d9](https://github.com/tillhub/schemas/commit/caa53d9))
+
+
+### Features
+
+* **functions:** discounted_voucher ([f8ed802](https://github.com/tillhub/schemas/commit/f8ed802))
+* **transactions:** references ([4a70818](https://github.com/tillhub/schemas/commit/4a70818))
+
+# [6.126.0](https://github.com/tillhub/schemas/compare/v6.125.0...v6.126.0) (2022-03-15)
+
+
+### Features
+
+* **analytics:** transactons overview report v3 schema #API-1042 ([#680](https://github.com/tillhub/schemas/issues/680)) ([e5dc7ba](https://github.com/tillhub/schemas/commit/e5dc7ba)), closes [#API-1042](https://github.com/tillhub/schemas/issues/API-1042) [#API-1042](https://github.com/tillhub/schemas/issues/API-1042)
+
 # [6.125.0](https://github.com/tillhub/schemas/compare/v6.124.0...v6.125.0) (2022-03-10)
 
 

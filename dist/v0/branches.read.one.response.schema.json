@@ -53,16 +53,16 @@
             "example": "936835f7-2d75-41d2-9001-38ed6e458328"
           },
           "created_at": {
-            "description": "The date and time entity was created",
             "type": "string",
             "format": "date-time",
-            "example": "2019-03-17T21:12:04.849Z"
+            "example": "2019-03-17T21:12:04.849Z",
+            "description": "The date and time entity was created"
           },
           "updated_at": {
-            "description": "The date and time entity was updated",
             "type": "string",
             "format": "date-time",
-            "example": "2019-03-17T21:12:04.849Z"
+            "example": "2019-03-17T21:12:04.849Z",
+            "description": "The date and time entity was updated"
           },
           "name": {
             "description": "Any arbitrary name for a branch that can be displayed in applications.",
@@ -186,7 +186,51 @@
             ]
           },
           "images": {
-            "description": "Images object with URLs of various types of images",
+            "description": "A Tillhub image object with URLs to display images this for this branch.",
+            "anyOf": [
+              {
+                "type": "object",
+                "additionalProperties": true,
+                "properties": {
+                  "1x": {
+                    "description": "Image transformed to predefined small size",
+                    "example": "https://my-storage.io/images/f5a3cc72-7fb5-4d2c-bda5-9b2983c7e879_1x.png",
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "2x": {
+                    "description": "Image transformed to predefined medium size",
+                    "example": "https://my-storage.io/images/f5a3cc72-7fb5-4d2c-bda5-9b2983c7e879_2x.png",
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "3x": {
+                    "description": "Image transformed to predefined big size",
+                    "example": "https://my-storage.io/images/f5a3cc72-7fb5-4d2c-bda5-9b2983c7e879_1x.png",
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "avatar": {
+                    "description": "Image transformed to predefined size to use as \"avatar\"",
+                    "example": "https://my-storage.io/images/f5a3cc72-7fb5-4d2c-bda5-9b2983c7e879_avatar.png",
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "original": {
+                    "description": "Original image",
+                    "example": "https://my-storage.io/images/f5a3cc72-7fb5-4d2c-bda5-9b2983c7e879.png",
+                    "type": "string",
+                    "format": "uri"
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "receipt_footer_images": {
+            "description": "A Tillhub image object with URLs to display receipt footer image this for this branch.",
             "anyOf": [
               {
                 "type": "object",

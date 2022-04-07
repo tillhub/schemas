@@ -346,7 +346,7 @@
                 ]
               },
               "vat_rate": {
-                "description": "VAT rate",
+                "description": "VAT rate in the range 0-1. Required when \"tax\" value is not present. The only one active VAT with the same rate must be defined in the system (does not apply when \"tax\" value is present)",
                 "example": 0.12,
                 "type": "number",
                 "minimum": 0,
@@ -1007,7 +1007,7 @@
                 ]
               },
               "tax": {
-                "description": "Tax rate ID",
+                "description": "Tax rate ID. If not present, the \"vat_rate\" must be present. The active tax with such ID must be defined in the system",
                 "type": "string",
                 "format": "uuid"
               },
@@ -1017,7 +1017,7 @@
                 "format": "uuid"
               },
               "account_number": {
-                "description": "Account number",
+                "description": "Account number. The only one active account with the same number must be defined in the system (does not apply when \"account\" value is present)",
                 "oneOf": [
                   {
                     "type": "string"
@@ -1390,7 +1390,7 @@
                 }
               },
               "vat_rate": {
-                "description": "VAT rate",
+                "description": "VAT rate in the range 0-1. Required when \"tax\" value is not present. The only one active VAT with the same rate must be defined in the system (does not apply when \"tax\" value is present)",
                 "example": 0.12,
                 "type": "number",
                 "minimum": 0,
@@ -1657,7 +1657,7 @@
                 ]
               },
               "tax": {
-                "description": "Tax rate ID",
+                "description": "Tax rate ID. If not present, the \"vat_rate\" must be present. The active tax with such ID must be defined in the system",
                 "type": "string",
                 "format": "uuid"
               },
@@ -1667,7 +1667,7 @@
                 "format": "uuid"
               },
               "account_number": {
-                "description": "Account number",
+                "description": "Account number. The only one active account with the same number must be defined in the system (does not apply when \"account\" value is present)",
                 "oneOf": [
                   {
                     "type": "string"

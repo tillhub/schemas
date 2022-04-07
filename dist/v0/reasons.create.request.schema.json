@@ -11,6 +11,8 @@
     "name": {
       "oneOf": [
         {
+          "description": "The reason name",
+          "example": "Returned goods",
           "type": "string",
           "minLength": 1,
           "maxLength": 128
@@ -23,6 +25,8 @@
     "description": {
       "oneOf": [
         {
+          "description": "The reason description",
+          "example": "Goods were returned by the customer",
           "type": "string",
           "minLength": 1,
           "maxLength": 4096
@@ -79,26 +83,33 @@
       "type": "boolean"
     },
     "active": {
+      "description": "The reason is active",
       "type": "boolean"
     },
     "type": {
+      "description": "The reason type",
+      "example": "expense",
       "type": "string",
       "enum": [
         "refund",
+        "pos_price_change",
         "stock_change",
         "expense",
         "deposit"
       ]
     },
     "noted_required": {
+      "description": "The action must be noted",
       "type": "boolean",
       "default": false
     },
     "image_required": {
+      "description": "The image must be enclosed",
       "type": "boolean",
       "default": false
     },
     "approval_required": {
+      "description": "The action must be approved by supervisor",
       "type": "boolean",
       "default": false
     }

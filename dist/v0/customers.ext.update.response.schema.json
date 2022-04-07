@@ -53,16 +53,16 @@
             "example": "936835f7-2d75-41d2-9001-38ed6e458328"
           },
           "created_at": {
-            "description": "The date and time entity was created",
             "type": "string",
             "format": "date-time",
-            "example": "2019-03-17T21:12:04.849Z"
+            "example": "2019-03-17T21:12:04.849Z",
+            "description": "The date and time entity was created"
           },
           "updated_at": {
-            "description": "The date and time entity was updated",
             "type": "string",
             "format": "date-time",
-            "example": "2019-03-17T21:12:04.849Z"
+            "example": "2019-03-17T21:12:04.849Z",
+            "description": "The date and time entity was updated"
           },
           "active": {
             "description": "Customer active",
@@ -89,15 +89,8 @@
           "lastname": {
             "example": "Fett",
             "description": "Last name",
-            "anyOf": [
-              {
-                "type": "string",
-                "maxLength": 128
-              },
-              {
-                "type": "null"
-              }
-            ]
+            "type": "string",
+            "maxLength": 128
           },
           "middlename": {
             "description": "Middle name",
