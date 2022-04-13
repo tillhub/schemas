@@ -2399,6 +2399,7 @@
                               "note",
                               "related_transaction_guid",
                               "serial_number",
+                              "price_change_reason",
                               "voucher_value",
                               "voucher_id",
                               "voucher_client_id",

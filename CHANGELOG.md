@@ -1,3 +1,10 @@
+# [6.135.0](https://github.com/tillhub/schemas/compare/v6.134.0...v6.135.0) (2022-04-13)
+
+
+### Features
+
+* **transactions:** Add key to fr_transaction_cartitem_context_option ([#690](https://github.com/tillhub/schemas/issues/690)) ([10c0371](https://github.com/tillhub/schemas/commit/10c0371))
+
 # [6.134.0](https://github.com/tillhub/schemas/compare/v6.133.0...v6.134.0) (2022-04-05)
 
 
