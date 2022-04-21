@@ -1,3 +1,10 @@
+## [6.135.1](https://github.com/tillhub/schemas/compare/v6.135.0...v6.135.1) (2022-04-21)
+
+
+### Bug Fixes
+
+* **client_accounts:** Accept `regiondo` as valid Whitelabel and dashboard value when creating account ([87fc826](https://github.com/tillhub/schemas/commit/87fc826))
+
 # [6.135.0](https://github.com/tillhub/schemas/compare/v6.134.0...v6.135.0) (2022-04-13)
 
 
