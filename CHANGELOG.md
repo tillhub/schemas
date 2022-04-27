@@ -4,6 +4,14 @@
 ### Features
 
 * **analytics:** Staff sales report ([#695](https://github.com/tillhub/schemas/issues/695)) ([2202904](https://github.com/tillhub/schemas/commit/2202904))
+* **analytics:** Staff sales report fixed ([#697](https://github.com/tillhub/schemas/issues/697)) ([4b55077](https://github.com/tillhub/schemas/commit/4b55077))
+
+# [6.136.0](https://github.com/tillhub/schemas/compare/v6.135.1...v6.136.0) (2022-04-27)
+
+
+### Features
+
+* **analytics:** Staff sales report ([#695](https://github.com/tillhub/schemas/issues/695)) ([2202904](https://github.com/tillhub/schemas/commit/2202904))
 
 # [6.136.0](https://github.com/tillhub/schemas/compare/v6.135.1...v6.136.0) (2022-04-27)
 
