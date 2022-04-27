@@ -4,15 +4,15 @@
   "type": "object",
   "additionalProperties": true,
   "properties": {
-    "branch": {
-      "type": "string",
-      "format": "uuid"
-    },
     "start": {
       "type": "string"
     },
     "end": {
       "type": "string"
+    },
+    "branch": {
+      "type": "string",
+      "format": "uuid"
     }
   },
   "required": []
