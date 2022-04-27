@@ -1,3 +1,10 @@
+# [6.136.0](https://github.com/tillhub/schemas/compare/v6.135.1...v6.136.0) (2022-04-27)
+
+
+### Features
+
+* **analytics:** Staff sales report ([#695](https://github.com/tillhub/schemas/issues/695)) ([2202904](https://github.com/tillhub/schemas/commit/2202904))
+
 ## [6.135.1](https://github.com/tillhub/schemas/compare/v6.135.0...v6.135.1) (2022-04-21)
 
 
