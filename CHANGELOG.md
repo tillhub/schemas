@@ -1,3 +1,10 @@
+## [6.136.1](https://github.com/tillhub/schemas/compare/v6.136.0...v6.136.1) (2022-04-28)
+
+
+### Bug Fixes
+
+* **core:** check next tag generation ([11b8e9f](https://github.com/tillhub/schemas/commit/11b8e9f))
+
 # [6.136.0](https://github.com/tillhub/schemas/compare/v6.135.1...v6.136.0) (2022-04-28)
 
 

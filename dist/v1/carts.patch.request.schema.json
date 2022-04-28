@@ -994,6 +994,7 @@
               },
               "salesman_staff": {
                 "description": "Staff person ID",
+                "example": "68722313-4077-42eb-8cc2-bf3359940efc",
                 "oneOf": [
                   {
                     "type": "string",
@@ -1644,6 +1645,7 @@
               },
               "salesman_staff": {
                 "description": "Staff person ID",
+                "example": "68722313-4077-42eb-8cc2-bf3359940efc",
                 "oneOf": [
                   {
                     "type": "string",
