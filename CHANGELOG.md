@@ -5,6 +5,23 @@
 
 * **analytics:** Staff sales report import ([#699](https://github.com/tillhub/schemas/issues/699)) ([1ece38d](https://github.com/tillhub/schemas/commit/1ece38d))
 * **chore:** Version bump ([#700](https://github.com/tillhub/schemas/issues/700)) ([a3719a0](https://github.com/tillhub/schemas/commit/a3719a0))
+* **core:** remove version disturbance ([8f49e30](https://github.com/tillhub/schemas/commit/8f49e30))
+* **core:** remove version disturbance ([aa6c5c2](https://github.com/tillhub/schemas/commit/aa6c5c2))
+
+
+### Features
+
+* **analytics:** Staff sales report ([#695](https://github.com/tillhub/schemas/issues/695)) ([2202904](https://github.com/tillhub/schemas/commit/2202904))
+* **analytics:** Staff sales report fixed ([#697](https://github.com/tillhub/schemas/issues/697)) ([4b55077](https://github.com/tillhub/schemas/commit/4b55077))
+* **analytics:** Staff sales report import fixed ([#698](https://github.com/tillhub/schemas/issues/698)) ([8ae1f80](https://github.com/tillhub/schemas/commit/8ae1f80))
+
+# [6.136.0](https://github.com/tillhub/schemas/compare/v6.135.1...v6.136.0) (2022-04-28)
+
+
+### Bug Fixes
+
+* **analytics:** Staff sales report import ([#699](https://github.com/tillhub/schemas/issues/699)) ([1ece38d](https://github.com/tillhub/schemas/commit/1ece38d))
+* **chore:** Version bump ([#700](https://github.com/tillhub/schemas/issues/700)) ([a3719a0](https://github.com/tillhub/schemas/commit/a3719a0))
 * **core:** remove version disturbance ([aa6c5c2](https://github.com/tillhub/schemas/commit/aa6c5c2))
 
 
