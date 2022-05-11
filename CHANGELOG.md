@@ -1,3 +1,10 @@
+# [6.137.0](https://github.com/tillhub/schemas/compare/v6.136.1...v6.137.0) (2022-05-11)
+
+
+### Features
+
+* **stocks:** Add type column to stock_book ([57904e3](https://github.com/tillhub/schemas/commit/57904e3))
+
 ## [6.136.1](https://github.com/tillhub/schemas/compare/v6.136.0...v6.136.1) (2022-04-28)
 
 
