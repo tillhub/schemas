@@ -1,3 +1,10 @@
+# [6.138.0](https://github.com/tillhub/schemas/compare/v6.137.0...v6.138.0) (2022-05-12)
+
+
+### Features
+
+* **voucher_systems:** Add ?q= search to Voucher Systems ([#702](https://github.com/tillhub/schemas/issues/702)) ([0911a9f](https://github.com/tillhub/schemas/commit/0911a9f))
+
 # [6.137.0](https://github.com/tillhub/schemas/compare/v6.136.1...v6.137.0) (2022-05-11)
 
 
