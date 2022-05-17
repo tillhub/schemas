@@ -157,6 +157,26 @@
           "type": "null"
         }
       ]
+    },
+    "type": {
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "goods_in",
+            "goods_out",
+            "relocation",
+            "sale",
+            "cancellation",
+            "refund",
+            "delivery_note",
+            "delivery_note_cancellation"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
     }
   }
 }

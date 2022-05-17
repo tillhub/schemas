@@ -39,12 +39,14 @@
       "default": "tillhub_init"
     },
     "dashboard": {
+      "description": "Defines this account's preferred dashboard",
       "type": "string",
       "enum": [
         "tillhub",
         "tillhub_legacy",
         "shore",
-        "localsearch"
+        "localsearch",
+        "regiondo"
       ],
       "default": "tillhub"
     },

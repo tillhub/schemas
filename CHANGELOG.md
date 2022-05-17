@@ -1,3 +1,149 @@
+# [6.138.0](https://github.com/tillhub/schemas/compare/v6.137.0...v6.138.0) (2022-05-12)
+
+
+### Features
+
+* **voucher_systems:** Add ?q= search to Voucher Systems ([#702](https://github.com/tillhub/schemas/issues/702)) ([0911a9f](https://github.com/tillhub/schemas/commit/0911a9f))
+
+# [6.137.0](https://github.com/tillhub/schemas/compare/v6.136.1...v6.137.0) (2022-05-11)
+
+
+### Features
+
+* **stocks:** Add type column to stock_book ([57904e3](https://github.com/tillhub/schemas/commit/57904e3))
+
+## [6.136.1](https://github.com/tillhub/schemas/compare/v6.136.0...v6.136.1) (2022-04-28)
+
+
+### Bug Fixes
+
+* **core:** check next tag generation ([11b8e9f](https://github.com/tillhub/schemas/commit/11b8e9f))
+
+# [6.136.0](https://github.com/tillhub/schemas/compare/v6.135.1...v6.136.0) (2022-04-28)
+
+
+### Bug Fixes
+
+* **analytics:** Staff sales report import ([#699](https://github.com/tillhub/schemas/issues/699)) ([1ece38d](https://github.com/tillhub/schemas/commit/1ece38d))
+* **chore:** Version bump ([#700](https://github.com/tillhub/schemas/issues/700)) ([a3719a0](https://github.com/tillhub/schemas/commit/a3719a0))
+* **core:** remove version disturbance ([8f49e30](https://github.com/tillhub/schemas/commit/8f49e30))
+* **core:** remove version disturbance ([aa6c5c2](https://github.com/tillhub/schemas/commit/aa6c5c2))
+* **core:** remove version disturbance v1 ([516e326](https://github.com/tillhub/schemas/commit/516e326))
+
+
+### Features
+
+* **analytics:** Staff sales report ([#695](https://github.com/tillhub/schemas/issues/695)) ([2202904](https://github.com/tillhub/schemas/commit/2202904))
+* **analytics:** Staff sales report fixed ([#697](https://github.com/tillhub/schemas/issues/697)) ([4b55077](https://github.com/tillhub/schemas/commit/4b55077))
+* **analytics:** Staff sales report import fixed ([#698](https://github.com/tillhub/schemas/issues/698)) ([8ae1f80](https://github.com/tillhub/schemas/commit/8ae1f80))
+
+# [6.136.0](https://github.com/tillhub/schemas/compare/v6.135.1...v6.136.0) (2022-04-28)
+
+
+### Bug Fixes
+
+* **analytics:** Staff sales report import ([#699](https://github.com/tillhub/schemas/issues/699)) ([1ece38d](https://github.com/tillhub/schemas/commit/1ece38d))
+* **chore:** Version bump ([#700](https://github.com/tillhub/schemas/issues/700)) ([a3719a0](https://github.com/tillhub/schemas/commit/a3719a0))
+* **core:** remove version disturbance ([8f49e30](https://github.com/tillhub/schemas/commit/8f49e30))
+* **core:** remove version disturbance ([aa6c5c2](https://github.com/tillhub/schemas/commit/aa6c5c2))
+
+
+### Features
+
+* **analytics:** Staff sales report ([#695](https://github.com/tillhub/schemas/issues/695)) ([2202904](https://github.com/tillhub/schemas/commit/2202904))
+* **analytics:** Staff sales report fixed ([#697](https://github.com/tillhub/schemas/issues/697)) ([4b55077](https://github.com/tillhub/schemas/commit/4b55077))
+* **analytics:** Staff sales report import fixed ([#698](https://github.com/tillhub/schemas/issues/698)) ([8ae1f80](https://github.com/tillhub/schemas/commit/8ae1f80))
+
+# [6.136.0](https://github.com/tillhub/schemas/compare/v6.135.1...v6.136.0) (2022-04-28)
+
+
+### Bug Fixes
+
+* **analytics:** Staff sales report import ([#699](https://github.com/tillhub/schemas/issues/699)) ([1ece38d](https://github.com/tillhub/schemas/commit/1ece38d))
+* **chore:** Version bump ([#700](https://github.com/tillhub/schemas/issues/700)) ([a3719a0](https://github.com/tillhub/schemas/commit/a3719a0))
+* **core:** remove version disturbance ([aa6c5c2](https://github.com/tillhub/schemas/commit/aa6c5c2))
+
+
+### Features
+
+* **analytics:** Staff sales report ([#695](https://github.com/tillhub/schemas/issues/695)) ([2202904](https://github.com/tillhub/schemas/commit/2202904))
+* **analytics:** Staff sales report fixed ([#697](https://github.com/tillhub/schemas/issues/697)) ([4b55077](https://github.com/tillhub/schemas/commit/4b55077))
+* **analytics:** Staff sales report import fixed ([#698](https://github.com/tillhub/schemas/issues/698)) ([8ae1f80](https://github.com/tillhub/schemas/commit/8ae1f80))
+
+# [6.136.0](https://github.com/tillhub/schemas/compare/v6.135.1...v6.136.0) (2022-04-27)
+
+
+### Bug Fixes
+
+* **analytics:** Staff sales report import ([#699](https://github.com/tillhub/schemas/issues/699)) ([1ece38d](https://github.com/tillhub/schemas/commit/1ece38d))
+* **chore:** Version bump ([#700](https://github.com/tillhub/schemas/issues/700)) ([a3719a0](https://github.com/tillhub/schemas/commit/a3719a0))
+
+
+### Features
+
+* **analytics:** Staff sales report ([#695](https://github.com/tillhub/schemas/issues/695)) ([2202904](https://github.com/tillhub/schemas/commit/2202904))
+* **analytics:** Staff sales report fixed ([#697](https://github.com/tillhub/schemas/issues/697)) ([4b55077](https://github.com/tillhub/schemas/commit/4b55077))
+* **analytics:** Staff sales report import fixed ([#698](https://github.com/tillhub/schemas/issues/698)) ([8ae1f80](https://github.com/tillhub/schemas/commit/8ae1f80))
+
+# [6.136.0](https://github.com/tillhub/schemas/compare/v6.135.1...v6.136.0) (2022-04-27)
+
+
+### Bug Fixes
+
+* **analytics:** Staff sales report import ([#699](https://github.com/tillhub/schemas/issues/699)) ([1ece38d](https://github.com/tillhub/schemas/commit/1ece38d))
+
+
+### Features
+
+* **analytics:** Staff sales report ([#695](https://github.com/tillhub/schemas/issues/695)) ([2202904](https://github.com/tillhub/schemas/commit/2202904))
+* **analytics:** Staff sales report fixed ([#697](https://github.com/tillhub/schemas/issues/697)) ([4b55077](https://github.com/tillhub/schemas/commit/4b55077))
+* **analytics:** Staff sales report import fixed ([#698](https://github.com/tillhub/schemas/issues/698)) ([8ae1f80](https://github.com/tillhub/schemas/commit/8ae1f80))
+
+# [6.136.0](https://github.com/tillhub/schemas/compare/v6.135.1...v6.136.0) (2022-04-27)
+
+
+### Features
+
+* **analytics:** Staff sales report ([#695](https://github.com/tillhub/schemas/issues/695)) ([2202904](https://github.com/tillhub/schemas/commit/2202904))
+* **analytics:** Staff sales report fixed ([#697](https://github.com/tillhub/schemas/issues/697)) ([4b55077](https://github.com/tillhub/schemas/commit/4b55077))
+* **analytics:** Staff sales report import fixed ([#698](https://github.com/tillhub/schemas/issues/698)) ([8ae1f80](https://github.com/tillhub/schemas/commit/8ae1f80))
+
+# [6.136.0](https://github.com/tillhub/schemas/compare/v6.135.1...v6.136.0) (2022-04-27)
+
+
+### Features
+
+* **analytics:** Staff sales report ([#695](https://github.com/tillhub/schemas/issues/695)) ([2202904](https://github.com/tillhub/schemas/commit/2202904))
+* **analytics:** Staff sales report fixed ([#697](https://github.com/tillhub/schemas/issues/697)) ([4b55077](https://github.com/tillhub/schemas/commit/4b55077))
+
+# [6.136.0](https://github.com/tillhub/schemas/compare/v6.135.1...v6.136.0) (2022-04-27)
+
+
+### Features
+
+* **analytics:** Staff sales report ([#695](https://github.com/tillhub/schemas/issues/695)) ([2202904](https://github.com/tillhub/schemas/commit/2202904))
+
+# [6.136.0](https://github.com/tillhub/schemas/compare/v6.135.1...v6.136.0) (2022-04-27)
+
+
+### Features
+
+* **analytics:** Staff sales report ([#695](https://github.com/tillhub/schemas/issues/695)) ([2202904](https://github.com/tillhub/schemas/commit/2202904))
+
+## [6.135.1](https://github.com/tillhub/schemas/compare/v6.135.0...v6.135.1) (2022-04-21)
+
+
+### Bug Fixes
+
+* **client_accounts:** Accept `regiondo` as valid Whitelabel and dashboard value when creating account ([87fc826](https://github.com/tillhub/schemas/commit/87fc826))
+
+# [6.135.0](https://github.com/tillhub/schemas/compare/v6.134.0...v6.135.0) (2022-04-13)
+
+
+### Features
+
+* **transactions:** Add key to fr_transaction_cartitem_context_option ([#690](https://github.com/tillhub/schemas/issues/690)) ([10c0371](https://github.com/tillhub/schemas/commit/10c0371))
+
 # [6.134.0](https://github.com/tillhub/schemas/compare/v6.133.0...v6.134.0) (2022-04-05)
 
 
