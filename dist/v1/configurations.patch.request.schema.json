@@ -3573,6 +3573,18 @@
                             }
                           ]
                         },
+                        "print_branch_footer_image": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the branch footer image will be printed (for types that support it)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
                         "print_cashier_policy": {
                           "oneOf": [
                             {
@@ -3626,6 +3638,18 @@
                           "oneOf": [
                             {
                               "description": "Defines if the branch footer will be printed (for types that support it)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_branch_footer_image": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the branch footer image will be printed (for types that support it)",
                               "type": "boolean",
                               "default": true
                             },
@@ -4174,6 +4198,18 @@
                             }
                           ]
                         },
+                        "print_branch_footer_image": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the branch footer image will be printed (for types that support it)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
                         "print_cashier_policy": {
                           "oneOf": [
                             {
@@ -4706,6 +4742,18 @@
                           "oneOf": [
                             {
                               "description": "Defines if the branch footer will be printed (for types that support it)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_branch_footer_image": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the branch footer image will be printed (for types that support it)",
                               "type": "boolean",
                               "default": true
                             },
@@ -5254,6 +5302,18 @@
                             }
                           ]
                         },
+                        "print_branch_footer_image": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the branch footer image will be printed (for types that support it)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
                         "print_cashier_policy": {
                           "oneOf": [
                             {
@@ -5794,6 +5854,18 @@
                             }
                           ]
                         },
+                        "print_branch_footer_image": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the branch footer image will be printed (for types that support it)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
                         "print_cashier_policy": {
                           "oneOf": [
                             {
@@ -6326,6 +6398,18 @@
                           "oneOf": [
                             {
                               "description": "Defines if the branch footer will be printed (for types that support it)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_branch_footer_image": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the branch footer image will be printed (for types that support it)",
                               "type": "boolean",
                               "default": true
                             },
@@ -7121,6 +7205,18 @@
                           "oneOf": [
                             {
                               "description": "Defines if the branch footer will be printed (for types that support it)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_branch_footer_image": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the branch footer image will be printed (for types that support it)",
                               "type": "boolean",
                               "default": true
                             },
