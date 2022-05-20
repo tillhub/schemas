@@ -162,6 +162,7 @@
       "anyOf": [
         {
           "type": "string",
+          "description": "The type of movement for the change in stock",
           "enum": [
             "goods_in",
             "goods_out",
@@ -170,6 +171,7 @@
             "cancellation",
             "refund",
             "delivery_note",
+            "delivery_note_refund",
             "delivery_note_cancellation"
           ]
         },

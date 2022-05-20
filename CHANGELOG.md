@@ -1,3 +1,10 @@
+# [6.140.0](https://github.com/tillhub/schemas/compare/v6.139.0...v6.140.0) (2022-05-20)
+
+
+### Features
+
+* **stocks:** Add delivery_note_refund value type column ([8a86607](https://github.com/tillhub/schemas/commit/8a86607))
+
 # [6.139.0](https://github.com/tillhub/schemas/compare/v6.138.0...v6.139.0) (2022-05-17)
 
 
