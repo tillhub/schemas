@@ -1,3 +1,10 @@
+# [6.141.0](https://github.com/tillhub/schemas/compare/v6.140.0...v6.141.0) (2022-05-30)
+
+
+### Features
+
+* **configurations:** order_receipts ([f9d5f14](https://github.com/tillhub/schemas/commit/f9d5f14))
+
 # [6.140.0](https://github.com/tillhub/schemas/compare/v6.139.0...v6.140.0) (2022-05-20)
 
 

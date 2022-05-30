@@ -3309,6 +3309,21 @@
                             "type": "boolean",
                             "default": true
                           },
+                          "size_type": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "enum": [
+                                  "regular",
+                                  "large"
+                                ],
+                                "default": "large"
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          },
                           "triggers": {
                             "oneOf": [
                               {
