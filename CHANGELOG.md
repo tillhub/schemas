@@ -1,3 +1,10 @@
+# [6.142.0](https://github.com/tillhub/schemas/compare/v6.141.0...v6.142.0) (2022-06-01)
+
+
+### Features
+
+* **dashboard:** dashboard configuration ([d9613ce](https://github.com/tillhub/schemas/commit/d9613ce))
+
 # [6.141.0](https://github.com/tillhub/schemas/compare/v6.140.0...v6.141.0) (2022-05-30)
 
 

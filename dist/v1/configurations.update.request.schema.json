@@ -1265,33 +1265,9 @@
               "type": "object",
               "additionalProperties": false,
               "properties": {
-                "availability": {
-                  "type": "string",
-                  "enum": [
-                    "legacy",
-                    "new",
-                    "both"
-                  ],
-                  "default": "legacy"
-                },
                 "url": {
-                  "description": "URL of this account's perferred LEGACY dashboard",
+                  "description": "URL of this account's dashboard",
                   "type": "string"
-                },
-                "url_new": {
-                  "description": "URL of this account's perferred NEW dashboard",
-                  "type": "string"
-                },
-                "auth": {
-                  "description": " -- client reads but does not use this, please provide a proper description --",
-                  "oneOf": [
-                    {
-                      "type": "string"
-                    },
-                    {
-                      "type": "null"
-                    }
-                  ]
                 },
                 "navigation_after_creation": {
                   "oneOf": [
