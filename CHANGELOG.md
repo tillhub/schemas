@@ -1,3 +1,10 @@
+# [6.143.0](https://github.com/tillhub/schemas/compare/v6.142.0...v6.143.0) (2022-06-02)
+
+
+### Features
+
+* **customers:** support customers v1 'read.all' ([470149f](https://github.com/tillhub/schemas/commit/470149f))
+
 # [6.142.0](https://github.com/tillhub/schemas/compare/v6.141.0...v6.142.0) (2022-06-01)
 
 
