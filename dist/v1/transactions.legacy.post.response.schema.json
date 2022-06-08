@@ -4504,6 +4504,13 @@
                                   "maxLength": 128,
                                   "description": "The detected card circuit as reposrted by the terminal (VISA, MasterCard, GiroCard etc.)"
                                 },
+                                "card_pay_id": {
+                                  "default": null,
+                                  "type": "string",
+                                  "minLength": 3,
+                                  "maxLength": 128,
+                                  "description": "Payment Provider Transaction ID (coming from the CCV / Computop terminal) for successful OPI Terminal Card Payments"
+                                },
                                 "card_pan": {
                                   "default": null,
                                   "type": "string",

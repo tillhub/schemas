@@ -1,3 +1,10 @@
+# [6.144.0](https://github.com/tillhub/schemas/compare/v6.143.0...v6.144.0) (2022-06-08)
+
+
+### Features
+
+* **transaction:** added pay id ([d260db4](https://github.com/tillhub/schemas/commit/d260db4))
+
 # [6.143.0](https://github.com/tillhub/schemas/compare/v6.142.0...v6.143.0) (2022-06-02)
 
 
