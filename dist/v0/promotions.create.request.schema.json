@@ -577,6 +577,19 @@
           "type": "null"
         }
       ]
+    },
+    "version": {
+      "oneOf": [
+        {
+          "type": "integer",
+          "description": "The version number of the promotion. Version 1 is deprecated, current version is 2",
+          "example": 2,
+          "minimum": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
     }
   }
 }

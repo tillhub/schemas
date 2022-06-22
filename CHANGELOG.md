@@ -1,3 +1,10 @@
+# [6.145.0](https://github.com/tillhub/schemas/compare/v6.144.0...v6.145.0) (2022-06-22)
+
+
+### Features
+
+* **promotions:** add version ([6d6dacd](https://github.com/tillhub/schemas/commit/6d6dacd))
+
 # [6.144.0](https://github.com/tillhub/schemas/compare/v6.143.0...v6.144.0) (2022-06-08)
 
 
