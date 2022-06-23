@@ -1,3 +1,10 @@
+# [6.146.0](https://github.com/tillhub/schemas/compare/v6.145.0...v6.146.0) (2022-06-23)
+
+
+### Features
+
+* **carts:** add addons to cart item #API-1540 ([bcdb080](https://github.com/tillhub/schemas/commit/bcdb080)), closes [#API-1540](https://github.com/tillhub/schemas/issues/API-1540)
+
 # [6.145.0](https://github.com/tillhub/schemas/compare/v6.144.0...v6.145.0) (2022-06-22)
 
 
