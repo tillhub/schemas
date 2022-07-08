@@ -1,3 +1,10 @@
+# [6.147.0](https://github.com/tillhub/schemas/compare/v6.146.0...v6.147.0) (2022-07-08)
+
+
+### Features
+
+* **configurations:** expenses ([df676fb](https://github.com/tillhub/schemas/commit/df676fb))
+
 # [6.146.0](https://github.com/tillhub/schemas/compare/v6.145.0...v6.146.0) (2022-06-23)
 
 
