@@ -1,3 +1,21 @@
+# [6.148.0](https://github.com/tillhub/schemas/compare/v6.147.0...v6.148.0) (2022-07-13)
+
+
+### Bug Fixes
+
+* **configurations:** financials ([8585621](https://github.com/tillhub/schemas/commit/8585621))
+
+
+### Features
+
+* **balances:** reduce signature types ([099404a](https://github.com/tillhub/schemas/commit/099404a))
+* **balances:** status ([44c727e](https://github.com/tillhub/schemas/commit/44c727e))
+* **configurations:** discounts ([118f48e](https://github.com/tillhub/schemas/commit/118f48e))
+* **financials:** adds price_change_reason_enabled property to financials ([2d0f387](https://github.com/tillhub/schemas/commit/2d0f387))
+* **financials:** adds price_change_reason_required property to financials ([39dcf9f](https://github.com/tillhub/schemas/commit/39dcf9f))
+* **priceChangeReason:** add price_change_reason object ([e7b3b8a](https://github.com/tillhub/schemas/commit/e7b3b8a))
+* **transactions_v1_legacy:** add account and balance links ([57c212a](https://github.com/tillhub/schemas/commit/57c212a))
+
 # [6.147.0](https://github.com/tillhub/schemas/compare/v6.146.0...v6.147.0) (2022-07-08)
 
 

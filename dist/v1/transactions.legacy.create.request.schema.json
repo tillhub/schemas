@@ -436,6 +436,12 @@
         {
           "type": "object",
           "properties": {
+            "expense_account": {
+              "type": "string",
+              "format": "uuid",
+              "example": "09a9a469-c16b-4b54-835d-692d05d218f9",
+              "description": "The Tillhub expense account resource"
+            },
             "expense_account_name": {
               "type": "string",
               "example": "2 Testausgabe",
@@ -457,6 +463,12 @@
               "type": "string",
               "example": "1338",
               "description": "Custom id of the used expense account"
+            },
+            "balance_client_id": {
+              "type": "string",
+              "example": "c1265a62-62e9-46de-9df7-4d3009c46068",
+              "maxLength": 128,
+              "description": "The client_id of the balance this expense is part of."
             },
             "safe_id": {
               "type": "string",
@@ -1092,6 +1104,19 @@
           "example": "Sale Nr. 5",
           "maxLength": 128,
           "description": "Any string that a user wants to store to identify a transaction, or wants to make it human readable.\n\nThis is is commonly refered to as 'transaction number' plus possibly any extension as string."
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "_balance_client_id": {
+      "oneOf": [
+        {
+          "type": "string",
+          "example": "c1265a62-62e9-46de-9df7-4d3009c46068",
+          "maxLength": 128,
+          "description": "The client_id of the balance this transaction is part of."
         },
         {
           "type": "null"
