@@ -104,6 +104,7 @@
     "branches": {
       "oneOf": [
         {
+          "description": "DEPRECATED. Set null or ignore. Use locations. In case of using it, it will redirect the value to locations",
           "type": "array",
           "items": {
             "type": "string",

@@ -1,3 +1,10 @@
+# [6.149.0](https://github.com/tillhub/schemas/compare/v6.148.0...v6.149.0) (2022-07-13)
+
+
+### Features
+
+* **favourites:** deprecate banches ([a5f1db1](https://github.com/tillhub/schemas/commit/a5f1db1))
+
 # [6.148.0](https://github.com/tillhub/schemas/compare/v6.147.0...v6.148.0) (2022-07-13)
 
 
