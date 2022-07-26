@@ -259,7 +259,8 @@
                     "fiskaltrust",
                     "tse_fiskaly",
                     "tse_epson",
-                    "fr_NF525"
+                    "fr_NF525",
+                    "it_epson"
                   ]
                 },
                 {
@@ -433,6 +434,36 @@
                       "type": "boolean",
                       "description": "Activates the french signing process.",
                       "default": true
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "description": "Configuration object for Italy: Epson Fiscal Printer",
+                  "properties": {
+                    "unit": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "description": "Eleven character ID of the signing unit (Epson.serialNumber) - should be updated after client is initialized",
+                          "example": "99IEB03890"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "target": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "description": "IP address of the signing unit - should be updated after client is initialized",
+                          "example": "192.168.0.211"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
                     }
                   }
                 },

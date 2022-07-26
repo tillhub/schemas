@@ -1,3 +1,16 @@
+# [6.150.0](https://github.com/tillhub/schemas/compare/v6.149.0...v6.150.0) (2022-07-26)
+
+
+### Features
+
+* **register:** add example for unit ([ca3a118](https://github.com/tillhub/schemas/commit/ca3a118))
+* **register:** add example for unit ([57e5f77](https://github.com/tillhub/schemas/commit/57e5f77))
+* **register:** add ip address ([34faae2](https://github.com/tillhub/schemas/commit/34faae2))
+* **register:** added Italian fiscal config ([c6a73a7](https://github.com/tillhub/schemas/commit/c6a73a7))
+* **register:** added Italian fiscal config ([dc8347b](https://github.com/tillhub/schemas/commit/dc8347b))
+* **register:** added unit to configuration ([b8459f3](https://github.com/tillhub/schemas/commit/b8459f3))
+* **register:** fix description for epson fiscal printer ([f78a52a](https://github.com/tillhub/schemas/commit/f78a52a))
+
 # [6.149.0](https://github.com/tillhub/schemas/compare/v6.148.0...v6.149.0) (2022-07-13)
 
 

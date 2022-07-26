@@ -2729,7 +2729,8 @@
                     "fiskaltrust",
                     "tse_fiskaly",
                     "tse_epson",
-                    "fr_NF525"
+                    "fr_NF525",
+                    "it_epson"
                   ]
                 },
                 "resource_type": {
