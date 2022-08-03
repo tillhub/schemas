@@ -8034,6 +8034,15 @@
                       ]
                     }
                   }
+                },
+                "epson_fp_it": {
+                  "type": "object",
+                  "properties": {
+                    "enabled": {
+                      "type": "boolean",
+                      "default": false
+                    }
+                  }
                 }
               }
             },

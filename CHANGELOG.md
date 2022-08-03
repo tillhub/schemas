@@ -1,3 +1,11 @@
+# [6.151.0](https://github.com/tillhub/schemas/compare/v6.150.0...v6.151.0) (2022-08-03)
+
+
+### Features
+
+* **interfaces:** add epsonFpIt (Epson Fiscal Printer - Italy) ([2014457](https://github.com/tillhub/schemas/commit/2014457))
+* **staff:** Add Staff filter to Staff report ([#717](https://github.com/tillhub/schemas/issues/717)) ([63bf4b8](https://github.com/tillhub/schemas/commit/63bf4b8))
+
 # [6.150.0](https://github.com/tillhub/schemas/compare/v6.149.0...v6.150.0) (2022-07-26)
 
 

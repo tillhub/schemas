@@ -13,6 +13,11 @@
     "branch": {
       "type": "string",
       "format": "uuid"
+    },
+    "staff_number": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64
     }
   },
   "required": []
