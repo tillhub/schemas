@@ -2696,6 +2696,35 @@
         {
           "type": "object",
           "properties": {
+            "barcode": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "description": "Defines specific bahviors for barcode usage and generation, e.g. for BSH",
+                  "properties": {
+                    "source": {
+                      "oneOf": [
+                        {
+                          "description": "Defines how the transaction barcode field will be set - this will get printed at the bottom of a receipt.",
+                          "type": "string",
+                          "enum": [
+                            "generate",
+                            "external_reference_id"
+                          ],
+                          "default": "generate"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
             "cross_register_refunding": {
               "oneOf": [
                 {
