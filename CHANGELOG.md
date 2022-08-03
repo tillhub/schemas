@@ -1,3 +1,10 @@
+## [6.151.1](https://github.com/tillhub/schemas/compare/v6.151.0...v6.151.1) (2022-08-03)
+
+
+### Bug Fixes
+
+* **configurations:** transactions ([de90a47](https://github.com/tillhub/schemas/commit/de90a47))
+
 # [6.151.0](https://github.com/tillhub/schemas/compare/v6.150.0...v6.151.0) (2022-08-03)
 
 
