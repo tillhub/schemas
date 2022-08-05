@@ -1,3 +1,10 @@
+# [6.153.0](https://github.com/tillhub/schemas/compare/v6.152.0...v6.153.0) (2022-08-05)
+
+
+### Features
+
+* **products:** refine attributes ([9e3c85b](https://github.com/tillhub/schemas/commit/9e3c85b))
+
 # [6.152.0](https://github.com/tillhub/schemas/compare/v6.151.1...v6.152.0) (2022-08-03)
 
 

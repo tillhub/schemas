@@ -38,7 +38,11 @@
       "description": "Arbitrary attributes a product has, that will be displayed in e.g. a sale",
       "anyOf": [
         {
-          "type": "object"
+          "type": "object",
+          "description": "A dictionary <string, string> describing all values for one specific variant",
+          "additionalProperties": {
+            "type": "string"
+          }
         },
         {
           "type": "null"
