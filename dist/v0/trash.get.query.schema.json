@@ -35,6 +35,7 @@
         "product_service_questions",
         "product_templates",
         "products_v1",
+        "products_v1_addon_groups",
         "pricebooks",
         "promotions",
         "reasons",

@@ -1,3 +1,10 @@
+# [6.154.0](https://github.com/tillhub/schemas/compare/v6.153.0...v6.154.0) (2022-08-06)
+
+
+### Features
+
+* **trash:** Add AddonGroups to revision history to be able to recover ([#720](https://github.com/tillhub/schemas/issues/720)) ([0402a86](https://github.com/tillhub/schemas/commit/0402a86))
+
 # [6.153.0](https://github.com/tillhub/schemas/compare/v6.152.0...v6.153.0) (2022-08-05)
 
 
