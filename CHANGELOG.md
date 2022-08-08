@@ -1,3 +1,10 @@
+# [6.155.0](https://github.com/tillhub/schemas/compare/v6.154.0...v6.155.0) (2022-08-08)
+
+
+### Features
+
+* **generate_id:** make SEQUENCE mandatory for customer, product & staff ([bd831b9](https://github.com/tillhub/schemas/commit/bd831b9))
+
 # [6.154.0](https://github.com/tillhub/schemas/compare/v6.153.0...v6.154.0) (2022-08-06)
 
 

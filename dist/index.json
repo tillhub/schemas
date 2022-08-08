@@ -4,7 +4,6 @@
   "/custom_properties.definition.schema.json",
   "/patch.request.schema.json",
   "/timezone.schema.json",
-  "/analytics.reports.transactions.overview.response.schema.json",
   "/balances.create.request.schema.json",
   "/balances.get-all.response.schema.json",
   "/balances.get-one.response.schema.json",
@@ -77,6 +76,7 @@
   "/transactions_ext.create.request.schema.json",
   "/transactions_ext.create.response.schema.json",
   "/vouchers.patch.schema.json",
+  "/analytics.reports.transactions.overview.response.schema.json",
   "/accounts.create.request.schema.json",
   "/accounts.update.request.schema.json",
   "/analytics.create.request.body.schema.json",
@@ -353,7 +353,7 @@
   "/webhooks.update.request.schema.json",
   "/configurations.create.request.schema.json",
   "/configurations.update.request.schema.json",
-  "/profile.create.request.schema.json",
   "/profile.update.request.schema.json",
+  "/profile.create.request.schema.json",
   "/support.create.request.schema.json"
 ]

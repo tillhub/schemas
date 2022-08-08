@@ -1656,6 +1656,26 @@
           "type": "object",
           "additionalProperties": true,
           "properties": {
+            "staff_id_template": {
+              "description": "A Tillhub string pattern that allows for parameterized staff number generation",
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "string",
+                  "description": "We need to have a SEQUENCE to assure the uniqueness of the id",
+                  "minLength": 4,
+                  "maxLength": 512,
+                  "pattern": "SEQUENCE"
+                }
+              ]
+            },
+            "generate_staff_id": {
+              "description": "The toggle to opt-in or -out of the staff number generation. Send this as query parameter on creation: ?generate_staff_number=true",
+              "type": "boolean",
+              "default": "false"
+            },
             "cashier_pin_cancel_enabled": {
               "description": "If true, a cashier is allowed to cancel a PIN request. If false, the PIN request is not cancelable and will stay there",
               "oneOf": [
@@ -2926,8 +2946,10 @@
                     },
                     {
                       "type": "string",
+                      "description": "We need to have a SEQUENCE to assure the uniqueness of the id",
                       "minLength": 4,
-                      "maxLength": 512
+                      "maxLength": 512,
+                      "pattern": "SEQUENCE"
                     }
                   ]
                 },
@@ -3190,8 +3212,10 @@
                 },
                 {
                   "type": "string",
+                  "description": "We need to have a SEQUENCE to assure the uniqueness of the id",
                   "minLength": 4,
-                  "maxLength": 512
+                  "maxLength": 512,
+                  "pattern": "SEQUENCE"
                 }
               ]
             },
