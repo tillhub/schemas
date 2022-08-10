@@ -4243,6 +4243,23 @@
                             }
                           ]
                         },
+                        "signing_footer_style": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if signing footer is printed as text-only, qr-code-only or with text and qr-code. Legal requirements will always have precedence.",
+                              "type": "string",
+                              "enum": [
+                                "qr_only",
+                                "text_only",
+                                "text_qr"
+                              ],
+                              "default": "qr_only"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
                         "refund_options": {
                           "oneOf": [
                             {
@@ -4789,6 +4806,23 @@
                               "description": "Defines if signing footer is printed without any spaces and line breaks",
                               "type": "boolean",
                               "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "signing_footer_style": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if signing footer is printed as text-only, qr-code-only or with text and qr-code. Legal requirements will always have precedence.",
+                              "type": "string",
+                              "enum": [
+                                "qr_only",
+                                "text_only",
+                                "text_qr"
+                              ],
+                              "default": "qr_only"
                             },
                             {
                               "type": "null"
@@ -5347,6 +5381,23 @@
                             }
                           ]
                         },
+                        "signing_footer_style": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if signing footer is printed as text-only, qr-code-only or with text and qr-code. Legal requirements will always have precedence.",
+                              "type": "string",
+                              "enum": [
+                                "qr_only",
+                                "text_only",
+                                "text_qr"
+                              ],
+                              "default": "qr_only"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
                         "refund_options": {
                           "oneOf": [
                             {
@@ -5893,6 +5944,23 @@
                               "description": "Defines if signing footer is printed without any spaces and line breaks",
                               "type": "boolean",
                               "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "signing_footer_style": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if signing footer is printed as text-only, qr-code-only or with text and qr-code. Legal requirements will always have precedence.",
+                              "type": "string",
+                              "enum": [
+                                "qr_only",
+                                "text_only",
+                                "text_qr"
+                              ],
+                              "default": "qr_only"
                             },
                             {
                               "type": "null"
@@ -6451,6 +6519,23 @@
                             }
                           ]
                         },
+                        "signing_footer_style": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if signing footer is printed as text-only, qr-code-only or with text and qr-code. Legal requirements will always have precedence.",
+                              "type": "string",
+                              "enum": [
+                                "qr_only",
+                                "text_only",
+                                "text_qr"
+                              ],
+                              "default": "qr_only"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
                         "refund_options": {
                           "oneOf": [
                             {
@@ -6997,6 +7082,23 @@
                               "description": "Defines if signing footer is printed without any spaces and line breaks",
                               "type": "boolean",
                               "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "signing_footer_style": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if signing footer is printed as text-only, qr-code-only or with text and qr-code. Legal requirements will always have precedence.",
+                              "type": "string",
+                              "enum": [
+                                "qr_only",
+                                "text_only",
+                                "text_qr"
+                              ],
+                              "default": "qr_only"
                             },
                             {
                               "type": "null"
