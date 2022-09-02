@@ -1,3 +1,10 @@
+# [6.157.0](https://github.com/tillhub/schemas/compare/v6.156.0...v6.157.0) (2022-09-02)
+
+
+### Features
+
+* **configurations:** Create schema for /api/v0/configurations/:account/:configurationID/users APIs ([#723](https://github.com/tillhub/schemas/issues/723)) ([10d2572](https://github.com/tillhub/schemas/commit/10d2572))
+
 # [6.156.0](https://github.com/tillhub/schemas/compare/v6.155.0...v6.156.0) (2022-08-10)
 
 
