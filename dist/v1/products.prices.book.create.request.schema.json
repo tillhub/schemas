@@ -30,13 +30,7 @@
           "properties": {
             "time": {
               "oneOf": [
-                {
-                  "type": "object",
-                  "additionalProperties": false,
-                  "properties": {
-                    "time": {}
-                  }
-                },
+                {},
                 {
                   "type": "null"
                 }

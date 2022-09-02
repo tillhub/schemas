@@ -1,3 +1,10 @@
+## [6.157.2](https://github.com/tillhub/schemas/compare/v6.157.1...v6.157.2) (2022-09-02)
+
+
+### Bug Fixes
+
+* **price_book:** time_constraints ([#726](https://github.com/tillhub/schemas/issues/726)) ([290a475](https://github.com/tillhub/schemas/commit/290a475))
+
 ## [6.157.1](https://github.com/tillhub/schemas/compare/v6.157.0...v6.157.1) (2022-09-02)
 
 
