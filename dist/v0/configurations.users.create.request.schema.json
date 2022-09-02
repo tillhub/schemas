@@ -281,13 +281,21 @@
             "type": "array",
             "uniqueItems": true,
             "default": [
-              "analytics:delegated"
+              "vouchers:read:one",
+              "vouchers:update:one"
             ],
             "items": {
               "type": "string",
               "enum": [
-                "analytics:delegated",
-                "analytics:delegated:audits.actions:type:carts.item.remove"
+                "products:read",
+                "products:read:one",
+                "vouchers:admin",
+                "vouchers:create",
+                "vouchers:read",
+                "vouchers:read:one",
+                "vouchers:update",
+                "vouchers:update:one",
+                "vouchers:delete"
               ]
             }
           }
@@ -312,21 +320,13 @@
             "type": "array",
             "uniqueItems": true,
             "default": [
-              "vouchers:read:one",
-              "vouchers:update:one"
+              "analytics:delegated"
             ],
             "items": {
               "type": "string",
               "enum": [
-                "products:read",
-                "products:read:one",
-                "vouchers:admin",
-                "vouchers:create",
-                "vouchers:read",
-                "vouchers:read:one",
-                "vouchers:update",
-                "vouchers:update:one",
-                "vouchers:delete"
+                "analytics:delegated",
+                "analytics:delegated:audits.actions:type:carts.item.remove"
               ]
             }
           }
