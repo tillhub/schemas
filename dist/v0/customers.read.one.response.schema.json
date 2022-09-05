@@ -67,11 +67,13 @@
           "active": {
             "description": "Customer active",
             "example": "true",
-            "type": "boolean"
+            "type": "boolean",
+            "default": true
           },
           "deleted": {
             "description": "Customer deleted",
-            "type": "boolean"
+            "type": "boolean",
+            "default": false
           },
           "firstname": {
             "description": "First name",

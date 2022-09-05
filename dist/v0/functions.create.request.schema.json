@@ -95,10 +95,12 @@
       "maxLength": 128
     },
     "active": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": true
     },
     "deleted": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": false
     },
     "configuration": {
       "description": "Function configuration that e.g. drives specific local client behaviour",

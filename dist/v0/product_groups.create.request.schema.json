@@ -34,15 +34,9 @@
       ]
     },
     "active": {
-      "oneOf": [
-        {
-          "description": "Product group is active",
-          "type": "boolean"
-        },
-        {
-          "type": "null"
-        }
-      ]
+      "description": "Product group is active",
+      "type": "boolean",
+      "default": true
     },
     "account": {
       "oneOf": [

@@ -27,10 +27,12 @@
       ]
     },
     "deleted": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": false
     },
     "active": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": true
     },
     "branches": {
       "oneOf": [
@@ -582,7 +584,8 @@
                   },
                   "active": {
                     "description": "Define whether this voucher is currently active.",
-                    "type": "boolean"
+                    "type": "boolean",
+                    "default": true
                   },
                   "bound_to": {
                     "description": "",

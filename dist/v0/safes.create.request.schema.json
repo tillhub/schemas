@@ -265,24 +265,12 @@
       ]
     },
     "deleted": {
-      "oneOf": [
-        {
-          "type": "boolean"
-        },
-        {
-          "type": "null"
-        }
-      ]
+      "type": "boolean",
+      "default": false
     },
     "active": {
-      "oneOf": [
-        {
-          "type": "boolean"
-        },
-        {
-          "type": "null"
-        }
-      ]
+      "type": "boolean",
+      "default": true
     }
   }
 }

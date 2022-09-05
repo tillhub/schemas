@@ -32,7 +32,8 @@
       ]
     },
     "deleted": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": false
     },
     "active": {
       "type": "boolean",

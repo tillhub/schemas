@@ -49,10 +49,12 @@
       "default": false
     },
     "active": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": true
     },
     "deleted": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": false
     },
     "financial_accounts": {
       "anyOf": [

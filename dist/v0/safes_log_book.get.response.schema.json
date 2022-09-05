@@ -392,24 +392,12 @@
                     ]
                   },
                   "deleted": {
-                    "oneOf": [
-                      {
-                        "type": "boolean"
-                      },
-                      {
-                        "type": "null"
-                      }
-                    ]
+                    "type": "boolean",
+                    "default": false
                   },
                   "active": {
-                    "oneOf": [
-                      {
-                        "type": "boolean"
-                      },
-                      {
-                        "type": "null"
-                      }
-                    ]
+                    "type": "boolean",
+                    "default": true
                   },
                   "id": {
                     "type": "string",
@@ -689,24 +677,12 @@
                         ]
                       },
                       "deleted": {
-                        "oneOf": [
-                          {
-                            "type": "boolean"
-                          },
-                          {
-                            "type": "null"
-                          }
-                        ]
+                        "type": "boolean",
+                        "default": false
                       },
                       "active": {
-                        "oneOf": [
-                          {
-                            "type": "boolean"
-                          },
-                          {
-                            "type": "null"
-                          }
-                        ]
+                        "type": "boolean",
+                        "default": true
                       },
                       "id": {
                         "type": "string",
@@ -727,10 +703,12 @@
                     "additionalProperties": true,
                     "properties": {
                       "active": {
-                        "type": "boolean"
+                        "type": "boolean",
+                        "default": true
                       },
                       "deleted": {
-                        "type": "boolean"
+                        "type": "boolean",
+                        "default": false
                       },
                       "name": {
                         "anyOf": [
@@ -1167,24 +1145,12 @@
                     ]
                   },
                   "deleted": {
-                    "oneOf": [
-                      {
-                        "type": "boolean"
-                      },
-                      {
-                        "type": "null"
-                      }
-                    ]
+                    "type": "boolean",
+                    "default": false
                   },
                   "active": {
-                    "oneOf": [
-                      {
-                        "type": "boolean"
-                      },
-                      {
-                        "type": "null"
-                      }
-                    ]
+                    "type": "boolean",
+                    "default": true
                   },
                   "id": {
                     "type": "string",
@@ -1464,24 +1430,12 @@
                         ]
                       },
                       "deleted": {
-                        "oneOf": [
-                          {
-                            "type": "boolean"
-                          },
-                          {
-                            "type": "null"
-                          }
-                        ]
+                        "type": "boolean",
+                        "default": false
                       },
                       "active": {
-                        "oneOf": [
-                          {
-                            "type": "boolean"
-                          },
-                          {
-                            "type": "null"
-                          }
-                        ]
+                        "type": "boolean",
+                        "default": true
                       },
                       "id": {
                         "type": "string",
@@ -1502,10 +1456,12 @@
                     "additionalProperties": true,
                     "properties": {
                       "active": {
-                        "type": "boolean"
+                        "type": "boolean",
+                        "default": true
                       },
                       "deleted": {
-                        "type": "boolean"
+                        "type": "boolean",
+                        "default": false
                       },
                       "name": {
                         "anyOf": [

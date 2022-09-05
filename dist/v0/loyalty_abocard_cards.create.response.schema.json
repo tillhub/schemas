@@ -85,12 +85,14 @@
           "active": {
             "description": "The abocard is active",
             "example": true,
-            "type": "boolean"
+            "type": "boolean",
+            "default": false
           },
           "deleted": {
             "description": "The abocard is deleted",
             "example": true,
-            "type": "boolean"
+            "type": "boolean",
+            "default": false
           },
           "valid_until": {
             "oneOf": [
@@ -375,7 +377,8 @@
                   },
                   "active": {
                     "description": "Define whether this voucher is currently active.",
-                    "type": "boolean"
+                    "type": "boolean",
+                    "default": true
                   },
                   "deleted": {
                     "description": "Define whether this voucher is \"soft\" deleted. This is different than a \"hard\" delete where the resource is eliminated from the database.",

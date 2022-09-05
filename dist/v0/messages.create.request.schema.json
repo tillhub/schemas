@@ -120,7 +120,8 @@
       ]
     },
     "deleted": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": false
     },
     "progress": {
       "type": "object"

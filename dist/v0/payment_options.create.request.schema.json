@@ -10,7 +10,8 @@
   ],
   "properties": {
     "active": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": true
     },
     "type": {
       "type": "string",

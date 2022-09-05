@@ -1,3 +1,11 @@
+# [6.158.0](https://github.com/tillhub/schemas/compare/v6.157.2...v6.158.0) (2022-09-05)
+
+
+### Features
+
+* **chore:** Get rid of 3-state booleans in 'active' and 'deleted' fields ([5efeead](https://github.com/tillhub/schemas/commit/5efeead))
+* **chore:** lint fix ([0734f1b](https://github.com/tillhub/schemas/commit/0734f1b))
+
 ## [6.157.2](https://github.com/tillhub/schemas/compare/v6.157.1...v6.157.2) (2022-09-02)
 
 

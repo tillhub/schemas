@@ -33,10 +33,12 @@
       ]
     },
     "deleted": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": false
     },
     "active": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": true
     },
     "value_configurations": {
       "oneOf": [

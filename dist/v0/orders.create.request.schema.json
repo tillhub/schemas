@@ -28,14 +28,8 @@
     },
     "deleted": {
       "description": "the string representation of boolean values as `false` or `true`",
-      "anyOf": [
-        {
-          "type": "boolean"
-        },
-        {
-          "type": "null"
-        }
-      ]
+      "type": "boolean",
+      "default": false
     },
     "ordered_at": {
       "description": "ISO string (UTC) with timezone",
@@ -427,14 +421,8 @@
             "description": "the string representation of boolean values as `false` or `true`. Set to 'true' if the order item is supposed to be a suggestion (as opposed to an actual item in the order)"
           },
           "deleted": {
-            "oneOf": [
-              {
-                "type": "boolean"
-              },
-              {
-                "type": "null"
-              }
-            ],
+            "type": "boolean",
+            "default": false,
             "description": "the string representation of boolean values as `false` or `true`"
           },
           "order": {

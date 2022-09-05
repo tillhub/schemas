@@ -14,7 +14,8 @@
           "type": "null"
         },
         {
-          "type": "number"
+          "type": "number",
+          "description": "The quantity of this item/product."
         }
       ]
     },
@@ -34,6 +35,7 @@
       "anyOf": [
         {
           "type": "string",
+          "description": "Alphanumerical uuid of the location, e.g. branch or warehouse",
           "minLength": 1,
           "maxLength": 64
         },
@@ -46,6 +48,7 @@
       "anyOf": [
         {
           "type": "string",
+          "description": "Location type of stock",
           "enum": [
             "client",
             "branch",

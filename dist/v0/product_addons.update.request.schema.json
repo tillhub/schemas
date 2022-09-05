@@ -87,10 +87,12 @@
       "default": 1
     },
     "active": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": true
     },
     "deleted": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": false
     }
   }
 }
