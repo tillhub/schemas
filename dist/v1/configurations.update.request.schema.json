@@ -2994,6 +2994,18 @@
                     }
                   ]
                 },
+                "product_sync_strip_branch_prices": {
+                  "description": "If true, product will get ONLY branch prices from current branch",
+                  "oneOf": [
+                    {
+                      "type": "null"
+                    },
+                    {
+                      "type": "boolean",
+                      "default": false
+                    }
+                  ]
+                },
                 "product_number_length": {
                   "description": "Auto product number length",
                   "oneOf": [

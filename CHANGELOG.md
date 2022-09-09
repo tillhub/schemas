@@ -1,3 +1,10 @@
+# [6.159.0](https://github.com/tillhub/schemas/compare/v6.158.0...v6.159.0) (2022-09-09)
+
+
+### Features
+
+* **configuration:** explicit parameter on the products route to indicate branch price stripping ([c450bc5](https://github.com/tillhub/schemas/commit/c450bc5))
+
 # [6.158.0](https://github.com/tillhub/schemas/compare/v6.157.2...v6.158.0) (2022-09-05)
 
 
