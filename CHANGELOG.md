@@ -1,3 +1,10 @@
+# [6.160.0](https://github.com/tillhub/schemas/compare/v6.159.0...v6.160.0) (2022-09-09)
+
+
+### Features
+
+* **configurations:** Users: Set the role on existing users and on the newly created ones ([#728](https://github.com/tillhub/schemas/issues/728)) ([3382092](https://github.com/tillhub/schemas/commit/3382092))
+
 # [6.159.0](https://github.com/tillhub/schemas/compare/v6.158.0...v6.159.0) (2022-09-09)
 
 

@@ -88,23 +88,16 @@
       ]
     },
     "role": {
-      "oneOf": [
-        {
-          "type": "string",
-          "enum": [
-            "admin",
-            "manager",
-            "serviceaccount",
-            "franchisee",
-            "franchise",
-            "staff",
-            "accountant",
-            "purchaser"
-          ]
-        },
-        {
-          "type": "null"
-        }
+      "type": "string",
+      "enum": [
+        "admin",
+        "manager",
+        "serviceaccount",
+        "franchisee",
+        "franchise",
+        "staff",
+        "accountant",
+        "purchaser"
       ]
     },
     "user_id": {
