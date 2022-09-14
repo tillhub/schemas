@@ -9870,6 +9870,31 @@
                               ]
                             }
                           }
+                        },
+                        "sync": {
+                          "oneOf": [
+                            {
+                              "description": "Sync UI view",
+                              "type": "object",
+                              "properties": {
+                                "enabled": {
+                                  "oneOf": [
+                                    {
+                                      "description": "Defines if the Sync Details UI View comes up on tapping the sync wheel",
+                                      "type": "boolean",
+                                      "default": false
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                }
+                              }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
                         }
                       }
                     },

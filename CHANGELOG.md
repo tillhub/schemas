@@ -1,3 +1,10 @@
+# [6.161.0](https://github.com/tillhub/schemas/compare/v6.160.0...v6.161.0) (2022-09-14)
+
+
+### Features
+
+* **configurations:** ui ([b595365](https://github.com/tillhub/schemas/commit/b595365))
+
 # [6.160.0](https://github.com/tillhub/schemas/compare/v6.159.0...v6.160.0) (2022-09-09)
 
 
