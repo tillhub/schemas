@@ -1,3 +1,10 @@
+# [6.162.0](https://github.com/tillhub/schemas/compare/v6.161.0...v6.162.0) (2022-09-29)
+
+
+### Features
+
+* **client_account:** add preferred_initialization to configuration ([668b804](https://github.com/tillhub/schemas/commit/668b804))
+
 # [6.161.0](https://github.com/tillhub/schemas/compare/v6.160.0...v6.161.0) (2022-09-14)
 
 

@@ -30,6 +30,15 @@
     "test_account": {
       "type": "boolean"
     },
+    "preferred_initialization": {
+      "description": "remote means Staging, local means Production enviroment",
+      "type": "string",
+      "enum": [
+        "remote",
+        "local"
+      ],
+      "default": "remote"
+    },
     "template": {
       "type": "string",
       "enum": [
