@@ -29,7 +29,7 @@
       "type": "boolean"
     },
     "preferred_initialization": {
-      "description": "remote means Staging, local means Production enviroment",
+      "description": "When local data ís missing - counting numbers can be initialized from the corresponding API table or - if available - from a secondary local storage (e.g. keychain on iOS)",
       "type": "string",
       "enum": [
         "remote",

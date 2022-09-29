@@ -1,3 +1,10 @@
+# [6.163.0](https://github.com/tillhub/schemas/compare/v6.162.0...v6.163.0) (2022-09-29)
+
+
+### Features
+
+* **client_account:** better documentation ([ab4ae8f](https://github.com/tillhub/schemas/commit/ab4ae8f))
+
 # [6.162.0](https://github.com/tillhub/schemas/compare/v6.161.0...v6.162.0) (2022-09-29)
 
 
