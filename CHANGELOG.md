@@ -1,3 +1,11 @@
+# [6.164.0](https://github.com/tillhub/schemas/compare/v6.163.0...v6.164.0) (2022-10-20)
+
+
+### Features
+
+* **configurations:** base ([06aaf8a](https://github.com/tillhub/schemas/commit/06aaf8a))
+* **configurations:** tips ([0947fcb](https://github.com/tillhub/schemas/commit/0947fcb))
+
 # [6.163.0](https://github.com/tillhub/schemas/compare/v6.162.0...v6.163.0) (2022-09-29)
 
 

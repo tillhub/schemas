@@ -1906,6 +1906,7 @@
             "tips_expense_note_required": {
               "oneOf": [
                 {
+                  "description": "Defines if a note required when an expense is made for tips",
                   "type": "boolean",
                   "default": false
                 },
@@ -7865,12 +7866,255 @@
       ]
     },
     "tips": {
-      "anyOf": [
+      "oneOf": [
         {
-          "type": "null"
+          "type": "object",
+          "required": [
+            "owner_item",
+            "employee_item"
+          ],
+          "properties": {
+            "enabled": {
+              "oneOf": [
+                {
+                  "description": "global on-off-switch for the tips-feature",
+                  "type": "boolean",
+                  "default": false
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "max_factor": {
+              "oneOf": [
+                {
+                  "description": "The maximum multiplier to determine tips suggestions from a given cart price.",
+                  "type": "number",
+                  "minimum": 1,
+                  "maximum": 2,
+                  "default": null
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "auto_propose": {
+              "oneOf": [
+                {
+                  "description": "if true, automatically selects the highest tip possible according to the given amount or the max_factor, no tips otherwise",
+                  "type": "boolean",
+                  "default": false
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "owner_item": {
+              "description": "Defines mandatory cart item properties to enable encoding tips as cart items (similar to Fiskaltrust)",
+              "type": "object",
+              "properties": {
+                "product": {
+                  "type": "string",
+                  "format": "uuid",
+                  "description": "The Tillhub product resource reference ID.",
+                  "example": "43847a66-97dc-4ac2-8e8a-c44920e1f22f"
+                },
+                "product_name": {
+                  "default": null,
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "description": "Name of the product, e.g. Shop-owner's Tip."
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "product_number": {
+                  "default": null,
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "description": "The custom number of the product."
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "product_group": {
+                  "default": null,
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "format": "uuid",
+                      "description": "The Tillhub product group resource reference ID.",
+                      "example": "e3847a66-97dc-4ac2-8e8a-c44920e1f22f"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "product_group_name": {
+                  "default": null,
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "description": "The name of the product group"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "product_group_number": {
+                  "default": null,
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "description": "The custom number of the product group"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "account": {
+                  "type": "string",
+                  "format": "uuid",
+                  "description": "The Tillhub financial account reference ID.",
+                  "example": "a3847a66-97dc-4ac2-8e8a-c44920e1f22f"
+                },
+                "tax": {
+                  "type": "string",
+                  "format": "uuid",
+                  "description": "The Tillhub tax resource reference ID.",
+                  "example": "33847a66-97dc-4ac2-8e8a-c44920e1f22f"
+                }
+              }
+            },
+            "employee_item": {
+              "description": "Defines mandatory cart item properties to enable encoding tips as cart items (similar to Fiskaltrust)",
+              "type": "object",
+              "properties": {
+                "product": {
+                  "type": "string",
+                  "format": "uuid",
+                  "description": "The Tillhub product resource reference ID.",
+                  "example": "43847a66-97dc-4ac2-8e8a-c44920e1f22f"
+                },
+                "product_name": {
+                  "default": null,
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "description": "Name of the product, e.g. Shop-owner's Tip."
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "product_number": {
+                  "default": null,
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "description": "The custom number of the product."
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "product_group": {
+                  "default": null,
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "format": "uuid",
+                      "description": "The Tillhub product group resource reference ID.",
+                      "example": "e3847a66-97dc-4ac2-8e8a-c44920e1f22f"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "product_group_name": {
+                  "default": null,
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "description": "The name of the product group"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "product_group_number": {
+                  "default": null,
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "description": "The custom number of the product group"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "account": {
+                  "type": "string",
+                  "format": "uuid",
+                  "description": "The Tillhub financial account reference ID.",
+                  "example": "a3847a66-97dc-4ac2-8e8a-c44920e1f22f"
+                },
+                "tax": {
+                  "type": "string",
+                  "format": "uuid",
+                  "description": "The Tillhub tax resource reference ID.",
+                  "example": "33847a66-97dc-4ac2-8e8a-c44920e1f22f"
+                }
+              }
+            },
+            "payment_types": {
+              "oneOf": [
+                {
+                  "description": "Defines which payment types can be used with the tips-feature",
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "cash",
+                      "card",
+                      "invoice",
+                      "card_opi",
+                      "card_concardis",
+                      "card_tim",
+                      "card_adyen",
+                      "gift_card",
+                      "default",
+                      "undefined",
+                      "voucher"
+                    ]
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
         },
         {
-          "type": "object"
+          "type": "null"
         }
       ]
     },
