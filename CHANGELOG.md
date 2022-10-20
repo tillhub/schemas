@@ -1,3 +1,10 @@
+# [6.165.0](https://github.com/tillhub/schemas/compare/v6.164.0...v6.165.0) (2022-10-20)
+
+
+### Features
+
+* **configurations:** interfaces ([1206a31](https://github.com/tillhub/schemas/commit/1206a31))
+
 # [6.164.0](https://github.com/tillhub/schemas/compare/v6.163.0...v6.164.0) (2022-10-20)
 
 

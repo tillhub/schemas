@@ -8586,6 +8586,18 @@
                         }
                       ]
                     },
+                    "omit_amount_on_reversals": {
+                      "oneOf": [
+                        {
+                          "description": "Defines if amount can be omitted in reversals",
+                          "type": "boolean",
+                          "default": false
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
                     "inter_call_delay_seconds": {
                       "oneOf": [
                         {
