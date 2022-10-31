@@ -1,3 +1,10 @@
+# [6.166.0](https://github.com/tillhub/schemas/compare/v6.165.0...v6.166.0) (2022-10-31)
+
+
+### Features
+
+* **staff_sync:** sync staff per branch ([9963673](https://github.com/tillhub/schemas/commit/9963673))
+
 # [6.165.0](https://github.com/tillhub/schemas/compare/v6.164.0...v6.165.0) (2022-10-20)
 
 

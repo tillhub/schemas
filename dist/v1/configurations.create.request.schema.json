@@ -1688,6 +1688,18 @@
                 }
               ]
             },
+            "staff_per_branch": {
+              "description": "If true, staff will be synchronized per branch by sending it branch UUID as a request parameter",
+              "oneOf": [
+                {
+                  "type": "boolean",
+                  "default": false
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
             "cashier_pin_logout_enabled": {
               "description": "If true, a cashier is allowed to logout on a mandatory PIN request.",
               "oneOf": [
