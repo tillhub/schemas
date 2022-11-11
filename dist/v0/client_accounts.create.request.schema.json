@@ -296,6 +296,10 @@
         "cash_book": {
           "type": "boolean",
           "default": false
+        },
+        "webhooks": {
+          "type": "boolean",
+          "default": false
         }
       }
     },

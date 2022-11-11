@@ -1,3 +1,10 @@
+# [6.167.0](https://github.com/tillhub/schemas/compare/v6.166.0...v6.167.0) (2022-11-11)
+
+
+### Features
+
+* **features:** add webhooks ([ea6a091](https://github.com/tillhub/schemas/commit/ea6a091))
+
 # [6.166.0](https://github.com/tillhub/schemas/compare/v6.165.0...v6.166.0) (2022-10-31)
 
 
