@@ -463,6 +463,32 @@
             "gastro_order_delta"
           ],
           "description": "The type of the source that was signed."
+        },
+        "canceled_at": {
+          "oneOf": [
+            {
+              "type": "string",
+              "format": "date-time",
+              "example": "2018-01-29T14:55:05.000Z",
+              "description": "The time when the tranasaction was canceled (ISO_8601)."
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "refunded_at": {
+          "oneOf": [
+            {
+              "type": "string",
+              "format": "date-time",
+              "example": "2018-01-29T14:55:05.000Z",
+              "description": "The time when the tranasaction was refunded (ISO_8601)."
+            },
+            {
+              "type": "null"
+            }
+          ]
         }
       }
     },

@@ -1,3 +1,10 @@
+# [6.168.0](https://github.com/tillhub/schemas/compare/v6.167.0...v6.168.0) (2022-11-13)
+
+
+### Features
+
+* **transaction_statuses:** Handling of transaction_statuses update ([#737](https://github.com/tillhub/schemas/issues/737)) ([f3ae42f](https://github.com/tillhub/schemas/commit/f3ae42f))
+
 # [6.167.0](https://github.com/tillhub/schemas/compare/v6.166.0...v6.167.0) (2022-11-11)
 
 
