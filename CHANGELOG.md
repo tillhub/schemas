@@ -1,3 +1,10 @@
+# [6.170.0](https://github.com/tillhub/schemas/compare/v6.169.0...v6.170.0) (2022-11-16)
+
+
+### Features
+
+* **features:** oneOf webview features ([d3efb80](https://github.com/tillhub/schemas/commit/d3efb80))
+
 # [6.169.0](https://github.com/tillhub/schemas/compare/v6.168.0...v6.169.0) (2022-11-16)
 
 

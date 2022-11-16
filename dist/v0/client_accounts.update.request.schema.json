@@ -304,13 +304,20 @@
           "default": false
         },
         "webview": {
-          "type": "Object",
-          "properties": {
-            "enabled": {
-              "type": "boolean",
-              "default": false
+          "oneOf": [
+            {
+              "type": "Object",
+              "properties": {
+                "enabled": {
+                  "type": "boolean",
+                  "default": false
+                }
+              }
+            },
+            {
+              "type": "null"
             }
-          }
+          ]
         }
       }
     },
