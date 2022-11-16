@@ -308,12 +308,9 @@
         "webview": {
           "oneOf": [
             {
-              "type": "Object",
-              "properties": {
-                "enabled": {
-                  "type": "boolean",
-                  "default": false
-                }
+              "type": "object",
+              "example": {
+                "enabled": false
               }
             },
             {

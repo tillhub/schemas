@@ -1,3 +1,10 @@
+# [6.171.0](https://github.com/tillhub/schemas/compare/v6.170.0...v6.171.0) (2022-11-16)
+
+
+### Features
+
+* **features:** fix webview ([c45fff5](https://github.com/tillhub/schemas/commit/c45fff5))
+
 # [6.170.0](https://github.com/tillhub/schemas/compare/v6.169.0...v6.170.0) (2022-11-16)
 
 
