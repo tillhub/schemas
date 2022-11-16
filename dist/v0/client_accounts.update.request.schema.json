@@ -298,6 +298,19 @@
         "webhooks": {
           "type": "boolean",
           "default": false
+        },
+        "inventory": {
+          "type": "boolean",
+          "default": false
+        },
+        "webview": {
+          "type": "Object",
+          "properties": {
+            "enabled": {
+              "type": "boolean",
+              "default": false
+            }
+          }
         }
       }
     },

@@ -1,3 +1,10 @@
+# [6.169.0](https://github.com/tillhub/schemas/compare/v6.168.0...v6.169.0) (2022-11-16)
+
+
+### Features
+
+* **features:** add missing features ([5b3e7f1](https://github.com/tillhub/schemas/commit/5b3e7f1))
+
 # [6.168.0](https://github.com/tillhub/schemas/compare/v6.167.0...v6.168.0) (2022-11-13)
 
 
