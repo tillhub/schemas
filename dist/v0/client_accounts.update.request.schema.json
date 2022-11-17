@@ -216,7 +216,7 @@
     },
     "features": {
       "type": "object",
-      "additionalProperties": false,
+      "additionalProperties": true,
       "description": "Feature flags enabling/disabling current features.",
       "properties": {
         "savedcart": {

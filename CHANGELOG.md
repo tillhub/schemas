@@ -1,3 +1,10 @@
+# [6.172.0](https://github.com/tillhub/schemas/compare/v6.171.0...v6.172.0) (2022-11-17)
+
+
+### Features
+
+* **features:** handle extra features ([9ba3e9e](https://github.com/tillhub/schemas/commit/9ba3e9e))
+
 # [6.171.0](https://github.com/tillhub/schemas/compare/v6.170.0...v6.171.0) (2022-11-16)
 
 

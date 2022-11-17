@@ -1,7 +1,7 @@
 {
   "$id": "https://schemas.tillhub.com/v0/client_accounts.update.features.request.schema.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "additionalProperties": false,
+  "additionalProperties": true,
   "required": [],
   "properties": {
     "savedcart": {
