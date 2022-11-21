@@ -1,3 +1,10 @@
+# [6.173.0](https://github.com/tillhub/schemas/compare/v6.172.0...v6.173.0) (2022-11-21)
+
+
+### Features
+
+* **products:** Create CRUD endpoints for product customization by branch ([#740](https://github.com/tillhub/schemas/issues/740)) ([b9b8510](https://github.com/tillhub/schemas/commit/b9b8510))
+
 # [6.172.0](https://github.com/tillhub/schemas/compare/v6.171.0...v6.172.0) (2022-11-17)
 
 

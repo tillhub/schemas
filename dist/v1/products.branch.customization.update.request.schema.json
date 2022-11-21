@@ -1,0 +1,98 @@
+{
+  "$id": "https://schemas.tillhub.com/v1/products.branch.customization.update.request.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "type": "object",
+  "required": [],
+  "properties": {
+    "product": {
+      "description": "The reference to the actual product",
+      "type": "string",
+      "format": "uuid"
+    },
+    "name": {
+      "oneOf": [
+        {
+          "description": "Product name",
+          "type": "string",
+          "maxLength": 512
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "branches": {
+      "oneOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "branch_groups": {
+      "oneOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "description": {
+      "oneOf": [
+        {
+          "description": "Product name",
+          "type": "string",
+          "maxLength": 4096
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "summary": {
+      "oneOf": [
+        {
+          "description": "Product name",
+          "type": "string",
+          "maxLength": 1024
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "default_tile_color": {
+      "oneOf": [
+        {
+          "description": "Product name",
+          "type": "string",
+          "maxLength": 50
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "active": {
+      "type": "boolean",
+      "default": true
+    },
+    "deleted": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}
