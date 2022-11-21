@@ -1,3 +1,11 @@
+# [6.174.0](https://github.com/tillhub/schemas/compare/v6.173.0...v6.174.0) (2022-11-21)
+
+
+### Features
+
+* **payments:** blacklisted_payment_types configuration ([6ab0762](https://github.com/tillhub/schemas/commit/6ab0762))
+* **payments:** payments black list ([3e896be](https://github.com/tillhub/schemas/commit/3e896be))
+
 # [6.173.0](https://github.com/tillhub/schemas/compare/v6.172.0...v6.173.0) (2022-11-21)
 
 
