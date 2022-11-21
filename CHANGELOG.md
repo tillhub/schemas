@@ -1,3 +1,10 @@
+# [6.175.0](https://github.com/tillhub/schemas/compare/v6.174.0...v6.175.0) (2022-11-21)
+
+
+### Features
+
+* **webview:** feature boolean ([4141b65](https://github.com/tillhub/schemas/commit/4141b65))
+
 # [6.174.0](https://github.com/tillhub/schemas/compare/v6.173.0...v6.174.0) (2022-11-21)
 
 

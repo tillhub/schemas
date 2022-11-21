@@ -88,18 +88,9 @@
       "type": "boolean",
       "default": false
     },
-    "webview": {
-      "oneOf": [
-        {
-          "type": "object",
-          "example": {
-            "enabled": false
-          }
-        },
-        {
-          "type": "null"
-        }
-      ]
+    "web_view": {
+      "type": "boolean",
+      "default": false
     }
   },
   "type": "object"
