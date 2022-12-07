@@ -1,3 +1,11 @@
+# [6.177.0](https://github.com/tillhub/schemas/compare/v6.176.0...v6.177.0) (2022-12-07)
+
+
+### Features
+
+* **time_tracking:** add configuration and time tracking type ([12a473b](https://github.com/tillhub/schemas/commit/12a473b))
+* **transactions:** add ros_id to order ([33cb95c](https://github.com/tillhub/schemas/commit/33cb95c))
+
 # [6.176.0](https://github.com/tillhub/schemas/compare/v6.175.0...v6.176.0) (2022-11-24)
 
 
