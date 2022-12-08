@@ -27,6 +27,7 @@
           "format": "uuid"
         },
         "location_type": {
+          "description": "Location type",
           "type": "string",
           "enum": [
             "client",
@@ -50,8 +51,10 @@
           "format": "uuid"
         },
         "location_type": {
+          "description": "Location type",
           "type": "string",
           "enum": [
+            "client",
             "branch",
             "warehouse",
             "warehouse_shelf"

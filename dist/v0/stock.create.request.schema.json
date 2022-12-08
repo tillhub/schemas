@@ -12,11 +12,11 @@
     "qty": {
       "anyOf": [
         {
-          "type": "null"
-        },
-        {
           "type": "number",
           "description": "The quantity of this item/product."
+        },
+        {
+          "type": "null"
         }
       ]
     },
@@ -48,8 +48,8 @@
     "location_type": {
       "anyOf": [
         {
+          "description": "Location type",
           "type": "string",
-          "description": "Location type of stock",
           "enum": [
             "client",
             "branch",

@@ -1,3 +1,11 @@
+# [6.178.0](https://github.com/tillhub/schemas/compare/v6.177.0...v6.178.0) (2022-12-08)
+
+
+### Features
+
+* **stocks-book:** add stocks book schemas #UNTIL-5820 ([8172c34](https://github.com/tillhub/schemas/commit/8172c34)), closes [#UNTIL-5820](https://github.com/tillhub/schemas/issues/UNTIL-5820)
+* **stocks-book:** fix linter issues ([a4d1ba8](https://github.com/tillhub/schemas/commit/a4d1ba8))
+
 # [6.177.0](https://github.com/tillhub/schemas/compare/v6.176.0...v6.177.0) (2022-12-07)
 
 

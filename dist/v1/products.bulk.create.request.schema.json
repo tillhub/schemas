@@ -1509,8 +1509,8 @@
                 "location_type": {
                   "anyOf": [
                     {
+                      "description": "Location type",
                       "type": "string",
-                      "description": "Type of stock to be created (supported only for bulk creation of products with stock)",
                       "enum": [
                         "client",
                         "branch",

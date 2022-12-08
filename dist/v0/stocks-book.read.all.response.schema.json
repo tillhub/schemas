@@ -1,0 +1,4159 @@
+{
+  "$id": "https://schemas.tillhub.com/v0/stocks-book.read.all.response.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "type": "object",
+  "properties": {
+    "msg": {
+      "type": "string",
+      "minLength": 1,
+      "example": "Queried transactions successfully.",
+      "description": "Any English sentence, meant as information for developers and implementers. Avoid displaying this to the users and especially do not expect those messages to stay stable."
+    },
+    "msg_localised": {
+      "description": "Optional localized message that can be displayed to the user if existing. The language can be set by in the request or will fallback to English.",
+      "example": "Abgefragte Transaktionen erfolgreich.",
+      "type": "string",
+      "minLength": 1
+    },
+    "request": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Information about the request itself.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "The request uuid that can be used to identify and trace API calls.",
+          "format": "uuid"
+        },
+        "host": {
+          "type": "string",
+          "minLength": 1,
+          "example": "https://api.tillhub.com",
+          "description": "Server host and protocol from which request was handled."
+        }
+      }
+    },
+    "count": {
+      "type": "number",
+      "description": "the length of the results array.",
+      "example": 10
+    },
+    "results": {
+      "type": "array",
+      "description": "The envelope of items, that are usually objects. We are generally sending back arrays even if there was just one requested resource.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "description": "Unique entity ID",
+            "type": "string",
+            "format": "uuid",
+            "example": "936835f7-2d75-41d2-9001-38ed6e458328"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2019-03-17T21:12:04.849Z",
+            "description": "The date and time entity was created"
+          },
+          "updated_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2019-03-17T21:12:04.849Z",
+            "description": "The date and time entity was updated"
+          },
+          "metadata": {
+            "oneOf": [
+              {
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "qty": {
+            "description": "The quantity of product remain after book",
+            "example": 11,
+            "type": "number"
+          },
+          "qty_change": {
+            "description": "The quantity change with the book",
+            "example": -2,
+            "type": "number"
+          },
+          "product": {
+            "oneOf": [
+              {
+                "description": "The product UUID",
+                "example": "b98992bf-52b8-49e5-a44c-9e20eb921422",
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "id": {
+                    "description": "Unique entity ID",
+                    "type": "string",
+                    "format": "uuid",
+                    "example": "936835f7-2d75-41d2-9001-38ed6e458328"
+                  },
+                  "created_at": {
+                    "type": "string",
+                    "format": "date-time",
+                    "example": "2019-03-17T21:12:04.849Z",
+                    "description": "The date and time entity was created"
+                  },
+                  "updated_at": {
+                    "type": "string",
+                    "format": "date-time",
+                    "example": "2019-03-17T21:12:04.849Z",
+                    "description": "The date and time entity was updated"
+                  },
+                  "name": {
+                    "description": "Product name",
+                    "type": "string",
+                    "maxLength": 512
+                  },
+                  "summary": {
+                    "description": "Short summary of the product",
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 1024
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "description": {
+                    "description": "Long description of a product",
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 16384
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "attributes": {
+                    "description": "Arbitrary attributes a product has, that will be displayed in e.g. a sale",
+                    "anyOf": [
+                      {
+                        "type": "object",
+                        "description": "A dictionary <string, string> describing all values for one specific variant",
+                        "additionalProperties": {
+                          "type": "string"
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "parent": {
+                    "description": "Only valid for child products (variant and linked)",
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "tags": {
+                    "anyOf": [
+                      {
+                        "type": "array"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "linked_products": {
+                    "description": "Used to store linked_products (existing (can be any type, including `linked` and embedded (`full` product schema)",
+                    "anyOf": [
+                      {
+                        "type": "array"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "prices": {
+                    "anyOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "branch_prices": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "branch": {
+                                  "oneOf": [
+                                    {
+                                      "type": "string",
+                                      "format": "uuid"
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "prices": {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "object",
+                                    "properties": {
+                                      "amount": {
+                                        "description": "Either net or gross should be set (not null). Tax will be calculated accordingly automatically. We do not validate for either to be set, for data flexibility reasons.",
+                                        "type": "object",
+                                        "properties": {
+                                          "net": {
+                                            "oneOf": [
+                                              {
+                                                "example": "27633.02",
+                                                "type": "number",
+                                                "minimum": 0,
+                                                "maximum": 1000000,
+                                                "multipleOf": 0.01
+                                              },
+                                              {
+                                                "type": "null"
+                                              }
+                                            ]
+                                          },
+                                          "gross": {
+                                            "oneOf": [
+                                              {
+                                                "example": "27633.02",
+                                                "type": "number",
+                                                "minimum": 0,
+                                                "maximum": 1000000,
+                                                "multipleOf": 0.01
+                                              },
+                                              {
+                                                "type": "null"
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      },
+                                      "currency": {
+                                        "type": "string",
+                                        "minLength": 3,
+                                        "maxLength": 3
+                                      },
+                                      "percentage": {
+                                        "description": "DEPRECATED",
+                                        "type": "number"
+                                      },
+                                      "purchase_price": {
+                                        "description": "Define the opportunity cost or calculatory base price of this product and currency.",
+                                        "oneOf": [
+                                          {
+                                            "example": "27633.02",
+                                            "type": "number",
+                                            "minimum": 0,
+                                            "maximum": 1000000,
+                                            "multipleOf": 0.01
+                                          },
+                                          {
+                                            "type": "null"
+                                          }
+                                        ]
+                                      },
+                                      "cost": {
+                                        "description": "Define additional cost.",
+                                        "oneOf": [
+                                          {
+                                            "example": "27633.02",
+                                            "type": "number",
+                                            "minimum": 0,
+                                            "maximum": 1000000,
+                                            "multipleOf": 0.01
+                                          },
+                                          {
+                                            "type": "null"
+                                          }
+                                        ]
+                                      },
+                                      "margin": {
+                                        "description": "Add a margin to pruchase_price and cost to result in net.",
+                                        "oneOf": [
+                                          {
+                                            "type": "number",
+                                            "multipleOf": 0.0001
+                                          },
+                                          {
+                                            "type": "null"
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "scaled_prices": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "qty": {
+                                  "type": "number"
+                                },
+                                "prices": {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "object",
+                                    "properties": {
+                                      "amount": {
+                                        "description": "Either net or gross should be set (not null). Tax will be calculated accordingly automatically. We do not validate for either to be set, for data flexibility reasons.",
+                                        "type": "object",
+                                        "properties": {
+                                          "net": {
+                                            "oneOf": [
+                                              {
+                                                "example": "27633.02",
+                                                "type": "number",
+                                                "minimum": 0,
+                                                "maximum": 1000000,
+                                                "multipleOf": 0.01
+                                              },
+                                              {
+                                                "type": "null"
+                                              }
+                                            ]
+                                          },
+                                          "gross": {
+                                            "oneOf": [
+                                              {
+                                                "example": "27633.02",
+                                                "type": "number",
+                                                "minimum": 0,
+                                                "maximum": 1000000,
+                                                "multipleOf": 0.01
+                                              },
+                                              {
+                                                "type": "null"
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      },
+                                      "currency": {
+                                        "type": "string",
+                                        "minLength": 3,
+                                        "maxLength": 3
+                                      },
+                                      "percentage": {
+                                        "description": "DEPRECATED",
+                                        "type": "number"
+                                      },
+                                      "purchase_price": {
+                                        "description": "Define the opportunity cost or calculatory base price of this product and currency.",
+                                        "oneOf": [
+                                          {
+                                            "example": "27633.02",
+                                            "type": "number",
+                                            "minimum": 0,
+                                            "maximum": 1000000,
+                                            "multipleOf": 0.01
+                                          },
+                                          {
+                                            "type": "null"
+                                          }
+                                        ]
+                                      },
+                                      "cost": {
+                                        "description": "Define additional cost.",
+                                        "oneOf": [
+                                          {
+                                            "example": "27633.02",
+                                            "type": "number",
+                                            "minimum": 0,
+                                            "maximum": 1000000,
+                                            "multipleOf": 0.01
+                                          },
+                                          {
+                                            "type": "null"
+                                          }
+                                        ]
+                                      },
+                                      "margin": {
+                                        "description": "Add a margin to pruchase_price and cost to result in net.",
+                                        "oneOf": [
+                                          {
+                                            "type": "number",
+                                            "multipleOf": 0.0001
+                                          },
+                                          {
+                                            "type": "null"
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "time_based_prices": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "time_range": {
+                                  "type": "object",
+                                  "properties": {
+                                    "start": {
+                                      "type": "string",
+                                      "format": "date-time"
+                                    },
+                                    "end": {
+                                      "type": "string",
+                                      "format": "date-time"
+                                    }
+                                  },
+                                  "required": [
+                                    "start",
+                                    "end"
+                                  ]
+                                },
+                                "prices": {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "object",
+                                    "properties": {
+                                      "amount": {
+                                        "description": "Either net or gross should be set (not null). Tax will be calculated accordingly automatically. We do not validate for either to be set, for data flexibility reasons.",
+                                        "type": "object",
+                                        "properties": {
+                                          "net": {
+                                            "oneOf": [
+                                              {
+                                                "example": "27633.02",
+                                                "type": "number",
+                                                "minimum": 0,
+                                                "maximum": 1000000,
+                                                "multipleOf": 0.01
+                                              },
+                                              {
+                                                "type": "null"
+                                              }
+                                            ]
+                                          },
+                                          "gross": {
+                                            "oneOf": [
+                                              {
+                                                "example": "27633.02",
+                                                "type": "number",
+                                                "minimum": 0,
+                                                "maximum": 1000000,
+                                                "multipleOf": 0.01
+                                              },
+                                              {
+                                                "type": "null"
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      },
+                                      "currency": {
+                                        "type": "string",
+                                        "minLength": 3,
+                                        "maxLength": 3
+                                      },
+                                      "percentage": {
+                                        "description": "DEPRECATED",
+                                        "type": "number"
+                                      },
+                                      "purchase_price": {
+                                        "description": "Define the opportunity cost or calculatory base price of this product and currency.",
+                                        "oneOf": [
+                                          {
+                                            "example": "27633.02",
+                                            "type": "number",
+                                            "minimum": 0,
+                                            "maximum": 1000000,
+                                            "multipleOf": 0.01
+                                          },
+                                          {
+                                            "type": "null"
+                                          }
+                                        ]
+                                      },
+                                      "cost": {
+                                        "description": "Define additional cost.",
+                                        "oneOf": [
+                                          {
+                                            "example": "27633.02",
+                                            "type": "number",
+                                            "minimum": 0,
+                                            "maximum": 1000000,
+                                            "multipleOf": 0.01
+                                          },
+                                          {
+                                            "type": "null"
+                                          }
+                                        ]
+                                      },
+                                      "margin": {
+                                        "description": "Add a margin to pruchase_price and cost to result in net.",
+                                        "oneOf": [
+                                          {
+                                            "type": "number",
+                                            "multipleOf": 0.0001
+                                          },
+                                          {
+                                            "type": "null"
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "default_prices": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "amount": {
+                                  "description": "Either net or gross should be set (not null). Tax will be calculated accordingly automatically. We do not validate for either to be set, for data flexibility reasons.",
+                                  "type": "object",
+                                  "properties": {
+                                    "net": {
+                                      "oneOf": [
+                                        {
+                                          "example": "27633.02",
+                                          "type": "number",
+                                          "minimum": 0,
+                                          "maximum": 1000000,
+                                          "multipleOf": 0.01
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    },
+                                    "gross": {
+                                      "oneOf": [
+                                        {
+                                          "example": "27633.02",
+                                          "type": "number",
+                                          "minimum": 0,
+                                          "maximum": 1000000,
+                                          "multipleOf": 0.01
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    }
+                                  }
+                                },
+                                "currency": {
+                                  "type": "string",
+                                  "minLength": 3,
+                                  "maxLength": 3
+                                },
+                                "percentage": {
+                                  "description": "DEPRECATED",
+                                  "type": "number"
+                                },
+                                "purchase_price": {
+                                  "description": "Define the opportunity cost or calculatory base price of this product and currency.",
+                                  "oneOf": [
+                                    {
+                                      "example": "27633.02",
+                                      "type": "number",
+                                      "minimum": 0,
+                                      "maximum": 1000000,
+                                      "multipleOf": 0.01
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "cost": {
+                                  "description": "Define additional cost.",
+                                  "oneOf": [
+                                    {
+                                      "example": "27633.02",
+                                      "type": "number",
+                                      "minimum": 0,
+                                      "maximum": 1000000,
+                                      "multipleOf": 0.01
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "margin": {
+                                  "description": "Add a margin to pruchase_price and cost to result in net.",
+                                  "oneOf": [
+                                    {
+                                      "type": "number",
+                                      "multipleOf": 0.0001
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "required": [
+                          "default_prices"
+                        ]
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "barcodes": {
+                    "description": "Product barcodes",
+                    "anyOf": [
+                      {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "maxLength": 1024,
+                          "example": "ABC-abc-1234"
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "barcode": {
+                    "description": "Deprecated, use 'barcodes' instead",
+                    "deprecated": true,
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "sku": {
+                    "oneOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "stock_minimum": {
+                    "oneOf": [
+                      {
+                        "type": "number"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "stock_maximum": {
+                    "description": "The maximum resulting qty a location should have after a reorder",
+                    "oneOf": [
+                      {
+                        "type": "number"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "reorder_point": {
+                    "description": "The stock level that triggers a reorder",
+                    "oneOf": [
+                      {
+                        "type": "number"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "reorder_qty": {
+                    "description": "The default qty on any reorder",
+                    "oneOf": [
+                      {
+                        "type": "number"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "sellable": {
+                    "description": "Define whether a product should be sellable (appears in use cases which assume sale)",
+                    "type": "boolean",
+                    "default": true
+                  },
+                  "purchasable": {
+                    "description": "Define whether a product should be purchasable (appears in use cases which assume purchase)",
+                    "type": "boolean",
+                    "default": true
+                  },
+                  "stockable": {
+                    "description": "Define whether to keep track of stock of this product.",
+                    "oneOf": [
+                      {
+                        "type": "boolean"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "discountable": {
+                    "description": "Define whether this product can receive a discount during a sale.",
+                    "oneOf": [
+                      {
+                        "type": "boolean"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "linkable": {
+                    "description": "Define whether a product should be linkable. NOTE: this will replace the type \"linked\"",
+                    "type": "boolean",
+                    "default": false
+                  },
+                  "metadata": {
+                    "anyOf": [
+                      {
+                        "type": "object"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "audiences": {
+                    "anyOf": [
+                      {
+                        "type": "array"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "keywords": {
+                    "anyOf": [
+                      {
+                        "type": "array"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "categories": {
+                    "description": "Defines a list of Tillhub categories, which is list of uuids. The category trees will then determine where it is placed.",
+                    "anyOf": [
+                      {
+                        "type": "array"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "custom_ids": {
+                    "description": "DEPRECATED",
+                    "anyOf": [
+                      {
+                        "type": "object"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "related_to": {
+                    "anyOf": [
+                      {
+                        "type": "array"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "similar_to": {
+                    "anyOf": [
+                      {
+                        "type": "array"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "released_at": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "purchased_at": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "produced_at": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "custom_id": {
+                    "description": "The product number",
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "example": "0000000028-000008"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "tax": {
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "taxes_options": {
+                    "anyOf": [
+                      {
+                        "type": "array"
+                      },
+                      {
+                        "type": "object"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "season": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "seasons": {
+                    "anyOf": [
+                      {
+                        "type": "object"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "account": {
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "vat_class": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "category": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "brand": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "takeaway_tax": {
+                    "oneOf": [
+                      {
+                        "description": "The reference to the takeaway tax rate to use it for calculation instead of the regular tax during takeaway checkout process",
+                        "type": "string",
+                        "format": "uuid",
+                        "example": "4936a0c4-d266-4950-9c4d-03c5207ccf96"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "takeaway_account": {
+                    "oneOf": [
+                      {
+                        "description": "The reference to the takeaway revenue account to use it instead of the regular revenue account during takeaway checkout process",
+                        "type": "string",
+                        "format": "uuid",
+                        "example": "921ec83d-c08b-411a-96d8-355f354d790d"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "active": {
+                    "type": "boolean",
+                    "default": true
+                  },
+                  "deleted": {
+                    "type": "boolean",
+                    "default": false
+                  },
+                  "type": {
+                    "type": "string",
+                    "description": "variant of a product (product|voucher) or a parent (variant_product|linked_product|composed_product) or a child (variant|linked) where child has \"parent\" property containing the ID of a parent product",
+                    "enum": [
+                      "product",
+                      "composed_product",
+                      "voucher",
+                      "linked",
+                      "linked_product",
+                      "variant",
+                      "variant_product"
+                    ]
+                  },
+                  "manufacturer": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "iln": {
+                            "oneOf": [
+                              {
+                                "type": "string"
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ],
+                            "default": ""
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "supplier": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "sku": {
+                            "oneOf": [
+                              {
+                                "type": "string"
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ],
+                            "default": ""
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "locations": {
+                    "oneOf": [
+                      {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "format": "uuid"
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "branch_groups": {
+                    "oneOf": [
+                      {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "format": "uuid"
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "condition": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "images": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                          "original": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "format": "uri"
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ],
+                            "default": null
+                          },
+                          "1x": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "format": "uri"
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ],
+                            "default": null
+                          },
+                          "2x": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "format": "uri"
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ],
+                            "default": null
+                          },
+                          "3x": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "format": "uri"
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ],
+                            "default": null
+                          },
+                          "lia_1x": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "format": "uri"
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ],
+                            "default": null
+                          },
+                          "lia_2x": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "format": "uri"
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ],
+                            "default": null
+                          },
+                          "lia_3x": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "format": "uri"
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ],
+                            "default": null
+                          },
+                          "square_1x": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "format": "uri"
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ],
+                            "default": null
+                          },
+                          "square_2x": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "format": "uri"
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ],
+                            "default": null
+                          },
+                          "square_3x": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "format": "uri"
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ],
+                            "default": null
+                          },
+                          "avatar": {
+                            "type": "string",
+                            "format": "uri"
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "insert_id": {
+                    "type": "integer"
+                  },
+                  "product_group": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "delegated_to": {
+                    "anyOf": [
+                      {
+                        "type": "array",
+                        "minItems": 1,
+                        "items": {
+                          "type": "string",
+                          "format": "uuid"
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "client_id": {
+                    "description": "A client definable ID for the purpose of syncing to a client or used in analytics for e.g. transactions that created a product offline and done transactions offline before they received a backend ID.",
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 128
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "external_reference_id": {
+                    "description": "A caller defined custom ID for the purpose of syncing from external resources, or to use in analytics.",
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 128
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "default_tile_color": {
+                    "description": "Color to be displayed when no image is set.",
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 10
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "codes": {
+                    "oneOf": [
+                      {
+                        "description": "Deprecated, use 'barcodes' instead",
+                        "type": "array",
+                        "deprecated": true,
+                        "additionalProperties": false,
+                        "items": {
+                          "anyOf": [
+                            {
+                              "type": "object",
+                              "required": [
+                                "data",
+                                "type"
+                              ],
+                              "additionalProperties": false,
+                              "properties": {
+                                "data": {
+                                  "oneOf": [
+                                    {
+                                      "type": "string",
+                                      "maxLength": 16384
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "caption": {
+                                  "oneOf": [
+                                    {
+                                      "type": "string",
+                                      "maxLength": 512
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "type": {
+                                  "type": "string",
+                                  "enum": [
+                                    "qr"
+                                  ]
+                                }
+                              }
+                            },
+                            {
+                              "type": "object",
+                              "required": [
+                                "data",
+                                "type"
+                              ],
+                              "additionalProperties": false,
+                              "properties": {
+                                "data": {
+                                  "oneOf": [
+                                    {
+                                      "type": "string",
+                                      "maxLength": 64
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "caption": {
+                                  "oneOf": [
+                                    {
+                                      "type": "string",
+                                      "maxLength": 512
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "type": {
+                                  "type": "string",
+                                  "enum": [
+                                    "code128"
+                                  ]
+                                }
+                              }
+                            },
+                            {
+                              "type": "object",
+                              "required": [
+                                "data",
+                                "type"
+                              ],
+                              "additionalProperties": false,
+                              "properties": {
+                                "data": {
+                                  "oneOf": [
+                                    {
+                                      "type": "string",
+                                      "minLength": 12,
+                                      "maxLength": 3832
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "caption": {
+                                  "oneOf": [
+                                    {
+                                      "type": "string",
+                                      "maxLength": 512
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "type": {
+                                  "type": "string",
+                                  "enum": [
+                                    "aztec"
+                                  ]
+                                }
+                              }
+                            },
+                            {
+                              "type": "object",
+                              "required": [
+                                "data",
+                                "type"
+                              ],
+                              "additionalProperties": false,
+                              "properties": {
+                                "data": {
+                                  "oneOf": [
+                                    {
+                                      "type": "string",
+                                      "minLength": 13,
+                                      "maxLength": 13
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "caption": {
+                                  "oneOf": [
+                                    {
+                                      "type": "string",
+                                      "maxLength": 512
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "type": {
+                                  "type": "string",
+                                  "enum": [
+                                    "ean13"
+                                  ]
+                                }
+                              }
+                            },
+                            {
+                              "type": "object",
+                              "required": [
+                                "data",
+                                "type"
+                              ],
+                              "additionalProperties": false,
+                              "properties": {
+                                "data": {
+                                  "oneOf": [
+                                    {
+                                      "type": "string",
+                                      "minLength": 8,
+                                      "maxLength": 8
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "caption": {
+                                  "oneOf": [
+                                    {
+                                      "type": "string",
+                                      "maxLength": 512
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "type": {
+                                  "type": "string",
+                                  "enum": [
+                                    "ean8"
+                                  ]
+                                }
+                              }
+                            },
+                            {
+                              "type": "object",
+                              "required": [
+                                "data",
+                                "type"
+                              ],
+                              "additionalProperties": false,
+                              "properties": {
+                                "data": {
+                                  "oneOf": [
+                                    {
+                                      "type": "string"
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "caption": {
+                                  "oneOf": [
+                                    {
+                                      "type": "string",
+                                      "maxLength": 512
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "type": {
+                                  "type": "string",
+                                  "enum": [
+                                    "unknown"
+                                  ]
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
+                  "stock_mode": {
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "description": "determines if stock configurations are handled on global client level or on individual product level",
+                        "enum": [
+                          "simple",
+                          "complex"
+                        ]
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "stock_configuration_location": {
+                    "oneOf": [
+                      {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "location": {
+                              "oneOf": [
+                                {
+                                  "description": "Alphanumerical uuid of the location, e.g. branch or warehouse",
+                                  "type": "string"
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "stockable": {
+                              "oneOf": [
+                                {
+                                  "type": "boolean"
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "stock_minimum": {
+                              "oneOf": [
+                                {
+                                  "type": "number"
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "reorder_qty": {
+                              "oneOf": [
+                                {
+                                  "description": "The amount/quantity that should be used in a reorder",
+                                  "type": "number"
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "reorder_point": {
+                              "oneOf": [
+                                {
+                                  "description": "Threshold at which a reorder should be triggered",
+                                  "type": "number"
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "location_type": {
+                              "anyOf": [
+                                {
+                                  "description": "Location type",
+                                  "type": "string",
+                                  "enum": [
+                                    "client",
+                                    "branch",
+                                    "warehouse",
+                                    "warehouse_shelf"
+                                  ]
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "qty": {
+                              "oneOf": [
+                                {
+                                  "description": "The amount/quantity of stock to be created (supported only for bulk creation of products with stock)",
+                                  "type": "number"
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "is_service": {
+                    "type": "boolean"
+                  },
+                  "service_questions": {
+                    "oneOf": [
+                      {
+                        "type": "array",
+                        "description": "An array of uuids of the products service questions",
+                        "items": {
+                          "type": "string",
+                          "format": "uuid"
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "service_question_groups": {
+                    "oneOf": [
+                      {
+                        "type": "array",
+                        "description": "An array of uuids of the products service question groups",
+                        "items": {
+                          "type": "string",
+                          "format": "uuid"
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "addon_groups": {
+                    "oneOf": [
+                      {
+                        "type": "array",
+                        "description": "An array of the product addon groups",
+                        "items": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "name": {
+                              "description": "any arbitrary name for an addon group that can be displayed in applications.",
+                              "type": "string",
+                              "maxLength": 64,
+                              "minLength": 1
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "configuration": {
+                    "description": "Defines various product behaviours.",
+                    "default": {
+                      "allow_zero_prices": true,
+                      "pricing": {
+                        "allow_is_free": false
+                      }
+                    },
+                    "anyOf": [
+                      {
+                        "type": "object",
+                        "additionalProperties": true,
+                        "properties": {
+                          "allow_zero_prices": {
+                            "deprecated": true,
+                            "description": "Allow adding this product to a cart if it has no price.",
+                            "type": "boolean"
+                          },
+                          "pricing": {
+                            "type": "object",
+                            "properties": {
+                              "allow_is_free": {
+                                "deprecated": true,
+                                "description": "If an eligible price is 0 define whether the user is prompted to enter a price or whether the price can stay 0, to essentially be a freebie.",
+                                "type": "boolean"
+                              },
+                              "request_input": {
+                                "type": "boolean",
+                                "default": false,
+                                "description": "If true, request cashier input - regardless of the current price value, but pre-filled with it.\n\nNOTE: If false and price is 0 - adds item with 0 price automatically."
+                              },
+                              "zero_input_allowed": {
+                                "type": "boolean",
+                                "default": false,
+                                "description": "Defines whether a requested price input can be confirmed with a zero value or not.\n\nNOTE: Does not affect any zero price behavior directly, just the input validation when 'request_input'=true."
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "loyalty_values": {
+                    "oneOf": [
+                      {
+                        "type": "array",
+                        "description": "The amount of loyalty values that a customer receives per product. They will be used then the loyalty system specifies \"lookup\" as a base in the value configurations. The unit is also determined in the loyalty system configurations.",
+                        "minItems": 1,
+                        "items": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "required": [
+                            "unit",
+                            "amount"
+                          ],
+                          "properties": {
+                            "unit": {
+                              "type": "string",
+                              "minLength": 1,
+                              "maxLength": 64,
+                              "examples": [
+                                "miles",
+                                "points",
+                                "EUR",
+                                "USD"
+                              ]
+                            },
+                            "amount": {
+                              "type": "number",
+                              "minimum": 0,
+                              "maximum": 1000000,
+                              "multipleOf": 0.01
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "manufacturers": {
+                    "oneOf": [
+                      {
+                        "type": "array",
+                        "description": "An array of uuids of the product manufacturers",
+                        "items": {
+                          "type": "string",
+                          "format": "uuid"
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "components": {
+                    "description": "An array of components for composed product (the type is \"composed_product\")",
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "product",
+                        "quantity"
+                      ],
+                      "properties": {
+                        "product": {
+                          "description": "Linked product UUID which is a component of composed product",
+                          "type": "string",
+                          "format": "uuid"
+                        },
+                        "quantity": {
+                          "description": "The quantity of component in a composed product",
+                          "type": "number",
+                          "minimum": 0
+                        }
+                      }
+                    }
+                  },
+                  "delegatable": {
+                    "description": "Define whether the product can be delegated to other users at all.",
+                    "oneOf": [
+                      {
+                        "type": "boolean"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "online": {
+                    "description": "Define whether this product and it's children (if not specified otherwise) are available online.",
+                    "default": false,
+                    "oneOf": [
+                      {
+                        "type": "boolean"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "serial_number_input_required": {
+                    "oneOf": [
+                      {
+                        "description": "Define whether a product requires to enter a serial number during the sale",
+                        "type": "boolean"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": false
+                  },
+                  "shipping_required": {
+                    "description": "Define whether this item requires shipping. This usually the case except for digital goods. Tax and tax splits may apply based on region.",
+                    "default": true,
+                    "oneOf": [
+                      {
+                        "type": "boolean"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "delegatable_to": {
+                    "oneOf": [
+                      {
+                        "type": "array",
+                        "description": "List of other (sub)users that are allowed to read this product. If it is \"null\" then the product can be read by any of the validated (sub)users.",
+                        "items": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "required": [
+                            "type",
+                            "value"
+                          ],
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "description": "Type of the user, that indicates in which table to look up",
+                              "enum": [
+                                "client_account"
+                              ]
+                            },
+                            "value": {
+                              "type": "string",
+                              "description": "Alphanumeric uuid of the user",
+                              "format": "uuid"
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "delegated_from": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "description": "When the product was cloned from another account's product, the origin/owner should be listed here.",
+                        "additionalProperties": false,
+                        "required": [
+                          "owner",
+                          "product"
+                        ],
+                        "properties": {
+                          "owner": {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "required": [
+                              "type",
+                              "value"
+                            ],
+                            "properties": {
+                              "type": {
+                                "type": "string",
+                                "description": "Type of the user from whom the product was cloned",
+                                "enum": [
+                                  "client_account"
+                                ]
+                              },
+                              "value": {
+                                "type": "string",
+                                "description": "Alphanumeric uuid of the user from whom the product was cloned",
+                                "format": "uuid"
+                              }
+                            }
+                          },
+                          "product": {
+                            "type": "string",
+                            "description": "Alphanumeric uuid of the original product from whom it was cloned",
+                            "format": "uuid"
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "warranty_notice": {
+                    "description": "Warranty notice for the customer",
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 16384
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "refund_policy": {
+                    "description": "Refund policy for the customer",
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 16384
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "disclaimer": {
+                    "description": "Any disclaimer for the customer",
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 16384
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "policy": {
+                    "description": "ACL / permissions for this product",
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "v0",
+                          "statements"
+                        ],
+                        "properties": {
+                          "version": {
+                            "type": "string",
+                            "enum": [
+                              "v0"
+                            ]
+                          },
+                          "statements": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "additionalProperties": false,
+                              "required": [
+                                "effect"
+                              ],
+                              "properties": {
+                                "effect": {
+                                  "type": "string",
+                                  "enum": [
+                                    "allow",
+                                    "deny"
+                                  ]
+                                },
+                                "resource_type": {
+                                  "type": "string",
+                                  "enum": [
+                                    "register",
+                                    "branch",
+                                    "branch_group",
+                                    "location",
+                                    "client_account",
+                                    "client",
+                                    "staff",
+                                    "user"
+                                  ]
+                                },
+                                "resource": {
+                                  "type": "string",
+                                  "maxLength": 64,
+                                  "minLength": 16
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "external_ids": {
+                    "oneOf": [
+                      {
+                        "description": "The product IDs given by external systems, e.g. Ecwid.",
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "store_front": {
+                              "description": "external storeFront id",
+                              "oneOf": [
+                                {
+                                  "type": "string"
+                                },
+                                {
+                                  "description": "uuid format for legacy reasons, knowing that the previous type contains it eitherway.",
+                                  "type": "string",
+                                  "format": "uuid"
+                                }
+                              ]
+                            },
+                            "product_id": {
+                              "description": "the product ID given by external system, e.g. Ecwid",
+                              "oneOf": [
+                                {
+                                  "type": "string"
+                                },
+                                {
+                                  "type": "number"
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "custom_properties": {
+                    "oneOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "maxProperties": 30,
+                        "patternProperties": {
+                          "^.{1,128}$": {
+                            "anyOf": [
+                              {
+                                "type": "string"
+                              },
+                              {
+                                "type": "number"
+                              },
+                              {
+                                "type": "boolean"
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "price_book_entries": {
+                    "oneOf": [
+                      {
+                        "type": "array",
+                        "description": "An array of price book entries",
+                        "items": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "price_book": {
+                              "description": "The reference to the price book",
+                              "type": "string",
+                              "format": "uuid"
+                            },
+                            "summary": {
+                              "description": "Short summary of the price book item",
+                              "oneOf": [
+                                {
+                                  "type": "string",
+                                  "maxLength": 1024
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "active": {
+                              "type": "boolean",
+                              "default": true
+                            },
+                            "deleted": {
+                              "type": "boolean",
+                              "default": false
+                            },
+                            "clients": {
+                              "oneOf": [
+                                {
+                                  "description": "The reference to the clients",
+                                  "type": "array",
+                                  "items": {
+                                    "type": "string",
+                                    "format": "uuid"
+                                  }
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "external_reference_id": {
+                              "description": "A caller defined custom ID for the purpose of syncing from external resources, or to use in analytics.",
+                              "oneOf": [
+                                {
+                                  "type": "string",
+                                  "maxLength": 128
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "value_type": {
+                              "type": "string",
+                              "description": "Value types restrict the pricing to the value fields (amount_net & amount_gross or rate). If all of those are set the value_type counts. If there is no value_type, amount fields take precedence.",
+                              "enum": [
+                                "rate",
+                                "value"
+                              ]
+                            },
+                            "amount_net": {
+                              "oneOf": [
+                                {
+                                  "example": "27633.02",
+                                  "type": "number",
+                                  "minimum": 0,
+                                  "maximum": 1000000,
+                                  "multipleOf": 0.01
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "amount_gross": {
+                              "oneOf": [
+                                {
+                                  "example": "27633.02",
+                                  "type": "number",
+                                  "minimum": 0,
+                                  "maximum": 1000000,
+                                  "multipleOf": 0.01
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "rate": {
+                              "description": "Relative value of this product based on any other applicable price.",
+                              "oneOf": [
+                                {
+                                  "type": "number",
+                                  "multipleOf": 0.0001
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "discounted_by": {
+                              "description": "The discounting applied in the price book item. Positive number means discount, negative means markup. Maximum of 1 means that you can not make a discount higher than the price.",
+                              "oneOf": [
+                                {
+                                  "type": "number",
+                                  "maximum": 1,
+                                  "multipleOf": 0.0001
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "metadata": {
+                              "oneOf": [
+                                {
+                                  "type": "object"
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "currency": {
+                              "oneOf": [
+                                {
+                                  "type": "string",
+                                  "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                                  "example": "EUR",
+                                  "minLength": 3,
+                                  "maxLength": 3
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "tax": {
+                              "oneOf": [
+                                {
+                                  "type": "string",
+                                  "format": "uuid"
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "branch": {
+            "description": "The branch UUID (use location instead)",
+            "deprecated": true,
+            "example": "3f7d26f4-96ff-45b2-8fce-a5c0ca6040b2",
+            "type": "string",
+            "format": "uuid"
+          },
+          "status": {
+            "oneOf": [
+              {
+                "description": "The status of the product",
+                "type": "string",
+                "enum": [
+                  "available"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "location": {
+            "oneOf": [
+              {
+                "description": "Alphanumerical UUID of the location, e.g. branch or warehouse",
+                "example": "5b26131d-95e8-49a0-a9b4-58397569bba8",
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "id": {
+                    "description": "Unique entity ID",
+                    "type": "string",
+                    "format": "uuid",
+                    "example": "936835f7-2d75-41d2-9001-38ed6e458328"
+                  },
+                  "created_at": {
+                    "type": "string",
+                    "format": "date-time",
+                    "example": "2019-03-17T21:12:04.849Z",
+                    "description": "The date and time entity was created"
+                  },
+                  "updated_at": {
+                    "type": "string",
+                    "format": "date-time",
+                    "example": "2019-03-17T21:12:04.849Z",
+                    "description": "The date and time entity was updated"
+                  },
+                  "name": {
+                    "description": "Any arbitrary name for a branch that can be displayed in applications.",
+                    "example": "Head office",
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 64,
+                        "minLength": 1
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "phonenumbers": {
+                    "description": "A number of valid types of phone numbers for a branch.",
+                    "anyOf": [
+                      {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                          "line_main": {
+                            "type": "string",
+                            "example": "+49-555-1976"
+                          },
+                          "line_1": {
+                            "type": "string",
+                            "example": "+49-555-1977"
+                          },
+                          "line_2": {
+                            "type": "string"
+                          }
+                        },
+                        "anyOf": [
+                          {
+                            "required": [
+                              "line_main"
+                            ]
+                          },
+                          {
+                            "required": [
+                              "line_1"
+                            ]
+                          },
+                          {
+                            "required": [
+                              "line_2"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "email": {
+                    "description": "The main contact email for a branch.",
+                    "example": "office@my-incredible-company.to",
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 128,
+                        "format": "email"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "receipt_header": {
+                    "description": "An arbitrary string that will be printed on every receipt as the header.",
+                    "example": "Perfect socks LTD",
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "receipt_footer": {
+                    "description": "An arbitrary string that will be printed on every receipt as the footer",
+                    "example": "Thank you!",
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "receipt_logo": {
+                    "description": "An arbitrary string that will be printed on every receipt as the receipt logo.",
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "cid": {
+                    "description": "DEPRECATED. Set null or ignore.",
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 128,
+                        "format": "email"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "images": {
+                    "description": "A Tillhub image object with URLs to display images this for this branch.",
+                    "anyOf": [
+                      {
+                        "type": "object",
+                        "additionalProperties": true,
+                        "properties": {
+                          "1x": {
+                            "description": "Image transformed to predefined small size",
+                            "example": "https://my-storage.io/images/f5a3cc72-7fb5-4d2c-bda5-9b2983c7e879_1x.png",
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          "2x": {
+                            "description": "Image transformed to predefined medium size",
+                            "example": "https://my-storage.io/images/f5a3cc72-7fb5-4d2c-bda5-9b2983c7e879_2x.png",
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          "3x": {
+                            "description": "Image transformed to predefined big size",
+                            "example": "https://my-storage.io/images/f5a3cc72-7fb5-4d2c-bda5-9b2983c7e879_1x.png",
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          "avatar": {
+                            "description": "Image transformed to predefined size to use as \"avatar\"",
+                            "example": "https://my-storage.io/images/f5a3cc72-7fb5-4d2c-bda5-9b2983c7e879_avatar.png",
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          "original": {
+                            "description": "Original image",
+                            "example": "https://my-storage.io/images/f5a3cc72-7fb5-4d2c-bda5-9b2983c7e879.png",
+                            "type": "string",
+                            "format": "uri"
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "receipt_footer_images": {
+                    "description": "A Tillhub image object with URLs to display receipt footer image this for this branch.",
+                    "anyOf": [
+                      {
+                        "type": "object",
+                        "additionalProperties": true,
+                        "properties": {
+                          "1x": {
+                            "description": "Image transformed to predefined small size",
+                            "example": "https://my-storage.io/images/f5a3cc72-7fb5-4d2c-bda5-9b2983c7e879_1x.png",
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          "2x": {
+                            "description": "Image transformed to predefined medium size",
+                            "example": "https://my-storage.io/images/f5a3cc72-7fb5-4d2c-bda5-9b2983c7e879_2x.png",
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          "3x": {
+                            "description": "Image transformed to predefined big size",
+                            "example": "https://my-storage.io/images/f5a3cc72-7fb5-4d2c-bda5-9b2983c7e879_1x.png",
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          "avatar": {
+                            "description": "Image transformed to predefined size to use as \"avatar\"",
+                            "example": "https://my-storage.io/images/f5a3cc72-7fb5-4d2c-bda5-9b2983c7e879_avatar.png",
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          "original": {
+                            "description": "Original image",
+                            "example": "https://my-storage.io/images/f5a3cc72-7fb5-4d2c-bda5-9b2983c7e879.png",
+                            "type": "string",
+                            "format": "uri"
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "image": {
+                    "description": "DEPRECATED. Omit or set null.",
+                    "anyOf": [
+                      {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                          "url": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "active": {
+                    "description": "Soft disable or enabled this branch.",
+                    "example": "true",
+                    "type": "boolean",
+                    "default": true
+                  },
+                  "deleted": {
+                    "description": "Soft delete this branch.",
+                    "example": "false",
+                    "type": "boolean",
+                    "default": false
+                  },
+                  "metadata": {
+                    "description": "Arbitrary user defined data.",
+                    "type": "object",
+                    "maxProperties": 10
+                  },
+                  "branch_number": {
+                    "type": "number",
+                    "description": "The maximum stems from the fact that is it stored as an postgres int4 type, with 4 bytes of space",
+                    "example": 107,
+                    "minimum": 0,
+                    "maximum": 2147483647
+                  },
+                  "custom_id": {
+                    "description": "Branch custom unique ID.",
+                    "example": "dd3234of",
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "external_custom_id": {
+                    "description": "Unique ID of this branch in external system. Uses for synchronization.",
+                    "example": "7882448928329",
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 64,
+                        "minLength": 1
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "cost_center": {
+                    "description": "Cost center unique ID",
+                    "example": "7882448928329",
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 128,
+                        "minLength": 1
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "addresses": {
+                    "description": "A Tillhub address object, with different types of addresses. More description in the properties...",
+                    "anyOf": [
+                      {
+                        "type": "array",
+                        "maxItems": 3,
+                        "items": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "lines": {
+                              "description": "The international non-street format for arbitrary addresses. This should be set to null as it is currently not supported by the client application.",
+                              "oneOf": [
+                                {
+                                  "type": "array",
+                                  "minItems": 1,
+                                  "maxItems": 4,
+                                  "items": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  }
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "street": {
+                              "description": "A street name",
+                              "example": "Downing Street",
+                              "oneOf": [
+                                {
+                                  "type": "string",
+                                  "maxLength": 512
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "street_number": {
+                              "description": "A street number",
+                              "example": "10",
+                              "oneOf": [
+                                {
+                                  "type": "string",
+                                  "maxLength": 16
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "locality": {
+                              "description": "The international format for a city, village and any other localizable city like place.",
+                              "example": "London",
+                              "oneOf": [
+                                {
+                                  "type": "string"
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "region": {
+                              "description": "The international format for regional sub category of a country e.g. a state or province.",
+                              "example": "Greater London",
+                              "oneOf": [
+                                {
+                                  "type": "string"
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "postal_code": {
+                              "description": "A non-validated postal code.",
+                              "example": "SW1A",
+                              "oneOf": [
+                                {
+                                  "type": "string",
+                                  "maxLength": 10
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "country": {
+                              "description": "A country as ISO Alpha-2 code.",
+                              "example": "UK",
+                              "oneOf": [
+                                {
+                                  "type": "string",
+                                  "minLength": 2,
+                                  "maxLength": 2,
+                                  "pattern": "^[A-Z]{2}$"
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "type": {
+                              "description": "The types of addresses. Types are used to direct specific behaviours in financial or stock operation. If none of them is necessary is used implementers should take the local type.",
+                              "oneOf": [
+                                {
+                                  "type": "string",
+                                  "enum": [
+                                    "delivery",
+                                    "billing",
+                                    "local"
+                                  ],
+                                  "default": "local"
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            }
+                          },
+                          "required": [
+                            "lines",
+                            "street",
+                            "street_number",
+                            "locality",
+                            "region",
+                            "postal_code",
+                            "country",
+                            "type"
+                          ]
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "signing_configuration": {
+                    "description": "Necessary core or allowed authentication data for financial signing systems. This is an opt-in feature.\n\nNOTE: Depending on the respective configuration (transactions.signing.resource_type) this will be looked up\nhere or on register level (device_configuration.fiscal_signing).",
+                    "anyOf": [
+                      {
+                        "type": "object",
+                        "description": "Existing configuration object for Austria: Fiskaltrust"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "configuration": {
+                    "description": "Deprecated: Overwriting a fa_account_number on cash payments for DATEV export.",
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "timezone_default": {
+                    "description": "An IANA timezone that will be used to display local timezones in documents and UI. Validation for the timezone will happen in memory of the server, but not on that schema.",
+                    "example": "Europe/London",
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "currency_default": {
+                    "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this branch.",
+                    "example": "GBP",
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "custom_properties": {
+                    "description": "User-defined branch properties",
+                    "oneOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "maxProperties": 30,
+                        "patternProperties": {
+                          "^.{1,128}$": {
+                            "anyOf": [
+                              {
+                                "type": "string"
+                              },
+                              {
+                                "type": "number"
+                              },
+                              {
+                                "type": "boolean"
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "default_favourite": {
+                    "description": "Define which favourite set to show as default in the POS if none is defined on the register.",
+                    "example": "20e89159-28d9-46f2-bda3-d74bb70834e7",
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "default_category_tree": {
+                    "description": "Define which category tree to use as default in the POS if none is defined on the register.",
+                    "example": "c45764ed-fc6d-4b32-b406-59a5e84d2999",
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "location_type": {
+            "description": "Location type",
+            "type": "string",
+            "enum": [
+              "client",
+              "branch",
+              "warehouse",
+              "warehouse_shelf"
+            ]
+          },
+          "from": {
+            "oneOf": [
+              {
+                "description": "Alphanumerical UUID of the stock source location",
+                "example": "75941a1a-01b0-47b8-806b-83bfa68f3bea",
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "id": {
+                    "description": "Unique entity ID",
+                    "type": "string",
+                    "format": "uuid",
+                    "example": "936835f7-2d75-41d2-9001-38ed6e458328"
+                  },
+                  "created_at": {
+                    "type": "string",
+                    "format": "date-time",
+                    "example": "2019-03-17T21:12:04.849Z",
+                    "description": "The date and time entity was created"
+                  },
+                  "updated_at": {
+                    "type": "string",
+                    "format": "date-time",
+                    "example": "2019-03-17T21:12:04.849Z",
+                    "description": "The date and time entity was updated"
+                  },
+                  "name": {
+                    "description": "Any arbitrary name for a branch that can be displayed in applications.",
+                    "example": "Head office",
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 64,
+                        "minLength": 1
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "phonenumbers": {
+                    "description": "A number of valid types of phone numbers for a branch.",
+                    "anyOf": [
+                      {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                          "line_main": {
+                            "type": "string",
+                            "example": "+49-555-1976"
+                          },
+                          "line_1": {
+                            "type": "string",
+                            "example": "+49-555-1977"
+                          },
+                          "line_2": {
+                            "type": "string"
+                          }
+                        },
+                        "anyOf": [
+                          {
+                            "required": [
+                              "line_main"
+                            ]
+                          },
+                          {
+                            "required": [
+                              "line_1"
+                            ]
+                          },
+                          {
+                            "required": [
+                              "line_2"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "email": {
+                    "description": "The main contact email for a branch.",
+                    "example": "office@my-incredible-company.to",
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 128,
+                        "format": "email"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "receipt_header": {
+                    "description": "An arbitrary string that will be printed on every receipt as the header.",
+                    "example": "Perfect socks LTD",
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "receipt_footer": {
+                    "description": "An arbitrary string that will be printed on every receipt as the footer",
+                    "example": "Thank you!",
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "receipt_logo": {
+                    "description": "An arbitrary string that will be printed on every receipt as the receipt logo.",
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "cid": {
+                    "description": "DEPRECATED. Set null or ignore.",
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 128,
+                        "format": "email"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "images": {
+                    "description": "A Tillhub image object with URLs to display images this for this branch.",
+                    "anyOf": [
+                      {
+                        "type": "object",
+                        "additionalProperties": true,
+                        "properties": {
+                          "1x": {
+                            "description": "Image transformed to predefined small size",
+                            "example": "https://my-storage.io/images/f5a3cc72-7fb5-4d2c-bda5-9b2983c7e879_1x.png",
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          "2x": {
+                            "description": "Image transformed to predefined medium size",
+                            "example": "https://my-storage.io/images/f5a3cc72-7fb5-4d2c-bda5-9b2983c7e879_2x.png",
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          "3x": {
+                            "description": "Image transformed to predefined big size",
+                            "example": "https://my-storage.io/images/f5a3cc72-7fb5-4d2c-bda5-9b2983c7e879_1x.png",
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          "avatar": {
+                            "description": "Image transformed to predefined size to use as \"avatar\"",
+                            "example": "https://my-storage.io/images/f5a3cc72-7fb5-4d2c-bda5-9b2983c7e879_avatar.png",
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          "original": {
+                            "description": "Original image",
+                            "example": "https://my-storage.io/images/f5a3cc72-7fb5-4d2c-bda5-9b2983c7e879.png",
+                            "type": "string",
+                            "format": "uri"
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "receipt_footer_images": {
+                    "description": "A Tillhub image object with URLs to display receipt footer image this for this branch.",
+                    "anyOf": [
+                      {
+                        "type": "object",
+                        "additionalProperties": true,
+                        "properties": {
+                          "1x": {
+                            "description": "Image transformed to predefined small size",
+                            "example": "https://my-storage.io/images/f5a3cc72-7fb5-4d2c-bda5-9b2983c7e879_1x.png",
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          "2x": {
+                            "description": "Image transformed to predefined medium size",
+                            "example": "https://my-storage.io/images/f5a3cc72-7fb5-4d2c-bda5-9b2983c7e879_2x.png",
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          "3x": {
+                            "description": "Image transformed to predefined big size",
+                            "example": "https://my-storage.io/images/f5a3cc72-7fb5-4d2c-bda5-9b2983c7e879_1x.png",
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          "avatar": {
+                            "description": "Image transformed to predefined size to use as \"avatar\"",
+                            "example": "https://my-storage.io/images/f5a3cc72-7fb5-4d2c-bda5-9b2983c7e879_avatar.png",
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          "original": {
+                            "description": "Original image",
+                            "example": "https://my-storage.io/images/f5a3cc72-7fb5-4d2c-bda5-9b2983c7e879.png",
+                            "type": "string",
+                            "format": "uri"
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "image": {
+                    "description": "DEPRECATED. Omit or set null.",
+                    "anyOf": [
+                      {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                          "url": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "active": {
+                    "description": "Soft disable or enabled this branch.",
+                    "example": "true",
+                    "type": "boolean",
+                    "default": true
+                  },
+                  "deleted": {
+                    "description": "Soft delete this branch.",
+                    "example": "false",
+                    "type": "boolean",
+                    "default": false
+                  },
+                  "metadata": {
+                    "description": "Arbitrary user defined data.",
+                    "type": "object",
+                    "maxProperties": 10
+                  },
+                  "branch_number": {
+                    "type": "number",
+                    "description": "The maximum stems from the fact that is it stored as an postgres int4 type, with 4 bytes of space",
+                    "example": 107,
+                    "minimum": 0,
+                    "maximum": 2147483647
+                  },
+                  "custom_id": {
+                    "description": "Branch custom unique ID.",
+                    "example": "dd3234of",
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "external_custom_id": {
+                    "description": "Unique ID of this branch in external system. Uses for synchronization.",
+                    "example": "7882448928329",
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 64,
+                        "minLength": 1
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "cost_center": {
+                    "description": "Cost center unique ID",
+                    "example": "7882448928329",
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 128,
+                        "minLength": 1
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "addresses": {
+                    "description": "A Tillhub address object, with different types of addresses. More description in the properties...",
+                    "anyOf": [
+                      {
+                        "type": "array",
+                        "maxItems": 3,
+                        "items": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "lines": {
+                              "description": "The international non-street format for arbitrary addresses. This should be set to null as it is currently not supported by the client application.",
+                              "oneOf": [
+                                {
+                                  "type": "array",
+                                  "minItems": 1,
+                                  "maxItems": 4,
+                                  "items": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  }
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "street": {
+                              "description": "A street name",
+                              "example": "Downing Street",
+                              "oneOf": [
+                                {
+                                  "type": "string",
+                                  "maxLength": 512
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "street_number": {
+                              "description": "A street number",
+                              "example": "10",
+                              "oneOf": [
+                                {
+                                  "type": "string",
+                                  "maxLength": 16
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "locality": {
+                              "description": "The international format for a city, village and any other localizable city like place.",
+                              "example": "London",
+                              "oneOf": [
+                                {
+                                  "type": "string"
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "region": {
+                              "description": "The international format for regional sub category of a country e.g. a state or province.",
+                              "example": "Greater London",
+                              "oneOf": [
+                                {
+                                  "type": "string"
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "postal_code": {
+                              "description": "A non-validated postal code.",
+                              "example": "SW1A",
+                              "oneOf": [
+                                {
+                                  "type": "string",
+                                  "maxLength": 10
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "country": {
+                              "description": "A country as ISO Alpha-2 code.",
+                              "example": "UK",
+                              "oneOf": [
+                                {
+                                  "type": "string",
+                                  "minLength": 2,
+                                  "maxLength": 2,
+                                  "pattern": "^[A-Z]{2}$"
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "type": {
+                              "description": "The types of addresses. Types are used to direct specific behaviours in financial or stock operation. If none of them is necessary is used implementers should take the local type.",
+                              "oneOf": [
+                                {
+                                  "type": "string",
+                                  "enum": [
+                                    "delivery",
+                                    "billing",
+                                    "local"
+                                  ],
+                                  "default": "local"
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            }
+                          },
+                          "required": [
+                            "lines",
+                            "street",
+                            "street_number",
+                            "locality",
+                            "region",
+                            "postal_code",
+                            "country",
+                            "type"
+                          ]
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "signing_configuration": {
+                    "description": "Necessary core or allowed authentication data for financial signing systems. This is an opt-in feature.\n\nNOTE: Depending on the respective configuration (transactions.signing.resource_type) this will be looked up\nhere or on register level (device_configuration.fiscal_signing).",
+                    "anyOf": [
+                      {
+                        "type": "object",
+                        "description": "Existing configuration object for Austria: Fiskaltrust"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "configuration": {
+                    "description": "Deprecated: Overwriting a fa_account_number on cash payments for DATEV export.",
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "timezone_default": {
+                    "description": "An IANA timezone that will be used to display local timezones in documents and UI. Validation for the timezone will happen in memory of the server, but not on that schema.",
+                    "example": "Europe/London",
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "currency_default": {
+                    "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this branch.",
+                    "example": "GBP",
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "custom_properties": {
+                    "description": "User-defined branch properties",
+                    "oneOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "maxProperties": 30,
+                        "patternProperties": {
+                          "^.{1,128}$": {
+                            "anyOf": [
+                              {
+                                "type": "string"
+                              },
+                              {
+                                "type": "number"
+                              },
+                              {
+                                "type": "boolean"
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "default_favourite": {
+                    "description": "Define which favourite set to show as default in the POS if none is defined on the register.",
+                    "example": "20e89159-28d9-46f2-bda3-d74bb70834e7",
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "default_category_tree": {
+                    "description": "Define which category tree to use as default in the POS if none is defined on the register.",
+                    "example": "c45764ed-fc6d-4b32-b406-59a5e84d2999",
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "to": {
+            "oneOf": [
+              {
+                "description": "Alphanumerical UUID of the stock target location",
+                "example": "7b8806e7d-810f-4e18-b049-8e2cc6134a41",
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "id": {
+                    "description": "Unique entity ID",
+                    "type": "string",
+                    "format": "uuid",
+                    "example": "936835f7-2d75-41d2-9001-38ed6e458328"
+                  },
+                  "created_at": {
+                    "type": "string",
+                    "format": "date-time",
+                    "example": "2019-03-17T21:12:04.849Z",
+                    "description": "The date and time entity was created"
+                  },
+                  "updated_at": {
+                    "type": "string",
+                    "format": "date-time",
+                    "example": "2019-03-17T21:12:04.849Z",
+                    "description": "The date and time entity was updated"
+                  },
+                  "name": {
+                    "description": "Any arbitrary name for a branch that can be displayed in applications.",
+                    "example": "Head office",
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 64,
+                        "minLength": 1
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "phonenumbers": {
+                    "description": "A number of valid types of phone numbers for a branch.",
+                    "anyOf": [
+                      {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                          "line_main": {
+                            "type": "string",
+                            "example": "+49-555-1976"
+                          },
+                          "line_1": {
+                            "type": "string",
+                            "example": "+49-555-1977"
+                          },
+                          "line_2": {
+                            "type": "string"
+                          }
+                        },
+                        "anyOf": [
+                          {
+                            "required": [
+                              "line_main"
+                            ]
+                          },
+                          {
+                            "required": [
+                              "line_1"
+                            ]
+                          },
+                          {
+                            "required": [
+                              "line_2"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "email": {
+                    "description": "The main contact email for a branch.",
+                    "example": "office@my-incredible-company.to",
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 128,
+                        "format": "email"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "receipt_header": {
+                    "description": "An arbitrary string that will be printed on every receipt as the header.",
+                    "example": "Perfect socks LTD",
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "receipt_footer": {
+                    "description": "An arbitrary string that will be printed on every receipt as the footer",
+                    "example": "Thank you!",
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "receipt_logo": {
+                    "description": "An arbitrary string that will be printed on every receipt as the receipt logo.",
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "cid": {
+                    "description": "DEPRECATED. Set null or ignore.",
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 128,
+                        "format": "email"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "images": {
+                    "description": "A Tillhub image object with URLs to display images this for this branch.",
+                    "anyOf": [
+                      {
+                        "type": "object",
+                        "additionalProperties": true,
+                        "properties": {
+                          "1x": {
+                            "description": "Image transformed to predefined small size",
+                            "example": "https://my-storage.io/images/f5a3cc72-7fb5-4d2c-bda5-9b2983c7e879_1x.png",
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          "2x": {
+                            "description": "Image transformed to predefined medium size",
+                            "example": "https://my-storage.io/images/f5a3cc72-7fb5-4d2c-bda5-9b2983c7e879_2x.png",
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          "3x": {
+                            "description": "Image transformed to predefined big size",
+                            "example": "https://my-storage.io/images/f5a3cc72-7fb5-4d2c-bda5-9b2983c7e879_1x.png",
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          "avatar": {
+                            "description": "Image transformed to predefined size to use as \"avatar\"",
+                            "example": "https://my-storage.io/images/f5a3cc72-7fb5-4d2c-bda5-9b2983c7e879_avatar.png",
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          "original": {
+                            "description": "Original image",
+                            "example": "https://my-storage.io/images/f5a3cc72-7fb5-4d2c-bda5-9b2983c7e879.png",
+                            "type": "string",
+                            "format": "uri"
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "receipt_footer_images": {
+                    "description": "A Tillhub image object with URLs to display receipt footer image this for this branch.",
+                    "anyOf": [
+                      {
+                        "type": "object",
+                        "additionalProperties": true,
+                        "properties": {
+                          "1x": {
+                            "description": "Image transformed to predefined small size",
+                            "example": "https://my-storage.io/images/f5a3cc72-7fb5-4d2c-bda5-9b2983c7e879_1x.png",
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          "2x": {
+                            "description": "Image transformed to predefined medium size",
+                            "example": "https://my-storage.io/images/f5a3cc72-7fb5-4d2c-bda5-9b2983c7e879_2x.png",
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          "3x": {
+                            "description": "Image transformed to predefined big size",
+                            "example": "https://my-storage.io/images/f5a3cc72-7fb5-4d2c-bda5-9b2983c7e879_1x.png",
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          "avatar": {
+                            "description": "Image transformed to predefined size to use as \"avatar\"",
+                            "example": "https://my-storage.io/images/f5a3cc72-7fb5-4d2c-bda5-9b2983c7e879_avatar.png",
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          "original": {
+                            "description": "Original image",
+                            "example": "https://my-storage.io/images/f5a3cc72-7fb5-4d2c-bda5-9b2983c7e879.png",
+                            "type": "string",
+                            "format": "uri"
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "image": {
+                    "description": "DEPRECATED. Omit or set null.",
+                    "anyOf": [
+                      {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                          "url": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "active": {
+                    "description": "Soft disable or enabled this branch.",
+                    "example": "true",
+                    "type": "boolean",
+                    "default": true
+                  },
+                  "deleted": {
+                    "description": "Soft delete this branch.",
+                    "example": "false",
+                    "type": "boolean",
+                    "default": false
+                  },
+                  "metadata": {
+                    "description": "Arbitrary user defined data.",
+                    "type": "object",
+                    "maxProperties": 10
+                  },
+                  "branch_number": {
+                    "type": "number",
+                    "description": "The maximum stems from the fact that is it stored as an postgres int4 type, with 4 bytes of space",
+                    "example": 107,
+                    "minimum": 0,
+                    "maximum": 2147483647
+                  },
+                  "custom_id": {
+                    "description": "Branch custom unique ID.",
+                    "example": "dd3234of",
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "external_custom_id": {
+                    "description": "Unique ID of this branch in external system. Uses for synchronization.",
+                    "example": "7882448928329",
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 64,
+                        "minLength": 1
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "cost_center": {
+                    "description": "Cost center unique ID",
+                    "example": "7882448928329",
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 128,
+                        "minLength": 1
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "addresses": {
+                    "description": "A Tillhub address object, with different types of addresses. More description in the properties...",
+                    "anyOf": [
+                      {
+                        "type": "array",
+                        "maxItems": 3,
+                        "items": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "lines": {
+                              "description": "The international non-street format for arbitrary addresses. This should be set to null as it is currently not supported by the client application.",
+                              "oneOf": [
+                                {
+                                  "type": "array",
+                                  "minItems": 1,
+                                  "maxItems": 4,
+                                  "items": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  }
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "street": {
+                              "description": "A street name",
+                              "example": "Downing Street",
+                              "oneOf": [
+                                {
+                                  "type": "string",
+                                  "maxLength": 512
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "street_number": {
+                              "description": "A street number",
+                              "example": "10",
+                              "oneOf": [
+                                {
+                                  "type": "string",
+                                  "maxLength": 16
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "locality": {
+                              "description": "The international format for a city, village and any other localizable city like place.",
+                              "example": "London",
+                              "oneOf": [
+                                {
+                                  "type": "string"
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "region": {
+                              "description": "The international format for regional sub category of a country e.g. a state or province.",
+                              "example": "Greater London",
+                              "oneOf": [
+                                {
+                                  "type": "string"
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "postal_code": {
+                              "description": "A non-validated postal code.",
+                              "example": "SW1A",
+                              "oneOf": [
+                                {
+                                  "type": "string",
+                                  "maxLength": 10
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "country": {
+                              "description": "A country as ISO Alpha-2 code.",
+                              "example": "UK",
+                              "oneOf": [
+                                {
+                                  "type": "string",
+                                  "minLength": 2,
+                                  "maxLength": 2,
+                                  "pattern": "^[A-Z]{2}$"
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "type": {
+                              "description": "The types of addresses. Types are used to direct specific behaviours in financial or stock operation. If none of them is necessary is used implementers should take the local type.",
+                              "oneOf": [
+                                {
+                                  "type": "string",
+                                  "enum": [
+                                    "delivery",
+                                    "billing",
+                                    "local"
+                                  ],
+                                  "default": "local"
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            }
+                          },
+                          "required": [
+                            "lines",
+                            "street",
+                            "street_number",
+                            "locality",
+                            "region",
+                            "postal_code",
+                            "country",
+                            "type"
+                          ]
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "signing_configuration": {
+                    "description": "Necessary core or allowed authentication data for financial signing systems. This is an opt-in feature.\n\nNOTE: Depending on the respective configuration (transactions.signing.resource_type) this will be looked up\nhere or on register level (device_configuration.fiscal_signing).",
+                    "anyOf": [
+                      {
+                        "type": "object",
+                        "description": "Existing configuration object for Austria: Fiskaltrust"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "configuration": {
+                    "description": "Deprecated: Overwriting a fa_account_number on cash payments for DATEV export.",
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "timezone_default": {
+                    "description": "An IANA timezone that will be used to display local timezones in documents and UI. Validation for the timezone will happen in memory of the server, but not on that schema.",
+                    "example": "Europe/London",
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "currency_default": {
+                    "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this branch.",
+                    "example": "GBP",
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "custom_properties": {
+                    "description": "User-defined branch properties",
+                    "oneOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "maxProperties": 30,
+                        "patternProperties": {
+                          "^.{1,128}$": {
+                            "anyOf": [
+                              {
+                                "type": "string"
+                              },
+                              {
+                                "type": "number"
+                              },
+                              {
+                                "type": "boolean"
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "default_favourite": {
+                    "description": "Define which favourite set to show as default in the POS if none is defined on the register.",
+                    "example": "20e89159-28d9-46f2-bda3-d74bb70834e7",
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "default_category_tree": {
+                    "description": "Define which category tree to use as default in the POS if none is defined on the register.",
+                    "example": "c45764ed-fc6d-4b32-b406-59a5e84d2999",
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "channel": {
+            "oneOf": [
+              {
+                "description": "The channel from which stock deduction were made",
+                "type": "string",
+                "enum": [
+                  "transfer",
+                  "transactions",
+                  "delivery_notes"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "purchase": {
+            "oneOf": [
+              {
+                "description": "The purchase object data",
+                "deprecated": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "reason": {
+            "oneOf": [
+              {
+                "description": "Alphanumerical UUID of the reason",
+                "example": "a1c1d0c6-f38b-4d89-ae26-7f1aea34985c",
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "comments": {
+            "oneOf": [
+              {
+                "description": "Additional comments for stock book",
+                "example": "Actualized due to inventarisation",
+                "type": "string",
+                "maxLength": 2048
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "images": {
+            "oneOf": [
+              {
+                "description": "Images associated with stock book",
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "type": {
+            "oneOf": [
+              {
+                "description": "The type of stock book",
+                "type": "string",
+                "enum": [
+                  "add",
+                  "deduct",
+                  "goods_in",
+                  "goods_out",
+                  "relocation",
+                  "sale",
+                  "cancellation",
+                  "refund",
+                  "delivery_note",
+                  "delivery_note_refund",
+                  "delivery_note_cancellation"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "cursor": {
+      "type": "object",
+      "description": "Optional cursor in paginated API calls. The cursor next field must be called as fully quantifiable URI in order to hit the next if available.",
+      "additionalProperties": false,
+      "required": [
+        "self"
+      ],
+      "properties": {
+        "next": {
+          "type": "string",
+          "format": "uri",
+          "description": "The URI pointing to the next page.",
+          "example": "https://api.tillhub.com/api/v1/products/061f91a3-eba2-40b8-9a76-115189d6741e?cursor=2018-07-02T21%3A47%3A44.382Z&size=10&cursor_field=updated_at"
+        },
+        "first": {
+          "type": "string",
+          "format": "uri",
+          "description": "The URI pointing to the the first page.",
+          "example": "https://api.tillhub.com/api/v1/products/061f91a3-eba2-40b8-9a76-115189d6741e?cursor=2018-07-02T21%3A47%3A44.382Z&size=10&cursor_field=updated_at"
+        },
+        "self": {
+          "type": "string",
+          "format": "uri",
+          "description": "The URI pointing to this page.",
+          "example": "https://api.tillhub.com/api/v1/products/061f91a3-eba2-40b8-9a76-115189d6741e?cursor=2018-07-02T21%3A47%3A44.382Z&size=10&cursor_field=updated_at"
+        }
+      }
+    }
+  }
+}
