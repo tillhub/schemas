@@ -1,3 +1,10 @@
+# [6.179.0](https://github.com/tillhub/schemas/compare/v6.178.0...v6.179.0) (2022-12-09)
+
+
+### Features
+
+* **stocks-book:** omit 'purchase' and 'images' from event schema #UNTIL-5820 ([31672af](https://github.com/tillhub/schemas/commit/31672af)), closes [#UNTIL-5820](https://github.com/tillhub/schemas/issues/UNTIL-5820)
+
 # [6.178.0](https://github.com/tillhub/schemas/compare/v6.177.0...v6.178.0) (2022-12-08)
 
 
