@@ -1,3 +1,10 @@
+# [6.180.0](https://github.com/tillhub/schemas/compare/v6.179.0...v6.180.0) (2022-12-12)
+
+
+### Features
+
+* **release:** trigger the release ([40f7c6d](https://github.com/tillhub/schemas/commit/40f7c6d))
+
 # [6.179.0](https://github.com/tillhub/schemas/compare/v6.178.0...v6.179.0) (2022-12-09)
 
 

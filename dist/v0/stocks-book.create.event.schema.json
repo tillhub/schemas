@@ -5,12 +5,9 @@
   "additionalProperties": false,
   "required": [
     "id",
-    "qty",
     "qty_change",
     "product",
-    "location",
-    "from",
-    "to"
+    "location"
   ],
   "properties": {
     "id": {
@@ -31,300 +28,10 @@
       "example": "2019-03-17T21:12:04.849Z",
       "description": "The date and time entity was updated"
     },
-    "metadata": {
-      "oneOf": [
-        {
-          "type": "object"
-        },
-        {
-          "type": "null"
-        }
-      ]
-    },
-    "qty": {
-      "description": "The quantity of product remain after book",
-      "example": 11,
-      "type": "number"
-    },
     "qty_change": {
       "description": "The quantity change with the book",
       "example": -2,
       "type": "number"
-    },
-    "product": {
-      "oneOf": [
-        {
-          "type": "object",
-          "additionalProperties": false,
-          "properties": {
-            "id": {
-              "description": "Unique entity ID",
-              "type": "string",
-              "format": "uuid",
-              "example": "936835f7-2d75-41d2-9001-38ed6e458328"
-            },
-            "name": {
-              "description": "Product name",
-              "type": "string",
-              "maxLength": 512
-            },
-            "client_id": {
-              "description": "A client definable ID for the purpose of syncing to a client or used in analytics for e.g. transactions that created a product offline and done transactions offline before they received a backend ID.",
-              "oneOf": [
-                {
-                  "type": "string",
-                  "maxLength": 128
-                },
-                {
-                  "type": "null"
-                }
-              ]
-            },
-            "custom_id": {
-              "description": "The product number",
-              "anyOf": [
-                {
-                  "type": "string",
-                  "example": "0000000028-000008"
-                },
-                {
-                  "type": "null"
-                }
-              ]
-            },
-            "custom_properties": {
-              "oneOf": [
-                {
-                  "type": "null"
-                },
-                {
-                  "type": "object",
-                  "additionalProperties": false,
-                  "maxProperties": 30,
-                  "patternProperties": {
-                    "^.{1,128}$": {
-                      "anyOf": [
-                        {
-                          "type": "string"
-                        },
-                        {
-                          "type": "number"
-                        },
-                        {
-                          "type": "boolean"
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ]
-                    }
-                  }
-                }
-              ]
-            },
-            "metadata": {
-              "anyOf": [
-                {
-                  "type": "object"
-                },
-                {
-                  "type": "null"
-                }
-              ]
-            },
-            "product_group": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ]
-            },
-            "is_service": {
-              "type": "boolean"
-            }
-          }
-        },
-        {
-          "type": "null"
-        }
-      ]
-    },
-    "branch": {
-      "description": "The branch UUID (use location instead)",
-      "deprecated": true,
-      "example": "3f7d26f4-96ff-45b2-8fce-a5c0ca6040b2",
-      "type": "string",
-      "format": "uuid"
-    },
-    "status": {
-      "oneOf": [
-        {
-          "description": "The status of the product",
-          "type": "string",
-          "enum": [
-            "available"
-          ]
-        },
-        {
-          "type": "null"
-        }
-      ]
-    },
-    "location": {
-      "oneOf": [
-        {
-          "type": "object",
-          "additionalProperties": false,
-          "properties": {
-            "id": {
-              "description": "Unique entity ID",
-              "type": "string",
-              "format": "uuid",
-              "example": "936835f7-2d75-41d2-9001-38ed6e458328"
-            },
-            "name": {
-              "description": "Any arbitrary name for a branch that can be displayed in applications.",
-              "example": "Head office",
-              "anyOf": [
-                {
-                  "type": "string",
-                  "maxLength": 64,
-                  "minLength": 1
-                },
-                {
-                  "type": "null"
-                }
-              ]
-            },
-            "custom_id": {
-              "description": "Branch custom unique ID.",
-              "example": "dd3234of",
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ]
-            },
-            "branch_number": {
-              "type": "number",
-              "description": "The maximum stems from the fact that is it stored as an postgres int4 type, with 4 bytes of space",
-              "example": 107,
-              "minimum": 0,
-              "maximum": 2147483647
-            },
-            "metadata": {
-              "description": "Arbitrary user defined data.",
-              "type": "object",
-              "maxProperties": 10
-            }
-          }
-        },
-        {
-          "type": "null"
-        }
-      ]
-    },
-    "location_type": {
-      "description": "Location type",
-      "type": "string",
-      "enum": [
-        "client",
-        "branch",
-        "warehouse",
-        "warehouse_shelf"
-      ]
-    },
-    "from": {
-      "description": "Alphanumerical UUID of the stock source location",
-      "example": "75941a1a-01b0-47b8-806b-83bfa68f3bea",
-      "type": "string",
-      "format": "uuid"
-    },
-    "to": {
-      "description": "Alphanumerical UUID of the stock target location",
-      "example": "7b8806e7d-810f-4e18-b049-8e2cc6134a41",
-      "type": "string",
-      "format": "uuid"
-    },
-    "channel": {
-      "oneOf": [
-        {
-          "description": "The channel from which stock deduction were made",
-          "type": "string",
-          "enum": [
-            "transfer",
-            "transactions",
-            "delivery_notes"
-          ]
-        },
-        {
-          "type": "null"
-        }
-      ]
-    },
-    "reason": {
-      "oneOf": [
-        {
-          "type": "object",
-          "additionalProperties": false,
-          "properties": {
-            "id": {
-              "description": "Unique entity ID",
-              "type": "string",
-              "format": "uuid",
-              "example": "936835f7-2d75-41d2-9001-38ed6e458328"
-            },
-            "name": {
-              "oneOf": [
-                {
-                  "description": "The reason name",
-                  "example": "Returned goods",
-                  "type": "string",
-                  "minLength": 1,
-                  "maxLength": 128
-                },
-                {
-                  "type": "null"
-                }
-              ]
-            },
-            "type": {
-              "description": "The reason type",
-              "example": "expense",
-              "type": "string",
-              "enum": [
-                "refund",
-                "pos_price_change",
-                "stock_change",
-                "expense",
-                "deposit"
-              ]
-            }
-          }
-        },
-        {
-          "type": "null"
-        }
-      ]
-    },
-    "comments": {
-      "oneOf": [
-        {
-          "description": "Additional comments for stock book",
-          "example": "Actualized due to inventarisation",
-          "type": "string",
-          "maxLength": 2048
-        },
-        {
-          "type": "null"
-        }
-      ]
     },
     "type": {
       "oneOf": [
@@ -344,6 +51,110 @@
             "delivery_note_refund",
             "delivery_note_cancellation"
           ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "product": {
+      "description": "The product which stock was affected",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "description": "Unique entity ID",
+          "type": "string",
+          "format": "uuid",
+          "example": "936835f7-2d75-41d2-9001-38ed6e458328"
+        },
+        "name": {
+          "description": "Product name",
+          "type": "string",
+          "maxLength": 512
+        },
+        "client_id": {
+          "description": "A client definable ID for the purpose of syncing to a client or used in analytics for e.g. transactions that created a product offline and done transactions offline before they received a backend ID.",
+          "oneOf": [
+            {
+              "type": "string",
+              "maxLength": 128
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "custom_id": {
+          "description": "The product number",
+          "anyOf": [
+            {
+              "type": "string",
+              "example": "0000000028-000008"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
+    },
+    "location": {
+      "description": "The location the stock was booked at",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "description": "Unique entity ID",
+          "type": "string",
+          "format": "uuid",
+          "example": "936835f7-2d75-41d2-9001-38ed6e458328"
+        },
+        "name": {
+          "description": "Any arbitrary name for a branch that can be displayed in applications.",
+          "example": "Head office",
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 64,
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "custom_id": {
+          "description": "Branch custom unique ID.",
+          "example": "dd3234of",
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "branch_number": {
+          "type": "number",
+          "description": "The maximum stems from the fact that is it stored as an postgres int4 type, with 4 bytes of space",
+          "example": 107,
+          "minimum": 0,
+          "maximum": 2147483647
+        },
+        "metadata": {
+          "description": "Arbitrary user defined data.",
+          "type": "object",
+          "maxProperties": 10
+        }
+      }
+    },
+    "reason": {
+      "oneOf": [
+        {
+          "description": "The reason of stock book",
+          "type": "string"
         },
         {
           "type": "null"
