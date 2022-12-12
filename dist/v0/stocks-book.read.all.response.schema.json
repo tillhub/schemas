@@ -47,7 +47,7 @@
         "additionalProperties": false,
         "properties": {
           "id": {
-            "description": "Unique entity ID",
+            "description": "Unique stock book ID",
             "type": "string",
             "format": "uuid",
             "example": "936835f7-2d75-41d2-9001-38ed6e458328"
@@ -56,13 +56,13 @@
             "type": "string",
             "format": "date-time",
             "example": "2019-03-17T21:12:04.849Z",
-            "description": "The date and time entity was created"
+            "description": "The date and time stock book was created"
           },
           "updated_at": {
             "type": "string",
             "format": "date-time",
             "example": "2019-03-17T21:12:04.849Z",
-            "description": "The date and time entity was updated"
+            "description": "The date and time stock book was updated"
           },
           "metadata": {
             "oneOf": [

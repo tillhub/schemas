@@ -1,3 +1,10 @@
+# [6.181.0](https://github.com/tillhub/schemas/compare/v6.180.0...v6.181.0) (2022-12-12)
+
+
+### Features
+
+* **stocks-book:** align schema with requirements v1 #UNTIL-5820 ([c606cc8](https://github.com/tillhub/schemas/commit/c606cc8)), closes [#UNTIL-5820](https://github.com/tillhub/schemas/issues/UNTIL-5820)
+
 # [6.180.0](https://github.com/tillhub/schemas/compare/v6.179.0...v6.180.0) (2022-12-12)
 
 
