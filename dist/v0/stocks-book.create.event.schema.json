@@ -1,153 +1,268 @@
 {
   "$id": "https://schemas.tillhub.com/v0/stocks-book.create.event.schema.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "The webhook data set",
   "type": "object",
   "additionalProperties": false,
-  "required": [
-    "id",
-    "qty_change",
-    "product",
-    "location"
-  ],
   "properties": {
-    "id": {
-      "description": "Unique stock book ID",
+    "webhookId": {
+      "description": "The webhook UUID",
+      "example": "ff30cfdf-5167-4f72-b4fc-c1d72db3c07e",
       "type": "string",
-      "format": "uuid",
-      "example": "936835f7-2d75-41d2-9001-38ed6e458328"
+      "format": "uuid"
     },
-    "qty_change": {
-      "description": "The quantity change with the book",
-      "example": -2,
+    "eventId": {
+      "description": "The event UUID",
+      "example": "c6fe918a-7bdc-4ccd-af36-95c03853233d",
+      "type": "string",
+      "format": "uuid"
+    },
+    "eventEntity": {
+      "description": "The entity name the event refers to",
+      "example": "transaction",
+      "type": "string"
+    },
+    "eventType": {
+      "description": "The event type (e.g. create, update, delete)",
+      "example": "create",
+      "type": "string"
+    },
+    "eventVersion": {
+      "description": "The event payload version",
+      "example": 0,
       "type": "number"
     },
-    "type": {
-      "oneOf": [
-        {
-          "description": "The type of stock book",
-          "type": "string",
-          "enum": [
-            "add",
-            "deduct",
-            "goods_in",
-            "goods_out",
-            "relocation",
-            "sale",
-            "cancellation",
-            "refund",
-            "delivery_note",
-            "delivery_note_refund",
-            "delivery_note_cancellation"
-          ]
-        },
-        {
-          "type": "null"
-        }
-      ]
+    "entityInstanceId": {
+      "description": "The entity instance UUID",
+      "example": "10b06f38-031d-4e0c-8706-0474c8c5b61c",
+      "type": "string",
+      "format": "uuid"
     },
-    "product": {
-      "description": "The product which stock was affected",
+    "timestamp": {
+      "description": "The date and time event was received by webhooks service",
+      "example": "2022-12-13T08:45:00.881Z",
+      "type": "string",
+      "format": "date-time"
+    },
+    "payload": {
       "type": "object",
       "additionalProperties": false,
+      "required": [
+        "id",
+        "qty_change",
+        "product",
+        "location"
+      ],
       "properties": {
         "id": {
-          "description": "Unique entity ID",
+          "description": "Unique stock book ID",
           "type": "string",
           "format": "uuid",
           "example": "936835f7-2d75-41d2-9001-38ed6e458328"
         },
-        "name": {
-          "description": "Product name",
+        "created_at": {
           "type": "string",
-          "maxLength": 512
+          "format": "date-time",
+          "example": "2019-03-17T21:12:04.849Z",
+          "description": "The date and time stock book was created"
         },
-        "client_id": {
-          "description": "A client definable ID for the purpose of syncing to a client or used in analytics for e.g. transactions that created a product offline and done transactions offline before they received a backend ID.",
+        "qty_change": {
+          "description": "The quantity change with the book",
+          "example": -2,
+          "type": "number"
+        },
+        "type": {
           "oneOf": [
             {
+              "description": "The type of stock book",
               "type": "string",
-              "maxLength": 128
+              "enum": [
+                "add",
+                "deduct",
+                "goods_in",
+                "goods_out",
+                "relocation",
+                "sale",
+                "cancellation",
+                "refund",
+                "delivery_note",
+                "delivery_note_refund",
+                "delivery_note_cancellation"
+              ]
             },
             {
               "type": "null"
             }
           ]
         },
-        "custom_id": {
-          "description": "The product number",
-          "anyOf": [
+        "channel": {
+          "oneOf": [
             {
+              "description": "The channel from which stock deduction were made",
               "type": "string",
-              "example": "0000000028-000008"
-            },
-            {
-              "type": "null"
-            }
-          ]
-        }
-      }
-    },
-    "location": {
-      "description": "The location the stock was booked at",
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "id": {
-          "description": "Unique entity ID",
-          "type": "string",
-          "format": "uuid",
-          "example": "936835f7-2d75-41d2-9001-38ed6e458328"
-        },
-        "name": {
-          "description": "Any arbitrary name for a branch that can be displayed in applications.",
-          "example": "Head office",
-          "anyOf": [
-            {
-              "type": "string",
-              "maxLength": 64,
-              "minLength": 1
+              "enum": [
+                "transfer",
+                "transactions",
+                "delivery_notes"
+              ]
             },
             {
               "type": "null"
             }
           ]
         },
-        "custom_id": {
-          "description": "Branch custom unique ID.",
-          "example": "dd3234of",
-          "anyOf": [
-            {
-              "type": "string"
-            },
-            {
-              "type": "null"
-            }
-          ]
-        },
-        "branch_number": {
-          "type": "number",
-          "description": "The maximum stems from the fact that is it stored as an postgres int4 type, with 4 bytes of space",
-          "example": 107,
-          "minimum": 0,
-          "maximum": 2147483647
-        },
-        "metadata": {
-          "description": "Arbitrary user defined data.",
+        "product": {
+          "description": "The product which stock was affected",
           "type": "object",
-          "maxProperties": 10
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "description": "Product name",
+              "type": "string",
+              "maxLength": 512
+            },
+            "client_id": {
+              "description": "A client definable ID for the purpose of syncing to a client or used in analytics for e.g. transactions that created a product offline and done transactions offline before they received a backend ID.",
+              "oneOf": [
+                {
+                  "type": "string",
+                  "maxLength": 128
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "custom_id": {
+              "description": "The product number",
+              "anyOf": [
+                {
+                  "type": "string",
+                  "example": "0000000028-000008"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "custom_properties": {
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "maxProperties": 30,
+                  "patternProperties": {
+                    "^.{1,128}$": {
+                      "anyOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "number"
+                        },
+                        {
+                          "type": "boolean"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "location": {
+          "description": "The location the stock was booked at",
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "description": "Any arbitrary name for a branch that can be displayed in applications.",
+              "example": "Head office",
+              "anyOf": [
+                {
+                  "type": "string",
+                  "maxLength": 64,
+                  "minLength": 1
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "custom_id": {
+              "description": "Branch custom unique ID.",
+              "example": "dd3234of",
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "branch_number": {
+              "type": "number",
+              "description": "The maximum stems from the fact that is it stored as an postgres int4 type, with 4 bytes of space",
+              "example": 107,
+              "minimum": 0,
+              "maximum": 2147483647
+            },
+            "metadata": {
+              "description": "Arbitrary user defined data.",
+              "type": "object",
+              "maxProperties": 10
+            }
+          }
+        },
+        "reason": {
+          "oneOf": [
+            {
+              "description": "The reason of stock book",
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "name": {
+                  "oneOf": [
+                    {
+                      "description": "The reason name",
+                      "example": "Returned goods",
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 128
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "type": {
+                  "description": "The reason type",
+                  "example": "expense",
+                  "type": "string",
+                  "enum": [
+                    "refund",
+                    "pos_price_change",
+                    "stock_change",
+                    "expense",
+                    "deposit"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
         }
       }
-    },
-    "reason": {
-      "oneOf": [
-        {
-          "description": "The reason of stock book",
-          "type": "string"
-        },
-        {
-          "type": "null"
-        }
-      ]
     }
   }
 }
