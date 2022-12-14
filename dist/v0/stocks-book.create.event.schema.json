@@ -19,7 +19,7 @@
     },
     "eventEntity": {
       "description": "The entity name the event refers to",
-      "example": "transaction",
+      "example": "stocks-book",
       "type": "string"
     },
     "eventType": {
@@ -40,7 +40,7 @@
     },
     "timestamp": {
       "description": "The date and time event was received by webhooks service",
-      "example": "2022-12-13T08:45:00.881Z",
+      "example": "2022-12-14T13:44:21.798Z",
       "type": "string",
       "format": "date-time"
     },
@@ -49,7 +49,9 @@
       "additionalProperties": false,
       "required": [
         "id",
+        "created_at",
         "qty_change",
+        "type",
         "product",
         "location"
       ],
@@ -72,43 +74,12 @@
           "type": "number"
         },
         "type": {
-          "oneOf": [
-            {
-              "description": "The type of stock book",
-              "type": "string",
-              "enum": [
-                "add",
-                "deduct",
-                "goods_in",
-                "goods_out",
-                "relocation",
-                "sale",
-                "cancellation",
-                "refund",
-                "delivery_note",
-                "delivery_note_refund",
-                "delivery_note_cancellation"
-              ]
-            },
-            {
-              "type": "null"
-            }
-          ]
-        },
-        "channel": {
-          "oneOf": [
-            {
-              "description": "The channel from which stock deduction were made",
-              "type": "string",
-              "enum": [
-                "transfer",
-                "transactions",
-                "delivery_notes"
-              ]
-            },
-            {
-              "type": "null"
-            }
+          "description": "The type of stock book",
+          "type": "string",
+          "enum": [
+            "transfer",
+            "sale",
+            "delivery_note"
           ]
         },
         "product": {
@@ -226,36 +197,8 @@
           "oneOf": [
             {
               "description": "The reason of stock book",
-              "type": "object",
-              "additionalProperties": false,
-              "properties": {
-                "name": {
-                  "oneOf": [
-                    {
-                      "description": "The reason name",
-                      "example": "Returned goods",
-                      "type": "string",
-                      "minLength": 1,
-                      "maxLength": 128
-                    },
-                    {
-                      "type": "null"
-                    }
-                  ]
-                },
-                "type": {
-                  "description": "The reason type",
-                  "example": "expense",
-                  "type": "string",
-                  "enum": [
-                    "refund",
-                    "pos_price_change",
-                    "stock_change",
-                    "expense",
-                    "deposit"
-                  ]
-                }
-              }
+              "type": "string",
+              "example": "Not arbitrary reason"
             },
             {
               "type": "null"

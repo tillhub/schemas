@@ -1,3 +1,11 @@
+# [6.183.0](https://github.com/tillhub/schemas/compare/v6.182.0...v6.183.0) (2022-12-14)
+
+
+### Features
+
+* **stocks-book:** add transaction event schema #UNTIL-5820 ([b458c35](https://github.com/tillhub/schemas/commit/b458c35)), closes [#UNTIL-5820](https://github.com/tillhub/schemas/issues/UNTIL-5820)
+* **stocks-book:** align schema with requirements v4 #UNTIL-5820 ([eae9837](https://github.com/tillhub/schemas/commit/eae9837)), closes [#UNTIL-5820](https://github.com/tillhub/schemas/issues/UNTIL-5820)
+
 # [6.182.0](https://github.com/tillhub/schemas/compare/v6.181.0...v6.182.0) (2022-12-13)
 
 
