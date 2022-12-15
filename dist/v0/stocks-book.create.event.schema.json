@@ -40,7 +40,7 @@
     },
     "timestamp": {
       "description": "The date and time event was received by webhooks service",
-      "example": "2022-12-15T11:50:01.550Z",
+      "example": "2022-12-15T12:27:18.137Z",
       "type": "string",
       "format": "date-time"
     },
@@ -57,7 +57,7 @@
       ],
       "properties": {
         "id": {
-          "description": "Unique stock book ID",
+          "description": "Unique stock booking ID",
           "type": "string",
           "format": "uuid",
           "example": "936835f7-2d75-41d2-9001-38ed6e458328"
@@ -66,7 +66,7 @@
           "type": "string",
           "format": "date-time",
           "example": "2019-03-17T21:12:04.849Z",
-          "description": "The date and time stock book was created"
+          "description": "The date and time stock booking was created"
         },
         "qty_change": {
           "description": "The quantity change with the stock booking",
@@ -74,7 +74,7 @@
           "type": "number"
         },
         "type": {
-          "description": "The type of stock booking: \n'transfer' - indicates a stock change made by the operator for the logistic purpose, positive value for goods-in and negative value for goods-out \n'sale' - indicates a stock change triggered by a sale, positive value for a successful transaction and negative value for a refund or cancellation \n'delivery_note' - indicates a stock change triggered by a delivery note, positive value for a successful delivery note and negative value for a refund or cancellation",
+          "description": "The type of stock booking:\n'transfer' - indicates a stock change made by the operator for the logistic purpose, positive value for goods-in and negative value for goods-out;\n'sale' - indicates a stock change triggered by a sale, positive value for a successful transaction and negative value for a refund or cancellation;\n'delivery_note' - indicates a stock change triggered by a delivery note, positive value for a successful delivery note and negative value for a refund or cancellation",
           "type": "string",
           "enum": [
             "transfer",

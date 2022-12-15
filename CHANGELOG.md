@@ -1,3 +1,10 @@
+# [6.185.0](https://github.com/tillhub/schemas/compare/v6.184.0...v6.185.0) (2022-12-15)
+
+
+### Features
+
+* **stocks-book:** improve multiline formatting #UNTIL-5820 ([a93bc25](https://github.com/tillhub/schemas/commit/a93bc25)), closes [#UNTIL-5820](https://github.com/tillhub/schemas/issues/UNTIL-5820)
+
 # [6.184.0](https://github.com/tillhub/schemas/compare/v6.183.0...v6.184.0) (2022-12-15)
 
 
