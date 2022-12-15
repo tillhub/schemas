@@ -40,7 +40,7 @@
     },
     "timestamp": {
       "description": "The date and time event was received by webhooks service",
-      "example": "2022-12-14T13:44:21.798Z",
+      "example": "2022-12-15T11:50:01.550Z",
       "type": "string",
       "format": "date-time"
     },
@@ -69,12 +69,12 @@
           "description": "The date and time stock book was created"
         },
         "qty_change": {
-          "description": "The quantity change with the book",
+          "description": "The quantity change with the stock booking",
           "example": -2,
           "type": "number"
         },
         "type": {
-          "description": "The type of stock book",
+          "description": "The type of stock booking: \n'transfer' - indicates a stock change made by the operator for the logistic purpose, positive value for goods-in and negative value for goods-out \n'sale' - indicates a stock change triggered by a sale, positive value for a successful transaction and negative value for a refund or cancellation \n'delivery_note' - indicates a stock change triggered by a delivery note, positive value for a successful delivery note and negative value for a refund or cancellation",
           "type": "string",
           "enum": [
             "transfer",
@@ -196,7 +196,7 @@
         "reason": {
           "oneOf": [
             {
-              "description": "The reason of stock book",
+              "description": "The reason name: the user generated text which can be specifically set when booking things out manually",
               "type": "string",
               "example": "Not arbitrary reason"
             },
