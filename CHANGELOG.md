@@ -1,3 +1,10 @@
+# [6.186.0](https://github.com/tillhub/schemas/compare/v6.185.0...v6.186.0) (2022-12-16)
+
+
+### Features
+
+* **webhooks:** use snake schema #UNTIL-5887 ([0dc2fb1](https://github.com/tillhub/schemas/commit/0dc2fb1)), closes [#UNTIL-5887](https://github.com/tillhub/schemas/issues/UNTIL-5887)
+
 # [6.185.0](https://github.com/tillhub/schemas/compare/v6.184.0...v6.185.0) (2022-12-15)
 
 

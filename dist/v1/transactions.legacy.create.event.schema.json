@@ -5,34 +5,34 @@
   "type": "object",
   "additionalProperties": false,
   "properties": {
-    "webhookId": {
+    "webhook_id": {
       "description": "The webhook UUID",
       "example": "ff30cfdf-5167-4f72-b4fc-c1d72db3c07e",
       "type": "string",
       "format": "uuid"
     },
-    "eventId": {
+    "event_id": {
       "description": "The event UUID",
       "example": "c6fe918a-7bdc-4ccd-af36-95c03853233d",
       "type": "string",
       "format": "uuid"
     },
-    "eventEntity": {
+    "event_entity": {
       "description": "The entity name the event refers to",
       "example": "transaction",
       "type": "string"
     },
-    "eventType": {
+    "event_type": {
       "description": "The event type (e.g. create, update, delete)",
       "example": "create",
       "type": "string"
     },
-    "eventVersion": {
+    "event_version": {
       "description": "The event payload version",
       "example": 0,
       "type": "number"
     },
-    "entityInstanceId": {
+    "entity_instance_id": {
       "description": "The entity instance UUID",
       "example": "10b06f38-031d-4e0c-8706-0474c8c5b61c",
       "type": "string",
@@ -40,7 +40,7 @@
     },
     "timestamp": {
       "description": "The date and time event was received by webhooks service",
-      "example": "2022-12-15T12:27:18.253Z",
+      "example": "2022-12-16T11:25:05.404Z",
       "type": "string",
       "format": "date-time"
     },
