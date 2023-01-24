@@ -10,6 +10,15 @@ test('Balances: v1: create schema validation', function (t) {
   t.end()
 })
 
+test('Balances: v1: get schema validation', function (t) {
+  t.plan(2)
+  const getResponse = require('../../lib/v1/balances').get.all.response
+  const { valid, error } = validate(getResponse)
+  t.ok(valid, 'get schema is valid')
+  t.error(error, 'should not get any error')
+  t.end()
+})
+
 test('Balances: v1: create response schema', function (t) {
   t.plan(2)
   const createResponse = require('../../lib/v1/balances').create.response
