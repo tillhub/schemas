@@ -86,7 +86,7 @@
     },
     "inventory": {
       "type": "boolean",
-      "default": false
+      "default": true
     },
     "web_view": {
       "type": "boolean",

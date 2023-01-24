@@ -47,6 +47,21 @@
     "branch": {
       "type": "string"
     },
+    "branch_group": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "uuid"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uuid"
+          }
+        }
+      ]
+    },
     "discount_rate": {
       "type": "string"
     },

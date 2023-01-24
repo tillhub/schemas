@@ -1,3 +1,14 @@
+# [6.187.0](https://github.com/tillhub/schemas/compare/v6.186.0...v6.187.0) (2023-01-24)
+
+
+### Features
+
+* **analytics:** Filter reports by branch group - Statistics ([62b52f2](https://github.com/tillhub/schemas/commit/62b52f2))
+* **balances:** added balance event ([2e1cdb7](https://github.com/tillhub/schemas/commit/2e1cdb7))
+* **chore:** fix lint ([8e22c17](https://github.com/tillhub/schemas/commit/8e22c17))
+* **features:** Make the `inventory` feature flag true by default on new accounts ([999f12d](https://github.com/tillhub/schemas/commit/999f12d))
+* **receipts_configuration:** add first name and last name to the waiter printing policy ([1861d83](https://github.com/tillhub/schemas/commit/1861d83))
+
 # [6.186.0](https://github.com/tillhub/schemas/compare/v6.185.0...v6.186.0) (2022-12-16)
 
 
