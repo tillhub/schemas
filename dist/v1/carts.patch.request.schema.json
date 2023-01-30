@@ -284,6 +284,49 @@
             "additionalProperties": false,
             "type": "object",
             "properties": {
+              "tax": {
+                "description": "Tax rate ID. If not present, the \"vat_rate\" must be present. The active tax with such ID must be defined in the system",
+                "type": "string",
+                "format": "uuid"
+              },
+              "taxes_options": {
+                "anyOf": [
+                  {
+                    "type": "array"
+                  },
+                  {
+                    "type": "object"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "attributes": {
+                "default": null,
+                "anyOf": [
+                  {
+                    "type": "object"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "description": {
+                "oneOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "id": {
+                "description": "Identifier got on cart creation",
+                "type": "string"
+              },
               "product": {
                 "description": "Identifier of the product",
                 "example": "cd0a2886-e245-4ed9-a758-443e7e5b3a3f",
@@ -1005,11 +1048,6 @@
                   }
                 ]
               },
-              "tax": {
-                "description": "Tax rate ID. If not present, the \"vat_rate\" must be present. The active tax with such ID must be defined in the system",
-                "type": "string",
-                "format": "uuid"
-              },
               "account": {
                 "description": "Account ID",
                 "type": "string",
@@ -1326,22 +1364,12 @@
                     }
                   ]
                 }
-              },
-              "attributes": {
-                "default": null,
-                "anyOf": [
-                  {
-                    "type": "object"
-                  },
-                  {
-                    "type": "null"
-                  }
-                ]
               }
             },
             "anyOf": [
               {
                 "required": [
+                  "client_id",
                   "product",
                   "qty",
                   "custom_id",
@@ -1355,6 +1383,7 @@
               },
               {
                 "required": [
+                  "client_id",
                   "product",
                   "qty",
                   "custom_id",
@@ -1372,6 +1401,48 @@
             "additionalProperties": false,
             "type": "object",
             "properties": {
+              "tax": {
+                "description": "Tax rate ID. If not present, the \"vat_rate\" must be present. The active tax with such ID must be defined in the system",
+                "type": "string",
+                "format": "uuid"
+              },
+              "taxes_options": {
+                "anyOf": [
+                  {
+                    "type": "array"
+                  },
+                  {
+                    "type": "object"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "attributes": {
+                "anyOf": [
+                  {
+                    "type": "object"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "description": {
+                "oneOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "id": {
+                "description": "Identifier got on cart creation",
+                "type": "string"
+              },
               "product": {
                 "description": "The Tillhub product unique identifier",
                 "example": "aa165950-26f1-4a59-a85a-1c6017b3cb79",
@@ -1820,11 +1891,6 @@
                   }
                 ]
               },
-              "tax": {
-                "description": "Tax rate ID. If not present, the \"vat_rate\" must be present. The active tax with such ID must be defined in the system",
-                "type": "string",
-                "format": "uuid"
-              },
               "account": {
                 "description": "Account ID",
                 "type": "string",
@@ -1857,6 +1923,7 @@
             "anyOf": [
               {
                 "required": [
+                  "client_id",
                   "custom_id",
                   "qty",
                   "name",
@@ -1867,6 +1934,7 @@
               },
               {
                 "required": [
+                  "client_id",
                   "custom_id",
                   "qty",
                   "name",
@@ -1881,6 +1949,46 @@
             "additionalProperties": false,
             "type": "object",
             "properties": {
+              "tax": {
+                "type": "string"
+              },
+              "taxes_options": {
+                "anyOf": [
+                  {
+                    "type": "array"
+                  },
+                  {
+                    "type": "object"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "attributes": {
+                "anyOf": [
+                  {
+                    "type": "object"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "description": {
+                "oneOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "id": {
+                "description": "Identifier got on cart creation",
+                "type": "string"
+              },
               "position": {
                 "description": "Cart item position",
                 "type": "number",
@@ -2192,6 +2300,7 @@
               }
             },
             "required": [
+              "client_id",
               "product",
               "currency",
               "qty"

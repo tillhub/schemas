@@ -1,3 +1,10 @@
+# [6.188.0](https://github.com/tillhub/schemas/compare/v6.187.0...v6.188.0) (2023-01-30)
+
+
+### Features
+
+* **carts:** Protect cart PATCH call from wiping out important data ([fdcbe1b](https://github.com/tillhub/schemas/commit/fdcbe1b))
+
 # [6.187.0](https://github.com/tillhub/schemas/compare/v6.186.0...v6.187.0) (2023-01-24)
 
 
