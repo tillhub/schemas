@@ -1,3 +1,10 @@
+# [6.189.0](https://github.com/tillhub/schemas/compare/v6.188.0...v6.189.0) (2023-02-02)
+
+
+### Features
+
+* **configuration:** saved carts logs flag ([4cf480b](https://github.com/tillhub/schemas/commit/4cf480b))
+
 # [6.188.0](https://github.com/tillhub/schemas/compare/v6.187.0...v6.188.0) (2023-01-30)
 
 

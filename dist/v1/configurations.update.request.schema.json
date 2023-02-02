@@ -3360,6 +3360,11 @@
               "type": "boolean",
               "default": true
             },
+            "logs_enabled": {
+              "description": "Specifies if saved carts logging is enabled.",
+              "type": "boolean",
+              "default": false
+            },
             "confirm_deletion": {
               "description": "Specifies if the deletion of saved carts must be confirmed.",
               "type": "boolean",
