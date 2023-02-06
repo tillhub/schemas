@@ -12,7 +12,9 @@
         "USD",
         "GBP",
         "CHF",
-        "HUF"
+        "HUF",
+        "DKK",
+        "SEK"
       ]
     }
   ]

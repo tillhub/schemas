@@ -3962,6 +3962,7 @@
                                               "description": "Defines how the salesperson will be printed, it will not be printed at all if NULL",
                                               "type": "string",
                                               "enum": [
+                                                "none",
                                                 "number",
                                                 "name",
                                                 "first_name",
@@ -4012,6 +4013,7 @@
                                               "description": "Defines how the salesperson will be printed, it will not be printed at all if NULL",
                                               "type": "string",
                                               "enum": [
+                                                "none",
                                                 "number",
                                                 "name",
                                                 "first_name",
@@ -4062,6 +4064,7 @@
                                               "description": "Defines how the salesperson will be printed, it will not be printed at all if NULL",
                                               "type": "string",
                                               "enum": [
+                                                "none",
                                                 "number",
                                                 "name",
                                                 "first_name",
@@ -4537,6 +4540,7 @@
                                               "description": "Defines how the salesperson will be printed, it will not be printed at all if NULL",
                                               "type": "string",
                                               "enum": [
+                                                "none",
                                                 "number",
                                                 "name",
                                                 "first_name",
@@ -4587,6 +4591,7 @@
                                               "description": "Defines how the salesperson will be printed, it will not be printed at all if NULL",
                                               "type": "string",
                                               "enum": [
+                                                "none",
                                                 "number",
                                                 "name",
                                                 "first_name",
@@ -4637,6 +4642,7 @@
                                               "description": "Defines how the salesperson will be printed, it will not be printed at all if NULL",
                                               "type": "string",
                                               "enum": [
+                                                "none",
                                                 "number",
                                                 "name",
                                                 "first_name",
@@ -5112,6 +5118,7 @@
                                               "description": "Defines how the salesperson will be printed, it will not be printed at all if NULL",
                                               "type": "string",
                                               "enum": [
+                                                "none",
                                                 "number",
                                                 "name",
                                                 "first_name",
@@ -5162,6 +5169,7 @@
                                               "description": "Defines how the salesperson will be printed, it will not be printed at all if NULL",
                                               "type": "string",
                                               "enum": [
+                                                "none",
                                                 "number",
                                                 "name",
                                                 "first_name",
@@ -5212,6 +5220,7 @@
                                               "description": "Defines how the salesperson will be printed, it will not be printed at all if NULL",
                                               "type": "string",
                                               "enum": [
+                                                "none",
                                                 "number",
                                                 "name",
                                                 "first_name",
@@ -5687,6 +5696,7 @@
                                               "description": "Defines how the salesperson will be printed, it will not be printed at all if NULL",
                                               "type": "string",
                                               "enum": [
+                                                "none",
                                                 "number",
                                                 "name",
                                                 "first_name",
@@ -5737,6 +5747,7 @@
                                               "description": "Defines how the salesperson will be printed, it will not be printed at all if NULL",
                                               "type": "string",
                                               "enum": [
+                                                "none",
                                                 "number",
                                                 "name",
                                                 "first_name",
@@ -5787,6 +5798,7 @@
                                               "description": "Defines how the salesperson will be printed, it will not be printed at all if NULL",
                                               "type": "string",
                                               "enum": [
+                                                "none",
                                                 "number",
                                                 "name",
                                                 "first_name",
@@ -6262,6 +6274,7 @@
                                               "description": "Defines how the salesperson will be printed, it will not be printed at all if NULL",
                                               "type": "string",
                                               "enum": [
+                                                "none",
                                                 "number",
                                                 "name",
                                                 "first_name",
@@ -6312,6 +6325,7 @@
                                               "description": "Defines how the salesperson will be printed, it will not be printed at all if NULL",
                                               "type": "string",
                                               "enum": [
+                                                "none",
                                                 "number",
                                                 "name",
                                                 "first_name",
@@ -6362,6 +6376,7 @@
                                               "description": "Defines how the salesperson will be printed, it will not be printed at all if NULL",
                                               "type": "string",
                                               "enum": [
+                                                "none",
                                                 "number",
                                                 "name",
                                                 "first_name",
@@ -6837,6 +6852,7 @@
                                               "description": "Defines how the salesperson will be printed, it will not be printed at all if NULL",
                                               "type": "string",
                                               "enum": [
+                                                "none",
                                                 "number",
                                                 "name",
                                                 "first_name",
@@ -6887,6 +6903,7 @@
                                               "description": "Defines how the salesperson will be printed, it will not be printed at all if NULL",
                                               "type": "string",
                                               "enum": [
+                                                "none",
                                                 "number",
                                                 "name",
                                                 "first_name",
@@ -6937,6 +6954,7 @@
                                               "description": "Defines how the salesperson will be printed, it will not be printed at all if NULL",
                                               "type": "string",
                                               "enum": [
+                                                "none",
                                                 "number",
                                                 "name",
                                                 "first_name",

@@ -1,3 +1,10 @@
+# [6.190.0](https://github.com/tillhub/schemas/compare/v6.189.0...v6.190.0) (2023-02-06)
+
+
+### Features
+
+* **branch:** sales print config & currency ([b99cc13](https://github.com/tillhub/schemas/commit/b99cc13))
+
 # [6.189.0](https://github.com/tillhub/schemas/compare/v6.188.0...v6.189.0) (2023-02-02)
 
 
