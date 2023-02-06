@@ -1,3 +1,10 @@
+# [6.191.0](https://github.com/tillhub/schemas/compare/v6.190.0...v6.191.0) (2023-02-06)
+
+
+### Features
+
+* **delivery_notes:** Delivery address missing on generated delivery PDF ([ba3741b](https://github.com/tillhub/schemas/commit/ba3741b))
+
 # [6.190.0](https://github.com/tillhub/schemas/compare/v6.189.0...v6.190.0) (2023-02-06)
 
 
