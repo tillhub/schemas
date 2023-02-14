@@ -1,3 +1,15 @@
+# [6.192.0](https://github.com/tillhub/schemas/compare/v6.191.0...v6.192.0) (2023-02-14)
+
+
+### Bug Fixes
+
+* **configurations:** discounts ([9f8ed2c](https://github.com/tillhub/schemas/commit/9f8ed2c))
+
+
+### Features
+
+* **configurations:** discounts ([67ee1f8](https://github.com/tillhub/schemas/commit/67ee1f8))
+
 # [6.191.0](https://github.com/tillhub/schemas/compare/v6.190.0...v6.191.0) (2023-02-06)
 
 

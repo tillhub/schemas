@@ -84,7 +84,14 @@
                   "additionalProperties": false,
                   "properties": {
                     "show_inactive": {
-                      "type": "boolean"
+                      "oneOf": [
+                        {
+                          "type": "boolean"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
                     }
                   }
                 },

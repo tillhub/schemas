@@ -9036,6 +9036,32 @@
                           "type": "null"
                         }
                       ]
+                    },
+                    "item_details": {
+                      "oneOf": [
+                        {
+                          "description": "Discount display on cart item details",
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "hide_cart_behavior": {
+                              "oneOf": [
+                                {
+                                  "description": "If true - hide discounts that have the behavior type 'cart'",
+                                  "type": "boolean",
+                                  "default": false
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            }
+                          }
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
                     }
                   }
                 },
