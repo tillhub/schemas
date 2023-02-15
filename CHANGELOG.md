@@ -1,3 +1,10 @@
+# [6.193.0](https://github.com/tillhub/schemas/compare/v6.192.0...v6.193.0) (2023-02-15)
+
+
+### Features
+
+* **terminals:** apis ([7efefbd](https://github.com/tillhub/schemas/commit/7efefbd))
+
 # [6.192.0](https://github.com/tillhub/schemas/compare/v6.191.0...v6.192.0) (2023-02-14)
 
 

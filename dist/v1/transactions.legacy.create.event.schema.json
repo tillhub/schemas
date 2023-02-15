@@ -40,7 +40,7 @@
     },
     "timestamp": {
       "description": "The date and time event was received by webhooks service",
-      "example": "2023-02-14T21:43:53.194Z",
+      "example": "2023-02-15T13:27:09.228Z",
       "type": "string",
       "format": "date-time"
     },
@@ -4314,7 +4314,7 @@
                   }
                 ]
               },
-              "terminal_jornal": {
+              "terminal_journal": {
                 "deprecated": true,
                 "oneOf": [
                   {
@@ -4514,7 +4514,8 @@
                                   "concardis",
                                   "opi",
                                   "tim",
-                                  "sumup"
+                                  "sumup",
+                                  "ZVT"
                                 ]
                               },
                               "payment_provider": {

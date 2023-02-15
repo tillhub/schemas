@@ -4312,7 +4312,7 @@
                     }
                   ]
                 },
-                "terminal_jornal": {
+                "terminal_journal": {
                   "deprecated": true,
                   "oneOf": [
                     {
@@ -4512,7 +4512,8 @@
                                     "concardis",
                                     "opi",
                                     "tim",
-                                    "sumup"
+                                    "sumup",
+                                    "ZVT"
                                   ]
                                 },
                                 "payment_provider": {
