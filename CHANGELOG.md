@@ -1,3 +1,10 @@
+# [6.194.0](https://github.com/tillhub/schemas/compare/v6.193.0...v6.194.0) (2023-02-20)
+
+
+### Features
+
+* **products:** array of uuid ([ba92044](https://github.com/tillhub/schemas/commit/ba92044))
+
 # [6.193.0](https://github.com/tillhub/schemas/compare/v6.192.0...v6.193.0) (2023-02-15)
 
 
