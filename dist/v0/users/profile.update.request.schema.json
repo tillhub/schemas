@@ -387,7 +387,9 @@
                   "staff:staff:processes:all_staff",
                   "staff:staff:processes:all_locations",
                   "staff:staff:orders:others:locked:modify",
-                  "staff:staff:orders:preview:print"
+                  "staff:staff:orders:preview:print",
+                  "staff:staff:cart:clear",
+                  "staff:staff:cart:clear:row"
                 ]
               },
               {

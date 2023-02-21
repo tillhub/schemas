@@ -1,3 +1,10 @@
+# [6.195.0](https://github.com/tillhub/schemas/compare/v6.194.0...v6.195.0) (2023-02-21)
+
+
+### Features
+
+* **common:** permissions ([ddb074d](https://github.com/tillhub/schemas/commit/ddb074d))
+
 # [6.194.0](https://github.com/tillhub/schemas/compare/v6.193.0...v6.194.0) (2023-02-20)
 
 
