@@ -8484,6 +8484,21 @@
                           "type": "null"
                         }
                       ]
+                    },
+                    "language_code": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "description": "Language code send in card service requests. ISO 639-1:2002.",
+                          "example": "de",
+                          "minLength": 2,
+                          "maxLength": 2,
+                          "default": null
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
                     }
                   }
                 },

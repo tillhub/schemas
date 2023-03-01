@@ -1,3 +1,10 @@
+# [6.196.0](https://github.com/tillhub/schemas/compare/v6.195.0...v6.196.0) (2023-03-01)
+
+
+### Features
+
+* **configurations:** interfaces ([4eff50d](https://github.com/tillhub/schemas/commit/4eff50d))
+
 # [6.195.0](https://github.com/tillhub/schemas/compare/v6.194.0...v6.195.0) (2023-02-21)
 
 
