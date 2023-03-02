@@ -1,3 +1,15 @@
+# [6.197.0](https://github.com/tillhub/schemas/compare/v6.196.0...v6.197.0) (2023-03-02)
+
+
+### Bug Fixes
+
+* **taxes_base_jurisdictions:** fix test, remove duplicate item ([16f70d6](https://github.com/tillhub/schemas/commit/16f70d6))
+
+
+### Features
+
+* **flush:** new version ([19c7997](https://github.com/tillhub/schemas/commit/19c7997))
+
 # [6.196.0](https://github.com/tillhub/schemas/compare/v6.195.0...v6.196.0) (2023-03-01)
 
 
