@@ -1,3 +1,10 @@
+# [6.198.0](https://github.com/tillhub/schemas/compare/v6.197.0...v6.198.0) (2023-03-07)
+
+
+### Features
+
+* **customers:** add customers event schemas ([f48eb6b](https://github.com/tillhub/schemas/commit/f48eb6b))
+
 # [6.197.0](https://github.com/tillhub/schemas/compare/v6.196.0...v6.197.0) (2023-03-02)
 
 
