@@ -87,13 +87,7 @@
         "description": "Used to store linked_products (existing (can be any type, including `linked` and embedded (`full` product schema)",
         "anyOf": [
           {
-            "type": "array",
-            "items": {
-              "type": "string",
-              "example": "860defb8-5598-421d-9da4-f0826e767536",
-              "format": "uuid",
-              "description": "The uuid v4 that is generated on the API when a product is created"
-            }
+            "type": "array"
           },
           {
             "type": "null"

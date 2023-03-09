@@ -1,3 +1,10 @@
+# [6.199.0](https://github.com/tillhub/schemas/compare/v6.198.0...v6.199.0) (2023-03-09)
+
+
+### Features
+
+* **product:** rollback linked_products ([4a0baad](https://github.com/tillhub/schemas/commit/4a0baad))
+
 # [6.198.0](https://github.com/tillhub/schemas/compare/v6.197.0...v6.198.0) (2023-03-07)
 
 
