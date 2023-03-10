@@ -1,3 +1,11 @@
+# [6.200.0](https://github.com/tillhub/schemas/compare/v6.199.0...v6.200.0) (2023-03-10)
+
+
+### Features
+
+* **customers:** add delete event #UNTIL-6167 ([bc94f96](https://github.com/tillhub/schemas/commit/bc94f96)), closes [#UNTIL-6167](https://github.com/tillhub/schemas/issues/UNTIL-6167)
+* **customers:** add update event #UNTIL-6166 ([0546c31](https://github.com/tillhub/schemas/commit/0546c31)), closes [#UNTIL-6166](https://github.com/tillhub/schemas/issues/UNTIL-6166)
+
 # [6.199.0](https://github.com/tillhub/schemas/compare/v6.198.0...v6.199.0) (2023-03-09)
 
 

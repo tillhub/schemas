@@ -1,5 +1,5 @@
 {
-  "$id": "https://schemas.tillhub.com/v0/customers.create.event.schema.json",
+  "$id": "https://schemas.tillhub.com/v0/customers.delete.event.schema.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "description": "The webhook data set",
   "type": "object",
@@ -24,7 +24,7 @@
     },
     "event_type": {
       "description": "The event type (e.g. create, update, delete)",
-      "example": "create",
+      "example": "delete",
       "type": "string"
     },
     "event_version": {
@@ -40,7 +40,7 @@
     },
     "timestamp": {
       "description": "The date and time event was received by webhooks service",
-      "example": "2023-03-10T10:02:23.979Z",
+      "example": "2023-03-10T10:02:23.980Z",
       "type": "string",
       "format": "date-time"
     },
