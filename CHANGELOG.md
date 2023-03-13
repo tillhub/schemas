@@ -1,3 +1,10 @@
+# [6.201.0](https://github.com/tillhub/schemas/compare/v6.200.0...v6.201.0) (2023-03-13)
+
+
+### Features
+
+* **taxes:** add missing jurisdictions ([f709738](https://github.com/tillhub/schemas/commit/f709738))
+
 # [6.200.0](https://github.com/tillhub/schemas/compare/v6.199.0...v6.200.0) (2023-03-10)
 
 
