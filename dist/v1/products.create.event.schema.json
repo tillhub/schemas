@@ -40,7 +40,7 @@
     },
     "timestamp": {
       "description": "The date and time event was received by webhooks service",
-      "example": "2023-03-22T10:34:40.985Z",
+      "example": "2023-03-22T19:07:50.429Z",
       "type": "string",
       "format": "date-time"
     },
@@ -947,7 +947,7 @@
           },
           "type": {
             "type": "string",
-            "description": "variant of a product (product|voucher) or a parent (variant_product|linked_product|composed_product) or a child (variant|linked) where child has \"parent\" property containing the ID of a parent product",
+            "description": "variant of a product (product|voucher) or a parent (variant_product|linked_product|composed_product) or a child (variant|linked) where child has \"parent\" property containing the ID of a parent product or a special product for tipping (tip_owner|tip_employee)",
             "enum": [
               "product",
               "composed_product",
@@ -955,7 +955,9 @@
               "linked",
               "linked_product",
               "variant",
-              "variant_product"
+              "variant_product",
+              "tip_owner",
+              "tip_employee"
             ]
           },
           "manufacturer": {
@@ -2949,7 +2951,7 @@
           },
           "type": {
             "type": "string",
-            "description": "variant of a product (product|voucher) or a parent (variant_product|linked_product|composed_product) or a child (variant|linked) where child has \"parent\" property containing the ID of a parent product",
+            "description": "variant of a product (product|voucher) or a parent (variant_product|linked_product|composed_product) or a child (variant|linked) where child has \"parent\" property containing the ID of a parent product or a special product for tipping (tip_owner|tip_employee)",
             "enum": [
               "product",
               "composed_product",
@@ -2957,7 +2959,9 @@
               "linked",
               "linked_product",
               "variant",
-              "variant_product"
+              "variant_product",
+              "tip_owner",
+              "tip_employee"
             ]
           },
           "manufacturer": {

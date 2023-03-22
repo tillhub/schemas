@@ -893,7 +893,7 @@
       },
       "type": {
         "type": "string",
-        "description": "variant of a product (product|voucher) or a parent (variant_product|linked_product|composed_product) or a child (variant|linked) where child has \"parent\" property containing the ID of a parent product",
+        "description": "variant of a product (product|voucher) or a parent (variant_product|linked_product|composed_product) or a child (variant|linked) where child has \"parent\" property containing the ID of a parent product or a special product for tipping (tip_owner|tip_employee)",
         "enum": [
           "product",
           "composed_product",
@@ -901,7 +901,9 @@
           "linked",
           "linked_product",
           "variant",
-          "variant_product"
+          "variant_product",
+          "tip_owner",
+          "tip_employee"
         ]
       },
       "manufacturer": {

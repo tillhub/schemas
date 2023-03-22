@@ -1,3 +1,10 @@
+# [6.203.0](https://github.com/tillhub/schemas/compare/v6.202.0...v6.203.0) (2023-03-22)
+
+
+### Features
+
+* **products:** adding new types: tip_owner and tip_employee ([991d132](https://github.com/tillhub/schemas/commit/991d132))
+
 # [6.202.0](https://github.com/tillhub/schemas/compare/v6.201.0...v6.202.0) (2023-03-22)
 
 
