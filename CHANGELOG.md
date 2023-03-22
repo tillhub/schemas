@@ -1,3 +1,11 @@
+# [6.202.0](https://github.com/tillhub/schemas/compare/v6.201.0...v6.202.0) (2023-03-22)
+
+
+### Features
+
+* **product:** add event inside the request ([e1f81ec](https://github.com/tillhub/schemas/commit/e1f81ec))
+* **products:** add event to product create UNTIL-5810 ([b1b2ccf](https://github.com/tillhub/schemas/commit/b1b2ccf))
+
 # [6.201.0](https://github.com/tillhub/schemas/compare/v6.200.0...v6.201.0) (2023-03-13)
 
 
