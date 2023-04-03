@@ -1,3 +1,10 @@
+# [6.204.0](https://github.com/tillhub/schemas/compare/v6.203.0...v6.204.0) (2023-03-31)
+
+
+### Features
+
+* **balances:** tips ([3e251ce](https://github.com/tillhub/schemas/commit/3e251ce))
+
 # [6.203.0](https://github.com/tillhub/schemas/compare/v6.202.0...v6.203.0) (2023-03-22)
 
 

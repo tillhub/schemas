@@ -1353,6 +1353,19 @@
                       "example": 1850,
                       "description": "The per fa_account daily revenue amount (in cent-format: 1267 == 12.67€)"
                     },
+                    "template_number": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "example": "9977",
+                          "description": "Custom identifier the template - currently the product number from the template"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "default": null
+                    },
                     "vat_fa_account_number": {
                       "oneOf": [
                         {
