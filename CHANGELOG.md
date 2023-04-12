@@ -1,3 +1,17 @@
+# [6.205.0](https://github.com/tillhub/schemas/compare/v6.204.0...v6.205.0) (2023-04-11)
+
+
+### Bug Fixes
+
+* **branches:** fix fields type #UNTIL-6492 ([dbcf2aa](https://github.com/tillhub/schemas/commit/dbcf2aa)), closes [#UNTIL-6492](https://github.com/tillhub/schemas/issues/UNTIL-6492)
+* **branches:** valid date declaration #UNTIL-6492 ([1f4866d](https://github.com/tillhub/schemas/commit/1f4866d)), closes [#UNTIL-6492](https://github.com/tillhub/schemas/issues/UNTIL-6492)
+
+
+### Features
+
+* **branches:** extend schema for MMS model #UNTIL-6492 ([c475f02](https://github.com/tillhub/schemas/commit/c475f02)), closes [#UNTIL-6492](https://github.com/tillhub/schemas/issues/UNTIL-6492)
+* **registers:** extend schema for MMS model #UNTIL-6492 ([af9dded](https://github.com/tillhub/schemas/commit/af9dded)), closes [#UNTIL-6492](https://github.com/tillhub/schemas/issues/UNTIL-6492)
+
 # [6.204.0](https://github.com/tillhub/schemas/compare/v6.203.0...v6.204.0) (2023-03-31)
 
 

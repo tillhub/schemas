@@ -2584,6 +2584,19 @@
                     "type": "boolean",
                     "default": false
                   },
+                  "deleted_at": {
+                    "oneOf": [
+                      {
+                        "description": "The date when branch was deleted.",
+                        "example": "2023-04-05T16:06:04.849Z",
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
                   "metadata": {
                     "description": "Arbitrary user defined data.",
                     "type": "object",
@@ -2621,6 +2634,12 @@
                         "type": "null"
                       }
                     ]
+                  },
+                  "is_mms": {
+                    "description": "The branch belongs to MMS.",
+                    "example": "false",
+                    "type": "boolean",
+                    "default": false
                   },
                   "cost_center": {
                     "description": "Cost center unique ID",
@@ -3165,6 +3184,19 @@
                     "type": "boolean",
                     "default": false
                   },
+                  "deleted_at": {
+                    "oneOf": [
+                      {
+                        "description": "The date when branch was deleted.",
+                        "example": "2023-04-05T16:06:04.849Z",
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
                   "metadata": {
                     "description": "Arbitrary user defined data.",
                     "type": "object",
@@ -3202,6 +3234,12 @@
                         "type": "null"
                       }
                     ]
+                  },
+                  "is_mms": {
+                    "description": "The branch belongs to MMS.",
+                    "example": "false",
+                    "type": "boolean",
+                    "default": false
                   },
                   "cost_center": {
                     "description": "Cost center unique ID",
@@ -3736,6 +3774,19 @@
                     "type": "boolean",
                     "default": false
                   },
+                  "deleted_at": {
+                    "oneOf": [
+                      {
+                        "description": "The date when branch was deleted.",
+                        "example": "2023-04-05T16:06:04.849Z",
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
                   "metadata": {
                     "description": "Arbitrary user defined data.",
                     "type": "object",
@@ -3773,6 +3824,12 @@
                         "type": "null"
                       }
                     ]
+                  },
+                  "is_mms": {
+                    "description": "The branch belongs to MMS.",
+                    "example": "false",
+                    "type": "boolean",
+                    "default": false
                   },
                   "cost_center": {
                     "description": "Cost center unique ID",
