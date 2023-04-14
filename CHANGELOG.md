@@ -1,3 +1,10 @@
+# [6.206.0](https://github.com/tillhub/schemas/compare/v6.205.0...v6.206.0) (2023-04-14)
+
+
+### Features
+
+* **configurations:** tips ([cb8afb7](https://github.com/tillhub/schemas/commit/cb8afb7))
+
 # [6.205.0](https://github.com/tillhub/schemas/compare/v6.204.0...v6.205.0) (2023-04-11)
 
 
