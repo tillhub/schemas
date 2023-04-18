@@ -1,3 +1,10 @@
+# [6.209.0](https://github.com/tillhub/schemas/compare/v6.208.0...v6.209.0) (2023-04-18)
+
+
+### Features
+
+* **pricelists:** schema for new pricelists endpoint ([7254752](https://github.com/tillhub/schemas/commit/7254752))
+
 # [6.208.0](https://github.com/tillhub/schemas/compare/v6.207.0...v6.208.0) (2023-04-18)
 
 

@@ -1,0 +1,769 @@
+{
+  "$id": "https://schemas.tillhub.com/v1/products.pricelist.get-all.response.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "msg": {
+      "type": "string",
+      "minLength": 1,
+      "example": "Queried transactions successfully.",
+      "description": "Any English sentence, meant as information for developers and implementers. Avoid displaying this to the users and especially do not expect those messages to stay stable."
+    },
+    "msg_localised": {
+      "description": "Optional localized message that can be displayed to the user if existing. The language can be set by in the request or will fallback to English.",
+      "example": "Abgefragte Transaktionen erfolgreich.",
+      "type": "string",
+      "minLength": 1
+    },
+    "request": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Information about the request itself.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "The request uuid that can be used to identify and trace API calls.",
+          "format": "uuid"
+        },
+        "host": {
+          "type": "string",
+          "minLength": 1,
+          "example": "https://api.tillhub.com",
+          "description": "Server host and protocol from which request was handled."
+        }
+      }
+    },
+    "count": {
+      "type": "number",
+      "description": "the length of the results array.",
+      "example": 10
+    },
+    "results": {
+      "type": "array",
+      "description": "The envelope of items, that are usually objects. We are generally sending back arrays even if there was just one requested resource.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "product": {
+            "description": "The reference to the product",
+            "type": "string",
+            "format": "uuid"
+          },
+          "type": {
+            "description": "Type of the product prices",
+            "type": "string",
+            "enum": [
+              "scaled",
+              "branch",
+              "time-based"
+            ],
+            "example": "scaled"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2018-11-04T23:18:43.075Z"
+          },
+          "updated_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2018-11-04T23:18:43.075Z"
+          },
+          "deleted": {
+            "type": "boolean",
+            "default": false
+          },
+          "net": {
+            "oneOf": [
+              {
+                "description": "The net sales price is the price without sales tax.",
+                "example": "27633.02",
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1000000,
+                "multipleOf": 0.01
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "gross": {
+            "oneOf": [
+              {
+                "description": "The gross sales price is the price that the customer pays, including sales tax.",
+                "example": "27633.02",
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1000000,
+                "multipleOf": 0.01
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "currency": {
+            "oneOf": [
+              {
+                "type": "string",
+                "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                "example": "EUR",
+                "minLength": 3,
+                "maxLength": 3
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "price_book": {
+            "oneOf": [
+              {
+                "description": "The reference to the price book",
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "quantity": {
+            "oneOf": [
+              {
+                "description": "The price is applied if quantity of items in cart is bigger or equal to this number. If 0, then it represents default pricing.",
+                "type": "number",
+                "minimum": 0,
+                "example": 0
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "date_range": {
+            "oneOf": [
+              {
+                "description": "a single range with optional start and end date",
+                "dateRange": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "enabled"
+                  ],
+                  "properties": {
+                    "enabled": {
+                      "type": "boolean",
+                      "description": "disables or activates the date range",
+                      "default": true
+                    },
+                    "tz": {
+                      "oneOf": [
+                        {
+                          "deprecated": true,
+                          "type": "string",
+                          "description": "specifies the timezone for a data range",
+                          "default": null
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "start": {
+                      "oneOf": [
+                        {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "required": [
+                            "enabled"
+                          ],
+                          "properties": {
+                            "enabled": {
+                              "type": "boolean",
+                              "description": "disables or activates the start of a date range",
+                              "default": true
+                            },
+                            "value": {
+                              "oneOf": [
+                                {
+                                  "type": "string",
+                                  "format": "date-time",
+                                  "description": "starting time of a date range",
+                                  "example": "2021-09-23T08:19:02.059Z",
+                                  "default": null
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            }
+                          }
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "end": {
+                      "oneOf": [
+                        {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "required": [
+                            "enabled"
+                          ],
+                          "properties": {
+                            "enabled": {
+                              "type": "boolean",
+                              "description": "disables or activates the end of a date range",
+                              "default": true
+                            },
+                            "value": {
+                              "oneOf": [
+                                {
+                                  "type": "string",
+                                  "format": "date-time",
+                                  "description": "starting time of a date range",
+                                  "example": "2021-10-03T14:20:31.011Z",
+                                  "default": null
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            }
+                          }
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "day_of_week": {
+            "oneOf": [
+              {
+                "type": "object",
+                "description": "specifies daytime slots based on weekdays",
+                "additionalProperties": false,
+                "required": [
+                  "enabled"
+                ],
+                "properties": {
+                  "enabled": {
+                    "type": "boolean",
+                    "default": true
+                  },
+                  "monday": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                          "slots": {
+                            "oneOf": [
+                              {
+                                "description": "A number of timeslots for a specific day. Not enforced - but overlaps are not encouraged",
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "additionalProperties": false,
+                                  "required": [
+                                    "enabled"
+                                  ],
+                                  "properties": {
+                                    "enabled": {
+                                      "type": "boolean",
+                                      "description": "disables or activates a set slot",
+                                      "default": true
+                                    },
+                                    "start": {
+                                      "oneOf": [
+                                        {
+                                          "type": "string",
+                                          "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]",
+                                          "example": "08:30",
+                                          "description": "daytime for the start of an active time slot",
+                                          "default": "00:00"
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    },
+                                    "end": {
+                                      "oneOf": [
+                                        {
+                                          "type": "string",
+                                          "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]",
+                                          "example": "09:15",
+                                          "description": "daytime for the end of an active time slot",
+                                          "default": "23:59"
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    }
+                                  }
+                                }
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "tuesday": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                          "slots": {
+                            "oneOf": [
+                              {
+                                "description": "A number of timeslots for a specific day. Not enforced - but overlaps are not encouraged",
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "additionalProperties": false,
+                                  "required": [
+                                    "enabled"
+                                  ],
+                                  "properties": {
+                                    "enabled": {
+                                      "type": "boolean",
+                                      "description": "disables or activates a set slot",
+                                      "default": true
+                                    },
+                                    "start": {
+                                      "oneOf": [
+                                        {
+                                          "type": "string",
+                                          "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]",
+                                          "example": "08:30",
+                                          "description": "daytime for the start of an active time slot",
+                                          "default": "00:00"
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    },
+                                    "end": {
+                                      "oneOf": [
+                                        {
+                                          "type": "string",
+                                          "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]",
+                                          "example": "09:15",
+                                          "description": "daytime for the end of an active time slot",
+                                          "default": "23:59"
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    }
+                                  }
+                                }
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "wednesday": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                          "slots": {
+                            "oneOf": [
+                              {
+                                "description": "A number of timeslots for a specific day. Not enforced - but overlaps are not encouraged",
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "additionalProperties": false,
+                                  "required": [
+                                    "enabled"
+                                  ],
+                                  "properties": {
+                                    "enabled": {
+                                      "type": "boolean",
+                                      "description": "disables or activates a set slot",
+                                      "default": true
+                                    },
+                                    "start": {
+                                      "oneOf": [
+                                        {
+                                          "type": "string",
+                                          "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]",
+                                          "example": "08:30",
+                                          "description": "daytime for the start of an active time slot",
+                                          "default": "00:00"
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    },
+                                    "end": {
+                                      "oneOf": [
+                                        {
+                                          "type": "string",
+                                          "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]",
+                                          "example": "09:15",
+                                          "description": "daytime for the end of an active time slot",
+                                          "default": "23:59"
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    }
+                                  }
+                                }
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "thursday": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                          "slots": {
+                            "oneOf": [
+                              {
+                                "description": "A number of timeslots for a specific day. Not enforced - but overlaps are not encouraged",
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "additionalProperties": false,
+                                  "required": [
+                                    "enabled"
+                                  ],
+                                  "properties": {
+                                    "enabled": {
+                                      "type": "boolean",
+                                      "description": "disables or activates a set slot",
+                                      "default": true
+                                    },
+                                    "start": {
+                                      "oneOf": [
+                                        {
+                                          "type": "string",
+                                          "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]",
+                                          "example": "08:30",
+                                          "description": "daytime for the start of an active time slot",
+                                          "default": "00:00"
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    },
+                                    "end": {
+                                      "oneOf": [
+                                        {
+                                          "type": "string",
+                                          "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]",
+                                          "example": "09:15",
+                                          "description": "daytime for the end of an active time slot",
+                                          "default": "23:59"
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    }
+                                  }
+                                }
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "friday": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                          "slots": {
+                            "oneOf": [
+                              {
+                                "description": "A number of timeslots for a specific day. Not enforced - but overlaps are not encouraged",
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "additionalProperties": false,
+                                  "required": [
+                                    "enabled"
+                                  ],
+                                  "properties": {
+                                    "enabled": {
+                                      "type": "boolean",
+                                      "description": "disables or activates a set slot",
+                                      "default": true
+                                    },
+                                    "start": {
+                                      "oneOf": [
+                                        {
+                                          "type": "string",
+                                          "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]",
+                                          "example": "08:30",
+                                          "description": "daytime for the start of an active time slot",
+                                          "default": "00:00"
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    },
+                                    "end": {
+                                      "oneOf": [
+                                        {
+                                          "type": "string",
+                                          "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]",
+                                          "example": "09:15",
+                                          "description": "daytime for the end of an active time slot",
+                                          "default": "23:59"
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    }
+                                  }
+                                }
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "saturday": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                          "slots": {
+                            "oneOf": [
+                              {
+                                "description": "A number of timeslots for a specific day. Not enforced - but overlaps are not encouraged",
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "additionalProperties": false,
+                                  "required": [
+                                    "enabled"
+                                  ],
+                                  "properties": {
+                                    "enabled": {
+                                      "type": "boolean",
+                                      "description": "disables or activates a set slot",
+                                      "default": true
+                                    },
+                                    "start": {
+                                      "oneOf": [
+                                        {
+                                          "type": "string",
+                                          "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]",
+                                          "example": "08:30",
+                                          "description": "daytime for the start of an active time slot",
+                                          "default": "00:00"
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    },
+                                    "end": {
+                                      "oneOf": [
+                                        {
+                                          "type": "string",
+                                          "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]",
+                                          "example": "09:15",
+                                          "description": "daytime for the end of an active time slot",
+                                          "default": "23:59"
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    }
+                                  }
+                                }
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "sunday": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                          "slots": {
+                            "oneOf": [
+                              {
+                                "description": "A number of timeslots for a specific day. Not enforced - but overlaps are not encouraged",
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "additionalProperties": false,
+                                  "required": [
+                                    "enabled"
+                                  ],
+                                  "properties": {
+                                    "enabled": {
+                                      "type": "boolean",
+                                      "description": "disables or activates a set slot",
+                                      "default": true
+                                    },
+                                    "start": {
+                                      "oneOf": [
+                                        {
+                                          "type": "string",
+                                          "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]",
+                                          "example": "08:30",
+                                          "description": "daytime for the start of an active time slot",
+                                          "default": "00:00"
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    },
+                                    "end": {
+                                      "oneOf": [
+                                        {
+                                          "type": "string",
+                                          "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]",
+                                          "example": "09:15",
+                                          "description": "daytime for the end of an active time slot",
+                                          "default": "23:59"
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    }
+                                  }
+                                }
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "cursor": {
+      "type": "object",
+      "description": "Optional cursor in paginated API calls. The cursor next field must be called as fully quantifiable URI in order to hit the next if available.",
+      "additionalProperties": false,
+      "required": [
+        "self"
+      ],
+      "properties": {
+        "next": {
+          "type": "string",
+          "format": "uri",
+          "description": "The URI pointing to the next page.",
+          "example": "https://api.tillhub.com/api/v1/products/061f91a3-eba2-40b8-9a76-115189d6741e?cursor=2018-07-02T21%3A47%3A44.382Z&size=10&cursor_field=updated_at"
+        },
+        "first": {
+          "type": "string",
+          "format": "uri",
+          "description": "The URI pointing to the the first page.",
+          "example": "https://api.tillhub.com/api/v1/products/061f91a3-eba2-40b8-9a76-115189d6741e?cursor=2018-07-02T21%3A47%3A44.382Z&size=10&cursor_field=updated_at"
+        },
+        "self": {
+          "type": "string",
+          "format": "uri",
+          "description": "The URI pointing to this page.",
+          "example": "https://api.tillhub.com/api/v1/products/061f91a3-eba2-40b8-9a76-115189d6741e?cursor=2018-07-02T21%3A47%3A44.382Z&size=10&cursor_field=updated_at"
+        }
+      }
+    }
+  }
+}
