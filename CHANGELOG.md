@@ -1,3 +1,11 @@
+# [6.208.0](https://github.com/tillhub/schemas/compare/v6.207.0...v6.208.0) (2023-04-18)
+
+
+### Features
+
+* **configurations:** tips ([15da363](https://github.com/tillhub/schemas/commit/15da363))
+* **configurations:** tips ([6a85257](https://github.com/tillhub/schemas/commit/6a85257))
+
 # [6.207.0](https://github.com/tillhub/schemas/compare/v6.206.0...v6.207.0) (2023-04-18)
 
 
