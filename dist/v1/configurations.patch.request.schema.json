@@ -2418,6 +2418,24 @@
                 }
               ]
             },
+            "wallets": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "enabled": {
+                      "description": "Specifies if the wallets feature is available.",
+                      "type": "boolean",
+                      "default": false
+                    }
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
             "web_view": {
               "oneOf": [
                 {
