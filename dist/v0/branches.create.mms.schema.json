@@ -49,6 +49,19 @@
         }
       ]
     },
+    "deleted_by": {
+      "oneOf": [
+        {
+          "description": "Last time it was updated in Mms.",
+          "type": "string",
+          "maxLength": 255,
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "scope": {
       "oneOf": [
         {

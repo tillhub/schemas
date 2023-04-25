@@ -1,3 +1,10 @@
+# [6.211.0](https://github.com/tillhub/schemas/compare/v6.210.0...v6.211.0) (2023-04-25)
+
+
+### Features
+
+* **branch-mms:** missing deleted_by ([6683f7d](https://github.com/tillhub/schemas/commit/6683f7d))
+
 # [6.210.0](https://github.com/tillhub/schemas/compare/v6.209.0...v6.210.0) (2023-04-25)
 
 
