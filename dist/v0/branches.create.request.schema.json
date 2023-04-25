@@ -20,6 +20,32 @@
         }
       ]
     },
+    "created_at": {
+      "description": "When the branch was created. It was added for creating branches coming from MMS",
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "date-time",
+          "example": "2019-03-17T21:12:04.849Z"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "updated_at": {
+      "description": "When the branch was last updated. It was added for creating branches coming from MMS",
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "date-time",
+          "example": "2019-03-17T21:12:04.849Z"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "phonenumbers": {
       "description": "A number of valid types of phone numbers for a branch.",
       "anyOf": [

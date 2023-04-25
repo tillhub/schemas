@@ -1,3 +1,11 @@
+# [6.210.0](https://github.com/tillhub/schemas/compare/v6.209.0...v6.210.0) (2023-04-25)
+
+
+### Features
+
+* **branchMms:** update branch & add branchMms ([e9d5821](https://github.com/tillhub/schemas/commit/e9d5821))
+* **mmsbranch:** fix typo ([d35d641](https://github.com/tillhub/schemas/commit/d35d641))
+
 # [6.209.0](https://github.com/tillhub/schemas/compare/v6.208.0...v6.209.0) (2023-04-18)
 
 

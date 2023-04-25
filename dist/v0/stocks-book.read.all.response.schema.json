@@ -2335,16 +2335,30 @@
                     "example": "936835f7-2d75-41d2-9001-38ed6e458328"
                   },
                   "created_at": {
-                    "type": "string",
-                    "format": "date-time",
-                    "example": "2019-03-17T21:12:04.849Z",
-                    "description": "The date and time entity was created"
+                    "description": "When the branch was created. It was added for creating branches coming from MMS",
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2019-03-17T21:12:04.849Z"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
                   },
                   "updated_at": {
-                    "type": "string",
-                    "format": "date-time",
-                    "example": "2019-03-17T21:12:04.849Z",
-                    "description": "The date and time entity was updated"
+                    "description": "When the branch was last updated. It was added for creating branches coming from MMS",
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2019-03-17T21:12:04.849Z"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
                   },
                   "name": {
                     "description": "Any arbitrary name for a branch that can be displayed in applications.",
@@ -2935,16 +2949,30 @@
                     "example": "936835f7-2d75-41d2-9001-38ed6e458328"
                   },
                   "created_at": {
-                    "type": "string",
-                    "format": "date-time",
-                    "example": "2019-03-17T21:12:04.849Z",
-                    "description": "The date and time entity was created"
+                    "description": "When the branch was created. It was added for creating branches coming from MMS",
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2019-03-17T21:12:04.849Z"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
                   },
                   "updated_at": {
-                    "type": "string",
-                    "format": "date-time",
-                    "example": "2019-03-17T21:12:04.849Z",
-                    "description": "The date and time entity was updated"
+                    "description": "When the branch was last updated. It was added for creating branches coming from MMS",
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2019-03-17T21:12:04.849Z"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
                   },
                   "name": {
                     "description": "Any arbitrary name for a branch that can be displayed in applications.",
@@ -3525,16 +3553,30 @@
                     "example": "936835f7-2d75-41d2-9001-38ed6e458328"
                   },
                   "created_at": {
-                    "type": "string",
-                    "format": "date-time",
-                    "example": "2019-03-17T21:12:04.849Z",
-                    "description": "The date and time entity was created"
+                    "description": "When the branch was created. It was added for creating branches coming from MMS",
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2019-03-17T21:12:04.849Z"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
                   },
                   "updated_at": {
-                    "type": "string",
-                    "format": "date-time",
-                    "example": "2019-03-17T21:12:04.849Z",
-                    "description": "The date and time entity was updated"
+                    "description": "When the branch was last updated. It was added for creating branches coming from MMS",
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2019-03-17T21:12:04.849Z"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
                   },
                   "name": {
                     "description": "Any arbitrary name for a branch that can be displayed in applications.",
