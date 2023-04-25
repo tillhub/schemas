@@ -1,3 +1,10 @@
+# [6.212.0](https://github.com/tillhub/schemas/compare/v6.211.0...v6.212.0) (2023-04-25)
+
+
+### Features
+
+* **mmsbranch:** fix objects to arrays & description ([924b5c5](https://github.com/tillhub/schemas/commit/924b5c5))
+
 # [6.211.0](https://github.com/tillhub/schemas/compare/v6.210.0...v6.211.0) (2023-04-25)
 
 

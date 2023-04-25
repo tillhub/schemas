@@ -26,7 +26,7 @@
     "created_by": {
       "oneOf": [
         {
-          "description": "When was created the branch in Mms.",
+          "description": "Who created the branch in Mms.",
           "type": "string",
           "maxLength": 255,
           "minLength": 1
@@ -39,7 +39,7 @@
     "updated_by": {
       "oneOf": [
         {
-          "description": "Last time it was updated in Mms.",
+          "description": "Who updated the branch for the last time in Mms.",
           "type": "string",
           "maxLength": 255,
           "minLength": 1
@@ -52,7 +52,7 @@
     "deleted_by": {
       "oneOf": [
         {
-          "description": "Last time it was updated in Mms.",
+          "description": "Who deleted the branch in Mms.",
           "type": "string",
           "maxLength": 255,
           "minLength": 1
@@ -259,7 +259,10 @@
       "oneOf": [
         {
           "description": "The contacts.",
-          "type": "object"
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
         },
         {
           "type": "null"
@@ -270,7 +273,10 @@
       "oneOf": [
         {
           "description": "The unzer identifier records.",
-          "type": "object"
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
         },
         {
           "type": "null"
@@ -294,7 +300,10 @@
       "oneOf": [
         {
           "description": "The contracts.",
-          "type": "object"
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
         },
         {
           "type": "null"
