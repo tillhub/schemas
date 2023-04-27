@@ -1,3 +1,10 @@
+# [6.213.0](https://github.com/tillhub/schemas/compare/v6.212.0...v6.213.0) (2023-04-27)
+
+
+### Features
+
+* **register:** update register & add mms ([7dd4555](https://github.com/tillhub/schemas/commit/7dd4555))
+
 # [6.212.0](https://github.com/tillhub/schemas/compare/v6.211.0...v6.212.0) (2023-04-25)
 
 

@@ -1,0 +1,277 @@
+{
+  "$id": "https://schemas.tillhub.com/v1/registers.create.mms.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "type": "object",
+  "required": [
+    "register_id"
+  ],
+  "properties": {
+    "register_id": {
+      "description": "The id of the parent register.",
+      "type": "string",
+      "format": "uuid"
+    },
+    "mms_id": {
+      "oneOf": [
+        {
+          "description": "The id of the register that identifies it in Mms.",
+          "type": "string",
+          "format": "uuid"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "created_by": {
+      "oneOf": [
+        {
+          "description": "Who created the register in Mms.",
+          "type": "string",
+          "maxLength": 255,
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "updated_by": {
+      "oneOf": [
+        {
+          "description": "Who updated the register for the last time in Mms.",
+          "type": "string",
+          "maxLength": 255,
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "deleted_by": {
+      "oneOf": [
+        {
+          "description": "Who deleted the register in Mms.",
+          "type": "string",
+          "maxLength": 255,
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "scope": {
+      "oneOf": [
+        {
+          "description": "The scope from Mms.",
+          "type": "string",
+          "format": "uuid"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "attributes": {
+      "oneOf": [
+        {
+          "description": "The attributes of the register.",
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "state": {
+      "oneOf": [
+        {
+          "description": "The state.",
+          "type": "string",
+          "maxLength": 255,
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "type": {
+      "oneOf": [
+        {
+          "description": "The type.",
+          "type": "string",
+          "maxLength": 255,
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "enable_cross_channel_referencing": {
+      "type": "boolean",
+      "default": false
+    },
+    "key_pairs": {
+      "oneOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "payment_products": {
+      "oneOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "urls": {
+      "oneOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "website": {
+      "oneOf": [
+        {
+          "description": "The website.",
+          "type": "string",
+          "maxLength": 255,
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "max_amount_per_txn": {
+      "oneOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "max_amount_per_month": {
+      "oneOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "average_amount_per_month": {
+      "oneOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "average_count_per_month": {
+      "oneOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "min_amount_per_month": {
+      "oneOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "min_amount_per_txn": {
+      "oneOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "pci_level": {
+      "oneOf": [
+        {
+          "description": "The commercial register number.",
+          "type": "string",
+          "maxLength": 255,
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "price_information": {
+      "oneOf": [
+        {
+          "description": "The price information of the register.",
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "mcc": {
+      "oneOf": [
+        {
+          "description": "The mcc of the register.",
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "average_basket_size": {
+      "oneOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  }
+}

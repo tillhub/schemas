@@ -79,6 +79,20 @@
         }
       ]
     },
+    "external_custom_id": {
+      "description": "Unique ID of this branch in external system. Uses for synchronization.",
+      "example": "7882448928329",
+      "anyOf": [
+        {
+          "type": "string",
+          "maxLength": 64,
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "custom_ids": {
       "anyOf": [
         {
@@ -128,6 +142,32 @@
       "description": "Soft delete this register.",
       "type": "boolean",
       "default": false
+    },
+    "created_at": {
+      "oneOf": [
+        {
+          "description": "The date when register was created.",
+          "example": "2023-04-05T16:06:04.849Z",
+          "type": "string",
+          "format": "date-time"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "updated_at": {
+      "oneOf": [
+        {
+          "description": "The date when register was last updated.",
+          "example": "2023-04-05T16:06:04.849Z",
+          "type": "string",
+          "format": "date-time"
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "deleted_at": {
       "oneOf": [
