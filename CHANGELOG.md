@@ -1,3 +1,10 @@
+# [6.214.0](https://github.com/tillhub/schemas/compare/v6.213.0...v6.214.0) (2023-05-02)
+
+
+### Features
+
+* **permissions:** wallets ([392ee87](https://github.com/tillhub/schemas/commit/392ee87))
+
 # [6.213.0](https://github.com/tillhub/schemas/compare/v6.212.0...v6.213.0) (2023-04-27)
 
 

@@ -148,7 +148,15 @@
                   "staff:staff:orders:others:locked:modify",
                   "staff:staff:orders:preview:print",
                   "staff:staff:cart:clear",
-                  "staff:staff:cart:clear:row"
+                  "staff:staff:cart:clear:row",
+                  "staff:staff:wallets",
+                  "staff:staff:wallets:create",
+                  "staff:staff:wallets:update",
+                  "staff:staff:wallets:read",
+                  "staff:staff:wallets:assign",
+                  "staff:staff:wallets:transfer",
+                  "staff:staff:wallets:discrepancy",
+                  "staff:staff:wallets:activation"
                 ]
               },
               {
