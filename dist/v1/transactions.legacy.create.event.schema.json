@@ -40,7 +40,7 @@
     },
     "timestamp": {
       "description": "The date and time event was received by webhooks service",
-      "example": "2023-05-02T08:11:54.287Z",
+      "example": "2023-05-17T11:55:58.643Z",
       "type": "string",
       "format": "date-time"
     },
@@ -1184,6 +1184,18 @@
               "type": "string",
               "format": "uuid",
               "description": "Id of the Tillhub register resource"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "wallet": {
+          "oneOf": [
+            {
+              "type": "string",
+              "format": "uuid",
+              "description": "Id of the Tillhub wallet resource"
             },
             {
               "type": "null"

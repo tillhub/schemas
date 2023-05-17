@@ -1188,6 +1188,18 @@
               }
             ]
           },
+          "wallet": {
+            "oneOf": [
+              {
+                "type": "string",
+                "format": "uuid",
+                "description": "Id of the Tillhub wallet resource"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
           "_type": {
             "oneOf": [
               {

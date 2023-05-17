@@ -40,7 +40,7 @@
     },
     "timestamp": {
       "description": "The date and time event was received by webhooks service",
-      "example": "2023-05-02T08:11:54.244Z",
+      "example": "2023-05-17T11:55:58.600Z",
       "type": "string",
       "format": "date-time"
     },
@@ -2924,6 +2924,111 @@
                       "type": "integer",
                       "example": 234,
                       "description": "Counting number of the last transaction"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "wallet_data": {
+          "oneOf": [
+            {
+              "description": "Balance stats for waiter wallets",
+              "additionalProperties": false,
+              "type": "object",
+              "properties": {
+                "outstanding_total": {
+                  "oneOf": [
+                    {
+                      "description": "Describes a non-negative monetary value in a specific currency.",
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "amount",
+                        "currency"
+                      ],
+                      "properties": {
+                        "currency": {
+                          "type": "string",
+                          "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                          "example": "EUR",
+                          "minLength": 3,
+                          "maxLength": 3
+                        },
+                        "amount": {
+                          "type": "number",
+                          "description": "The value as .2-Decimal.",
+                          "example": "47.02",
+                          "minimum": 0,
+                          "multipleOf": 0.01
+                        }
+                      }
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "wallets": {
+                  "oneOf": [
+                    {
+                      "type": "array",
+                      "description": "Wallet balance objects",
+                      "items": {
+                        "description": "Cash balance for a specific wallet",
+                        "additionalProperties": false,
+                        "type": "object",
+                        "required": [
+                          "id"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "string",
+                            "example": "860defb8-5598-421d-9da4-f0826e767536",
+                            "format": "uuid",
+                            "description": "The Tillhub wallet resource ID"
+                          },
+                          "outstanding": {
+                            "oneOf": [
+                              {
+                                "description": "Describes a non-negative monetary value in a specific currency.",
+                                "type": "object",
+                                "additionalProperties": false,
+                                "required": [
+                                  "amount",
+                                  "currency"
+                                ],
+                                "properties": {
+                                  "currency": {
+                                    "type": "string",
+                                    "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                                    "example": "EUR",
+                                    "minLength": 3,
+                                    "maxLength": 3
+                                  },
+                                  "amount": {
+                                    "type": "number",
+                                    "description": "The value as .2-Decimal.",
+                                    "example": "47.02",
+                                    "minimum": 0,
+                                    "multipleOf": 0.01
+                                  }
+                                }
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
+                      }
                     },
                     {
                       "type": "null"

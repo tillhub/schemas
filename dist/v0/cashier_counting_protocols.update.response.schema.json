@@ -73,6 +73,18 @@
       ],
       "default": null
     },
+    "wallet": {
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "uuid",
+          "description": "Id of the Tillhub wallet resource - applicable to counting type: wallet"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "client_id": {
       "oneOf": [
         {
@@ -890,7 +902,9 @@
       "type": "string",
       "enum": [
         "opening",
-        "cashing_up"
+        "cashing_up",
+        "wallet_open",
+        "wallet_close"
       ]
     },
     "counting_date": {

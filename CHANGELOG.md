@@ -1,3 +1,11 @@
+# [6.215.0](https://github.com/tillhub/schemas/compare/v6.214.0...v6.215.0) (2023-05-17)
+
+
+### Features
+
+* **countings:** protocols ([4e235f0](https://github.com/tillhub/schemas/commit/4e235f0))
+* **wallets:** references ([79f22d5](https://github.com/tillhub/schemas/commit/79f22d5))
+
 # [6.214.0](https://github.com/tillhub/schemas/compare/v6.213.0...v6.214.0) (2023-05-02)
 
 
