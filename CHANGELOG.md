@@ -1,3 +1,13 @@
+# [6.216.0](https://github.com/tillhub/schemas/compare/v6.215.0...v6.216.0) (2023-05-23)
+
+
+### Features
+
+* **configurations:** products ([7454cc0](https://github.com/tillhub/schemas/commit/7454cc0))
+* **configurations:** products ([cf8184c](https://github.com/tillhub/schemas/commit/cf8184c))
+* **configurations:** products ([b5b62d1](https://github.com/tillhub/schemas/commit/b5b62d1))
+* **configurations:** products ([83dc63f](https://github.com/tillhub/schemas/commit/83dc63f))
+
 # [6.215.0](https://github.com/tillhub/schemas/compare/v6.214.0...v6.215.0) (2023-05-17)
 
 

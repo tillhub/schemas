@@ -3012,6 +3012,79 @@
                     }
                   }
                 },
+                "pricelist": {
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "type_precedence": {
+                          "oneOf": [
+                            {
+                              "type": "object",
+                              "additionalProperties": false,
+                              "properties": {
+                                "enabled": {
+                                  "description": "If true - price type precedence should be respected.",
+                                  "type": "boolean",
+                                  "default": true
+                                },
+                                "priorities": {
+                                  "oneOf": [
+                                    {
+                                      "description": "Price types sorted by priority.",
+                                      "type": "array",
+                                      "uniqueItems": true,
+                                      "default": [
+                                        "scaled",
+                                        "time-based",
+                                        "branch"
+                                      ],
+                                      "items": {
+                                        "type": "string",
+                                        "enum": [
+                                          "time-based",
+                                          "branch",
+                                          "scaled"
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                }
+                              }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "conflict_resolution": {
+                          "oneOf": [
+                            {
+                              "type": "string",
+                              "description": "Defines which price is chosen by default when conflicts remain with or without type precedence.",
+                              "default": "lowest_price",
+                              "enum": [
+                                "user",
+                                "lowest_price",
+                                "highest_price"
+                              ]
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
                 "product_id_template": {
                   "description": "A Tillhub string pattern that allows for parameterized product id generation",
                   "oneOf": [
