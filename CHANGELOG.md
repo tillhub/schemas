@@ -1,3 +1,10 @@
+# [6.217.0](https://github.com/tillhub/schemas/compare/v6.216.0...v6.217.0) (2023-05-25)
+
+
+### Features
+
+* **balances:** payments ([a1bd0d2](https://github.com/tillhub/schemas/commit/a1bd0d2))
+
 # [6.216.0](https://github.com/tillhub/schemas/compare/v6.215.0...v6.216.0) (2023-05-23)
 
 

@@ -8397,7 +8397,7 @@
                       "type": "integer",
                       "example": 15,
                       "minimum": 0,
-                      "maximum": 3600,
+                      "maximum": 30,
                       "default": 25
                     }
                   }
@@ -8414,7 +8414,7 @@
                       "type": "integer",
                       "example": 15,
                       "minimum": 0,
-                      "maximum": 3600,
+                      "maximum": 30,
                       "default": 25
                     }
                   }
