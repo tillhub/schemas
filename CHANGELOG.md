@@ -1,3 +1,10 @@
+# [6.219.0](https://github.com/tillhub/schemas/compare/v6.218.0...v6.219.0) (2023-06-13)
+
+
+### Features
+
+* **purchase-orders:** Purchase order pdf generation schema ([#807](https://github.com/tillhub/schemas/issues/807)) ([0728f56](https://github.com/tillhub/schemas/commit/0728f56))
+
 # [6.218.0](https://github.com/tillhub/schemas/compare/v6.217.0...v6.218.0) (2023-06-13)
 
 
