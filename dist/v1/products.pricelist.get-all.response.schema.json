@@ -57,7 +57,8 @@
             "enum": [
               "scaled",
               "branch",
-              "time-based"
+              "time-based",
+              "location-based"
             ],
             "example": "scaled"
           },

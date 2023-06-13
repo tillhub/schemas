@@ -3038,12 +3038,14 @@
                                       "default": [
                                         "scaled",
                                         "time-based",
+                                        "location-based",
                                         "branch"
                                       ],
                                       "items": {
                                         "type": "string",
                                         "enum": [
                                           "time-based",
+                                          "location-based",
                                           "branch",
                                           "scaled"
                                         ]
@@ -9511,6 +9513,74 @@
           "properties": {
             "search_view": {
               "description": "Scan view, should be limited to products/offlineFirst",
+              "type": "object",
+              "properties": {
+                "trigger_action": {
+                  "description": "Trigger a context specific action (e.g. addToCart, refundSale) on a result condition",
+                  "type": "string",
+                  "enum": [
+                    "on_first",
+                    "on_unique",
+                    "on_none"
+                  ]
+                },
+                "no_result_action": {
+                  "description": "Trigger a specific behavior if the search ended without results",
+                  "type": "string",
+                  "enum": [
+                    "none",
+                    "toast",
+                    "modal"
+                  ]
+                },
+                "no_result_sound": {
+                  "description": "If true - triggers a specific sound if the search ended without results",
+                  "type": "boolean",
+                  "default": false
+                },
+                "timeout": {
+                  "description": "Timeout (in seconds) to end a search if there are no results",
+                  "type": "number",
+                  "minimum": 0,
+                  "default": 60
+                },
+                "search_entities": {
+                  "description": "Entities that should be searched in a specific context. Searches will be performed in parallel (within an entity per defined behavior).",
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "type": {
+                        "description": "Searchable entities within the iOS client app",
+                        "type": "string",
+                        "enum": [
+                          "transactions",
+                          "products",
+                          "customers",
+                          "vouchers",
+                          "loyalty_cards",
+                          "hooks"
+                        ]
+                      },
+                      "behavior": {
+                        "description": "Search behavior within a single entity, limited by availability (e.g. vouchers: only online_first)",
+                        "type": "string",
+                        "default": "online_first",
+                        "enum": [
+                          "online_first",
+                          "offline_first",
+                          "online_only",
+                          "offline_only",
+                          "race"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "stock_adjustment": {
+              "description": "Stock adjustment view",
               "type": "object",
               "properties": {
                 "trigger_action": {

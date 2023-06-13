@@ -1,3 +1,13 @@
+# [6.218.0](https://github.com/tillhub/schemas/compare/v6.217.0...v6.218.0) (2023-06-13)
+
+
+### Features
+
+* **search:** added stock adjustment view search configuration ([ba42a12](https://github.com/tillhub/schemas/commit/ba42a12))
+* **UNTIL-6873_pricelist:** add location-based to type_precedence.default ([1f37a81](https://github.com/tillhub/schemas/commit/1f37a81))
+* **UNTIL-6873_pricelist:** add location-based type ([25f6029](https://github.com/tillhub/schemas/commit/25f6029))
+* **UNTIL-6873_pricelist:** add location-based type_precedence ([77c05d4](https://github.com/tillhub/schemas/commit/77c05d4))
+
 # [6.217.0](https://github.com/tillhub/schemas/compare/v6.216.0...v6.217.0) (2023-05-25)
 
 
