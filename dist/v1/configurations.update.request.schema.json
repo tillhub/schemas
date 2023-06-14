@@ -9050,7 +9050,8 @@
                 "none",
                 "optional",
                 "required"
-              ]
+              ],
+              "default": "optional"
             },
             "bank_expense": {
               "description": "Defines if a bank expense is required within conducting the balance (if register cash > 0).",
@@ -9059,7 +9060,8 @@
                 "none",
                 "optional",
                 "required"
-              ]
+              ],
+              "default": "optional"
             },
             "show_account_names": {
               "description": "Defines if account names are shown additionally to the numbers.",
