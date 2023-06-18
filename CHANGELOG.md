@@ -1,3 +1,10 @@
+# [6.221.0](https://github.com/tillhub/schemas/compare/v6.220.0...v6.221.0) (2023-06-18)
+
+
+### Features
+
+* **purchase-orders:** Get full name of user, who creates purchase order ([#811](https://github.com/tillhub/schemas/issues/811)) ([c31f83e](https://github.com/tillhub/schemas/commit/c31f83e))
+
 # [6.220.0](https://github.com/tillhub/schemas/compare/v6.219.0...v6.220.0) (2023-06-14)
 
 

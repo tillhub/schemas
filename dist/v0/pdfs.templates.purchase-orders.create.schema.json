@@ -40,7 +40,14 @@
           ]
         },
         "createdBy": {
-          "type": "string"
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
         },
         "creatorFullName": {
           "type": "string"
@@ -254,7 +261,7 @@
         "company_name"
       ]
     },
-    "businessParnter": {
+    "businessPartner": {
       "type": "object",
       "properties": {
         "id": {
