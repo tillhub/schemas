@@ -457,6 +457,6 @@
   "required": [
     "order",
     "company",
-    "businessParnter"
+    "businessPartner"
   ]
 }

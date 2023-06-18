@@ -1,3 +1,10 @@
+# [6.222.0](https://github.com/tillhub/schemas/compare/v6.221.0...v6.222.0) (2023-06-18)
+
+
+### Features
+
+* **purchase-orders:** Typo fixed ([#812](https://github.com/tillhub/schemas/issues/812)) ([5b92323](https://github.com/tillhub/schemas/commit/5b92323))
+
 # [6.221.0](https://github.com/tillhub/schemas/compare/v6.220.0...v6.221.0) (2023-06-18)
 
 
