@@ -81,11 +81,7 @@
             "companyName": {
               "type": "string"
             }
-          },
-          "required": [
-            "id",
-            "companyName"
-          ]
+          }
         },
         "products": {
           "type": "array",
@@ -126,18 +122,7 @@
                 "totalWithTax": {
                   "type": "integer"
                 }
-              },
-              "required": [
-                "id",
-                "productId",
-                "productName",
-                "price",
-                "vatPercent",
-                "discountPercent",
-                "quantity",
-                "totalUntaxed",
-                "totalWithTax"
-              ]
+              }
             },
             {
               "type": "object",
@@ -175,32 +160,11 @@
                 "totalWithTax": {
                   "type": "integer"
                 }
-              },
-              "required": [
-                "id",
-                "productId",
-                "productName",
-                "price",
-                "vatPercent",
-                "discountPercent",
-                "quantity",
-                "totalUntaxed",
-                "totalWithTax"
-              ]
+              }
             }
           ]
         }
-      },
-      "required": [
-        "id",
-        "purchaseOrderNumber",
-        "notes",
-        "status",
-        "totalAmount",
-        "recipients",
-        "createdBy",
-        "products"
-      ]
+      }
     },
     "company": {
       "type": "object",
@@ -229,15 +193,7 @@
             "street_number": {
               "type": "string"
             }
-          },
-          "required": [
-            "region",
-            "street",
-            "country",
-            "locality",
-            "postal_code",
-            "street_number"
-          ]
+          }
         },
         "lastname": {
           "type": "string"
@@ -251,15 +207,7 @@
         "company_name": {
           "type": "string"
         }
-      },
-      "required": [
-        "vat_id",
-        "address",
-        "lastname",
-        "firstname",
-        "tax_number",
-        "company_name"
-      ]
+      }
     },
     "businessPartner": {
       "type": "object",
@@ -318,11 +266,7 @@
                 "number": {
                   "type": "string"
                 }
-              },
-              "required": [
-                "type",
-                "number"
-              ]
+              }
             }
           ]
         },
@@ -385,18 +329,7 @@
                 "postalCode": {
                   "type": "string"
                 }
-              },
-              "required": [
-                "id",
-                "type",
-                "country",
-                "region",
-                "locality",
-                "street",
-                "streetNumber",
-                "lines",
-                "postalCode"
-              ]
+              }
             }
           ]
         },
@@ -424,39 +357,11 @@
                 "swift": {
                   "type": "string"
                 }
-              },
-              "required": [
-                "id",
-                "name",
-                "iban",
-                "swift"
-              ]
+              }
             }
           ]
         }
-      },
-      "required": [
-        "id",
-        "active",
-        "companyName",
-        "description",
-        "number",
-        "firstName",
-        "lastName",
-        "email",
-        "phoneNumbers",
-        "paymentTerms",
-        "taxNumber",
-        "glnNumber",
-        "taxSubject",
-        "addresses",
-        "bankAccounts"
-      ]
+      }
     }
-  },
-  "required": [
-    "order",
-    "company",
-    "businessPartner"
-  ]
+  }
 }

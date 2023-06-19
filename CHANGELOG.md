@@ -1,3 +1,10 @@
+# [6.223.0](https://github.com/tillhub/schemas/compare/v6.222.0...v6.223.0) (2023-06-19)
+
+
+### Features
+
+* **purchase-orders:** More relaxed schema for purchase orders pdfs ([#815](https://github.com/tillhub/schemas/issues/815)) ([3e8a688](https://github.com/tillhub/schemas/commit/3e8a688))
+
 # [6.222.0](https://github.com/tillhub/schemas/compare/v6.221.0...v6.222.0) (2023-06-18)
 
 
