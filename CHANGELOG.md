@@ -1,3 +1,11 @@
+# [6.224.0](https://github.com/tillhub/schemas/compare/v6.223.0...v6.224.0) (2023-06-20)
+
+
+### Features
+
+* **staff:** added description to field owner ([85bdf1f](https://github.com/tillhub/schemas/commit/85bdf1f))
+* **staff:** added staff type to requests ([3162e9d](https://github.com/tillhub/schemas/commit/3162e9d))
+
 # [6.223.0](https://github.com/tillhub/schemas/compare/v6.222.0...v6.223.0) (2023-06-19)
 
 
