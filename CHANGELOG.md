@@ -1,3 +1,10 @@
+# [6.225.0](https://github.com/tillhub/schemas/compare/v6.224.0...v6.225.0) (2023-06-21)
+
+
+### Features
+
+* **configuration:** custom endpoint printing feature configuration ([14134dd](https://github.com/tillhub/schemas/commit/14134dd))
+
 # [6.224.0](https://github.com/tillhub/schemas/compare/v6.223.0...v6.224.0) (2023-06-20)
 
 

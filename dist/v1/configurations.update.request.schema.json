@@ -2400,6 +2400,38 @@
                 }
               ]
             },
+            "custom_endpoint_printing": {
+              "oneOf": [
+                {
+                  "description": "Custom endpoint printing from cart menu",
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "enabled": {
+                      "description": "Specifies if the feature is available.",
+                      "type": "boolean",
+                      "default": false
+                    },
+                    "url": {
+                      "description": "The URL of the endpoint",
+                      "type": "string",
+                      "format": "uri"
+                    },
+                    "token": {
+                      "description": "Authorization bearer token",
+                      "type": "string"
+                    },
+                    "name": {
+                      "description": "Display name of the action",
+                      "type": "string"
+                    }
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
             "gastro_tables": {
               "oneOf": [
                 {
