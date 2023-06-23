@@ -1,3 +1,10 @@
+# [6.226.0](https://github.com/tillhub/schemas/compare/v6.225.0...v6.226.0) (2023-06-23)
+
+
+### Features
+
+* **configurations:** features ([c6fc993](https://github.com/tillhub/schemas/commit/c6fc993))
+
 # [6.225.0](https://github.com/tillhub/schemas/compare/v6.224.0...v6.225.0) (2023-06-21)
 
 

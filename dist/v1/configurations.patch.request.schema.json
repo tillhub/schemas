@@ -2424,6 +2424,84 @@
                     "name": {
                       "description": "Display name of the action",
                       "type": "string"
+                    },
+                    "date_range": {
+                      "oneOf": [
+                        {
+                          "description": "Defines the maximum range for selectable start and end dates",
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "past": {
+                              "oneOf": [
+                                {
+                                  "description": "Defines a time interval.",
+                                  "type": "object",
+                                  "properties": {
+                                    "unit": {
+                                      "description": "Unit of the interval, defines a timeframe together with the set value.",
+                                      "type": "string",
+                                      "enum": [
+                                        "hours",
+                                        "days",
+                                        "weeks",
+                                        "months",
+                                        "years"
+                                      ],
+                                      "default": "months"
+                                    },
+                                    "value": {
+                                      "description": "The value of the interval, defines a timeframe together with the set unit.",
+                                      "type": "integer",
+                                      "minimum": 1,
+                                      "maximum": 500,
+                                      "default": 2
+                                    }
+                                  }
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "future": {
+                              "oneOf": [
+                                {
+                                  "description": "Defines a time interval.",
+                                  "type": "object",
+                                  "properties": {
+                                    "unit": {
+                                      "description": "Unit of the interval, defines a timeframe together with the set value.",
+                                      "type": "string",
+                                      "enum": [
+                                        "hours",
+                                        "days",
+                                        "weeks",
+                                        "months",
+                                        "years"
+                                      ],
+                                      "default": "months"
+                                    },
+                                    "value": {
+                                      "description": "The value of the interval, defines a timeframe together with the set unit.",
+                                      "type": "integer",
+                                      "minimum": 1,
+                                      "maximum": 500,
+                                      "default": 2
+                                    }
+                                  }
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            }
+                          }
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
                     }
                   }
                 },
