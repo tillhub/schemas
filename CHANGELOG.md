@@ -1,3 +1,10 @@
+# [6.228.0](https://github.com/tillhub/schemas/compare/v6.227.0...v6.228.0) (2023-07-11)
+
+
+### Features
+
+* **webhooks:** added product update event to schema ([edde281](https://github.com/tillhub/schemas/commit/edde281))
+
 # [6.227.0](https://github.com/tillhub/schemas/compare/v6.226.0...v6.227.0) (2023-07-10)
 
 
