@@ -1,3 +1,15 @@
+# [6.230.0](https://github.com/tillhub/schemas/compare/v6.229.0...v6.230.0) (2023-07-14)
+
+
+### Bug Fixes
+
+* **staffs:** linting fix ([0b606e9](https://github.com/tillhub/schemas/commit/0b606e9))
+
+
+### Features
+
+* **staffs:** request schema to update short_code ([ca8c114](https://github.com/tillhub/schemas/commit/ca8c114))
+
 # [6.229.0](https://github.com/tillhub/schemas/compare/v6.228.0...v6.229.0) (2023-07-14)
 
 
