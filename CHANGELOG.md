@@ -1,3 +1,10 @@
+# [6.229.0](https://github.com/tillhub/schemas/compare/v6.228.0...v6.229.0) (2023-07-14)
+
+
+### Features
+
+* **configuration:** tips max factor default value ([acf2c7e](https://github.com/tillhub/schemas/commit/acf2c7e))
+
 # [6.228.0](https://github.com/tillhub/schemas/compare/v6.227.0...v6.228.0) (2023-07-11)
 
 
