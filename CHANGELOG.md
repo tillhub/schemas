@@ -1,3 +1,11 @@
+# [6.235.0](https://github.com/tillhub/schemas/compare/v6.234.0...v6.235.0) (2023-07-20)
+
+
+### Features
+
+* **cartItem:** add external_reference_id ([622af81](https://github.com/tillhub/schemas/commit/622af81))
+* **staffs:** owner ([096aee6](https://github.com/tillhub/schemas/commit/096aee6))
+
 # [6.234.0](https://github.com/tillhub/schemas/compare/v6.233.0...v6.234.0) (2023-07-20)
 
 
