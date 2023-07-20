@@ -550,6 +550,17 @@
               }
             ]
           },
+          "configurations": {
+            "description": "Configurations set",
+            "oneOf": [
+              {
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
           "timezone_default": {
             "description": "An IANA timezone that will be used to display local timezones in documents and UI. Validation for the timezone will happen in memory of the server, but not on that schema.",
             "example": "Europe/London",
@@ -640,17 +651,6 @@
             "oneOf": [
               {
                 "type": "string"
-              },
-              {
-                "type": "null"
-              }
-            ]
-          },
-          "configurations": {
-            "description": "Configurations set",
-            "oneOf": [
-              {
-                "type": "object"
               },
               {
                 "type": "null"

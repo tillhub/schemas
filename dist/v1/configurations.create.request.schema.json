@@ -1812,6 +1812,49 @@
                 }
               ]
             },
+            "short_code_length": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "min": {
+                      "oneOf": [
+                        {
+                          "type": "integer",
+                          "description": "Minimum number of digits for a staff short_code (falsely referred to as pin most of the time).",
+                          "minimum": 1,
+                          "maximum": 10,
+                          "example": 4,
+                          "default": 4
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "max": {
+                      "oneOf": [
+                        {
+                          "type": "integer",
+                          "description": "Maximum number of digits for a staff short_code (falsely referred to as pin most of the time).",
+                          "minimum": 4,
+                          "maximum": 16,
+                          "example": 6,
+                          "default": 6
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
             "staff_number_length": {
               "description": "If the API defines a specific length for a staff number it can be reported here.",
               "oneOf": [
@@ -2373,6 +2416,39 @@
                       "minimum": 2,
                       "maximum": 99,
                       "default": 10
+                    },
+                    "type": {
+                      "oneOf": [
+                        {
+                          "description": "Type of the payback scheme, additional logic might apply.",
+                          "type": "string",
+                          "enum": [
+                            "generic",
+                            "coop"
+                          ],
+                          "default": "generic"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "validation": {
+                      "oneOf": [
+                        {
+                          "description": "Type of the validation.",
+                          "type": "string",
+                          "enum": [
+                            "none",
+                            "offline",
+                            "online"
+                          ],
+                          "default": "none"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
                     }
                   }
                 },
@@ -2392,6 +2468,116 @@
                       "description": "Specifies if the feature is available.",
                       "type": "boolean",
                       "default": false
+                    }
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "custom_endpoint_printing": {
+              "oneOf": [
+                {
+                  "description": "Custom endpoint printing from cart menu",
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "enabled": {
+                      "description": "Specifies if the feature is available.",
+                      "type": "boolean",
+                      "default": false
+                    },
+                    "url": {
+                      "description": "The URL of the endpoint",
+                      "type": "string",
+                      "format": "uri"
+                    },
+                    "token": {
+                      "description": "Authorization bearer token",
+                      "type": "string"
+                    },
+                    "name": {
+                      "description": "Display name of the action",
+                      "type": "string"
+                    },
+                    "date_range": {
+                      "oneOf": [
+                        {
+                          "description": "Defines the maximum range for selectable start and end dates",
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "past": {
+                              "oneOf": [
+                                {
+                                  "description": "Defines a time interval.",
+                                  "type": "object",
+                                  "properties": {
+                                    "unit": {
+                                      "description": "Unit of the interval, defines a timeframe together with the set value.",
+                                      "type": "string",
+                                      "enum": [
+                                        "hours",
+                                        "days",
+                                        "weeks",
+                                        "months",
+                                        "years"
+                                      ],
+                                      "default": "months"
+                                    },
+                                    "value": {
+                                      "description": "The value of the interval, defines a timeframe together with the set unit.",
+                                      "type": "integer",
+                                      "minimum": 1,
+                                      "maximum": 500,
+                                      "default": 2
+                                    }
+                                  }
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "future": {
+                              "oneOf": [
+                                {
+                                  "description": "Defines a time interval.",
+                                  "type": "object",
+                                  "properties": {
+                                    "unit": {
+                                      "description": "Unit of the interval, defines a timeframe together with the set value.",
+                                      "type": "string",
+                                      "enum": [
+                                        "hours",
+                                        "days",
+                                        "weeks",
+                                        "months",
+                                        "years"
+                                      ],
+                                      "default": "months"
+                                    },
+                                    "value": {
+                                      "description": "The value of the interval, defines a timeframe together with the set unit.",
+                                      "type": "integer",
+                                      "minimum": 1,
+                                      "maximum": 500,
+                                      "default": 2
+                                    }
+                                  }
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            }
+                          }
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
                     }
                   }
                 },
@@ -3038,12 +3224,14 @@
                                       "default": [
                                         "scaled",
                                         "time-based",
+                                        "location-based",
                                         "branch"
                                       ],
                                       "items": {
                                         "type": "string",
                                         "enum": [
                                           "time-based",
+                                          "location-based",
                                           "branch",
                                           "scaled"
                                         ]
@@ -9048,7 +9236,8 @@
                 "none",
                 "optional",
                 "required"
-              ]
+              ],
+              "default": "optional"
             },
             "bank_expense": {
               "description": "Defines if a bank expense is required within conducting the balance (if register cash > 0).",
@@ -9057,7 +9246,8 @@
                 "none",
                 "optional",
                 "required"
-              ]
+              ],
+              "default": "optional"
             },
             "show_account_names": {
               "description": "Defines if account names are shown additionally to the numbers.",
@@ -9511,6 +9701,74 @@
           "properties": {
             "search_view": {
               "description": "Scan view, should be limited to products/offlineFirst",
+              "type": "object",
+              "properties": {
+                "trigger_action": {
+                  "description": "Trigger a context specific action (e.g. addToCart, refundSale) on a result condition",
+                  "type": "string",
+                  "enum": [
+                    "on_first",
+                    "on_unique",
+                    "on_none"
+                  ]
+                },
+                "no_result_action": {
+                  "description": "Trigger a specific behavior if the search ended without results",
+                  "type": "string",
+                  "enum": [
+                    "none",
+                    "toast",
+                    "modal"
+                  ]
+                },
+                "no_result_sound": {
+                  "description": "If true - triggers a specific sound if the search ended without results",
+                  "type": "boolean",
+                  "default": false
+                },
+                "timeout": {
+                  "description": "Timeout (in seconds) to end a search if there are no results",
+                  "type": "number",
+                  "minimum": 0,
+                  "default": 60
+                },
+                "search_entities": {
+                  "description": "Entities that should be searched in a specific context. Searches will be performed in parallel (within an entity per defined behavior).",
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "type": {
+                        "description": "Searchable entities within the iOS client app",
+                        "type": "string",
+                        "enum": [
+                          "transactions",
+                          "products",
+                          "customers",
+                          "vouchers",
+                          "loyalty_cards",
+                          "hooks"
+                        ]
+                      },
+                      "behavior": {
+                        "description": "Search behavior within a single entity, limited by availability (e.g. vouchers: only online_first)",
+                        "type": "string",
+                        "default": "online_first",
+                        "enum": [
+                          "online_first",
+                          "offline_first",
+                          "online_only",
+                          "offline_only",
+                          "race"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "stock_adjustment": {
+              "description": "Stock adjustment view",
               "type": "object",
               "properties": {
                 "trigger_action": {

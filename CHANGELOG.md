@@ -1,3 +1,149 @@
+# [6.234.0](https://github.com/tillhub/schemas/compare/v6.233.0...v6.234.0) (2023-07-20)
+
+
+### Bug Fixes
+
+* **pull_request:** append unsaved changes ([ccba782](https://github.com/tillhub/schemas/commit/ccba782))
+
+
+### Features
+
+* **configurations:** staff ([c34faf7](https://github.com/tillhub/schemas/commit/c34faf7))
+* **reasons:** type ([556f700](https://github.com/tillhub/schemas/commit/556f700))
+
+# [6.233.0](https://github.com/tillhub/schemas/compare/v6.232.0...v6.233.0) (2023-07-20)
+
+
+### Features
+
+* **branches:** configurations ([1139fc9](https://github.com/tillhub/schemas/commit/1139fc9))
+* **branches:** fix descriptions ([3c32cb7](https://github.com/tillhub/schemas/commit/3c32cb7))
+* **branches:** make branch name default for store name ([4ce8337](https://github.com/tillhub/schemas/commit/4ce8337))
+* **branches:** simplify schema ([8acf2bf](https://github.com/tillhub/schemas/commit/8acf2bf))
+* **configurations:** add validation type ([1101e41](https://github.com/tillhub/schemas/commit/1101e41))
+* **configurations:** features ([b5c3019](https://github.com/tillhub/schemas/commit/b5c3019))
+* **transactions:** add current point balance ([662a4fb](https://github.com/tillhub/schemas/commit/662a4fb))
+* **transactions:** add status to external rewards ([e777abe](https://github.com/tillhub/schemas/commit/e777abe))
+* **transactions:** delete script ([4423eed](https://github.com/tillhub/schemas/commit/4423eed))
+* **transactions:** external_rewards ([b924c19](https://github.com/tillhub/schemas/commit/b924c19))
+* **transactions:** external_rewards ([4093e53](https://github.com/tillhub/schemas/commit/4093e53))
+* **transactions:** external_rewards: oneOf({ ([2383efa](https://github.com/tillhub/schemas/commit/2383efa))
+* **transactions:** store original campaign multiplier ([6eaa40d](https://github.com/tillhub/schemas/commit/6eaa40d))
+
+# [6.232.0](https://github.com/tillhub/schemas/compare/v6.231.0...v6.232.0) (2023-07-20)
+
+
+### Features
+
+* **products:** configurations ([fdba281](https://github.com/tillhub/schemas/commit/fdba281))
+
+# [6.231.0](https://github.com/tillhub/schemas/compare/v6.230.0...v6.231.0) (2023-07-20)
+
+
+### Features
+
+* **service_categories:** add service_categories.create ([#829](https://github.com/tillhub/schemas/issues/829)) ([fc3e117](https://github.com/tillhub/schemas/commit/fc3e117))
+
+# [6.230.0](https://github.com/tillhub/schemas/compare/v6.229.0...v6.230.0) (2023-07-14)
+
+
+### Bug Fixes
+
+* **staffs:** linting fix ([0b606e9](https://github.com/tillhub/schemas/commit/0b606e9))
+
+
+### Features
+
+* **staffs:** request schema to update short_code ([ca8c114](https://github.com/tillhub/schemas/commit/ca8c114))
+
+# [6.229.0](https://github.com/tillhub/schemas/compare/v6.228.0...v6.229.0) (2023-07-14)
+
+
+### Features
+
+* **configuration:** tips max factor default value ([acf2c7e](https://github.com/tillhub/schemas/commit/acf2c7e))
+
+# [6.228.0](https://github.com/tillhub/schemas/compare/v6.227.0...v6.228.0) (2023-07-11)
+
+
+### Features
+
+* **webhooks:** added product update event to schema ([edde281](https://github.com/tillhub/schemas/commit/edde281))
+
+# [6.227.0](https://github.com/tillhub/schemas/compare/v6.226.0...v6.227.0) (2023-07-10)
+
+
+### Features
+
+* **configurations:** tips ([a6a0ca4](https://github.com/tillhub/schemas/commit/a6a0ca4))
+
+# [6.226.0](https://github.com/tillhub/schemas/compare/v6.225.0...v6.226.0) (2023-06-23)
+
+
+### Features
+
+* **configurations:** features ([c6fc993](https://github.com/tillhub/schemas/commit/c6fc993))
+
+# [6.225.0](https://github.com/tillhub/schemas/compare/v6.224.0...v6.225.0) (2023-06-21)
+
+
+### Features
+
+* **configuration:** custom endpoint printing feature configuration ([14134dd](https://github.com/tillhub/schemas/commit/14134dd))
+
+# [6.224.0](https://github.com/tillhub/schemas/compare/v6.223.0...v6.224.0) (2023-06-20)
+
+
+### Features
+
+* **staff:** added description to field owner ([85bdf1f](https://github.com/tillhub/schemas/commit/85bdf1f))
+* **staff:** added staff type to requests ([3162e9d](https://github.com/tillhub/schemas/commit/3162e9d))
+
+# [6.223.0](https://github.com/tillhub/schemas/compare/v6.222.0...v6.223.0) (2023-06-19)
+
+
+### Features
+
+* **purchase-orders:** More relaxed schema for purchase orders pdfs ([#815](https://github.com/tillhub/schemas/issues/815)) ([3e8a688](https://github.com/tillhub/schemas/commit/3e8a688))
+
+# [6.222.0](https://github.com/tillhub/schemas/compare/v6.221.0...v6.222.0) (2023-06-18)
+
+
+### Features
+
+* **purchase-orders:** Typo fixed ([#812](https://github.com/tillhub/schemas/issues/812)) ([5b92323](https://github.com/tillhub/schemas/commit/5b92323))
+
+# [6.221.0](https://github.com/tillhub/schemas/compare/v6.220.0...v6.221.0) (2023-06-18)
+
+
+### Features
+
+* **purchase-orders:** Get full name of user, who creates purchase order ([#811](https://github.com/tillhub/schemas/issues/811)) ([c31f83e](https://github.com/tillhub/schemas/commit/c31f83e))
+
+# [6.220.0](https://github.com/tillhub/schemas/compare/v6.219.0...v6.220.0) (2023-06-14)
+
+
+### Features
+
+* **configurations:** balances ([9840b4f](https://github.com/tillhub/schemas/commit/9840b4f))
+
+# [6.219.0](https://github.com/tillhub/schemas/compare/v6.218.0...v6.219.0) (2023-06-13)
+
+
+### Features
+
+* **purchase-orders:** Purchase order pdf generation schema ([#807](https://github.com/tillhub/schemas/issues/807)) ([0728f56](https://github.com/tillhub/schemas/commit/0728f56))
+
+# [6.218.0](https://github.com/tillhub/schemas/compare/v6.217.0...v6.218.0) (2023-06-13)
+
+
+### Features
+
+* **search:** added stock adjustment view search configuration ([ba42a12](https://github.com/tillhub/schemas/commit/ba42a12))
+* **UNTIL-6873_pricelist:** add location-based to type_precedence.default ([1f37a81](https://github.com/tillhub/schemas/commit/1f37a81))
+* **UNTIL-6873_pricelist:** add location-based type ([25f6029](https://github.com/tillhub/schemas/commit/25f6029))
+* **UNTIL-6873_pricelist:** add location-based type_precedence ([77c05d4](https://github.com/tillhub/schemas/commit/77c05d4))
+
 # [6.217.0](https://github.com/tillhub/schemas/compare/v6.216.0...v6.217.0) (2023-05-25)
 
 

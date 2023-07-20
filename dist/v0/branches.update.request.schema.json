@@ -503,6 +503,78 @@
         }
       ]
     },
+    "configurations": {
+      "oneOf": [
+        {
+          "description": "Replacement of configuration (unknown usage).",
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "external_rewards": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "coop": {
+                      "oneOf": [
+                        {
+                          "type": "object",
+                          "description": "Branch configuration object for Swiss Coop - data is used on transactions",
+                          "properties": {
+                            "store_eain": {
+                              "type": "string",
+                              "description": "Coop identity of this Tillhub branch.",
+                              "example": "7640147960015"
+                            },
+                            "store_name": {
+                              "oneOf": [
+                                {
+                                  "type": "string",
+                                  "maxLength": 128,
+                                  "description": "Name of this branch within the Coop context.",
+                                  "example": "Coop Supermarkt Riehen Schmiedgasse",
+                                  "default": "{name}"
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "store_sap_number": {
+                              "oneOf": [
+                                {
+                                  "type": "string",
+                                  "pattern": "^[0-9]{4}$",
+                                  "description": "Tillhub branch SAP number if available.",
+                                  "example": "000001"
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            }
+                          }
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "timezone_default": {
       "description": "An IANA timezone that will be used to display local timezones in documents and UI. Validation for the timezone will happen in memory of the server, but not on that schema.",
       "example": "Europe/London",
