@@ -2373,6 +2373,39 @@
                       "minimum": 2,
                       "maximum": 99,
                       "default": 10
+                    },
+                    "type": {
+                      "oneOf": [
+                        {
+                          "description": "Type of the payback scheme, additional logic might apply.",
+                          "type": "string",
+                          "enum": [
+                            "generic",
+                            "coop"
+                          ],
+                          "default": "generic"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "validation": {
+                      "oneOf": [
+                        {
+                          "description": "Type of the validation.",
+                          "type": "string",
+                          "enum": [
+                            "none",
+                            "offline",
+                            "online"
+                          ],
+                          "default": "none"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
                     }
                   }
                 },

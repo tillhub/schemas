@@ -1,3 +1,22 @@
+# [6.233.0](https://github.com/tillhub/schemas/compare/v6.232.0...v6.233.0) (2023-07-20)
+
+
+### Features
+
+* **branches:** configurations ([1139fc9](https://github.com/tillhub/schemas/commit/1139fc9))
+* **branches:** fix descriptions ([3c32cb7](https://github.com/tillhub/schemas/commit/3c32cb7))
+* **branches:** make branch name default for store name ([4ce8337](https://github.com/tillhub/schemas/commit/4ce8337))
+* **branches:** simplify schema ([8acf2bf](https://github.com/tillhub/schemas/commit/8acf2bf))
+* **configurations:** add validation type ([1101e41](https://github.com/tillhub/schemas/commit/1101e41))
+* **configurations:** features ([b5c3019](https://github.com/tillhub/schemas/commit/b5c3019))
+* **transactions:** add current point balance ([662a4fb](https://github.com/tillhub/schemas/commit/662a4fb))
+* **transactions:** add status to external rewards ([e777abe](https://github.com/tillhub/schemas/commit/e777abe))
+* **transactions:** delete script ([4423eed](https://github.com/tillhub/schemas/commit/4423eed))
+* **transactions:** external_rewards ([b924c19](https://github.com/tillhub/schemas/commit/b924c19))
+* **transactions:** external_rewards ([4093e53](https://github.com/tillhub/schemas/commit/4093e53))
+* **transactions:** external_rewards: oneOf({ ([2383efa](https://github.com/tillhub/schemas/commit/2383efa))
+* **transactions:** store original campaign multiplier ([6eaa40d](https://github.com/tillhub/schemas/commit/6eaa40d))
+
 # [6.232.0](https://github.com/tillhub/schemas/compare/v6.231.0...v6.232.0) (2023-07-20)
 
 
