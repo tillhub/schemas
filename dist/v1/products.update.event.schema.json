@@ -40,7 +40,7 @@
     },
     "timestamp": {
       "description": "The date and time event was received by webhooks service",
-      "example": "2023-07-20T11:28:27.591Z",
+      "example": "2023-07-20T18:46:50.462Z",
       "type": "string",
       "format": "date-time"
     },
@@ -1667,6 +1667,88 @@
                 "type": "object",
                 "additionalProperties": true,
                 "properties": {
+                  "external_rewards": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "description": "Can grant external rewards when added to a cart.\n\nNOTE: Should be used sparsely for special campign products that require barcode scanning as sort of campaign activator.\nShould be used for products that are bound to specific branch groups.\nThese products will be currently visible to anyone as there is no dedicated type planned (Summer 2023).",
+                        "additionalProperties": true,
+                        "properties": {
+                          "coop": {
+                            "oneOf": [
+                              {
+                                "type": "object",
+                                "description": "Can grant Coop rewards when added to a cart.",
+                                "properties": {
+                                  "campaign": {
+                                    "oneOf": [
+                                      {
+                                        "type": "object",
+                                        "description": "Can grant Coop campaign rewards when part of an active cart.",
+                                        "properties": {
+                                          "name": {
+                                            "description": "Name of the campaign",
+                                            "type": "string",
+                                            "example": "Super Summer",
+                                            "minLength": 2,
+                                            "maxLength": 24
+                                          },
+                                          "multiplier": {
+                                            "type": "integer",
+                                            "description": "Superpoint multiplier on cart total",
+                                            "minimum": 1,
+                                            "maximum": 100,
+                                            "default": 1
+                                          },
+                                          "date_start": {
+                                            "oneOf": [
+                                              {
+                                                "type": "string",
+                                                "format": "date-time",
+                                                "example": "2023-08-04 12:00:21.165+00",
+                                                "description": "Start date of the campaign",
+                                                "default": null
+                                              },
+                                              {
+                                                "type": "null"
+                                              }
+                                            ]
+                                          },
+                                          "date_end": {
+                                            "oneOf": [
+                                              {
+                                                "type": "string",
+                                                "format": "date-time",
+                                                "example": "2023-10-23 16:51:29.143+00",
+                                                "description": "End date of the campaign",
+                                                "default": null
+                                              },
+                                              {
+                                                "type": "null"
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
+                                  }
+                                }
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
                   "allow_zero_prices": {
                     "deprecated": true,
                     "description": "Allow adding this product to a cart if it has no price.",
@@ -3678,6 +3760,88 @@
                 "type": "object",
                 "additionalProperties": true,
                 "properties": {
+                  "external_rewards": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "description": "Can grant external rewards when added to a cart.\n\nNOTE: Should be used sparsely for special campign products that require barcode scanning as sort of campaign activator.\nShould be used for products that are bound to specific branch groups.\nThese products will be currently visible to anyone as there is no dedicated type planned (Summer 2023).",
+                        "additionalProperties": true,
+                        "properties": {
+                          "coop": {
+                            "oneOf": [
+                              {
+                                "type": "object",
+                                "description": "Can grant Coop rewards when added to a cart.",
+                                "properties": {
+                                  "campaign": {
+                                    "oneOf": [
+                                      {
+                                        "type": "object",
+                                        "description": "Can grant Coop campaign rewards when part of an active cart.",
+                                        "properties": {
+                                          "name": {
+                                            "description": "Name of the campaign",
+                                            "type": "string",
+                                            "example": "Super Summer",
+                                            "minLength": 2,
+                                            "maxLength": 24
+                                          },
+                                          "multiplier": {
+                                            "type": "integer",
+                                            "description": "Superpoint multiplier on cart total",
+                                            "minimum": 1,
+                                            "maximum": 100,
+                                            "default": 1
+                                          },
+                                          "date_start": {
+                                            "oneOf": [
+                                              {
+                                                "type": "string",
+                                                "format": "date-time",
+                                                "example": "2023-08-04 12:00:21.165+00",
+                                                "description": "Start date of the campaign",
+                                                "default": null
+                                              },
+                                              {
+                                                "type": "null"
+                                              }
+                                            ]
+                                          },
+                                          "date_end": {
+                                            "oneOf": [
+                                              {
+                                                "type": "string",
+                                                "format": "date-time",
+                                                "example": "2023-10-23 16:51:29.143+00",
+                                                "description": "End date of the campaign",
+                                                "default": null
+                                              },
+                                              {
+                                                "type": "null"
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
+                                  }
+                                }
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
                   "allow_zero_prices": {
                     "deprecated": true,
                     "description": "Allow adding this product to a cart if it has no price.",

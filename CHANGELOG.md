@@ -1,3 +1,10 @@
+# [6.232.0](https://github.com/tillhub/schemas/compare/v6.231.0...v6.232.0) (2023-07-20)
+
+
+### Features
+
+* **products:** configurations ([fdba281](https://github.com/tillhub/schemas/commit/fdba281))
+
 # [6.231.0](https://github.com/tillhub/schemas/compare/v6.230.0...v6.231.0) (2023-07-20)
 
 
