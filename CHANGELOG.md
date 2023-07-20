@@ -1,3 +1,10 @@
+# [6.231.0](https://github.com/tillhub/schemas/compare/v6.230.0...v6.231.0) (2023-07-20)
+
+
+### Features
+
+* **service_categories:** add service_categories.create ([#829](https://github.com/tillhub/schemas/issues/829)) ([fc3e117](https://github.com/tillhub/schemas/commit/fc3e117))
+
 # [6.230.0](https://github.com/tillhub/schemas/compare/v6.229.0...v6.230.0) (2023-07-14)
 
 
