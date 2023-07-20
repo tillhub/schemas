@@ -1,3 +1,16 @@
+# [6.234.0](https://github.com/tillhub/schemas/compare/v6.233.0...v6.234.0) (2023-07-20)
+
+
+### Bug Fixes
+
+* **pull_request:** append unsaved changes ([ccba782](https://github.com/tillhub/schemas/commit/ccba782))
+
+
+### Features
+
+* **configurations:** staff ([c34faf7](https://github.com/tillhub/schemas/commit/c34faf7))
+* **reasons:** type ([556f700](https://github.com/tillhub/schemas/commit/556f700))
+
 # [6.233.0](https://github.com/tillhub/schemas/compare/v6.232.0...v6.233.0) (2023-07-20)
 
 

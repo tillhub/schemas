@@ -184,6 +184,8 @@
               "refund",
               "pos_price_change",
               "stock_change",
+              "stock_increase",
+              "stock_decrease",
               "expense",
               "deposit"
             ]
