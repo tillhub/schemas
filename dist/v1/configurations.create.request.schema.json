@@ -1449,6 +1449,64 @@
                 "voucher_systems"
               ],
               "default": "configurations"
+            },
+            "fiscally": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "austria": {
+                      "oneOf": [
+                        {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "tid": {
+                              "oneOf": [
+                                {
+                                  "description": "The \"Teilnehmer-Identifikation\" part of the FinanzOnline Cash Register Web Service User (\"Registrierkassen-Webservice-Benutzer\") credential triplet to be provided by the taxpayer",
+                                  "type": "string"
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "benid": {
+                              "oneOf": [
+                                {
+                                  "description": "The \"Benutzer-Identifikation\" part of the FinanzOnline Cash Register Web Service User (\"Registrierkassen-Webservice-Benutzer\") credential triplet to be provided by the taxpayer.",
+                                  "type": "string"
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "pin": {
+                              "oneOf": [
+                                {
+                                  "description": "The \"PIN\" part of the FinanzOnline Cash Register Web Service User (\"Registrierkassen-Webservice-Benutzer\") credential triplet to be provided by the taxpayer.",
+                                  "type": "string"
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            }
+                          }
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
             }
           }
         }

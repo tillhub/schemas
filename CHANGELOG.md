@@ -1,3 +1,10 @@
+# [6.236.0](https://github.com/tillhub/schemas/compare/v6.235.0...v6.236.0) (2023-07-25)
+
+
+### Features
+
+* **settings:** Add fiscalization configuration ([#831](https://github.com/tillhub/schemas/issues/831)) ([6fc4795](https://github.com/tillhub/schemas/commit/6fc4795))
+
 # [6.235.0](https://github.com/tillhub/schemas/compare/v6.234.0...v6.235.0) (2023-07-20)
 
 

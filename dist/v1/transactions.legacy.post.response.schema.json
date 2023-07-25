@@ -1816,10 +1816,10 @@
                                 "oneOf": [
                                   {
                                     "type": "integer",
-                                    "description": "Bonus Points to be booked - Free Points preferred, use 0 here.",
+                                    "description": "Bonus Points to be booked - Free Points preferred, use NULL here untill specified otherwise (2023-07).",
                                     "minimum": -12000,
                                     "maximum": 12000,
-                                    "default": 0
+                                    "default": null
                                   },
                                   {
                                     "type": "null"
@@ -1828,7 +1828,7 @@
                               },
                               "free_points": {
                                 "type": "integer",
-                                "description": "Free Points - preferrably used over Bonus Points.",
+                                "description": "Free Points - preferrably used over Bonus Points. (Current points x campaign multiplier) - refund points",
                                 "minimum": -12000,
                                 "maximum": 12000,
                                 "default": 0
@@ -1837,34 +1837,34 @@
                                 "type": "string",
                                 "format": "date-time",
                                 "example": "2018-01-29T14:55:05.000Z",
-                                "description": "Date of the purchase"
+                                "description": "Date of the purchase = transaction date"
                               },
                               "timestamp_end": {
                                 "type": "string",
                                 "format": "date-time",
                                 "example": "2018-01-29T14:55:05.000Z",
-                                "description": "Date of the purchase"
+                                "description": "Date of the purchase = transaction date"
                               },
                               "total_items": {
                                 "type": "integer",
-                                "description": "Number of cart items in the transaction.",
+                                "description": "Number of cart items in the transaction that are not campaign products or vouchers.",
                                 "minimum": 0,
                                 "maximum": 99
                               },
                               "employee_flag": {
                                 "type": "boolean",
-                                "description": "Marks a Coop employee, not yet relevant.",
+                                "description": "Marks a Coop employee, not yet relevantm, send 'false'.",
                                 "default": false
                               },
                               "total_amount": {
                                 "type": "integer",
-                                "description": "Total value of the sale in Swiss Rappen including all purchased items.",
+                                "description": "Total value of the sale in Swiss Rappen including ALL cart items, including refunds, excluding tips.",
                                 "minimum": -2400000,
                                 "maximum": 2400000
                               },
                               "point_base_amount": {
                                 "type": "integer",
-                                "description": "Total value of the salethat qualifies for superpoints (certain items excluded).",
+                                "description": "'Total value of the sale that qualifies for superpoints (campaign items and vouchers excluded)\n\nas long as net items are not supported this is identical to 'total_amount'.",
                                 "minimum": -2400000,
                                 "maximum": 2400000
                               },
