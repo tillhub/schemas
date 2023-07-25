@@ -1,3 +1,10 @@
+## [6.236.1](https://github.com/tillhub/schemas/compare/v6.236.0...v6.236.1) (2023-07-25)
+
+
+### Bug Fixes
+
+* **service_categories:** allow null description ([#832](https://github.com/tillhub/schemas/issues/832)) ([00704da](https://github.com/tillhub/schemas/commit/00704da))
+
 # [6.236.0](https://github.com/tillhub/schemas/compare/v6.235.0...v6.236.0) (2023-07-25)
 
 
