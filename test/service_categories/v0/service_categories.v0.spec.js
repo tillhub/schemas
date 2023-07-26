@@ -18,3 +18,21 @@ test('Service Categories V0: create response schema validation', t => {
   t.error(error, 'should not get any error')
   t.end()
 })
+
+test('Service Categories V0: update request schema validation', t => {
+  t.plan(2)
+  const updateRequest = require('../../../lib/v0/service_categories').update.request
+  const { valid, error } = validate(updateRequest)
+  t.ok(valid, 'update request schema is valid')
+  t.error(error, 'should not get any error')
+  t.end()
+})
+
+test('Service Categories V0: update response schema validation', t => {
+  t.plan(2)
+  const updateResponse = require('../../../lib/v0/service_categories').update.response
+  const { valid, error } = validate(updateResponse)
+  t.ok(valid, 'update response schema is valid')
+  t.error(error, 'should not get any error')
+  t.end()
+})
