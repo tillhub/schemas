@@ -1,3 +1,10 @@
+# [6.237.0](https://github.com/tillhub/schemas/compare/v6.236.1...v6.237.0) (2023-07-27)
+
+
+### Features
+
+* **reports:** get top products endpoint's filters schema ([f99ca34](https://github.com/tillhub/schemas/commit/f99ca34))
+
 ## [6.236.1](https://github.com/tillhub/schemas/compare/v6.236.0...v6.236.1) (2023-07-25)
 
 
