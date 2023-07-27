@@ -1,3 +1,10 @@
+# [6.238.0](https://github.com/tillhub/schemas/compare/v6.237.0...v6.238.0) (2023-07-27)
+
+
+### Features
+
+* **service_categories:** add schema for PUT service_categories ([#833](https://github.com/tillhub/schemas/issues/833)) ([3e6db9a](https://github.com/tillhub/schemas/commit/3e6db9a))
+
 # [6.237.0](https://github.com/tillhub/schemas/compare/v6.236.1...v6.237.0) (2023-07-27)
 
 
