@@ -1740,7 +1740,7 @@
                         },
                         "point_base_amount": {
                           "type": "integer",
-                          "description": "'Total value of the sale that qualifies for superpoints (campaign items and vouchers excluded)\n\nas long as net items are not supported this is identical to 'total_amount'.",
+                          "description": "'Total value of the sale that qualifies for superpoints (campaign items, tips and vouchers excluded)\n\nas long as net items are not supported this is identical to 'total_amount'.",
                           "minimum": -2400000,
                           "maximum": 2400000
                         },

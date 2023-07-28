@@ -1,3 +1,10 @@
+# [6.239.0](https://github.com/tillhub/schemas/compare/v6.238.0...v6.239.0) (2023-07-28)
+
+
+### Features
+
+* **branches:** external_rewards ([c18a2b8](https://github.com/tillhub/schemas/commit/c18a2b8))
+
 # [6.238.0](https://github.com/tillhub/schemas/compare/v6.237.0...v6.238.0) (2023-07-27)
 
 

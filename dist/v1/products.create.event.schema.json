@@ -40,7 +40,7 @@
     },
     "timestamp": {
       "description": "The date and time event was received by webhooks service",
-      "example": "2023-07-27T11:22:54.824Z",
+      "example": "2023-07-28T08:38:42.575Z",
       "type": "string",
       "format": "date-time"
     },

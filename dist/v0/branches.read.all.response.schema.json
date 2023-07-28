@@ -550,11 +550,59 @@
               }
             ]
           },
-          "configurations": {
-            "description": "Configurations set",
+          "external_rewards": {
             "oneOf": [
               {
-                "type": "object"
+                "description": "Branch specific settinmgs for external reward systems",
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "coop": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "description": "Branch configuration object for Swiss Coop - data is used on transactions",
+                        "properties": {
+                          "store_eain": {
+                            "type": "string",
+                            "description": "Coop identity of this Tillhub branch.",
+                            "example": "7640147960015"
+                          },
+                          "store_name": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "maxLength": 128,
+                                "description": "Name of this branch within the Coop context.",
+                                "example": "Coop Supermarkt Riehen Schmiedgasse",
+                                "default": "{name}"
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          },
+                          "store_sap_number": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "pattern": "^[0-9]{4}$",
+                                "description": "Tillhub branch SAP number if available.",
+                                "example": "000001"
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                }
               },
               {
                 "type": "null"
@@ -651,6 +699,17 @@
             "oneOf": [
               {
                 "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "configurations": {
+            "description": "Configurations set",
+            "oneOf": [
+              {
+                "type": "object"
               },
               {
                 "type": "null"
