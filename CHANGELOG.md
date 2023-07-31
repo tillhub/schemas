@@ -1,3 +1,10 @@
+# [6.240.0](https://github.com/tillhub/schemas/compare/v6.239.0...v6.240.0) (2023-07-31)
+
+
+### Features
+
+* **services:** add schema for POST services ([#836](https://github.com/tillhub/schemas/issues/836)) ([ac40de8](https://github.com/tillhub/schemas/commit/ac40de8))
+
 # [6.239.0](https://github.com/tillhub/schemas/compare/v6.238.0...v6.239.0) (2023-07-28)
 
 
