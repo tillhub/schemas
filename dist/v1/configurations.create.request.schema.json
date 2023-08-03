@@ -2741,7 +2741,8 @@
                       "enum": [
                         "never",
                         "if_missing",
-                        "always"
+                        "always",
+                        "enforce_if_missing"
                       ],
                       "default": "if_missing"
                     },

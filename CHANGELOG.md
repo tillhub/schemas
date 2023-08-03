@@ -1,3 +1,10 @@
+## [6.240.1](https://github.com/tillhub/schemas/compare/v6.240.0...v6.240.1) (2023-08-03)
+
+
+### Bug Fixes
+
+* **services:** add $id and $schema fields ([#838](https://github.com/tillhub/schemas/issues/838)) ([fe7dfc4](https://github.com/tillhub/schemas/commit/fe7dfc4))
+
 # [6.240.0](https://github.com/tillhub/schemas/compare/v6.239.0...v6.240.0) (2023-07-31)
 
 
