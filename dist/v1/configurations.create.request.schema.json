@@ -7762,6 +7762,79 @@
                         }
                       }
                     },
+                    "stock_adjustment": {
+                      "description": "Defines receipt printing for stock adjustments",
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "print_cashier_policy": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if and how the cashier will be printed on the receipt.",
+                              "type": "string",
+                              "enum": [
+                                "number",
+                                "name",
+                                "none",
+                                "first_name",
+                                "last_name"
+                              ]
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_product_description": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the product description will be printed (e.g. just for the customer)",
+                              "type": "boolean",
+                              "default": false
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_product_group": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the product group will be printed (e.g. just for the merchant)",
+                              "type": "boolean",
+                              "default": false
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_product_number": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the product number (in case of options) will be printed (e.g. just for the merchant)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_product_name": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the product name (in case of options) will be printed (e.g. just for the merchant)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        }
+                      }
+                    },
                     "register_opening_protocol": {
                       "description": "Defines receipt printing for balance type transactions, e.g. balance, opening protocol",
                       "type": "object",

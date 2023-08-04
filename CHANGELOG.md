@@ -1,3 +1,11 @@
+# [6.241.0](https://github.com/tillhub/schemas/compare/v6.240.1...v6.241.0) (2023-08-04)
+
+
+### Features
+
+* **configurations:** features ([e642ef1](https://github.com/tillhub/schemas/commit/e642ef1))
+* **configurations:** receipts ([4be436d](https://github.com/tillhub/schemas/commit/4be436d))
+
 ## [6.240.1](https://github.com/tillhub/schemas/compare/v6.240.0...v6.240.1) (2023-08-03)
 
 
