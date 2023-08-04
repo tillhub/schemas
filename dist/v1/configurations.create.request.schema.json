@@ -4651,6 +4651,51 @@
                             }
                           ]
                         },
+                        "external_rewards": {
+                          "oneOf": [
+                            {
+                              "description": "Defines external rewards printing",
+                              "type": "object",
+                              "additionalProperties": false,
+                              "properties": {
+                                "enabled": {
+                                  "description": "States if external rewards information will be printed",
+                                  "type": "boolean",
+                                  "default": false
+                                },
+                                "coop": {
+                                  "oneOf": [
+                                    {
+                                      "description": "Defines external rewards printing for coop",
+                                      "type": "object",
+                                      "additionalProperties": false,
+                                      "properties": {
+                                        "print_balances": {
+                                          "oneOf": [
+                                            {
+                                              "description": "Defines if previous and anticipated balances will be printed",
+                                              "type": "boolean",
+                                              "default": false
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                }
+                              }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
                         "minimize_signing_footer": {
                           "oneOf": [
                             {
@@ -5223,6 +5268,51 @@
                               "description": "Defines if applied vouchers are additionally printed",
                               "type": "boolean",
                               "default": false
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "external_rewards": {
+                          "oneOf": [
+                            {
+                              "description": "Defines external rewards printing",
+                              "type": "object",
+                              "additionalProperties": false,
+                              "properties": {
+                                "enabled": {
+                                  "description": "States if external rewards information will be printed",
+                                  "type": "boolean",
+                                  "default": false
+                                },
+                                "coop": {
+                                  "oneOf": [
+                                    {
+                                      "description": "Defines external rewards printing for coop",
+                                      "type": "object",
+                                      "additionalProperties": false,
+                                      "properties": {
+                                        "print_balances": {
+                                          "oneOf": [
+                                            {
+                                              "description": "Defines if previous and anticipated balances will be printed",
+                                              "type": "boolean",
+                                              "default": false
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                }
+                              }
                             },
                             {
                               "type": "null"
@@ -5807,6 +5897,51 @@
                             }
                           ]
                         },
+                        "external_rewards": {
+                          "oneOf": [
+                            {
+                              "description": "Defines external rewards printing",
+                              "type": "object",
+                              "additionalProperties": false,
+                              "properties": {
+                                "enabled": {
+                                  "description": "States if external rewards information will be printed",
+                                  "type": "boolean",
+                                  "default": false
+                                },
+                                "coop": {
+                                  "oneOf": [
+                                    {
+                                      "description": "Defines external rewards printing for coop",
+                                      "type": "object",
+                                      "additionalProperties": false,
+                                      "properties": {
+                                        "print_balances": {
+                                          "oneOf": [
+                                            {
+                                              "description": "Defines if previous and anticipated balances will be printed",
+                                              "type": "boolean",
+                                              "default": false
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                }
+                              }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
                         "minimize_signing_footer": {
                           "oneOf": [
                             {
@@ -6379,6 +6514,51 @@
                               "description": "Defines if applied vouchers are additionally printed",
                               "type": "boolean",
                               "default": false
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "external_rewards": {
+                          "oneOf": [
+                            {
+                              "description": "Defines external rewards printing",
+                              "type": "object",
+                              "additionalProperties": false,
+                              "properties": {
+                                "enabled": {
+                                  "description": "States if external rewards information will be printed",
+                                  "type": "boolean",
+                                  "default": false
+                                },
+                                "coop": {
+                                  "oneOf": [
+                                    {
+                                      "description": "Defines external rewards printing for coop",
+                                      "type": "object",
+                                      "additionalProperties": false,
+                                      "properties": {
+                                        "print_balances": {
+                                          "oneOf": [
+                                            {
+                                              "description": "Defines if previous and anticipated balances will be printed",
+                                              "type": "boolean",
+                                              "default": false
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                }
+                              }
                             },
                             {
                               "type": "null"
@@ -6963,6 +7143,51 @@
                             }
                           ]
                         },
+                        "external_rewards": {
+                          "oneOf": [
+                            {
+                              "description": "Defines external rewards printing",
+                              "type": "object",
+                              "additionalProperties": false,
+                              "properties": {
+                                "enabled": {
+                                  "description": "States if external rewards information will be printed",
+                                  "type": "boolean",
+                                  "default": false
+                                },
+                                "coop": {
+                                  "oneOf": [
+                                    {
+                                      "description": "Defines external rewards printing for coop",
+                                      "type": "object",
+                                      "additionalProperties": false,
+                                      "properties": {
+                                        "print_balances": {
+                                          "oneOf": [
+                                            {
+                                              "description": "Defines if previous and anticipated balances will be printed",
+                                              "type": "boolean",
+                                              "default": false
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                }
+                              }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
                         "minimize_signing_footer": {
                           "oneOf": [
                             {
@@ -7535,6 +7760,51 @@
                               "description": "Defines if applied vouchers are additionally printed",
                               "type": "boolean",
                               "default": false
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "external_rewards": {
+                          "oneOf": [
+                            {
+                              "description": "Defines external rewards printing",
+                              "type": "object",
+                              "additionalProperties": false,
+                              "properties": {
+                                "enabled": {
+                                  "description": "States if external rewards information will be printed",
+                                  "type": "boolean",
+                                  "default": false
+                                },
+                                "coop": {
+                                  "oneOf": [
+                                    {
+                                      "description": "Defines external rewards printing for coop",
+                                      "type": "object",
+                                      "additionalProperties": false,
+                                      "properties": {
+                                        "print_balances": {
+                                          "oneOf": [
+                                            {
+                                              "description": "Defines if previous and anticipated balances will be printed",
+                                              "type": "boolean",
+                                              "default": false
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                }
+                              }
                             },
                             {
                               "type": "null"
