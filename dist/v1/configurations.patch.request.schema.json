@@ -8615,20 +8615,43 @@
       ]
     },
     "carts": {
-      "anyOf": [
-        {
-          "type": "null"
-        },
+      "oneOf": [
         {
           "type": "object",
           "additionalProperties": false,
           "properties": {
             "clear_confirmation": {
-              "description": "Specifies if clearing the cart must be confirmed.",
-              "type": "boolean",
-              "default": true
+              "oneOf": [
+                {
+                  "description": "Specifies if clearing the cart must be confirmed.",
+                  "type": "boolean",
+                  "default": true
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "item_merge_policy": {
+              "oneOf": [
+                {
+                  "description": "Specifies how newly added products get merged into existing cart items.",
+                  "type": "string",
+                  "enum": [
+                    "none",
+                    "full"
+                  ],
+                  "default": "full"
+                },
+                {
+                  "type": "null"
+                }
+              ]
             }
           }
+        },
+        {
+          "type": "null"
         }
       ]
     },

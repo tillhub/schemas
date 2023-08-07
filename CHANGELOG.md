@@ -1,3 +1,10 @@
+# [6.243.0](https://github.com/tillhub/schemas/compare/v6.242.1...v6.243.0) (2023-08-07)
+
+
+### Features
+
+* **configurations:** carts ([cc14566](https://github.com/tillhub/schemas/commit/cc14566))
+
 ## [6.242.1](https://github.com/tillhub/schemas/compare/v6.242.0...v6.242.1) (2023-08-07)
 
 
