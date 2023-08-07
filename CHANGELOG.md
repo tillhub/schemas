@@ -1,3 +1,10 @@
+## [6.242.1](https://github.com/tillhub/schemas/compare/v6.242.0...v6.242.1) (2023-08-07)
+
+
+### Bug Fixes
+
+* **configurations:** staff ([dd2cc5f](https://github.com/tillhub/schemas/commit/dd2cc5f))
+
 # [6.242.0](https://github.com/tillhub/schemas/compare/v6.241.0...v6.242.0) (2023-08-04)
 
 
