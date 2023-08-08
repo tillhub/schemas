@@ -1,3 +1,10 @@
+# [6.244.0](https://github.com/tillhub/schemas/compare/v6.243.0...v6.244.0) (2023-08-08)
+
+
+### Features
+
+* **configurations:** warehub ([0bc99e7](https://github.com/tillhub/schemas/commit/0bc99e7))
+
 # [6.243.0](https://github.com/tillhub/schemas/compare/v6.242.1...v6.243.0) (2023-08-07)
 
 

@@ -10864,10 +10864,24 @@
     "warehub": {
       "oneOf": [
         {
-          "type": "null"
+          "type": "object",
+          "properties": {
+            "product_match_required": {
+              "oneOf": [
+                {
+                  "description": "If true - allow only barcodes that match an existing product.",
+                  "type": "boolean",
+                  "default": false
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
         },
         {
-          "type": "object"
+          "type": "null"
         }
       ]
     },
