@@ -1,3 +1,10 @@
+# [6.245.0](https://github.com/tillhub/schemas/compare/v6.244.0...v6.245.0) (2023-08-09)
+
+
+### Features
+
+* **configurations:** staff ([d4226a8](https://github.com/tillhub/schemas/commit/d4226a8))
+
 # [6.244.0](https://github.com/tillhub/schemas/compare/v6.243.0...v6.244.0) (2023-08-08)
 
 
