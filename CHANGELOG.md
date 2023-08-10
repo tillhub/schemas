@@ -1,3 +1,15 @@
+# [6.246.0](https://github.com/tillhub/schemas/compare/v6.245.0...v6.246.0) (2023-08-10)
+
+
+### Bug Fixes
+
+* **pricebook:** comma trailing ([53de471](https://github.com/tillhub/schemas/commit/53de471))
+
+
+### Features
+
+* **pricebook:** Duplicate the pricebook ([#843](https://github.com/tillhub/schemas/issues/843)) ([700e939](https://github.com/tillhub/schemas/commit/700e939))
+
 # [6.245.0](https://github.com/tillhub/schemas/compare/v6.244.0...v6.245.0) (2023-08-09)
 
 
