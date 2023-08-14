@@ -1,3 +1,10 @@
+# [6.248.0](https://github.com/tillhub/schemas/compare/v6.247.0...v6.248.0) (2023-08-14)
+
+
+### Features
+
+* **stock-book:** removed stock quantity from schema ([e11acff](https://github.com/tillhub/schemas/commit/e11acff))
+
 # [6.247.0](https://github.com/tillhub/schemas/compare/v6.246.0...v6.247.0) (2023-08-14)
 
 

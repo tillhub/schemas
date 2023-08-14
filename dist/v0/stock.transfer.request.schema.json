@@ -9,11 +9,6 @@
     "locationId"
   ],
   "properties": {
-    "stock_quantity": {
-      "type": "string",
-      "pattern": "^[0-9]+$",
-      "description": "The quantity of stock we want to book"
-    },
     "productId": {
       "type": "string",
       "format": "uuid",
