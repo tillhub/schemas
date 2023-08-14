@@ -1636,7 +1636,7 @@
                                         "type": "string",
                                         "example": "Super Summer",
                                         "minLength": 2,
-                                        "maxLength": 24
+                                        "maxLength": 128
                                       },
                                       "multiplier": {
                                         "type": "integer",

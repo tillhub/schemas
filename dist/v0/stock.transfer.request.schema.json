@@ -4,101 +4,30 @@
   "additionalProperties": false,
   "type": "object",
   "required": [
-    "qty",
-    "product",
-    "from",
-    "to"
+    "stock_quantity",
+    "productId",
+    "locationId"
   ],
   "properties": {
-    "qty": {
-      "type": "number"
-    },
-    "product": {
+    "stock_quantity": {
       "type": "string",
-      "format": "uuid"
+      "pattern": "^[0-9]+$",
+      "description": "The quantity of stock we want to book"
     },
-    "from": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "id": {
-          "type": "string",
-          "description": "Alphanumeric uuid of the location, e.g. branch uuid or warehouse uuid",
-          "format": "uuid"
-        },
-        "location_type": {
-          "description": "Location type",
-          "type": "string",
-          "enum": [
-            "client",
-            "branch",
-            "warehouse",
-            "warehouse_shelf"
-          ]
-        }
-      },
-      "required": [
-        "id"
-      ]
+    "productId": {
+      "type": "string",
+      "format": "uuid",
+      "description": "The product which stock will be affected"
     },
-    "to": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "id": {
-          "type": "string",
-          "description": "Alphanumeric uuid of the location, e.g. branch uuid or warehouse uuid",
-          "format": "uuid"
-        },
-        "location_type": {
-          "description": "Location type",
-          "type": "string",
-          "enum": [
-            "client",
-            "branch",
-            "warehouse",
-            "warehouse_shelf"
-          ]
-        }
-      },
-      "required": [
-        "id"
-      ]
+    "locationId": {
+      "type": "string",
+      "format": "uuid",
+      "description": "The location the stock will be booked at"
     },
-    "reasons": {
-      "oneOf": [
-        {
-          "description": "Deprecated property. Use reason instead.",
-          "type": "string",
-          "format": "uuid"
-        },
-        {
-          "type": "null"
-        }
-      ]
-    },
-    "reason": {
-      "oneOf": [
-        {
-          "type": "string",
-          "format": "uuid"
-        },
-        {
-          "type": "null"
-        }
-      ]
-    },
-    "comments": {
-      "oneOf": [
-        {
-          "type": "string",
-          "minLength": 1,
-          "maxLength": 2048
-        },
-        {
-          "type": "null"
-        }
-      ]
+    "reasonId": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Reason id to retrieve reason name that will be used"
     }
   }
 }

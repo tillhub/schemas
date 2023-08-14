@@ -40,7 +40,7 @@
     },
     "timestamp": {
       "description": "The date and time event was received by webhooks service",
-      "example": "2023-08-10T07:42:14.567Z",
+      "example": "2023-08-14T10:19:24.554Z",
       "type": "string",
       "format": "date-time"
     },
@@ -1691,7 +1691,7 @@
                                             "type": "string",
                                             "example": "Super Summer",
                                             "minLength": 2,
-                                            "maxLength": 24
+                                            "maxLength": 128
                                           },
                                           "multiplier": {
                                             "type": "integer",
@@ -3784,7 +3784,7 @@
                                             "type": "string",
                                             "example": "Super Summer",
                                             "minLength": 2,
-                                            "maxLength": 24
+                                            "maxLength": 128
                                           },
                                           "multiplier": {
                                             "type": "integer",

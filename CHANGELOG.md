@@ -1,3 +1,15 @@
+# [6.247.0](https://github.com/tillhub/schemas/compare/v6.246.0...v6.247.0) (2023-08-14)
+
+
+### Bug Fixes
+
+* **products:** configurations ([bfffb54](https://github.com/tillhub/schemas/commit/bfffb54))
+
+
+### Features
+
+* **stock-book:** added schema for getting stock booking necessary data ([cc5d31a](https://github.com/tillhub/schemas/commit/cc5d31a))
+
 # [6.246.0](https://github.com/tillhub/schemas/compare/v6.245.0...v6.246.0) (2023-08-10)
 
 
