@@ -1,3 +1,10 @@
+# [6.249.0](https://github.com/tillhub/schemas/compare/v6.248.0...v6.249.0) (2023-08-14)
+
+
+### Features
+
+* **stock-book:** removed stock quantity from request ([dcac61d](https://github.com/tillhub/schemas/commit/dcac61d))
+
 # [6.248.0](https://github.com/tillhub/schemas/compare/v6.247.0...v6.248.0) (2023-08-14)
 
 
