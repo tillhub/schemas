@@ -1,3 +1,10 @@
+## [6.252.1](https://github.com/tillhub/schemas/compare/v6.252.0...v6.252.1) (2023-08-21)
+
+
+### Bug Fixes
+
+* **customers:** base ([6233e17](https://github.com/tillhub/schemas/commit/6233e17))
+
 # [6.252.0](https://github.com/tillhub/schemas/compare/v6.251.0...v6.252.0) (2023-08-21)
 
 
