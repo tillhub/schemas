@@ -1,3 +1,10 @@
+# [6.250.0](https://github.com/tillhub/schemas/compare/v6.249.0...v6.250.0) (2023-08-21)
+
+
+### Features
+
+* **pricebooks:** maximum 5 elements filter ([2c6724b](https://github.com/tillhub/schemas/commit/2c6724b))
+
 # [6.249.0](https://github.com/tillhub/schemas/compare/v6.248.0...v6.249.0) (2023-08-14)
 
 
