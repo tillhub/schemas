@@ -1,3 +1,26 @@
+# [6.252.0](https://github.com/tillhub/schemas/compare/v6.251.0...v6.252.0) (2023-08-21)
+
+
+### Features
+
+* **analytics:** change created_at, updated_at to dateObject ([d9f9af8](https://github.com/tillhub/schemas/commit/d9f9af8))
+* **analytics:** start, end ([bff0469](https://github.com/tillhub/schemas/commit/bff0469))
+* **analytics:** use dateObject for start, end ([745f108](https://github.com/tillhub/schemas/commit/745f108))
+
+# [6.251.0](https://github.com/tillhub/schemas/compare/v6.250.0...v6.251.0) (2023-08-21)
+
+
+### Features
+
+* **favourites:** tab ([f775dae](https://github.com/tillhub/schemas/commit/f775dae))
+
+# [6.250.0](https://github.com/tillhub/schemas/compare/v6.249.0...v6.250.0) (2023-08-21)
+
+
+### Features
+
+* **pricebooks:** maximum 5 elements filter ([2c6724b](https://github.com/tillhub/schemas/commit/2c6724b))
+
 # [6.249.0](https://github.com/tillhub/schemas/compare/v6.248.0...v6.249.0) (2023-08-14)
 
 
