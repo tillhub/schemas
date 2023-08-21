@@ -16,7 +16,11 @@
           "name": {
             "oneOf": [
               {
-                "type": "string"
+                "type": "string",
+                "maxLength": 128,
+                "description": "Name of this favourite-tab.",
+                "example": "Drinks",
+                "default": null
               },
               {
                 "type": "null"
@@ -76,7 +80,6 @@
           }
         },
         "required": [
-          "name",
           "client_id",
           "order_index",
           "items"

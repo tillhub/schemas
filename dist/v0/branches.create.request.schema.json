@@ -549,7 +549,10 @@
                         }
                       ]
                     }
-                  }
+                  },
+                  "required": [
+                    "store_eain"
+                  ]
                 },
                 {
                   "type": "null"

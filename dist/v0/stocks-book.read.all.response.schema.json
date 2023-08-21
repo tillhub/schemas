@@ -2959,7 +2959,10 @@
                                       }
                                     ]
                                   }
-                                }
+                                },
+                                "required": [
+                                  "store_eain"
+                                ]
                               },
                               {
                                 "type": "null"
@@ -3632,7 +3635,10 @@
                                       }
                                     ]
                                   }
-                                }
+                                },
+                                "required": [
+                                  "store_eain"
+                                ]
                               },
                               {
                                 "type": "null"
@@ -4295,7 +4301,10 @@
                                       }
                                     ]
                                   }
-                                }
+                                },
+                                "required": [
+                                  "store_eain"
+                                ]
                               },
                               {
                                 "type": "null"

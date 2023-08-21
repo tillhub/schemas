@@ -1,3 +1,10 @@
+# [6.251.0](https://github.com/tillhub/schemas/compare/v6.250.0...v6.251.0) (2023-08-21)
+
+
+### Features
+
+* **favourites:** tab ([f775dae](https://github.com/tillhub/schemas/commit/f775dae))
+
 # [6.250.0](https://github.com/tillhub/schemas/compare/v6.249.0...v6.250.0) (2023-08-21)
 
 
