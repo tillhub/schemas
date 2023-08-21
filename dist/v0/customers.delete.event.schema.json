@@ -40,7 +40,7 @@
     },
     "timestamp": {
       "description": "The date and time event was received by webhooks service",
-      "example": "2023-08-21T09:09:11.781Z",
+      "example": "2023-08-21T10:16:43.131Z",
       "type": "string",
       "format": "date-time"
     },
@@ -760,6 +760,31 @@
               "type": "string",
               "maxLength": 20,
               "minLength": 5
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "source": {
+          "description": "Customer source of creation",
+          "example": "N/A, DASHBOARD, APPOINTMENT_CALENDAR, WEB_RESERVATION, POS",
+          "oneOf": [
+            {
+              "type": "string",
+              "maxLength": 128
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "branch_id": {
+          "description": "in cases where the customer is created via the POS, the branch_id is required",
+          "oneOf": [
+            {
+              "type": "string",
+              "format": "uuid"
             },
             {
               "type": "null"
