@@ -1,3 +1,12 @@
+# [6.252.0](https://github.com/tillhub/schemas/compare/v6.251.0...v6.252.0) (2023-08-21)
+
+
+### Features
+
+* **analytics:** change created_at, updated_at to dateObject ([d9f9af8](https://github.com/tillhub/schemas/commit/d9f9af8))
+* **analytics:** start, end ([bff0469](https://github.com/tillhub/schemas/commit/bff0469))
+* **analytics:** use dateObject for start, end ([745f108](https://github.com/tillhub/schemas/commit/745f108))
+
 # [6.251.0](https://github.com/tillhub/schemas/compare/v6.250.0...v6.251.0) (2023-08-21)
 
 
