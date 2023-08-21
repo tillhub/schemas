@@ -764,6 +764,31 @@
               }
             ]
           },
+          "source": {
+            "description": "Customer source of creation",
+            "example": "N/A, DASHBOARD, APPOINTMENT_CALENDAR, WEB_RESERVATION, POS",
+            "oneOf": [
+              {
+                "type": "string",
+                "maxLength": 128
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "branch_id": {
+            "description": "in cases where the customer is created via the POS, the branch_id is required",
+            "oneOf": [
+              {
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
           "insert_id": {
             "description": "Sequential customer index",
             "type": "integer"
