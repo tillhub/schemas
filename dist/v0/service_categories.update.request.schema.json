@@ -1,0 +1,144 @@
+{
+  "$id": "https://schemas.tillhub.com/v0/service_categories.update.request.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "name": {
+      "anyOf": [
+        {
+          "description": "Product group name",
+          "type": "string",
+          "example": "Beverages"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "product_group_id": {
+      "description": "Product group ID",
+      "type": "string",
+      "example": "42"
+    },
+    "tax": {
+      "oneOf": [
+        {
+          "description": "Product group tax rate reference",
+          "type": "string",
+          "example": "f5cf4198-ae26-463f-aa2b-014bd2fed8e5"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "active": {
+      "description": "Soft disable or enable this service category.",
+      "type": "boolean",
+      "default": true
+    },
+    "account": {
+      "oneOf": [
+        {
+          "description": "Product group revenue account reference",
+          "type": "string",
+          "example": "6ad04406-683c-4255-822a-3acd694d2ad1"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "takeaway_tax": {
+      "oneOf": [
+        {
+          "description": "The reference to the takeaway tax rate to use it for calculation instead of the regular tax during takeaway checkout process",
+          "type": "string",
+          "format": "uuid",
+          "example": "4936a0c4-d266-4950-9c4d-03c5207ccf96"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "takeaway_account": {
+      "oneOf": [
+        {
+          "description": "The reference to the takeaway revenue account to use it instead of the regular revenue account during takeaway checkout process",
+          "type": "string",
+          "format": "uuid",
+          "example": "921ec83d-c08b-411a-96d8-355f354d790d"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "images": {
+      "anyOf": [
+        {
+          "description": "A Tillhub image object with URLs to display images this for this product group",
+          "type": "object",
+          "additionalProperties": true,
+          "properties": {
+            "1x": {
+              "type": "string",
+              "format": "uri"
+            },
+            "2x": {
+              "type": "string",
+              "format": "uri"
+            },
+            "3x": {
+              "type": "string",
+              "format": "uri"
+            },
+            "avatar": {
+              "type": "string",
+              "format": "uri"
+            },
+            "original": {
+              "type": "string",
+              "format": "uri"
+            }
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "color": {
+      "oneOf": [
+        {
+          "description": "Product group color",
+          "type": "string",
+          "maxLength": 10
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "description": {
+      "oneOf": [
+        {
+          "description": "A description of the service category",
+          "type": "string",
+          "example": "Haircuts for men"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "deleted": {
+      "description": "Soft delete this service category.",
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": []
+}

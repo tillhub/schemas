@@ -1,3 +1,279 @@
+## [6.252.1](https://github.com/tillhub/schemas/compare/v6.252.0...v6.252.1) (2023-08-21)
+
+
+### Bug Fixes
+
+* **customers:** base ([6233e17](https://github.com/tillhub/schemas/commit/6233e17))
+
+# [6.252.0](https://github.com/tillhub/schemas/compare/v6.251.0...v6.252.0) (2023-08-21)
+
+
+### Features
+
+* **analytics:** change created_at, updated_at to dateObject ([d9f9af8](https://github.com/tillhub/schemas/commit/d9f9af8))
+* **analytics:** start, end ([bff0469](https://github.com/tillhub/schemas/commit/bff0469))
+* **analytics:** use dateObject for start, end ([745f108](https://github.com/tillhub/schemas/commit/745f108))
+
+# [6.251.0](https://github.com/tillhub/schemas/compare/v6.250.0...v6.251.0) (2023-08-21)
+
+
+### Features
+
+* **favourites:** tab ([f775dae](https://github.com/tillhub/schemas/commit/f775dae))
+
+# [6.250.0](https://github.com/tillhub/schemas/compare/v6.249.0...v6.250.0) (2023-08-21)
+
+
+### Features
+
+* **pricebooks:** maximum 5 elements filter ([2c6724b](https://github.com/tillhub/schemas/commit/2c6724b))
+
+# [6.249.0](https://github.com/tillhub/schemas/compare/v6.248.0...v6.249.0) (2023-08-14)
+
+
+### Features
+
+* **stock-book:** removed stock quantity from request ([dcac61d](https://github.com/tillhub/schemas/commit/dcac61d))
+
+# [6.248.0](https://github.com/tillhub/schemas/compare/v6.247.0...v6.248.0) (2023-08-14)
+
+
+### Features
+
+* **stock-book:** removed stock quantity from schema ([e11acff](https://github.com/tillhub/schemas/commit/e11acff))
+
+# [6.247.0](https://github.com/tillhub/schemas/compare/v6.246.0...v6.247.0) (2023-08-14)
+
+
+### Bug Fixes
+
+* **products:** configurations ([bfffb54](https://github.com/tillhub/schemas/commit/bfffb54))
+
+
+### Features
+
+* **stock-book:** added schema for getting stock booking necessary data ([cc5d31a](https://github.com/tillhub/schemas/commit/cc5d31a))
+
+# [6.246.0](https://github.com/tillhub/schemas/compare/v6.245.0...v6.246.0) (2023-08-10)
+
+
+### Bug Fixes
+
+* **pricebook:** comma trailing ([53de471](https://github.com/tillhub/schemas/commit/53de471))
+
+
+### Features
+
+* **pricebook:** Duplicate the pricebook ([#843](https://github.com/tillhub/schemas/issues/843)) ([700e939](https://github.com/tillhub/schemas/commit/700e939))
+
+# [6.245.0](https://github.com/tillhub/schemas/compare/v6.244.0...v6.245.0) (2023-08-09)
+
+
+### Features
+
+* **configurations:** staff ([d4226a8](https://github.com/tillhub/schemas/commit/d4226a8))
+
+# [6.244.0](https://github.com/tillhub/schemas/compare/v6.243.0...v6.244.0) (2023-08-08)
+
+
+### Features
+
+* **configurations:** warehub ([0bc99e7](https://github.com/tillhub/schemas/commit/0bc99e7))
+
+# [6.243.0](https://github.com/tillhub/schemas/compare/v6.242.1...v6.243.0) (2023-08-07)
+
+
+### Features
+
+* **configurations:** carts ([cc14566](https://github.com/tillhub/schemas/commit/cc14566))
+
+## [6.242.1](https://github.com/tillhub/schemas/compare/v6.242.0...v6.242.1) (2023-08-07)
+
+
+### Bug Fixes
+
+* **configurations:** staff ([dd2cc5f](https://github.com/tillhub/schemas/commit/dd2cc5f))
+
+# [6.242.0](https://github.com/tillhub/schemas/compare/v6.241.0...v6.242.0) (2023-08-04)
+
+
+### Features
+
+* **configurations:** receipts ([e897492](https://github.com/tillhub/schemas/commit/e897492))
+
+# [6.241.0](https://github.com/tillhub/schemas/compare/v6.240.1...v6.241.0) (2023-08-04)
+
+
+### Features
+
+* **configurations:** features ([e642ef1](https://github.com/tillhub/schemas/commit/e642ef1))
+* **configurations:** receipts ([4be436d](https://github.com/tillhub/schemas/commit/4be436d))
+
+## [6.240.1](https://github.com/tillhub/schemas/compare/v6.240.0...v6.240.1) (2023-08-03)
+
+
+### Bug Fixes
+
+* **services:** add $id and $schema fields ([#838](https://github.com/tillhub/schemas/issues/838)) ([fe7dfc4](https://github.com/tillhub/schemas/commit/fe7dfc4))
+
+# [6.240.0](https://github.com/tillhub/schemas/compare/v6.239.0...v6.240.0) (2023-07-31)
+
+
+### Features
+
+* **services:** add schema for POST services ([#836](https://github.com/tillhub/schemas/issues/836)) ([ac40de8](https://github.com/tillhub/schemas/commit/ac40de8))
+
+# [6.239.0](https://github.com/tillhub/schemas/compare/v6.238.0...v6.239.0) (2023-07-28)
+
+
+### Features
+
+* **branches:** external_rewards ([c18a2b8](https://github.com/tillhub/schemas/commit/c18a2b8))
+
+# [6.238.0](https://github.com/tillhub/schemas/compare/v6.237.0...v6.238.0) (2023-07-27)
+
+
+### Features
+
+* **service_categories:** add schema for PUT service_categories ([#833](https://github.com/tillhub/schemas/issues/833)) ([3e6db9a](https://github.com/tillhub/schemas/commit/3e6db9a))
+
+# [6.237.0](https://github.com/tillhub/schemas/compare/v6.236.1...v6.237.0) (2023-07-27)
+
+
+### Features
+
+* **reports:** get top products endpoint's filters schema ([f99ca34](https://github.com/tillhub/schemas/commit/f99ca34))
+
+## [6.236.1](https://github.com/tillhub/schemas/compare/v6.236.0...v6.236.1) (2023-07-25)
+
+
+### Bug Fixes
+
+* **service_categories:** allow null description ([#832](https://github.com/tillhub/schemas/issues/832)) ([00704da](https://github.com/tillhub/schemas/commit/00704da))
+
+# [6.236.0](https://github.com/tillhub/schemas/compare/v6.235.0...v6.236.0) (2023-07-25)
+
+
+### Features
+
+* **settings:** Add fiscalization configuration ([#831](https://github.com/tillhub/schemas/issues/831)) ([6fc4795](https://github.com/tillhub/schemas/commit/6fc4795))
+
+# [6.235.0](https://github.com/tillhub/schemas/compare/v6.234.0...v6.235.0) (2023-07-20)
+
+
+### Features
+
+* **cartItem:** add external_reference_id ([622af81](https://github.com/tillhub/schemas/commit/622af81))
+* **staffs:** owner ([096aee6](https://github.com/tillhub/schemas/commit/096aee6))
+
+# [6.234.0](https://github.com/tillhub/schemas/compare/v6.233.0...v6.234.0) (2023-07-20)
+
+
+### Bug Fixes
+
+* **pull_request:** append unsaved changes ([ccba782](https://github.com/tillhub/schemas/commit/ccba782))
+
+
+### Features
+
+* **configurations:** staff ([c34faf7](https://github.com/tillhub/schemas/commit/c34faf7))
+* **reasons:** type ([556f700](https://github.com/tillhub/schemas/commit/556f700))
+
+# [6.233.0](https://github.com/tillhub/schemas/compare/v6.232.0...v6.233.0) (2023-07-20)
+
+
+### Features
+
+* **branches:** configurations ([1139fc9](https://github.com/tillhub/schemas/commit/1139fc9))
+* **branches:** fix descriptions ([3c32cb7](https://github.com/tillhub/schemas/commit/3c32cb7))
+* **branches:** make branch name default for store name ([4ce8337](https://github.com/tillhub/schemas/commit/4ce8337))
+* **branches:** simplify schema ([8acf2bf](https://github.com/tillhub/schemas/commit/8acf2bf))
+* **configurations:** add validation type ([1101e41](https://github.com/tillhub/schemas/commit/1101e41))
+* **configurations:** features ([b5c3019](https://github.com/tillhub/schemas/commit/b5c3019))
+* **transactions:** add current point balance ([662a4fb](https://github.com/tillhub/schemas/commit/662a4fb))
+* **transactions:** add status to external rewards ([e777abe](https://github.com/tillhub/schemas/commit/e777abe))
+* **transactions:** delete script ([4423eed](https://github.com/tillhub/schemas/commit/4423eed))
+* **transactions:** external_rewards ([b924c19](https://github.com/tillhub/schemas/commit/b924c19))
+* **transactions:** external_rewards ([4093e53](https://github.com/tillhub/schemas/commit/4093e53))
+* **transactions:** external_rewards: oneOf({ ([2383efa](https://github.com/tillhub/schemas/commit/2383efa))
+* **transactions:** store original campaign multiplier ([6eaa40d](https://github.com/tillhub/schemas/commit/6eaa40d))
+
+# [6.232.0](https://github.com/tillhub/schemas/compare/v6.231.0...v6.232.0) (2023-07-20)
+
+
+### Features
+
+* **products:** configurations ([fdba281](https://github.com/tillhub/schemas/commit/fdba281))
+
+# [6.231.0](https://github.com/tillhub/schemas/compare/v6.230.0...v6.231.0) (2023-07-20)
+
+
+### Features
+
+* **service_categories:** add service_categories.create ([#829](https://github.com/tillhub/schemas/issues/829)) ([fc3e117](https://github.com/tillhub/schemas/commit/fc3e117))
+
+# [6.230.0](https://github.com/tillhub/schemas/compare/v6.229.0...v6.230.0) (2023-07-14)
+
+
+### Bug Fixes
+
+* **staffs:** linting fix ([0b606e9](https://github.com/tillhub/schemas/commit/0b606e9))
+
+
+### Features
+
+* **staffs:** request schema to update short_code ([ca8c114](https://github.com/tillhub/schemas/commit/ca8c114))
+
+# [6.229.0](https://github.com/tillhub/schemas/compare/v6.228.0...v6.229.0) (2023-07-14)
+
+
+### Features
+
+* **configuration:** tips max factor default value ([acf2c7e](https://github.com/tillhub/schemas/commit/acf2c7e))
+
+# [6.228.0](https://github.com/tillhub/schemas/compare/v6.227.0...v6.228.0) (2023-07-11)
+
+
+### Features
+
+* **webhooks:** added product update event to schema ([edde281](https://github.com/tillhub/schemas/commit/edde281))
+
+# [6.227.0](https://github.com/tillhub/schemas/compare/v6.226.0...v6.227.0) (2023-07-10)
+
+
+### Features
+
+* **configurations:** tips ([a6a0ca4](https://github.com/tillhub/schemas/commit/a6a0ca4))
+
+# [6.226.0](https://github.com/tillhub/schemas/compare/v6.225.0...v6.226.0) (2023-06-23)
+
+
+### Features
+
+* **configurations:** features ([c6fc993](https://github.com/tillhub/schemas/commit/c6fc993))
+
+# [6.225.0](https://github.com/tillhub/schemas/compare/v6.224.0...v6.225.0) (2023-06-21)
+
+
+### Features
+
+* **configuration:** custom endpoint printing feature configuration ([14134dd](https://github.com/tillhub/schemas/commit/14134dd))
+
+# [6.224.0](https://github.com/tillhub/schemas/compare/v6.223.0...v6.224.0) (2023-06-20)
+
+
+### Features
+
+* **staff:** added description to field owner ([85bdf1f](https://github.com/tillhub/schemas/commit/85bdf1f))
+* **staff:** added staff type to requests ([3162e9d](https://github.com/tillhub/schemas/commit/3162e9d))
+
+# [6.223.0](https://github.com/tillhub/schemas/compare/v6.222.0...v6.223.0) (2023-06-19)
+
+
+### Features
+
+* **purchase-orders:** More relaxed schema for purchase orders pdfs ([#815](https://github.com/tillhub/schemas/issues/815)) ([3e8a688](https://github.com/tillhub/schemas/commit/3e8a688))
+
 # [6.222.0](https://github.com/tillhub/schemas/compare/v6.221.0...v6.222.0) (2023-06-18)
 
 

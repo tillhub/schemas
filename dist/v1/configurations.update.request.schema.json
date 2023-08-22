@@ -1449,6 +1449,64 @@
                 "voucher_systems"
               ],
               "default": "configurations"
+            },
+            "fiscally": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "austria": {
+                      "oneOf": [
+                        {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "tid": {
+                              "oneOf": [
+                                {
+                                  "description": "The \"Teilnehmer-Identifikation\" part of the FinanzOnline Cash Register Web Service User (\"Registrierkassen-Webservice-Benutzer\") credential triplet to be provided by the taxpayer",
+                                  "type": "string"
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "benid": {
+                              "oneOf": [
+                                {
+                                  "description": "The \"Benutzer-Identifikation\" part of the FinanzOnline Cash Register Web Service User (\"Registrierkassen-Webservice-Benutzer\") credential triplet to be provided by the taxpayer.",
+                                  "type": "string"
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "pin": {
+                              "oneOf": [
+                                {
+                                  "description": "The \"PIN\" part of the FinanzOnline Cash Register Web Service User (\"Registrierkassen-Webservice-Benutzer\") credential triplet to be provided by the taxpayer.",
+                                  "type": "string"
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            }
+                          }
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
             }
           }
         }
@@ -1764,7 +1822,8 @@
                     "after",
                     "before",
                     "none"
-                  ]
+                  ],
+                  "default": "none"
                 },
                 {
                   "type": "null"
@@ -1781,7 +1840,8 @@
                     "none",
                     "after",
                     "before"
-                  ]
+                  ],
+                  "default": "none"
                 },
                 {
                   "type": "null"
@@ -1806,6 +1866,21 @@
                 {
                   "type": "boolean",
                   "default": false
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "cashier_pin_gen_length": {
+              "oneOf": [
+                {
+                  "type": "integer",
+                  "description": "Number of digits for a staff short_code (falsely referred to as 'pin').",
+                  "minimum": 4,
+                  "maximum": 10,
+                  "example": 4,
+                  "default": 4
                 },
                 {
                   "type": "null"
@@ -2373,6 +2448,39 @@
                       "minimum": 2,
                       "maximum": 99,
                       "default": 10
+                    },
+                    "type": {
+                      "oneOf": [
+                        {
+                          "description": "Type of the payback scheme, additional logic might apply.",
+                          "type": "string",
+                          "enum": [
+                            "generic",
+                            "coop"
+                          ],
+                          "default": "generic"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "validation": {
+                      "oneOf": [
+                        {
+                          "description": "Type of the validation.",
+                          "type": "string",
+                          "enum": [
+                            "none",
+                            "offline",
+                            "online"
+                          ],
+                          "default": "none"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
                     }
                   }
                 },
@@ -2392,6 +2500,116 @@
                       "description": "Specifies if the feature is available.",
                       "type": "boolean",
                       "default": false
+                    }
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "custom_endpoint_printing": {
+              "oneOf": [
+                {
+                  "description": "Custom endpoint printing from cart menu",
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "enabled": {
+                      "description": "Specifies if the feature is available.",
+                      "type": "boolean",
+                      "default": false
+                    },
+                    "url": {
+                      "description": "The URL of the endpoint",
+                      "type": "string",
+                      "format": "uri"
+                    },
+                    "token": {
+                      "description": "Authorization bearer token",
+                      "type": "string"
+                    },
+                    "name": {
+                      "description": "Display name of the action",
+                      "type": "string"
+                    },
+                    "date_range": {
+                      "oneOf": [
+                        {
+                          "description": "Defines the maximum range for selectable start and end dates",
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "past": {
+                              "oneOf": [
+                                {
+                                  "description": "Defines a time interval.",
+                                  "type": "object",
+                                  "properties": {
+                                    "unit": {
+                                      "description": "Unit of the interval, defines a timeframe together with the set value.",
+                                      "type": "string",
+                                      "enum": [
+                                        "hours",
+                                        "days",
+                                        "weeks",
+                                        "months",
+                                        "years"
+                                      ],
+                                      "default": "months"
+                                    },
+                                    "value": {
+                                      "description": "The value of the interval, defines a timeframe together with the set unit.",
+                                      "type": "integer",
+                                      "minimum": 1,
+                                      "maximum": 500,
+                                      "default": 2
+                                    }
+                                  }
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "future": {
+                              "oneOf": [
+                                {
+                                  "description": "Defines a time interval.",
+                                  "type": "object",
+                                  "properties": {
+                                    "unit": {
+                                      "description": "Unit of the interval, defines a timeframe together with the set value.",
+                                      "type": "string",
+                                      "enum": [
+                                        "hours",
+                                        "days",
+                                        "weeks",
+                                        "months",
+                                        "years"
+                                      ],
+                                      "default": "months"
+                                    },
+                                    "value": {
+                                      "description": "The value of the interval, defines a timeframe together with the set unit.",
+                                      "type": "integer",
+                                      "minimum": 1,
+                                      "maximum": 500,
+                                      "default": 2
+                                    }
+                                  }
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            }
+                          }
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
                     }
                   }
                 },
@@ -2497,7 +2715,8 @@
                       "enum": [
                         "never",
                         "if_missing",
-                        "always"
+                        "always",
+                        "enforce_if_missing"
                       ],
                       "default": "if_missing"
                     },
@@ -4406,6 +4625,51 @@
                             }
                           ]
                         },
+                        "external_rewards": {
+                          "oneOf": [
+                            {
+                              "description": "Defines external rewards printing",
+                              "type": "object",
+                              "additionalProperties": false,
+                              "properties": {
+                                "enabled": {
+                                  "description": "States if external rewards information will be printed",
+                                  "type": "boolean",
+                                  "default": false
+                                },
+                                "coop": {
+                                  "oneOf": [
+                                    {
+                                      "description": "Defines external rewards printing for coop",
+                                      "type": "object",
+                                      "additionalProperties": false,
+                                      "properties": {
+                                        "print_balances": {
+                                          "oneOf": [
+                                            {
+                                              "description": "Defines if previous and anticipated balances will be printed",
+                                              "type": "boolean",
+                                              "default": false
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                }
+                              }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
                         "minimize_signing_footer": {
                           "oneOf": [
                             {
@@ -4978,6 +5242,51 @@
                               "description": "Defines if applied vouchers are additionally printed",
                               "type": "boolean",
                               "default": false
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "external_rewards": {
+                          "oneOf": [
+                            {
+                              "description": "Defines external rewards printing",
+                              "type": "object",
+                              "additionalProperties": false,
+                              "properties": {
+                                "enabled": {
+                                  "description": "States if external rewards information will be printed",
+                                  "type": "boolean",
+                                  "default": false
+                                },
+                                "coop": {
+                                  "oneOf": [
+                                    {
+                                      "description": "Defines external rewards printing for coop",
+                                      "type": "object",
+                                      "additionalProperties": false,
+                                      "properties": {
+                                        "print_balances": {
+                                          "oneOf": [
+                                            {
+                                              "description": "Defines if previous and anticipated balances will be printed",
+                                              "type": "boolean",
+                                              "default": false
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                }
+                              }
                             },
                             {
                               "type": "null"
@@ -5562,6 +5871,51 @@
                             }
                           ]
                         },
+                        "external_rewards": {
+                          "oneOf": [
+                            {
+                              "description": "Defines external rewards printing",
+                              "type": "object",
+                              "additionalProperties": false,
+                              "properties": {
+                                "enabled": {
+                                  "description": "States if external rewards information will be printed",
+                                  "type": "boolean",
+                                  "default": false
+                                },
+                                "coop": {
+                                  "oneOf": [
+                                    {
+                                      "description": "Defines external rewards printing for coop",
+                                      "type": "object",
+                                      "additionalProperties": false,
+                                      "properties": {
+                                        "print_balances": {
+                                          "oneOf": [
+                                            {
+                                              "description": "Defines if previous and anticipated balances will be printed",
+                                              "type": "boolean",
+                                              "default": false
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                }
+                              }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
                         "minimize_signing_footer": {
                           "oneOf": [
                             {
@@ -6134,6 +6488,51 @@
                               "description": "Defines if applied vouchers are additionally printed",
                               "type": "boolean",
                               "default": false
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "external_rewards": {
+                          "oneOf": [
+                            {
+                              "description": "Defines external rewards printing",
+                              "type": "object",
+                              "additionalProperties": false,
+                              "properties": {
+                                "enabled": {
+                                  "description": "States if external rewards information will be printed",
+                                  "type": "boolean",
+                                  "default": false
+                                },
+                                "coop": {
+                                  "oneOf": [
+                                    {
+                                      "description": "Defines external rewards printing for coop",
+                                      "type": "object",
+                                      "additionalProperties": false,
+                                      "properties": {
+                                        "print_balances": {
+                                          "oneOf": [
+                                            {
+                                              "description": "Defines if previous and anticipated balances will be printed",
+                                              "type": "boolean",
+                                              "default": false
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                }
+                              }
                             },
                             {
                               "type": "null"
@@ -6718,6 +7117,51 @@
                             }
                           ]
                         },
+                        "external_rewards": {
+                          "oneOf": [
+                            {
+                              "description": "Defines external rewards printing",
+                              "type": "object",
+                              "additionalProperties": false,
+                              "properties": {
+                                "enabled": {
+                                  "description": "States if external rewards information will be printed",
+                                  "type": "boolean",
+                                  "default": false
+                                },
+                                "coop": {
+                                  "oneOf": [
+                                    {
+                                      "description": "Defines external rewards printing for coop",
+                                      "type": "object",
+                                      "additionalProperties": false,
+                                      "properties": {
+                                        "print_balances": {
+                                          "oneOf": [
+                                            {
+                                              "description": "Defines if previous and anticipated balances will be printed",
+                                              "type": "boolean",
+                                              "default": false
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                }
+                              }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
                         "minimize_signing_footer": {
                           "oneOf": [
                             {
@@ -7296,6 +7740,51 @@
                             }
                           ]
                         },
+                        "external_rewards": {
+                          "oneOf": [
+                            {
+                              "description": "Defines external rewards printing",
+                              "type": "object",
+                              "additionalProperties": false,
+                              "properties": {
+                                "enabled": {
+                                  "description": "States if external rewards information will be printed",
+                                  "type": "boolean",
+                                  "default": false
+                                },
+                                "coop": {
+                                  "oneOf": [
+                                    {
+                                      "description": "Defines external rewards printing for coop",
+                                      "type": "object",
+                                      "additionalProperties": false,
+                                      "properties": {
+                                        "print_balances": {
+                                          "oneOf": [
+                                            {
+                                              "description": "Defines if previous and anticipated balances will be printed",
+                                              "type": "boolean",
+                                              "default": false
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                }
+                              }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
                         "minimize_signing_footer": {
                           "oneOf": [
                             {
@@ -7494,7 +7983,7 @@
                         "print_extended_stats": {
                           "oneOf": [
                             {
-                              "description": "Defines if the extended balance stats will be printed.",
+                              "description": "Defines if the extended balance stats will be printed. Requires configurations.balances.extended_report and related data.",
                               "type": "boolean",
                               "default": true
                             },
@@ -7509,6 +7998,79 @@
                               "description": "Defines if account names are printed additionally to the numbers.",
                               "type": "boolean",
                               "default": false
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    "stock_adjustment": {
+                      "description": "Defines receipt printing for stock adjustments",
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "print_cashier_policy": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if and how the cashier will be printed on the receipt.",
+                              "type": "string",
+                              "enum": [
+                                "number",
+                                "name",
+                                "none",
+                                "first_name",
+                                "last_name"
+                              ]
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_product_description": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the product description will be printed (e.g. just for the customer)",
+                              "type": "boolean",
+                              "default": false
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_product_group": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the product group will be printed (e.g. just for the merchant)",
+                              "type": "boolean",
+                              "default": false
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_product_number": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the product number (in case of options) will be printed (e.g. just for the merchant)",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "print_product_name": {
+                          "oneOf": [
+                            {
+                              "description": "Defines if the product name (in case of options) will be printed (e.g. just for the merchant)",
+                              "type": "boolean",
+                              "default": true
                             },
                             {
                               "type": "null"
@@ -7579,7 +8141,7 @@
                         "print_extended_stats": {
                           "oneOf": [
                             {
-                              "description": "Defines if the extended balance stats will be printed.",
+                              "description": "Defines if the extended balance stats will be printed. Requires configurations.balances.extended_report and related data.",
                               "type": "boolean",
                               "default": true
                             },
@@ -7664,7 +8226,7 @@
                         "print_extended_stats": {
                           "oneOf": [
                             {
-                              "description": "Defines if the extended balance stats will be printed.",
+                              "description": "Defines if the extended balance stats will be printed. Requires configurations.balances.extended_report and related data.",
                               "type": "boolean",
                               "default": true
                             },
@@ -8055,20 +8617,43 @@
       ]
     },
     "carts": {
-      "anyOf": [
-        {
-          "type": "null"
-        },
+      "oneOf": [
         {
           "type": "object",
           "additionalProperties": false,
           "properties": {
             "clear_confirmation": {
-              "description": "Specifies if clearing the cart must be confirmed.",
-              "type": "boolean",
-              "default": true
+              "oneOf": [
+                {
+                  "description": "Specifies if clearing the cart must be confirmed.",
+                  "type": "boolean",
+                  "default": true
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "item_merge_policy": {
+              "oneOf": [
+                {
+                  "description": "Specifies how newly added products get merged into existing cart items.",
+                  "type": "string",
+                  "enum": [
+                    "none",
+                    "full"
+                  ],
+                  "default": "full"
+                },
+                {
+                  "type": "null"
+                }
+              ]
             }
           }
+        },
+        {
+          "type": "null"
         }
       ]
     },
@@ -10281,10 +10866,24 @@
     "warehub": {
       "oneOf": [
         {
-          "type": "null"
+          "type": "object",
+          "properties": {
+            "product_match_required": {
+              "oneOf": [
+                {
+                  "description": "If true - allow only barcodes that match an existing product.",
+                  "type": "boolean",
+                  "default": false
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
         },
         {
-          "type": "object"
+          "type": "null"
         }
       ]
     },
