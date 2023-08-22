@@ -26,7 +26,8 @@ console.log(createCartSchema)
 ## Release flow
 
 Releases are automated with @semantic-release. 
-For triggering a new release just use commit messages started from "feat" or "fix" prefix which is part of [proper message format](https://github.com/semantic-release/semantic-release#commit-message-format).
+For triggering a new release just use commit messages started from "feat" or "fix" prefix which 
+is part of [proper message format](https://github.com/semantic-release/semantic-release#commit-message-format) (please do not forget about it!).
 
 CricleCI takes care of publishing the package. it will only trigger on the master branch.
 After the PR is merged into master, CircleCI will start the deployment process:
