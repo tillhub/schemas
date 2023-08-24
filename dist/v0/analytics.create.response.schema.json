@@ -71,12 +71,92 @@
             "maxLength": 2048
           },
           "created_at": {
-            "type": "string",
-            "format": "date-time"
+            "type": "object",
+            "additionalProperties": false,
+            "description": "Downstream delivery of a date.",
+            "required": [
+              "iso",
+              "unix"
+            ],
+            "properties": {
+              "iso": {
+                "type": "string",
+                "format": "date-time",
+                "description": "ISO 8601 compliant format.",
+                "example": "2021-06-03T11:18:47.725Z"
+              },
+              "unix": {
+                "type": "integer",
+                "description": "The Unix epoch timestamp in milliseconds.",
+                "example": 1622719127725
+              }
+            }
           },
           "updated_at": {
-            "type": "string",
-            "format": "date-time"
+            "type": "object",
+            "additionalProperties": false,
+            "description": "Downstream delivery of a date.",
+            "required": [
+              "iso",
+              "unix"
+            ],
+            "properties": {
+              "iso": {
+                "type": "string",
+                "format": "date-time",
+                "description": "ISO 8601 compliant format.",
+                "example": "2021-06-03T11:18:47.725Z"
+              },
+              "unix": {
+                "type": "integer",
+                "description": "The Unix epoch timestamp in milliseconds.",
+                "example": 1622719127725
+              }
+            }
+          },
+          "start": {
+            "type": "object",
+            "additionalProperties": false,
+            "description": "Start date for the filter",
+            "required": [
+              "iso",
+              "unix"
+            ],
+            "properties": {
+              "iso": {
+                "type": "string",
+                "format": "date-time",
+                "description": "ISO 8601 compliant format.",
+                "example": "2021-06-03T11:18:47.725Z"
+              },
+              "unix": {
+                "type": "integer",
+                "description": "The Unix epoch timestamp in milliseconds.",
+                "example": 1622719127725
+              }
+            }
+          },
+          "end": {
+            "type": "object",
+            "additionalProperties": false,
+            "description": "End date for the filter",
+            "required": [
+              "iso",
+              "unix"
+            ],
+            "properties": {
+              "iso": {
+                "type": "string",
+                "format": "date-time",
+                "description": "ISO 8601 compliant format.",
+                "example": "2021-06-03T11:18:47.725Z"
+              },
+              "unix": {
+                "type": "integer",
+                "description": "The Unix epoch timestamp in milliseconds.",
+                "example": 1622719127725
+              }
+            }
           },
           "items": {
             "type": "array",

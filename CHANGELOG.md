@@ -1,3 +1,15 @@
+# [6.253.0](https://github.com/tillhub/schemas/compare/v6.252.1...v6.253.0) (2023-08-24)
+
+
+### Bug Fixes
+
+* **chore:** commit message fix for new version ([#856](https://github.com/tillhub/schemas/issues/856)) ([8047905](https://github.com/tillhub/schemas/commit/8047905))
+
+
+### Features
+
+* **stock-management:** add optional transaction_id to stock-book create event ([#857](https://github.com/tillhub/schemas/issues/857)) ([43091fa](https://github.com/tillhub/schemas/commit/43091fa))
+
 ## [6.252.1](https://github.com/tillhub/schemas/compare/v6.252.0...v6.252.1) (2023-08-21)
 
 
