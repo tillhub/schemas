@@ -1,3 +1,10 @@
+# [6.254.0](https://github.com/tillhub/schemas/compare/v6.253.0...v6.254.0) (2023-08-28)
+
+
+### Features
+
+* **customers:** add price_book_id ([c633970](https://github.com/tillhub/schemas/commit/c633970))
+
 # [6.253.0](https://github.com/tillhub/schemas/compare/v6.252.1...v6.253.0) (2023-08-24)
 
 
