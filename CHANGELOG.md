@@ -1,3 +1,10 @@
+# [6.255.0](https://github.com/tillhub/schemas/compare/v6.254.0...v6.255.0) (2023-08-30)
+
+
+### Features
+
+* **configuration:** add schema for reservation config ([548865c](https://github.com/tillhub/schemas/commit/548865c))
+
 # [6.254.0](https://github.com/tillhub/schemas/compare/v6.253.0...v6.254.0) (2023-08-28)
 
 
