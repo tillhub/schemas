@@ -1,3 +1,10 @@
+# [6.256.0](https://github.com/tillhub/schemas/compare/v6.255.0...v6.256.0) (2023-08-30)
+
+
+### Features
+
+* **stock-management:** add product id to stock-book create event ([#859](https://github.com/tillhub/schemas/issues/859)) ([1c0928f](https://github.com/tillhub/schemas/commit/1c0928f))
+
 # [6.255.0](https://github.com/tillhub/schemas/compare/v6.254.0...v6.255.0) (2023-08-30)
 
 
