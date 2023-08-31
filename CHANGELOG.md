@@ -1,3 +1,10 @@
+## [6.256.1](https://github.com/tillhub/schemas/compare/v6.256.0...v6.256.1) (2023-08-31)
+
+
+### Bug Fixes
+
+* **configuration:** add logo to be nullable, and delete wrong constraint for opening hours and leave ([52c7bba](https://github.com/tillhub/schemas/commit/52c7bba))
+
 # [6.256.0](https://github.com/tillhub/schemas/compare/v6.255.0...v6.256.0) (2023-08-30)
 
 

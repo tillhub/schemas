@@ -10127,7 +10127,14 @@
                       "type": "string"
                     },
                     "logo": {
-                      "type": "string"
+                      "oneOf": [
+                        {
+                          "type": "null"
+                        },
+                        {
+                          "type": "string"
+                        }
+                      ]
                     },
                     "color": {
                       "type": "string"
@@ -10193,20 +10200,16 @@
                     "type": "boolean"
                   },
                   "open_from": {
-                    "type": "string",
-                    "format": "time"
+                    "type": "string"
                   },
                   "open_to": {
-                    "type": "string",
-                    "format": "time"
+                    "type": "string"
                   },
                   "break_from": {
-                    "type": "string",
-                    "format": "time"
+                    "type": "string"
                   },
                   "break_to": {
-                    "type": "string",
-                    "format": "time"
+                    "type": "string"
                   }
                 }
               }
