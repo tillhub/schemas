@@ -9368,10 +9368,223 @@
     "validations": {
       "oneOf": [
         {
-          "type": "null"
+          "type": "object",
+          "description": "A dictionary <string, string> describing all validation values",
+          "properties": {
+            "all": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "hard",
+                    "soft",
+                    "off"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "accounts": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "hard",
+                    "soft",
+                    "off"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "carts": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "hard",
+                    "soft",
+                    "off"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "transactions": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "hard",
+                    "soft",
+                    "off"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "balances": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "hard",
+                    "soft",
+                    "off"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "items": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "hard",
+                    "soft",
+                    "off"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "products": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "hard",
+                    "soft",
+                    "off"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "productGroups": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "hard",
+                    "soft",
+                    "off"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "taxes": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "hard",
+                    "soft",
+                    "off"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "vouchers": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "hard",
+                    "soft",
+                    "off"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "payments": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "hard",
+                    "soft",
+                    "off"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "discounts": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "hard",
+                    "soft",
+                    "off"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "customers": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "hard",
+                    "soft",
+                    "off"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "additionalProperties": {
+            "oneOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "hard",
+                  "soft",
+                  "off"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
         },
         {
-          "type": "object"
+          "type": "null"
         }
       ]
     },

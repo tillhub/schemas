@@ -1,3 +1,24 @@
+# [6.258.0](https://github.com/tillhub/schemas/compare/v6.257.0...v6.258.0) (2023-09-11)
+
+
+### Features
+
+* **configurations:** add details for validations ([bc5560b](https://github.com/tillhub/schemas/commit/bc5560b))
+
+# [6.257.0](https://github.com/tillhub/schemas/compare/v6.256.1...v6.257.0) (2023-09-08)
+
+
+### Bug Fixes
+
+* **staff:** base object did not pass validation in tests. ([7d29d4e](https://github.com/tillhub/schemas/commit/7d29d4e))
+
+
+### Features
+
+* **staff:** finalize schema for reservation planing of staff member ([03b69d6](https://github.com/tillhub/schemas/commit/03b69d6))
+* **staff:** needed when staff member gets updated, this enables dashboard to change staff infividua ([4ca8393](https://github.com/tillhub/schemas/commit/4ca8393))
+* **staff:** Split one field in two, where one just controls if other has effect ([bd8c378](https://github.com/tillhub/schemas/commit/bd8c378))
+
 ## [6.256.1](https://github.com/tillhub/schemas/compare/v6.256.0...v6.256.1) (2023-08-31)
 
 
