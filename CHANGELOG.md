@@ -1,3 +1,10 @@
+# [6.258.0](https://github.com/tillhub/schemas/compare/v6.257.0...v6.258.0) (2023-09-11)
+
+
+### Features
+
+* **configurations:** add details for validations ([bc5560b](https://github.com/tillhub/schemas/commit/bc5560b))
+
 # [6.257.0](https://github.com/tillhub/schemas/compare/v6.256.1...v6.257.0) (2023-09-08)
 
 
