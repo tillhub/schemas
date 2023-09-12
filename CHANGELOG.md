@@ -1,3 +1,10 @@
+# [6.259.0](https://github.com/tillhub/schemas/compare/v6.258.0...v6.259.0) (2023-09-12)
+
+
+### Features
+
+* **staff:** add staff.services ([#866](https://github.com/tillhub/schemas/issues/866)) ([a3966f6](https://github.com/tillhub/schemas/commit/a3966f6))
+
 # [6.258.0](https://github.com/tillhub/schemas/compare/v6.257.0...v6.258.0) (2023-09-11)
 
 

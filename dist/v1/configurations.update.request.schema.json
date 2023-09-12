@@ -9476,7 +9476,7 @@
                 }
               ]
             },
-            "productGroups": {
+            "product_groups": {
               "oneOf": [
                 {
                   "type": "string",

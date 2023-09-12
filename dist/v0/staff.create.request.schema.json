@@ -702,6 +702,21 @@
           }
         }
       }
+    },
+    "services": {
+      "description": "List of ids for the services this staff member is capable of performing",
+      "oneOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
     }
   },
   "type": "object"
