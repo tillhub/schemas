@@ -1,3 +1,10 @@
+# [6.260.0](https://github.com/tillhub/schemas/compare/v6.259.0...v6.260.0) (2023-09-13)
+
+
+### Features
+
+* **configurations:** restrictions ([85b347b](https://github.com/tillhub/schemas/commit/85b347b))
+
 # [6.259.0](https://github.com/tillhub/schemas/compare/v6.258.0...v6.259.0) (2023-09-12)
 
 

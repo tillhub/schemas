@@ -18,7 +18,33 @@
     "vouchers": {
       "oneOf": [
         {
-          "type": "object"
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "oneOf": [
+                {
+                  "description": "global on-off-switch for the vouchers-feature",
+                  "type": "boolean",
+                  "default": false
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "allow_cart_redemption": {
+              "oneOf": [
+                {
+                  "description": "Specifies if vouchers can be redeemed as cart items with negative quantity.",
+                  "type": "boolean",
+                  "default": true
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
         },
         {
           "type": "null"
@@ -8644,6 +8670,96 @@
                     "full"
                   ],
                   "default": "full"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "sale": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "description": "Specifies conditions on a regular sale.",
+                  "additionalProperties": false,
+                  "properties": {
+                    "items": {
+                      "oneOf": [
+                        {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "allow_negative_quantity": {
+                              "oneOf": [
+                                {
+                                  "description": "Specifies if items can have negative quantities when doing a regular sale.",
+                                  "type": "boolean",
+                                  "default": true
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            }
+                          }
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "refund": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "description": "Specifies conditions on a refund.",
+                  "properties": {
+                    "immutable": {
+                      "oneOf": [
+                        {
+                          "description": "In case of refund - specifies if modicications are forbidden",
+                          "type": "boolean",
+                          "default": false
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "items": {
+                      "oneOf": [
+                        {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "allow_editing": {
+                              "oneOf": [
+                                {
+                                  "description": "In case of refund items - specifies if quantity and price can be edited",
+                                  "type": "boolean",
+                                  "default": false
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            }
+                          }
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  }
                 },
                 {
                   "type": "null"
