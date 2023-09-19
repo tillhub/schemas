@@ -1,3 +1,10 @@
+## [6.260.1](https://github.com/tillhub/schemas/compare/v6.260.0...v6.260.1) (2023-09-19)
+
+
+### Bug Fixes
+
+* **configurations:** features ([5f88fb5](https://github.com/tillhub/schemas/commit/5f88fb5))
+
 # [6.260.0](https://github.com/tillhub/schemas/compare/v6.259.0...v6.260.0) (2023-09-13)
 
 

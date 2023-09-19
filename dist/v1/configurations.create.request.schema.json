@@ -1275,6 +1275,34 @@
                     }
                   }
                 },
+                "staff": {
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "online_search": {
+                          "oneOf": [
+                            {
+                              "description": "Unlike the name suggests - controls adding a branch-parameter to sync and search calls",
+                              "type": "string",
+                              "enum": [
+                                "per_location"
+                              ],
+                              "default": null
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
                 "staffs": {
                   "type": "object",
                   "additionalProperties": false,
@@ -2587,7 +2615,7 @@
                                     "value": {
                                       "description": "The value of the interval, defines a timeframe together with the set unit.",
                                       "type": "integer",
-                                      "minimum": 1,
+                                      "minimum": 0,
                                       "maximum": 500,
                                       "default": 2
                                     }
@@ -2619,7 +2647,7 @@
                                     "value": {
                                       "description": "The value of the interval, defines a timeframe together with the set unit.",
                                       "type": "integer",
-                                      "minimum": 1,
+                                      "minimum": 0,
                                       "maximum": 500,
                                       "default": 2
                                     }
