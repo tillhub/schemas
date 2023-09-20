@@ -147,7 +147,8 @@
         {
           "description": "Identification for the payment terminal Id",
           "type": "string",
-          "format": "string"
+          "maxLength": 255,
+          "minLength": 1
         },
         {
           "type": "null"

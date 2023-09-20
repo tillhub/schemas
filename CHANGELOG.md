@@ -1,3 +1,10 @@
+# [6.262.0](https://github.com/tillhub/schemas/compare/v6.261.0...v6.262.0) (2023-09-20)
+
+
+### Features
+
+* **terminalId:** terminalId has been added ([#871](https://github.com/tillhub/schemas/issues/871)) ([723ff75](https://github.com/tillhub/schemas/commit/723ff75))
+
 # [6.261.0](https://github.com/tillhub/schemas/compare/v6.260.1...v6.261.0) (2023-09-20)
 
 
