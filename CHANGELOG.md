@@ -1,3 +1,17 @@
+# [6.261.0](https://github.com/tillhub/schemas/compare/v6.260.1...v6.261.0) (2023-09-20)
+
+
+### Features
+
+* **terminal_id:** add terminalId to the schema ([#870](https://github.com/tillhub/schemas/issues/870)) ([82b222b](https://github.com/tillhub/schemas/commit/82b222b))
+
+## [6.260.1](https://github.com/tillhub/schemas/compare/v6.260.0...v6.260.1) (2023-09-19)
+
+
+### Bug Fixes
+
+* **configurations:** features ([5f88fb5](https://github.com/tillhub/schemas/commit/5f88fb5))
+
 # [6.260.0](https://github.com/tillhub/schemas/compare/v6.259.0...v6.260.0) (2023-09-13)
 
 
