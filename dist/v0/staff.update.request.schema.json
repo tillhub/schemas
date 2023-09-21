@@ -665,6 +665,19 @@
         }
       ]
     },
+    "calendar_color": {
+      "description": "A color to be used in the calendar for this staff member.",
+      "oneOf": [
+        {
+          "type": "string",
+          "maxLength": 7,
+          "minLength": 7
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "individual_reservation_times": {
       "description": "Whether or not this staff member is having custom work hours.",
       "type": "boolean"

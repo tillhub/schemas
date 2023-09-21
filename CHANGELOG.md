@@ -1,3 +1,10 @@
+# [6.263.0](https://github.com/tillhub/schemas/compare/v6.262.0...v6.263.0) (2023-09-21)
+
+
+### Features
+
+* **staffs:** staff members have color that shows in reservation calendar around timeslot that they ([9149137](https://github.com/tillhub/schemas/commit/9149137))
+
 # [6.262.0](https://github.com/tillhub/schemas/compare/v6.261.0...v6.262.0) (2023-09-20)
 
 
