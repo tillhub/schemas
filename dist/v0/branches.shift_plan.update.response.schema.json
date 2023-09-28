@@ -1,0 +1,97 @@
+{
+  "$id": "https://schemas.tillhub.com/v0/branches.shift_plan.update.response.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "type": "object",
+  "properties": {
+    "msg": {
+      "type": "string",
+      "minLength": 1,
+      "example": "Queried transactions successfully.",
+      "description": "Any English sentence, meant as information for developers and implementers. Avoid displaying this to the users and especially do not expect those messages to stay stable."
+    },
+    "msg_localised": {
+      "description": "Optional localized message that can be displayed to the user if existing. The language can be set by in the request or will fallback to English.",
+      "example": "Abgefragte Transaktionen erfolgreich.",
+      "type": "string",
+      "minLength": 1
+    },
+    "request": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Information about the request itself.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "The request uuid that can be used to identify and trace API calls.",
+          "format": "uuid"
+        },
+        "host": {
+          "type": "string",
+          "minLength": 1,
+          "example": "https://api.tillhub.com",
+          "description": "Server host and protocol from which request was handled."
+        }
+      }
+    },
+    "count": {
+      "type": "number",
+      "description": "the length of the results array.",
+      "example": 1
+    },
+    "results": {
+      "type": "array",
+      "description": "The envelope of items, that are usually objects. We are generally sending back arrays even if there was just one requested resource.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "shift_plan_enabled": {
+            "type": "boolean"
+          },
+          "plan": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "user": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "time_ranges": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "date": {
+                        "type": "string",
+                        "format": "date"
+                      },
+                      "times": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "start": {
+                              "type": "string"
+                            },
+                            "end": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

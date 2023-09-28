@@ -1,3 +1,10 @@
+# [6.264.0](https://github.com/tillhub/schemas/compare/v6.263.0...v6.264.0) (2023-09-28)
+
+
+### Features
+
+* **branches:** add schema for validating shift_plan objects that are part of branch table ([2230a83](https://github.com/tillhub/schemas/commit/2230a83))
+
 # [6.263.0](https://github.com/tillhub/schemas/compare/v6.262.0...v6.263.0) (2023-09-21)
 
 
