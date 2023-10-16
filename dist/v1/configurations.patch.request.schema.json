@@ -8761,31 +8761,6 @@
                           "type": "null"
                         }
                       ]
-                    },
-                    "items": {
-                      "oneOf": [
-                        {
-                          "type": "object",
-                          "additionalProperties": false,
-                          "properties": {
-                            "allow_editing": {
-                              "oneOf": [
-                                {
-                                  "description": "In case of refund items - specifies if quantity and price can be edited",
-                                  "type": "boolean",
-                                  "default": false
-                                },
-                                {
-                                  "type": "null"
-                                }
-                              ]
-                            }
-                          }
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ]
                     }
                   }
                 },

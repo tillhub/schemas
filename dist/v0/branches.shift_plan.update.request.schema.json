@@ -7,40 +7,31 @@
     "shift_plan_enabled": {
       "type": "boolean"
     },
-    "plan": {
+    "shift_plan": {
       "type": "array",
       "items": {
         "type": "object",
         "additionalProperties": false,
         "properties": {
-          "user": {
+          "staff_member_id": {
             "type": "string",
             "format": "uuid"
           },
-          "time_ranges": {
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "plan": {
             "type": "array",
             "items": {
               "type": "object",
               "additionalProperties": false,
               "properties": {
-                "date": {
-                  "type": "string",
-                  "format": "date"
+                "start": {
+                  "type": "string"
                 },
-                "times": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "additionalProperties": false,
-                    "properties": {
-                      "start": {
-                        "type": "string"
-                      },
-                      "end": {
-                        "type": "string"
-                      }
-                    }
-                  }
+                "end": {
+                  "type": "string"
                 }
               }
             }

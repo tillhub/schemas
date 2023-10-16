@@ -40,7 +40,7 @@
     },
     "timestamp": {
       "description": "The date and time event was received by webhooks service",
-      "example": "2023-09-28T14:05:16.661Z",
+      "example": "2023-10-16T11:40:31.230Z",
       "type": "string",
       "format": "date-time"
     },
@@ -791,8 +791,8 @@
             }
           ]
         },
-        "price_book_id": {
-          "description": "in cases where the customer is going to have personal pricebook (like for discounts in pharmacy by personal insurance number), price_book_id is required",
+        "price_book": {
+          "description": "in cases where the customer is going to have personal pricebook (like for discounts in pharmacy by personal insurance number), price_book is required",
           "oneOf": [
             {
               "type": "string",

@@ -1,3 +1,21 @@
+# [6.265.0](https://github.com/tillhub/schemas/compare/v6.264.0...v6.265.0) (2023-10-16)
+
+
+### Bug Fixes
+
+* **staff:** put array length validation in place, now only array of length 7 is valid ([b4ac285](https://github.com/tillhub/schemas/commit/b4ac285))
+* **transactions_v1:** import of external module was not pointing to correct path ([1418414](https://github.com/tillhub/schemas/commit/1418414))
+
+
+### Features
+
+* **configurations:** carts ([78f6819](https://github.com/tillhub/schemas/commit/78f6819))
+* **configurations:** payments ([2dd438d](https://github.com/tillhub/schemas/commit/2dd438d))
+* **customers:** rename price_book_id to price_book ([#881](https://github.com/tillhub/schemas/issues/881)) ([17c4f3b](https://github.com/tillhub/schemas/commit/17c4f3b))
+* **encryption:** adjust ([3c8c5e4](https://github.com/tillhub/schemas/commit/3c8c5e4))
+* **shift_plan:** change schema a bit, move it out of branch and treat it as stand alone entity ([3bc439f](https://github.com/tillhub/schemas/commit/3bc439f))
+* **transactions:** legacy ([23a8964](https://github.com/tillhub/schemas/commit/23a8964)), closes [Security#2](https://github.com/Security/issues/2)
+
 # [6.264.0](https://github.com/tillhub/schemas/compare/v6.263.0...v6.264.0) (2023-09-28)
 
 

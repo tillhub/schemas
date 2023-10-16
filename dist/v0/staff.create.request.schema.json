@@ -687,6 +687,8 @@
     "individual_work_plan": {
       "description": "Custom schedule for this staff member.",
       "type": "array",
+      "minItems": 7,
+      "maxItems": 7,
       "items": {
         "type": "object",
         "properties": {
