@@ -40,7 +40,7 @@
     },
     "timestamp": {
       "description": "The date and time event was received by webhooks service",
-      "example": "2023-10-16T11:40:31.438Z",
+      "example": "2023-10-17T08:39:33.036Z",
       "type": "string",
       "format": "date-time"
     },
@@ -1452,6 +1452,19 @@
                             {
                               "type": "string",
                               "example": "Alexander von Müller"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "price_book": {
+                          "oneOf": [
+                            {
+                              "type": "string",
+                              "format": "uuid",
+                              "description": "The Tillhub pricebook resource asscociated with the customer at that moment",
+                              "example": "512448db-5e6c-4fcf-bd70-f8a5e56fa269"
                             },
                             {
                               "type": "null"

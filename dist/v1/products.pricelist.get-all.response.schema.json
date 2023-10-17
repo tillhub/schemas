@@ -55,6 +55,7 @@
             "description": "Type of the product prices",
             "type": "string",
             "enum": [
+              "customer",
               "scaled",
               "branch",
               "time-based",

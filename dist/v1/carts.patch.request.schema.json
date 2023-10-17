@@ -235,6 +235,19 @@
         }
       ]
     },
+    "customer_price_book": {
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "uuid",
+          "description": "The Tillhub pricebook resource asscociated with the customer at that moment",
+          "example": "512448db-5e6c-4fcf-bd70-f8a5e56fa269"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "name": {
       "description": "Cart name",
       "example": "For the chosen one",
@@ -2336,8 +2349,43 @@
       }
     },
     "metadata": {
-      "description": "Additional meta data",
-      "type": "object"
+      "oneOf": [
+        {
+          "type": "object",
+          "description": "Additional meta data",
+          "properties": {
+            "customer": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "description": "Additional data for a customer",
+                  "properties": {
+                    "price_book": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "format": "uuid",
+                          "description": "The Tillhub pricebook resource asscociated with the customer at that moment",
+                          "example": "512448db-5e6c-4fcf-bd70-f8a5e56fa269"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "opened_at": {
       "description": "Date when this cart was opened. If date is not null, this cart must not be used.",

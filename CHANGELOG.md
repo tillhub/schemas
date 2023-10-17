@@ -1,3 +1,14 @@
+# [6.266.0](https://github.com/tillhub/schemas/compare/v6.265.0...v6.266.0) (2023-10-17)
+
+
+### Features
+
+* **pricelist:** rebuild customer handling ([e915bcd](https://github.com/tillhub/schemas/commit/e915bcd))
+* **prices:** add customer bound type to list entries ([7b3409f](https://github.com/tillhub/schemas/commit/7b3409f))
+* **prices:** list ([07778e9](https://github.com/tillhub/schemas/commit/07778e9))
+* **products:** prices ([36165fd](https://github.com/tillhub/schemas/commit/36165fd))
+* **transactions:** customer ([cf6e687](https://github.com/tillhub/schemas/commit/cf6e687))
+
 # [6.265.0](https://github.com/tillhub/schemas/compare/v6.264.0...v6.265.0) (2023-10-16)
 
 

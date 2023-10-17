@@ -1331,6 +1331,19 @@
                           "type": "null"
                         }
                       ]
+                    },
+                    "price_book": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "format": "uuid",
+                          "description": "The Tillhub pricebook resource asscociated with the customer at that moment",
+                          "example": "512448db-5e6c-4fcf-bd70-f8a5e56fa269"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
                     }
                   }
                 },
