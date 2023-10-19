@@ -8688,6 +8688,18 @@
                 }
               ]
             },
+            "enforce_integer_quantities": {
+              "oneOf": [
+                {
+                  "description": "Specifies if only integer quantities are allowed -1, 1,2 etc. vs. decimal quantities like 1.62).",
+                  "type": "boolean",
+                  "default": false
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
             "item_merge_policy": {
               "oneOf": [
                 {

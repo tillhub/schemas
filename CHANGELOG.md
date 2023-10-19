@@ -1,3 +1,15 @@
+# [6.267.0](https://github.com/tillhub/schemas/compare/v6.266.0...v6.267.0) (2023-10-19)
+
+
+### Bug Fixes
+
+* **configurations:** carts ([0906ffe](https://github.com/tillhub/schemas/commit/0906ffe))
+
+
+### Features
+
+* **configurations:** carts ([5621298](https://github.com/tillhub/schemas/commit/5621298))
+
 # [6.266.0](https://github.com/tillhub/schemas/compare/v6.265.0...v6.266.0) (2023-10-17)
 
 
