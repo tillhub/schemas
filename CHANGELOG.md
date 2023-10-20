@@ -1,3 +1,10 @@
+# [6.268.0](https://github.com/tillhub/schemas/compare/v6.267.0...v6.268.0) (2023-10-20)
+
+
+### Features
+
+* **reservations:** add feature flag ([#884](https://github.com/tillhub/schemas/issues/884)) ([4ddc303](https://github.com/tillhub/schemas/commit/4ddc303))
+
 # [6.267.0](https://github.com/tillhub/schemas/compare/v6.266.0...v6.267.0) (2023-10-19)
 
 
