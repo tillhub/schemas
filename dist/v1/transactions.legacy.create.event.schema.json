@@ -40,7 +40,7 @@
     },
     "timestamp": {
       "description": "The date and time event was received by webhooks service",
-      "example": "2023-10-20T08:23:46.954Z",
+      "example": "2023-10-24T10:21:32.725Z",
       "type": "string",
       "format": "date-time"
     },
@@ -4186,6 +4186,30 @@
                   }
                 ]
               },
+              "change": {
+                "oneOf": [
+                  {
+                    "type": "integer",
+                    "example": 800,
+                    "description": "The change amount calculated by the API based on tx-top-level change value and attribution to one of the payments"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "amount_final": {
+                "oneOf": [
+                  {
+                    "type": "integer",
+                    "example": 1200,
+                    "description": "The effectively payed amount calculated by the API, 'amount_final' = 'amount' - 'change'"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
               "fa_account_number": {
                 "deprecated": true,
                 "oneOf": [
@@ -4205,7 +4229,7 @@
                   {
                     "type": "integer",
                     "example": 2000,
-                    "description": "The given amount via this payment, 20.00 EUR or 2000 HUF respectively (represented as integer)"
+                    "description": "The given amount via this payment, 20.00 EUR or 2000 HUF respectively (represented as integer) - tips are included, change money is not subtracted"
                   },
                   {
                     "type": "null"
@@ -4332,7 +4356,7 @@
                   {
                     "type": "integer",
                     "example": 110,
-                    "description": "The given tip via this payment, 1.10 EUR or 110 HUF respectively (represented as integer)"
+                    "description": "The given tip via this payment, 1.10 EUR or 110 HUF respectively (represented as integer) - this is included in 'amount'"
                   },
                   {
                     "type": "null"
@@ -4881,7 +4905,7 @@
               "_amount_total": {
                 "oneOf": [
                   {
-                    "description": "The payed amount total. Excluding any change.\n\nNOTE: usually cash payments will be grouped. Also, a cash payment will always carry any possible change money. Even though\na card payment might have caused it.",
+                    "description": "Manifesting Legacy: The given amount via this payment, 20.00 EUR or 20.00 HUF respectively (represented as Decimal) - tips are included, change money is not subtracted'\n\nNOTE: The intention to use this without tip and change can not be realized as of 2023.\n\n2023: Equal to '_amount_given' and '_amount_requested'.",
                     "type": "number",
                     "minimum": -1000000,
                     "maximum": 1000000,
@@ -4909,7 +4933,7 @@
               "_amount_given": {
                 "oneOf": [
                   {
-                    "description": "The actual over the counter money flow: regardles what needs to\nbe payed e.g. 49.98, but the customer has given 50,00. This\nis usually of interest in cash payments, or when when customers\ngave fewer amount than they ought to pay.",
+                    "description": "The actual over the counter money flow: regardles what needs to\nbe payed e.g. 49.98, but the customer has given 50,00. This\nis usually of interest in cash payments, or when when customers\ngave fewer amount than they ought to pay.\n\n2023: Equal to '_amount_total' and '_amount_requested'.",
                     "example": "50.00",
                     "type": "number",
                     "minimum": -1000000,
@@ -4924,7 +4948,7 @@
               "_amount_requested": {
                 "oneOf": [
                   {
-                    "description": "The amount that was requested\nby the POS e.g. 49.98, regardless\nof what was given e.g. 50.00. Hence the rest is change or tip.\nThis is usually of interest in cash payments.\n\nNOTE: this can be used in analytics to rebuild payment flows",
+                    "description": "The amount that was requested to e.g. a card payment terminal - thus it includes the proposed tip amount.\nSee NOTE!\n\nNOTE: The intention to use this without tip and change can not be realized as of 2023.\n\n2023: Equal to '_amount_total' and '_amount_given'.",
                     "example": "49.98",
                     "type": "number",
                     "minimum": -1000000,
@@ -4939,7 +4963,7 @@
               "_amount_change": {
                 "oneOf": [
                   {
-                    "description": "The cash amount that was handed back from the\ncashier as change.\n\nNOTE: that card payments can never have change, but need to cause a cash payment.",
+                    "description": ".\n\nNOTE: usually NULL - as change is tx top level an should currently not be attributed to a single payment (of potentially many).\n\n2023: Change can be set on a payment ONLY if top level change is agreed to be 0 .",
                     "example": "49.98",
                     "type": "number",
                     "minimum": 0,
@@ -5640,6 +5664,7 @@
               "enum": [
                 "fiskaltrust",
                 "tse_fiskaly",
+                "at_fiskaly",
                 "tse_epson",
                 "fr_NF525"
               ],

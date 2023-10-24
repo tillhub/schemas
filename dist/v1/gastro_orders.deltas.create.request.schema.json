@@ -383,6 +383,7 @@
           "enum": [
             "fiskaltrust",
             "tse_fiskaly",
+            "at_fiskaly",
             "tse_epson",
             "fr_NF525"
           ],

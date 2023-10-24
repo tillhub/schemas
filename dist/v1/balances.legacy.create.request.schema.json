@@ -194,7 +194,7 @@
         {
           "type": "integer",
           "example": 50000,
-          "description": "The amount of cash when the register was opened (e.g. 50.00€)"
+          "description": "The amount of cash when the register was opened (e.g. 50.00€) - before any adjustments -> thus must be equal to the previoius closing amount."
         },
         {
           "type": "null"
@@ -255,7 +255,7 @@
         {
           "type": "integer",
           "example": 281000,
-          "description": "The calulated (should be) cash amount when closing the register, POS: cash_begin + cash_revenue + expenses_cash_total + tips_cash"
+          "description": "The calulated (expected) cash amount when closing the register, POS: cash_begin + cash_revenue + expenses_cash_total + tips_cash"
         },
         {
           "type": "null"
@@ -267,7 +267,7 @@
         {
           "type": "integer",
           "example": 280000,
-          "description": "The (is) cash amount - counted by a cashier - when closing the register, POS: user input"
+          "description": "The (actual) cash amount - counted by a cashier - when closing the register, POS: user input"
         },
         {
           "type": "null"
@@ -2853,6 +2853,7 @@
               "enum": [
                 "fiskaltrust",
                 "tse_fiskaly",
+                "at_fiskaly",
                 "tse_epson",
                 "fr_NF525"
               ],
