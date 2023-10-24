@@ -1,3 +1,10 @@
+# [6.269.0](https://github.com/tillhub/schemas/compare/v6.268.0...v6.269.0) (2023-10-24)
+
+
+### Features
+
+* **fiscalization:** Update schema with new configuration ([3a06905](https://github.com/tillhub/schemas/commit/3a06905))
+
 # [6.268.0](https://github.com/tillhub/schemas/compare/v6.267.0...v6.268.0) (2023-10-20)
 
 
