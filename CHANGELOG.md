@@ -1,3 +1,15 @@
+# [6.270.0](https://github.com/tillhub/schemas/compare/v6.269.0...v6.270.0) (2023-10-26)
+
+
+### Bug Fixes
+
+* **products:** pricelist ([68d37d1](https://github.com/tillhub/schemas/commit/68d37d1))
+
+
+### Features
+
+* **pricebook:** customer price book for pricelist ([678c133](https://github.com/tillhub/schemas/commit/678c133))
+
 # [6.269.0](https://github.com/tillhub/schemas/compare/v6.268.0...v6.269.0) (2023-10-24)
 
 
