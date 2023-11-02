@@ -1,3 +1,11 @@
+# [6.273.0](https://github.com/tillhub/schemas/compare/v6.272.0...v6.273.0) (2023-11-02)
+
+
+### Features
+
+* **fiskaly:** add branch signing_configuration ([8f1e7ad](https://github.com/tillhub/schemas/commit/8f1e7ad))
+* **fiskaly:** rollback the last change ([1994f22](https://github.com/tillhub/schemas/commit/1994f22))
+
 # [6.272.0](https://github.com/tillhub/schemas/compare/v6.271.0...v6.272.0) (2023-11-02)
 
 
