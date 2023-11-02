@@ -1,3 +1,27 @@
+# [6.271.0](https://github.com/tillhub/schemas/compare/v6.270.0...v6.271.0) (2023-10-31)
+
+
+### Features
+
+* **at:** update fiscal configs ([4ecb0d7](https://github.com/tillhub/schemas/commit/4ecb0d7))
+* **at:** update fiscal configs ([38d0e32](https://github.com/tillhub/schemas/commit/38d0e32))
+* **at:** update fiscal configs ([373b87f](https://github.com/tillhub/schemas/commit/373b87f))
+* **at:** update fiscal configs ([b79ba0a](https://github.com/tillhub/schemas/commit/b79ba0a))
+* **fiscalization:** configurations ([63aef90](https://github.com/tillhub/schemas/commit/63aef90))
+* **fiskalization:** at_fiskaly ([f321442](https://github.com/tillhub/schemas/commit/f321442))
+
+# [6.270.0](https://github.com/tillhub/schemas/compare/v6.269.0...v6.270.0) (2023-10-26)
+
+
+### Bug Fixes
+
+* **products:** pricelist ([68d37d1](https://github.com/tillhub/schemas/commit/68d37d1))
+
+
+### Features
+
+* **pricebook:** customer price book for pricelist ([678c133](https://github.com/tillhub/schemas/commit/678c133))
+
 # [6.269.0](https://github.com/tillhub/schemas/compare/v6.268.0...v6.269.0) (2023-10-24)
 
 

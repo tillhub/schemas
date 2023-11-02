@@ -486,7 +486,16 @@
       "anyOf": [
         {
           "type": "object",
-          "description": "Existing configuration object for Austria: Fiskaltrust"
+          "description": "Configuration object for Austria: Fiskaltrust - INCOMPLETE definition",
+          "properties": {
+            "signature_type": {
+              "description": "Any allowed singing system provider as type, currently only Austria has per-branch licensing.",
+              "type": "string",
+              "enum": [
+                "fiskaltrust"
+              ]
+            }
+          }
         },
         {
           "type": "null"
