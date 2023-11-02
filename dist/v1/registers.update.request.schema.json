@@ -188,6 +188,50 @@
       "type": "boolean",
       "default": false
     },
+    "fiscal_signing_admin_config": {
+      "anyOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "resource": {
+              "type": "string",
+              "description": "fiskaly cash register id",
+              "example": "uuid"
+            },
+            "signature_type": {
+              "type": "string",
+              "description": "type of the signature",
+              "example": "at_fiskaly"
+            },
+            "fiskaly": {
+              "type": "object",
+              "description": "fiskaly meta data",
+              "properties": {
+                "state": {
+                  "type": "string",
+                  "description": "state of the fiskaly cash register",
+                  "example": "CREATED"
+                },
+                "serial_number": {
+                  "type": "string",
+                  "description": "serial number of the fiskaly cash register",
+                  "example": "serial-number"
+                },
+                "turnover_counter": {
+                  "type": "string",
+                  "description": "turnover counter of the fiskaly cash register",
+                  "example": "12.311"
+                }
+              }
+            }
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "device_configuration": {
       "anyOf": [
         {

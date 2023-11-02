@@ -1,3 +1,10 @@
+# [6.272.0](https://github.com/tillhub/schemas/compare/v6.271.0...v6.272.0) (2023-11-02)
+
+
+### Features
+
+* **fiskaly:** schema validation to update fiskaly information in the register ([#892](https://github.com/tillhub/schemas/issues/892)) ([a2da4e3](https://github.com/tillhub/schemas/commit/a2da4e3))
+
 # [6.271.0](https://github.com/tillhub/schemas/compare/v6.270.0...v6.271.0) (2023-10-31)
 
 
