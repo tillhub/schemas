@@ -2902,8 +2902,25 @@
                             "description": "Any allowed singing system provider as type, currently only Austria has per-branch licensing.",
                             "type": "string",
                             "enum": [
-                              "fiskaltrust"
+                              "fiskaltrust",
+                              "at_fiskaly"
                             ]
+                          },
+                          "auth": {
+                            "description": "Keeping auth data for the branch, in this case just for at_fiskaly",
+                            "type": "object",
+                            "properties": {
+                              "key": {
+                                "type": "string"
+                              },
+                              "secret": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "resource": {
+                            "description": "In case of at_fiskaly its organization_id",
+                            "type": "string"
                           }
                         }
                       },
@@ -3587,8 +3604,25 @@
                             "description": "Any allowed singing system provider as type, currently only Austria has per-branch licensing.",
                             "type": "string",
                             "enum": [
-                              "fiskaltrust"
+                              "fiskaltrust",
+                              "at_fiskaly"
                             ]
+                          },
+                          "auth": {
+                            "description": "Keeping auth data for the branch, in this case just for at_fiskaly",
+                            "type": "object",
+                            "properties": {
+                              "key": {
+                                "type": "string"
+                              },
+                              "secret": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "resource": {
+                            "description": "In case of at_fiskaly its organization_id",
+                            "type": "string"
                           }
                         }
                       },
@@ -4262,8 +4296,25 @@
                             "description": "Any allowed singing system provider as type, currently only Austria has per-branch licensing.",
                             "type": "string",
                             "enum": [
-                              "fiskaltrust"
+                              "fiskaltrust",
+                              "at_fiskaly"
                             ]
+                          },
+                          "auth": {
+                            "description": "Keeping auth data for the branch, in this case just for at_fiskaly",
+                            "type": "object",
+                            "properties": {
+                              "key": {
+                                "type": "string"
+                              },
+                              "secret": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "resource": {
+                            "description": "In case of at_fiskaly its organization_id",
+                            "type": "string"
                           }
                         }
                       },

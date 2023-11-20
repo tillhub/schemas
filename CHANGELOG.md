@@ -1,3 +1,16 @@
+# [6.274.0](https://github.com/tillhub/schemas/compare/v6.273.0...v6.274.0) (2023-11-20)
+
+
+### Bug Fixes
+
+* **eslint:** fix test ([#898](https://github.com/tillhub/schemas/issues/898)) ([216e8d2](https://github.com/tillhub/schemas/commit/216e8d2))
+
+
+### Features
+
+* **fiskaly:** add branch signing_configuration ([944375b](https://github.com/tillhub/schemas/commit/944375b))
+* **paymentOptions:** add buy now pay later option ([093487f](https://github.com/tillhub/schemas/commit/093487f))
+
 # [6.273.0](https://github.com/tillhub/schemas/compare/v6.272.0...v6.273.0) (2023-11-02)
 
 
