@@ -1,3 +1,10 @@
+# [6.275.0](https://github.com/tillhub/schemas/compare/v6.274.0...v6.275.0) (2023-11-23)
+
+
+### Features
+
+* **reports:** add reports configuration ([#897](https://github.com/tillhub/schemas/issues/897)) ([8495caf](https://github.com/tillhub/schemas/commit/8495caf))
+
 # [6.274.0](https://github.com/tillhub/schemas/compare/v6.273.0...v6.274.0) (2023-11-20)
 
 

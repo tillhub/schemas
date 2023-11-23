@@ -1561,6 +1561,174 @@
                   "type": "null"
                 }
               ]
+            },
+            "reports": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "patternProperties": {
+                    "^[a-zA-Z0-9_]+$": {
+                      "type": "object",
+                      "properties": {
+                        "delimiter": {
+                          "oneOf": [
+                            {
+                              "type": "string",
+                              "description": "The delimiter used in the CSV file",
+                              "enum": [
+                                "comma",
+                                "semicolon"
+                              ]
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "format": {
+                          "oneOf": [
+                            {
+                              "type": "string",
+                              "description": "The format of the Report file",
+                              "enum": [
+                                "csv",
+                                "excel"
+                              ]
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "enclosure": {
+                          "oneOf": [
+                            {
+                              "type": "string",
+                              "description": "The enclosure used in the CSV file",
+                              "enum": [
+                                "single",
+                                "double"
+                              ]
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "show_summary": {
+                          "oneOf": [
+                            {
+                              "type": "boolean"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "show_column_name": {
+                          "oneOf": [
+                            {
+                              "description": "The header of the report",
+                              "type": "boolean"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "date_range": {
+                          "oneOf": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "filter": {
+                          "oneOf": [
+                            {
+                              "type": "object"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "is_recurring": {
+                          "oneOf": [
+                            {
+                              "type": "boolean"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "recurring_cycle": {
+                          "oneOf": [
+                            {
+                              "type": "string",
+                              "description": "The recurring cycle of the report",
+                              "enum": [
+                                "weekly",
+                                "daily",
+                                "monthly"
+                              ]
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "recurring_on": {
+                          "oneOf": [
+                            {
+                              "type": "number",
+                              "description": "The recurring day of the report"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "column_selection": {
+                          "oneOf": [
+                            {
+                              "type": "string",
+                              "description": "The column selection of the report",
+                              "enum": [
+                                "current_view",
+                                "all"
+                              ]
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        }
+                      },
+                      "required": [
+                        "delimiter",
+                        "format",
+                        "enclosure",
+                        "show_summary",
+                        "show_column_name",
+                        "date_range",
+                        "filter",
+                        "is_recurring",
+                        "recurring_cycle",
+                        "recurring_on",
+                        "column_selection"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
             }
           }
         }
