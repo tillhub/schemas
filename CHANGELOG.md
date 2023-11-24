@@ -1,3 +1,10 @@
+## [6.275.1](https://github.com/tillhub/schemas/compare/v6.275.0...v6.275.1) (2023-11-24)
+
+
+### Bug Fixes
+
+* **eslint:** fix export configuration ([a825787](https://github.com/tillhub/schemas/commit/a825787))
+
 # [6.275.0](https://github.com/tillhub/schemas/compare/v6.274.0...v6.275.0) (2023-11-23)
 
 

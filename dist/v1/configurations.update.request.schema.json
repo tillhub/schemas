@@ -1636,7 +1636,7 @@
                             }
                           ]
                         },
-                        "date_range": {
+                        "email": {
                           "oneOf": [
                             {
                               "type": "string"
