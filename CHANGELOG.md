@@ -1,3 +1,10 @@
+## [6.275.2](https://github.com/tillhub/schemas/compare/v6.275.1...v6.275.2) (2023-11-27)
+
+
+### Bug Fixes
+
+* **report:** fix export configuration ([#899](https://github.com/tillhub/schemas/issues/899)) ([d729905](https://github.com/tillhub/schemas/commit/d729905))
+
 ## [6.275.1](https://github.com/tillhub/schemas/compare/v6.275.0...v6.275.1) (2023-11-24)
 
 
