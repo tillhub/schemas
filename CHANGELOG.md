@@ -1,3 +1,10 @@
+## [6.275.3](https://github.com/tillhub/schemas/compare/v6.275.2...v6.275.3) (2023-11-30)
+
+
+### Bug Fixes
+
+* **invoices:** added tx date to invoice data ([fe9e9bd](https://github.com/tillhub/schemas/commit/fe9e9bd))
+
 ## [6.275.2](https://github.com/tillhub/schemas/compare/v6.275.1...v6.275.2) (2023-11-27)
 
 
