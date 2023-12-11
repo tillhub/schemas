@@ -1,3 +1,10 @@
+# [6.276.0](https://github.com/tillhub/schemas/compare/v6.275.3...v6.276.0) (2023-12-11)
+
+
+### Features
+
+* **configurations:** payments ([b4798b9](https://github.com/tillhub/schemas/commit/b4798b9))
+
 ## [6.275.3](https://github.com/tillhub/schemas/compare/v6.275.2...v6.275.3) (2023-11-30)
 
 
