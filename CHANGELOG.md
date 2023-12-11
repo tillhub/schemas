@@ -1,3 +1,12 @@
+# [6.277.0](https://github.com/tillhub/schemas/compare/v6.276.0...v6.277.0) (2023-12-11)
+
+
+### Features
+
+* **transactions:** extend bnpl on payments ([2666563](https://github.com/tillhub/schemas/commit/2666563))
+* **transactions:** payments ([4b96cf3](https://github.com/tillhub/schemas/commit/4b96cf3))
+* **transactions:** payments ([3d9bfd0](https://github.com/tillhub/schemas/commit/3d9bfd0))
+
 # [6.276.0](https://github.com/tillhub/schemas/compare/v6.275.3...v6.276.0) (2023-12-11)
 
 

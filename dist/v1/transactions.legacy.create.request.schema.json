@@ -3982,7 +3982,8 @@
                   "card_tim",
                   "card_adyen",
                   "card",
-                  "terminal_gift_card"
+                  "terminal_gift_card",
+                  "buy_now_pay_later"
                 ],
                 "description": "Payment option type"
               },
@@ -4105,7 +4106,8 @@
                         "cardTerminalApi",
                         "cardTerminalProvider",
                         "cardTransactionID",
-                        "isTerminalConnected"
+                        "isTerminalConnected",
+                        "bnpl_purchase_id"
                       ]
                     },
                     "value": {
@@ -4156,7 +4158,8 @@
                   "card_opi",
                   "card_concardis",
                   "card_adyen",
-                  "card_tim"
+                  "card_tim",
+                  "buy_now_pay_later"
                 ]
               },
               {
@@ -4531,14 +4534,53 @@
                       }
                     ],
                     "default": null
+                  },
+                  "buy_now_pay_later": {
+                    "description": "Details when Unzer BNPL is used",
+                    "oneOf": [
+                      {
+                        "description": "BNPL details, scalable",
+                        "additionalProperties": false,
+                        "type": "object",
+                        "properties": {
+                          "purchase": {
+                            "description": "Purchase details when Unzer BNPL is used",
+                            "type": "object",
+                            "properties": {
+                              "purchaseId": {
+                                "type": "string",
+                                "description": "Unzer BNPL purchase ID",
+                                "example": "CID-wh3m5f2co5weq4sjfdpq"
+                              }
+                            }
+                          },
+                          "raw_response": {
+                            "oneOf": [
+                              {
+                                "default": null,
+                                "description": "The full raw response of the BNPL API for documentation and analysis.",
+                                "type": "string",
+                                "maxLength": 16384
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
                   }
                 }
               },
               {
                 "type": "null"
               }
-            ],
-            "default": null
+            ]
           },
           "payment_option": {
             "oneOf": [
