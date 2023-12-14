@@ -1,3 +1,10 @@
+## [6.277.1](https://github.com/tillhub/schemas/compare/v6.277.0...v6.277.1) (2023-12-14)
+
+
+### Bug Fixes
+
+* **mms:** lift restrictions for bug numbers #UNTIL-8906 ([dbc1b1e](https://github.com/tillhub/schemas/commit/dbc1b1e)), closes [#UNTIL-8906](https://github.com/tillhub/schemas/issues/UNTIL-8906)
+
 # [6.277.0](https://github.com/tillhub/schemas/compare/v6.276.0...v6.277.0) (2023-12-11)
 
 
