@@ -1,3 +1,10 @@
+# [6.278.0](https://github.com/tillhub/schemas/compare/v6.277.1...v6.278.0) (2023-12-20)
+
+
+### Features
+
+* **branches,registers:** update fields to unzer requirements ([#905](https://github.com/tillhub/schemas/issues/905)) ([4339727](https://github.com/tillhub/schemas/commit/4339727))
+
 ## [6.277.1](https://github.com/tillhub/schemas/compare/v6.277.0...v6.277.1) (2023-12-14)
 
 
