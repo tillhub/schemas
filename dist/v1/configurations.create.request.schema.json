@@ -868,7 +868,7 @@
                     "MMMM d, yyyy",
                     "MM/dd/yyyy",
                     "dd/MM/yyyy",
-                    "yyyy/mm/dd"
+                    "yyyy/MM/dd"
                   ]
                 },
                 {

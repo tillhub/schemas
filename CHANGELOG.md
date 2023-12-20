@@ -1,3 +1,10 @@
+## [6.278.1](https://github.com/tillhub/schemas/compare/v6.278.0...v6.278.1) (2023-12-20)
+
+
+### Bug Fixes
+
+* **config:** fix value for default data format ([4a53467](https://github.com/tillhub/schemas/commit/4a53467))
+
 # [6.278.0](https://github.com/tillhub/schemas/compare/v6.277.1...v6.278.0) (2023-12-20)
 
 
