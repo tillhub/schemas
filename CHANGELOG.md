@@ -1,3 +1,10 @@
+## [6.279.1](https://github.com/tillhub/schemas/compare/v6.279.0...v6.279.1) (2024-01-08)
+
+
+### Bug Fixes
+
+* Add string format to signing configuration auth in base branch ([e96eb62](https://github.com/tillhub/schemas/commit/e96eb62))
+
 # [6.279.0](https://github.com/tillhub/schemas/compare/v6.278.1...v6.279.0) (2024-01-08)
 
 
