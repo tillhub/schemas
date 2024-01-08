@@ -1,3 +1,15 @@
+# [6.279.0](https://github.com/tillhub/schemas/compare/v6.278.1...v6.279.0) (2024-01-08)
+
+
+### Bug Fixes
+
+* **functions:** decimal quantity fix ([dfab14d](https://github.com/tillhub/schemas/commit/dfab14d))
+
+
+### Features
+
+* **configurations:** payments ([0b52e3f](https://github.com/tillhub/schemas/commit/0b52e3f))
+
 ## [6.278.1](https://github.com/tillhub/schemas/compare/v6.278.0...v6.278.1) (2023-12-20)
 
 
