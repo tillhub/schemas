@@ -1,3 +1,10 @@
+## [6.279.2](https://github.com/tillhub/schemas/compare/v6.279.1...v6.279.2) (2024-01-18)
+
+
+### Bug Fixes
+
+* **reports:** Change report format from excel to xls ([#912](https://github.com/tillhub/schemas/issues/912)) ([c55d7a9](https://github.com/tillhub/schemas/commit/c55d7a9))
+
 ## [6.279.1](https://github.com/tillhub/schemas/compare/v6.279.0...v6.279.1) (2024-01-08)
 
 
