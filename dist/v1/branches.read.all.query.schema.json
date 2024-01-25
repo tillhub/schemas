@@ -82,6 +82,15 @@
         "true",
         "false"
       ]
+    },
+    "extended": {
+      "description": "Return mms branches extended information",
+      "example": "true",
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
     }
   }
 }

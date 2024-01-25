@@ -1,3 +1,11 @@
+# [6.280.0](https://github.com/tillhub/schemas/compare/v6.279.2...v6.280.0) (2024-01-25)
+
+
+### Features
+
+* **branches:** extend v1 ([687d291](https://github.com/tillhub/schemas/commit/687d291))
+* **branches:** extender properties for branches v1 ([c9e8aed](https://github.com/tillhub/schemas/commit/c9e8aed))
+
 ## [6.279.2](https://github.com/tillhub/schemas/compare/v6.279.1...v6.279.2) (2024-01-18)
 
 
