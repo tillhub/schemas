@@ -3710,6 +3710,26 @@
               "type": "boolean",
               "default": false
             },
+            "customer_number_capture_enabled": {
+              "type": "boolean",
+              "default": false
+            },
+            "customer_number_capture_pattern": {
+              "oneOf": [
+                {
+                  "description": "Defines how a customer number can be extracted from a scanned barcode",
+                  "type": "string",
+                  "format": "regex",
+                  "examples": [
+                    "^.{2}(.{8}).{4,6}$"
+                  ],
+                  "default": "null"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
             "customer_add_policy": {
               "description": "The customer selection screen will be presented automatically before or after a sale (or not in case of none).",
               "oneOf": [

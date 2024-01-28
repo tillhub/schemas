@@ -1,3 +1,10 @@
+# [6.281.0](https://github.com/tillhub/schemas/compare/v6.280.0...v6.281.0) (2024-01-28)
+
+
+### Features
+
+* **customers:** customer number capture configuration ([18e9be8](https://github.com/tillhub/schemas/commit/18e9be8))
+
 # [6.280.0](https://github.com/tillhub/schemas/compare/v6.279.2...v6.280.0) (2024-01-25)
 
 
