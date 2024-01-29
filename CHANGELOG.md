@@ -1,3 +1,10 @@
+# [6.282.0](https://github.com/tillhub/schemas/compare/v6.281.0...v6.282.0) (2024-01-29)
+
+
+### Features
+
+* **services:** add locations to services ([#915](https://github.com/tillhub/schemas/issues/915)) ([a759f43](https://github.com/tillhub/schemas/commit/a759f43))
+
 # [6.281.0](https://github.com/tillhub/schemas/compare/v6.280.0...v6.281.0) (2024-01-28)
 
 
