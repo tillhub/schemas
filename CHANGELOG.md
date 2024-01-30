@@ -1,3 +1,10 @@
+# [6.283.0](https://github.com/tillhub/schemas/compare/v6.282.0...v6.283.0) (2024-01-30)
+
+
+### Features
+
+* **pricelist:** response ([ab5d278](https://github.com/tillhub/schemas/commit/ab5d278))
+
 # [6.282.0](https://github.com/tillhub/schemas/compare/v6.281.0...v6.282.0) (2024-01-29)
 
 
