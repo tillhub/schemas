@@ -27,9 +27,7 @@
       "oneOf": [
         {
           "description": "Who created the branch in Mms.",
-          "type": "string",
-          "maxLength": 255,
-          "minLength": 1
+          "type": "string"
         },
         {
           "type": "null"
@@ -40,9 +38,7 @@
       "oneOf": [
         {
           "description": "Who updated the branch for the last time in Mms.",
-          "type": "string",
-          "maxLength": 255,
-          "minLength": 1
+          "type": "string"
         },
         {
           "type": "null"
@@ -53,9 +49,7 @@
       "oneOf": [
         {
           "description": "Who deleted the branch in Mms.",
-          "type": "string",
-          "maxLength": 255,
-          "minLength": 1
+          "type": "string"
         },
         {
           "type": "null"
@@ -89,9 +83,7 @@
       "oneOf": [
         {
           "description": "The vat id.",
-          "type": "string",
-          "maxLength": 255,
-          "minLength": 1
+          "type": "string"
         },
         {
           "type": "null"
@@ -102,9 +94,7 @@
       "oneOf": [
         {
           "description": "The commercial register number.",
-          "type": "string",
-          "maxLength": 255,
-          "minLength": 1
+          "type": "string"
         },
         {
           "type": "null"
@@ -115,9 +105,7 @@
       "oneOf": [
         {
           "description": "The creditor id.",
-          "type": "string",
-          "maxLength": 255,
-          "minLength": 1
+          "type": "string"
         },
         {
           "type": "null"
@@ -128,9 +116,7 @@
       "oneOf": [
         {
           "description": "The court of jurisdiction.",
-          "type": "string",
-          "maxLength": 255,
-          "minLength": 1
+          "type": "string"
         },
         {
           "type": "null"
@@ -141,9 +127,7 @@
       "oneOf": [
         {
           "description": "The short company name.",
-          "type": "string",
-          "maxLength": 1024,
-          "minLength": 1
+          "type": "string"
         },
         {
           "type": "null"
@@ -154,9 +138,7 @@
       "oneOf": [
         {
           "description": "The company description.",
-          "type": "string",
-          "maxLength": 16384,
-          "minLength": 1
+          "type": "string"
         },
         {
           "type": "null"
@@ -167,9 +149,7 @@
       "oneOf": [
         {
           "description": "The registration authority.",
-          "type": "string",
-          "maxLength": 255,
-          "minLength": 1
+          "type": "string"
         },
         {
           "type": "null"
@@ -180,9 +160,7 @@
       "oneOf": [
         {
           "description": "The legal entity type.",
-          "type": "string",
-          "maxLength": 255,
-          "minLength": 1
+          "type": "string"
         },
         {
           "type": "null"
@@ -193,9 +171,7 @@
       "oneOf": [
         {
           "description": "The country of registration.",
-          "type": "string",
-          "maxLength": 255,
-          "minLength": 1
+          "type": "string"
         },
         {
           "type": "null"
@@ -220,9 +196,7 @@
       "oneOf": [
         {
           "description": "The date of foundation.",
-          "type": "string",
-          "maxLength": 255,
-          "minLength": 1
+          "type": "string"
         },
         {
           "type": "null"
@@ -233,9 +207,7 @@
       "oneOf": [
         {
           "description": "The website.",
-          "type": "string",
-          "maxLength": 255,
-          "minLength": 1
+          "type": "string"
         },
         {
           "type": "null"
@@ -246,9 +218,7 @@
       "oneOf": [
         {
           "description": "The sector.",
-          "type": "string",
-          "maxLength": 255,
-          "minLength": 1
+          "type": "string"
         },
         {
           "type": "null"
@@ -287,9 +257,7 @@
       "oneOf": [
         {
           "description": "The state.",
-          "type": "string",
-          "maxLength": 255,
-          "minLength": 1
+          "type": "string"
         },
         {
           "type": "null"
@@ -344,9 +312,7 @@
       "oneOf": [
         {
           "description": "The type.",
-          "type": "string",
-          "maxLength": 255,
-          "minLength": 1
+          "type": "string"
         },
         {
           "type": "null"
@@ -357,9 +323,7 @@
       "oneOf": [
         {
           "description": "The unit unzer id.",
-          "type": "string",
-          "maxLength": 255,
-          "minLength": 1
+          "type": "string"
         },
         {
           "type": "null"

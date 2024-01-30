@@ -40,7 +40,7 @@
     },
     "timestamp": {
       "description": "The date and time event was received by webhooks service",
-      "example": "2023-08-21T10:16:43.130Z",
+      "example": "2024-01-29T09:30:52.651Z",
       "type": "string",
       "format": "date-time"
     },
@@ -781,6 +781,18 @@
         },
         "branch_id": {
           "description": "in cases where the customer is created via the POS, the branch_id is required",
+          "oneOf": [
+            {
+              "type": "string",
+              "format": "uuid"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "price_book": {
+          "description": "in cases where the customer is going to have personal pricebook (like for discounts in pharmacy by personal insurance number), price_book is required",
           "oneOf": [
             {
               "type": "string",

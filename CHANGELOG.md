@@ -1,3 +1,333 @@
+# [6.282.0](https://github.com/tillhub/schemas/compare/v6.281.0...v6.282.0) (2024-01-29)
+
+
+### Features
+
+* **services:** add locations to services ([#915](https://github.com/tillhub/schemas/issues/915)) ([a759f43](https://github.com/tillhub/schemas/commit/a759f43))
+
+# [6.281.0](https://github.com/tillhub/schemas/compare/v6.280.0...v6.281.0) (2024-01-28)
+
+
+### Features
+
+* **customers:** customer number capture configuration ([18e9be8](https://github.com/tillhub/schemas/commit/18e9be8))
+
+# [6.280.0](https://github.com/tillhub/schemas/compare/v6.279.2...v6.280.0) (2024-01-25)
+
+
+### Features
+
+* **branches:** extend v1 ([687d291](https://github.com/tillhub/schemas/commit/687d291))
+* **branches:** extender properties for branches v1 ([c9e8aed](https://github.com/tillhub/schemas/commit/c9e8aed))
+
+## [6.279.2](https://github.com/tillhub/schemas/compare/v6.279.1...v6.279.2) (2024-01-18)
+
+
+### Bug Fixes
+
+* **reports:** Change report format from excel to xls ([#912](https://github.com/tillhub/schemas/issues/912)) ([c55d7a9](https://github.com/tillhub/schemas/commit/c55d7a9))
+
+## [6.279.1](https://github.com/tillhub/schemas/compare/v6.279.0...v6.279.1) (2024-01-08)
+
+
+### Bug Fixes
+
+* Add string format to signing configuration auth in base branch ([e96eb62](https://github.com/tillhub/schemas/commit/e96eb62))
+
+# [6.279.0](https://github.com/tillhub/schemas/compare/v6.278.1...v6.279.0) (2024-01-08)
+
+
+### Bug Fixes
+
+* **functions:** decimal quantity fix ([dfab14d](https://github.com/tillhub/schemas/commit/dfab14d))
+
+
+### Features
+
+* **configurations:** payments ([0b52e3f](https://github.com/tillhub/schemas/commit/0b52e3f))
+
+## [6.278.1](https://github.com/tillhub/schemas/compare/v6.278.0...v6.278.1) (2023-12-20)
+
+
+### Bug Fixes
+
+* **config:** fix value for default data format ([4a53467](https://github.com/tillhub/schemas/commit/4a53467))
+
+# [6.278.0](https://github.com/tillhub/schemas/compare/v6.277.1...v6.278.0) (2023-12-20)
+
+
+### Features
+
+* **branches,registers:** update fields to unzer requirements ([#905](https://github.com/tillhub/schemas/issues/905)) ([4339727](https://github.com/tillhub/schemas/commit/4339727))
+
+## [6.277.1](https://github.com/tillhub/schemas/compare/v6.277.0...v6.277.1) (2023-12-14)
+
+
+### Bug Fixes
+
+* **mms:** lift restrictions for bug numbers #UNTIL-8906 ([dbc1b1e](https://github.com/tillhub/schemas/commit/dbc1b1e)), closes [#UNTIL-8906](https://github.com/tillhub/schemas/issues/UNTIL-8906)
+
+# [6.277.0](https://github.com/tillhub/schemas/compare/v6.276.0...v6.277.0) (2023-12-11)
+
+
+### Features
+
+* **transactions:** extend bnpl on payments ([2666563](https://github.com/tillhub/schemas/commit/2666563))
+* **transactions:** payments ([4b96cf3](https://github.com/tillhub/schemas/commit/4b96cf3))
+* **transactions:** payments ([3d9bfd0](https://github.com/tillhub/schemas/commit/3d9bfd0))
+
+# [6.276.0](https://github.com/tillhub/schemas/compare/v6.275.3...v6.276.0) (2023-12-11)
+
+
+### Features
+
+* **configurations:** payments ([b4798b9](https://github.com/tillhub/schemas/commit/b4798b9))
+
+## [6.275.3](https://github.com/tillhub/schemas/compare/v6.275.2...v6.275.3) (2023-11-30)
+
+
+### Bug Fixes
+
+* **invoices:** added tx date to invoice data ([fe9e9bd](https://github.com/tillhub/schemas/commit/fe9e9bd))
+
+## [6.275.2](https://github.com/tillhub/schemas/compare/v6.275.1...v6.275.2) (2023-11-27)
+
+
+### Bug Fixes
+
+* **report:** fix export configuration ([#899](https://github.com/tillhub/schemas/issues/899)) ([d729905](https://github.com/tillhub/schemas/commit/d729905))
+
+## [6.275.1](https://github.com/tillhub/schemas/compare/v6.275.0...v6.275.1) (2023-11-24)
+
+
+### Bug Fixes
+
+* **eslint:** fix export configuration ([a825787](https://github.com/tillhub/schemas/commit/a825787))
+
+# [6.275.0](https://github.com/tillhub/schemas/compare/v6.274.0...v6.275.0) (2023-11-23)
+
+
+### Features
+
+* **reports:** add reports configuration ([#897](https://github.com/tillhub/schemas/issues/897)) ([8495caf](https://github.com/tillhub/schemas/commit/8495caf))
+
+# [6.274.0](https://github.com/tillhub/schemas/compare/v6.273.0...v6.274.0) (2023-11-20)
+
+
+### Bug Fixes
+
+* **eslint:** fix test ([#898](https://github.com/tillhub/schemas/issues/898)) ([216e8d2](https://github.com/tillhub/schemas/commit/216e8d2))
+
+
+### Features
+
+* **fiskaly:** add branch signing_configuration ([944375b](https://github.com/tillhub/schemas/commit/944375b))
+* **paymentOptions:** add buy now pay later option ([093487f](https://github.com/tillhub/schemas/commit/093487f))
+
+# [6.273.0](https://github.com/tillhub/schemas/compare/v6.272.0...v6.273.0) (2023-11-02)
+
+
+### Features
+
+* **fiskaly:** add branch signing_configuration ([8f1e7ad](https://github.com/tillhub/schemas/commit/8f1e7ad))
+* **fiskaly:** rollback the last change ([1994f22](https://github.com/tillhub/schemas/commit/1994f22))
+
+# [6.272.0](https://github.com/tillhub/schemas/compare/v6.271.0...v6.272.0) (2023-11-02)
+
+
+### Features
+
+* **fiskaly:** schema validation to update fiskaly information in the register ([#892](https://github.com/tillhub/schemas/issues/892)) ([a2da4e3](https://github.com/tillhub/schemas/commit/a2da4e3))
+
+# [6.271.0](https://github.com/tillhub/schemas/compare/v6.270.0...v6.271.0) (2023-10-31)
+
+
+### Features
+
+* **at:** update fiscal configs ([4ecb0d7](https://github.com/tillhub/schemas/commit/4ecb0d7))
+* **at:** update fiscal configs ([38d0e32](https://github.com/tillhub/schemas/commit/38d0e32))
+* **at:** update fiscal configs ([373b87f](https://github.com/tillhub/schemas/commit/373b87f))
+* **at:** update fiscal configs ([b79ba0a](https://github.com/tillhub/schemas/commit/b79ba0a))
+* **fiscalization:** configurations ([63aef90](https://github.com/tillhub/schemas/commit/63aef90))
+* **fiskalization:** at_fiskaly ([f321442](https://github.com/tillhub/schemas/commit/f321442))
+
+# [6.270.0](https://github.com/tillhub/schemas/compare/v6.269.0...v6.270.0) (2023-10-26)
+
+
+### Bug Fixes
+
+* **products:** pricelist ([68d37d1](https://github.com/tillhub/schemas/commit/68d37d1))
+
+
+### Features
+
+* **pricebook:** customer price book for pricelist ([678c133](https://github.com/tillhub/schemas/commit/678c133))
+
+# [6.269.0](https://github.com/tillhub/schemas/compare/v6.268.0...v6.269.0) (2023-10-24)
+
+
+### Features
+
+* **fiscalization:** Update schema with new configuration ([3a06905](https://github.com/tillhub/schemas/commit/3a06905))
+
+# [6.268.0](https://github.com/tillhub/schemas/compare/v6.267.0...v6.268.0) (2023-10-20)
+
+
+### Features
+
+* **reservations:** add feature flag ([#884](https://github.com/tillhub/schemas/issues/884)) ([4ddc303](https://github.com/tillhub/schemas/commit/4ddc303))
+
+# [6.267.0](https://github.com/tillhub/schemas/compare/v6.266.0...v6.267.0) (2023-10-19)
+
+
+### Bug Fixes
+
+* **configurations:** carts ([0906ffe](https://github.com/tillhub/schemas/commit/0906ffe))
+
+
+### Features
+
+* **configurations:** carts ([5621298](https://github.com/tillhub/schemas/commit/5621298))
+
+# [6.266.0](https://github.com/tillhub/schemas/compare/v6.265.0...v6.266.0) (2023-10-17)
+
+
+### Features
+
+* **pricelist:** rebuild customer handling ([e915bcd](https://github.com/tillhub/schemas/commit/e915bcd))
+* **prices:** add customer bound type to list entries ([7b3409f](https://github.com/tillhub/schemas/commit/7b3409f))
+* **prices:** list ([07778e9](https://github.com/tillhub/schemas/commit/07778e9))
+* **products:** prices ([36165fd](https://github.com/tillhub/schemas/commit/36165fd))
+* **transactions:** customer ([cf6e687](https://github.com/tillhub/schemas/commit/cf6e687))
+
+# [6.265.0](https://github.com/tillhub/schemas/compare/v6.264.0...v6.265.0) (2023-10-16)
+
+
+### Bug Fixes
+
+* **staff:** put array length validation in place, now only array of length 7 is valid ([b4ac285](https://github.com/tillhub/schemas/commit/b4ac285))
+* **transactions_v1:** import of external module was not pointing to correct path ([1418414](https://github.com/tillhub/schemas/commit/1418414))
+
+
+### Features
+
+* **configurations:** carts ([78f6819](https://github.com/tillhub/schemas/commit/78f6819))
+* **configurations:** payments ([2dd438d](https://github.com/tillhub/schemas/commit/2dd438d))
+* **customers:** rename price_book_id to price_book ([#881](https://github.com/tillhub/schemas/issues/881)) ([17c4f3b](https://github.com/tillhub/schemas/commit/17c4f3b))
+* **encryption:** adjust ([3c8c5e4](https://github.com/tillhub/schemas/commit/3c8c5e4))
+* **shift_plan:** change schema a bit, move it out of branch and treat it as stand alone entity ([3bc439f](https://github.com/tillhub/schemas/commit/3bc439f))
+* **transactions:** legacy ([23a8964](https://github.com/tillhub/schemas/commit/23a8964)), closes [Security#2](https://github.com/Security/issues/2)
+
+# [6.264.0](https://github.com/tillhub/schemas/compare/v6.263.0...v6.264.0) (2023-09-28)
+
+
+### Features
+
+* **branches:** add schema for validating shift_plan objects that are part of branch table ([2230a83](https://github.com/tillhub/schemas/commit/2230a83))
+
+# [6.263.0](https://github.com/tillhub/schemas/compare/v6.262.0...v6.263.0) (2023-09-21)
+
+
+### Features
+
+* **staffs:** staff members have color that shows in reservation calendar around timeslot that they ([9149137](https://github.com/tillhub/schemas/commit/9149137))
+
+# [6.262.0](https://github.com/tillhub/schemas/compare/v6.261.0...v6.262.0) (2023-09-20)
+
+
+### Features
+
+* **terminalId:** terminalId has been added ([#871](https://github.com/tillhub/schemas/issues/871)) ([723ff75](https://github.com/tillhub/schemas/commit/723ff75))
+
+# [6.261.0](https://github.com/tillhub/schemas/compare/v6.260.1...v6.261.0) (2023-09-20)
+
+
+### Features
+
+* **terminal_id:** add terminalId to the schema ([#870](https://github.com/tillhub/schemas/issues/870)) ([82b222b](https://github.com/tillhub/schemas/commit/82b222b))
+
+## [6.260.1](https://github.com/tillhub/schemas/compare/v6.260.0...v6.260.1) (2023-09-19)
+
+
+### Bug Fixes
+
+* **configurations:** features ([5f88fb5](https://github.com/tillhub/schemas/commit/5f88fb5))
+
+# [6.260.0](https://github.com/tillhub/schemas/compare/v6.259.0...v6.260.0) (2023-09-13)
+
+
+### Features
+
+* **configurations:** restrictions ([85b347b](https://github.com/tillhub/schemas/commit/85b347b))
+
+# [6.259.0](https://github.com/tillhub/schemas/compare/v6.258.0...v6.259.0) (2023-09-12)
+
+
+### Features
+
+* **staff:** add staff.services ([#866](https://github.com/tillhub/schemas/issues/866)) ([a3966f6](https://github.com/tillhub/schemas/commit/a3966f6))
+
+# [6.258.0](https://github.com/tillhub/schemas/compare/v6.257.0...v6.258.0) (2023-09-11)
+
+
+### Features
+
+* **configurations:** add details for validations ([bc5560b](https://github.com/tillhub/schemas/commit/bc5560b))
+
+# [6.257.0](https://github.com/tillhub/schemas/compare/v6.256.1...v6.257.0) (2023-09-08)
+
+
+### Bug Fixes
+
+* **staff:** base object did not pass validation in tests. ([7d29d4e](https://github.com/tillhub/schemas/commit/7d29d4e))
+
+
+### Features
+
+* **staff:** finalize schema for reservation planing of staff member ([03b69d6](https://github.com/tillhub/schemas/commit/03b69d6))
+* **staff:** needed when staff member gets updated, this enables dashboard to change staff infividua ([4ca8393](https://github.com/tillhub/schemas/commit/4ca8393))
+* **staff:** Split one field in two, where one just controls if other has effect ([bd8c378](https://github.com/tillhub/schemas/commit/bd8c378))
+
+## [6.256.1](https://github.com/tillhub/schemas/compare/v6.256.0...v6.256.1) (2023-08-31)
+
+
+### Bug Fixes
+
+* **configuration:** add logo to be nullable, and delete wrong constraint for opening hours and leave ([52c7bba](https://github.com/tillhub/schemas/commit/52c7bba))
+
+# [6.256.0](https://github.com/tillhub/schemas/compare/v6.255.0...v6.256.0) (2023-08-30)
+
+
+### Features
+
+* **stock-management:** add product id to stock-book create event ([#859](https://github.com/tillhub/schemas/issues/859)) ([1c0928f](https://github.com/tillhub/schemas/commit/1c0928f))
+
+# [6.255.0](https://github.com/tillhub/schemas/compare/v6.254.0...v6.255.0) (2023-08-30)
+
+
+### Features
+
+* **configuration:** add schema for reservation config ([548865c](https://github.com/tillhub/schemas/commit/548865c))
+
+# [6.254.0](https://github.com/tillhub/schemas/compare/v6.253.0...v6.254.0) (2023-08-28)
+
+
+### Features
+
+* **customers:** add price_book_id ([c633970](https://github.com/tillhub/schemas/commit/c633970))
+
+# [6.253.0](https://github.com/tillhub/schemas/compare/v6.252.1...v6.253.0) (2023-08-24)
+
+
+### Bug Fixes
+
+* **chore:** commit message fix for new version ([#856](https://github.com/tillhub/schemas/issues/856)) ([8047905](https://github.com/tillhub/schemas/commit/8047905))
+
+
+### Features
+
+* **stock-management:** add optional transaction_id to stock-book create event ([#857](https://github.com/tillhub/schemas/issues/857)) ([43091fa](https://github.com/tillhub/schemas/commit/43091fa))
+
 ## [6.252.1](https://github.com/tillhub/schemas/compare/v6.252.0...v6.252.1) (2023-08-21)
 
 

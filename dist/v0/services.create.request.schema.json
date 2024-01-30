@@ -414,6 +414,21 @@
       "type": "string",
       "format": "uuid",
       "example": "05297f58-3408-44d0-8bf4-125d4e86c08a"
+    },
+    "locations": {
+      "oneOf": [
+        {
+          "description": "list of branch UUIDs the service can be performed at",
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
     }
   },
   "required": [],

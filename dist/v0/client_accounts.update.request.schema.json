@@ -306,6 +306,10 @@
         "web_view": {
           "type": "boolean",
           "default": false
+        },
+        "reservations": {
+          "type": "boolean",
+          "default": false
         }
       }
     },

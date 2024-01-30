@@ -730,6 +730,18 @@
         }
       ]
     },
+    "price_book": {
+      "description": "in cases where the customer is going to have personal pricebook (like for discounts in pharmacy by personal insurance number), price_book is required",
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "uuid"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "analytics": {
       "description": "A number of aggregated customer centric analytics data. Usually this data is being compiled at transaction time. Rehydrating data or adding missing data, requires a transaction with this customer.",
       "oneOf": [

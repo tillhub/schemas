@@ -28,9 +28,7 @@
       "oneOf": [
         {
           "description": "Who created the register in Mms.",
-          "type": "string",
-          "maxLength": 255,
-          "minLength": 1
+          "type": "string"
         },
         {
           "type": "null"
@@ -41,9 +39,7 @@
       "oneOf": [
         {
           "description": "Who updated the register for the last time in Mms.",
-          "type": "string",
-          "maxLength": 255,
-          "minLength": 1
+          "type": "string"
         },
         {
           "type": "null"
@@ -54,9 +50,7 @@
       "oneOf": [
         {
           "description": "Who deleted the register in Mms.",
-          "type": "string",
-          "maxLength": 255,
-          "minLength": 1
+          "type": "string"
         },
         {
           "type": "null"
@@ -90,9 +84,7 @@
       "oneOf": [
         {
           "description": "The state.",
-          "type": "string",
-          "maxLength": 255,
-          "minLength": 1
+          "type": "string"
         },
         {
           "type": "null"
@@ -103,9 +95,7 @@
       "oneOf": [
         {
           "description": "The type.",
-          "type": "string",
-          "maxLength": 255,
-          "minLength": 1
+          "type": "string"
         },
         {
           "type": "null"
@@ -142,6 +132,17 @@
         }
       ]
     },
+    "terminal_id": {
+      "oneOf": [
+        {
+          "description": "Identification for the payment terminal Id",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "urls": {
       "oneOf": [
         {
@@ -159,9 +160,7 @@
       "oneOf": [
         {
           "description": "The website.",
-          "type": "string",
-          "maxLength": 255,
-          "minLength": 1
+          "type": "string"
         },
         {
           "type": "null"
@@ -174,6 +173,9 @@
           "type": "number"
         },
         {
+          "type": "string"
+        },
+        {
           "type": "null"
         }
       ]
@@ -182,6 +184,9 @@
       "oneOf": [
         {
           "type": "number"
+        },
+        {
+          "type": "string"
         },
         {
           "type": "null"
@@ -194,6 +199,9 @@
           "type": "number"
         },
         {
+          "type": "string"
+        },
+        {
           "type": "null"
         }
       ]
@@ -202,6 +210,9 @@
       "oneOf": [
         {
           "type": "number"
+        },
+        {
+          "type": "string"
         },
         {
           "type": "null"
@@ -214,6 +225,9 @@
           "type": "number"
         },
         {
+          "type": "string"
+        },
+        {
           "type": "null"
         }
       ]
@@ -224,6 +238,9 @@
           "type": "number"
         },
         {
+          "type": "string"
+        },
+        {
           "type": "null"
         }
       ]
@@ -232,9 +249,7 @@
       "oneOf": [
         {
           "description": "The commercial register number.",
-          "type": "string",
-          "maxLength": 255,
-          "minLength": 1
+          "type": "string"
         },
         {
           "type": "null"
@@ -267,6 +282,9 @@
       "oneOf": [
         {
           "type": "number"
+        },
+        {
+          "type": "string"
         },
         {
           "type": "null"

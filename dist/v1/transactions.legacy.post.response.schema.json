@@ -1455,6 +1455,19 @@
                                 "type": "null"
                               }
                             ]
+                          },
+                          "price_book": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "format": "uuid",
+                                "description": "The Tillhub pricebook resource asscociated with the customer at that moment",
+                                "example": "512448db-5e6c-4fcf-bd70-f8a5e56fa269"
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
                           }
                         }
                       },
@@ -1695,193 +1708,6 @@
                   },
                   "lng": {
                     "type": "number"
-                  }
-                }
-              },
-              {
-                "type": "null"
-              }
-            ]
-          },
-          "external_rewards": {
-            "oneOf": [
-              {
-                "type": "object",
-                "description": "Necessary data to handle an external reward triggered by a transaction.",
-                "additionalProperties": false,
-                "properties": {
-                  "coop": {
-                    "oneOf": [
-                      {
-                        "type": "object",
-                        "description": "Delta object for Swiss Coop",
-                        "properties": {
-                          "used_campaign_multiplier": {
-                            "type": "integer",
-                            "description": "Tillhub internal storage to calculate refunds properly.",
-                            "minimum": 1,
-                            "maximum": 100,
-                            "default": 1
-                          },
-                          "current_balance": {
-                            "oneOf": [
-                              {
-                                "type": "integer",
-                                "description": "Current balance if known via the online validation process.",
-                                "minimum": 0,
-                                "maximum": 120000,
-                                "default": null
-                              },
-                              {
-                                "type": "null"
-                              }
-                            ]
-                          },
-                          "supercard": {
-                            "type": "string",
-                            "description": "Supercard number, always required.",
-                            "example": "762250103984932838"
-                          },
-                          "app_id": {
-                            "oneOf": [
-                              {
-                                "type": "string",
-                                "description": "GS1 AppID, Null for EAN13 cards.",
-                                "example": "000001"
-                              },
-                              {
-                                "type": "null"
-                              }
-                            ]
-                          },
-                          "guid": {
-                            "oneOf": [
-                              {
-                                "type": "string",
-                                "description": "GS1 Card GUID, Null for EAN13 cards.",
-                                "example": "50269DCFF3AD18A0E10080000A050151"
-                              },
-                              {
-                                "type": "null"
-                              }
-                            ]
-                          },
-                          "client_info": {
-                            "type": "object",
-                            "description": "Info about the store / Tillhub branch.",
-                            "properties": {
-                              "store_eain": {
-                                "type": "string",
-                                "description": "Coop identity of this Tillhub branch.",
-                                "example": "7640147960015"
-                              },
-                              "store_name": {
-                                "type": "string",
-                                "maxLength": 128,
-                                "description": "Name of this Tillhub branch.",
-                                "example": "Coop Supermarkt Riehen Schmiedgasse"
-                              },
-                              "store_sap_number": {
-                                "oneOf": [
-                                  {
-                                    "type": "string",
-                                    "pattern": "^[0-9]{4}$",
-                                    "description": "Tillhub branch SAP number if available.",
-                                    "example": "000001"
-                                  },
-                                  {
-                                    "type": "null"
-                                  }
-                                ]
-                              },
-                              "terminal_id": {
-                                "oneOf": [
-                                  {
-                                    "type": "string",
-                                    "description": "Tillhub custom register name.",
-                                    "example": "Kasse 1"
-                                  },
-                                  {
-                                    "type": "null"
-                                  }
-                                ]
-                              }
-                            }
-                          },
-                          "purchase_info": {
-                            "type": "object",
-                            "description": "Info about the store / Tillhub branch.",
-                            "properties": {
-                              "bonus_points": {
-                                "oneOf": [
-                                  {
-                                    "type": "integer",
-                                    "description": "Bonus Points to be booked - Free Points preferred, use NULL here untill specified otherwise (2023-07).",
-                                    "minimum": -12000,
-                                    "maximum": 12000,
-                                    "default": null
-                                  },
-                                  {
-                                    "type": "null"
-                                  }
-                                ]
-                              },
-                              "free_points": {
-                                "type": "integer",
-                                "description": "Free Points - preferrably used over Bonus Points. (Current points x campaign multiplier) - refund points",
-                                "minimum": -12000,
-                                "maximum": 12000,
-                                "default": 0
-                              },
-                              "timestamp": {
-                                "type": "string",
-                                "format": "date-time",
-                                "example": "2018-01-29T14:55:05.000Z",
-                                "description": "Date of the purchase = transaction date"
-                              },
-                              "timestamp_end": {
-                                "type": "string",
-                                "format": "date-time",
-                                "example": "2018-01-29T14:55:05.000Z",
-                                "description": "Date of the purchase = transaction date"
-                              },
-                              "total_items": {
-                                "type": "integer",
-                                "description": "Number of cart items in the transaction that are not campaign products or vouchers.",
-                                "minimum": 0,
-                                "maximum": 99
-                              },
-                              "employee_flag": {
-                                "type": "boolean",
-                                "description": "Marks a Coop employee, not yet relevantm, send 'false'.",
-                                "default": false
-                              },
-                              "total_amount": {
-                                "type": "integer",
-                                "description": "Total value of the sale in Swiss Rappen including ALL cart items, including refunds, excluding tips.",
-                                "minimum": -2400000,
-                                "maximum": 2400000
-                              },
-                              "point_base_amount": {
-                                "type": "integer",
-                                "description": "'Total value of the sale that qualifies for superpoints (campaign items, tips and vouchers excluded)\n\nas long as net items are not supported this is identical to 'total_amount'.",
-                                "minimum": -2400000,
-                                "maximum": 2400000
-                              },
-                              "bon_nr": {
-                                "type": "integer",
-                                "description": "Tillhub transaction number.",
-                                "minimum": 0,
-                                "maximum": 32000
-                              }
-                            }
-                          }
-                        }
-                      },
-                      {
-                        "type": "null"
-                      }
-                    ]
                   }
                 }
               },
@@ -4358,6 +4184,30 @@
                     }
                   ]
                 },
+                "change": {
+                  "oneOf": [
+                    {
+                      "type": "integer",
+                      "example": 800,
+                      "description": "The change amount calculated by the API based on tx-top-level change value and attribution to one of the payments"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "amount_final": {
+                  "oneOf": [
+                    {
+                      "type": "integer",
+                      "example": 1200,
+                      "description": "The effectively payed amount calculated by the API, 'amount_final' = 'amount' - 'change'"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
                 "fa_account_number": {
                   "deprecated": true,
                   "oneOf": [
@@ -4377,7 +4227,7 @@
                     {
                       "type": "integer",
                       "example": 2000,
-                      "description": "The given amount via this payment, 20.00 EUR or 2000 HUF respectively (represented as integer)"
+                      "description": "The given amount via this payment, 20.00 EUR or 2000 HUF respectively (represented as integer) - tips are included, change money is not subtracted"
                     },
                     {
                       "type": "null"
@@ -4451,7 +4301,8 @@
                         "card_tim",
                         "card_adyen",
                         "card",
-                        "terminal_gift_card"
+                        "terminal_gift_card",
+                        "buy_now_pay_later"
                       ],
                       "description": "Payment option type"
                     },
@@ -4504,7 +4355,7 @@
                     {
                       "type": "integer",
                       "example": 110,
-                      "description": "The given tip via this payment, 1.10 EUR or 110 HUF respectively (represented as integer)"
+                      "description": "The given tip via this payment, 1.10 EUR or 110 HUF respectively (represented as integer) - this is included in 'amount'"
                     },
                     {
                       "type": "null"
@@ -4574,7 +4425,8 @@
                               "cardTerminalApi",
                               "cardTerminalProvider",
                               "cardTransactionID",
-                              "isTerminalConnected"
+                              "isTerminalConnected",
+                              "bnpl_purchase_id"
                             ]
                           },
                           "value": {
@@ -4625,7 +4477,8 @@
                         "card_opi",
                         "card_concardis",
                         "card_adyen",
-                        "card_tim"
+                        "card_tim",
+                        "buy_now_pay_later"
                       ]
                     },
                     {
@@ -5000,14 +4853,53 @@
                             }
                           ],
                           "default": null
+                        },
+                        "buy_now_pay_later": {
+                          "description": "Details when Unzer BNPL is used",
+                          "oneOf": [
+                            {
+                              "description": "BNPL details, scalable",
+                              "additionalProperties": false,
+                              "type": "object",
+                              "properties": {
+                                "purchase": {
+                                  "description": "Purchase details when Unzer BNPL is used",
+                                  "type": "object",
+                                  "properties": {
+                                    "purchaseId": {
+                                      "type": "string",
+                                      "description": "Unzer BNPL purchase ID",
+                                      "example": "CID-wh3m5f2co5weq4sjfdpq"
+                                    }
+                                  }
+                                },
+                                "raw_response": {
+                                  "oneOf": [
+                                    {
+                                      "default": null,
+                                      "description": "The full raw response of the BNPL API for documentation and analysis.",
+                                      "type": "string",
+                                      "maxLength": 16384
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                }
+                              }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ],
+                          "default": null
                         }
                       }
                     },
                     {
                       "type": "null"
                     }
-                  ],
-                  "default": null
+                  ]
                 },
                 "payment_option": {
                   "oneOf": [
@@ -5053,7 +4945,7 @@
                 "_amount_total": {
                   "oneOf": [
                     {
-                      "description": "The payed amount total. Excluding any change.\n\nNOTE: usually cash payments will be grouped. Also, a cash payment will always carry any possible change money. Even though\na card payment might have caused it.",
+                      "description": "Manifesting Legacy: The given amount via this payment, 20.00 EUR or 20.00 HUF respectively (represented as Decimal) - tips are included, change money is not subtracted'\n\nNOTE: The intention to use this without tip and change can not be realized as of 2023.\n\n2023: Equal to '_amount_given' and '_amount_requested'.",
                       "type": "number",
                       "minimum": -1000000,
                       "maximum": 1000000,
@@ -5081,7 +4973,7 @@
                 "_amount_given": {
                   "oneOf": [
                     {
-                      "description": "The actual over the counter money flow: regardles what needs to\nbe payed e.g. 49.98, but the customer has given 50,00. This\nis usually of interest in cash payments, or when when customers\ngave fewer amount than they ought to pay.",
+                      "description": "The actual over the counter money flow: regardles what needs to\nbe payed e.g. 49.98, but the customer has given 50,00. This\nis usually of interest in cash payments, or when when customers\ngave fewer amount than they ought to pay.\n\n2023: Equal to '_amount_total' and '_amount_requested'.",
                       "example": "50.00",
                       "type": "number",
                       "minimum": -1000000,
@@ -5096,7 +4988,7 @@
                 "_amount_requested": {
                   "oneOf": [
                     {
-                      "description": "The amount that was requested\nby the POS e.g. 49.98, regardless\nof what was given e.g. 50.00. Hence the rest is change or tip.\nThis is usually of interest in cash payments.\n\nNOTE: this can be used in analytics to rebuild payment flows",
+                      "description": "The amount that was requested to e.g. a card payment terminal - thus it includes the proposed tip amount.\nSee NOTE!\n\nNOTE: The intention to use this without tip and change can not be realized as of 2023.\n\n2023: Equal to '_amount_total' and '_amount_given'.",
                       "example": "49.98",
                       "type": "number",
                       "minimum": -1000000,
@@ -5111,7 +5003,7 @@
                 "_amount_change": {
                   "oneOf": [
                     {
-                      "description": "The cash amount that was handed back from the\ncashier as change.\n\nNOTE: that card payments can never have change, but need to cause a cash payment.",
+                      "description": ".\n\nNOTE: usually NULL - as change is tx top level an should currently not be attributed to a single payment (of potentially many).\n\n2023: Change can be set on a payment ONLY if top level change is agreed to be 0 .",
                       "example": "49.98",
                       "type": "number",
                       "minimum": 0,
@@ -5812,6 +5704,7 @@
                 "enum": [
                   "fiskaltrust",
                   "tse_fiskaly",
+                  "at_fiskaly",
                   "tse_epson",
                   "fr_NF525"
                 ],
@@ -5853,6 +5746,209 @@
                 ]
               }
             }
+          },
+          "external_rewards": {
+            "anyOf": [
+              {
+                "type": "object",
+                "description": "If data can not be decrypted - they are stored here - Base64.",
+                "additionalProperties": false,
+                "properties": {
+                  "payback_data": {
+                    "type": "string",
+                    "maxLength": 16384,
+                    "examples": [
+                      "MEQCIAy4P9k+7x9saDO0uRZ4El8QwN+qTgYiv1DIaJIMWRiuAiAt+saFDGjK2Yi5Cxgy7PprXQ5O0seRgx4ltdpW9REvwA==",
+                      "AUUwulkISDlfOMNro8Lx4aepbWinXgiHwGt9/xfb+WmyfAXnzAeBQmCfsRPheW/LKDlWVQWFUdvl7mXsh/vGx1vSLRiq6jn9qmL1fSGFRCrIos1U7X6dWxCr3VVZFXMILey6iuNw9i7HwNFSpyrpVOXFSDCdmKtYDfMMWD0JDAsKSFUTEbCay2yCtDEIOt/sELi6uiRwUoifztlTIt7wDNPdFrGxgJF17d2AJ4ah5V8kGTAzFygjGT8gCfTUbumKtGAJsvou+NqHAp4bb9K8+fTVG5rxw/OWux5GXmbtcxZQ3RX5IGurcsUv/kXFK+uGj7uUsCyEfq71uCxVs04Kig=="
+                    ],
+                    "description": "If payback data can not be decrypted - they are stored here - Base64."
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "description": "Necessary data to handle an external reward triggered by a transaction.",
+                "additionalProperties": false,
+                "properties": {
+                  "coop": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "description": "Delta object for Swiss Coop",
+                        "properties": {
+                          "used_campaign_multiplier": {
+                            "type": "integer",
+                            "description": "Tillhub internal storage to calculate refunds properly.",
+                            "minimum": 1,
+                            "maximum": 100,
+                            "default": 1
+                          },
+                          "current_balance": {
+                            "oneOf": [
+                              {
+                                "type": "integer",
+                                "description": "Current balance if known via the online validation process.",
+                                "minimum": 0,
+                                "maximum": 120000,
+                                "default": null
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          },
+                          "supercard": {
+                            "type": "string",
+                            "description": "Supercard number, always required.",
+                            "example": "762250103984932838"
+                          },
+                          "app_id": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "description": "GS1 AppID, Null for EAN13 cards.",
+                                "example": "000001"
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          },
+                          "guid": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "description": "GS1 Card GUID, Null for EAN13 cards.",
+                                "example": "50269DCFF3AD18A0E10080000A050151"
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          },
+                          "client_info": {
+                            "type": "object",
+                            "description": "Info about the store / Tillhub branch.",
+                            "properties": {
+                              "store_eain": {
+                                "type": "string",
+                                "description": "Coop identity of this Tillhub branch.",
+                                "example": "7640147960015"
+                              },
+                              "store_name": {
+                                "type": "string",
+                                "maxLength": 128,
+                                "description": "Name of this Tillhub branch.",
+                                "example": "Coop Supermarkt Riehen Schmiedgasse"
+                              },
+                              "store_sap_number": {
+                                "oneOf": [
+                                  {
+                                    "type": "string",
+                                    "pattern": "^[0-9]{4}$",
+                                    "description": "Tillhub branch SAP number if available.",
+                                    "example": "000001"
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ]
+                              },
+                              "terminal_id": {
+                                "oneOf": [
+                                  {
+                                    "type": "string",
+                                    "description": "Tillhub custom register name.",
+                                    "example": "Kasse 1"
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ]
+                              }
+                            }
+                          },
+                          "purchase_info": {
+                            "type": "object",
+                            "description": "Info about the store / Tillhub branch.",
+                            "properties": {
+                              "bonus_points": {
+                                "oneOf": [
+                                  {
+                                    "type": "integer",
+                                    "description": "Bonus Points to be booked - Free Points preferred, use NULL here untill specified otherwise (2023-07).",
+                                    "minimum": -12000,
+                                    "maximum": 12000,
+                                    "default": null
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ]
+                              },
+                              "free_points": {
+                                "type": "integer",
+                                "description": "Free Points - preferrably used over Bonus Points. (Current points x campaign multiplier) - refund points",
+                                "minimum": -12000,
+                                "maximum": 12000,
+                                "default": 0
+                              },
+                              "timestamp": {
+                                "type": "string",
+                                "format": "date-time",
+                                "example": "2018-01-29T14:55:05.000Z",
+                                "description": "Date of the purchase = transaction date"
+                              },
+                              "timestamp_end": {
+                                "type": "string",
+                                "format": "date-time",
+                                "example": "2018-01-29T14:55:05.000Z",
+                                "description": "Date of the purchase = transaction date"
+                              },
+                              "total_items": {
+                                "type": "integer",
+                                "description": "Number of cart items in the transaction that are not campaign products or vouchers.",
+                                "minimum": 0,
+                                "maximum": 99
+                              },
+                              "employee_flag": {
+                                "type": "boolean",
+                                "description": "Marks a Coop employee, not yet relevantm, send 'false'.",
+                                "default": false
+                              },
+                              "total_amount": {
+                                "type": "integer",
+                                "description": "Total value of the sale in Swiss Rappen including ALL cart items, including refunds, excluding tips.",
+                                "minimum": -2400000,
+                                "maximum": 2400000
+                              },
+                              "point_base_amount": {
+                                "type": "integer",
+                                "description": "'Total value of the sale that qualifies for superpoints (campaign items, tips and vouchers excluded)\n\nas long as net items are not supported this is identical to 'total_amount'.",
+                                "minimum": -2400000,
+                                "maximum": 2400000
+                              },
+                              "bon_nr": {
+                                "type": "integer",
+                                "description": "Tillhub transaction number.",
+                                "minimum": 0,
+                                "maximum": 32000
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
           }
         }
       }

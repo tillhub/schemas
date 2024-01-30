@@ -18,7 +18,33 @@
     "vouchers": {
       "oneOf": [
         {
-          "type": "object"
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "oneOf": [
+                {
+                  "description": "global on-off-switch for the vouchers-feature",
+                  "type": "boolean",
+                  "default": false
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "allow_cart_redemption": {
+              "oneOf": [
+                {
+                  "description": "Specifies if vouchers can be redeemed as cart items with negative quantity.",
+                  "type": "boolean",
+                  "default": true
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
         },
         {
           "type": "null"
@@ -842,7 +868,7 @@
                     "MMMM d, yyyy",
                     "MM/dd/yyyy",
                     "dd/MM/yyyy",
-                    "yyyy/mm/dd"
+                    "yyyy/MM/dd"
                   ]
                 },
                 {
@@ -986,7 +1012,8 @@
                         {
                           "type": "integer",
                           "minimum": 1,
-                          "maximum": 1000
+                          "maximum": 1000,
+                          "default": 100
                         },
                         {
                           "type": "null"
@@ -994,6 +1021,8 @@
                       ]
                     },
                     "active": {
+                      "description": "If true, products will be downloaded to the POS",
+                      "default": true,
                       "type": "boolean"
                     }
                   }
@@ -1008,7 +1037,8 @@
                         {
                           "type": "integer",
                           "minimum": 1,
-                          "maximum": 1000
+                          "maximum": 1000,
+                          "default": 200
                         },
                         {
                           "type": "null"
@@ -1016,6 +1046,8 @@
                       ]
                     },
                     "active": {
+                      "description": "If true, products will be downloaded to the POS",
+                      "default": true,
                       "type": "boolean"
                     }
                   }
@@ -1030,7 +1062,8 @@
                         {
                           "type": "integer",
                           "minimum": 1,
-                          "maximum": 1000
+                          "maximum": 1000,
+                          "default": 250
                         },
                         {
                           "type": "null"
@@ -1038,6 +1071,8 @@
                       ]
                     },
                     "active": {
+                      "description": "If true, staffs will be downloaded to the POS",
+                      "default": true,
                       "type": "boolean"
                     }
                   }
@@ -1052,7 +1087,8 @@
                         {
                           "type": "integer",
                           "minimum": 1,
-                          "maximum": 500
+                          "maximum": 500,
+                          "default": 500
                         },
                         {
                           "type": "null"
@@ -1060,6 +1096,7 @@
                       ]
                     },
                     "active": {
+                      "description": "If true, favourites will be downloaded to the POS",
                       "default": true,
                       "type": "boolean"
                     },
@@ -1097,7 +1134,8 @@
                         {
                           "type": "integer",
                           "minimum": 1,
-                          "maximum": 1000
+                          "maximum": 1000,
+                          "default": 100
                         },
                         {
                           "type": "null"
@@ -1105,6 +1143,8 @@
                       ]
                     },
                     "active": {
+                      "description": "If true, transactions will be downloaded to the POS",
+                      "default": true,
                       "type": "boolean"
                     }
                   }
@@ -1138,7 +1178,8 @@
                         {
                           "type": "integer",
                           "minimum": 1,
-                          "maximum": 1000
+                          "maximum": 1000,
+                          "default": 50
                         },
                         {
                           "type": "null"
@@ -1146,6 +1187,8 @@
                       ]
                     },
                     "active": {
+                      "description": "If true, balances will be downloaded to the POS",
+                      "default": true,
                       "type": "boolean"
                     }
                   }
@@ -1248,6 +1291,34 @@
                       ]
                     }
                   }
+                },
+                "staff": {
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "online_search": {
+                          "oneOf": [
+                            {
+                              "description": "Unlike the name suggests - controls adding a branch-parameter to sync and search calls",
+                              "type": "string",
+                              "enum": [
+                                "per_location"
+                              ],
+                              "default": null
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
                 },
                 "staffs": {
                   "type": "object",
@@ -2561,7 +2632,7 @@
                                     "value": {
                                       "description": "The value of the interval, defines a timeframe together with the set unit.",
                                       "type": "integer",
-                                      "minimum": 1,
+                                      "minimum": 0,
                                       "maximum": 500,
                                       "default": 2
                                     }
@@ -2593,7 +2664,7 @@
                                     "value": {
                                       "description": "The value of the interval, defines a timeframe together with the set unit.",
                                       "type": "integer",
-                                      "minimum": 1,
+                                      "minimum": 0,
                                       "maximum": 500,
                                       "default": 2
                                     }
@@ -3086,6 +3157,7 @@
                       "enum": [
                         "fiskaltrust",
                         "tse_fiskaly",
+                        "at_fiskaly",
                         "tse_epson",
                         "fr_NF525",
                         "it_epson"
@@ -3637,6 +3709,26 @@
             "custom_export": {
               "type": "boolean",
               "default": false
+            },
+            "customer_number_capture_enabled": {
+              "type": "boolean",
+              "default": false
+            },
+            "customer_number_capture_pattern": {
+              "oneOf": [
+                {
+                  "description": "Defines how a customer number can be extracted from a scanned barcode",
+                  "type": "string",
+                  "format": "regex",
+                  "examples": [
+                    "^.{2}(.{8}).{4,6}$"
+                  ],
+                  "default": "null"
+                },
+                {
+                  "type": "null"
+                }
+              ]
             },
             "customer_add_policy": {
               "description": "The customer selection screen will be presented automatically before or after a sale (or not in case of none).",
@@ -8634,6 +8726,18 @@
                 }
               ]
             },
+            "enforce_integer_quantities": {
+              "oneOf": [
+                {
+                  "description": "Specifies if only integer quantities are allowed -1, 1,2 etc. vs. decimal quantities like 1.62).",
+                  "type": "boolean",
+                  "default": false
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
             "item_merge_policy": {
               "oneOf": [
                 {
@@ -8644,6 +8748,71 @@
                     "full"
                   ],
                   "default": "full"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "sale": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "description": "Specifies conditions on a regular sale.",
+                  "additionalProperties": false,
+                  "properties": {
+                    "items": {
+                      "oneOf": [
+                        {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "allow_negative_quantity": {
+                              "oneOf": [
+                                {
+                                  "description": "Specifies if items can have negative quantities when doing a regular sale.",
+                                  "type": "boolean",
+                                  "default": true
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            }
+                          }
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "refund": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "description": "Specifies conditions on a refund.",
+                  "properties": {
+                    "immutable": {
+                      "oneOf": [
+                        {
+                          "description": "In case of refund - specifies if modicications are forbidden",
+                          "type": "boolean",
+                          "default": false
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  }
                 },
                 {
                   "type": "null"
@@ -9368,10 +9537,223 @@
     "validations": {
       "oneOf": [
         {
-          "type": "null"
+          "type": "object",
+          "description": "A dictionary <string, string> describing all validation values",
+          "properties": {
+            "all": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "hard",
+                    "soft",
+                    "off"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "accounts": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "hard",
+                    "soft",
+                    "off"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "carts": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "hard",
+                    "soft",
+                    "off"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "transactions": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "hard",
+                    "soft",
+                    "off"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "balances": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "hard",
+                    "soft",
+                    "off"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "items": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "hard",
+                    "soft",
+                    "off"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "products": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "hard",
+                    "soft",
+                    "off"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "product_groups": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "hard",
+                    "soft",
+                    "off"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "taxes": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "hard",
+                    "soft",
+                    "off"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "vouchers": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "hard",
+                    "soft",
+                    "off"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "payments": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "hard",
+                    "soft",
+                    "off"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "discounts": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "hard",
+                    "soft",
+                    "off"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "customers": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "hard",
+                    "soft",
+                    "off"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "additionalProperties": {
+            "oneOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "hard",
+                  "soft",
+                  "off"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
         },
         {
-          "type": "object"
+          "type": "null"
         }
       ]
     },
@@ -10087,6 +10469,134 @@
         },
         {
           "type": "object"
+        }
+      ]
+    },
+    "reservations": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "closing_days": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "reason": {
+                    "type": "string"
+                  },
+                  "start_date": {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "end_date": {
+                    "type": "string",
+                    "format": "date"
+                  }
+                }
+              }
+            },
+            "customization": {
+              "type": "object",
+              "properties": {
+                "theme": {
+                  "type": "object",
+                  "properties": {
+                    "font": {
+                      "type": "string"
+                    },
+                    "logo": {
+                      "oneOf": [
+                        {
+                          "type": "null"
+                        },
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "color": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "max_booking_lead_time": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string"
+                    },
+                    "value": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "min_booking_lead_time": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string"
+                    },
+                    "value": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "cancellation_lead_time": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string"
+                    },
+                    "value": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "allow_employee_selection": {
+                  "type": "boolean"
+                },
+                "reservations_page_activated": {
+                  "type": "boolean"
+                },
+                "max_services_per_appointment": {
+                  "type": "number"
+                },
+                "reservation_frequency_minutes": {
+                  "type": "number"
+                }
+              }
+            },
+            "opening_hours": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "day_index": {
+                    "type": "number"
+                  },
+                  "closed": {
+                    "type": "boolean"
+                  },
+                  "open_from": {
+                    "type": "string"
+                  },
+                  "open_to": {
+                    "type": "string"
+                  },
+                  "break_from": {
+                    "type": "string"
+                  },
+                  "break_to": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
         }
       ]
     },
@@ -11058,6 +11568,154 @@
           }
         }
       ]
+    },
+    "reports": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-zA-Z0-9_]+$": {
+          "type": "object",
+          "properties": {
+            "delimiter": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "description": "The delimiter used in the CSV file",
+                  "enum": [
+                    "comma",
+                    "semicolon"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "format": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "description": "The format of the Report file",
+                  "enum": [
+                    "csv",
+                    "xls"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "enclosure": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "description": "The enclosure used in the CSV file",
+                  "enum": [
+                    "single",
+                    "double"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "show_summary": {
+              "anyOf": [
+                {
+                  "type": "boolean"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "show_column_name": {
+              "anyOf": [
+                {
+                  "description": "The header of the report",
+                  "type": "boolean"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "email": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "filter": {
+              "anyOf": [
+                {
+                  "type": "object"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "is_recurring": {
+              "anyOf": [
+                {
+                  "type": "boolean"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "recurring_cycle": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "description": "The recurring cycle of the report",
+                  "enum": [
+                    "weekly",
+                    "daily",
+                    "monthly"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "recurring_on": {
+              "anyOf": [
+                {
+                  "type": "number",
+                  "description": "The recurring day of the report"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "column_selection": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "description": "The column selection of the report",
+                  "enum": [
+                    "current_view",
+                    "all"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        }
+      }
     }
   },
   "required": [

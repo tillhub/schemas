@@ -52,7 +52,7 @@
             "format": "uuid"
           },
           "type": {
-            "description": "Type of the product prices",
+            "description": "The product prices type",
             "type": "string",
             "enum": [
               "scaled",
@@ -61,6 +61,22 @@
               "location-based"
             ],
             "example": "scaled"
+          },
+          "price_book_type": {
+            "oneOf": [
+              {
+                "description": "The price book type",
+                "type": "string",
+                "enum": [
+                  "general",
+                  "customer"
+                ],
+                "example": "general"
+              },
+              {
+                "type": "null"
+              }
+            ]
           },
           "created_at": {
             "type": "string",

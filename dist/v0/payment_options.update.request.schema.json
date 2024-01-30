@@ -24,7 +24,8 @@
         "default",
         "undefined",
         "voucher",
-        "sumup"
+        "sumup",
+        "buy_now_pay_later"
       ]
     },
     "metadata": {

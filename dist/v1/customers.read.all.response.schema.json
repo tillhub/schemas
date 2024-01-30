@@ -789,6 +789,18 @@
               }
             ]
           },
+          "price_book": {
+            "description": "in cases where the customer is going to have personal pricebook (like for discounts in pharmacy by personal insurance number), price_book is required",
+            "oneOf": [
+              {
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
           "insert_id": {
             "description": "Sequential customer index",
             "type": "integer"

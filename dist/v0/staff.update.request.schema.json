@@ -664,6 +664,72 @@
           "type": "null"
         }
       ]
+    },
+    "calendar_color": {
+      "description": "A color to be used in the calendar for this staff member.",
+      "oneOf": [
+        {
+          "type": "string",
+          "maxLength": 7,
+          "minLength": 7
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "individual_reservation_times": {
+      "description": "Whether or not this staff member is having custom work hours.",
+      "type": "boolean"
+    },
+    "individual_work_plan": {
+      "description": "Custom schedule for this staff member.",
+      "type": "array",
+      "minItems": 7,
+      "maxItems": 7,
+      "items": {
+        "type": "object",
+        "properties": {
+          "day_index": {
+            "description": "The day of the week. Indexed as 0 = Monday, 6 = Sunday.",
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 6
+          },
+          "time_ranges": {
+            "description": "A list of time ranges for this day.",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "start": {
+                  "description": "The start time of this range.",
+                  "type": "string"
+                },
+                "end": {
+                  "description": "The end time of this range.",
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "services": {
+      "description": "List of ids for the services this staff member is capable of performing",
+      "oneOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
     }
   },
   "type": "object",

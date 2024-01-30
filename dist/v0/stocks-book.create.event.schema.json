@@ -40,7 +40,7 @@
     },
     "timestamp": {
       "description": "The date and time event was received by webhooks service",
-      "example": "2023-08-21T10:16:43.167Z",
+      "example": "2024-01-29T09:30:52.713Z",
       "type": "string",
       "format": "date-time"
     },
@@ -87,6 +87,12 @@
           "type": "object",
           "additionalProperties": false,
           "properties": {
+            "id": {
+              "description": "Unique entity ID",
+              "type": "string",
+              "format": "uuid",
+              "example": "936835f7-2d75-41d2-9001-38ed6e458328"
+            },
             "name": {
               "description": "Product name",
               "type": "string",
@@ -199,6 +205,30 @@
               "description": "The reason name: the user generated text which can be specifically set when booking things out manually",
               "type": "string",
               "example": "Not arbitrary reason"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "stock_id": {
+          "oneOf": [
+            {
+              "description": "id of stock entity",
+              "type": "string",
+              "example": "f0a52a37-df58-465d-9121-b8180fc95133"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "transaction_id": {
+          "oneOf": [
+            {
+              "description": "id of transaction, if stock book is related to transaction",
+              "type": "string",
+              "example": "f0a52a37-df58-465d-9121-b8180fc95133"
             },
             {
               "type": "null"
