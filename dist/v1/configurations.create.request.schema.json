@@ -3056,6 +3056,44 @@
                                   "type": "null"
                                 }
                               ]
+                            },
+                            "reference_enabled": {
+                              "oneOf": [
+                                {
+                                  "type": "boolean",
+                                  "description": "Defines if delivery note reference should be requested for changing stock",
+                                  "default": false
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "reference_required": {
+                              "oneOf": [
+                                {
+                                  "type": "boolean",
+                                  "description": "Defines if delivery note reference is mandatory for changing stock",
+                                  "default": false
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "reference_format": {
+                              "description": "The format of the delivery note reference that is being validated against the input",
+                              "type": "string",
+                              "format": "regex",
+                              "example": "^[_A-Za-z0-9-+]+(\\.[_A-Za-z0-9-+]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z‌​]{2,})$",
+                              "default": "^[0-9]{10}$"
+                            },
+                            "reference_length_max": {
+                              "description": "The maxiumum length of a delivery note reference (as a helper for the UI)",
+                              "type": "integer",
+                              "minimum": 2,
+                              "maximum": 99,
+                              "default": 10
                             }
                           }
                         },

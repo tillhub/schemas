@@ -1,3 +1,10 @@
+# [6.284.0](https://github.com/tillhub/schemas/compare/v6.283.0...v6.284.0) (2024-02-01)
+
+
+### Features
+
+* **stock:** stock adjustment configuration flow ([b0f5ae1](https://github.com/tillhub/schemas/commit/b0f5ae1))
+
 # [6.283.0](https://github.com/tillhub/schemas/compare/v6.282.0...v6.283.0) (2024-01-30)
 
 
