@@ -1,3 +1,10 @@
+# [6.286.0](https://github.com/tillhub/schemas/compare/v6.285.0...v6.286.0) (2024-02-08)
+
+
+### Features
+
+* **transaction:** added authorizer staff uuid to metadata ([ab7b2ff](https://github.com/tillhub/schemas/commit/ab7b2ff))
+
 # [6.285.0](https://github.com/tillhub/schemas/compare/v6.284.0...v6.285.0) (2024-02-08)
 
 
