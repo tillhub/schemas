@@ -40,7 +40,7 @@
     },
     "timestamp": {
       "description": "The date and time event was received by webhooks service",
-      "example": "2024-01-29T09:30:52.892Z",
+      "example": "2024-02-08T10:18:58.469Z",
       "type": "string",
       "format": "date-time"
     },
@@ -393,6 +393,12 @@
                   "format": "uuid",
                   "example": "5ad2351d-9a67-45f9-ad4f-0abcbefa9037",
                   "description": "TODO"
+                },
+                "authorizer_staff_uuid": {
+                  "type": "string",
+                  "format": "uuid",
+                  "example": "5ad2351d-9a67-45f9-ad4f-0abcbefa9037",
+                  "description": "UUID of staff object which initiated transaction"
                 },
                 "origin": {
                   "type": "object",

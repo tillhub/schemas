@@ -62,6 +62,12 @@
             ],
             "example": "scaled"
           },
+          "branch": {
+            "type": "string",
+            "format": "uuid",
+            "example": "f2ac2cae-97ff-42a1-967b-0a35222ab6d1",
+            "description": "The Tillhub branch location ID which is part of the request path."
+          },
           "price_book_type": {
             "oneOf": [
               {
