@@ -10626,10 +10626,24 @@
                     "type": "string"
                   },
                   "break_from": {
-                    "type": "string"
+                    "oneOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "type": "string"
+                      }
+                    ]
                   },
                   "break_to": {
-                    "type": "string"
+                    "oneOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "type": "string"
+                      }
+                    ]
                   }
                 }
               }

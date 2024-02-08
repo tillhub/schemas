@@ -1,3 +1,10 @@
+# [6.285.0](https://github.com/tillhub/schemas/compare/v6.284.0...v6.285.0) (2024-02-08)
+
+
+### Features
+
+* **configurations:** make breaks optional ([#917](https://github.com/tillhub/schemas/issues/917)) ([3c01efd](https://github.com/tillhub/schemas/commit/3c01efd))
+
 # [6.284.0](https://github.com/tillhub/schemas/compare/v6.283.0...v6.284.0) (2024-02-01)
 
 
