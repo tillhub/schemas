@@ -1,3 +1,10 @@
+# [6.287.0](https://github.com/tillhub/schemas/compare/v6.286.0...v6.287.0) (2024-02-08)
+
+
+### Features
+
+* **UNTIL_9446_branchSwitchingConf:** add ([cc5fd90](https://github.com/tillhub/schemas/commit/cc5fd90))
+
 # [6.286.0](https://github.com/tillhub/schemas/compare/v6.285.0...v6.286.0) (2024-02-08)
 
 

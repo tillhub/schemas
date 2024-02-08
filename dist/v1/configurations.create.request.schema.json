@@ -1578,6 +1578,11 @@
                   "type": "null"
                 }
               ]
+            },
+            "branch_register_switching_allowed": {
+              "description": "Defines if the branch and register selection UI is enabled in the POS settings.",
+              "type": "boolean",
+              "default": false
             }
           }
         }
