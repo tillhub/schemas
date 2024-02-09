@@ -1,3 +1,10 @@
+# [6.288.0](https://github.com/tillhub/schemas/compare/v6.287.0...v6.288.0) (2024-02-09)
+
+
+### Features
+
+* **configurations:** settings ([6f95563](https://github.com/tillhub/schemas/commit/6f95563))
+
 # [6.287.0](https://github.com/tillhub/schemas/compare/v6.286.0...v6.287.0) (2024-02-08)
 
 
