@@ -741,8 +741,5 @@
         }
       ]
     }
-  },
-  "required": [
-    "lastname"
-  ]
+  }
 }

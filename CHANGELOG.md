@@ -1,3 +1,11 @@
+# [6.290.0](https://github.com/tillhub/schemas/compare/v6.289.0...v6.290.0) (2024-02-15)
+
+
+### Features
+
+* **customers:** fix linting issue ([27c4c5c](https://github.com/tillhub/schemas/commit/27c4c5c))
+* **customers:** make customer lastname optional ([dc99d1a](https://github.com/tillhub/schemas/commit/dc99d1a))
+
 # [6.289.0](https://github.com/tillhub/schemas/compare/v6.288.0...v6.289.0) (2024-02-13)
 
 
