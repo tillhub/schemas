@@ -820,6 +820,18 @@
                           "type": "null"
                         }
                       ]
+                    },
+                    "allow_time_adjustment_for_archiving": {
+                      "oneOf": [
+                        {
+                          "description": "defines if exports (archives only) should be tried for expired certificates, HANDLE WITH CARE",
+                          "type": "boolean",
+                          "default": false
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
                     }
                   }
                 },
@@ -10115,6 +10127,25 @@
                 "required"
               ],
               "default": "optional"
+            },
+            "signing_data_exports": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "description": "Defines if and how signing data should be exported alongside conducting a balance.",
+                  "properties": {
+                    "enabled": {
+                      "description": "If true AND the signing type supports exports from the POS (tse_epson), the export dialog will be triggered.",
+                      "type": "boolean",
+                      "default": true
+                    }
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
             },
             "show_account_names": {
               "description": "Defines if account names are shown additionally to the numbers.",
