@@ -1060,7 +1060,7 @@
                       ]
                     },
                     "active": {
-                      "description": "If true, products will be downloaded to the POS",
+                      "description": "If true, customers will be downloaded to the POS",
                       "default": true,
                       "type": "boolean"
                     }
@@ -8138,7 +8138,7 @@
                             {
                               "description": "Defines if the total number of sales will be printed.",
                               "type": "boolean",
-                              "default": true
+                              "default": false
                             },
                             {
                               "type": "null"
@@ -8150,7 +8150,7 @@
                             {
                               "description": "Defines if the extended tips-section will be printed.",
                               "type": "boolean",
-                              "default": true
+                              "default": false
                             },
                             {
                               "type": "null"
@@ -8162,7 +8162,7 @@
                             {
                               "description": "Defines if the counted cash units will be printed.",
                               "type": "boolean",
-                              "default": true
+                              "default": false
                             },
                             {
                               "type": "null"
@@ -8174,7 +8174,7 @@
                             {
                               "description": "Defines if the extended balance stats will be printed. Requires configurations.balances.extended_report and related data.",
                               "type": "boolean",
-                              "default": true
+                              "default": false
                             },
                             {
                               "type": "null"
@@ -8296,7 +8296,7 @@
                             {
                               "description": "Defines if the total number of sales will be printed.",
                               "type": "boolean",
-                              "default": true
+                              "default": false
                             },
                             {
                               "type": "null"
@@ -8308,7 +8308,7 @@
                             {
                               "description": "Defines if the extended tips-section will be printed.",
                               "type": "boolean",
-                              "default": true
+                              "default": false
                             },
                             {
                               "type": "null"
@@ -8320,7 +8320,7 @@
                             {
                               "description": "Defines if the counted cash units will be printed.",
                               "type": "boolean",
-                              "default": true
+                              "default": false
                             },
                             {
                               "type": "null"
@@ -8332,7 +8332,7 @@
                             {
                               "description": "Defines if the extended balance stats will be printed. Requires configurations.balances.extended_report and related data.",
                               "type": "boolean",
-                              "default": true
+                              "default": false
                             },
                             {
                               "type": "null"
@@ -8381,7 +8381,7 @@
                             {
                               "description": "Defines if the total number of sales will be printed.",
                               "type": "boolean",
-                              "default": true
+                              "default": false
                             },
                             {
                               "type": "null"
@@ -8393,7 +8393,7 @@
                             {
                               "description": "Defines if the extended tips-section will be printed.",
                               "type": "boolean",
-                              "default": true
+                              "default": false
                             },
                             {
                               "type": "null"
@@ -8405,7 +8405,7 @@
                             {
                               "description": "Defines if the counted cash units will be printed.",
                               "type": "boolean",
-                              "default": true
+                              "default": false
                             },
                             {
                               "type": "null"
@@ -8417,7 +8417,7 @@
                             {
                               "description": "Defines if the extended balance stats will be printed. Requires configurations.balances.extended_report and related data.",
                               "type": "boolean",
-                              "default": true
+                              "default": false
                             },
                             {
                               "type": "null"

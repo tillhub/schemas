@@ -1,3 +1,10 @@
+# [6.292.0](https://github.com/tillhub/schemas/compare/v6.291.0...v6.292.0) (2024-03-01)
+
+
+### Features
+
+* **configurations:** fix defaults ([b1538e2](https://github.com/tillhub/schemas/commit/b1538e2))
+
 # [6.291.0](https://github.com/tillhub/schemas/compare/v6.290.0...v6.291.0) (2024-02-26)
 
 
