@@ -1,3 +1,10 @@
+# [6.293.0](https://github.com/tillhub/schemas/compare/v6.292.0...v6.293.0) (2024-03-06)
+
+
+### Features
+
+* **customers:** make lastname nullable ([275a9e1](https://github.com/tillhub/schemas/commit/275a9e1))
+
 # [6.292.0](https://github.com/tillhub/schemas/compare/v6.291.0...v6.292.0) (2024-03-01)
 
 
