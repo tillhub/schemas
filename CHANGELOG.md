@@ -1,3 +1,10 @@
+# [6.294.0](https://github.com/tillhub/schemas/compare/v6.293.0...v6.294.0) (2024-03-19)
+
+
+### Features
+
+* **web_view:** icon configuration ([b0314a6](https://github.com/tillhub/schemas/commit/b0314a6))
+
 # [6.293.0](https://github.com/tillhub/schemas/compare/v6.292.0...v6.293.0) (2024-03-06)
 
 

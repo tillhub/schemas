@@ -2796,6 +2796,22 @@
                       "minLength": 2,
                       "maxLength": 24
                     },
+                    "type": {
+                      "oneOf": [
+                        {
+                          "description": "Web view icon type",
+                          "type": "string",
+                          "enum": [
+                            "none",
+                            "calendar"
+                          ],
+                          "default": "none"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
                     "log_level": {
                       "description": "defines the granularity of the web api logging.",
                       "type": "string",
