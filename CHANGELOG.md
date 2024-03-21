@@ -1,3 +1,10 @@
+# [6.295.0](https://github.com/tillhub/schemas/compare/v6.294.0...v6.295.0) (2024-03-21)
+
+
+### Features
+
+* **configurations:** discounts ([a300ddf](https://github.com/tillhub/schemas/commit/a300ddf))
+
 # [6.294.0](https://github.com/tillhub/schemas/compare/v6.293.0...v6.294.0) (2024-03-19)
 
 
