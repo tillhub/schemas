@@ -10477,7 +10477,7 @@
                                   "description": "Rules for automatic discounts when adding a product to the cart",
                                   "additionalProperties": false,
                                   "properties": {
-                                    "stacked_on_product": {
+                                    "override_stacked_on_product": {
                                       "oneOf": [
                                         {
                                           "description": "If true, overrides generic limits.stacked_on_product.",
@@ -10640,6 +10640,9 @@
         {
           "type": "object",
           "properties": {
+            "use_individual_closing_days": {
+              "type": "boolean"
+            },
             "closing_days": {
               "type": "array",
               "items": {
@@ -10729,6 +10732,9 @@
                   "type": "number"
                 }
               }
+            },
+            "use_individual_opening_hours": {
+              "type": "boolean"
             },
             "opening_hours": {
               "type": "array",

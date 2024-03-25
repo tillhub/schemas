@@ -1,3 +1,10 @@
+# [6.296.0](https://github.com/tillhub/schemas/compare/v6.295.0...v6.296.0) (2024-03-25)
+
+
+### Features
+
+* **configurations:** add toggle for individual opening hours and closing days ([#926](https://github.com/tillhub/schemas/issues/926)) ([ed11944](https://github.com/tillhub/schemas/commit/ed11944))
+
 # [6.295.0](https://github.com/tillhub/schemas/compare/v6.294.0...v6.295.0) (2024-03-21)
 
 
