@@ -1,3 +1,11 @@
+# [6.297.0](https://github.com/tillhub/schemas/compare/v6.296.0...v6.297.0) (2024-03-28)
+
+
+### Features
+
+* **products:** added min stock and order ([4a90afb](https://github.com/tillhub/schemas/commit/4a90afb))
+* **products:** min_stock and min_order nullable ([22386a9](https://github.com/tillhub/schemas/commit/22386a9))
+
 # [6.296.0](https://github.com/tillhub/schemas/compare/v6.295.0...v6.296.0) (2024-03-25)
 
 
