@@ -1,3 +1,10 @@
+# [6.298.0](https://github.com/tillhub/schemas/compare/v6.297.0...v6.298.0) (2024-04-06)
+
+
+### Features
+
+* **products:** removed min_order_qty as it should be per supplier ([0289ad5](https://github.com/tillhub/schemas/commit/0289ad5))
+
 # [6.297.0](https://github.com/tillhub/schemas/compare/v6.296.0...v6.297.0) (2024-03-28)
 
 

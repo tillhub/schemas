@@ -40,7 +40,7 @@
     },
     "timestamp": {
       "description": "The date and time event was received by webhooks service",
-      "example": "2024-03-28T16:47:45.714Z",
+      "example": "2024-04-06T02:36:26.910Z",
       "type": "string",
       "format": "date-time"
     },
@@ -688,32 +688,6 @@
                     },
                     "qty": {
                       "description": "The min stock qty",
-                      "type": "number"
-                    }
-                  }
-                }
-              },
-              {
-                "type": "null"
-              }
-            ]
-          },
-          "min_order_qty": {
-            "description": "The minimum order quantity",
-            "oneOf": [
-              {
-                "type": "array",
-                "items": {
-                  "type": "object",
-                  "additionalProperties": false,
-                  "properties": {
-                    "location": {
-                      "description": "Alphanumerical uuid of the location, e.g. branch or warehouse",
-                      "type": "string",
-                      "format": "uuid"
-                    },
-                    "qty": {
-                      "description": "The min order qty",
                       "type": "number"
                     }
                   }
@@ -2826,32 +2800,6 @@
                     },
                     "qty": {
                       "description": "The min stock qty",
-                      "type": "number"
-                    }
-                  }
-                }
-              },
-              {
-                "type": "null"
-              }
-            ]
-          },
-          "min_order_qty": {
-            "description": "The minimum order quantity",
-            "oneOf": [
-              {
-                "type": "array",
-                "items": {
-                  "type": "object",
-                  "additionalProperties": false,
-                  "properties": {
-                    "location": {
-                      "description": "Alphanumerical uuid of the location, e.g. branch or warehouse",
-                      "type": "string",
-                      "format": "uuid"
-                    },
-                    "qty": {
-                      "description": "The min order qty",
                       "type": "number"
                     }
                   }
