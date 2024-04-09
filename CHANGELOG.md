@@ -1,3 +1,10 @@
+# [6.299.0](https://github.com/tillhub/schemas/compare/v6.298.0...v6.299.0) (2024-04-09)
+
+
+### Features
+
+* **staffs:** add branch id to time ranges ([#931](https://github.com/tillhub/schemas/issues/931)) ([78bb4db](https://github.com/tillhub/schemas/commit/78bb4db))
+
 # [6.298.0](https://github.com/tillhub/schemas/compare/v6.297.0...v6.298.0) (2024-04-06)
 
 
