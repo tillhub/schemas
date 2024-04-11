@@ -1,3 +1,10 @@
+# [6.301.0](https://github.com/tillhub/schemas/compare/v6.300.0...v6.301.0) (2024-04-11)
+
+
+### Features
+
+* **configurations:** add map address field ([#930](https://github.com/tillhub/schemas/issues/930)) ([a4532a3](https://github.com/tillhub/schemas/commit/a4532a3))
+
 # [6.300.0](https://github.com/tillhub/schemas/compare/v6.299.0...v6.300.0) (2024-04-11)
 
 
