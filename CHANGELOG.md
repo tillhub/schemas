@@ -1,3 +1,10 @@
+# [6.300.0](https://github.com/tillhub/schemas/compare/v6.299.0...v6.300.0) (2024-04-11)
+
+
+### Features
+
+* **shift_plan:** add shifts for multiple branches ([#934](https://github.com/tillhub/schemas/issues/934)) ([f29c220](https://github.com/tillhub/schemas/commit/f29c220))
+
 # [6.299.0](https://github.com/tillhub/schemas/compare/v6.298.0...v6.299.0) (2024-04-09)
 
 

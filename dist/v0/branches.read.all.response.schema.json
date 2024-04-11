@@ -728,6 +728,12 @@
               }
             ]
           },
+          "shift_plan_enabled": {
+            "description": "Define if this branch uses a shift plan.",
+            "example": "false",
+            "type": "boolean",
+            "default": false
+          },
           "insert_id": {
             "description": "Sequential branch index",
             "type": "integer"

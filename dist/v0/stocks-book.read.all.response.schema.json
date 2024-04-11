@@ -3117,6 +3117,12 @@
                         "type": "null"
                       }
                     ]
+                  },
+                  "shift_plan_enabled": {
+                    "description": "Define if this branch uses a shift plan.",
+                    "example": "false",
+                    "type": "boolean",
+                    "default": false
                   }
                 }
               },
@@ -3828,6 +3834,12 @@
                         "type": "null"
                       }
                     ]
+                  },
+                  "shift_plan_enabled": {
+                    "description": "Define if this branch uses a shift plan.",
+                    "example": "false",
+                    "type": "boolean",
+                    "default": false
                   }
                 }
               },
@@ -4529,6 +4541,12 @@
                         "type": "null"
                       }
                     ]
+                  },
+                  "shift_plan_enabled": {
+                    "description": "Define if this branch uses a shift plan.",
+                    "example": "false",
+                    "type": "boolean",
+                    "default": false
                   }
                 }
               },
