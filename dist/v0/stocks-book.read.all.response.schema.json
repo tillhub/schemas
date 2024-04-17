@@ -2902,7 +2902,7 @@
                             "reservations_google_maps_address": {
                               "description": "The location of the branch on Google Maps",
                               "example": "https://maps.app.goo.gl/tpF7EMsEC7Wy5hmd6",
-                              "pattern": "^https:\\/\\/maps\\.app\\.goo\\.gl\\/[A-Za-z]*$",
+                              "pattern": "^https:\\/\\/maps\\.app\\.goo\\.gl\\/[A-Za-z0-9]*$",
                               "oneOf": [
                                 {
                                   "type": "string"
@@ -3632,7 +3632,7 @@
                             "reservations_google_maps_address": {
                               "description": "The location of the branch on Google Maps",
                               "example": "https://maps.app.goo.gl/tpF7EMsEC7Wy5hmd6",
-                              "pattern": "^https:\\/\\/maps\\.app\\.goo\\.gl\\/[A-Za-z]*$",
+                              "pattern": "^https:\\/\\/maps\\.app\\.goo\\.gl\\/[A-Za-z0-9]*$",
                               "oneOf": [
                                 {
                                   "type": "string"
@@ -4352,7 +4352,7 @@
                             "reservations_google_maps_address": {
                               "description": "The location of the branch on Google Maps",
                               "example": "https://maps.app.goo.gl/tpF7EMsEC7Wy5hmd6",
-                              "pattern": "^https:\\/\\/maps\\.app\\.goo\\.gl\\/[A-Za-z]*$",
+                              "pattern": "^https:\\/\\/maps\\.app\\.goo\\.gl\\/[A-Za-z0-9]*$",
                               "oneOf": [
                                 {
                                   "type": "string"

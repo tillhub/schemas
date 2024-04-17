@@ -1,3 +1,10 @@
+# [6.302.0](https://github.com/tillhub/schemas/compare/v6.301.0...v6.302.0) (2024-04-17)
+
+
+### Features
+
+* **branches:** change double backlashes to single ([#935](https://github.com/tillhub/schemas/issues/935)) ([a232a9a](https://github.com/tillhub/schemas/commit/a232a9a))
+
 # [6.301.0](https://github.com/tillhub/schemas/compare/v6.300.0...v6.301.0) (2024-04-11)
 
 
