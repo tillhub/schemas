@@ -10730,6 +10730,18 @@
                 },
                 "reservation_frequency_minutes": {
                   "type": "number"
+                },
+                "payment_options": {
+                  "type": "array",
+                  "items": {
+                    "enum": [
+                      "in-store",
+                      "online"
+                    ]
+                  },
+                  "default": [
+                    "in-store"
+                  ]
                 }
               }
             },

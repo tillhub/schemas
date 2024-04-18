@@ -1,3 +1,10 @@
+# [6.303.0](https://github.com/tillhub/schemas/compare/v6.302.0...v6.303.0) (2024-04-18)
+
+
+### Features
+
+* **feature_flags:** add online payments feature flag ([#936](https://github.com/tillhub/schemas/issues/936)) ([a8f36d3](https://github.com/tillhub/schemas/commit/a8f36d3))
+
 # [6.302.0](https://github.com/tillhub/schemas/compare/v6.301.0...v6.302.0) (2024-04-17)
 
 
