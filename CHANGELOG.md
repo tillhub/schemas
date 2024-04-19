@@ -1,3 +1,10 @@
+## [6.304.1](https://github.com/tillhub/schemas/compare/v6.304.0...v6.304.1) (2024-04-19)
+
+
+### Bug Fixes
+
+* **products:** export list schema ([#938](https://github.com/tillhub/schemas/issues/938)) ([18b3087](https://github.com/tillhub/schemas/commit/18b3087))
+
 # [6.304.0](https://github.com/tillhub/schemas/compare/v6.303.0...v6.304.0) (2024-04-19)
 
 
