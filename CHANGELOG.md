@@ -1,3 +1,10 @@
+# [6.304.0](https://github.com/tillhub/schemas/compare/v6.303.0...v6.304.0) (2024-04-19)
+
+
+### Features
+
+* **products:** add list request schema ([#937](https://github.com/tillhub/schemas/issues/937)) ([b1cb23b](https://github.com/tillhub/schemas/commit/b1cb23b))
+
 # [6.303.0](https://github.com/tillhub/schemas/compare/v6.302.0...v6.303.0) (2024-04-18)
 
 
