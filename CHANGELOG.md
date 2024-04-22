@@ -1,3 +1,10 @@
+# [6.305.0](https://github.com/tillhub/schemas/compare/v6.304.1...v6.305.0) (2024-04-22)
+
+
+### Features
+
+* **configurations:** add terms of service url ([#939](https://github.com/tillhub/schemas/issues/939)) ([1482f5d](https://github.com/tillhub/schemas/commit/1482f5d))
+
 ## [6.304.1](https://github.com/tillhub/schemas/compare/v6.304.0...v6.304.1) (2024-04-19)
 
 
