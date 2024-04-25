@@ -1,3 +1,10 @@
+# [6.306.0](https://github.com/tillhub/schemas/compare/v6.305.0...v6.306.0) (2024-04-25)
+
+
+### Features
+
+* **products:** rename list to selection ([#940](https://github.com/tillhub/schemas/issues/940)) ([b40f7f4](https://github.com/tillhub/schemas/commit/b40f7f4))
+
 # [6.305.0](https://github.com/tillhub/schemas/compare/v6.304.1...v6.305.0) (2024-04-22)
 
 
