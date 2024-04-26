@@ -719,6 +719,32 @@
                       }
                     ]
                   },
+                  "min_stock": {
+                    "description": "The minimum stock",
+                    "oneOf": [
+                      {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "location": {
+                              "description": "Alphanumerical uuid of the location, e.g. branch or warehouse",
+                              "type": "string",
+                              "format": "uuid"
+                            },
+                            "qty": {
+                              "description": "The min stock qty",
+                              "type": "number"
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
                   "sellable": {
                     "description": "Define whether a product should be sellable (appears in use cases which assume sale)",
                     "type": "boolean",
@@ -2872,6 +2898,19 @@
                                   "type": "null"
                                 }
                               ]
+                            },
+                            "reservations_google_maps_address": {
+                              "description": "The location of the branch on Google Maps",
+                              "example": "https://maps.app.goo.gl/tpF7EMsEC7Wy5hmd6",
+                              "pattern": "^https:\\/\\/maps\\.app\\.goo\\.gl\\/[A-Za-z0-9]*$",
+                              "oneOf": [
+                                {
+                                  "type": "string"
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
                             }
                           },
                           "required": [
@@ -3091,6 +3130,12 @@
                         "type": "null"
                       }
                     ]
+                  },
+                  "shift_plan_enabled": {
+                    "description": "Define if this branch uses a shift plan.",
+                    "example": "false",
+                    "type": "boolean",
+                    "default": false
                   }
                 }
               },
@@ -3583,6 +3628,19 @@
                                   "type": "null"
                                 }
                               ]
+                            },
+                            "reservations_google_maps_address": {
+                              "description": "The location of the branch on Google Maps",
+                              "example": "https://maps.app.goo.gl/tpF7EMsEC7Wy5hmd6",
+                              "pattern": "^https:\\/\\/maps\\.app\\.goo\\.gl\\/[A-Za-z0-9]*$",
+                              "oneOf": [
+                                {
+                                  "type": "string"
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
                             }
                           },
                           "required": [
@@ -3802,6 +3860,12 @@
                         "type": "null"
                       }
                     ]
+                  },
+                  "shift_plan_enabled": {
+                    "description": "Define if this branch uses a shift plan.",
+                    "example": "false",
+                    "type": "boolean",
+                    "default": false
                   }
                 }
               },
@@ -4284,6 +4348,19 @@
                                   "type": "null"
                                 }
                               ]
+                            },
+                            "reservations_google_maps_address": {
+                              "description": "The location of the branch on Google Maps",
+                              "example": "https://maps.app.goo.gl/tpF7EMsEC7Wy5hmd6",
+                              "pattern": "^https:\\/\\/maps\\.app\\.goo\\.gl\\/[A-Za-z0-9]*$",
+                              "oneOf": [
+                                {
+                                  "type": "string"
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
                             }
                           },
                           "required": [
@@ -4503,6 +4580,12 @@
                         "type": "null"
                       }
                     ]
+                  },
+                  "shift_plan_enabled": {
+                    "description": "Define if this branch uses a shift plan.",
+                    "example": "false",
+                    "type": "boolean",
+                    "default": false
                   }
                 }
               },

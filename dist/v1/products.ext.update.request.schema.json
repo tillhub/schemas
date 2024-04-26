@@ -610,6 +610,32 @@
         }
       ]
     },
+    "min_stock": {
+      "description": "The minimum stock",
+      "oneOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "location": {
+                "description": "Alphanumerical uuid of the location, e.g. branch or warehouse",
+                "type": "string",
+                "format": "uuid"
+              },
+              "qty": {
+                "description": "The min stock qty",
+                "type": "number"
+              }
+            }
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "sellable": {
       "description": "Define whether a product should be sellable (appears in use cases which assume sale)",
       "type": "boolean",

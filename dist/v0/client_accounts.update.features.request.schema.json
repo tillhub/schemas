@@ -95,6 +95,10 @@
     "reservations": {
       "type": "boolean",
       "default": false
+    },
+    "reservations_online_payments": {
+      "type": "boolean",
+      "default": false
     }
   },
   "type": "object"

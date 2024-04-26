@@ -32,8 +32,15 @@
     "lastname": {
       "example": "Fett",
       "description": "Last name",
-      "type": "string",
-      "maxLength": 128
+      "anyOf": [
+        {
+          "type": "string",
+          "maxLength": 128
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "middlename": {
       "description": "Middle name",

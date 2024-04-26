@@ -1,3 +1,167 @@
+# [6.306.0](https://github.com/tillhub/schemas/compare/v6.305.0...v6.306.0) (2024-04-25)
+
+
+### Features
+
+* **products:** rename list to selection ([#940](https://github.com/tillhub/schemas/issues/940)) ([b40f7f4](https://github.com/tillhub/schemas/commit/b40f7f4))
+
+# [6.305.0](https://github.com/tillhub/schemas/compare/v6.304.1...v6.305.0) (2024-04-22)
+
+
+### Features
+
+* **configurations:** add terms of service url ([#939](https://github.com/tillhub/schemas/issues/939)) ([1482f5d](https://github.com/tillhub/schemas/commit/1482f5d))
+
+## [6.304.1](https://github.com/tillhub/schemas/compare/v6.304.0...v6.304.1) (2024-04-19)
+
+
+### Bug Fixes
+
+* **products:** export list schema ([#938](https://github.com/tillhub/schemas/issues/938)) ([18b3087](https://github.com/tillhub/schemas/commit/18b3087))
+
+# [6.304.0](https://github.com/tillhub/schemas/compare/v6.303.0...v6.304.0) (2024-04-19)
+
+
+### Features
+
+* **products:** add list request schema ([#937](https://github.com/tillhub/schemas/issues/937)) ([b1cb23b](https://github.com/tillhub/schemas/commit/b1cb23b))
+
+# [6.303.0](https://github.com/tillhub/schemas/compare/v6.302.0...v6.303.0) (2024-04-18)
+
+
+### Features
+
+* **feature_flags:** add online payments feature flag ([#936](https://github.com/tillhub/schemas/issues/936)) ([a8f36d3](https://github.com/tillhub/schemas/commit/a8f36d3))
+
+# [6.302.0](https://github.com/tillhub/schemas/compare/v6.301.0...v6.302.0) (2024-04-17)
+
+
+### Features
+
+* **branches:** change double backlashes to single ([#935](https://github.com/tillhub/schemas/issues/935)) ([a232a9a](https://github.com/tillhub/schemas/commit/a232a9a))
+
+# [6.301.0](https://github.com/tillhub/schemas/compare/v6.300.0...v6.301.0) (2024-04-11)
+
+
+### Features
+
+* **configurations:** add map address field ([#930](https://github.com/tillhub/schemas/issues/930)) ([a4532a3](https://github.com/tillhub/schemas/commit/a4532a3))
+
+# [6.300.0](https://github.com/tillhub/schemas/compare/v6.299.0...v6.300.0) (2024-04-11)
+
+
+### Features
+
+* **shift_plan:** add shifts for multiple branches ([#934](https://github.com/tillhub/schemas/issues/934)) ([f29c220](https://github.com/tillhub/schemas/commit/f29c220))
+
+# [6.299.0](https://github.com/tillhub/schemas/compare/v6.298.0...v6.299.0) (2024-04-09)
+
+
+### Features
+
+* **staffs:** add branch id to time ranges ([#931](https://github.com/tillhub/schemas/issues/931)) ([78bb4db](https://github.com/tillhub/schemas/commit/78bb4db))
+
+# [6.298.0](https://github.com/tillhub/schemas/compare/v6.297.0...v6.298.0) (2024-04-06)
+
+
+### Features
+
+* **products:** removed min_order_qty as it should be per supplier ([0289ad5](https://github.com/tillhub/schemas/commit/0289ad5))
+
+# [6.297.0](https://github.com/tillhub/schemas/compare/v6.296.0...v6.297.0) (2024-03-28)
+
+
+### Features
+
+* **products:** added min stock and order ([4a90afb](https://github.com/tillhub/schemas/commit/4a90afb))
+* **products:** min_stock and min_order nullable ([22386a9](https://github.com/tillhub/schemas/commit/22386a9))
+
+# [6.296.0](https://github.com/tillhub/schemas/compare/v6.295.0...v6.296.0) (2024-03-25)
+
+
+### Features
+
+* **configurations:** add toggle for individual opening hours and closing days ([#926](https://github.com/tillhub/schemas/issues/926)) ([ed11944](https://github.com/tillhub/schemas/commit/ed11944))
+
+# [6.295.0](https://github.com/tillhub/schemas/compare/v6.294.0...v6.295.0) (2024-03-21)
+
+
+### Features
+
+* **configurations:** discounts ([a300ddf](https://github.com/tillhub/schemas/commit/a300ddf))
+
+# [6.294.0](https://github.com/tillhub/schemas/compare/v6.293.0...v6.294.0) (2024-03-19)
+
+
+### Features
+
+* **web_view:** icon configuration ([b0314a6](https://github.com/tillhub/schemas/commit/b0314a6))
+
+# [6.293.0](https://github.com/tillhub/schemas/compare/v6.292.0...v6.293.0) (2024-03-06)
+
+
+### Features
+
+* **customers:** make lastname nullable ([275a9e1](https://github.com/tillhub/schemas/commit/275a9e1))
+
+# [6.292.0](https://github.com/tillhub/schemas/compare/v6.291.0...v6.292.0) (2024-03-01)
+
+
+### Features
+
+* **configurations:** fix defaults ([b1538e2](https://github.com/tillhub/schemas/commit/b1538e2))
+
+# [6.291.0](https://github.com/tillhub/schemas/compare/v6.290.0...v6.291.0) (2024-02-26)
+
+
+### Features
+
+* **configurations:** balances ([9053e0c](https://github.com/tillhub/schemas/commit/9053e0c))
+* **configurations:** settings ([514bf1c](https://github.com/tillhub/schemas/commit/514bf1c))
+
+# [6.290.0](https://github.com/tillhub/schemas/compare/v6.289.0...v6.290.0) (2024-02-15)
+
+
+### Features
+
+* **customers:** fix linting issue ([27c4c5c](https://github.com/tillhub/schemas/commit/27c4c5c))
+* **customers:** make customer lastname optional ([dc99d1a](https://github.com/tillhub/schemas/commit/dc99d1a))
+
+# [6.289.0](https://github.com/tillhub/schemas/compare/v6.288.0...v6.289.0) (2024-02-13)
+
+
+### Features
+
+* **configurations:** settings ([6517c36](https://github.com/tillhub/schemas/commit/6517c36))
+
+# [6.288.0](https://github.com/tillhub/schemas/compare/v6.287.0...v6.288.0) (2024-02-09)
+
+
+### Features
+
+* **configurations:** settings ([6f95563](https://github.com/tillhub/schemas/commit/6f95563))
+
+# [6.287.0](https://github.com/tillhub/schemas/compare/v6.286.0...v6.287.0) (2024-02-08)
+
+
+### Features
+
+* **UNTIL_9446_branchSwitchingConf:** add ([cc5fd90](https://github.com/tillhub/schemas/commit/cc5fd90))
+
+# [6.286.0](https://github.com/tillhub/schemas/compare/v6.285.0...v6.286.0) (2024-02-08)
+
+
+### Features
+
+* **transaction:** added authorizer staff uuid to metadata ([ab7b2ff](https://github.com/tillhub/schemas/commit/ab7b2ff))
+
+# [6.285.0](https://github.com/tillhub/schemas/compare/v6.284.0...v6.285.0) (2024-02-08)
+
+
+### Features
+
+* **configurations:** make breaks optional ([#917](https://github.com/tillhub/schemas/issues/917)) ([3c01efd](https://github.com/tillhub/schemas/commit/3c01efd))
+
 # [6.284.0](https://github.com/tillhub/schemas/compare/v6.283.0...v6.284.0) (2024-02-01)
 
 

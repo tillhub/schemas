@@ -755,7 +755,8 @@
                       "enum": [
                         "cash",
                         "always"
-                      ]
+                      ],
+                      "default": "always"
                     },
                     "transaction_signing": {
                       "type": "string",
@@ -789,7 +790,7 @@
                     "minutes": {
                       "type": "integer",
                       "description": "If more minutes have passed since the last update - a new update will be tried",
-                      "default": 1440,
+                      "default": 4800,
                       "minimum": 60,
                       "maximum": 14400
                     },
@@ -814,6 +815,18 @@
                               "maximum": 120
                             }
                           }
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "allow_time_adjustment_for_archiving": {
+                      "oneOf": [
+                        {
+                          "description": "defines if exports (archives only) should be tried for expired certificates, HANDLE WITH CARE",
+                          "type": "boolean",
+                          "default": false
                         },
                         {
                           "type": "null"
@@ -932,7 +945,8 @@
               ]
             },
             "third_party": {
-              "description": "Third party app links",
+              "deprecated": true,
+              "description": "Third party app links - Only for locally installed/installable applications - not for any random webpage!\n\nSince the 3rd party scheme also must be registered within the POS app we should rather limit this to prepared apps with just being enabled or not",
               "type": "array",
               "items": {
                 "type": "object",
@@ -993,7 +1007,7 @@
                   "oneOf": [
                     {
                       "type": "integer",
-                      "default": 1440,
+                      "default": 60,
                       "minimum": 1,
                       "maximum": 10000
                     },
@@ -1046,7 +1060,7 @@
                       ]
                     },
                     "active": {
-                      "description": "If true, products will be downloaded to the POS",
+                      "description": "If true, customers will be downloaded to the POS",
                       "default": true,
                       "type": "boolean"
                     }
@@ -1110,7 +1124,7 @@
                           "properties": {
                             "upstream": {
                               "description": "Defines if branch parameter is used in updatream.",
-                              "default": true,
+                              "default": false,
                               "type": "boolean"
                             },
                             "downstream": {
@@ -1159,12 +1173,38 @@
                         {
                           "type": "integer",
                           "minimum": 1,
-                          "maximum": 1000
+                          "maximum": 1000,
+                          "default": 150
                         },
                         {
                           "type": "null"
                         }
                       ]
+                    }
+                  }
+                },
+                "discounts": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "limit": {
+                      "description": "Initial page size for syncing with GET all calls. In-app default is 500. Set this if you run into timeouts.",
+                      "oneOf": [
+                        {
+                          "type": "integer",
+                          "minimum": 1,
+                          "maximum": 1000,
+                          "default": 200
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "active": {
+                      "description": "If true, discounts will be downloaded to the POS",
+                      "default": true,
+                      "type": "boolean"
                     }
                   }
                 },
@@ -1269,7 +1309,8 @@
                     },
                     "only_self_sustained": {
                       "description": "Instruct clients to filter for types 'variant_product', 'product' and 'voucher'",
-                      "type": "boolean"
+                      "type": "boolean",
+                      "default": true
                     }
                   }
                 },
@@ -1449,6 +1490,7 @@
             },
             "buttons": {
               "description": "Action (checkout) buttons configuration.",
+              "deprecated": true,
               "type": "array",
               "items": {
                 "type": "object",
@@ -1578,6 +1620,11 @@
                   "type": "null"
                 }
               ]
+            },
+            "branch_register_switching_allowed": {
+              "description": "Defines if the branch and register selection UI is enabled in the POS settings.",
+              "type": "boolean",
+              "default": false
             }
           }
         }
@@ -2749,6 +2796,22 @@
                       "minLength": 2,
                       "maxLength": 24
                     },
+                    "type": {
+                      "oneOf": [
+                        {
+                          "description": "Web view icon type",
+                          "type": "string",
+                          "enum": [
+                            "none",
+                            "calendar"
+                          ],
+                          "default": "none"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
                     "log_level": {
                       "description": "defines the granularity of the web api logging.",
                       "type": "string",
@@ -3748,20 +3811,32 @@
               "type": "boolean",
               "default": false
             },
-            "customer_number_capture_enabled": {
-              "type": "boolean",
-              "default": false
-            },
-            "customer_number_capture_pattern": {
+            "barcode_capture": {
               "oneOf": [
                 {
-                  "description": "Defines how a customer number can be extracted from a scanned barcode",
-                  "type": "string",
-                  "format": "regex",
-                  "examples": [
-                    "^.{2}(.{8}).{4,6}$"
+                  "type": "object",
+                  "description": "Defines optional customer number extraction from a scanned barcode",
+                  "additionalProperties": false,
+                  "properties": {
+                    "enabled": {
+                      "description": "Defines if customer number capturing should be tried",
+                      "type": "boolean"
+                    },
+                    "pattern": {
+                      "description": "Defines how a customer number can be extracted from a scanned barcode",
+                      "type": "string",
+                      "format": "regex",
+                      "examples": [
+                        "^.{2}.{8}.({4,6})$",
+                        "^[0-9]{14}$"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "enabled",
+                    "pattern"
                   ],
-                  "default": "null"
+                  "default": null
                 },
                 {
                   "type": "null"
@@ -8079,7 +8154,7 @@
                             {
                               "description": "Defines if the total number of sales will be printed.",
                               "type": "boolean",
-                              "default": true
+                              "default": false
                             },
                             {
                               "type": "null"
@@ -8091,7 +8166,7 @@
                             {
                               "description": "Defines if the extended tips-section will be printed.",
                               "type": "boolean",
-                              "default": true
+                              "default": false
                             },
                             {
                               "type": "null"
@@ -8103,7 +8178,7 @@
                             {
                               "description": "Defines if the counted cash units will be printed.",
                               "type": "boolean",
-                              "default": true
+                              "default": false
                             },
                             {
                               "type": "null"
@@ -8115,7 +8190,7 @@
                             {
                               "description": "Defines if the extended balance stats will be printed. Requires configurations.balances.extended_report and related data.",
                               "type": "boolean",
-                              "default": true
+                              "default": false
                             },
                             {
                               "type": "null"
@@ -8237,7 +8312,7 @@
                             {
                               "description": "Defines if the total number of sales will be printed.",
                               "type": "boolean",
-                              "default": true
+                              "default": false
                             },
                             {
                               "type": "null"
@@ -8249,7 +8324,7 @@
                             {
                               "description": "Defines if the extended tips-section will be printed.",
                               "type": "boolean",
-                              "default": true
+                              "default": false
                             },
                             {
                               "type": "null"
@@ -8261,7 +8336,7 @@
                             {
                               "description": "Defines if the counted cash units will be printed.",
                               "type": "boolean",
-                              "default": true
+                              "default": false
                             },
                             {
                               "type": "null"
@@ -8273,7 +8348,7 @@
                             {
                               "description": "Defines if the extended balance stats will be printed. Requires configurations.balances.extended_report and related data.",
                               "type": "boolean",
-                              "default": true
+                              "default": false
                             },
                             {
                               "type": "null"
@@ -8322,7 +8397,7 @@
                             {
                               "description": "Defines if the total number of sales will be printed.",
                               "type": "boolean",
-                              "default": true
+                              "default": false
                             },
                             {
                               "type": "null"
@@ -8334,7 +8409,7 @@
                             {
                               "description": "Defines if the extended tips-section will be printed.",
                               "type": "boolean",
-                              "default": true
+                              "default": false
                             },
                             {
                               "type": "null"
@@ -8346,7 +8421,7 @@
                             {
                               "description": "Defines if the counted cash units will be printed.",
                               "type": "boolean",
-                              "default": true
+                              "default": false
                             },
                             {
                               "type": "null"
@@ -8358,7 +8433,7 @@
                             {
                               "description": "Defines if the extended balance stats will be printed. Requires configurations.balances.extended_report and related data.",
                               "type": "boolean",
-                              "default": true
+                              "default": false
                             },
                             {
                               "type": "null"
@@ -8988,7 +9063,8 @@
               "enum": [
                 "inclusive",
                 "exclusive"
-              ]
+              ],
+              "default": "inclusive"
             }
           }
         }
@@ -10068,6 +10144,25 @@
               ],
               "default": "optional"
             },
+            "signing_data_exports": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "description": "Defines if and how signing data should be exported alongside conducting a balance.",
+                  "properties": {
+                    "enabled": {
+                      "description": "If true AND the signing type supports exports from the POS (tse_epson), the export dialog will be triggered.",
+                      "type": "boolean",
+                      "default": true
+                    }
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
             "show_account_names": {
               "description": "Defines if account names are shown additionally to the numbers.",
               "default": false,
@@ -10375,6 +10470,32 @@
                                 }
                               ]
                             },
+                            "automatic": {
+                              "oneOf": [
+                                {
+                                  "type": "object",
+                                  "description": "Rules for automatic discounts when adding a product to the cart",
+                                  "additionalProperties": false,
+                                  "properties": {
+                                    "override_stacked_on_product": {
+                                      "oneOf": [
+                                        {
+                                          "description": "If true, overrides generic limits.stacked_on_product.",
+                                          "type": "boolean",
+                                          "default": false
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    }
+                                  }
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
                             "price_and_quantity_edit_condition": {
                               "oneOf": [
                                 {
@@ -10466,6 +10587,7 @@
                     "stacked_on_product": {
                       "oneOf": [
                         {
+                          "description": "Regulates if cart items can have more than 1 discount.",
                           "type": "boolean",
                           "default": true
                         },
@@ -10518,6 +10640,9 @@
         {
           "type": "object",
           "properties": {
+            "use_individual_closing_days": {
+              "type": "boolean"
+            },
             "closing_days": {
               "type": "array",
               "items": {
@@ -10605,8 +10730,33 @@
                 },
                 "reservation_frequency_minutes": {
                   "type": "number"
+                },
+                "payment_options": {
+                  "type": "array",
+                  "items": {
+                    "enum": [
+                      "in-store",
+                      "online"
+                    ]
+                  },
+                  "default": [
+                    "in-store"
+                  ]
+                },
+                "terms_of_service_url": {
+                  "oneOf": [
+                    {
+                      "type": "null"
+                    },
+                    {
+                      "type": "string"
+                    }
+                  ]
                 }
               }
+            },
+            "use_individual_opening_hours": {
+              "type": "boolean"
             },
             "opening_hours": {
               "type": "array",
@@ -10626,10 +10776,24 @@
                     "type": "string"
                   },
                   "break_from": {
-                    "type": "string"
+                    "oneOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "type": "string"
+                      }
+                    ]
                   },
                   "break_to": {
-                    "type": "string"
+                    "oneOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "type": "string"
+                      }
+                    ]
                   }
                 }
               }

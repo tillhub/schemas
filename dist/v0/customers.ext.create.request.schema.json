@@ -3,9 +3,6 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "additionalProperties": false,
   "type": "object",
-  "required": [
-    "lastname"
-  ],
   "properties": {
     "active": {
       "description": "Customer active",
@@ -34,8 +31,15 @@
     "lastname": {
       "example": "Fett",
       "description": "Last name",
-      "type": "string",
-      "maxLength": 128
+      "anyOf": [
+        {
+          "type": "string",
+          "maxLength": 128
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "middlename": {
       "description": "Middle name",
