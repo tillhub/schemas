@@ -1,3 +1,10 @@
+## [6.306.2](https://github.com/tillhub/schemas/compare/v6.306.1...v6.306.2) (2024-04-26)
+
+
+### Bug Fixes
+
+* **full-receipts:** add the dynamic footer feature ([#943](https://github.com/tillhub/schemas/issues/943)) ([76bfa38](https://github.com/tillhub/schemas/commit/76bfa38))
+
 ## [6.306.1](https://github.com/tillhub/schemas/compare/v6.306.0...v6.306.1) (2024-04-26)
 
 
