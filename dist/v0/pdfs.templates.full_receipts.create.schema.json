@@ -20,6 +20,11 @@
           "type": "string",
           "format": "date-time"
         },
+        "date": {
+          "additionalProperties": false,
+          "type": "string",
+          "format": "date-time"
+        },
         "cashier_staff": {
           "anyOf": [
             {
