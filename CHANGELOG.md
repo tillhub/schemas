@@ -1,3 +1,10 @@
+## [6.306.7](https://github.com/tillhub/schemas/compare/v6.306.6...v6.306.7) (2024-05-02)
+
+
+### Bug Fixes
+
+* **overview:** fixing example ([0bb6309](https://github.com/tillhub/schemas/commit/0bb6309))
+
 ## [6.306.4](https://github.com/tillhub/schemas/compare/v6.306.3...v6.306.4) (2024-05-02)
 
 
