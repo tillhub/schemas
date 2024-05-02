@@ -4,6 +4,7 @@ jobs:
     branches:
       only:
         - master
+        - release/foundation-v0.0.3
     docker:
       - image: 'circleci/node:latest'
     steps:
