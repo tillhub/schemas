@@ -107,7 +107,7 @@
                   "properties": {
                     "absolute_average_transaction_cancellation_items_total": {
                       "description": "Absolute average total of transactions with type \"sale_cancel\"",
-                      "example": 2,
+                      "example": 12,
                       "type": [
                         "integer",
                         "null"
