@@ -1,4 +1,4 @@
-# [6.289.0](https://github.com/tillhub/schemas/compare/v6.288.0...v6.289.0) (2024-05-02)
+# [6.306.4](https://github.com/tillhub/schemas/compare/6.306.3...6.306.4) (2024-05-02)
 
 
 ### Bug Fixes
