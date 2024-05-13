@@ -1,3 +1,10 @@
+# [6.307.0](https://github.com/tillhub/schemas/compare/v6.306.7...v6.307.0) (2024-05-13)
+
+
+### Features
+
+* **promotion:** add barcode schema to the promotion ([#950](https://github.com/tillhub/schemas/issues/950)) ([b33023a](https://github.com/tillhub/schemas/commit/b33023a))
+
 ## [6.306.7](https://github.com/tillhub/schemas/compare/v6.306.6...v6.306.7) (2024-05-02)
 
 

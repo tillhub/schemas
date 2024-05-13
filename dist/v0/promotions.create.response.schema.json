@@ -215,6 +215,18 @@
         }
       ]
     },
+    "barcode": {
+      "description": "The barcode used to trigger the promotion",
+      "example": "0E9761310XF",
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "id": {
       "type": "string",
       "format": "uuid"
