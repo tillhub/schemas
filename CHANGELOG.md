@@ -1,3 +1,10 @@
+# [6.308.0](https://github.com/tillhub/schemas/compare/v6.307.0...v6.308.0) (2024-05-14)
+
+
+### Features
+
+* **shift_plan:** add array for deleted shifts ([#952](https://github.com/tillhub/schemas/issues/952)) ([34a480f](https://github.com/tillhub/schemas/commit/34a480f))
+
 # [6.307.0](https://github.com/tillhub/schemas/compare/v6.306.7...v6.307.0) (2024-05-13)
 
 
