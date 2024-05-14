@@ -45,6 +45,13 @@
         "false"
       ]
     },
+    "restriction_single_transaction": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
     "partial_redemption": {
       "type": "string",
       "enum": [

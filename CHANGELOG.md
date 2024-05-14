@@ -1,3 +1,10 @@
+## [6.308.1](https://github.com/tillhub/schemas/compare/v6.308.0...v6.308.1) (2024-05-14)
+
+
+### Bug Fixes
+
+* **vouchers:** added missing filter ([84ed910](https://github.com/tillhub/schemas/commit/84ed910))
+
 # [6.308.0](https://github.com/tillhub/schemas/compare/v6.307.0...v6.308.0) (2024-05-14)
 
 
