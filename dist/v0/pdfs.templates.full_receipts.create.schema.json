@@ -449,7 +449,6 @@
             "type": "number",
             "description": "Total price without discounts",
             "example": "27.55",
-            "minimum": 0,
             "multipleOf": 0.01
           },
           "currency": {

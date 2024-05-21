@@ -1,3 +1,10 @@
+## [6.308.2](https://github.com/tillhub/schemas/compare/v6.308.1...v6.308.2) (2024-05-21)
+
+
+### Bug Fixes
+
+* **pdf:** fix for exporting pdf with negative total_price_include_vat ([#953](https://github.com/tillhub/schemas/issues/953)) ([ed4c3d4](https://github.com/tillhub/schemas/commit/ed4c3d4))
+
 ## [6.308.1](https://github.com/tillhub/schemas/compare/v6.308.0...v6.308.1) (2024-05-14)
 
 
