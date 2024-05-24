@@ -3123,6 +3123,7 @@
                             "reference_enabled": {
                               "oneOf": [
                                 {
+                                  "deprecated": true,
                                   "type": "boolean",
                                   "description": "Defines if delivery note reference should be requested for changing stock",
                                   "default": false
@@ -3135,9 +3136,44 @@
                             "reference_required": {
                               "oneOf": [
                                 {
+                                  "deprecated": true,
                                   "type": "boolean",
                                   "description": "Defines if delivery note reference is mandatory for changing stock",
                                   "default": false
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "increment_reference": {
+                              "oneOf": [
+                                {
+                                  "description": "Defines how a delivery note reference will be requested when incrementing stock",
+                                  "type": "string",
+                                  "enum": [
+                                    "none",
+                                    "optional",
+                                    "required"
+                                  ],
+                                  "default": "none"
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "decrement_reference": {
+                              "oneOf": [
+                                {
+                                  "description": "Defines how a delivery note reference will be requested when decrementing stock",
+                                  "type": "string",
+                                  "enum": [
+                                    "none",
+                                    "optional",
+                                    "required"
+                                  ],
+                                  "default": "none"
                                 },
                                 {
                                   "type": "null"

@@ -1,3 +1,10 @@
+# [6.309.0](https://github.com/tillhub/schemas/compare/v6.308.2...v6.309.0) (2024-05-24)
+
+
+### Features
+
+* **configurations:** stock ([0f8f5ba](https://github.com/tillhub/schemas/commit/0f8f5ba))
+
 ## [6.308.2](https://github.com/tillhub/schemas/compare/v6.308.1...v6.308.2) (2024-05-21)
 
 
