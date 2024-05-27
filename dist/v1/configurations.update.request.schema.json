@@ -10767,7 +10767,7 @@
                 "reservation_frequency_minutes": {
                   "type": "number"
                 },
-                "payment_options": {
+                "payment_methods": {
                   "type": "array",
                   "items": {
                     "enum": [
