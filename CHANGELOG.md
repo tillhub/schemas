@@ -1,3 +1,10 @@
+# [6.310.0](https://github.com/tillhub/schemas/compare/v6.309.0...v6.310.0) (2024-05-27)
+
+
+### Features
+
+* **configurations:** rename payment_options to payment_methods ([10ea70a](https://github.com/tillhub/schemas/commit/10ea70a))
+
 # [6.309.0](https://github.com/tillhub/schemas/compare/v6.308.2...v6.309.0) (2024-05-24)
 
 
