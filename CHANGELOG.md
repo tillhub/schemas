@@ -1,3 +1,10 @@
+# [6.312.0](https://github.com/tillhub/schemas/compare/v6.311.0...v6.312.0) (2024-05-29)
+
+
+### Features
+
+* **stocks:** add total quantity to the event ([2b49e06](https://github.com/tillhub/schemas/commit/2b49e06))
+
 # [6.311.0](https://github.com/tillhub/schemas/compare/v6.310.0...v6.311.0) (2024-05-27)
 
 
