@@ -10788,6 +10788,15 @@
                       "type": "string"
                     }
                   ]
+                },
+                "receive_appointment_notifications": {
+                  "type": "boolean"
+                },
+                "appointment_notification_recipient_emails": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             },

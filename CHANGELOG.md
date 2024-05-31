@@ -1,3 +1,10 @@
+# [6.313.0](https://github.com/tillhub/schemas/compare/v6.312.0...v6.313.0) (2024-05-31)
+
+
+### Features
+
+* **emails:** add list for email recipients ([#957](https://github.com/tillhub/schemas/issues/957)) ([28e1951](https://github.com/tillhub/schemas/commit/28e1951))
+
 # [6.312.0](https://github.com/tillhub/schemas/compare/v6.311.0...v6.312.0) (2024-05-29)
 
 
