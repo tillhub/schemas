@@ -4077,41 +4077,76 @@
                         "type": "object",
                         "properties": {
                           "tags": {
-                            "deprecated": true,
-                            "type": "array",
-                            "items": {
-                              "description": "Legacy tags (metadata plain text) from cart item products that will cause assignment to this specific receipt.",
-                              "type": "string",
-                              "example": "food",
-                              "minLength": 3,
-                              "maxLength": 64
-                            }
+                            "oneOf": [
+                              {
+                                "deprecated": true,
+                                "type": "array",
+                                "items": {
+                                  "description": "Legacy tags (metadata plain text) from cart item products that will cause assignment to this specific receipt.",
+                                  "type": "string",
+                                  "example": "food",
+                                  "minLength": 3,
+                                  "maxLength": 64
+                                }
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
                           },
                           "tag_ids": {
-                            "type": "array",
-                            "items": {
-                              "description": "The tag resource ids which will be tested for intersection with the cart item's product tag ids",
-                              "type": "string",
-                              "format": "uuid"
-                            }
+                            "oneOf": [
+                              {
+                                "type": "array",
+                                "items": {
+                                  "description": "The tag resource ids which will be tested for intersection with the cart item's product tag ids",
+                                  "type": "string",
+                                  "format": "uuid"
+                                }
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
                           },
                           "title": {
-                            "description": "Visual clue where a specific receipt should be used.",
-                            "type": "string",
-                            "example": "Kitchen",
-                            "minLength": 3,
-                            "maxLength": 64
+                            "oneOf": [
+                              {
+                                "description": "Visual clue where a specific receipt should be used.",
+                                "type": "string",
+                                "example": "Kitchen",
+                                "minLength": 3,
+                                "maxLength": 64
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
                           },
                           "coaster": {
-                            "deprecated": true,
-                            "description": "If true - print the coaster(number) on the specified receipt",
-                            "type": "boolean",
-                            "default": true
+                            "oneOf": [
+                              {
+                                "deprecated": true,
+                                "description": "If true - print the coaster(number) on the specified receipt",
+                                "type": "boolean",
+                                "default": false
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
                           },
                           "pager": {
-                            "description": "If true - print the pager(number) on the specified receipt",
-                            "type": "boolean",
-                            "default": true
+                            "oneOf": [
+                              {
+                                "description": "If true - print the pager(number) on the specified receipt",
+                                "type": "boolean",
+                                "default": false
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
                           },
                           "size_type": {
                             "oneOf": [

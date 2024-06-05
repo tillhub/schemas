@@ -1,3 +1,10 @@
+## [6.313.1](https://github.com/tillhub/schemas/compare/v6.313.0...v6.313.1) (2024-06-05)
+
+
+### Bug Fixes
+
+* **inventory-stocks:** added location endpoint ([32c0ad8](https://github.com/tillhub/schemas/commit/32c0ad8))
+
 # [6.313.0](https://github.com/tillhub/schemas/compare/v6.312.0...v6.313.0) (2024-05-31)
 
 
