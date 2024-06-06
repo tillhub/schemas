@@ -1,3 +1,10 @@
+# [6.314.0](https://github.com/tillhub/schemas/compare/v6.313.1...v6.314.0) (2024-06-06)
+
+
+### Features
+
+* **configurations:** customers ([2d1de71](https://github.com/tillhub/schemas/commit/2d1de71))
+
 ## [6.313.1](https://github.com/tillhub/schemas/compare/v6.313.0...v6.313.1) (2024-06-05)
 
 
