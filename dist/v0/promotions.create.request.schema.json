@@ -4,7 +4,8 @@
   "additionalProperties": false,
   "type": "object",
   "required": [
-    "payload",
+    "name",
+    "template",
     "type"
   ],
   "properties": {
@@ -31,12 +32,6 @@
           "type": "null"
         }
       ]
-    },
-    "payload": {
-      "description": "Javascript function text",
-      "type": "string",
-      "minLength": 1,
-      "maxLength": 65536
     },
     "type": {
       "description": "The type of the promotion function",
@@ -104,67 +99,60 @@
       "default": true
     },
     "template": {
+      "$id": "https://schemas.tillhub.com/v0/promotions.templates.schema.json",
+      "$schema": "http://json-schema.org/draft-07/schema#",
       "oneOf": [
         {
-          "$id": "https://schemas.tillhub.com/v0/promotions.templates.schema.json",
-          "$schema": "http://json-schema.org/draft-07/schema#",
-          "oneOf": [
-            {
-              "additionalProperties": false,
-              "type": "object",
-              "required": [
-                "inputs",
-                "type"
-              ],
-              "properties": {
-                "type": {
-                  "type": "string",
-                  "enum": [
-                    "product_property:and_or_concat:output_properties"
-                  ]
-                },
-                "inputs": {
-                  "oneOf": [
-                    {
-                      "type": "object"
-                    },
-                    {
-                      "type": "null"
-                    }
-                  ]
-                }
-              }
+          "additionalProperties": false,
+          "type": "object",
+          "required": [
+            "inputs",
+            "type"
+          ],
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": [
+                "product_property:and_or_concat:output_properties"
+              ]
             },
-            {
-              "additionalProperties": false,
-              "type": "object",
-              "required": [
-                "inputs",
-                "type"
-              ],
-              "properties": {
-                "type": {
-                  "type": "string",
-                  "enum": [
-                    "product_property:exclusive_bundle:output_properties"
-                  ]
+            "inputs": {
+              "oneOf": [
+                {
+                  "type": "object"
                 },
-                "inputs": {
-                  "oneOf": [
-                    {
-                      "type": "object"
-                    },
-                    {
-                      "type": "null"
-                    }
-                  ]
+                {
+                  "type": "null"
                 }
-              }
+              ]
             }
-          ]
+          }
         },
         {
-          "type": "null"
+          "additionalProperties": false,
+          "type": "object",
+          "required": [
+            "inputs",
+            "type"
+          ],
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": [
+                "product_property:exclusive_bundle:output_properties"
+              ]
+            },
+            "inputs": {
+              "oneOf": [
+                {
+                  "type": "object"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
         }
       ]
     },
