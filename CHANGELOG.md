@@ -1,3 +1,10 @@
+# [6.315.0](https://github.com/tillhub/schemas/compare/v6.314.0...v6.315.0) (2024-06-07)
+
+
+### Features
+
+* **promotion:** defining promotion v1 ([#961](https://github.com/tillhub/schemas/issues/961)) ([8b3e5cd](https://github.com/tillhub/schemas/commit/8b3e5cd))
+
 # [6.314.0](https://github.com/tillhub/schemas/compare/v6.313.1...v6.314.0) (2024-06-06)
 
 
