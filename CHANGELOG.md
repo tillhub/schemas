@@ -1,3 +1,11 @@
+# [6.317.0](https://github.com/tillhub/schemas/compare/v6.316.0...v6.317.0) (2024-06-12)
+
+
+### Features
+
+* **schemas:** add mms branches update ([5e269e8](https://github.com/tillhub/schemas/commit/5e269e8))
+* **schemas:** add mms branches update ([eab36a6](https://github.com/tillhub/schemas/commit/eab36a6))
+
 # [6.316.0](https://github.com/tillhub/schemas/compare/v6.315.0...v6.316.0) (2024-06-07)
 
 
