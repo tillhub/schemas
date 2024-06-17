@@ -1,0 +1,296 @@
+{
+  "$id": "https://schemas.tillhub.com/v1/promotions.update.request.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "type": "object",
+  "required": [],
+  "properties": {
+    "name": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 255
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "description": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1024
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "type": {
+      "description": "The type of the promotion function",
+      "type": "string",
+      "enum": [
+        "cart_map_function"
+      ]
+    },
+    "metadata": {
+      "oneOf": [
+        {
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "arguments": {
+      "oneOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "locations": {
+      "oneOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "client_id": {
+      "description": "A identifier used locally on POS for their own reference.",
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "deleted": {
+      "type": "boolean",
+      "default": false
+    },
+    "active": {
+      "type": "boolean",
+      "default": true
+    },
+    "template": {
+      "$id": "https://schemas.tillhub.com/v0/promotions.templates.schema.json",
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "oneOf": [
+        {
+          "additionalProperties": false,
+          "type": "object",
+          "required": [
+            "inputs",
+            "type"
+          ],
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": [
+                "product_property:and_or_concat:output_properties"
+              ]
+            },
+            "inputs": {
+              "oneOf": [
+                {
+                  "type": "object"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "additionalProperties": false,
+          "type": "object",
+          "required": [
+            "inputs",
+            "type"
+          ],
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": [
+                "product_property:exclusive_bundle:output_properties"
+              ]
+            },
+            "inputs": {
+              "oneOf": [
+                {
+                  "type": "object"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "additionalProperties": false,
+          "type": "object",
+          "required": [
+            "inputs",
+            "type"
+          ],
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": [
+                "product_property:entire_basket:output_properties"
+              ]
+            },
+            "inputs": {
+              "type": "object",
+              "required": [
+                "promotable_products",
+                "promotable_product_groups",
+                "output"
+              ],
+              "properties": {
+                "promotable_products": {
+                  "type": "array",
+                  "items": {
+                    "required": [
+                      "property",
+                      "value"
+                    ],
+                    "properties": {
+                      "property": {
+                        "type": "string"
+                      },
+                      "value": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                },
+                "promotable_product_groups": {
+                  "type": "array",
+                  "items": {
+                    "required": [
+                      "property",
+                      "value"
+                    ],
+                    "properties": {
+                      "property": {
+                        "type": "string"
+                      },
+                      "value": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                },
+                "output": {
+                  "type": "object",
+                  "required": [
+                    "property",
+                    "value"
+                  ],
+                  "properties": {
+                    "property": {
+                      "type": "string",
+                      "enum": [
+                        "amount_total_gross",
+                        "percentage_discount",
+                        "amount_discount"
+                      ]
+                    },
+                    "value": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "constraints": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "time": {
+              "oneOf": [
+                {},
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "branch_groups": {
+      "oneOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "version": {
+      "oneOf": [
+        {
+          "type": "integer",
+          "description": "The version number of the promotion. Version 1 is deprecated, current version is 2",
+          "example": 2,
+          "minimum": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "barcode": {
+      "description": "The barcode used to trigger the promotion",
+      "example": "0E9761310XF",
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  }
+}

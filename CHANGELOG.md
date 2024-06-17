@@ -1,3 +1,10 @@
+# [6.319.0](https://github.com/tillhub/schemas/compare/v6.318.0...v6.319.0) (2024-06-17)
+
+
+### Features
+
+* **promotion:** add new promotion type ([#964](https://github.com/tillhub/schemas/issues/964)) ([bea0b4b](https://github.com/tillhub/schemas/commit/bea0b4b))
+
 # [6.318.0](https://github.com/tillhub/schemas/compare/v6.317.0...v6.318.0) (2024-06-17)
 
 
