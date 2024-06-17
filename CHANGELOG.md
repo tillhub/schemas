@@ -1,3 +1,10 @@
+# [6.318.0](https://github.com/tillhub/schemas/compare/v6.317.0...v6.318.0) (2024-06-17)
+
+
+### Features
+
+* **configurations:** add social media links ([#955](https://github.com/tillhub/schemas/issues/955)) ([7a7b476](https://github.com/tillhub/schemas/commit/7a7b476))
+
 # [6.317.0](https://github.com/tillhub/schemas/compare/v6.316.0...v6.317.0) (2024-06-12)
 
 
