@@ -113,86 +113,44 @@
               ]
             },
             "inputs": {
-              "oneOf": [
-                {
-                  "type": "object"
-                },
-                {
-                  "type": "null"
-                }
-              ]
-            }
-          }
-        },
-        {
-          "additionalProperties": false,
-          "type": "object",
-          "required": [
-            "inputs",
-            "type"
-          ],
-          "properties": {
-            "type": {
-              "type": "string",
-              "enum": [
-                "product_property:exclusive_bundle:output_properties"
-              ]
-            },
-            "inputs": {
-              "oneOf": [
-                {
-                  "type": "object"
-                },
-                {
-                  "type": "null"
-                }
-              ]
-            }
-          }
-        },
-        {
-          "additionalProperties": false,
-          "type": "object",
-          "required": [
-            "inputs",
-            "type"
-          ],
-          "properties": {
-            "type": {
-              "type": "string",
-              "enum": [
-                "product_property:entire_basket:output_properties"
-              ]
-            },
-            "inputs": {
               "type": "object",
               "required": [
-                "promotable_products",
-                "promotable_product_groups",
+                "repeatable_promotable",
+                "promotable_product",
+                "bundle_junctions",
                 "output"
               ],
               "properties": {
-                "promotable_products": {
-                  "type": "array",
-                  "items": {
-                    "required": [
-                      "property",
-                      "value"
-                    ],
-                    "properties": {
-                      "property": {
-                        "type": "string"
-                      },
-                      "value": {
-                        "type": "string"
-                      }
+                "repeatable_promotable": {
+                  "type": "boolean"
+                },
+                "promotable_product": {
+                  "required": [
+                    "property",
+                    "value",
+                    "qty"
+                  ],
+                  "properties": {
+                    "property": {
+                      "type": "string"
+                    },
+                    "value": {
+                      "type": "string"
+                    },
+                    "qty": {
+                      "type": "number"
                     }
                   }
                 },
-                "promotable_product_groups": {
+                "bundle_junctions": {
                   "type": "array",
+                  "uniqueItems": true,
+                  "additionalItems": false,
+                  "minItems": 2,
+                  "maxItems": 2,
                   "items": {
                     "required": [
+                      "type",
                       "property",
                       "value"
                     ],
@@ -201,7 +159,17 @@
                         "type": "string"
                       },
                       "value": {
-                        "type": "string"
+                        "type": "array"
+                      },
+                      "qty": {
+                        "type": "number"
+                      },
+                      "type": {
+                        "type": "string",
+                        "enum": [
+                          "product",
+                          "product_group"
+                        ]
                       }
                     }
                   }
@@ -222,7 +190,185 @@
                       ]
                     },
                     "value": {
+                      "type": "number"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "additionalProperties": false,
+          "type": "object",
+          "required": [
+            "inputs",
+            "type"
+          ],
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": [
+                "product_property:exclusive_bundle:output_properties"
+              ]
+            },
+            "inputs": {
+              "type": "object",
+              "required": [
+                "repeatable_promotable",
+                "promotable_product",
+                "bundle_junctions",
+                "output"
+              ],
+              "properties": {
+                "repeatable_promotable": {
+                  "type": "boolean"
+                },
+                "promotable_product": {
+                  "required": [
+                    "property",
+                    "value",
+                    "qty"
+                  ],
+                  "properties": {
+                    "property": {
                       "type": "string"
+                    },
+                    "value": {
+                      "type": "string"
+                    },
+                    "qty": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "bundle_junctions": {
+                  "type": "array",
+                  "maxItems": 1,
+                  "minItems": 1,
+                  "uniqueItems": true,
+                  "additionalItems": false,
+                  "items": {
+                    "required": [
+                      "type",
+                      "property",
+                      "value",
+                      "qty"
+                    ],
+                    "properties": {
+                      "property": {
+                        "type": "string"
+                      },
+                      "value": {
+                        "type": "string"
+                      },
+                      "qty": {
+                        "type": "number"
+                      },
+                      "type": {
+                        "type": "string",
+                        "enum": [
+                          "product"
+                        ]
+                      }
+                    }
+                  }
+                },
+                "output": {
+                  "type": "object",
+                  "required": [
+                    "property",
+                    "value"
+                  ],
+                  "properties": {
+                    "property": {
+                      "type": "string",
+                      "enum": [
+                        "amount_total_gross",
+                        "percentage_discount",
+                        "amount_discount"
+                      ]
+                    },
+                    "value": {
+                      "type": "number"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "additionalProperties": false,
+          "type": "object",
+          "required": [
+            "inputs",
+            "type"
+          ],
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": [
+                "product_property:entire_basket:output_properties"
+              ]
+            },
+            "inputs": {
+              "type": "object",
+              "required": [
+                "promotable_product",
+                "required_amount",
+                "promotable_product_group",
+                "output"
+              ],
+              "properties": {
+                "promotable_product": {
+                  "required": [
+                    "property",
+                    "value"
+                  ],
+                  "properties": {
+                    "property": {
+                      "type": "string"
+                    },
+                    "value": {
+                      "type": "array"
+                    }
+                  }
+                },
+                "promotable_product_group": {
+                  "required": [
+                    "property",
+                    "value"
+                  ],
+                  "properties": {
+                    "property": {
+                      "type": "string"
+                    },
+                    "value": {
+                      "type": "array"
+                    }
+                  }
+                },
+                "required_amount": {
+                  "type": "number"
+                },
+                "output": {
+                  "type": "object",
+                  "required": [
+                    "property",
+                    "value"
+                  ],
+                  "properties": {
+                    "property": {
+                      "type": "string",
+                      "enum": [
+                        "amount_total_gross",
+                        "percentage_discount",
+                        "amount_discount"
+                      ]
+                    },
+                    "value": {
+                      "type": "number"
                     }
                   }
                 }
