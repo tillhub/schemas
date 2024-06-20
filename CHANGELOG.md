@@ -1,3 +1,10 @@
+# [6.322.0](https://github.com/tillhub/schemas/compare/v6.321.0...v6.322.0) (2024-06-20)
+
+
+### Features
+
+* **configurations:** ui ([6c2f72d](https://github.com/tillhub/schemas/commit/6c2f72d))
+
 # [6.321.0](https://github.com/tillhub/schemas/compare/v6.320.0...v6.321.0) (2024-06-20)
 
 

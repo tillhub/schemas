@@ -11388,6 +11388,43 @@
                                     }
                                   ]
                                 },
+                                "print_quittance": {
+                                  "oneOf": [
+                                    {
+                                      "description": "Defines the 'Print Quittance' button - only non-invoiced sales",
+                                      "type": "object",
+                                      "properties": {
+                                        "visible": {
+                                          "oneOf": [
+                                            {
+                                              "description": "Defines if the button is visible (otherwise hidden)",
+                                              "type": "boolean",
+                                              "default": true
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        },
+                                        "enabled": {
+                                          "oneOf": [
+                                            {
+                                              "description": "Defines if the button is enabled (otherwise greyed out)",
+                                              "type": "boolean",
+                                              "default": true
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
                                 "email_invoice": {
                                   "oneOf": [
                                     {
