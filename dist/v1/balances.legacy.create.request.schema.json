@@ -642,6 +642,18 @@
                 "example": "5ad2351d-9a67-45f9-ad4f-0abcbefa9037",
                 "description": "The payment_option ressource id"
               },
+              "payment_option_id": {
+                "oneOf": [
+                  {
+                    "type": "integer",
+                    "example": 131,
+                    "description": "Legacy id of the payment option"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
               "payment_option_name": {
                 "oneOf": [
                   {
@@ -729,6 +741,18 @@
                     "type": "integer",
                     "example": 1850,
                     "description": "The daily discrepancy between calculated and counted amounts, POS: counted - calculated, not available anymore for non-cash types (e.g. terminal) (in cent-format: 1267 == 12.67€)"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "exchangeRate": {
+                "oneOf": [
+                  {
+                    "type": "number",
+                    "example": 1.403,
+                    "description": "Exchange rate of the payment option, not used."
                   },
                   {
                     "type": "null"

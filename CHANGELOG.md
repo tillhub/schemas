@@ -1,3 +1,11 @@
+# [6.321.0](https://github.com/tillhub/schemas/compare/v6.320.0...v6.321.0) (2024-06-20)
+
+
+### Features
+
+* **promotions:** rename compiled js field ([60eaeba](https://github.com/tillhub/schemas/commit/60eaeba))
+* **transactions:** promotions ([1505e0b](https://github.com/tillhub/schemas/commit/1505e0b))
+
 # [6.320.0](https://github.com/tillhub/schemas/compare/v6.319.0...v6.320.0) (2024-06-20)
 
 
