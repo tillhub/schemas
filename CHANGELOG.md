@@ -1,3 +1,10 @@
+# [6.323.0](https://github.com/tillhub/schemas/compare/v6.322.0...v6.323.0) (2024-06-24)
+
+
+### Features
+
+* **configurations:** settings ([eff2061](https://github.com/tillhub/schemas/commit/eff2061))
+
 # [6.322.0](https://github.com/tillhub/schemas/compare/v6.321.0...v6.322.0) (2024-06-20)
 
 
