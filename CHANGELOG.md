@@ -1,3 +1,10 @@
+## [6.323.2](https://github.com/tillhub/schemas/compare/v6.323.1...v6.323.2) (2024-07-05)
+
+
+### Bug Fixes
+
+* **v1/promotions:** add validation for uuid ([#975](https://github.com/tillhub/schemas/issues/975)) ([60849a9](https://github.com/tillhub/schemas/commit/60849a9))
+
 # [6.323.0](https://github.com/tillhub/schemas/compare/v6.322.0...v6.323.0) (2024-06-24)
 
 

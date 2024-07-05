@@ -135,7 +135,37 @@
                       "type": "string"
                     },
                     "value": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "qty": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "promotable_product_group": {
+                  "required": [
+                    "property",
+                    "value",
+                    "qty"
+                  ],
+                  "properties": {
+                    "property": {
                       "type": "string"
+                    },
+                    "value": {
+                      "type": "array",
+                      "items": {
+                        "required": [
+                          "id"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "string",
+                            "format": "uuid"
+                          }
+                        }
+                      }
                     },
                     "qty": {
                       "type": "number"
@@ -188,9 +218,30 @@
                         "percentage_discount",
                         "amount_discount"
                       ]
-                    },
-                    "value": {
-                      "type": "number"
+                    }
+                  },
+                  "if": {
+                    "properties": {
+                      "property": {
+                        "const": "percentage_discount"
+                      }
+                    }
+                  },
+                  "then": {
+                    "properties": {
+                      "value": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1
+                      }
+                    }
+                  },
+                  "else": {
+                    "properties": {
+                      "value": {
+                        "type": "number",
+                        "minimum": 0
+                      }
                     }
                   }
                 }
@@ -235,7 +286,37 @@
                       "type": "string"
                     },
                     "value": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "qty": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "promotable_product_group": {
+                  "required": [
+                    "property",
+                    "value",
+                    "qty"
+                  ],
+                  "properties": {
+                    "property": {
                       "type": "string"
+                    },
+                    "value": {
+                      "type": "array",
+                      "items": {
+                        "required": [
+                          "id"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "string",
+                            "format": "uuid"
+                          }
+                        }
+                      }
                     },
                     "qty": {
                       "type": "number"
@@ -288,9 +369,30 @@
                         "percentage_discount",
                         "amount_discount"
                       ]
-                    },
-                    "value": {
-                      "type": "number"
+                    }
+                  },
+                  "if": {
+                    "properties": {
+                      "property": {
+                        "const": "percentage_discount"
+                      }
+                    }
+                  },
+                  "then": {
+                    "properties": {
+                      "value": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1
+                      }
+                    }
+                  },
+                  "else": {
+                    "properties": {
+                      "value": {
+                        "type": "number",
+                        "minimum": 0
+                      }
                     }
                   }
                 }
@@ -366,9 +468,30 @@
                         "percentage_discount",
                         "amount_discount"
                       ]
-                    },
-                    "value": {
-                      "type": "number"
+                    }
+                  },
+                  "if": {
+                    "properties": {
+                      "property": {
+                        "const": "percentage_discount"
+                      }
+                    }
+                  },
+                  "then": {
+                    "properties": {
+                      "value": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1
+                      }
+                    }
+                  },
+                  "else": {
+                    "properties": {
+                      "value": {
+                        "type": "number",
+                        "minimum": 0
+                      }
                     }
                   }
                 }
