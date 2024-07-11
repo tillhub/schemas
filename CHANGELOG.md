@@ -1,3 +1,10 @@
+# [6.325.0](https://github.com/tillhub/schemas/compare/v6.324.0...v6.325.0) (2024-07-11)
+
+
+### Features
+
+* **configurations:** features ([3ca266e](https://github.com/tillhub/schemas/commit/3ca266e))
+
 # [6.324.0](https://github.com/tillhub/schemas/compare/v6.323.2...v6.324.0) (2024-07-11)
 
 

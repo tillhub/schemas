@@ -2825,6 +2825,18 @@
                         }
                       ]
                     },
+                    "sale_confirmation": {
+                      "oneOf": [
+                        {
+                          "description": "Specifies if sale confirmation is indicated",
+                          "type": "boolean",
+                          "default": true
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
                     "url": {
                       "description": "The URL of the web view",
                       "type": "string",
