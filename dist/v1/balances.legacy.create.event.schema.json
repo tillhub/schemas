@@ -40,7 +40,7 @@
     },
     "timestamp": {
       "description": "The date and time event was received by webhooks service",
-      "example": "2024-07-11T23:46:59.682Z",
+      "example": "2024-07-17T09:30:00.102Z",
       "type": "string",
       "format": "date-time"
     },
@@ -2925,6 +2925,40 @@
                       "type": "integer",
                       "example": 234,
                       "description": "Counting number of the last transaction"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "device": {
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "identifier_for_vendor": {
+                          "oneOf": [
+                            {
+                              "type": "string",
+                              "description": "Current vendor identifier regardless of value stored in keychain"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "keychain_counting_numbers": {
+                          "oneOf": [
+                            {
+                              "type": "string",
+                              "description": "Snapshot of the keychain counting numbers table"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        }
+                      }
                     },
                     {
                       "type": "null"

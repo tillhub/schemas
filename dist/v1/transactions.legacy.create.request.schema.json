@@ -302,6 +302,40 @@
                 }
               }
             },
+            "device": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "identifier_for_vendor": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "description": "Current vendor identifier regardless of value stored in keychain"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "keychain_counting_numbers": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "description": "Snapshot of the keychain counting numbers table"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
             "order": {
               "oneOf": [
                 {

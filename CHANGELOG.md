@@ -1,3 +1,11 @@
+# [6.326.0](https://github.com/tillhub/schemas/compare/v6.325.0...v6.326.0) (2024-07-17)
+
+
+### Features
+
+* **transactions:** meta ([bb5d64f](https://github.com/tillhub/schemas/commit/bb5d64f))
+* **transactions:** meta, change keychain_counting_numbers to string ([c2ef3a6](https://github.com/tillhub/schemas/commit/c2ef3a6))
+
 # [6.325.0](https://github.com/tillhub/schemas/compare/v6.324.0...v6.325.0) (2024-07-11)
 
 
