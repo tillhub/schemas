@@ -1,3 +1,10 @@
+# [6.327.0](https://github.com/tillhub/schemas/compare/v6.326.0...v6.327.0) (2024-07-22)
+
+
+### Features
+
+* **gastro:** receipt type ([21eee08](https://github.com/tillhub/schemas/commit/21eee08))
+
 # [6.326.0](https://github.com/tillhub/schemas/compare/v6.325.0...v6.326.0) (2024-07-17)
 
 

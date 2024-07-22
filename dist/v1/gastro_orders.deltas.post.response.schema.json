@@ -596,7 +596,8 @@
             "enum": [
               "save",
               "checkout",
-              "cancel"
+              "cancel",
+              "cancel_zero"
             ],
             "description": "Description of the context this delta was caused by"
           },
