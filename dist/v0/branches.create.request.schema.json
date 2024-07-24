@@ -700,6 +700,12 @@
       "example": "false",
       "type": "boolean",
       "default": false
+    },
+    "available_in_online_booking": {
+      "description": "The Flag to indicate if the branch is available for online booking / reservation.",
+      "example": "false",
+      "type": "boolean",
+      "default": true
     }
   },
   "type": "object"

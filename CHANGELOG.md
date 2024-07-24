@@ -1,3 +1,10 @@
+# [6.328.0](https://github.com/tillhub/schemas/compare/v6.327.0...v6.328.0) (2024-07-24)
+
+
+### Features
+
+* **reservation:** add available_in_online_booking flag to branch ([#981](https://github.com/tillhub/schemas/issues/981)) ([e530da7](https://github.com/tillhub/schemas/commit/e530da7))
+
 # [6.327.0](https://github.com/tillhub/schemas/compare/v6.326.0...v6.327.0) (2024-07-22)
 
 
