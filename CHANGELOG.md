@@ -1,3 +1,10 @@
+# [6.329.0](https://github.com/tillhub/schemas/compare/v6.328.0...v6.329.0) (2024-07-30)
+
+
+### Features
+
+* **transactions:** meta ([c6c9083](https://github.com/tillhub/schemas/commit/c6c9083))
+
 # [6.328.0](https://github.com/tillhub/schemas/compare/v6.327.0...v6.328.0) (2024-07-24)
 
 
