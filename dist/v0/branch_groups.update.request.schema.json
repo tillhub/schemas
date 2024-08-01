@@ -65,6 +65,10 @@
       "description": "Soft delete this branch group.",
       "type": "boolean",
       "default": false
+    },
+    "available_in_online_booking": {
+      "description": "Branches in this group are available for online booking.",
+      "type": "boolean"
     }
   }
 }

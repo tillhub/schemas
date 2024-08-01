@@ -1,3 +1,10 @@
+# [6.330.0](https://github.com/tillhub/schemas/compare/v6.329.0...v6.330.0) (2024-08-01)
+
+
+### Features
+
+* **reservation:** add available_in_online_booking to branch_group schema ([#983](https://github.com/tillhub/schemas/issues/983)) ([789a6b6](https://github.com/tillhub/schemas/commit/789a6b6))
+
 # [6.329.0](https://github.com/tillhub/schemas/compare/v6.328.0...v6.329.0) (2024-07-30)
 
 
