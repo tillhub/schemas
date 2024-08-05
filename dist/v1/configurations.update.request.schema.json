@@ -9447,6 +9447,18 @@
                           "type": "null"
                         }
                       ]
+                    },
+                    "allow_force_narrow": {
+                      "oneOf": [
+                        {
+                          "description": "Potentially allow forcing 60mm-print on 80mm-printers via UI toggle ",
+                          "type": "boolean",
+                          "default": false
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
                     }
                   }
                 },

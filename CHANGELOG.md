@@ -1,3 +1,10 @@
+# [6.331.0](https://github.com/tillhub/schemas/compare/v6.330.0...v6.331.0) (2024-08-05)
+
+
+### Features
+
+* **configurations:** interfaces ([8592ff7](https://github.com/tillhub/schemas/commit/8592ff7))
+
 # [6.330.0](https://github.com/tillhub/schemas/compare/v6.329.0...v6.330.0) (2024-08-01)
 
 
