@@ -1,3 +1,10 @@
+# [6.333.0](https://github.com/tillhub/schemas/compare/v6.332.0...v6.333.0) (2024-08-06)
+
+
+### Features
+
+* **gastro_orders:** deltas ([7b46a29](https://github.com/tillhub/schemas/commit/7b46a29))
+
 # [6.332.0](https://github.com/tillhub/schemas/compare/v6.331.0...v6.332.0) (2024-08-06)
 
 

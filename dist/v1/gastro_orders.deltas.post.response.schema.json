@@ -56,8 +56,7 @@
           "dev_uuid",
           "register",
           "date",
-          "type",
-          "items"
+          "type"
         ],
         "properties": {
           "id": {
