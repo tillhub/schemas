@@ -1,3 +1,10 @@
+# [6.332.0](https://github.com/tillhub/schemas/compare/v6.331.0...v6.332.0) (2024-08-06)
+
+
+### Features
+
+* **order_deltas:** items ([482b972](https://github.com/tillhub/schemas/commit/482b972))
+
 # [6.331.0](https://github.com/tillhub/schemas/compare/v6.330.0...v6.331.0) (2024-08-05)
 
 

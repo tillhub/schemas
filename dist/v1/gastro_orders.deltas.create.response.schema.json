@@ -636,54 +636,60 @@
       ]
     },
     "items": {
-      "type": "array",
-      "minLength": 1,
-      "items": {
-        "type": "object",
-        "additionalProperties": false,
-        "required": [
-          "quantity",
-          "text",
-          "price_per_unit"
-        ],
-        "description": "A line item in context of a delta-order, representing newly added and newly removed line items.\n\nIn den processData der Bestellung werden die einzelnen Bestellpositionen in CSVDarstellung\nmit den Spalten Menge, Bezeichnung und Preis abgebildet.\nAls Zeilentrennzeichen ist “\r” (Wagenrücklauf, Unicode U+000D) und als Spaltentrennzeichen\n“;” (Semikolon, Unicode U+003B) zu verwenden.\n\nTranslation:\nIn the processData of an order (delta) the positions will be encoded in CSV format\nwith the colums \"quantity\", \"text\" and \"effective price\" (per quantity=1.0)\n\nThe line separator is “\r” (Carriage Return, Unicode U+000D),\nthe separator for columns is \";\" (Semicolon, Unicode U+003B)\n\ne.g.:\n2;”Eisbecher ““Himbeere“““;3.99\n1;”Eiskaffee“;2.99",
-        "properties": {
-          "quantity": {
-            "description": "The quantity of this item. e.g. 1 pc or 0.125kg - DSFinV_K: \"Menge\"'\n\nFor the removal of items from the whole process the quantity will be negative\n\nIn a call to the Fiskaly-API this is encoded as a string: \"quantity\": \"10.9814\"",
-            "type": "number",
-            "example": 10.9814,
-            "minimum": -32767,
-            "maximum": 32767,
-            "multipleOf": 0.0001
-          },
-          "text": {
-            "description": "The descriptive text of this item - DSFinV_K: \"Bezeichnung\"'\n\nIn a call to the Fiskaly-API this is encoded as: \"text\": \"Eisbecher “Himbeere“\"",
-            "type": "string",
-            "example": "”Schnitzel ””Wiener Art”””"
-          },
-          "price_per_unit": {
-            "description": "The effective gross price of an item per quantity=1.0, after applying discounts - DSFinV_K: \"Preis\"',\n(= total_gross / quantity, quantity != 0)\nchanging the price or the discounts will cause removal of this item and adding another one with the updated values,\n\nIn a call to the Fiskaly-API this is encoded as a string: \"price_per_unit\": \"20.25\" - 2 decimals always required",
-            "type": "number",
-            "example": 20.25,
-            "minimum": -1000000,
-            "maximum": 1000000,
-            "multipleOf": 0.01
-          },
-          "product": {
-            "oneOf": [
-              {
-                "type": "string",
-                "format": "uuid",
-                "description": "The Tillhub product resource reference ID. This is a convinience add on and not required by order-signing",
-                "example": "43847a66-97dc-4ac2-8e8a-c44920e1f22f"
+      "oneOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "quantity",
+              "text",
+              "price_per_unit"
+            ],
+            "description": "A line item in context of a delta-order, representing newly added and newly removed line items.\n\nIn den processData der Bestellung werden die einzelnen Bestellpositionen in CSVDarstellung\nmit den Spalten Menge, Bezeichnung und Preis abgebildet.\nAls Zeilentrennzeichen ist “\r” (Wagenrücklauf, Unicode U+000D) und als Spaltentrennzeichen\n“;” (Semikolon, Unicode U+003B) zu verwenden.\n\nTranslation:\nIn the processData of an order (delta) the positions will be encoded in CSV format\nwith the colums \"quantity\", \"text\" and \"effective price\" (per quantity=1.0)\n\nThe line separator is “\r” (Carriage Return, Unicode U+000D),\nthe separator for columns is \";\" (Semicolon, Unicode U+003B)\n\ne.g.:\n2;”Eisbecher ““Himbeere“““;3.99\n1;”Eiskaffee“;2.99",
+            "properties": {
+              "quantity": {
+                "description": "The quantity of this item. e.g. 1 pc or 0.125kg - DSFinV_K: \"Menge\"'\n\nFor the removal of items from the whole process the quantity will be negative\n\nIn a call to the Fiskaly-API this is encoded as a string: \"quantity\": \"10.9814\"",
+                "type": "number",
+                "example": 10.9814,
+                "minimum": -32767,
+                "maximum": 32767,
+                "multipleOf": 0.0001
               },
-              {
-                "type": "null"
+              "text": {
+                "description": "The descriptive text of this item - DSFinV_K: \"Bezeichnung\"'\n\nIn a call to the Fiskaly-API this is encoded as: \"text\": \"Eisbecher “Himbeere“\"",
+                "type": "string",
+                "example": "”Schnitzel ””Wiener Art”””"
+              },
+              "price_per_unit": {
+                "description": "The effective gross price of an item per quantity=1.0, after applying discounts - DSFinV_K: \"Preis\"',\n(= total_gross / quantity, quantity != 0)\nchanging the price or the discounts will cause removal of this item and adding another one with the updated values,\n\nIn a call to the Fiskaly-API this is encoded as a string: \"price_per_unit\": \"20.25\" - 2 decimals always required",
+                "type": "number",
+                "example": 20.25,
+                "minimum": -1000000,
+                "maximum": 1000000,
+                "multipleOf": 0.01
+              },
+              "product": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "format": "uuid",
+                    "description": "The Tillhub product resource reference ID. This is a convinience add on and not required by order-signing",
+                    "example": "43847a66-97dc-4ac2-8e8a-c44920e1f22f"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
               }
-            ]
+            }
           }
+        },
+        {
+          "type": "null"
         }
-      }
+      ]
     }
   }
 }
