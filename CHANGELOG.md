@@ -1,3 +1,10 @@
+# [6.335.0](https://github.com/tillhub/schemas/compare/v6.334.0...v6.335.0) (2024-08-08)
+
+
+### Features
+
+* **custom_properties:** types ([51de677](https://github.com/tillhub/schemas/commit/51de677))
+
 # [6.334.0](https://github.com/tillhub/schemas/compare/v6.333.0...v6.334.0) (2024-08-08)
 
 
