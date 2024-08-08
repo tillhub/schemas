@@ -11292,7 +11292,8 @@
                 "enum": [
                   "string",
                   "number",
-                  "boolean"
+                  "boolean",
+                  "array"
                 ]
               },
               "label": {

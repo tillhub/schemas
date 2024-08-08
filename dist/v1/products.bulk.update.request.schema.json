@@ -2116,9 +2116,6 @@
                     "type": "null"
                   },
                   {
-                    "type": "array"
-                  },
-                  {
                     "type": "string"
                   },
                   {
@@ -2126,6 +2123,22 @@
                   },
                   {
                     "type": "boolean"
+                  },
+                  {
+                    "type": "array",
+                    "items": {
+                      "anyOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "number"
+                        },
+                        {
+                          "type": "boolean"
+                        }
+                      ]
+                    }
                   }
                 ]
               }

@@ -40,7 +40,7 @@
     },
     "timestamp": {
       "description": "The date and time event was received by webhooks service",
-      "example": "2024-08-08T20:48:01.993Z",
+      "example": "2024-08-08T23:33:46.173Z",
       "type": "string",
       "format": "date-time"
     },
@@ -143,9 +143,6 @@
                           "type": "null"
                         },
                         {
-                          "type": "array"
-                        },
-                        {
                           "type": "string"
                         },
                         {
@@ -153,6 +150,22 @@
                         },
                         {
                           "type": "boolean"
+                        },
+                        {
+                          "type": "array",
+                          "items": {
+                            "anyOf": [
+                              {
+                                "type": "string"
+                              },
+                              {
+                                "type": "number"
+                              },
+                              {
+                                "type": "boolean"
+                              }
+                            ]
+                          }
                         }
                       ]
                     }

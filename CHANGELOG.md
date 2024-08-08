@@ -1,3 +1,10 @@
+# [6.336.0](https://github.com/tillhub/schemas/compare/v6.335.0...v6.336.0) (2024-08-08)
+
+
+### Features
+
+* **common:** custom_properties ([c08080b](https://github.com/tillhub/schemas/commit/c08080b))
+
 # [6.335.0](https://github.com/tillhub/schemas/compare/v6.334.0...v6.335.0) (2024-08-08)
 
 
