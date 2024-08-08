@@ -40,7 +40,7 @@
     },
     "timestamp": {
       "description": "The date and time event was received by webhooks service",
-      "example": "2024-08-06T12:43:28.140Z",
+      "example": "2024-08-08T19:05:53.744Z",
       "type": "string",
       "format": "date-time"
     },
@@ -2155,10 +2155,13 @@
               {
                 "type": "object",
                 "additionalProperties": false,
-                "maxProperties": 30,
+                "maxProperties": 50,
                 "patternProperties": {
                   "^.{1,128}$": {
                     "anyOf": [
+                      {
+                        "type": "null"
+                      },
                       {
                         "type": "string"
                       },
@@ -2169,7 +2172,20 @@
                         "type": "boolean"
                       },
                       {
-                        "type": "null"
+                        "type": "array",
+                        "items": {
+                          "anyOf": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "number"
+                            },
+                            {
+                              "type": "boolean"
+                            }
+                          ]
+                        }
                       }
                     ]
                   }
@@ -4274,10 +4290,13 @@
               {
                 "type": "object",
                 "additionalProperties": false,
-                "maxProperties": 30,
+                "maxProperties": 50,
                 "patternProperties": {
                   "^.{1,128}$": {
                     "anyOf": [
+                      {
+                        "type": "null"
+                      },
                       {
                         "type": "string"
                       },
@@ -4288,7 +4307,20 @@
                         "type": "boolean"
                       },
                       {
-                        "type": "null"
+                        "type": "array",
+                        "items": {
+                          "anyOf": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "number"
+                            },
+                            {
+                              "type": "boolean"
+                            }
+                          ]
+                        }
                       }
                     ]
                   }

@@ -1,3 +1,11 @@
+# [6.334.0](https://github.com/tillhub/schemas/compare/v6.333.0...v6.334.0) (2024-08-08)
+
+
+### Features
+
+* **custom_properties:** max ([c247390](https://github.com/tillhub/schemas/commit/c247390))
+* **custom_properties:** pattern ([ccdc84b](https://github.com/tillhub/schemas/commit/ccdc84b))
+
 # [6.333.0](https://github.com/tillhub/schemas/compare/v6.332.0...v6.333.0) (2024-08-06)
 
 

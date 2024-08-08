@@ -11274,7 +11274,7 @@
           "type": "array",
           "$id": "https://schemas.tillhub.com/common/custom_properties.definition.schema.json",
           "additionalProperties": false,
-          "maxItems": 30,
+          "maxItems": 50,
           "items": {
             "type": "object",
             "required": [
