@@ -1,3 +1,10 @@
+# [6.337.0](https://github.com/tillhub/schemas/compare/v6.336.0...v6.337.0) (2024-08-19)
+
+
+### Features
+
+* **transaction:** transaction meta data ([0597e26](https://github.com/tillhub/schemas/commit/0597e26))
+
 # [6.336.0](https://github.com/tillhub/schemas/compare/v6.335.0...v6.336.0) (2024-08-08)
 
 
