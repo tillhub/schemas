@@ -40,7 +40,7 @@
     },
     "timestamp": {
       "description": "The date and time event was received by webhooks service",
-      "example": "2024-08-19T11:16:53.769Z",
+      "example": "2024-08-21T09:39:39.365Z",
       "type": "string",
       "format": "date-time"
     },
@@ -3431,7 +3431,14 @@
                     "description": "Item property changes triggered by a user decision.",
                     "properties": {
                       "tax_switched": {
-                        "type": "boolean"
+                        "oneOf": [
+                          {
+                            "type": "boolean"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
                       },
                       "action": {
                         "oneOf": [
@@ -3439,14 +3446,35 @@
                             "type": "object",
                             "properties": {
                               "tax": {
-                                "type": "string",
-                                "format": "uuid"
+                                "oneOf": [
+                                  {
+                                    "type": "string",
+                                    "format": "uuid"
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ]
                               },
                               "default": {
-                                "type": "boolean"
+                                "oneOf": [
+                                  {
+                                    "type": "boolean"
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ]
                               },
                               "name": {
-                                "type": "string"
+                                "oneOf": [
+                                  {
+                                    "type": "string"
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ]
                               }
                             }
                           },

@@ -1,3 +1,10 @@
+# [6.338.0](https://github.com/tillhub/schemas/compare/v6.337.0...v6.338.0) (2024-08-21)
+
+
+### Features
+
+* **transactions:** cart_item ([ff21d8f](https://github.com/tillhub/schemas/commit/ff21d8f))
+
 # [6.337.0](https://github.com/tillhub/schemas/compare/v6.336.0...v6.337.0) (2024-08-19)
 
 

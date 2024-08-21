@@ -3233,7 +3233,14 @@
                 "description": "Item property changes triggered by a user decision.",
                 "properties": {
                   "tax_switched": {
-                    "type": "boolean"
+                    "oneOf": [
+                      {
+                        "type": "boolean"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
                   },
                   "action": {
                     "oneOf": [
@@ -3241,14 +3248,35 @@
                         "type": "object",
                         "properties": {
                           "tax": {
-                            "type": "string",
-                            "format": "uuid"
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "format": "uuid"
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
                           },
                           "default": {
-                            "type": "boolean"
+                            "oneOf": [
+                              {
+                                "type": "boolean"
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
                           },
                           "name": {
-                            "type": "string"
+                            "oneOf": [
+                              {
+                                "type": "string"
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
                           }
                         }
                       },
