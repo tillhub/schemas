@@ -60,6 +60,298 @@
         }
       ]
     },
+    "options": {
+      "oneOf": [
+        {
+          "description": "Available options for variant parent products",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "description": "Describes a single option with all potential values",
+            "patternProperties": {
+              "^.{1,256}$": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "example": "L"
+                }
+              }
+            },
+            "example": {
+              "Size": [
+                "L",
+                "M",
+                "S"
+              ]
+            }
+          },
+          "examples": [
+            [
+              {
+                "Color": [
+                  "blue",
+                  "green",
+                  "red"
+                ]
+              },
+              {
+                "Size": [
+                  "L",
+                  "M",
+                  "S"
+                ]
+              }
+            ],
+            [
+              {
+                "Keyboard": [
+                  "English",
+                  "French",
+                  "German"
+                ]
+              },
+              {
+                "Memory": [
+                  "8GB",
+                  "16GB",
+                  "32GB"
+                ]
+              },
+              {
+                "Hardrive": [
+                  "512GB",
+                  "1TB",
+                  "2TB"
+                ]
+              }
+            ]
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "children": {
+      "oneOf": [
+        {
+          "description": "Available children for variant parent products",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "description": "Product ressource for full child product",
+                "type": "string",
+                "format": "uuid"
+              },
+              "name": {
+                "oneOf": [
+                  {
+                    "description": "Name of the child product",
+                    "type": "string",
+                    "example": "Shirt S rot"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "custom_id": {
+                "oneOf": [
+                  {
+                    "description": "Product number of the child product",
+                    "type": "string",
+                    "example": "P0000001046TEST280824-1"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "attributes": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "description": "A dictionary <string, string> describing all values for the specific child",
+                    "additionalProperties": false,
+                    "maxProperties": 32,
+                    "patternProperties": {
+                      "^.{1,256}$": {
+                        "type": "string"
+                      }
+                    },
+                    "example": {
+                      "Color": "blue",
+                      "Size": "S"
+                    }
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "images": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "original": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ],
+                        "default": null
+                      },
+                      "1x": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ],
+                        "default": null
+                      },
+                      "2x": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ],
+                        "default": null
+                      },
+                      "3x": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ],
+                        "default": null
+                      },
+                      "lia_1x": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ],
+                        "default": null
+                      },
+                      "lia_2x": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ],
+                        "default": null
+                      },
+                      "lia_3x": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ],
+                        "default": null
+                      },
+                      "square_1x": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ],
+                        "default": null
+                      },
+                      "square_2x": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ],
+                        "default": null
+                      },
+                      "square_3x": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ],
+                        "default": null
+                      },
+                      "avatar": {
+                        "type": "string",
+                        "format": "uri"
+                      }
+                    }
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "barcodes": {
+                "oneOf": [
+                  {
+                    "description": "Product barcodes",
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "maxLength": 1024,
+                      "example": "ABC-abc-1234"
+                    }
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "tags": {
       "anyOf": [
         {

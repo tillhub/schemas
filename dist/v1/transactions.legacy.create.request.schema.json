@@ -4795,7 +4795,7 @@
           "_amount_total": {
             "oneOf": [
               {
-                "description": "Manifesting Legacy: The given amount via this payment, 20.00 EUR or 20.00 HUF respectively (represented as Decimal) - tips are included, change money is not subtracted'\n\nNOTE: The intention to use this without tip and change can not be realized as of 2023.\n\n2023: Equal to '_amount_given' and '_amount_requested'.",
+                "description": "Equals to '_amount_requested' + '_tip_total'.",
                 "type": "number",
                 "minimum": -1000000,
                 "maximum": 1000000,
@@ -4823,7 +4823,7 @@
           "_amount_given": {
             "oneOf": [
               {
-                "description": "The actual over the counter money flow: regardles what needs to\nbe payed e.g. 49.98, but the customer has given 50,00. This\nis usually of interest in cash payments, or when when customers\ngave fewer amount than they ought to pay.\n\n2023: Equal to '_amount_total' and '_amount_requested'.",
+                "description": "The actual over the counter money flow: regardles what needs to\nbe payed e.g. 49.98, but the customer has given 50,00. This\nis usually of interest in cash payments, or when when customers\ngave fewer amount than they ought to pay.\n\nEquals to given amount (requested + tips + change)",
                 "example": "50.00",
                 "type": "number",
                 "minimum": -1000000,
@@ -4838,7 +4838,7 @@
           "_amount_requested": {
             "oneOf": [
               {
-                "description": "The amount that was requested to e.g. a card payment terminal - thus it includes the proposed tip amount.\nSee NOTE!\n\nNOTE: The intention to use this without tip and change can not be realized as of 2023.\n\n2023: Equal to '_amount_total' and '_amount_given'.",
+                "description": "The amount that was requested to e.g. a card payment terminal - thus it includes the proposed tip amount.\n\nEquals to requested amount (tips are not included)",
                 "example": "49.98",
                 "type": "number",
                 "minimum": -1000000,
@@ -4853,7 +4853,7 @@
           "_amount_change": {
             "oneOf": [
               {
-                "description": ".\n\nNOTE: usually NULL - as change is tx top level an should currently not be attributed to a single payment (of potentially many).\n\n2023: Change can be set on a payment ONLY if top level change is agreed to be 0 .",
+                "description": "Equals to change of this payment (change on transaction still has total change for all payments)",
                 "example": "49.98",
                 "type": "number",
                 "minimum": 0,

@@ -1,3 +1,10 @@
+# [6.339.0](https://github.com/tillhub/schemas/compare/v6.338.0...v6.339.0) (2024-09-09)
+
+
+### Features
+
+* **configuration:** split payment feature flag ([adeb0b1](https://github.com/tillhub/schemas/commit/adeb0b1))
+
 # [6.338.0](https://github.com/tillhub/schemas/compare/v6.337.0...v6.338.0) (2024-08-21)
 
 
