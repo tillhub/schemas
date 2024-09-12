@@ -808,6 +808,12 @@
               }
             ]
           },
+          "reminder_notification_enabled": {
+            "description": "The flag indicate whether the customer can receive reminder notification.",
+            "example": "true",
+            "type": "boolean",
+            "default": true
+          },
           "insert_id": {
             "description": "Sequential customer index",
             "type": "integer"
