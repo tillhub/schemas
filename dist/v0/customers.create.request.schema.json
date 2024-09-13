@@ -747,6 +747,12 @@
           "type": "null"
         }
       ]
+    },
+    "reminder_notification_enabled": {
+      "description": "The flag indicate whether the customer can receive reminder notification.",
+      "example": "true",
+      "type": "boolean",
+      "default": true
     }
   }
 }

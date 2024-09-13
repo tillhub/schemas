@@ -1,3 +1,10 @@
+# [6.340.0](https://github.com/tillhub/schemas/compare/v6.339.0...v6.340.0) (2024-09-12)
+
+
+### Features
+
+* **reminder-notification:** add reminder_notification_enabled flag to customers ([#996](https://github.com/tillhub/schemas/issues/996)) ([2dfd154](https://github.com/tillhub/schemas/commit/2dfd154))
+
 # [6.339.0](https://github.com/tillhub/schemas/compare/v6.338.0...v6.339.0) (2024-09-09)
 
 

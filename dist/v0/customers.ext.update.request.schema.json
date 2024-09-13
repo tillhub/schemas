@@ -749,6 +749,12 @@
         }
       ]
     },
+    "reminder_notification_enabled": {
+      "description": "The flag indicate whether the customer can receive reminder notification.",
+      "example": "true",
+      "type": "boolean",
+      "default": true
+    },
     "analytics": {
       "description": "A number of aggregated customer centric analytics data. Usually this data is being compiled at transaction time. Rehydrating data or adding missing data, requires a transaction with this customer.",
       "oneOf": [
