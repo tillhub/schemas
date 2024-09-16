@@ -40,7 +40,7 @@
     },
     "timestamp": {
       "description": "The date and time event was received by webhooks service",
-      "example": "2024-09-12T09:01:51.964Z",
+      "example": "2024-09-16T07:35:25.424Z",
       "type": "string",
       "format": "date-time"
     },
@@ -811,7 +811,7 @@
           ]
         },
         "reminder_notification_enabled": {
-          "description": "The flag indicate whether the customer can receive reminder notification.",
+          "description": "The flag indicate whether the customer can receive reminder notification",
           "example": "true",
           "type": "boolean",
           "default": true

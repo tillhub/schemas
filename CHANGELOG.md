@@ -1,3 +1,10 @@
+## [6.340.1](https://github.com/tillhub/schemas/compare/v6.340.0...v6.340.1) (2024-09-16)
+
+
+### Bug Fixes
+
+* **build:** only trigger ([#1000](https://github.com/tillhub/schemas/issues/1000)) ([5018ebc](https://github.com/tillhub/schemas/commit/5018ebc))
+
 # [6.340.0](https://github.com/tillhub/schemas/compare/v6.339.0...v6.340.0) (2024-09-12)
 
 
