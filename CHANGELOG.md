@@ -1,3 +1,10 @@
+# [6.341.0](https://github.com/tillhub/schemas/compare/v6.340.1...v6.341.0) (2024-09-17)
+
+
+### Features
+
+* **products:** add products selection by custom ids schema ([d51f9cf](https://github.com/tillhub/schemas/commit/d51f9cf))
+
 ## [6.340.1](https://github.com/tillhub/schemas/compare/v6.340.0...v6.340.1) (2024-09-16)
 
 
