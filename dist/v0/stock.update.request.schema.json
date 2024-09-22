@@ -4,7 +4,8 @@
   "additionalProperties": false,
   "type": "object",
   "required": [
-    "qty"
+    "qty",
+    "location"
   ],
   "properties": {
     "qty": {
@@ -74,6 +75,11 @@
           "type": "null"
         }
       ]
+    },
+    "location": {
+      "description": "Alphanumeric uuid of the location, e.g. branch uuid or warehouse uuid",
+      "type": "string",
+      "format": "uuid"
     }
   }
 }

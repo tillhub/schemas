@@ -1,3 +1,10 @@
+## [6.341.1](https://github.com/tillhub/schemas/compare/v6.341.0...v6.341.1) (2024-09-22)
+
+
+### Bug Fixes
+
+* **stock update:** added mandatory location to the schema ([8408202](https://github.com/tillhub/schemas/commit/8408202))
+
 # [6.341.0](https://github.com/tillhub/schemas/compare/v6.340.1...v6.341.0) (2024-09-17)
 
 
