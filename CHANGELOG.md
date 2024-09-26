@@ -1,3 +1,10 @@
+# [6.342.0](https://github.com/tillhub/schemas/compare/v6.341.1...v6.342.0) (2024-09-26)
+
+
+### Features
+
+* **appointment-reminder:** add 'sms_reminder_notification' as a feature flag ([#1005](https://github.com/tillhub/schemas/issues/1005)) ([c07be71](https://github.com/tillhub/schemas/commit/c07be71))
+
 ## [6.341.1](https://github.com/tillhub/schemas/compare/v6.341.0...v6.341.1) (2024-09-22)
 
 

@@ -316,6 +316,10 @@
         "reservations_online_payments": {
           "type": "boolean",
           "default": false
+        },
+        "sms_reminder_notification": {
+          "type": "boolean",
+          "default": false
         }
       }
     },
