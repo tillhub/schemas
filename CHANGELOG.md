@@ -1,3 +1,10 @@
+# [6.343.0](https://github.com/tillhub/schemas/compare/v6.342.0...v6.343.0) (2024-09-30)
+
+
+### Features
+
+* **transactions:** devices ([ee3632a](https://github.com/tillhub/schemas/commit/ee3632a))
+
 # [6.342.0](https://github.com/tillhub/schemas/compare/v6.341.1...v6.342.0) (2024-09-26)
 
 

@@ -40,7 +40,7 @@
     },
     "timestamp": {
       "description": "The date and time event was received by webhooks service",
-      "example": "2024-09-26T08:23:18.638Z",
+      "example": "2024-09-30T23:05:06.158Z",
       "type": "string",
       "format": "date-time"
     },
@@ -2964,8 +2964,32 @@
                           "oneOf": [
                             {
                               "type": "string",
-                              "description": "Application info currently reporting",
+                              "description": "Application currently reporting",
                               "example": "de.tillhub.tillhubstage.dev 1.0:0"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "os_info": {
+                          "oneOf": [
+                            {
+                              "type": "string",
+                              "description": "OS running on device",
+                              "example": "iPadOS 17.4"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "model_info": {
+                          "oneOf": [
+                            {
+                              "type": "string",
+                              "description": "Device hardware",
+                              "example": "Simulator iPad (10th generation)"
                             },
                             {
                               "type": "null"

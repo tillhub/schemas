@@ -459,8 +459,32 @@
                             "oneOf": [
                               {
                                 "type": "string",
-                                "description": "Application info currently reporting",
+                                "description": "Application currently reporting",
                                 "example": "de.tillhub.tillhubstage.dev 1.0:0"
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          },
+                          "os_info": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "description": "OS running on device",
+                                "example": "iPadOS 17.4"
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          },
+                          "model_info": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "description": "Device hardware",
+                                "example": "Simulator iPad (10th generation)"
                               },
                               {
                                 "type": "null"
