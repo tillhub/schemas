@@ -4,49 +4,16 @@
   "additionalProperties": false,
   "type": "object",
   "required": [
-    "qty",
-    "location"
+    "qty"
   ],
   "properties": {
     "qty": {
-      "anyOf": [
-        {
-          "type": "null"
-        },
-        {
-          "type": "number"
-        }
-      ]
-    },
-    "status": {
-      "type": "string",
-      "enum": [
-        "available",
-        "sold",
-        "purchased",
-        "reserved",
-        "transit_outgoing",
-        "transit_incoming",
-        "delivered",
-        "selected"
-      ]
+      "type": "number"
     },
     "metadata": {
       "oneOf": [
         {
           "type": "object"
-        },
-        {
-          "type": "null"
-        }
-      ]
-    },
-    "reasons": {
-      "oneOf": [
-        {
-          "description": "Deprecated property. Use reason instead.",
-          "type": "string",
-          "format": "uuid"
         },
         {
           "type": "null"
@@ -63,23 +30,6 @@
           "type": "null"
         }
       ]
-    },
-    "comments": {
-      "oneOf": [
-        {
-          "type": "string",
-          "minLength": 1,
-          "maxLength": 2048
-        },
-        {
-          "type": "null"
-        }
-      ]
-    },
-    "location": {
-      "description": "Alphanumeric uuid of the location, e.g. branch uuid or warehouse uuid",
-      "type": "string",
-      "format": "uuid"
     }
   }
 }

@@ -1,3 +1,10 @@
+## [6.343.1](https://github.com/tillhub/schemas/compare/v6.343.0...v6.343.1) (2024-10-15)
+
+
+### Bug Fixes
+
+* **stock replace:** adjust schema to new inventory endpoint ([#1006](https://github.com/tillhub/schemas/issues/1006)) ([52a73c9](https://github.com/tillhub/schemas/commit/52a73c9))
+
 # [6.343.0](https://github.com/tillhub/schemas/compare/v6.342.0...v6.343.0) (2024-09-30)
 
 
