@@ -1,3 +1,10 @@
+# [6.345.0](https://github.com/tillhub/schemas/compare/v6.344.0...v6.345.0) (2024-10-16)
+
+
+### Features
+
+* **client-accounts:** Create new feature flag flat pos - UOD-887 ([b66defe](https://github.com/tillhub/schemas/commit/b66defe))
+
 # [6.344.0](https://github.com/tillhub/schemas/compare/v6.343.1...v6.344.0) (2024-10-15)
 
 

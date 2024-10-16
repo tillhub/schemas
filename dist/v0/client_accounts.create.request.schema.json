@@ -320,6 +320,10 @@
         "sms_reminder_notification": {
           "type": "boolean",
           "default": false
+        },
+        "flat_pos": {
+          "type": "boolean",
+          "default": false
         }
       }
     },
