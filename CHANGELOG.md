@@ -1,3 +1,10 @@
+# [6.346.0](https://github.com/tillhub/schemas/compare/v6.345.0...v6.346.0) (2024-10-26)
+
+
+### Features
+
+* **products:** schema for new duplicate endpoint ([#1009](https://github.com/tillhub/schemas/issues/1009)) ([0ece6f2](https://github.com/tillhub/schemas/commit/0ece6f2))
+
 # [6.345.0](https://github.com/tillhub/schemas/compare/v6.344.0...v6.345.0) (2024-10-16)
 
 
