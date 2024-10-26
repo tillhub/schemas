@@ -1,3 +1,10 @@
+# [6.347.0](https://github.com/tillhub/schemas/compare/v6.346.0...v6.347.0) (2024-10-26)
+
+
+### Features
+
+* **products:** product duplication ids greater than 0 ([#1010](https://github.com/tillhub/schemas/issues/1010)) ([ac08384](https://github.com/tillhub/schemas/commit/ac08384))
+
 # [6.346.0](https://github.com/tillhub/schemas/compare/v6.345.0...v6.346.0) (2024-10-26)
 
 
