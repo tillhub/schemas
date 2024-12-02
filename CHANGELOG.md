@@ -1,3 +1,10 @@
+## [6.347.1](https://github.com/tillhub/schemas/compare/v6.347.0...v6.347.1) (2024-12-02)
+
+
+### Bug Fixes
+
+* **configurations:** interfaces ([fbb28ec](https://github.com/tillhub/schemas/commit/fbb28ec))
+
 # [6.347.0](https://github.com/tillhub/schemas/compare/v6.346.0...v6.347.0) (2024-10-26)
 
 
