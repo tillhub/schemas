@@ -1,3 +1,10 @@
+# [6.348.0](https://github.com/tillhub/schemas/compare/v6.347.1...v6.348.0) (2024-12-12)
+
+
+### Features
+
+* **products:** support new bulk create ([#1013](https://github.com/tillhub/schemas/issues/1013)) ([7ce792e](https://github.com/tillhub/schemas/commit/7ce792e))
+
 ## [6.347.1](https://github.com/tillhub/schemas/compare/v6.347.0...v6.347.1) (2024-12-02)
 
 

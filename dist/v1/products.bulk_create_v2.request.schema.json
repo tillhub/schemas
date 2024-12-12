@@ -1,0 +1,2399 @@
+{
+  "$id": "https://schemas.tillhub.com/v1/products.bulk_create_v2.request.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "type": "object",
+  "properties": {
+    "preferUpdate": {
+      "type": "boolean"
+    },
+    "products": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "account",
+          "tax",
+          "type"
+        ],
+        "properties": {
+          "name": {
+            "description": "Product name",
+            "type": "string",
+            "maxLength": 512
+          },
+          "summary": {
+            "description": "Short summary of the product",
+            "oneOf": [
+              {
+                "type": "string",
+                "maxLength": 1024
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "description": {
+            "description": "Long description of a product",
+            "oneOf": [
+              {
+                "type": "string",
+                "maxLength": 16384
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "attributes": {
+            "description": "Arbitrary attributes a product has, that will be displayed in e.g. a sale",
+            "anyOf": [
+              {
+                "type": "object",
+                "description": "A dictionary <string, string> describing all values for one specific variant",
+                "additionalProperties": {
+                  "type": "string"
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "parent": {
+            "description": "Only valid for child products (variant and linked)",
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "options": {
+            "oneOf": [
+              {
+                "description": "Available options for variant parent products",
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "description": "Describes a single option with all potential values",
+                  "patternProperties": {
+                    "^.{1,256}$": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "example": "L"
+                      }
+                    }
+                  },
+                  "example": {
+                    "Size": [
+                      "L",
+                      "M",
+                      "S"
+                    ]
+                  }
+                },
+                "examples": [
+                  [
+                    {
+                      "Color": [
+                        "blue",
+                        "green",
+                        "red"
+                      ]
+                    },
+                    {
+                      "Size": [
+                        "L",
+                        "M",
+                        "S"
+                      ]
+                    }
+                  ],
+                  [
+                    {
+                      "Keyboard": [
+                        "English",
+                        "French",
+                        "German"
+                      ]
+                    },
+                    {
+                      "Memory": [
+                        "8GB",
+                        "16GB",
+                        "32GB"
+                      ]
+                    },
+                    {
+                      "Hardrive": [
+                        "512GB",
+                        "1TB",
+                        "2TB"
+                      ]
+                    }
+                  ]
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "children": {
+            "oneOf": [
+              {
+                "description": "Available children for variant parent products",
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "description": "Product ressource for full child product",
+                      "type": "string",
+                      "format": "uuid"
+                    },
+                    "name": {
+                      "oneOf": [
+                        {
+                          "description": "Name of the child product",
+                          "type": "string",
+                          "example": "Shirt S rot"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "custom_id": {
+                      "oneOf": [
+                        {
+                          "description": "Product number of the child product",
+                          "type": "string",
+                          "example": "P0000001046TEST280824-1"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "attributes": {
+                      "oneOf": [
+                        {
+                          "type": "object",
+                          "description": "A dictionary <string, string> describing all values for the specific child",
+                          "additionalProperties": false,
+                          "maxProperties": 32,
+                          "patternProperties": {
+                            "^.{1,256}$": {
+                              "type": "string"
+                            }
+                          },
+                          "example": {
+                            "Color": "blue",
+                            "Size": "S"
+                          }
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "images": {
+                      "oneOf": [
+                        {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "original": {
+                              "oneOf": [
+                                {
+                                  "type": "string",
+                                  "format": "uri"
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ],
+                              "default": null
+                            },
+                            "1x": {
+                              "oneOf": [
+                                {
+                                  "type": "string",
+                                  "format": "uri"
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ],
+                              "default": null
+                            },
+                            "2x": {
+                              "oneOf": [
+                                {
+                                  "type": "string",
+                                  "format": "uri"
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ],
+                              "default": null
+                            },
+                            "3x": {
+                              "oneOf": [
+                                {
+                                  "type": "string",
+                                  "format": "uri"
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ],
+                              "default": null
+                            },
+                            "lia_1x": {
+                              "oneOf": [
+                                {
+                                  "type": "string",
+                                  "format": "uri"
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ],
+                              "default": null
+                            },
+                            "lia_2x": {
+                              "oneOf": [
+                                {
+                                  "type": "string",
+                                  "format": "uri"
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ],
+                              "default": null
+                            },
+                            "lia_3x": {
+                              "oneOf": [
+                                {
+                                  "type": "string",
+                                  "format": "uri"
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ],
+                              "default": null
+                            },
+                            "square_1x": {
+                              "oneOf": [
+                                {
+                                  "type": "string",
+                                  "format": "uri"
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ],
+                              "default": null
+                            },
+                            "square_2x": {
+                              "oneOf": [
+                                {
+                                  "type": "string",
+                                  "format": "uri"
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ],
+                              "default": null
+                            },
+                            "square_3x": {
+                              "oneOf": [
+                                {
+                                  "type": "string",
+                                  "format": "uri"
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ],
+                              "default": null
+                            },
+                            "avatar": {
+                              "type": "string",
+                              "format": "uri"
+                            }
+                          }
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "barcodes": {
+                      "oneOf": [
+                        {
+                          "description": "Product barcodes",
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "maxLength": 1024,
+                            "example": "ABC-abc-1234"
+                          }
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "tags": {
+            "oneOf": [
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "linked_products": {
+            "description": "Used to store linked_products (existing (can be any type, including `linked` and embedded (`full` product schema)",
+            "anyOf": [
+              {
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "prices": {
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "branch_prices": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "branch": {
+                          "oneOf": [
+                            {
+                              "type": "string",
+                              "format": "uuid"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "prices": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "amount": {
+                                "description": "Either net or gross should be set (not null). Tax will be calculated accordingly automatically. We do not validate for either to be set, for data flexibility reasons.",
+                                "type": "object",
+                                "properties": {
+                                  "net": {
+                                    "oneOf": [
+                                      {
+                                        "example": "27633.02",
+                                        "type": "number",
+                                        "minimum": 0,
+                                        "maximum": 1000000,
+                                        "multipleOf": 0.01
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
+                                  },
+                                  "gross": {
+                                    "oneOf": [
+                                      {
+                                        "example": "27633.02",
+                                        "type": "number",
+                                        "minimum": 0,
+                                        "maximum": 1000000,
+                                        "multipleOf": 0.01
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
+                                  }
+                                }
+                              },
+                              "currency": {
+                                "type": "string",
+                                "minLength": 3,
+                                "maxLength": 3
+                              },
+                              "percentage": {
+                                "description": "DEPRECATED",
+                                "type": "number"
+                              },
+                              "purchase_price": {
+                                "description": "Define the opportunity cost or calculatory base price of this product and currency.",
+                                "oneOf": [
+                                  {
+                                    "example": "27633.02",
+                                    "type": "number",
+                                    "minimum": 0,
+                                    "maximum": 1000000,
+                                    "multipleOf": 0.01
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ]
+                              },
+                              "cost": {
+                                "description": "Define additional cost.",
+                                "oneOf": [
+                                  {
+                                    "example": "27633.02",
+                                    "type": "number",
+                                    "minimum": 0,
+                                    "maximum": 1000000,
+                                    "multipleOf": 0.01
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ]
+                              },
+                              "margin": {
+                                "description": "Add a margin to pruchase_price and cost to result in net.",
+                                "oneOf": [
+                                  {
+                                    "type": "number",
+                                    "multipleOf": 0.0001
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "scaled_prices": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "qty": {
+                          "type": "number"
+                        },
+                        "prices": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "amount": {
+                                "description": "Either net or gross should be set (not null). Tax will be calculated accordingly automatically. We do not validate for either to be set, for data flexibility reasons.",
+                                "type": "object",
+                                "properties": {
+                                  "net": {
+                                    "oneOf": [
+                                      {
+                                        "example": "27633.02",
+                                        "type": "number",
+                                        "minimum": 0,
+                                        "maximum": 1000000,
+                                        "multipleOf": 0.01
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
+                                  },
+                                  "gross": {
+                                    "oneOf": [
+                                      {
+                                        "example": "27633.02",
+                                        "type": "number",
+                                        "minimum": 0,
+                                        "maximum": 1000000,
+                                        "multipleOf": 0.01
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
+                                  }
+                                }
+                              },
+                              "currency": {
+                                "type": "string",
+                                "minLength": 3,
+                                "maxLength": 3
+                              },
+                              "percentage": {
+                                "description": "DEPRECATED",
+                                "type": "number"
+                              },
+                              "purchase_price": {
+                                "description": "Define the opportunity cost or calculatory base price of this product and currency.",
+                                "oneOf": [
+                                  {
+                                    "example": "27633.02",
+                                    "type": "number",
+                                    "minimum": 0,
+                                    "maximum": 1000000,
+                                    "multipleOf": 0.01
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ]
+                              },
+                              "cost": {
+                                "description": "Define additional cost.",
+                                "oneOf": [
+                                  {
+                                    "example": "27633.02",
+                                    "type": "number",
+                                    "minimum": 0,
+                                    "maximum": 1000000,
+                                    "multipleOf": 0.01
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ]
+                              },
+                              "margin": {
+                                "description": "Add a margin to pruchase_price and cost to result in net.",
+                                "oneOf": [
+                                  {
+                                    "type": "number",
+                                    "multipleOf": 0.0001
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "time_based_prices": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "time_range": {
+                          "type": "object",
+                          "properties": {
+                            "start": {
+                              "type": "string",
+                              "format": "date-time"
+                            },
+                            "end": {
+                              "type": "string",
+                              "format": "date-time"
+                            }
+                          },
+                          "required": [
+                            "start",
+                            "end"
+                          ]
+                        },
+                        "prices": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "amount": {
+                                "description": "Either net or gross should be set (not null). Tax will be calculated accordingly automatically. We do not validate for either to be set, for data flexibility reasons.",
+                                "type": "object",
+                                "properties": {
+                                  "net": {
+                                    "oneOf": [
+                                      {
+                                        "example": "27633.02",
+                                        "type": "number",
+                                        "minimum": 0,
+                                        "maximum": 1000000,
+                                        "multipleOf": 0.01
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
+                                  },
+                                  "gross": {
+                                    "oneOf": [
+                                      {
+                                        "example": "27633.02",
+                                        "type": "number",
+                                        "minimum": 0,
+                                        "maximum": 1000000,
+                                        "multipleOf": 0.01
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
+                                  }
+                                }
+                              },
+                              "currency": {
+                                "type": "string",
+                                "minLength": 3,
+                                "maxLength": 3
+                              },
+                              "percentage": {
+                                "description": "DEPRECATED",
+                                "type": "number"
+                              },
+                              "purchase_price": {
+                                "description": "Define the opportunity cost or calculatory base price of this product and currency.",
+                                "oneOf": [
+                                  {
+                                    "example": "27633.02",
+                                    "type": "number",
+                                    "minimum": 0,
+                                    "maximum": 1000000,
+                                    "multipleOf": 0.01
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ]
+                              },
+                              "cost": {
+                                "description": "Define additional cost.",
+                                "oneOf": [
+                                  {
+                                    "example": "27633.02",
+                                    "type": "number",
+                                    "minimum": 0,
+                                    "maximum": 1000000,
+                                    "multipleOf": 0.01
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ]
+                              },
+                              "margin": {
+                                "description": "Add a margin to pruchase_price and cost to result in net.",
+                                "oneOf": [
+                                  {
+                                    "type": "number",
+                                    "multipleOf": 0.0001
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "default_prices": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "amount": {
+                          "description": "Either net or gross should be set (not null). Tax will be calculated accordingly automatically. We do not validate for either to be set, for data flexibility reasons.",
+                          "type": "object",
+                          "properties": {
+                            "net": {
+                              "oneOf": [
+                                {
+                                  "example": "27633.02",
+                                  "type": "number",
+                                  "minimum": 0,
+                                  "maximum": 1000000,
+                                  "multipleOf": 0.01
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "gross": {
+                              "oneOf": [
+                                {
+                                  "example": "27633.02",
+                                  "type": "number",
+                                  "minimum": 0,
+                                  "maximum": 1000000,
+                                  "multipleOf": 0.01
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            }
+                          }
+                        },
+                        "currency": {
+                          "type": "string",
+                          "minLength": 3,
+                          "maxLength": 3
+                        },
+                        "percentage": {
+                          "description": "DEPRECATED",
+                          "type": "number"
+                        },
+                        "purchase_price": {
+                          "description": "Define the opportunity cost or calculatory base price of this product and currency.",
+                          "oneOf": [
+                            {
+                              "example": "27633.02",
+                              "type": "number",
+                              "minimum": 0,
+                              "maximum": 1000000,
+                              "multipleOf": 0.01
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "cost": {
+                          "description": "Define additional cost.",
+                          "oneOf": [
+                            {
+                              "example": "27633.02",
+                              "type": "number",
+                              "minimum": 0,
+                              "maximum": 1000000,
+                              "multipleOf": 0.01
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "margin": {
+                          "description": "Add a margin to pruchase_price and cost to result in net.",
+                          "oneOf": [
+                            {
+                              "type": "number",
+                              "multipleOf": 0.0001
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  }
+                },
+                "required": [
+                  "default_prices"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "barcodes": {
+            "description": "Product barcodes",
+            "anyOf": [
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "maxLength": 1024,
+                  "example": "ABC-abc-1234"
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "barcode": {
+            "description": "Deprecated, use 'barcodes' instead",
+            "deprecated": true,
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "sku": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "stock_minimum": {
+            "oneOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "stock_maximum": {
+            "description": "The maximum resulting qty a location should have after a reorder",
+            "oneOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "reorder_point": {
+            "description": "The stock level that triggers a reorder",
+            "oneOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "reorder_qty": {
+            "description": "The default qty on any reorder",
+            "oneOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "min_stock": {
+            "description": "The minimum stock",
+            "oneOf": [
+              {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "location": {
+                      "description": "Alphanumerical uuid of the location, e.g. branch or warehouse",
+                      "type": "string",
+                      "format": "uuid"
+                    },
+                    "qty": {
+                      "description": "The min stock qty",
+                      "type": "number"
+                    }
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "sellable": {
+            "description": "Define whether a product should be sellable (appears in use cases which assume sale)",
+            "type": "boolean",
+            "default": true
+          },
+          "purchasable": {
+            "description": "Define whether a product should be purchasable (appears in use cases which assume purchase)",
+            "type": "boolean",
+            "default": true
+          },
+          "stockable": {
+            "description": "Define whether to keep track of stock of this product.",
+            "oneOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "discountable": {
+            "description": "Define whether this product can receive a discount during a sale.",
+            "oneOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "linkable": {
+            "description": "Define whether a product should be linkable. NOTE: this will replace the type \"linked\"",
+            "type": "boolean",
+            "default": false
+          },
+          "metadata": {
+            "anyOf": [
+              {
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "audiences": {
+            "anyOf": [
+              {
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "keywords": {
+            "anyOf": [
+              {
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "categories": {
+            "description": "Defines a list of \"Tillhub\" categories, which is list of uuids. The category trees will then determine where it is placed.",
+            "anyOf": [
+              {
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "custom_ids": {
+            "description": "DEPRECATED",
+            "anyOf": [
+              {
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "related_to": {
+            "anyOf": [
+              {
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "similar_to": {
+            "anyOf": [
+              {
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "released_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "purchased_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "produced_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "custom_id": {
+            "description": "The product number",
+            "anyOf": [
+              {
+                "type": "string",
+                "example": "0000000028-000008"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "tax": {
+            "oneOf": [
+              {
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "taxes_options": {
+            "anyOf": [
+              {
+                "type": "array"
+              },
+              {
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "season": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "seasons": {
+            "anyOf": [
+              {
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "account": {
+            "oneOf": [
+              {
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "vat_class": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "category": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "brand": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "takeaway_tax": {
+            "oneOf": [
+              {
+                "description": "The reference to the takeaway tax rate to use it for calculation instead of the regular tax during takeaway checkout process",
+                "type": "string",
+                "format": "uuid",
+                "example": "4936a0c4-d266-4950-9c4d-03c5207ccf96"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "takeaway_account": {
+            "oneOf": [
+              {
+                "description": "The reference to the takeaway revenue account to use it instead of the regular revenue account during takeaway checkout process",
+                "type": "string",
+                "format": "uuid",
+                "example": "921ec83d-c08b-411a-96d8-355f354d790d"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "active": {
+            "type": "boolean",
+            "default": true
+          },
+          "deleted": {
+            "type": "boolean",
+            "default": false
+          },
+          "type": {
+            "type": "string",
+            "description": "variant of a product (product|voucher) or a parent (variant_product|linked_product|composed_product) or a child (variant|linked) where child has \"parent\" property containing the ID of a parent product or a special product for tipping (tip_owner|tip_employee)",
+            "enum": [
+              "product",
+              "composed_product",
+              "voucher",
+              "linked",
+              "linked_product",
+              "variant",
+              "variant_product",
+              "tip_owner",
+              "tip_employee"
+            ]
+          },
+          "manufacturer": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "iln": {
+                    "oneOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": ""
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "supplier": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "sku": {
+                    "oneOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": ""
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "locations": {
+            "oneOf": [
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "branch_groups": {
+            "oneOf": [
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "condition": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "images": {
+            "oneOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "original": {
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "format": "uri"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
+                  "1x": {
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "format": "uri"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
+                  "2x": {
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "format": "uri"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
+                  "3x": {
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "format": "uri"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
+                  "lia_1x": {
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "format": "uri"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
+                  "lia_2x": {
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "format": "uri"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
+                  "lia_3x": {
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "format": "uri"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
+                  "square_1x": {
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "format": "uri"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
+                  "square_2x": {
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "format": "uri"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
+                  "square_3x": {
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "format": "uri"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
+                  "avatar": {
+                    "type": "string",
+                    "format": "uri"
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "insert_id": {
+            "type": "integer"
+          },
+          "product_group": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "delegated_to": {
+            "anyOf": [
+              {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "client_id": {
+            "description": "A client definable ID for the purpose of syncing to a client or used in analytics for e.g. transactions that created a product offline and done transactions offline before they received a backend ID.",
+            "oneOf": [
+              {
+                "type": "string",
+                "maxLength": 128
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "external_reference_id": {
+            "description": "A caller defined custom ID for the purpose of syncing from external resources, or to use in analytics.",
+            "oneOf": [
+              {
+                "type": "string",
+                "maxLength": 128
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "default_tile_color": {
+            "description": "Color to be displayed when no image is set.",
+            "oneOf": [
+              {
+                "type": "string",
+                "maxLength": 10
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "codes": {
+            "oneOf": [
+              {
+                "description": "Deprecated, use 'barcodes' instead",
+                "type": "array",
+                "deprecated": true,
+                "additionalProperties": false,
+                "items": {
+                  "anyOf": [
+                    {
+                      "type": "object",
+                      "required": [
+                        "data",
+                        "type"
+                      ],
+                      "additionalProperties": false,
+                      "properties": {
+                        "data": {
+                          "oneOf": [
+                            {
+                              "type": "string",
+                              "maxLength": 16384
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "caption": {
+                          "oneOf": [
+                            {
+                              "type": "string",
+                              "maxLength": 512
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "type": {
+                          "type": "string",
+                          "enum": [
+                            "qr"
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "data",
+                        "type"
+                      ],
+                      "additionalProperties": false,
+                      "properties": {
+                        "data": {
+                          "oneOf": [
+                            {
+                              "type": "string",
+                              "maxLength": 64
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "caption": {
+                          "oneOf": [
+                            {
+                              "type": "string",
+                              "maxLength": 512
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "type": {
+                          "type": "string",
+                          "enum": [
+                            "code128"
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "data",
+                        "type"
+                      ],
+                      "additionalProperties": false,
+                      "properties": {
+                        "data": {
+                          "oneOf": [
+                            {
+                              "type": "string",
+                              "minLength": 12,
+                              "maxLength": 3832
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "caption": {
+                          "oneOf": [
+                            {
+                              "type": "string",
+                              "maxLength": 512
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "type": {
+                          "type": "string",
+                          "enum": [
+                            "aztec"
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "data",
+                        "type"
+                      ],
+                      "additionalProperties": false,
+                      "properties": {
+                        "data": {
+                          "oneOf": [
+                            {
+                              "type": "string",
+                              "minLength": 13,
+                              "maxLength": 13
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "caption": {
+                          "oneOf": [
+                            {
+                              "type": "string",
+                              "maxLength": 512
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "type": {
+                          "type": "string",
+                          "enum": [
+                            "ean13"
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "data",
+                        "type"
+                      ],
+                      "additionalProperties": false,
+                      "properties": {
+                        "data": {
+                          "oneOf": [
+                            {
+                              "type": "string",
+                              "minLength": 8,
+                              "maxLength": 8
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "caption": {
+                          "oneOf": [
+                            {
+                              "type": "string",
+                              "maxLength": 512
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "type": {
+                          "type": "string",
+                          "enum": [
+                            "ean8"
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "data",
+                        "type"
+                      ],
+                      "additionalProperties": false,
+                      "properties": {
+                        "data": {
+                          "oneOf": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "caption": {
+                          "oneOf": [
+                            {
+                              "type": "string",
+                              "maxLength": 512
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "type": {
+                          "type": "string",
+                          "enum": [
+                            "unknown"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "stock_mode": {
+            "oneOf": [
+              {
+                "type": "string",
+                "description": "determines if stock configurations are handled on global client level or on individual product level",
+                "enum": [
+                  "simple",
+                  "complex"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "stock_configuration_location": {
+            "oneOf": [
+              {
+                "type": "object",
+                "required": [
+                  "location",
+                  "qty",
+                  "location_type"
+                ],
+                "properties": {
+                  "location": {
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  "qty": {
+                    "type": "number"
+                  },
+                  "location_type": {
+                    "anyOf": [
+                      {
+                        "description": "Location type",
+                        "type": "string",
+                        "enum": [
+                          "client",
+                          "branch",
+                          "warehouse",
+                          "warehouse_shelf"
+                        ]
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "is_service": {
+            "type": "boolean"
+          },
+          "service_questions": {
+            "oneOf": [
+              {
+                "type": "array",
+                "description": "An array of uuids of the products service questions",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "service_question_groups": {
+            "oneOf": [
+              {
+                "type": "array",
+                "description": "An array of uuids of the products service question groups",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "addon_groups": {
+            "oneOf": [
+              {
+                "type": "array",
+                "description": "An array of uuids of the product addon groups",
+                "items": {
+                  "type": "string",
+                  "format": "uuid",
+                  "example": "66c3a88d-1825-4eb6-a1ad-1691140cf140"
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "configuration": {
+            "description": "Defines various product behaviours.",
+            "default": {
+              "allow_zero_prices": true,
+              "pricing": {
+                "allow_is_free": false
+              }
+            },
+            "anyOf": [
+              {
+                "type": "object",
+                "additionalProperties": true,
+                "properties": {
+                  "external_rewards": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "description": "Can grant external rewards when added to a cart.\n\nNOTE: Should be used sparsely for special campign products that require barcode scanning as sort of campaign activator.\nShould be used for products that are bound to specific branch groups.\nThese products will be currently visible to anyone as there is no dedicated type planned (Summer 2023).",
+                        "additionalProperties": true,
+                        "properties": {
+                          "coop": {
+                            "oneOf": [
+                              {
+                                "type": "object",
+                                "description": "Can grant Coop rewards when added to a cart.",
+                                "properties": {
+                                  "campaign": {
+                                    "oneOf": [
+                                      {
+                                        "type": "object",
+                                        "description": "Can grant Coop campaign rewards when part of an active cart.",
+                                        "properties": {
+                                          "name": {
+                                            "description": "Name of the campaign",
+                                            "type": "string",
+                                            "example": "Super Summer",
+                                            "minLength": 2,
+                                            "maxLength": 128
+                                          },
+                                          "multiplier": {
+                                            "type": "integer",
+                                            "description": "Superpoint multiplier on cart total",
+                                            "minimum": 1,
+                                            "maximum": 100,
+                                            "default": 1
+                                          },
+                                          "date_start": {
+                                            "oneOf": [
+                                              {
+                                                "type": "string",
+                                                "format": "date-time",
+                                                "example": "2023-08-04 12:00:21.165+00",
+                                                "description": "Start date of the campaign",
+                                                "default": null
+                                              },
+                                              {
+                                                "type": "null"
+                                              }
+                                            ]
+                                          },
+                                          "date_end": {
+                                            "oneOf": [
+                                              {
+                                                "type": "string",
+                                                "format": "date-time",
+                                                "example": "2023-10-23 16:51:29.143+00",
+                                                "description": "End date of the campaign",
+                                                "default": null
+                                              },
+                                              {
+                                                "type": "null"
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
+                                  }
+                                }
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "allow_zero_prices": {
+                    "deprecated": true,
+                    "description": "Allow adding this product to a cart if it has no price.",
+                    "type": "boolean"
+                  },
+                  "pricing": {
+                    "type": "object",
+                    "properties": {
+                      "allow_is_free": {
+                        "deprecated": true,
+                        "description": "If an eligible price is 0 define whether the user is prompted to enter a price or whether the price can stay 0, to essentially be a freebie.",
+                        "type": "boolean"
+                      },
+                      "request_input": {
+                        "type": "boolean",
+                        "default": false,
+                        "description": "If true, request cashier input - regardless of the current price value, but pre-filled with it.\n\nNOTE: If false and price is 0 - adds item with 0 price automatically."
+                      },
+                      "zero_input_allowed": {
+                        "type": "boolean",
+                        "default": false,
+                        "description": "Defines whether a requested price input can be confirmed with a zero value or not.\n\nNOTE: Does not affect any zero price behavior directly, just the input validation when 'request_input'=true."
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "loyalty_values": {
+            "oneOf": [
+              {
+                "type": "array",
+                "description": "The amount of loyalty values that a customer receives per product. They will be used then the loyalty system specifies \"lookup\" as a base in the value configurations. The unit is also determined in the loyalty system configurations.",
+                "minItems": 1,
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "unit",
+                    "amount"
+                  ],
+                  "properties": {
+                    "unit": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 64,
+                      "examples": [
+                        "miles",
+                        "points",
+                        "EUR",
+                        "USD"
+                      ]
+                    },
+                    "amount": {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 1000000,
+                      "multipleOf": 0.01
+                    }
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "manufacturers": {
+            "oneOf": [
+              {
+                "type": "array",
+                "description": "An array of uuids of the product manufacturers",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "components": {
+            "description": "An array of components for composed product (the type is \"composed_product\")",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "product",
+                "quantity"
+              ],
+              "properties": {
+                "product": {
+                  "description": "Linked product UUID which is a component of composed product",
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "quantity": {
+                  "description": "The quantity of component in a composed product",
+                  "type": "number",
+                  "minimum": 0
+                }
+              }
+            }
+          },
+          "delegatable": {
+            "description": "Define whether the product can be delegated to other users at all.",
+            "oneOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "online": {
+            "description": "Define whether this product and it's children (if not specified otherwise) are available online.",
+            "default": false,
+            "oneOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "serial_number_input_required": {
+            "oneOf": [
+              {
+                "description": "Define whether a product requires to enter a serial number during the sale",
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": false
+          },
+          "shipping_required": {
+            "description": "Define whether this item requires shipping. This usually the case except for digital goods. Tax and tax splits may apply based on region.",
+            "default": true,
+            "oneOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "delegatable_to": {
+            "oneOf": [
+              {
+                "type": "array",
+                "description": "List of other (sub)users that are allowed to read this product. If it is \"null\" then the product can be read by any of the validated (sub)users.",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "type",
+                    "value"
+                  ],
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "description": "Type of the user, that indicates in which table to look up",
+                      "enum": [
+                        "client_account"
+                      ]
+                    },
+                    "value": {
+                      "type": "string",
+                      "description": "Alphanumeric uuid of the user",
+                      "format": "uuid"
+                    }
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "delegated_from": {
+            "oneOf": [
+              {
+                "type": "object",
+                "description": "When the product was cloned from another account's product, the origin/owner should be listed here.",
+                "additionalProperties": false,
+                "required": [
+                  "owner",
+                  "product"
+                ],
+                "properties": {
+                  "owner": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "type",
+                      "value"
+                    ],
+                    "properties": {
+                      "type": {
+                        "type": "string",
+                        "description": "Type of the user from whom the product was cloned",
+                        "enum": [
+                          "client_account"
+                        ]
+                      },
+                      "value": {
+                        "type": "string",
+                        "description": "Alphanumeric uuid of the user from whom the product was cloned",
+                        "format": "uuid"
+                      }
+                    }
+                  },
+                  "product": {
+                    "type": "string",
+                    "description": "Alphanumeric uuid of the original product from whom it was cloned",
+                    "format": "uuid"
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "warranty_notice": {
+            "description": "Warranty notice for the customer",
+            "oneOf": [
+              {
+                "type": "string",
+                "maxLength": 16384
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "refund_policy": {
+            "description": "Refund policy for the customer",
+            "oneOf": [
+              {
+                "type": "string",
+                "maxLength": 16384
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "disclaimer": {
+            "description": "Any disclaimer for the customer",
+            "oneOf": [
+              {
+                "type": "string",
+                "maxLength": 16384
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "policy": {
+            "description": "ACL / permissions for this product",
+            "oneOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "v0",
+                  "statements"
+                ],
+                "properties": {
+                  "version": {
+                    "type": "string",
+                    "enum": [
+                      "v0"
+                    ]
+                  },
+                  "statements": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "effect"
+                      ],
+                      "properties": {
+                        "effect": {
+                          "type": "string",
+                          "enum": [
+                            "allow",
+                            "deny"
+                          ]
+                        },
+                        "resource_type": {
+                          "type": "string",
+                          "enum": [
+                            "register",
+                            "branch",
+                            "branch_group",
+                            "location",
+                            "client_account",
+                            "client",
+                            "staff",
+                            "user"
+                          ]
+                        },
+                        "resource": {
+                          "type": "string",
+                          "maxLength": 64,
+                          "minLength": 16
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "external_ids": {
+            "oneOf": [
+              {
+                "description": "The product IDs given by external systems, e.g. Ecwid.",
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "store_front": {
+                      "description": "external storeFront id",
+                      "oneOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "description": "uuid format for legacy reasons, knowing that the previous type contains it eitherway.",
+                          "type": "string",
+                          "format": "uuid"
+                        }
+                      ]
+                    },
+                    "product_id": {
+                      "description": "the product ID given by external system, e.g. Ecwid",
+                      "oneOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "number"
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "custom_properties": {
+            "oneOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "maxProperties": 50,
+                "patternProperties": {
+                  "^.{1,128}$": {
+                    "anyOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "number"
+                      },
+                      {
+                        "type": "boolean"
+                      },
+                      {
+                        "type": "array",
+                        "items": {
+                          "anyOf": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "number"
+                            },
+                            {
+                              "type": "boolean"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          "business_partners": {
+            "oneOf": [
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}
