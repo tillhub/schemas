@@ -1,3 +1,10 @@
+## [6.349.1](https://github.com/tillhub/schemas/compare/v6.349.0...v6.349.1) (2025-01-07)
+
+
+### Bug Fixes
+
+* **bulk import:** keep initial stock configuration location as is ([#1018](https://github.com/tillhub/schemas/issues/1018)) ([d45cee3](https://github.com/tillhub/schemas/commit/d45cee3))
+
 # [6.349.0](https://github.com/tillhub/schemas/compare/v6.348.0...v6.349.0) (2024-12-16)
 
 
