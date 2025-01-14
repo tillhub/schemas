@@ -40,7 +40,7 @@
     },
     "timestamp": {
       "description": "The date and time event was received by webhooks service",
-      "example": "2025-01-07T07:52:54.364Z",
+      "example": "2025-01-14T16:30:15.912Z",
       "type": "string",
       "format": "date-time"
     },
@@ -1014,7 +1014,7 @@
                       {
                         "type": "object",
                         "example": "{\"amount\": 666.7, \"currency\": \"CHF\"}",
-                        "description": "Describes a non-negative monetary value in a specific currency.",
+                        "description": "Describes a monetary value in a specific currency.",
                         "additionalProperties": false,
                         "required": [
                           "amount",
@@ -1032,7 +1032,6 @@
                             "type": "number",
                             "description": "The value as .2-Decimal.",
                             "example": "47.02",
-                            "minimum": 0,
                             "multipleOf": 0.01
                           }
                         }
@@ -1047,7 +1046,7 @@
                       {
                         "type": "object",
                         "example": "{\"amount\": 634.96, \"currency\": \"CHF\"}",
-                        "description": "Describes a non-negative monetary value in a specific currency.",
+                        "description": "Describes a monetary value in a specific currency.",
                         "additionalProperties": false,
                         "required": [
                           "amount",
@@ -1065,7 +1064,6 @@
                             "type": "number",
                             "description": "The value as .2-Decimal.",
                             "example": "47.02",
-                            "minimum": 0,
                             "multipleOf": 0.01
                           }
                         }
@@ -1500,7 +1498,7 @@
                     {
                       "type": "object",
                       "additionalProperties": false,
-                      "description": "Describes a non-negative monetary value in a specific currency.",
+                      "description": "Describes a monetary value in a specific currency.",
                       "required": [
                         "amount",
                         "currency"
@@ -1517,7 +1515,6 @@
                           "type": "number",
                           "description": "The value as .2-Decimal.",
                           "example": "47.02",
-                          "minimum": 0,
                           "multipleOf": 0.01
                         }
                       }
@@ -1571,7 +1568,7 @@
                             "maximum": 5000
                           },
                           "amount": {
-                            "description": "Describes a non-negative monetary value in a specific currency.",
+                            "description": "Describes a monetary value in a specific currency.",
                             "type": "object",
                             "additionalProperties": false,
                             "required": [
@@ -1590,7 +1587,6 @@
                                 "type": "number",
                                 "description": "The value as .2-Decimal.",
                                 "example": "47.02",
-                                "minimum": 0,
                                 "multipleOf": 0.01
                               }
                             }
@@ -1631,7 +1627,7 @@
                             "maximum": 5000
                           },
                           "amount": {
-                            "description": "Describes a non-negative monetary value in a specific currency.",
+                            "description": "Describes a monetary value in a specific currency.",
                             "type": "object",
                             "additionalProperties": false,
                             "required": [
@@ -1650,7 +1646,6 @@
                                 "type": "number",
                                 "description": "The value as .2-Decimal.",
                                 "example": "47.02",
-                                "minimum": 0,
                                 "multipleOf": 0.01
                               }
                             }
@@ -1764,7 +1759,7 @@
                 "revenue_gross": {
                   "oneOf": [
                     {
-                      "description": "Describes a non-negative monetary value in a specific currency.",
+                      "description": "Describes a monetary value in a specific currency.",
                       "type": "object",
                       "additionalProperties": false,
                       "required": [
@@ -1783,7 +1778,6 @@
                           "type": "number",
                           "description": "The value as .2-Decimal.",
                           "example": "47.02",
-                          "minimum": 0,
                           "multipleOf": 0.01
                         }
                       }
@@ -1796,7 +1790,7 @@
                 "revenue_net": {
                   "oneOf": [
                     {
-                      "description": "Describes a non-negative monetary value in a specific currency.",
+                      "description": "Describes a monetary value in a specific currency.",
                       "type": "object",
                       "additionalProperties": false,
                       "required": [
@@ -1815,7 +1809,6 @@
                           "type": "number",
                           "description": "The value as .2-Decimal.",
                           "example": "47.02",
-                          "minimum": 0,
                           "multipleOf": 0.01
                         }
                       }
@@ -1828,7 +1821,7 @@
                 "average_amount_gross_per_cart": {
                   "oneOf": [
                     {
-                      "description": "Describes a non-negative monetary value in a specific currency.",
+                      "description": "Describes a monetary value in a specific currency.",
                       "type": "object",
                       "additionalProperties": false,
                       "required": [
@@ -1847,7 +1840,6 @@
                           "type": "number",
                           "description": "The value as .2-Decimal.",
                           "example": "47.02",
-                          "minimum": 0,
                           "multipleOf": 0.01
                         }
                       }
@@ -1909,7 +1901,7 @@
                 "discount_amount": {
                   "oneOf": [
                     {
-                      "description": "Describes a non-negative monetary value in a specific currency.",
+                      "description": "Describes a monetary value in a specific currency.",
                       "type": "object",
                       "additionalProperties": false,
                       "required": [
@@ -1928,7 +1920,6 @@
                           "type": "number",
                           "description": "The value as .2-Decimal.",
                           "example": "47.02",
-                          "minimum": 0,
                           "multipleOf": 0.01
                         }
                       }
@@ -1941,7 +1932,7 @@
                 "voucher_amount": {
                   "oneOf": [
                     {
-                      "description": "Describes a non-negative monetary value in a specific currency.",
+                      "description": "Describes a monetary value in a specific currency.",
                       "type": "object",
                       "additionalProperties": false,
                       "required": [
@@ -1960,7 +1951,6 @@
                           "type": "number",
                           "description": "The value as .2-Decimal.",
                           "example": "47.02",
-                          "minimum": 0,
                           "multipleOf": 0.01
                         }
                       }
@@ -2016,7 +2006,7 @@
                         "revenue_gross": {
                           "oneOf": [
                             {
-                              "description": "Describes a non-negative monetary value in a specific currency.",
+                              "description": "Describes a monetary value in a specific currency.",
                               "type": "object",
                               "additionalProperties": false,
                               "required": [
@@ -2035,7 +2025,6 @@
                                   "type": "number",
                                   "description": "The value as .2-Decimal.",
                                   "example": "47.02",
-                                  "minimum": 0,
                                   "multipleOf": 0.01
                                 }
                               }
@@ -2048,7 +2037,7 @@
                         "revenue_net": {
                           "oneOf": [
                             {
-                              "description": "Describes a non-negative monetary value in a specific currency.",
+                              "description": "Describes a monetary value in a specific currency.",
                               "type": "object",
                               "additionalProperties": false,
                               "required": [
@@ -2067,7 +2056,6 @@
                                   "type": "number",
                                   "description": "The value as .2-Decimal.",
                                   "example": "47.02",
-                                  "minimum": 0,
                                   "multipleOf": 0.01
                                 }
                               }
@@ -2123,7 +2111,7 @@
                 "expense_amount_excluding_bank": {
                   "oneOf": [
                     {
-                      "description": "Describes a non-negative monetary value in a specific currency.",
+                      "description": "Describes a monetary value in a specific currency.",
                       "type": "object",
                       "additionalProperties": false,
                       "required": [
@@ -2142,7 +2130,6 @@
                           "type": "number",
                           "description": "The value as .2-Decimal.",
                           "example": "47.02",
-                          "minimum": 0,
                           "multipleOf": 0.01
                         }
                       }
@@ -2155,7 +2142,7 @@
                 "deposit_amount_excluding_bank": {
                   "oneOf": [
                     {
-                      "description": "Describes a non-negative monetary value in a specific currency.",
+                      "description": "Describes a monetary value in a specific currency.",
                       "type": "object",
                       "additionalProperties": false,
                       "required": [
@@ -2174,7 +2161,6 @@
                           "type": "number",
                           "description": "The value as .2-Decimal.",
                           "example": "47.02",
-                          "minimum": 0,
                           "multipleOf": 0.01
                         }
                       }
@@ -2199,7 +2185,7 @@
                 "refund_net": {
                   "oneOf": [
                     {
-                      "description": "Describes a non-negative monetary value in a specific currency.",
+                      "description": "Describes a monetary value in a specific currency.",
                       "type": "object",
                       "additionalProperties": false,
                       "required": [
@@ -2218,7 +2204,6 @@
                           "type": "number",
                           "description": "The value as .2-Decimal.",
                           "example": "47.02",
-                          "minimum": 0,
                           "multipleOf": 0.01
                         }
                       }
@@ -2231,7 +2216,7 @@
                 "refund_gross": {
                   "oneOf": [
                     {
-                      "description": "Describes a non-negative monetary value in a specific currency.",
+                      "description": "Describes a monetary value in a specific currency.",
                       "type": "object",
                       "additionalProperties": false,
                       "required": [
@@ -2250,7 +2235,6 @@
                           "type": "number",
                           "description": "The value as .2-Decimal.",
                           "example": "47.02",
-                          "minimum": 0,
                           "multipleOf": 0.01
                         }
                       }
@@ -2306,7 +2290,7 @@
                           "sales": {
                             "oneOf": [
                               {
-                                "description": "Describes a non-negative monetary value in a specific currency.",
+                                "description": "Describes a monetary value in a specific currency.",
                                 "type": "object",
                                 "additionalProperties": false,
                                 "required": [
@@ -2325,7 +2309,6 @@
                                     "type": "number",
                                     "description": "The value as .2-Decimal.",
                                     "example": "47.02",
-                                    "minimum": 0,
                                     "multipleOf": 0.01
                                   }
                                 }
@@ -2338,7 +2321,7 @@
                           "change": {
                             "oneOf": [
                               {
-                                "description": "Describes a non-negative monetary value in a specific currency.",
+                                "description": "Describes a monetary value in a specific currency.",
                                 "type": "object",
                                 "additionalProperties": false,
                                 "required": [
@@ -2357,7 +2340,6 @@
                                     "type": "number",
                                     "description": "The value as .2-Decimal.",
                                     "example": "47.02",
-                                    "minimum": 0,
                                     "multipleOf": 0.01
                                   }
                                 }
@@ -2370,7 +2352,7 @@
                           "cash_payments": {
                             "oneOf": [
                               {
-                                "description": "Describes a non-negative monetary value in a specific currency.",
+                                "description": "Describes a monetary value in a specific currency.",
                                 "type": "object",
                                 "additionalProperties": false,
                                 "required": [
@@ -2389,7 +2371,6 @@
                                     "type": "number",
                                     "description": "The value as .2-Decimal.",
                                     "example": "47.02",
-                                    "minimum": 0,
                                     "multipleOf": 0.01
                                   }
                                 }
@@ -2402,7 +2383,7 @@
                           "expenses": {
                             "oneOf": [
                               {
-                                "description": "Describes a non-negative monetary value in a specific currency.",
+                                "description": "Describes a monetary value in a specific currency.",
                                 "type": "object",
                                 "additionalProperties": false,
                                 "required": [
@@ -2421,7 +2402,6 @@
                                     "type": "number",
                                     "description": "The value as .2-Decimal.",
                                     "example": "47.02",
-                                    "minimum": 0,
                                     "multipleOf": 0.01
                                   }
                                 }
@@ -2434,7 +2414,7 @@
                           "cash_balance": {
                             "oneOf": [
                               {
-                                "description": "Describes a non-negative monetary value in a specific currency.",
+                                "description": "Describes a monetary value in a specific currency.",
                                 "type": "object",
                                 "additionalProperties": false,
                                 "required": [
@@ -2453,7 +2433,6 @@
                                     "type": "number",
                                     "description": "The value as .2-Decimal.",
                                     "example": "47.02",
-                                    "minimum": 0,
                                     "multipleOf": 0.01
                                   }
                                 }
@@ -2466,7 +2445,7 @@
                           "non_cash_payments": {
                             "oneOf": [
                               {
-                                "description": "Describes a non-negative monetary value in a specific currency.",
+                                "description": "Describes a monetary value in a specific currency.",
                                 "type": "object",
                                 "additionalProperties": false,
                                 "required": [
@@ -2485,7 +2464,6 @@
                                     "type": "number",
                                     "description": "The value as .2-Decimal.",
                                     "example": "47.02",
-                                    "minimum": 0,
                                     "multipleOf": 0.01
                                   }
                                 }
@@ -2498,7 +2476,7 @@
                           "tips_total": {
                             "oneOf": [
                               {
-                                "description": "Describes a non-negative monetary value in a specific currency.",
+                                "description": "Describes a monetary value in a specific currency.",
                                 "type": "object",
                                 "additionalProperties": false,
                                 "required": [
@@ -2517,7 +2495,6 @@
                                     "type": "number",
                                     "description": "The value as .2-Decimal.",
                                     "example": "47.02",
-                                    "minimum": 0,
                                     "multipleOf": 0.01
                                   }
                                 }
@@ -2530,7 +2507,7 @@
                           "tips_cash": {
                             "oneOf": [
                               {
-                                "description": "Describes a non-negative monetary value in a specific currency.",
+                                "description": "Describes a monetary value in a specific currency.",
                                 "type": "object",
                                 "additionalProperties": false,
                                 "required": [
@@ -2549,7 +2526,6 @@
                                     "type": "number",
                                     "description": "The value as .2-Decimal.",
                                     "example": "47.02",
-                                    "minimum": 0,
                                     "multipleOf": 0.01
                                   }
                                 }
@@ -2562,7 +2538,7 @@
                           "tips_balance": {
                             "oneOf": [
                               {
-                                "description": "Describes a non-negative monetary value in a specific currency.",
+                                "description": "Describes a monetary value in a specific currency.",
                                 "type": "object",
                                 "additionalProperties": false,
                                 "required": [
@@ -2581,7 +2557,6 @@
                                     "type": "number",
                                     "description": "The value as .2-Decimal.",
                                     "example": "47.02",
-                                    "minimum": 0,
                                     "multipleOf": 0.01
                                   }
                                 }
@@ -2645,7 +2620,7 @@
                                     "amount_given": {
                                       "oneOf": [
                                         {
-                                          "description": "Describes a non-negative monetary value in a specific currency.",
+                                          "description": "Describes a monetary value in a specific currency.",
                                           "type": "object",
                                           "additionalProperties": false,
                                           "required": [
@@ -2664,7 +2639,6 @@
                                               "type": "number",
                                               "description": "The value as .2-Decimal.",
                                               "example": "47.02",
-                                              "minimum": 0,
                                               "multipleOf": 0.01
                                             }
                                           }
@@ -2677,7 +2651,7 @@
                                     "amount": {
                                       "oneOf": [
                                         {
-                                          "description": "Describes a non-negative monetary value in a specific currency.",
+                                          "description": "Describes a monetary value in a specific currency.",
                                           "type": "object",
                                           "additionalProperties": false,
                                           "required": [
@@ -2696,7 +2670,6 @@
                                               "type": "number",
                                               "description": "The value as .2-Decimal.",
                                               "example": "47.02",
-                                              "minimum": 0,
                                               "multipleOf": 0.01
                                             }
                                           }
@@ -2709,7 +2682,7 @@
                                     "amount_tip": {
                                       "oneOf": [
                                         {
-                                          "description": "Describes a non-negative monetary value in a specific currency.",
+                                          "description": "Describes a monetary value in a specific currency.",
                                           "type": "object",
                                           "additionalProperties": false,
                                           "required": [
@@ -2728,7 +2701,6 @@
                                               "type": "number",
                                               "description": "The value as .2-Decimal.",
                                               "example": "47.02",
-                                              "minimum": 0,
                                               "multipleOf": 0.01
                                             }
                                           }
@@ -2799,7 +2771,7 @@
                     {
                       "type": "object",
                       "additionalProperties": false,
-                      "description": "Describes a non-negative monetary value in a specific currency.",
+                      "description": "Describes a monetary value in a specific currency.",
                       "required": [
                         "amount",
                         "currency"
@@ -2816,7 +2788,6 @@
                           "type": "number",
                           "description": "The value as .2-Decimal.",
                           "example": "47.02",
-                          "minimum": 0,
                           "multipleOf": 0.01
                         }
                       }
@@ -2995,6 +2966,32 @@
                               "type": "null"
                             }
                           ]
+                        },
+                        "user": {
+                          "oneOf": [
+                            {
+                              "type": "string",
+                              "description": "Login email of the user",
+                              "format": "email",
+                              "example": "m@n.de"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "sub_user": {
+                          "oneOf": [
+                            {
+                              "type": "string",
+                              "description": "Login email of the sub-user",
+                              "format": "email",
+                              "example": "m@n.de"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
                         }
                       }
                     },
@@ -3020,7 +3017,7 @@
                 "outstanding_total": {
                   "oneOf": [
                     {
-                      "description": "Describes a non-negative monetary value in a specific currency.",
+                      "description": "Describes a monetary value in a specific currency.",
                       "type": "object",
                       "additionalProperties": false,
                       "required": [
@@ -3039,7 +3036,6 @@
                           "type": "number",
                           "description": "The value as .2-Decimal.",
                           "example": "47.02",
-                          "minimum": 0,
                           "multipleOf": 0.01
                         }
                       }
@@ -3071,7 +3067,7 @@
                           "outstanding": {
                             "oneOf": [
                               {
-                                "description": "Describes a non-negative monetary value in a specific currency.",
+                                "description": "Describes a monetary value in a specific currency.",
                                 "type": "object",
                                 "additionalProperties": false,
                                 "required": [
@@ -3090,7 +3086,6 @@
                                     "type": "number",
                                     "description": "The value as .2-Decimal.",
                                     "example": "47.02",
-                                    "minimum": 0,
                                     "multipleOf": 0.01
                                   }
                                 }

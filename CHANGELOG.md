@@ -1,3 +1,15 @@
+# [6.350.0](https://github.com/tillhub/schemas/compare/v6.349.1...v6.350.0) (2025-01-14)
+
+
+### Bug Fixes
+
+* **common:** device_info ([94540cc](https://github.com/tillhub/schemas/commit/94540cc))
+
+
+### Features
+
+* **validation:** avoid 422s ([#1015](https://github.com/tillhub/schemas/issues/1015)) ([cfd6e42](https://github.com/tillhub/schemas/commit/cfd6e42))
+
 ## [6.349.1](https://github.com/tillhub/schemas/compare/v6.349.0...v6.349.1) (2025-01-07)
 
 
