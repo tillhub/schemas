@@ -1,3 +1,10 @@
+# [6.351.0](https://github.com/tillhub/schemas/compare/v6.350.0...v6.351.0) (2025-01-16)
+
+
+### Features
+
+* **products:** gross price checking ([#1021](https://github.com/tillhub/schemas/issues/1021)) ([9b462d7](https://github.com/tillhub/schemas/commit/9b462d7))
+
 # [6.350.0](https://github.com/tillhub/schemas/compare/v6.349.1...v6.350.0) (2025-01-14)
 
 
