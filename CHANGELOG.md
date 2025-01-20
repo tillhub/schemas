@@ -1,3 +1,10 @@
+# [6.352.0](https://github.com/tillhub/schemas/compare/v6.351.0...v6.352.0) (2025-01-20)
+
+
+### Features
+
+* **gastro:** crreated schema for gastro order locks ([#1022](https://github.com/tillhub/schemas/issues/1022)) ([aa2267f](https://github.com/tillhub/schemas/commit/aa2267f))
+
 # [6.351.0](https://github.com/tillhub/schemas/compare/v6.350.0...v6.351.0) (2025-01-16)
 
 
