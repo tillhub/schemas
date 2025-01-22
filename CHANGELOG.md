@@ -1,3 +1,10 @@
+# [6.353.0](https://github.com/tillhub/schemas/compare/v6.352.0...v6.353.0) (2025-01-22)
+
+
+### Features
+
+* **orders:** allow orders without items ([7ed11ae](https://github.com/tillhub/schemas/commit/7ed11ae))
+
 # [6.352.0](https://github.com/tillhub/schemas/compare/v6.351.0...v6.352.0) (2025-01-20)
 
 
