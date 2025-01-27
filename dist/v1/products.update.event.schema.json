@@ -40,7 +40,7 @@
     },
     "timestamp": {
       "description": "The date and time event was received by webhooks service",
-      "example": "2025-01-07T07:52:54.392Z",
+      "example": "2025-01-22T09:47:35.884Z",
       "type": "string",
       "format": "date-time"
     },
@@ -1318,6 +1318,18 @@
                     "default": ""
                   }
                 }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "supplier_code": {
+            "oneOf": [
+              {
+                "description": "The supplier code for the product",
+                "type": "string",
+                "example": "ATV4300123"
               },
               {
                 "type": "null"
@@ -3738,6 +3750,18 @@
                     "default": ""
                   }
                 }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "supplier_code": {
+            "oneOf": [
+              {
+                "description": "The supplier code for the product",
+                "type": "string",
+                "example": "ATV4300123"
               },
               {
                 "type": "null"

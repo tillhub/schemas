@@ -1,0 +1,51 @@
+{
+  "$id": "https://schemas.tillhub.com/v1/gastro_orders.locks.upsert.response.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "register_id",
+    "branch_id",
+    "cashier_id",
+    "order_date",
+    "expires_at",
+    "status",
+    "revision"
+  ],
+  "properties": {
+    "order_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "register_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "branch_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "cashier_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "order_date": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "expires_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "locked",
+        "unlocked"
+      ]
+    },
+    "revision": {
+      "type": "integer"
+    }
+  }
+}

@@ -1,3 +1,36 @@
+# [6.353.0](https://github.com/tillhub/schemas/compare/v6.352.0...v6.353.0) (2025-01-22)
+
+
+### Features
+
+* **orders:** allow orders without items ([7ed11ae](https://github.com/tillhub/schemas/commit/7ed11ae))
+
+# [6.352.0](https://github.com/tillhub/schemas/compare/v6.351.0...v6.352.0) (2025-01-20)
+
+
+### Features
+
+* **gastro:** crreated schema for gastro order locks ([#1022](https://github.com/tillhub/schemas/issues/1022)) ([aa2267f](https://github.com/tillhub/schemas/commit/aa2267f))
+
+# [6.351.0](https://github.com/tillhub/schemas/compare/v6.350.0...v6.351.0) (2025-01-16)
+
+
+### Features
+
+* **products:** gross price checking ([#1021](https://github.com/tillhub/schemas/issues/1021)) ([9b462d7](https://github.com/tillhub/schemas/commit/9b462d7))
+
+# [6.350.0](https://github.com/tillhub/schemas/compare/v6.349.1...v6.350.0) (2025-01-14)
+
+
+### Bug Fixes
+
+* **common:** device_info ([94540cc](https://github.com/tillhub/schemas/commit/94540cc))
+
+
+### Features
+
+* **validation:** avoid 422s ([#1015](https://github.com/tillhub/schemas/issues/1015)) ([cfd6e42](https://github.com/tillhub/schemas/commit/cfd6e42))
+
 ## [6.349.1](https://github.com/tillhub/schemas/compare/v6.349.0...v6.349.1) (2025-01-07)
 
 

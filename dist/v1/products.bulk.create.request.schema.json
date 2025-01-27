@@ -1269,6 +1269,18 @@
           }
         ]
       },
+      "supplier_code": {
+        "oneOf": [
+          {
+            "description": "The supplier code for the product",
+            "type": "string",
+            "example": "ATV4300123"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
       "locations": {
         "oneOf": [
           {

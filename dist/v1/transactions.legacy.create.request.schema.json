@@ -366,6 +366,32 @@
                           "type": "null"
                         }
                       ]
+                    },
+                    "user": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "description": "Login email of the user",
+                          "format": "email",
+                          "example": "m@n.de"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "sub_user": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "description": "Login email of the sub-user",
+                          "format": "email",
+                          "example": "m@n.de"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
                     }
                   }
                 },

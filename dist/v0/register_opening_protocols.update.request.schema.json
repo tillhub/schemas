@@ -893,7 +893,7 @@
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "description": "Describes a non-negative monetary value in a specific currency.",
+        "description": "Describes a monetary value in a specific currency.",
         "required": [
           "amount",
           "currency"
@@ -910,7 +910,6 @@
             "type": "number",
             "description": "The value as .2-Decimal.",
             "example": "47.02",
-            "minimum": 0,
             "multipleOf": 0.01
           }
         }
@@ -922,7 +921,7 @@
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "description": "Describes a non-negative monetary value in a specific currency.",
+        "description": "Describes a monetary value in a specific currency.",
         "required": [
           "amount",
           "currency"
@@ -939,7 +938,6 @@
             "type": "number",
             "description": "The value as .2-Decimal.",
             "example": "47.02",
-            "minimum": 0,
             "multipleOf": 0.01
           }
         }
@@ -996,7 +994,7 @@
           "items": {
             "type": "object",
             "additionalProperties": false,
-            "description": "Describes a non-negative monetary value in a specific currency.",
+            "description": "Describes a monetary value in a specific currency.",
             "required": [
               "amount",
               "currency"
@@ -1013,7 +1011,6 @@
                 "type": "number",
                 "description": "The value as .2-Decimal.",
                 "example": "47.02",
-                "minimum": 0,
                 "multipleOf": 0.01
               }
             }
