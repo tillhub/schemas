@@ -1,0 +1,34 @@
+{
+  "$id": "https://schemas.tillhub.com/v0/table_layout.update.request.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "type": "object",
+  "required": [],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "location": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "tables_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "active": {
+      "type": "boolean",
+      "default": true
+    },
+    "layout": {
+      "type": "object",
+      "additionalProperties": true,
+      "default": {}
+    }
+  }
+}
