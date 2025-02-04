@@ -350,987 +350,910 @@
             ]
           },
           "items": {
-            "type": "array",
-            "minItems": 0,
-            "maxItems": 300,
-            "items": {
-              "anyOf": [
-                {
-                  "additionalProperties": false,
-                  "type": "object",
-                  "properties": {
-                    "product": {
-                      "description": "Identifier of the product",
-                      "example": "cd0a2886-e245-4ed9-a758-443e7e5b3a3f",
-                      "type": "string",
-                      "format": "uuid"
-                    },
-                    "product_supplier_name": {
-                      "description": "Custom identifier for the product's supplier",
-                      "example": "00555kff34323",
-                      "oneOf": [
-                        {
-                          "type": "string",
-                          "maxLength": 128
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ]
-                    },
-                    "is_service": {
-                      "description": "If true, this item represents a service and might come with answers to service questions",
-                      "oneOf": [
-                        {
-                          "type": "boolean",
-                          "default": false
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ]
-                    },
-                    "discountable": {
-                      "description": "Supports correct discount behavior without product lookup",
-                      "oneOf": [
-                        {
-                          "type": "boolean"
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ]
-                    },
-                    "qty": {
-                      "description": "Product quantity in the cart",
-                      "example": 2,
-                      "type": "number"
-                    },
-                    "custom_id": {
-                      "description": "Custom cart item ID",
-                      "oneOf": [
-                        {
-                          "type": "string",
-                          "maxLength": 128
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ]
-                    },
-                    "vat_rate": {
-                      "description": "VAT rate in the range 0-1. Required when \"tax\" value is not present. The only one active VAT with the same rate must be defined in the system (does not apply when \"tax\" value is present)",
-                      "example": 0.12,
-                      "type": "number",
-                      "minimum": 0,
-                      "maximum": 1
-                    },
-                    "vat_rate_class": {
-                      "description": "Rate class from 'taxes.rate_class' according to international standards, used in Germany to map types for e.g. fiscalization",
-                      "default": "normal",
-                      "oneOf": [
-                        {
-                          "type": "string",
-                          "enum": [
-                            "normal",
-                            "reduced",
-                            "super_reduced"
-                          ]
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ]
-                    },
-                    "currency": {
-                      "description": "Currency symbol",
-                      "example": "EUR",
-                      "type": "string",
-                      "minLength": 3,
-                      "maxLength": 3
-                    },
-                    "amount": {
-                      "description": "The gross/net input price per quantity of 1.0 and before any discounts",
-                      "type": "object",
+            "oneOf": [
+              {
+                "type": "array",
+                "minItems": 0,
+                "maxItems": 300,
+                "items": {
+                  "anyOf": [
+                    {
                       "additionalProperties": false,
-                      "anyOf": [
-                        {
-                          "required": [
-                            "net",
-                            "gross"
-                          ]
-                        },
-                        {
-                          "required": [
-                            "net"
-                          ]
-                        },
-                        {
-                          "required": [
-                            "gross"
-                          ]
-                        }
-                      ],
+                      "type": "object",
                       "properties": {
-                        "net": {
-                          "description": "A monetary value as .2Decimal excluding taxes, $10 = 10.00",
-                          "type": "number",
-                          "minimum": -1000000,
-                          "maximum": 1000000,
-                          "multipleOf": 0.01
+                        "product": {
+                          "description": "Identifier of the product",
+                          "example": "cd0a2886-e245-4ed9-a758-443e7e5b3a3f",
+                          "type": "string",
+                          "format": "uuid"
                         },
-                        "gross": {
-                          "description": "A monetary value as .2Decimal including taxes, 10€ = 10.00",
-                          "type": "number",
-                          "minimum": -1000000,
-                          "maximum": 1000000,
-                          "multipleOf": 0.01
-                        }
-                      }
-                    },
-                    "promotion_amount": {
-                      "oneOf": [
-                        {
-                          "description": "The promotion amount on the per unit qty base of 1.",
-                          "type": "number",
-                          "minimum": -1000000,
-                          "maximum": 1000000,
-                          "multipleOf": 0.01
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ]
-                    },
-                    "promotion_amount_total": {
-                      "oneOf": [
-                        {
-                          "description": "The total promotion amount.",
-                          "type": "number",
-                          "minimum": -1000000,
-                          "maximum": 1000000,
-                          "multipleOf": 0.01
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ]
-                    },
-                    "product_service_answers": {
-                      "oneOf": [
-                        {
-                          "type": "array",
-                          "description": "A list of answers to product service questions",
-                          "items": {
-                            "type": "object",
-                            "description": "Answer to a product service question",
-                            "additionalProperties": false,
-                            "required": [
-                              "id",
-                              "type",
-                              "content_type"
-                            ],
-                            "properties": {
-                              "id": {
-                                "type": "string",
-                                "format": "uuid",
-                                "example": "1d53f799-c24f-49e3-b68f-93ae5fc69921",
-                                "description": "A Tillhub product question resource identifier."
-                              },
-                              "question": {
-                                "type": "string",
-                                "maxLength": 1024,
-                                "example": "Which colour is used?",
-                                "description": "The associated Tillhub product question 'content' field."
-                              },
-                              "type": {
-                                "type": "string",
-                                "description": "The required layout type of the answer",
-                                "enum": [
-                                  "checkbox",
-                                  "free_text_input",
-                                  "simple_select",
-                                  "number_input_plus_optional_unit_select"
-                                ]
-                              },
-                              "content_type": {
-                                "type": "string",
-                                "description": "The required content type of the answer",
-                                "enum": [
-                                  "string",
-                                  "boolean",
-                                  "number"
-                                ]
-                              },
-                              "required": {
-                                "description": "If true, the answer is mandatory",
-                                "oneOf": [
-                                  {
-                                    "type": "boolean",
-                                    "default": false
-                                  },
-                                  {
-                                    "type": "null"
-                                  }
-                                ],
-                                "default": null
-                              },
-                              "answer": {
-                                "description": "The answer content of a product service question",
-                                "oneOf": [
-                                  {
-                                    "type": "object",
-                                    "additionalProperties": false,
-                                    "required": [
-                                      "content"
-                                    ],
-                                    "properties": {
-                                      "content": {
-                                        "oneOf": [
-                                          {
-                                            "type": "number",
-                                            "description": "If 'number_input_plus_optional_unit_select', this field contains the inputted numerical value."
-                                          },
-                                          {
-                                            "type": "boolean",
-                                            "description": "If 'checkbox', this field contains the selcetd boolean value."
-                                          },
-                                          {
-                                            "type": "string",
-                                            "description": "If 'free_text_input' or 'simple_select', this field contains the inputted text."
-                                          },
-                                          {
-                                            "type": "null"
-                                          }
-                                        ]
-                                      },
-                                      "unit": {
-                                        "oneOf": [
-                                          {
-                                            "type": "string",
-                                            "maxLength": 128,
-                                            "example": "ml",
-                                            "description": "If 'number_input_plus_optional_unit_select', this field contains the selected unit."
-                                          },
-                                          {
-                                            "type": "null"
-                                          }
-                                        ],
-                                        "default": null
-                                      }
-                                    }
-                                  },
-                                  {
-                                    "type": "null"
-                                  }
-                                ],
-                                "default": null
-                              }
+                        "product_supplier_name": {
+                          "description": "Custom identifier for the product's supplier",
+                          "example": "00555kff34323",
+                          "oneOf": [
+                            {
+                              "type": "string",
+                              "maxLength": 128
+                            },
+                            {
+                              "type": "null"
                             }
-                          }
+                          ]
                         },
-                        {
-                          "type": "null"
-                        }
-                      ]
-                    },
-                    "is_voucher": {
-                      "description": "If true, this item represents a voucher and must come with voucher information in 'voucher'",
-                      "default": false,
-                      "oneOf": [
-                        {
-                          "type": "boolean"
+                        "is_service": {
+                          "description": "If true, this item represents a service and might come with answers to service questions",
+                          "oneOf": [
+                            {
+                              "type": "boolean",
+                              "default": false
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
                         },
-                        {
-                          "type": "null"
-                        }
-                      ]
-                    },
-                    "voucher": {
-                      "oneOf": [
-                        {
-                          "description": "The effective voucher delta record for this item (thus reversable if needed)",
-                          "additionalProperties": false,
+                        "discountable": {
+                          "description": "Supports correct discount behavior without product lookup",
+                          "oneOf": [
+                            {
+                              "type": "boolean"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "qty": {
+                          "description": "Product quantity in the cart",
+                          "example": 2,
+                          "type": "number"
+                        },
+                        "custom_id": {
+                          "description": "Custom cart item ID",
+                          "oneOf": [
+                            {
+                              "type": "string",
+                              "maxLength": 128
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "vat_rate": {
+                          "description": "VAT rate in the range 0-1. Required when \"tax\" value is not present. The only one active VAT with the same rate must be defined in the system (does not apply when \"tax\" value is present)",
+                          "example": 0.12,
+                          "type": "number",
+                          "minimum": 0,
+                          "maximum": 1
+                        },
+                        "vat_rate_class": {
+                          "description": "Rate class from 'taxes.rate_class' according to international standards, used in Germany to map types for e.g. fiscalization",
+                          "default": "normal",
+                          "oneOf": [
+                            {
+                              "type": "string",
+                              "enum": [
+                                "normal",
+                                "reduced",
+                                "super_reduced"
+                              ]
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "currency": {
+                          "description": "Currency symbol",
+                          "example": "EUR",
+                          "type": "string",
+                          "minLength": 3,
+                          "maxLength": 3
+                        },
+                        "amount": {
+                          "description": "The gross/net input price per quantity of 1.0 and before any discounts",
                           "type": "object",
+                          "additionalProperties": false,
+                          "anyOf": [
+                            {
+                              "required": [
+                                "net",
+                                "gross"
+                              ]
+                            },
+                            {
+                              "required": [
+                                "net"
+                              ]
+                            },
+                            {
+                              "required": [
+                                "gross"
+                              ]
+                            }
+                          ],
                           "properties": {
-                            "client_id": {
-                              "type": "string",
-                              "example": "d0d40841-b1a7-438a-9d1e-2bfec590d2e3",
-                              "minLength": 6,
-                              "maxLength": 64,
-                              "description": "A implementer defined identifier. This can be used for local resource matching and has no business implication. TO BE DEPRECTAED."
-                            },
-                            "source_id": {
-                              "type": "string",
-                              "example": "d0d40841-b1a7-438a-9d1e-2bfec590d2e3",
-                              "minLength": 6,
-                              "maxLength": 64,
-                              "description": "The Tillhub or Fleurop Id of the source voucher."
-                            },
-                            "delta_amount": {
-                              "description": "The effective change in the value of the voucher or it's creation amount $1.37 = 1.37.",
+                            "net": {
+                              "description": "A monetary value as .2Decimal excluding taxes, $10 = 10.00",
                               "type": "number",
                               "minimum": -1000000,
                               "maximum": 1000000,
                               "multipleOf": 0.01
                             },
-                            "delta_currency": {
-                              "type": "string",
-                              "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
-                              "example": "EUR",
-                              "minLength": 3,
-                              "maxLength": 3
-                            },
-                            "barcode": {
-                              "default": null,
-                              "type": "string",
-                              "minLength": 3,
-                              "maxLength": 128,
-                              "description": "Voucher EAN or similar."
-                            },
-                            "code": {
-                              "default": null,
-                              "type": "string",
-                              "minLength": 3,
-                              "maxLength": 128,
-                              "description": "Voucher number."
-                            },
-                            "system": {
-                              "type": "string",
-                              "format": "uuid",
-                              "example": "AB3847a66-97dc-4ac2-8e8a-c44920e1f22f",
-                              "description": "Voucher system used."
-                            },
-                            "external": {
-                              "description": "Make this voucher to follow external logic",
-                              "type": "boolean",
-                              "default": false
-                            },
-                            "external_system_type": {
-                              "description": "Define which voucher API implementation to follow",
-                              "oneOf": [
-                                {
-                                  "type": "string",
-                                  "enum": [
-                                    "tillhub-voucher-api",
-                                    "fleurop",
-                                    "zalando"
-                                  ]
-                                },
-                                {
-                                  "type": "null"
-                                }
-                              ]
-                            },
-                            "external_system_id": {
-                              "description": "Define here whether this voucher system is an external one and which ID it references at the provider. E.g. a Tillhub Account can talk to another one, but permissions and this reference need to be set.",
-                              "default": null,
-                              "oneOf": [
-                                {
-                                  "description": "Replace own accountId with external_system_id in requests when external=true, i.e. /vouchers/external_system_id/voucher_id. If external=false use accountId as usual, i.e. /vouchers/accountId/voucher_id",
-                                  "type": "string",
-                                  "maxLength": 128,
-                                  "example": "0023903408"
-                                },
-                                {
-                                  "type": "null"
-                                }
-                              ]
-                            },
-                            "external_voucher_system_id": {
-                              "description": "If using a parent's voucher system, this is the voucher system id of the delegating parent. external_voucher_system_id is to be sent in requests as a query parameter, whenever external_system_id (instead of the own accountId) is used in the url, e.g. vouchers/{external_system_id}/lookup?code=xyz123&system={external_voucher_system_id}.",
-                              "default": null,
-                              "oneOf": [
-                                {
-                                  "description": "Additional parameter for external voucher systems, e.g. Fleurop Voucher Type specifier or id inside external system",
-                                  "type": "string",
-                                  "maxLength": 128,
-                                  "example": "0023903408"
-                                },
-                                {
-                                  "type": "null"
-                                }
-                              ]
-                            },
-                            "action": {
-                              "type": "string",
-                              "format": "uuid",
-                              "example": "CD847a66-97dc-4ac2-8e8a-c44920e1f22f",
-                              "description": "Voucher system's action used."
-                            },
-                            "action_type": {
-                              "type": "string",
-                              "enum": [
-                                "increment",
-                                "decrement",
-                                "create"
-                              ],
-                              "description": "Voucher system's action type used."
-                            },
-                            "template": {
-                              "oneOf": [
-                                {
-                                  "default": null,
-                                  "type": "string",
-                                  "format": "uuid",
-                                  "description": "If action_type is 'create' - a reference to the voucher template used",
-                                  "example": "43847a66-97dc-4ac2-8e8a-c44920e1f22f"
-                                },
-                                {
-                                  "type": "null"
-                                }
-                              ]
-                            },
-                            "title": {
-                              "oneOf": [
-                                {
-                                  "default": null,
-                                  "type": "string",
-                                  "maxLength": 256,
-                                  "description": "Title of the source voucher."
-                                },
-                                {
-                                  "type": "null"
-                                }
-                              ]
-                            },
-                            "message": {
-                              "default": null,
-                              "type": "string",
-                              "maxLength": 2048,
-                              "description": "Messages from voucher processing."
-                            },
-                            "creation": {
-                              "oneOf": [
-                                {
-                                  "type": "object",
-                                  "description": "Client specified container to store created abocards and/or vouchers."
-                                },
-                                {
-                                  "type": "null"
-                                }
-                              ]
-                            },
-                            "type": {
-                              "type": "string",
-                              "description": "Mainly legacy support for Fleurop flows.",
-                              "enum": [
-                                "undefined",
-                                "fleurop_redeem",
-                                "fleurop_sell_or_recharge",
-                                "fleurop_own_branded_recharge",
-                                "fleurop_own_branded_redeem",
-                                "fleurop_externa_sell_and_activate",
-                                "tillhub_create",
-                                "tillhub_recharge",
-                                "tillhub_reedeem",
-                                "tillhub_percentage",
-                                "tillhub_product",
-                                "tillhub_abocard_sell"
-                              ]
-                            },
-                            "status": {
-                              "type": "string",
-                              "description": "Client side recorded booking state of the delta operation.",
-                              "enum": [
-                                "unknown",
-                                "pending",
-                                "locked",
-                                "succeed",
-                                "failed",
-                                "scheduled"
-                              ]
+                            "gross": {
+                              "description": "A monetary value as .2Decimal including taxes, 10€ = 10.00",
+                              "type": "number",
+                              "minimum": -1000000,
+                              "maximum": 1000000,
+                              "multipleOf": 0.01
                             }
-                          },
-                          "required": [
-                            "client_id",
-                            "source_id",
-                            "api",
-                            "delta_amount",
-                            "delta_currency",
-                            "system",
-                            "type",
-                            "status"
+                          }
+                        },
+                        "promotion_amount": {
+                          "oneOf": [
+                            {
+                              "description": "The promotion amount on the per unit qty base of 1.",
+                              "type": "number",
+                              "minimum": -1000000,
+                              "maximum": 1000000,
+                              "multipleOf": 0.01
+                            },
+                            {
+                              "type": "null"
+                            }
                           ]
                         },
-                        {
-                          "type": "null"
-                        }
-                      ],
-                      "default": null
-                    },
-                    "is_refund": {
-                      "description": "If true, the item was created by (partially) refunding a previous sale.",
-                      "oneOf": [
-                        {
-                          "type": "boolean"
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ]
-                    },
-                    "return_reason": {
-                      "oneOf": [
-                        {
-                          "type": "object",
-                          "description": "Information about a returned item.",
-                          "properties": {
-                            "id": {
-                              "oneOf": [
-                                {
-                                  "type": "string",
-                                  "format": "uuid",
-                                  "example": "9d110eb2-2245-4e14-9574-49b502f3a9b3",
-                                  "description": "The associated Tillhub reason resource."
-                                },
-                                {
-                                  "type": "null"
-                                }
-                              ],
-                              "default": null
+                        "promotion_amount_total": {
+                          "oneOf": [
+                            {
+                              "description": "The total promotion amount.",
+                              "type": "number",
+                              "minimum": -1000000,
+                              "maximum": 1000000,
+                              "multipleOf": 0.01
                             },
-                            "reason": {
-                              "oneOf": [
-                                {
-                                  "type": "string",
-                                  "maxLength": 64,
-                                  "example": "Accidental Charge",
-                                  "description": "The  Tillhub reason resource's name."
-                                },
-                                {
-                                  "type": "null"
-                                }
-                              ],
-                              "default": null
-                            },
-                            "description": {
-                              "oneOf": [
-                                {
-                                  "type": "string",
-                                  "maxLength": 1024,
-                                  "example": "Accidentally charged the customer for products he did not buy",
-                                  "description": "The  Tillhub reason resource's description."
-                                },
-                                {
-                                  "type": "null"
-                                }
-                              ],
-                              "default": null
-                            },
-                            "custom_reason": {
-                              "oneOf": [
-                                {
-                                  "type": "string",
-                                  "maxLength": 1024,
-                                  "example": "Cashier entered here a custom reason.",
-                                  "description": "A client side user defined custom description for this return process."
-                                },
-                                {
-                                  "type": "null"
-                                }
-                              ],
-                              "default": null
-                            },
-                            "behavior": {
-                              "oneOf": [
-                                {
-                                  "type": "object",
-                                  "description": "Copy of the behavior object from the reasons table.",
-                                  "properties": {
-                                    "stock": {
-                                      "type": "string",
-                                      "enum": [
-                                        "restock"
-                                      ]
-                                    },
-                                    "stock_location": {
-                                      "type": "string",
-                                      "enum": [
-                                        "current"
-                                      ]
-                                    },
-                                    "navigation": {
-                                      "type": "string",
-                                      "enum": [
-                                        "payment_view",
-                                        "carts",
-                                        "ask"
-                                      ]
-                                    }
-                                  }
-                                },
-                                {
-                                  "type": "null"
-                                }
-                              ]
+                            {
+                              "type": "null"
                             }
-                          }
+                          ]
                         },
-                        {
-                          "type": "null"
-                        }
-                      ],
-                      "default": null
-                    },
-                    "attributes_description": {
-                      "description": "A short description of the child attributes in variant products",
-                      "example": "red | big | 32",
-                      "oneOf": [
-                        {
-                          "type": "string"
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ]
-                    },
-                    "reference_cartitem_client_id": {
-                      "description": "In cases of refund or cancellation, or invoicing a delivery note or selling a saved cart: the client_id of the origin item",
-                      "example": "01331B44-130B-45D4-97A7-401247FD5B68",
-                      "oneOf": [
-                        {
-                          "type": "string"
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ]
-                    },
-                    "used_barcode": {
-                      "description": "The barcode used to trigger putting this item into the cart (defaults to the first available barcode from the product)",
-                      "example": "0E9761310XF",
-                      "oneOf": [
-                        {
-                          "type": "string"
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ]
-                    },
-                    "name": {
-                      "description": "Cart item display name",
-                      "type": "string",
-                      "minLength": 1,
-                      "maxLength": 128
-                    },
-                    "position": {
-                      "description": "Cart item position",
-                      "type": "number",
-                      "minimum": 0
-                    },
-                    "comments": {
-                      "description": "Additional comments",
-                      "anyOf": [
-                        {
-                          "type": "string",
-                          "maxLength": 4096
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ],
-                      "default": null
-                    },
-                    "client_id": {
-                      "type": "string",
-                      "maxLength": 128
-                    },
-                    "external_reference_id": {
-                      "oneOf": [
-                        {
-                          "type": "string",
-                          "example": "823742686434462376376376473647346",
-                          "maxLength": 128,
-                          "description": "Any identifier a user wants to store in the transaction system. E.g. an ID in a thirdy party ERP."
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ]
-                    },
-                    "custom_properties": {
-                      "oneOf": [
-                        {
-                          "type": "null"
-                        },
-                        {
-                          "type": "object",
-                          "additionalProperties": false,
-                          "maxProperties": 50,
-                          "patternProperties": {
-                            "^.{1,128}$": {
-                              "anyOf": [
-                                {
-                                  "type": "null"
-                                },
-                                {
-                                  "type": "string"
-                                },
-                                {
-                                  "type": "number"
-                                },
-                                {
-                                  "type": "boolean"
-                                },
-                                {
-                                  "type": "array",
-                                  "items": {
-                                    "anyOf": [
-                                      {
-                                        "type": "string"
-                                      },
-                                      {
-                                        "type": "number"
-                                      },
-                                      {
-                                        "type": "boolean"
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        }
-                      ]
-                    },
-                    "salesman_staff": {
-                      "description": "Staff person ID",
-                      "example": "68722313-4077-42eb-8cc2-bf3359940efc",
-                      "oneOf": [
-                        {
-                          "type": "string",
-                          "format": "uuid"
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ]
-                    },
-                    "tax": {
-                      "description": "Tax rate ID. If not present, the \"vat_rate\" must be present. The active tax with such ID must be defined in the system",
-                      "type": "string",
-                      "format": "uuid"
-                    },
-                    "account": {
-                      "description": "Account ID",
-                      "type": "string",
-                      "format": "uuid"
-                    },
-                    "account_number": {
-                      "description": "Account number. The only one active account with the same number must be defined in the system (does not apply when \"account\" value is present)",
-                      "oneOf": [
-                        {
-                          "type": "string"
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ]
-                    },
-                    "product_group": {
-                      "description": "Product group ID",
-                      "oneOf": [
-                        {
-                          "type": "string",
-                          "format": "uuid"
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ]
-                    },
-                    "addons": {
-                      "oneOf": [
-                        {
-                          "description": "The list of applied addons",
-                          "type": "array",
-                          "items": {
-                            "type": "object",
-                            "additionalProperties": false,
-                            "description": "Any applied addons as they happened at transaction creation time.",
-                            "properties": {
-                              "addon": {
-                                "type": "string",
-                                "format": "uuid",
-                                "description": "The Tillhub addon resource reference ID.",
-                                "example": "ac847a66-d7dc-4ac2-8e8a-c44920e1f220"
-                              },
-                              "product": {
-                                "oneOf": [
-                                  {
+                        "product_service_answers": {
+                          "oneOf": [
+                            {
+                              "type": "array",
+                              "description": "A list of answers to product service questions",
+                              "items": {
+                                "type": "object",
+                                "description": "Answer to a product service question",
+                                "additionalProperties": false,
+                                "required": [
+                                  "id",
+                                  "type",
+                                  "content_type"
+                                ],
+                                "properties": {
+                                  "id": {
                                     "type": "string",
                                     "format": "uuid",
-                                    "description": "If available - the product set on the addon.",
-                                    "example": "ff847a44-07dc-4ac2-8e8a-c44920e1f220"
+                                    "example": "1d53f799-c24f-49e3-b68f-93ae5fc69921",
+                                    "description": "A Tillhub product question resource identifier."
                                   },
-                                  {
-                                    "type": "null"
+                                  "question": {
+                                    "type": "string",
+                                    "maxLength": 1024,
+                                    "example": "Which colour is used?",
+                                    "description": "The associated Tillhub product question 'content' field."
+                                  },
+                                  "type": {
+                                    "type": "string",
+                                    "description": "The required layout type of the answer",
+                                    "enum": [
+                                      "checkbox",
+                                      "free_text_input",
+                                      "simple_select",
+                                      "number_input_plus_optional_unit_select"
+                                    ]
+                                  },
+                                  "content_type": {
+                                    "type": "string",
+                                    "description": "The required content type of the answer",
+                                    "enum": [
+                                      "string",
+                                      "boolean",
+                                      "number"
+                                    ]
+                                  },
+                                  "required": {
+                                    "description": "If true, the answer is mandatory",
+                                    "oneOf": [
+                                      {
+                                        "type": "boolean",
+                                        "default": false
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ],
+                                    "default": null
+                                  },
+                                  "answer": {
+                                    "description": "The answer content of a product service question",
+                                    "oneOf": [
+                                      {
+                                        "type": "object",
+                                        "additionalProperties": false,
+                                        "required": [
+                                          "content"
+                                        ],
+                                        "properties": {
+                                          "content": {
+                                            "oneOf": [
+                                              {
+                                                "type": "number",
+                                                "description": "If 'number_input_plus_optional_unit_select', this field contains the inputted numerical value."
+                                              },
+                                              {
+                                                "type": "boolean",
+                                                "description": "If 'checkbox', this field contains the selcetd boolean value."
+                                              },
+                                              {
+                                                "type": "string",
+                                                "description": "If 'free_text_input' or 'simple_select', this field contains the inputted text."
+                                              },
+                                              {
+                                                "type": "null"
+                                              }
+                                            ]
+                                          },
+                                          "unit": {
+                                            "oneOf": [
+                                              {
+                                                "type": "string",
+                                                "maxLength": 128,
+                                                "example": "ml",
+                                                "description": "If 'number_input_plus_optional_unit_select', this field contains the selected unit."
+                                              },
+                                              {
+                                                "type": "null"
+                                              }
+                                            ],
+                                            "default": null
+                                          }
+                                        }
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ],
+                                    "default": null
                                   }
-                                ]
+                                }
+                              }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "is_voucher": {
+                          "description": "If true, this item represents a voucher and must come with voucher information in 'voucher'",
+                          "default": false,
+                          "oneOf": [
+                            {
+                              "type": "boolean"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "voucher": {
+                          "oneOf": [
+                            {
+                              "description": "The effective voucher delta record for this item (thus reversable if needed)",
+                              "additionalProperties": false,
+                              "type": "object",
+                              "properties": {
+                                "client_id": {
+                                  "type": "string",
+                                  "example": "d0d40841-b1a7-438a-9d1e-2bfec590d2e3",
+                                  "minLength": 6,
+                                  "maxLength": 64,
+                                  "description": "A implementer defined identifier. This can be used for local resource matching and has no business implication. TO BE DEPRECTAED."
+                                },
+                                "source_id": {
+                                  "type": "string",
+                                  "example": "d0d40841-b1a7-438a-9d1e-2bfec590d2e3",
+                                  "minLength": 6,
+                                  "maxLength": 64,
+                                  "description": "The Tillhub or Fleurop Id of the source voucher."
+                                },
+                                "delta_amount": {
+                                  "description": "The effective change in the value of the voucher or it's creation amount $1.37 = 1.37.",
+                                  "type": "number",
+                                  "minimum": -1000000,
+                                  "maximum": 1000000,
+                                  "multipleOf": 0.01
+                                },
+                                "delta_currency": {
+                                  "type": "string",
+                                  "description": "The three letter [ISO currency](https://en.wikipedia.org/wiki/ISO_4217) of this item.",
+                                  "example": "EUR",
+                                  "minLength": 3,
+                                  "maxLength": 3
+                                },
+                                "barcode": {
+                                  "default": null,
+                                  "type": "string",
+                                  "minLength": 3,
+                                  "maxLength": 128,
+                                  "description": "Voucher EAN or similar."
+                                },
+                                "code": {
+                                  "default": null,
+                                  "type": "string",
+                                  "minLength": 3,
+                                  "maxLength": 128,
+                                  "description": "Voucher number."
+                                },
+                                "system": {
+                                  "type": "string",
+                                  "format": "uuid",
+                                  "example": "AB3847a66-97dc-4ac2-8e8a-c44920e1f22f",
+                                  "description": "Voucher system used."
+                                },
+                                "external": {
+                                  "description": "Make this voucher to follow external logic",
+                                  "type": "boolean",
+                                  "default": false
+                                },
+                                "external_system_type": {
+                                  "description": "Define which voucher API implementation to follow",
+                                  "oneOf": [
+                                    {
+                                      "type": "string",
+                                      "enum": [
+                                        "tillhub-voucher-api",
+                                        "fleurop",
+                                        "zalando"
+                                      ]
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "external_system_id": {
+                                  "description": "Define here whether this voucher system is an external one and which ID it references at the provider. E.g. a Tillhub Account can talk to another one, but permissions and this reference need to be set.",
+                                  "default": null,
+                                  "oneOf": [
+                                    {
+                                      "description": "Replace own accountId with external_system_id in requests when external=true, i.e. /vouchers/external_system_id/voucher_id. If external=false use accountId as usual, i.e. /vouchers/accountId/voucher_id",
+                                      "type": "string",
+                                      "maxLength": 128,
+                                      "example": "0023903408"
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "external_voucher_system_id": {
+                                  "description": "If using a parent's voucher system, this is the voucher system id of the delegating parent. external_voucher_system_id is to be sent in requests as a query parameter, whenever external_system_id (instead of the own accountId) is used in the url, e.g. vouchers/{external_system_id}/lookup?code=xyz123&system={external_voucher_system_id}.",
+                                  "default": null,
+                                  "oneOf": [
+                                    {
+                                      "description": "Additional parameter for external voucher systems, e.g. Fleurop Voucher Type specifier or id inside external system",
+                                      "type": "string",
+                                      "maxLength": 128,
+                                      "example": "0023903408"
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "action": {
+                                  "type": "string",
+                                  "format": "uuid",
+                                  "example": "CD847a66-97dc-4ac2-8e8a-c44920e1f22f",
+                                  "description": "Voucher system's action used."
+                                },
+                                "action_type": {
+                                  "type": "string",
+                                  "enum": [
+                                    "increment",
+                                    "decrement",
+                                    "create"
+                                  ],
+                                  "description": "Voucher system's action type used."
+                                },
+                                "template": {
+                                  "oneOf": [
+                                    {
+                                      "default": null,
+                                      "type": "string",
+                                      "format": "uuid",
+                                      "description": "If action_type is 'create' - a reference to the voucher template used",
+                                      "example": "43847a66-97dc-4ac2-8e8a-c44920e1f22f"
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "title": {
+                                  "oneOf": [
+                                    {
+                                      "default": null,
+                                      "type": "string",
+                                      "maxLength": 256,
+                                      "description": "Title of the source voucher."
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "message": {
+                                  "default": null,
+                                  "type": "string",
+                                  "maxLength": 2048,
+                                  "description": "Messages from voucher processing."
+                                },
+                                "creation": {
+                                  "oneOf": [
+                                    {
+                                      "type": "object",
+                                      "description": "Client specified container to store created abocards and/or vouchers."
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "type": {
+                                  "type": "string",
+                                  "description": "Mainly legacy support for Fleurop flows.",
+                                  "enum": [
+                                    "undefined",
+                                    "fleurop_redeem",
+                                    "fleurop_sell_or_recharge",
+                                    "fleurop_own_branded_recharge",
+                                    "fleurop_own_branded_redeem",
+                                    "fleurop_externa_sell_and_activate",
+                                    "tillhub_create",
+                                    "tillhub_recharge",
+                                    "tillhub_reedeem",
+                                    "tillhub_percentage",
+                                    "tillhub_product",
+                                    "tillhub_abocard_sell"
+                                  ]
+                                },
+                                "status": {
+                                  "type": "string",
+                                  "description": "Client side recorded booking state of the delta operation.",
+                                  "enum": [
+                                    "unknown",
+                                    "pending",
+                                    "locked",
+                                    "succeed",
+                                    "failed",
+                                    "scheduled"
+                                  ]
+                                }
                               },
-                              "price": {
-                                "type": "number",
-                                "description": "The fixed price for any addon, completely independent on the quantity.",
-                                "example": 0.99,
-                                "minimum": -1000000,
-                                "maximum": 1000000,
-                                "multipleOf": 0.01
+                              "required": [
+                                "client_id",
+                                "source_id",
+                                "api",
+                                "delta_amount",
+                                "delta_currency",
+                                "system",
+                                "type",
+                                "status"
+                              ]
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ],
+                          "default": null
+                        },
+                        "is_refund": {
+                          "description": "If true, the item was created by (partially) refunding a previous sale.",
+                          "oneOf": [
+                            {
+                              "type": "boolean"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "return_reason": {
+                          "oneOf": [
+                            {
+                              "type": "object",
+                              "description": "Information about a returned item.",
+                              "properties": {
+                                "id": {
+                                  "oneOf": [
+                                    {
+                                      "type": "string",
+                                      "format": "uuid",
+                                      "example": "9d110eb2-2245-4e14-9574-49b502f3a9b3",
+                                      "description": "The associated Tillhub reason resource."
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ],
+                                  "default": null
+                                },
+                                "reason": {
+                                  "oneOf": [
+                                    {
+                                      "type": "string",
+                                      "maxLength": 64,
+                                      "example": "Accidental Charge",
+                                      "description": "The  Tillhub reason resource's name."
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ],
+                                  "default": null
+                                },
+                                "description": {
+                                  "oneOf": [
+                                    {
+                                      "type": "string",
+                                      "maxLength": 1024,
+                                      "example": "Accidentally charged the customer for products he did not buy",
+                                      "description": "The  Tillhub reason resource's description."
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ],
+                                  "default": null
+                                },
+                                "custom_reason": {
+                                  "oneOf": [
+                                    {
+                                      "type": "string",
+                                      "maxLength": 1024,
+                                      "example": "Cashier entered here a custom reason.",
+                                      "description": "A client side user defined custom description for this return process."
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ],
+                                  "default": null
+                                },
+                                "behavior": {
+                                  "oneOf": [
+                                    {
+                                      "type": "object",
+                                      "description": "Copy of the behavior object from the reasons table.",
+                                      "properties": {
+                                        "stock": {
+                                          "type": "string",
+                                          "enum": [
+                                            "restock"
+                                          ]
+                                        },
+                                        "stock_location": {
+                                          "type": "string",
+                                          "enum": [
+                                            "current"
+                                          ]
+                                        },
+                                        "navigation": {
+                                          "type": "string",
+                                          "enum": [
+                                            "payment_view",
+                                            "carts",
+                                            "ask"
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                }
+                              }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ],
+                          "default": null
+                        },
+                        "attributes_description": {
+                          "description": "A short description of the child attributes in variant products",
+                          "example": "red | big | 32",
+                          "oneOf": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "reference_cartitem_client_id": {
+                          "description": "In cases of refund or cancellation, or invoicing a delivery note or selling a saved cart: the client_id of the origin item",
+                          "example": "01331B44-130B-45D4-97A7-401247FD5B68",
+                          "oneOf": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "used_barcode": {
+                          "description": "The barcode used to trigger putting this item into the cart (defaults to the first available barcode from the product)",
+                          "example": "0E9761310XF",
+                          "oneOf": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "name": {
+                          "description": "Cart item display name",
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 128
+                        },
+                        "position": {
+                          "description": "Cart item position",
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        "comments": {
+                          "description": "Additional comments",
+                          "anyOf": [
+                            {
+                              "type": "string",
+                              "maxLength": 4096
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ],
+                          "default": null
+                        },
+                        "client_id": {
+                          "type": "string",
+                          "maxLength": 128
+                        },
+                        "external_reference_id": {
+                          "oneOf": [
+                            {
+                              "type": "string",
+                              "example": "823742686434462376376376473647346",
+                              "maxLength": 128,
+                              "description": "Any identifier a user wants to store in the transaction system. E.g. an ID in a thirdy party ERP."
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "custom_properties": {
+                          "oneOf": [
+                            {
+                              "type": "null"
+                            },
+                            {
+                              "type": "object",
+                              "additionalProperties": false,
+                              "maxProperties": 50,
+                              "patternProperties": {
+                                "^.{1,128}$": {
+                                  "anyOf": [
+                                    {
+                                      "type": "null"
+                                    },
+                                    {
+                                      "type": "string"
+                                    },
+                                    {
+                                      "type": "number"
+                                    },
+                                    {
+                                      "type": "boolean"
+                                    },
+                                    {
+                                      "type": "array",
+                                      "items": {
+                                        "anyOf": [
+                                          {
+                                            "type": "string"
+                                          },
+                                          {
+                                            "type": "number"
+                                          },
+                                          {
+                                            "type": "boolean"
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            }
+                          ]
+                        },
+                        "salesman_staff": {
+                          "description": "Staff person ID",
+                          "example": "68722313-4077-42eb-8cc2-bf3359940efc",
+                          "oneOf": [
+                            {
+                              "type": "string",
+                              "format": "uuid"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "tax": {
+                          "description": "Tax rate ID. If not present, the \"vat_rate\" must be present. The active tax with such ID must be defined in the system",
+                          "type": "string",
+                          "format": "uuid"
+                        },
+                        "account": {
+                          "description": "Account ID",
+                          "type": "string",
+                          "format": "uuid"
+                        },
+                        "account_number": {
+                          "description": "Account number. The only one active account with the same number must be defined in the system (does not apply when \"account\" value is present)",
+                          "oneOf": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "product_group": {
+                          "description": "Product group ID",
+                          "oneOf": [
+                            {
+                              "type": "string",
+                              "format": "uuid"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "addons": {
+                          "oneOf": [
+                            {
+                              "description": "The list of applied addons",
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "additionalProperties": false,
+                                "description": "Any applied addons as they happened at transaction creation time.",
+                                "properties": {
+                                  "addon": {
+                                    "type": "string",
+                                    "format": "uuid",
+                                    "description": "The Tillhub addon resource reference ID.",
+                                    "example": "ac847a66-d7dc-4ac2-8e8a-c44920e1f220"
+                                  },
+                                  "product": {
+                                    "oneOf": [
+                                      {
+                                        "type": "string",
+                                        "format": "uuid",
+                                        "description": "If available - the product set on the addon.",
+                                        "example": "ff847a44-07dc-4ac2-8e8a-c44920e1f220"
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
+                                  },
+                                  "price": {
+                                    "type": "number",
+                                    "description": "The fixed price for any addon, completely independent on the quantity.",
+                                    "example": 0.99,
+                                    "minimum": -1000000,
+                                    "maximum": 1000000,
+                                    "multipleOf": 0.01
+                                  },
+                                  "currency": {
+                                    "type": "string",
+                                    "description": "The ISO currency code for the addon's price.",
+                                    "example": "EUR",
+                                    "minLength": 3,
+                                    "maxLength": 3
+                                  },
+                                  "quantity": {
+                                    "type": "number",
+                                    "description": "Number of times the addon is applied to the cart item. Respects the max_quantity setting on the Addon",
+                                    "example": 3.6,
+                                    "minimum": -32767,
+                                    "maximum": 32767,
+                                    "multipleOf": 0.001
+                                  },
+                                  "stock_quantity": {
+                                    "type": "number",
+                                    "description": "The quantity of this addon, e.g. 1 pc or 0.125kg - this does never affect the price (only used for stock).",
+                                    "example": 3.6,
+                                    "minimum": -32767,
+                                    "maximum": 32767,
+                                    "multipleOf": 0.001
+                                  },
+                                  "name": {
+                                    "type": "string",
+                                    "description": "The name of this addon to keep in case if original product has been changed",
+                                    "example": "Extra Mushrooms",
+                                    "minLength": 1,
+                                    "maxLength": 256
+                                  }
+                                },
+                                "required": [
+                                  "addon",
+                                  "price",
+                                  "currency",
+                                  "quantity",
+                                  "name"
+                                ]
+                              }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "discounts": {
+                          "type": "array",
+                          "items": {
+                            "additionalProperties": false,
+                            "properties": {
+                              "amount": {
+                                "type": "number"
+                              },
+                              "amount_total": {
+                                "type": "number"
+                              },
+                              "order_index": {
+                                "type": "integer"
                               },
                               "currency": {
                                 "type": "string",
-                                "description": "The ISO currency code for the addon's price.",
-                                "example": "EUR",
                                 "minLength": 3,
                                 "maxLength": 3
                               },
-                              "quantity": {
-                                "type": "number",
-                                "description": "Number of times the addon is applied to the cart item. Respects the max_quantity setting on the Addon",
-                                "example": 3.6,
-                                "minimum": -32767,
-                                "maximum": 32767,
-                                "multipleOf": 0.001
-                              },
-                              "stock_quantity": {
-                                "type": "number",
-                                "description": "The quantity of this addon, e.g. 1 pc or 0.125kg - this does never affect the price (only used for stock).",
-                                "example": 3.6,
-                                "minimum": -32767,
-                                "maximum": 32767,
-                                "multipleOf": 0.001
-                              },
-                              "name": {
+                              "type_name": {
                                 "type": "string",
-                                "description": "The name of this addon to keep in case if original product has been changed",
-                                "example": "Extra Mushrooms",
-                                "minLength": 1,
-                                "maxLength": 256
-                              }
-                            },
-                            "required": [
-                              "addon",
-                              "price",
-                              "currency",
-                              "quantity",
-                              "name"
-                            ]
-                          }
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ]
-                    },
-                    "discounts": {
-                      "type": "array",
-                      "items": {
-                        "additionalProperties": false,
-                        "properties": {
-                          "amount": {
-                            "type": "number"
-                          },
-                          "amount_total": {
-                            "type": "number"
-                          },
-                          "order_index": {
-                            "type": "integer"
-                          },
-                          "currency": {
-                            "type": "string",
-                            "minLength": 3,
-                            "maxLength": 3
-                          },
-                          "type_name": {
-                            "type": "string",
-                            "enum": [
-                              "percentage",
-                              "value"
-                            ],
-                            "description": "The value interpretation type of the discount, needed to map from transaction legacy discounts and back, value and rate will be still respected"
-                          },
-                          "group": {
-                            "type": "string",
-                            "enum": [
-                              "customer",
-                              "staff",
-                              "cart",
-                              "product_set",
-                              "sconto",
-                              "item",
-                              "promotion",
-                              "voucher"
-                            ],
-                            "description": "The logical group type of the discount, reflecting it's origin."
-                          },
-                          "value": {
-                            "oneOf": [
-                              {
-                                "type": "number"
+                                "enum": [
+                                  "percentage",
+                                  "value"
+                                ],
+                                "description": "The value interpretation type of the discount, needed to map from transaction legacy discounts and back, value and rate will be still respected"
                               },
-                              {
-                                "type": "null"
-                              }
-                            ]
-                          },
-                          "rate": {
-                            "oneOf": [
-                              {
-                                "type": "number",
-                                "minimum": 0,
-                                "maximum": 1
-                              },
-                              {
-                                "type": "null"
-                              }
-                            ]
-                          },
-                          "client_id": {
-                            "type": "string",
-                            "maxLength": 128
-                          },
-                          "external_reference_id": {
-                            "description": "A caller defined custom ID for the purpose of syncing from external resources, or to use in analytics.",
-                            "oneOf": [
-                              {
-                                "type": "string",
-                                "maxLength": 128
-                              },
-                              {
-                                "type": "null"
-                              }
-                            ]
-                          },
-                          "source_id": {
-                            "description": "The Tillhub discount resource (if available)",
-                            "oneOf": [
-                              {
-                                "type": "string",
-                                "format": "uuid"
-                              },
-                              {
-                                "type": "null"
-                              }
-                            ]
-                          },
-                          "assignment_id": {
-                            "description": "Identification of the process that created this discount",
-                            "oneOf": [
-                              {
-                                "type": "string",
-                                "maxLength": 128
-                              },
-                              {
-                                "type": "null"
-                              }
-                            ]
-                          },
-                          "assignment_source": {
-                            "description": "Identification of the source of the process that created this discount",
-                            "oneOf": [
-                              {
+                              "group": {
                                 "type": "string",
                                 "enum": [
                                   "customer",
@@ -1340,339 +1263,20 @@
                                   "sconto",
                                   "item",
                                   "promotion",
-                                  "voucher",
-                                  "product_voucher"
-                                ]
-                              },
-                              {
-                                "type": "null"
-                              }
-                            ]
-                          },
-                          "name": {
-                            "type": "string",
-                            "minLength": 1,
-                            "maxLength": 128
-                          },
-                          "is_automatic": {
-                            "oneOf": [
-                              {
-                                "type": "boolean",
-                                "default": false,
-                                "description": "If true, this discount was trigger automatically."
-                              },
-                              {
-                                "type": "null"
-                              }
-                            ]
-                          },
-                          "order": {
-                            "oneOf": [
-                              {
-                                "type": "string",
-                                "enum": [
-                                  "first",
-                                  "last"
+                                  "voucher"
                                 ],
-                                "default": "last"
+                                "description": "The logical group type of the discount, reflecting it's origin."
                               },
-                              {
-                                "type": "null"
-                              }
-                            ]
-                          },
-                          "vat_rate_class": {
-                            "oneOf": [
-                              {
-                                "default": "normal",
-                                "description": "Rate class from 'taxes.rate_class' according to international standards, used in Germany to map types for e.g. fiscalization",
-                                "type": "string",
-                                "enum": [
-                                  "normal",
-                                  "reduced",
-                                  "super_reduced"
-                                ]
-                              },
-                              {
-                                "type": "null"
-                              }
-                            ]
-                          }
-                        },
-                        "anyOf": [
-                          {
-                            "required": [
-                              "amount",
-                              "amount_total",
-                              "currency",
-                              "name",
-                              "value"
-                            ]
-                          },
-                          {
-                            "required": [
-                              "amount",
-                              "amount_total",
-                              "currency",
-                              "name",
-                              "rate"
-                            ]
-                          },
-                          {
-                            "required": [
-                              "amount",
-                              "amount_total",
-                              "currency",
-                              "name",
-                              "value",
-                              "rate"
-                            ]
-                          }
-                        ]
-                      }
-                    },
-                    "attributes": {
-                      "default": null,
-                      "anyOf": [
-                        {
-                          "type": "object"
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ]
-                    }
-                  },
-                  "anyOf": [
-                    {
-                      "required": [
-                        "product",
-                        "qty",
-                        "custom_id",
-                        "salesman_staff",
-                        "name",
-                        "discounts",
-                        "amount",
-                        "currency",
-                        "tax"
-                      ]
-                    },
-                    {
-                      "required": [
-                        "product",
-                        "qty",
-                        "custom_id",
-                        "salesman_staff",
-                        "name",
-                        "discounts",
-                        "amount",
-                        "currency",
-                        "vat_rate"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "additionalProperties": false,
-                  "type": "object",
-                  "properties": {
-                    "product": {
-                      "description": "The Tillhub product unique identifier",
-                      "example": "aa165950-26f1-4a59-a85a-1c6017b3cb79",
-                      "type": "string",
-                      "format": "uuid"
-                    },
-                    "custom_id": {
-                      "description": "The product.custom_id as stated in https://tillhub.atlassian.net/browse/TM-5665",
-                      "example": "260620-727-DE",
-                      "type": "string",
-                      "maxLength": 128
-                    },
-                    "product_supplier_name": {
-                      "description": "Custom identifier for the product's supplier",
-                      "oneOf": [
-                        {
-                          "type": "string",
-                          "maxLength": 128
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ]
-                    },
-                    "is_service": {
-                      "description": "If true, this item represents a service and might come with answers to service questions",
-                      "default": false,
-                      "oneOf": [
-                        {
-                          "type": "boolean"
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ]
-                    },
-                    "discountable": {
-                      "description": "Supports correct discount behavior without product lookup",
-                      "oneOf": [
-                        {
-                          "type": "boolean"
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ]
-                    },
-                    "qty": {
-                      "description": "Product quantity in the cart",
-                      "example": 2,
-                      "type": "number"
-                    },
-                    "currency": {
-                      "description": "Currency symbol",
-                      "example": "EUR",
-                      "type": "string",
-                      "minLength": 3,
-                      "maxLength": 3
-                    },
-                    "amount": {
-                      "description": "The gross/net input price per quantity of 1.0 and before any discounts",
-                      "type": "object",
-                      "additionalProperties": false,
-                      "anyOf": [
-                        {
-                          "required": [
-                            "net",
-                            "gross"
-                          ]
-                        },
-                        {
-                          "required": [
-                            "net"
-                          ]
-                        },
-                        {
-                          "required": [
-                            "gross"
-                          ]
-                        }
-                      ],
-                      "properties": {
-                        "net": {
-                          "description": "A monetary value as .2Decimal excluding taxes, $10 = 10.00",
-                          "type": "number",
-                          "minimum": -1000000,
-                          "maximum": 1000000,
-                          "multipleOf": 0.01
-                        },
-                        "gross": {
-                          "description": "A monetary value as .2Decimal including taxes, 10€ = 10.00",
-                          "type": "number",
-                          "minimum": -1000000,
-                          "maximum": 1000000,
-                          "multipleOf": 0.01
-                        }
-                      }
-                    },
-                    "vat_rate": {
-                      "description": "VAT rate in the range 0-1. Required when \"tax\" value is not present. The only one active VAT with the same rate must be defined in the system (does not apply when \"tax\" value is present)",
-                      "example": 0.12,
-                      "type": "number",
-                      "minimum": 0,
-                      "maximum": 1
-                    },
-                    "addons": {
-                      "oneOf": [
-                        {
-                          "description": "The list of applied addons",
-                          "type": "array",
-                          "items": {
-                            "type": "object",
-                            "additionalProperties": false,
-                            "description": "Any applied addons as they happened at transaction creation time.",
-                            "properties": {
-                              "addon": {
-                                "type": "string",
-                                "format": "uuid",
-                                "description": "The Tillhub addon resource reference ID.",
-                                "example": "ac847a66-d7dc-4ac2-8e8a-c44920e1f220"
-                              },
-                              "product": {
+                              "value": {
                                 "oneOf": [
                                   {
-                                    "type": "string",
-                                    "format": "uuid",
-                                    "description": "If available - the product set on the addon.",
-                                    "example": "ff847a44-07dc-4ac2-8e8a-c44920e1f220"
+                                    "type": "number"
                                   },
                                   {
                                     "type": "null"
                                   }
                                 ]
                               },
-                              "price": {
-                                "type": "number",
-                                "description": "The fixed price for any addon, completely independent on the quantity.",
-                                "example": 0.99,
-                                "minimum": -1000000,
-                                "maximum": 1000000,
-                                "multipleOf": 0.01
-                              },
-                              "currency": {
-                                "type": "string",
-                                "description": "The ISO currency code for the addon's price.",
-                                "example": "EUR",
-                                "minLength": 3,
-                                "maxLength": 3
-                              },
-                              "quantity": {
-                                "type": "number",
-                                "description": "Number of times the addon is applied to the cart item. Respects the max_quantity setting on the Addon",
-                                "example": 3.6,
-                                "minimum": -32767,
-                                "maximum": 32767,
-                                "multipleOf": 0.001
-                              },
-                              "stock_quantity": {
-                                "type": "number",
-                                "description": "The quantity of this addon, e.g. 1 pc or 0.125kg - this does never affect the price (only used for stock).",
-                                "example": 3.6,
-                                "minimum": -32767,
-                                "maximum": 32767,
-                                "multipleOf": 0.001
-                              },
-                              "name": {
-                                "type": "string",
-                                "description": "The name of this addon to keep in case if original product has been changed",
-                                "example": "Extra Mushrooms",
-                                "minLength": 1,
-                                "maxLength": 256
-                              }
-                            },
-                            "required": [
-                              "addon",
-                              "price",
-                              "currency",
-                              "quantity",
-                              "name"
-                            ]
-                          }
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ]
-                    },
-                    "discounts": {
-                      "type": "array",
-                      "description": "external discounts that only take either discount format",
-                      "items": {
-                        "anyOf": [
-                          {
-                            "description": "discount based on rate, e.g. 10% = 0.1. Client should will apply this based on the volume of that cart item.",
-                            "additionalProperties": false,
-                            "type": "object",
-                            "properties": {
                               "rate": {
                                 "oneOf": [
                                   {
@@ -1685,653 +1289,1056 @@
                                   }
                                 ]
                               },
-                              "order_index": {
-                                "type": "integer"
-                              },
-                              "currency": {
-                                "type": "string",
-                                "minLength": 3,
-                                "maxLength": 3
-                              },
                               "client_id": {
                                 "type": "string",
                                 "maxLength": 128
                               },
-                              "group": {
-                                "type": "string",
-                                "enum": [
-                                  "customer",
-                                  "staff",
-                                  "cart",
-                                  "product_set",
-                                  "item"
-                                ]
-                              },
-                              "name": {
-                                "type": "string",
-                                "minLength": 1,
-                                "maxLength": 128
-                              }
-                            },
-                            "required": [
-                              "currency",
-                              "name",
-                              "rate"
-                            ]
-                          },
-                          {
-                            "description": "discount based on value, e.g. 10 EUR = 10. Client should will subtract this from the volume of that cart item.",
-                            "additionalProperties": false,
-                            "type": "object",
-                            "properties": {
-                              "value": {
+                              "external_reference_id": {
+                                "description": "A caller defined custom ID for the purpose of syncing from external resources, or to use in analytics.",
                                 "oneOf": [
                                   {
-                                    "type": "number"
+                                    "type": "string",
+                                    "maxLength": 128
                                   },
                                   {
                                     "type": "null"
                                   }
                                 ]
                               },
-                              "order_index": {
-                                "type": "integer"
+                              "source_id": {
+                                "description": "The Tillhub discount resource (if available)",
+                                "oneOf": [
+                                  {
+                                    "type": "string",
+                                    "format": "uuid"
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ]
                               },
-                              "currency": {
-                                "type": "string",
-                                "minLength": 3,
-                                "maxLength": 3
+                              "assignment_id": {
+                                "description": "Identification of the process that created this discount",
+                                "oneOf": [
+                                  {
+                                    "type": "string",
+                                    "maxLength": 128
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ]
                               },
-                              "client_id": {
-                                "type": "string",
-                                "maxLength": 128
-                              },
-                              "group": {
-                                "type": "string",
-                                "enum": [
-                                  "customer",
-                                  "staff",
-                                  "cart",
-                                  "product_set",
-                                  "item"
+                              "assignment_source": {
+                                "description": "Identification of the source of the process that created this discount",
+                                "oneOf": [
+                                  {
+                                    "type": "string",
+                                    "enum": [
+                                      "customer",
+                                      "staff",
+                                      "cart",
+                                      "product_set",
+                                      "sconto",
+                                      "item",
+                                      "promotion",
+                                      "voucher",
+                                      "product_voucher"
+                                    ]
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
                                 ]
                               },
                               "name": {
                                 "type": "string",
                                 "minLength": 1,
                                 "maxLength": 128
-                              }
-                            },
-                            "required": [
-                              "currency",
-                              "name",
-                              "value"
-                            ]
-                          },
-                          {
-                            "description": "discount based on amount total, e.g. 10 EUR = 10. Clients do no calculations and will subtract this value from a cart item.",
-                            "additionalProperties": false,
-                            "properties": {
-                              "amount_total": {
-                                "type": "number"
                               },
-                              "order_index": {
-                                "type": "integer"
-                              },
-                              "currency": {
-                                "type": "string",
-                                "minLength": 3,
-                                "maxLength": 3
-                              },
-                              "client_id": {
-                                "type": "string",
-                                "maxLength": 128
-                              },
-                              "group": {
-                                "type": "string",
-                                "enum": [
-                                  "customer",
-                                  "staff",
-                                  "cart",
-                                  "product_set",
-                                  "item"
+                              "is_automatic": {
+                                "oneOf": [
+                                  {
+                                    "type": "boolean",
+                                    "default": false,
+                                    "description": "If true, this discount was trigger automatically."
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
                                 ]
                               },
-                              "name": {
-                                "type": "string",
-                                "minLength": 1,
-                                "maxLength": 128
-                              }
-                            },
-                            "required": [
-                              "currency",
-                              "name",
-                              "amount_total"
-                            ]
-                          },
-                          {
-                            "description": "discount based on amount per item, e.g. 10 EUR with qty 100 will be = 1000. Clientstake this value and multiply it by the qty.",
-                            "additionalProperties": false,
-                            "properties": {
-                              "amount": {
-                                "type": "number"
-                              },
-                              "order_index": {
-                                "type": "integer"
-                              },
-                              "currency": {
-                                "type": "string",
-                                "minLength": 3,
-                                "maxLength": 3
-                              },
-                              "client_id": {
-                                "type": "string",
-                                "maxLength": 128
-                              },
-                              "group": {
-                                "type": "string",
-                                "enum": [
-                                  "customer",
-                                  "staff",
-                                  "cart",
-                                  "product_set",
-                                  "item"
+                              "order": {
+                                "oneOf": [
+                                  {
+                                    "type": "string",
+                                    "enum": [
+                                      "first",
+                                      "last"
+                                    ],
+                                    "default": "last"
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
                                 ]
                               },
-                              "name": {
-                                "type": "string",
-                                "minLength": 1,
-                                "maxLength": 128
+                              "vat_rate_class": {
+                                "oneOf": [
+                                  {
+                                    "default": "normal",
+                                    "description": "Rate class from 'taxes.rate_class' according to international standards, used in Germany to map types for e.g. fiscalization",
+                                    "type": "string",
+                                    "enum": [
+                                      "normal",
+                                      "reduced",
+                                      "super_reduced"
+                                    ]
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ]
                               }
                             },
-                            "required": [
-                              "currency",
-                              "name",
-                              "amount"
+                            "anyOf": [
+                              {
+                                "required": [
+                                  "amount",
+                                  "amount_total",
+                                  "currency",
+                                  "name",
+                                  "value"
+                                ]
+                              },
+                              {
+                                "required": [
+                                  "amount",
+                                  "amount_total",
+                                  "currency",
+                                  "name",
+                                  "rate"
+                                ]
+                              },
+                              {
+                                "required": [
+                                  "amount",
+                                  "amount_total",
+                                  "currency",
+                                  "name",
+                                  "value",
+                                  "rate"
+                                ]
+                              }
                             ]
                           }
-                        ]
-                      }
-                    },
-                    "name": {
-                      "description": "Cart item display name",
-                      "type": "string",
-                      "minLength": 1,
-                      "maxLength": 128
-                    },
-                    "position": {
-                      "description": "Cart item position",
-                      "type": "number",
-                      "minimum": 0
-                    },
-                    "comments": {
-                      "description": "Additional comments",
+                        },
+                        "attributes": {
+                          "default": null,
+                          "anyOf": [
+                            {
+                              "type": "object"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        }
+                      },
                       "anyOf": [
                         {
-                          "type": "string",
-                          "maxLength": 4096
+                          "required": [
+                            "product",
+                            "qty",
+                            "custom_id",
+                            "salesman_staff",
+                            "name",
+                            "discounts",
+                            "amount",
+                            "currency",
+                            "tax"
+                          ]
                         },
                         {
-                          "type": "null"
-                        }
-                      ],
-                      "default": null
-                    },
-                    "client_id": {
-                      "type": "string",
-                      "maxLength": 128
-                    },
-                    "external_reference_id": {
-                      "oneOf": [
-                        {
-                          "type": "string",
-                          "example": "823742686434462376376376473647346",
-                          "maxLength": 128,
-                          "description": "Any identifier a user wants to store in the transaction system. E.g. an ID in a thirdy party ERP."
-                        },
-                        {
-                          "type": "null"
+                          "required": [
+                            "product",
+                            "qty",
+                            "custom_id",
+                            "salesman_staff",
+                            "name",
+                            "discounts",
+                            "amount",
+                            "currency",
+                            "vat_rate"
+                          ]
                         }
                       ]
                     },
-                    "custom_properties": {
-                      "oneOf": [
-                        {
-                          "type": "null"
+                    {
+                      "additionalProperties": false,
+                      "type": "object",
+                      "properties": {
+                        "product": {
+                          "description": "The Tillhub product unique identifier",
+                          "example": "aa165950-26f1-4a59-a85a-1c6017b3cb79",
+                          "type": "string",
+                          "format": "uuid"
                         },
-                        {
+                        "custom_id": {
+                          "description": "The product.custom_id as stated in https://tillhub.atlassian.net/browse/TM-5665",
+                          "example": "260620-727-DE",
+                          "type": "string",
+                          "maxLength": 128
+                        },
+                        "product_supplier_name": {
+                          "description": "Custom identifier for the product's supplier",
+                          "oneOf": [
+                            {
+                              "type": "string",
+                              "maxLength": 128
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "is_service": {
+                          "description": "If true, this item represents a service and might come with answers to service questions",
+                          "default": false,
+                          "oneOf": [
+                            {
+                              "type": "boolean"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "discountable": {
+                          "description": "Supports correct discount behavior without product lookup",
+                          "oneOf": [
+                            {
+                              "type": "boolean"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "qty": {
+                          "description": "Product quantity in the cart",
+                          "example": 2,
+                          "type": "number"
+                        },
+                        "currency": {
+                          "description": "Currency symbol",
+                          "example": "EUR",
+                          "type": "string",
+                          "minLength": 3,
+                          "maxLength": 3
+                        },
+                        "amount": {
+                          "description": "The gross/net input price per quantity of 1.0 and before any discounts",
                           "type": "object",
                           "additionalProperties": false,
-                          "maxProperties": 50,
-                          "patternProperties": {
-                            "^.{1,128}$": {
-                              "anyOf": [
-                                {
-                                  "type": "null"
-                                },
-                                {
-                                  "type": "string"
-                                },
-                                {
-                                  "type": "number"
-                                },
-                                {
-                                  "type": "boolean"
-                                },
-                                {
-                                  "type": "array",
-                                  "items": {
-                                    "anyOf": [
+                          "anyOf": [
+                            {
+                              "required": [
+                                "net",
+                                "gross"
+                              ]
+                            },
+                            {
+                              "required": [
+                                "net"
+                              ]
+                            },
+                            {
+                              "required": [
+                                "gross"
+                              ]
+                            }
+                          ],
+                          "properties": {
+                            "net": {
+                              "description": "A monetary value as .2Decimal excluding taxes, $10 = 10.00",
+                              "type": "number",
+                              "minimum": -1000000,
+                              "maximum": 1000000,
+                              "multipleOf": 0.01
+                            },
+                            "gross": {
+                              "description": "A monetary value as .2Decimal including taxes, 10€ = 10.00",
+                              "type": "number",
+                              "minimum": -1000000,
+                              "maximum": 1000000,
+                              "multipleOf": 0.01
+                            }
+                          }
+                        },
+                        "vat_rate": {
+                          "description": "VAT rate in the range 0-1. Required when \"tax\" value is not present. The only one active VAT with the same rate must be defined in the system (does not apply when \"tax\" value is present)",
+                          "example": 0.12,
+                          "type": "number",
+                          "minimum": 0,
+                          "maximum": 1
+                        },
+                        "addons": {
+                          "oneOf": [
+                            {
+                              "description": "The list of applied addons",
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "additionalProperties": false,
+                                "description": "Any applied addons as they happened at transaction creation time.",
+                                "properties": {
+                                  "addon": {
+                                    "type": "string",
+                                    "format": "uuid",
+                                    "description": "The Tillhub addon resource reference ID.",
+                                    "example": "ac847a66-d7dc-4ac2-8e8a-c44920e1f220"
+                                  },
+                                  "product": {
+                                    "oneOf": [
                                       {
-                                        "type": "string"
+                                        "type": "string",
+                                        "format": "uuid",
+                                        "description": "If available - the product set on the addon.",
+                                        "example": "ff847a44-07dc-4ac2-8e8a-c44920e1f220"
                                       },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
+                                  },
+                                  "price": {
+                                    "type": "number",
+                                    "description": "The fixed price for any addon, completely independent on the quantity.",
+                                    "example": 0.99,
+                                    "minimum": -1000000,
+                                    "maximum": 1000000,
+                                    "multipleOf": 0.01
+                                  },
+                                  "currency": {
+                                    "type": "string",
+                                    "description": "The ISO currency code for the addon's price.",
+                                    "example": "EUR",
+                                    "minLength": 3,
+                                    "maxLength": 3
+                                  },
+                                  "quantity": {
+                                    "type": "number",
+                                    "description": "Number of times the addon is applied to the cart item. Respects the max_quantity setting on the Addon",
+                                    "example": 3.6,
+                                    "minimum": -32767,
+                                    "maximum": 32767,
+                                    "multipleOf": 0.001
+                                  },
+                                  "stock_quantity": {
+                                    "type": "number",
+                                    "description": "The quantity of this addon, e.g. 1 pc or 0.125kg - this does never affect the price (only used for stock).",
+                                    "example": 3.6,
+                                    "minimum": -32767,
+                                    "maximum": 32767,
+                                    "multipleOf": 0.001
+                                  },
+                                  "name": {
+                                    "type": "string",
+                                    "description": "The name of this addon to keep in case if original product has been changed",
+                                    "example": "Extra Mushrooms",
+                                    "minLength": 1,
+                                    "maxLength": 256
+                                  }
+                                },
+                                "required": [
+                                  "addon",
+                                  "price",
+                                  "currency",
+                                  "quantity",
+                                  "name"
+                                ]
+                              }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "discounts": {
+                          "type": "array",
+                          "description": "external discounts that only take either discount format",
+                          "items": {
+                            "anyOf": [
+                              {
+                                "description": "discount based on rate, e.g. 10% = 0.1. Client should will apply this based on the volume of that cart item.",
+                                "additionalProperties": false,
+                                "type": "object",
+                                "properties": {
+                                  "rate": {
+                                    "oneOf": [
+                                      {
+                                        "type": "number",
+                                        "minimum": 0,
+                                        "maximum": 1
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
+                                  },
+                                  "order_index": {
+                                    "type": "integer"
+                                  },
+                                  "currency": {
+                                    "type": "string",
+                                    "minLength": 3,
+                                    "maxLength": 3
+                                  },
+                                  "client_id": {
+                                    "type": "string",
+                                    "maxLength": 128
+                                  },
+                                  "group": {
+                                    "type": "string",
+                                    "enum": [
+                                      "customer",
+                                      "staff",
+                                      "cart",
+                                      "product_set",
+                                      "item"
+                                    ]
+                                  },
+                                  "name": {
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "maxLength": 128
+                                  }
+                                },
+                                "required": [
+                                  "currency",
+                                  "name",
+                                  "rate"
+                                ]
+                              },
+                              {
+                                "description": "discount based on value, e.g. 10 EUR = 10. Client should will subtract this from the volume of that cart item.",
+                                "additionalProperties": false,
+                                "type": "object",
+                                "properties": {
+                                  "value": {
+                                    "oneOf": [
                                       {
                                         "type": "number"
                                       },
                                       {
-                                        "type": "boolean"
+                                        "type": "null"
                                       }
                                     ]
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        }
-                      ]
-                    },
-                    "salesman_staff": {
-                      "description": "Staff person ID",
-                      "example": "68722313-4077-42eb-8cc2-bf3359940efc",
-                      "oneOf": [
-                        {
-                          "type": "string",
-                          "format": "uuid"
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ]
-                    },
-                    "tax": {
-                      "description": "Tax rate ID. If not present, the \"vat_rate\" must be present. The active tax with such ID must be defined in the system",
-                      "type": "string",
-                      "format": "uuid"
-                    },
-                    "account": {
-                      "description": "Account ID",
-                      "type": "string",
-                      "format": "uuid"
-                    },
-                    "account_number": {
-                      "description": "Account number. The only one active account with the same number must be defined in the system (does not apply when \"account\" value is present)",
-                      "oneOf": [
-                        {
-                          "type": "string"
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ]
-                    },
-                    "product_group": {
-                      "description": "Product group ID",
-                      "oneOf": [
-                        {
-                          "type": "string",
-                          "format": "uuid"
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ]
-                    }
-                  },
-                  "anyOf": [
-                    {
-                      "required": [
-                        "custom_id",
-                        "qty",
-                        "name",
-                        "currency",
-                        "amount",
-                        "tax"
-                      ]
-                    },
-                    {
-                      "required": [
-                        "custom_id",
-                        "qty",
-                        "name",
-                        "currency",
-                        "amount",
-                        "vat_rate"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "additionalProperties": false,
-                  "type": "object",
-                  "properties": {
-                    "position": {
-                      "description": "Cart item position",
-                      "type": "number",
-                      "minimum": 0
-                    },
-                    "discountable": {
-                      "description": "Supports correct discount behavior without product lookup",
-                      "oneOf": [
-                        {
-                          "type": "boolean"
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ]
-                    },
-                    "product": {
-                      "description": "Identifier of the product",
-                      "example": "cd0a2886-e245-4ed9-a758-443e7e5b3a3f",
-                      "type": "string"
-                    },
-                    "qty": {
-                      "description": "Product quantity in the cart",
-                      "example": 2,
-                      "type": "number"
-                    },
-                    "currency": {
-                      "description": "Currency symbol",
-                      "example": "EUR",
-                      "type": "string",
-                      "minLength": 3,
-                      "maxLength": 3
-                    },
-                    "client_id": {
-                      "type": "string",
-                      "maxLength": 128
-                    },
-                    "addons": {
-                      "oneOf": [
-                        {
-                          "description": "The list of applied addons",
-                          "type": "array",
-                          "items": {
-                            "type": "object",
-                            "additionalProperties": false,
-                            "description": "Any applied addons as they happened at transaction creation time.",
-                            "properties": {
-                              "addon": {
-                                "type": "string",
-                                "format": "uuid",
-                                "description": "The Tillhub addon resource reference ID.",
-                                "example": "ac847a66-d7dc-4ac2-8e8a-c44920e1f220"
-                              },
-                              "product": {
-                                "oneOf": [
-                                  {
+                                  },
+                                  "order_index": {
+                                    "type": "integer"
+                                  },
+                                  "currency": {
                                     "type": "string",
-                                    "format": "uuid",
-                                    "description": "If available - the product set on the addon.",
-                                    "example": "ff847a44-07dc-4ac2-8e8a-c44920e1f220"
+                                    "minLength": 3,
+                                    "maxLength": 3
                                   },
-                                  {
-                                    "type": "null"
-                                  }
-                                ]
-                              },
-                              "price": {
-                                "type": "number",
-                                "description": "The fixed price for any addon, completely independent on the quantity.",
-                                "example": 0.99,
-                                "minimum": -1000000,
-                                "maximum": 1000000,
-                                "multipleOf": 0.01
-                              },
-                              "currency": {
-                                "type": "string",
-                                "description": "The ISO currency code for the addon's price.",
-                                "example": "EUR",
-                                "minLength": 3,
-                                "maxLength": 3
-                              },
-                              "quantity": {
-                                "type": "number",
-                                "description": "Number of times the addon is applied to the cart item. Respects the max_quantity setting on the Addon",
-                                "example": 3.6,
-                                "minimum": -32767,
-                                "maximum": 32767,
-                                "multipleOf": 0.001
-                              },
-                              "stock_quantity": {
-                                "type": "number",
-                                "description": "The quantity of this addon, e.g. 1 pc or 0.125kg - this does never affect the price (only used for stock).",
-                                "example": 3.6,
-                                "minimum": -32767,
-                                "maximum": 32767,
-                                "multipleOf": 0.001
-                              },
-                              "name": {
-                                "type": "string",
-                                "description": "The name of this addon to keep in case if original product has been changed",
-                                "example": "Extra Mushrooms",
-                                "minLength": 1,
-                                "maxLength": 256
-                              }
-                            },
-                            "required": [
-                              "addon",
-                              "price",
-                              "currency",
-                              "quantity",
-                              "name"
-                            ]
-                          }
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ]
-                    },
-                    "discounts": {
-                      "type": "array",
-                      "description": "external discounts that only take either discount format",
-                      "items": {
-                        "anyOf": [
-                          {
-                            "description": "discount based on rate, e.g. 10% = 0.1. Client should will apply this based on the volume of that cart item.",
-                            "additionalProperties": false,
-                            "type": "object",
-                            "properties": {
-                              "rate": {
-                                "oneOf": [
-                                  {
-                                    "type": "number",
-                                    "minimum": 0,
-                                    "maximum": 1
+                                  "client_id": {
+                                    "type": "string",
+                                    "maxLength": 128
                                   },
-                                  {
-                                    "type": "null"
+                                  "group": {
+                                    "type": "string",
+                                    "enum": [
+                                      "customer",
+                                      "staff",
+                                      "cart",
+                                      "product_set",
+                                      "item"
+                                    ]
+                                  },
+                                  "name": {
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "maxLength": 128
                                   }
+                                },
+                                "required": [
+                                  "currency",
+                                  "name",
+                                  "value"
                                 ]
                               },
-                              "order_index": {
-                                "type": "integer"
-                              },
-                              "currency": {
-                                "type": "string",
-                                "minLength": 3,
-                                "maxLength": 3
-                              },
-                              "client_id": {
-                                "type": "string",
-                                "maxLength": 128
-                              },
-                              "group": {
-                                "type": "string",
-                                "enum": [
-                                  "customer",
-                                  "staff",
-                                  "cart",
-                                  "product_set",
-                                  "item"
-                                ]
-                              },
-                              "name": {
-                                "type": "string",
-                                "minLength": 1,
-                                "maxLength": 128
-                              }
-                            },
-                            "required": [
-                              "currency",
-                              "name",
-                              "rate"
-                            ]
-                          },
-                          {
-                            "description": "discount based on value, e.g. 10 EUR = 10. Client should will subtract this from the volume of that cart item.",
-                            "additionalProperties": false,
-                            "type": "object",
-                            "properties": {
-                              "value": {
-                                "oneOf": [
-                                  {
+                              {
+                                "description": "discount based on amount total, e.g. 10 EUR = 10. Clients do no calculations and will subtract this value from a cart item.",
+                                "additionalProperties": false,
+                                "properties": {
+                                  "amount_total": {
                                     "type": "number"
                                   },
-                                  {
-                                    "type": "null"
+                                  "order_index": {
+                                    "type": "integer"
+                                  },
+                                  "currency": {
+                                    "type": "string",
+                                    "minLength": 3,
+                                    "maxLength": 3
+                                  },
+                                  "client_id": {
+                                    "type": "string",
+                                    "maxLength": 128
+                                  },
+                                  "group": {
+                                    "type": "string",
+                                    "enum": [
+                                      "customer",
+                                      "staff",
+                                      "cart",
+                                      "product_set",
+                                      "item"
+                                    ]
+                                  },
+                                  "name": {
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "maxLength": 128
                                   }
+                                },
+                                "required": [
+                                  "currency",
+                                  "name",
+                                  "amount_total"
                                 ]
                               },
-                              "order_index": {
-                                "type": "integer"
-                              },
-                              "currency": {
-                                "type": "string",
-                                "minLength": 3,
-                                "maxLength": 3
-                              },
-                              "client_id": {
-                                "type": "string",
-                                "maxLength": 128
-                              },
-                              "group": {
-                                "type": "string",
-                                "enum": [
-                                  "customer",
-                                  "staff",
-                                  "cart",
-                                  "product_set",
-                                  "item"
+                              {
+                                "description": "discount based on amount per item, e.g. 10 EUR with qty 100 will be = 1000. Clientstake this value and multiply it by the qty.",
+                                "additionalProperties": false,
+                                "properties": {
+                                  "amount": {
+                                    "type": "number"
+                                  },
+                                  "order_index": {
+                                    "type": "integer"
+                                  },
+                                  "currency": {
+                                    "type": "string",
+                                    "minLength": 3,
+                                    "maxLength": 3
+                                  },
+                                  "client_id": {
+                                    "type": "string",
+                                    "maxLength": 128
+                                  },
+                                  "group": {
+                                    "type": "string",
+                                    "enum": [
+                                      "customer",
+                                      "staff",
+                                      "cart",
+                                      "product_set",
+                                      "item"
+                                    ]
+                                  },
+                                  "name": {
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "maxLength": 128
+                                  }
+                                },
+                                "required": [
+                                  "currency",
+                                  "name",
+                                  "amount"
                                 ]
-                              },
-                              "name": {
-                                "type": "string",
-                                "minLength": 1,
-                                "maxLength": 128
                               }
-                            },
-                            "required": [
-                              "currency",
-                              "name",
-                              "value"
-                            ]
-                          },
-                          {
-                            "description": "discount based on amount total, e.g. 10 EUR = 10. Clients do no calculations and will subtract this value from a cart item.",
-                            "additionalProperties": false,
-                            "properties": {
-                              "amount_total": {
-                                "type": "number"
-                              },
-                              "order_index": {
-                                "type": "integer"
-                              },
-                              "currency": {
-                                "type": "string",
-                                "minLength": 3,
-                                "maxLength": 3
-                              },
-                              "client_id": {
-                                "type": "string",
-                                "maxLength": 128
-                              },
-                              "group": {
-                                "type": "string",
-                                "enum": [
-                                  "customer",
-                                  "staff",
-                                  "cart",
-                                  "product_set",
-                                  "item"
-                                ]
-                              },
-                              "name": {
-                                "type": "string",
-                                "minLength": 1,
-                                "maxLength": 128
-                              }
-                            },
-                            "required": [
-                              "currency",
-                              "name",
-                              "amount_total"
-                            ]
-                          },
-                          {
-                            "description": "discount based on amount per item, e.g. 10 EUR with qty 100 will be = 1000. Clientstake this value and multiply it by the qty.",
-                            "additionalProperties": false,
-                            "properties": {
-                              "amount": {
-                                "type": "number"
-                              },
-                              "order_index": {
-                                "type": "integer"
-                              },
-                              "currency": {
-                                "type": "string",
-                                "minLength": 3,
-                                "maxLength": 3
-                              },
-                              "client_id": {
-                                "type": "string",
-                                "maxLength": 128
-                              },
-                              "group": {
-                                "type": "string",
-                                "enum": [
-                                  "customer",
-                                  "staff",
-                                  "cart",
-                                  "product_set",
-                                  "item"
-                                ]
-                              },
-                              "name": {
-                                "type": "string",
-                                "minLength": 1,
-                                "maxLength": 128
-                              }
-                            },
-                            "required": [
-                              "currency",
-                              "name",
-                              "amount"
                             ]
                           }
-                        ]
-                      }
+                        },
+                        "name": {
+                          "description": "Cart item display name",
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 128
+                        },
+                        "position": {
+                          "description": "Cart item position",
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        "comments": {
+                          "description": "Additional comments",
+                          "anyOf": [
+                            {
+                              "type": "string",
+                              "maxLength": 4096
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ],
+                          "default": null
+                        },
+                        "client_id": {
+                          "type": "string",
+                          "maxLength": 128
+                        },
+                        "external_reference_id": {
+                          "oneOf": [
+                            {
+                              "type": "string",
+                              "example": "823742686434462376376376473647346",
+                              "maxLength": 128,
+                              "description": "Any identifier a user wants to store in the transaction system. E.g. an ID in a thirdy party ERP."
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "custom_properties": {
+                          "oneOf": [
+                            {
+                              "type": "null"
+                            },
+                            {
+                              "type": "object",
+                              "additionalProperties": false,
+                              "maxProperties": 50,
+                              "patternProperties": {
+                                "^.{1,128}$": {
+                                  "anyOf": [
+                                    {
+                                      "type": "null"
+                                    },
+                                    {
+                                      "type": "string"
+                                    },
+                                    {
+                                      "type": "number"
+                                    },
+                                    {
+                                      "type": "boolean"
+                                    },
+                                    {
+                                      "type": "array",
+                                      "items": {
+                                        "anyOf": [
+                                          {
+                                            "type": "string"
+                                          },
+                                          {
+                                            "type": "number"
+                                          },
+                                          {
+                                            "type": "boolean"
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            }
+                          ]
+                        },
+                        "salesman_staff": {
+                          "description": "Staff person ID",
+                          "example": "68722313-4077-42eb-8cc2-bf3359940efc",
+                          "oneOf": [
+                            {
+                              "type": "string",
+                              "format": "uuid"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "tax": {
+                          "description": "Tax rate ID. If not present, the \"vat_rate\" must be present. The active tax with such ID must be defined in the system",
+                          "type": "string",
+                          "format": "uuid"
+                        },
+                        "account": {
+                          "description": "Account ID",
+                          "type": "string",
+                          "format": "uuid"
+                        },
+                        "account_number": {
+                          "description": "Account number. The only one active account with the same number must be defined in the system (does not apply when \"account\" value is present)",
+                          "oneOf": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "product_group": {
+                          "description": "Product group ID",
+                          "oneOf": [
+                            {
+                              "type": "string",
+                              "format": "uuid"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        }
+                      },
+                      "anyOf": [
+                        {
+                          "required": [
+                            "custom_id",
+                            "qty",
+                            "name",
+                            "currency",
+                            "amount",
+                            "tax"
+                          ]
+                        },
+                        {
+                          "required": [
+                            "custom_id",
+                            "qty",
+                            "name",
+                            "currency",
+                            "amount",
+                            "vat_rate"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "additionalProperties": false,
+                      "type": "object",
+                      "properties": {
+                        "position": {
+                          "description": "Cart item position",
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        "discountable": {
+                          "description": "Supports correct discount behavior without product lookup",
+                          "oneOf": [
+                            {
+                              "type": "boolean"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "product": {
+                          "description": "Identifier of the product",
+                          "example": "cd0a2886-e245-4ed9-a758-443e7e5b3a3f",
+                          "type": "string"
+                        },
+                        "qty": {
+                          "description": "Product quantity in the cart",
+                          "example": 2,
+                          "type": "number"
+                        },
+                        "currency": {
+                          "description": "Currency symbol",
+                          "example": "EUR",
+                          "type": "string",
+                          "minLength": 3,
+                          "maxLength": 3
+                        },
+                        "client_id": {
+                          "type": "string",
+                          "maxLength": 128
+                        },
+                        "addons": {
+                          "oneOf": [
+                            {
+                              "description": "The list of applied addons",
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "additionalProperties": false,
+                                "description": "Any applied addons as they happened at transaction creation time.",
+                                "properties": {
+                                  "addon": {
+                                    "type": "string",
+                                    "format": "uuid",
+                                    "description": "The Tillhub addon resource reference ID.",
+                                    "example": "ac847a66-d7dc-4ac2-8e8a-c44920e1f220"
+                                  },
+                                  "product": {
+                                    "oneOf": [
+                                      {
+                                        "type": "string",
+                                        "format": "uuid",
+                                        "description": "If available - the product set on the addon.",
+                                        "example": "ff847a44-07dc-4ac2-8e8a-c44920e1f220"
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
+                                  },
+                                  "price": {
+                                    "type": "number",
+                                    "description": "The fixed price for any addon, completely independent on the quantity.",
+                                    "example": 0.99,
+                                    "minimum": -1000000,
+                                    "maximum": 1000000,
+                                    "multipleOf": 0.01
+                                  },
+                                  "currency": {
+                                    "type": "string",
+                                    "description": "The ISO currency code for the addon's price.",
+                                    "example": "EUR",
+                                    "minLength": 3,
+                                    "maxLength": 3
+                                  },
+                                  "quantity": {
+                                    "type": "number",
+                                    "description": "Number of times the addon is applied to the cart item. Respects the max_quantity setting on the Addon",
+                                    "example": 3.6,
+                                    "minimum": -32767,
+                                    "maximum": 32767,
+                                    "multipleOf": 0.001
+                                  },
+                                  "stock_quantity": {
+                                    "type": "number",
+                                    "description": "The quantity of this addon, e.g. 1 pc or 0.125kg - this does never affect the price (only used for stock).",
+                                    "example": 3.6,
+                                    "minimum": -32767,
+                                    "maximum": 32767,
+                                    "multipleOf": 0.001
+                                  },
+                                  "name": {
+                                    "type": "string",
+                                    "description": "The name of this addon to keep in case if original product has been changed",
+                                    "example": "Extra Mushrooms",
+                                    "minLength": 1,
+                                    "maxLength": 256
+                                  }
+                                },
+                                "required": [
+                                  "addon",
+                                  "price",
+                                  "currency",
+                                  "quantity",
+                                  "name"
+                                ]
+                              }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "discounts": {
+                          "type": "array",
+                          "description": "external discounts that only take either discount format",
+                          "items": {
+                            "anyOf": [
+                              {
+                                "description": "discount based on rate, e.g. 10% = 0.1. Client should will apply this based on the volume of that cart item.",
+                                "additionalProperties": false,
+                                "type": "object",
+                                "properties": {
+                                  "rate": {
+                                    "oneOf": [
+                                      {
+                                        "type": "number",
+                                        "minimum": 0,
+                                        "maximum": 1
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
+                                  },
+                                  "order_index": {
+                                    "type": "integer"
+                                  },
+                                  "currency": {
+                                    "type": "string",
+                                    "minLength": 3,
+                                    "maxLength": 3
+                                  },
+                                  "client_id": {
+                                    "type": "string",
+                                    "maxLength": 128
+                                  },
+                                  "group": {
+                                    "type": "string",
+                                    "enum": [
+                                      "customer",
+                                      "staff",
+                                      "cart",
+                                      "product_set",
+                                      "item"
+                                    ]
+                                  },
+                                  "name": {
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "maxLength": 128
+                                  }
+                                },
+                                "required": [
+                                  "currency",
+                                  "name",
+                                  "rate"
+                                ]
+                              },
+                              {
+                                "description": "discount based on value, e.g. 10 EUR = 10. Client should will subtract this from the volume of that cart item.",
+                                "additionalProperties": false,
+                                "type": "object",
+                                "properties": {
+                                  "value": {
+                                    "oneOf": [
+                                      {
+                                        "type": "number"
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
+                                  },
+                                  "order_index": {
+                                    "type": "integer"
+                                  },
+                                  "currency": {
+                                    "type": "string",
+                                    "minLength": 3,
+                                    "maxLength": 3
+                                  },
+                                  "client_id": {
+                                    "type": "string",
+                                    "maxLength": 128
+                                  },
+                                  "group": {
+                                    "type": "string",
+                                    "enum": [
+                                      "customer",
+                                      "staff",
+                                      "cart",
+                                      "product_set",
+                                      "item"
+                                    ]
+                                  },
+                                  "name": {
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "maxLength": 128
+                                  }
+                                },
+                                "required": [
+                                  "currency",
+                                  "name",
+                                  "value"
+                                ]
+                              },
+                              {
+                                "description": "discount based on amount total, e.g. 10 EUR = 10. Clients do no calculations and will subtract this value from a cart item.",
+                                "additionalProperties": false,
+                                "properties": {
+                                  "amount_total": {
+                                    "type": "number"
+                                  },
+                                  "order_index": {
+                                    "type": "integer"
+                                  },
+                                  "currency": {
+                                    "type": "string",
+                                    "minLength": 3,
+                                    "maxLength": 3
+                                  },
+                                  "client_id": {
+                                    "type": "string",
+                                    "maxLength": 128
+                                  },
+                                  "group": {
+                                    "type": "string",
+                                    "enum": [
+                                      "customer",
+                                      "staff",
+                                      "cart",
+                                      "product_set",
+                                      "item"
+                                    ]
+                                  },
+                                  "name": {
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "maxLength": 128
+                                  }
+                                },
+                                "required": [
+                                  "currency",
+                                  "name",
+                                  "amount_total"
+                                ]
+                              },
+                              {
+                                "description": "discount based on amount per item, e.g. 10 EUR with qty 100 will be = 1000. Clientstake this value and multiply it by the qty.",
+                                "additionalProperties": false,
+                                "properties": {
+                                  "amount": {
+                                    "type": "number"
+                                  },
+                                  "order_index": {
+                                    "type": "integer"
+                                  },
+                                  "currency": {
+                                    "type": "string",
+                                    "minLength": 3,
+                                    "maxLength": 3
+                                  },
+                                  "client_id": {
+                                    "type": "string",
+                                    "maxLength": 128
+                                  },
+                                  "group": {
+                                    "type": "string",
+                                    "enum": [
+                                      "customer",
+                                      "staff",
+                                      "cart",
+                                      "product_set",
+                                      "item"
+                                    ]
+                                  },
+                                  "name": {
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "maxLength": 128
+                                  }
+                                },
+                                "required": [
+                                  "currency",
+                                  "name",
+                                  "amount"
+                                ]
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "required": [
+                        "product",
+                        "currency",
+                        "qty"
+                      ]
                     }
-                  },
-                  "required": [
-                    "product",
-                    "currency",
-                    "qty"
                   ]
                 }
-              ]
-            }
+              },
+              {
+                "type": "null"
+              }
+            ]
           },
           "metadata": {
             "oneOf": [

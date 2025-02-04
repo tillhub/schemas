@@ -1,3 +1,10 @@
+# [6.355.0](https://github.com/tillhub/schemas/compare/v6.354.0...v6.355.0) (2025-02-04)
+
+
+### Features
+
+* **carts:** support carts without items ([#1025](https://github.com/tillhub/schemas/issues/1025)) ([97965a9](https://github.com/tillhub/schemas/commit/97965a9))
+
 # [6.354.0](https://github.com/tillhub/schemas/compare/v6.353.0...v6.354.0) (2025-01-30)
 
 
