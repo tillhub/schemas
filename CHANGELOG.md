@@ -1,3 +1,10 @@
+# [6.356.0](https://github.com/tillhub/schemas/compare/v6.355.0...v6.356.0) (2025-02-05)
+
+
+### Features
+
+* **table_layout:** table_layout_v1 added ([#1027](https://github.com/tillhub/schemas/issues/1027)) ([5b2267e](https://github.com/tillhub/schemas/commit/5b2267e))
+
 # [6.355.0](https://github.com/tillhub/schemas/compare/v6.354.0...v6.355.0) (2025-02-04)
 
 
