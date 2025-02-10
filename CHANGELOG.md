@@ -1,3 +1,10 @@
+## [6.356.1](https://github.com/tillhub/schemas/compare/v6.356.0...v6.356.1) (2025-02-10)
+
+
+### Bug Fixes
+
+* **table_layout_v1:** adding the missing schema for duplicate ([#1030](https://github.com/tillhub/schemas/issues/1030)) ([b167480](https://github.com/tillhub/schemas/commit/b167480))
+
 # [6.356.0](https://github.com/tillhub/schemas/compare/v6.355.0...v6.356.0) (2025-02-05)
 
 
