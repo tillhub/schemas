@@ -1,3 +1,11 @@
+# [6.357.0](https://github.com/tillhub/schemas/compare/v6.356.1...v6.357.0) (2025-02-12)
+
+
+### Features
+
+* **common:** addresses ([66e2c2d](https://github.com/tillhub/schemas/commit/66e2c2d))
+* **products:** if sellable is false, we should't reuqire gross price ([#1032](https://github.com/tillhub/schemas/issues/1032)) ([6f7500c](https://github.com/tillhub/schemas/commit/6f7500c))
+
 ## [6.356.1](https://github.com/tillhub/schemas/compare/v6.356.0...v6.356.1) (2025-02-10)
 
 

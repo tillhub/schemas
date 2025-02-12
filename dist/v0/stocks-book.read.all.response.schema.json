@@ -3098,19 +3098,29 @@
                     ]
                   },
                   "addresses": {
-                    "description": "A Tillhub address object, with different types of addresses. More description in the properties...",
-                    "anyOf": [
+                    "oneOf": [
                       {
+                        "description": "A Tillhub address array, with different types of addresses. More description in the properties...",
                         "type": "array",
                         "maxItems": 3,
                         "items": {
                           "type": "object",
                           "additionalProperties": false,
+                          "description": "Downstream delivery of a date.",
+                          "required": [
+                            "lines",
+                            "street",
+                            "locality",
+                            "region",
+                            "postal_code",
+                            "country"
+                          ],
                           "properties": {
                             "lines": {
-                              "description": "The international non-street format for arbitrary addresses. This should be set to null as it is currently not supported by the client application.",
                               "oneOf": [
                                 {
+                                  "description": "Address details",
+                                  "example": "Penthouse",
                                   "type": "array",
                                   "minItems": 1,
                                   "maxItems": 4,
@@ -3125,12 +3135,11 @@
                               ]
                             },
                             "street": {
-                              "description": "A street name",
-                              "example": "Downing Street",
                               "oneOf": [
                                 {
-                                  "type": "string",
-                                  "maxLength": 512
+                                  "description": "Street name",
+                                  "example": "Genthiner Str.",
+                                  "type": "string"
                                 },
                                 {
                                   "type": "null"
@@ -3138,12 +3147,11 @@
                               ]
                             },
                             "street_number": {
-                              "description": "A street number",
-                              "example": "10",
                               "oneOf": [
                                 {
-                                  "type": "string",
-                                  "maxLength": 16
+                                  "description": "Building number",
+                                  "example": "34",
+                                  "type": "string"
                                 },
                                 {
                                   "type": "null"
@@ -3151,10 +3159,10 @@
                               ]
                             },
                             "locality": {
-                              "description": "The international format for a city, village and any other localizable city like place.",
-                              "example": "London",
                               "oneOf": [
                                 {
+                                  "description": "Locality name (city, village, etc.)",
+                                  "example": "Berlin",
                                   "type": "string"
                                 },
                                 {
@@ -3163,10 +3171,10 @@
                               ]
                             },
                             "region": {
-                              "description": "The international format for regional sub category of a country e.g. a state or province.",
-                              "example": "Greater London",
                               "oneOf": [
                                 {
+                                  "description": "Region name",
+                                  "example": "Branderburg",
                                   "type": "string"
                                 },
                                 {
@@ -3175,10 +3183,10 @@
                               ]
                             },
                             "postal_code": {
-                              "description": "A non-validated postal code.",
-                              "example": "SW1A",
                               "oneOf": [
                                 {
+                                  "description": "Postal code",
+                                  "example": "10785",
                                   "type": "string",
                                   "maxLength": 10
                                 },
@@ -3188,10 +3196,10 @@
                               ]
                             },
                             "country": {
-                              "description": "A country as ISO Alpha-2 code.",
-                              "example": "UK",
                               "oneOf": [
                                 {
+                                  "description": "A country as ISO Alpha-2 code.",
+                                  "example": "DE",
                                   "type": "string",
                                   "minLength": 2,
                                   "maxLength": 2,
@@ -3203,16 +3211,18 @@
                               ]
                             },
                             "type": {
-                              "description": "The types of addresses. Types are used to direct specific behaviours in financial or stock operation. If none of them is necessary is used implementers should take the local type.",
                               "oneOf": [
                                 {
+                                  "description": "Address type",
+                                  "example": "delivery",
                                   "type": "string",
                                   "enum": [
+                                    "local",
                                     "delivery",
                                     "billing",
-                                    "local"
-                                  ],
-                                  "default": "local"
+                                    "home",
+                                    "work"
+                                  ]
                                 },
                                 {
                                   "type": "null"
@@ -3220,11 +3230,11 @@
                               ]
                             },
                             "reservations_google_maps_address": {
-                              "description": "The location of the branch on Google Maps",
-                              "example": "https://maps.app.goo.gl/tpF7EMsEC7Wy5hmd6",
-                              "pattern": "^https:\\/\\/maps\\.app\\.goo\\.gl\\/[A-Za-z0-9]*$",
                               "oneOf": [
                                 {
+                                  "description": "The location of the branch on Google Maps",
+                                  "example": "https://maps.app.goo.gl/tpF7EMsEC7Wy5hmd6",
+                                  "pattern": "^https:\\/\\/maps\\.app\\.goo\\.gl\\/[A-Za-z0-9]*$",
                                   "type": "string"
                                 },
                                 {
@@ -3232,17 +3242,7 @@
                                 }
                               ]
                             }
-                          },
-                          "required": [
-                            "lines",
-                            "street",
-                            "street_number",
-                            "locality",
-                            "region",
-                            "postal_code",
-                            "country",
-                            "type"
-                          ]
+                          }
                         }
                       },
                       {
@@ -3850,19 +3850,29 @@
                     ]
                   },
                   "addresses": {
-                    "description": "A Tillhub address object, with different types of addresses. More description in the properties...",
-                    "anyOf": [
+                    "oneOf": [
                       {
+                        "description": "A Tillhub address array, with different types of addresses. More description in the properties...",
                         "type": "array",
                         "maxItems": 3,
                         "items": {
                           "type": "object",
                           "additionalProperties": false,
+                          "description": "Downstream delivery of a date.",
+                          "required": [
+                            "lines",
+                            "street",
+                            "locality",
+                            "region",
+                            "postal_code",
+                            "country"
+                          ],
                           "properties": {
                             "lines": {
-                              "description": "The international non-street format for arbitrary addresses. This should be set to null as it is currently not supported by the client application.",
                               "oneOf": [
                                 {
+                                  "description": "Address details",
+                                  "example": "Penthouse",
                                   "type": "array",
                                   "minItems": 1,
                                   "maxItems": 4,
@@ -3877,12 +3887,11 @@
                               ]
                             },
                             "street": {
-                              "description": "A street name",
-                              "example": "Downing Street",
                               "oneOf": [
                                 {
-                                  "type": "string",
-                                  "maxLength": 512
+                                  "description": "Street name",
+                                  "example": "Genthiner Str.",
+                                  "type": "string"
                                 },
                                 {
                                   "type": "null"
@@ -3890,12 +3899,11 @@
                               ]
                             },
                             "street_number": {
-                              "description": "A street number",
-                              "example": "10",
                               "oneOf": [
                                 {
-                                  "type": "string",
-                                  "maxLength": 16
+                                  "description": "Building number",
+                                  "example": "34",
+                                  "type": "string"
                                 },
                                 {
                                   "type": "null"
@@ -3903,10 +3911,10 @@
                               ]
                             },
                             "locality": {
-                              "description": "The international format for a city, village and any other localizable city like place.",
-                              "example": "London",
                               "oneOf": [
                                 {
+                                  "description": "Locality name (city, village, etc.)",
+                                  "example": "Berlin",
                                   "type": "string"
                                 },
                                 {
@@ -3915,10 +3923,10 @@
                               ]
                             },
                             "region": {
-                              "description": "The international format for regional sub category of a country e.g. a state or province.",
-                              "example": "Greater London",
                               "oneOf": [
                                 {
+                                  "description": "Region name",
+                                  "example": "Branderburg",
                                   "type": "string"
                                 },
                                 {
@@ -3927,10 +3935,10 @@
                               ]
                             },
                             "postal_code": {
-                              "description": "A non-validated postal code.",
-                              "example": "SW1A",
                               "oneOf": [
                                 {
+                                  "description": "Postal code",
+                                  "example": "10785",
                                   "type": "string",
                                   "maxLength": 10
                                 },
@@ -3940,10 +3948,10 @@
                               ]
                             },
                             "country": {
-                              "description": "A country as ISO Alpha-2 code.",
-                              "example": "UK",
                               "oneOf": [
                                 {
+                                  "description": "A country as ISO Alpha-2 code.",
+                                  "example": "DE",
                                   "type": "string",
                                   "minLength": 2,
                                   "maxLength": 2,
@@ -3955,16 +3963,18 @@
                               ]
                             },
                             "type": {
-                              "description": "The types of addresses. Types are used to direct specific behaviours in financial or stock operation. If none of them is necessary is used implementers should take the local type.",
                               "oneOf": [
                                 {
+                                  "description": "Address type",
+                                  "example": "delivery",
                                   "type": "string",
                                   "enum": [
+                                    "local",
                                     "delivery",
                                     "billing",
-                                    "local"
-                                  ],
-                                  "default": "local"
+                                    "home",
+                                    "work"
+                                  ]
                                 },
                                 {
                                   "type": "null"
@@ -3972,11 +3982,11 @@
                               ]
                             },
                             "reservations_google_maps_address": {
-                              "description": "The location of the branch on Google Maps",
-                              "example": "https://maps.app.goo.gl/tpF7EMsEC7Wy5hmd6",
-                              "pattern": "^https:\\/\\/maps\\.app\\.goo\\.gl\\/[A-Za-z0-9]*$",
                               "oneOf": [
                                 {
+                                  "description": "The location of the branch on Google Maps",
+                                  "example": "https://maps.app.goo.gl/tpF7EMsEC7Wy5hmd6",
+                                  "pattern": "^https:\\/\\/maps\\.app\\.goo\\.gl\\/[A-Za-z0-9]*$",
                                   "type": "string"
                                 },
                                 {
@@ -3984,17 +3994,7 @@
                                 }
                               ]
                             }
-                          },
-                          "required": [
-                            "lines",
-                            "street",
-                            "street_number",
-                            "locality",
-                            "region",
-                            "postal_code",
-                            "country",
-                            "type"
-                          ]
+                          }
                         }
                       },
                       {
@@ -4592,19 +4592,29 @@
                     ]
                   },
                   "addresses": {
-                    "description": "A Tillhub address object, with different types of addresses. More description in the properties...",
-                    "anyOf": [
+                    "oneOf": [
                       {
+                        "description": "A Tillhub address array, with different types of addresses. More description in the properties...",
                         "type": "array",
                         "maxItems": 3,
                         "items": {
                           "type": "object",
                           "additionalProperties": false,
+                          "description": "Downstream delivery of a date.",
+                          "required": [
+                            "lines",
+                            "street",
+                            "locality",
+                            "region",
+                            "postal_code",
+                            "country"
+                          ],
                           "properties": {
                             "lines": {
-                              "description": "The international non-street format for arbitrary addresses. This should be set to null as it is currently not supported by the client application.",
                               "oneOf": [
                                 {
+                                  "description": "Address details",
+                                  "example": "Penthouse",
                                   "type": "array",
                                   "minItems": 1,
                                   "maxItems": 4,
@@ -4619,12 +4629,11 @@
                               ]
                             },
                             "street": {
-                              "description": "A street name",
-                              "example": "Downing Street",
                               "oneOf": [
                                 {
-                                  "type": "string",
-                                  "maxLength": 512
+                                  "description": "Street name",
+                                  "example": "Genthiner Str.",
+                                  "type": "string"
                                 },
                                 {
                                   "type": "null"
@@ -4632,12 +4641,11 @@
                               ]
                             },
                             "street_number": {
-                              "description": "A street number",
-                              "example": "10",
                               "oneOf": [
                                 {
-                                  "type": "string",
-                                  "maxLength": 16
+                                  "description": "Building number",
+                                  "example": "34",
+                                  "type": "string"
                                 },
                                 {
                                   "type": "null"
@@ -4645,10 +4653,10 @@
                               ]
                             },
                             "locality": {
-                              "description": "The international format for a city, village and any other localizable city like place.",
-                              "example": "London",
                               "oneOf": [
                                 {
+                                  "description": "Locality name (city, village, etc.)",
+                                  "example": "Berlin",
                                   "type": "string"
                                 },
                                 {
@@ -4657,10 +4665,10 @@
                               ]
                             },
                             "region": {
-                              "description": "The international format for regional sub category of a country e.g. a state or province.",
-                              "example": "Greater London",
                               "oneOf": [
                                 {
+                                  "description": "Region name",
+                                  "example": "Branderburg",
                                   "type": "string"
                                 },
                                 {
@@ -4669,10 +4677,10 @@
                               ]
                             },
                             "postal_code": {
-                              "description": "A non-validated postal code.",
-                              "example": "SW1A",
                               "oneOf": [
                                 {
+                                  "description": "Postal code",
+                                  "example": "10785",
                                   "type": "string",
                                   "maxLength": 10
                                 },
@@ -4682,10 +4690,10 @@
                               ]
                             },
                             "country": {
-                              "description": "A country as ISO Alpha-2 code.",
-                              "example": "UK",
                               "oneOf": [
                                 {
+                                  "description": "A country as ISO Alpha-2 code.",
+                                  "example": "DE",
                                   "type": "string",
                                   "minLength": 2,
                                   "maxLength": 2,
@@ -4697,16 +4705,18 @@
                               ]
                             },
                             "type": {
-                              "description": "The types of addresses. Types are used to direct specific behaviours in financial or stock operation. If none of them is necessary is used implementers should take the local type.",
                               "oneOf": [
                                 {
+                                  "description": "Address type",
+                                  "example": "delivery",
                                   "type": "string",
                                   "enum": [
+                                    "local",
                                     "delivery",
                                     "billing",
-                                    "local"
-                                  ],
-                                  "default": "local"
+                                    "home",
+                                    "work"
+                                  ]
                                 },
                                 {
                                   "type": "null"
@@ -4714,11 +4724,11 @@
                               ]
                             },
                             "reservations_google_maps_address": {
-                              "description": "The location of the branch on Google Maps",
-                              "example": "https://maps.app.goo.gl/tpF7EMsEC7Wy5hmd6",
-                              "pattern": "^https:\\/\\/maps\\.app\\.goo\\.gl\\/[A-Za-z0-9]*$",
                               "oneOf": [
                                 {
+                                  "description": "The location of the branch on Google Maps",
+                                  "example": "https://maps.app.goo.gl/tpF7EMsEC7Wy5hmd6",
+                                  "pattern": "^https:\\/\\/maps\\.app\\.goo\\.gl\\/[A-Za-z0-9]*$",
                                   "type": "string"
                                 },
                                 {
@@ -4726,17 +4736,7 @@
                                 }
                               ]
                             }
-                          },
-                          "required": [
-                            "lines",
-                            "street",
-                            "street_number",
-                            "locality",
-                            "region",
-                            "postal_code",
-                            "country",
-                            "type"
-                          ]
+                          }
                         }
                       },
                       {

@@ -2608,23 +2608,36 @@
                   "allOf": [
                     {
                       "if": {
-                        "properties": {
-                          "configuration": {
-                            "type": "object",
+                        "allOf": [
+                          {
                             "properties": {
-                              "pricing": {
+                              "configuration": {
                                 "type": "object",
                                 "properties": {
-                                  "request_input": {
-                                    "not": {
-                                      "const": true
+                                  "pricing": {
+                                    "type": "object",
+                                    "properties": {
+                                      "request_input": {
+                                        "not": {
+                                          "const": true
+                                        }
+                                      }
                                     }
                                   }
                                 }
                               }
                             }
+                          },
+                          {
+                            "properties": {
+                              "sellable": {
+                                "not": {
+                                  "const": false
+                                }
+                              }
+                            }
                           }
-                        }
+                        ]
                       },
                       "then": {
                         "properties": {
@@ -4763,23 +4776,36 @@
         "allOf": [
           {
             "if": {
-              "properties": {
-                "configuration": {
-                  "type": "object",
+              "allOf": [
+                {
                   "properties": {
-                    "pricing": {
+                    "configuration": {
                       "type": "object",
                       "properties": {
-                        "request_input": {
-                          "not": {
-                            "const": true
+                        "pricing": {
+                          "type": "object",
+                          "properties": {
+                            "request_input": {
+                              "not": {
+                                "const": true
+                              }
+                            }
                           }
                         }
                       }
                     }
                   }
+                },
+                {
+                  "properties": {
+                    "sellable": {
+                      "not": {
+                        "const": false
+                      }
+                    }
+                  }
                 }
-              }
+              ]
             },
             "then": {
               "properties": {
