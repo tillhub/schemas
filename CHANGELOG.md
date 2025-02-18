@@ -1,3 +1,10 @@
+## [6.357.1](https://github.com/tillhub/schemas/compare/v6.357.0...v6.357.1) (2025-02-18)
+
+
+### Bug Fixes
+
+* **common:** addresses ([44a00b3](https://github.com/tillhub/schemas/commit/44a00b3))
+
 # [6.357.0](https://github.com/tillhub/schemas/compare/v6.356.1...v6.357.0) (2025-02-12)
 
 

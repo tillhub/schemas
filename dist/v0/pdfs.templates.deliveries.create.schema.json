@@ -81,7 +81,6 @@
           "additionalProperties": false,
           "description": "Downstream delivery of a date.",
           "required": [
-            "lines",
             "street",
             "locality",
             "region",
@@ -257,7 +256,6 @@
           "additionalProperties": false,
           "description": "Downstream delivery of a date.",
           "required": [
-            "lines",
             "street",
             "locality",
             "region",
