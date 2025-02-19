@@ -2565,6 +2565,9 @@
       "if": {
         "allOf": [
           {
+            "required": [
+              "configuration"
+            ],
             "properties": {
               "configuration": {
                 "type": "object",
@@ -2595,27 +2598,36 @@
         ]
       },
       "then": {
+        "required": [
+          "prices"
+        ],
         "properties": {
           "prices": {
             "type": "object",
+            "required": [
+              "default_prices"
+            ],
             "properties": {
               "default_prices": {
                 "type": "array",
                 "contains": {
                   "type": "object",
+                  "required": [
+                    "amount"
+                  ],
                   "properties": {
                     "amount": {
                       "type": "object",
+                      "required": [
+                        "gross"
+                      ],
                       "properties": {
                         "gross": {
                           "type": "number",
                           "minimum": 0,
                           "multipleOf": 0.01
                         }
-                      },
-                      "required": [
-                        "gross"
-                      ]
+                      }
                     }
                   }
                 }
