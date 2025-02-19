@@ -1,3 +1,10 @@
+# [6.358.0](https://github.com/tillhub/schemas/compare/v6.357.1...v6.358.0) (2025-02-19)
+
+
+### Features
+
+* **products:** gross price validation for bulk edit ([#1034](https://github.com/tillhub/schemas/issues/1034)) ([20116d1](https://github.com/tillhub/schemas/commit/20116d1))
+
 ## [6.357.1](https://github.com/tillhub/schemas/compare/v6.357.0...v6.357.1) (2025-02-18)
 
 
