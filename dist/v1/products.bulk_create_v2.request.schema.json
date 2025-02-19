@@ -2608,39 +2608,37 @@
                   "allOf": [
                     {
                       "if": {
-                        "allOf": [
-                          {
+                        "required": [
+                          "configuration"
+                        ],
+                        "properties": {
+                          "configuration": {
+                            "type": "object",
                             "required": [
-                              "configuration"
+                              "pricing"
                             ],
                             "properties": {
-                              "configuration": {
+                              "pricing": {
                                 "type": "object",
+                                "required": [
+                                  "request_input"
+                                ],
                                 "properties": {
-                                  "pricing": {
-                                    "type": "object",
-                                    "properties": {
-                                      "request_input": {
-                                        "not": {
-                                          "const": true
-                                        }
-                                      }
+                                  "request_input": {
+                                    "not": {
+                                      "const": true
                                     }
                                   }
                                 }
                               }
                             }
                           },
-                          {
-                            "properties": {
-                              "sellable": {
-                                "not": {
-                                  "const": false
-                                }
-                              }
+                          "sellable": {
+                            "not": {
+                              "const": false
                             }
                           }
-                        ]
+                        }
                       },
                       "then": {
                         "required": [
@@ -4788,39 +4786,37 @@
         "allOf": [
           {
             "if": {
-              "allOf": [
-                {
+              "required": [
+                "configuration"
+              ],
+              "properties": {
+                "configuration": {
+                  "type": "object",
                   "required": [
-                    "configuration"
+                    "pricing"
                   ],
                   "properties": {
-                    "configuration": {
+                    "pricing": {
                       "type": "object",
+                      "required": [
+                        "request_input"
+                      ],
                       "properties": {
-                        "pricing": {
-                          "type": "object",
-                          "properties": {
-                            "request_input": {
-                              "not": {
-                                "const": true
-                              }
-                            }
+                        "request_input": {
+                          "not": {
+                            "const": true
                           }
                         }
                       }
                     }
                   }
                 },
-                {
-                  "properties": {
-                    "sellable": {
-                      "not": {
-                        "const": false
-                      }
-                    }
+                "sellable": {
+                  "not": {
+                    "const": false
                   }
                 }
-              ]
+              }
             },
             "then": {
               "required": [

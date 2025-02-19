@@ -1,3 +1,10 @@
+# [6.360.0](https://github.com/tillhub/schemas/compare/v6.359.0...v6.360.0) (2025-02-19)
+
+
+### Features
+
+* **products:** price condition fix ([#1036](https://github.com/tillhub/schemas/issues/1036)) ([2bbbe98](https://github.com/tillhub/schemas/commit/2bbbe98))
+
 # [6.359.0](https://github.com/tillhub/schemas/compare/v6.358.0...v6.359.0) (2025-02-19)
 
 
