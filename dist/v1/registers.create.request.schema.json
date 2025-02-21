@@ -269,14 +269,18 @@
                   "additionalProperties": false,
                   "properties": {
                     "ip": {
-                      "type": "string",
-                      "description": "The local IP-address of the client application",
-                      "example": "192.168.1.147"
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "description": "The local IP-address of the client application",
+                          "example": "192.168.1.147"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
                     }
-                  },
-                  "required": [
-                    "ip"
-                  ]
+                  }
                 },
                 {
                   "type": "null"

@@ -43,6 +43,20 @@
                   "type": "null"
                 }
               ]
+            },
+            "api_timeout": {
+              "oneOf": [
+                {
+                  "description": "Specifies the applications timeout for voucher-api-requests.",
+                  "type": "number",
+                  "minimum": 5,
+                  "maximum": 120,
+                  "default": 30
+                },
+                {
+                  "type": "null"
+                }
+              ]
             }
           }
         },

@@ -1,3 +1,11 @@
+# [6.361.0](https://github.com/tillhub/schemas/compare/v6.360.0...v6.361.0) (2025-02-21)
+
+
+### Features
+
+* **configurations:** vouchers ([c1451c5](https://github.com/tillhub/schemas/commit/c1451c5))
+* **registers:** device_configuration ([29096d8](https://github.com/tillhub/schemas/commit/29096d8))
+
 # [6.360.0](https://github.com/tillhub/schemas/compare/v6.359.0...v6.360.0) (2025-02-19)
 
 
