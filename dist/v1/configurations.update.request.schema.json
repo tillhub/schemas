@@ -3086,6 +3086,23 @@
               "type": "null"
             }
           ]
+        },
+        "floor_layout": {
+          "oneOf": [
+            {
+              "description": "Specifies if the classic grid or the visual layout will be used",
+              "example": "visual",
+              "type": "string",
+              "enum": [
+                "grid",
+                "visual"
+              ],
+              "default": "grid"
+            },
+            {
+              "type": "null"
+            }
+          ]
         }
       }
     },
