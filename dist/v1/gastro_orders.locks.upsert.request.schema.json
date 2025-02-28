@@ -44,8 +44,8 @@
         "unlocked"
       ]
     },
-    "revision": {
-      "type": "integer"
+    "hash": {
+      "type": "string"
     }
   }
 }
