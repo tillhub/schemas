@@ -10,7 +10,7 @@
     "order_date",
     "expires_at",
     "status",
-    "revision"
+    "hash"
   ],
   "properties": {
     "order_id": {

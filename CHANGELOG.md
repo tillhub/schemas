@@ -1,3 +1,10 @@
+# [6.364.0](https://github.com/tillhub/schemas/compare/v6.363.0...v6.364.0) (2025-02-28)
+
+
+### Features
+
+* **gastro-order-locks:** hash fix ([#1040](https://github.com/tillhub/schemas/issues/1040)) ([f8411de](https://github.com/tillhub/schemas/commit/f8411de))
+
 # [6.363.0](https://github.com/tillhub/schemas/compare/v6.362.0...v6.363.0) (2025-02-28)
 
 
