@@ -1,3 +1,10 @@
+# [6.365.0](https://github.com/tillhub/schemas/compare/v6.364.0...v6.365.0) (2025-02-28)
+
+
+### Features
+
+* **client_accounts:** features ([10f0de5](https://github.com/tillhub/schemas/commit/10f0de5))
+
 # [6.364.0](https://github.com/tillhub/schemas/compare/v6.363.0...v6.364.0) (2025-02-28)
 
 
