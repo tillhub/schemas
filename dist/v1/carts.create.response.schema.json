@@ -1440,6 +1440,85 @@
                               "type": "null"
                             }
                           ]
+                        },
+                        "configuration": {
+                          "oneOf": [
+                            {
+                              "type": "object",
+                              "description": "Item property changes triggered by a user decision.",
+                              "properties": {
+                                "tax_switched": {
+                                  "oneOf": [
+                                    {
+                                      "type": "boolean"
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "action": {
+                                  "oneOf": [
+                                    {
+                                      "type": "object",
+                                      "properties": {
+                                        "tax": {
+                                          "oneOf": [
+                                            {
+                                              "type": "string",
+                                              "format": "uuid"
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        },
+                                        "default": {
+                                          "oneOf": [
+                                            {
+                                              "type": "boolean"
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        },
+                                        "name": {
+                                          "oneOf": [
+                                            {
+                                              "type": "string"
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "link_id": {
+                                  "oneOf": [
+                                    {
+                                      "type": "string",
+                                      "format": "uuid",
+                                      "description": "Inheritable/copyable identifier in context of order incarnations until a transaction",
+                                      "example": "a5380b42-6025-49de-bb1d-c9357df96506"
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                }
+                              }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
                         }
                       },
                       "anyOf": [
