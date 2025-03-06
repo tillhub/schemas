@@ -1,3 +1,10 @@
+# [6.368.0](https://github.com/tillhub/schemas/compare/v6.367.0...v6.368.0) (2025-03-06)
+
+
+### Features
+
+* **configurations:** balances ([d170680](https://github.com/tillhub/schemas/commit/d170680))
+
 # [6.367.0](https://github.com/tillhub/schemas/compare/v6.366.0...v6.367.0) (2025-03-01)
 
 

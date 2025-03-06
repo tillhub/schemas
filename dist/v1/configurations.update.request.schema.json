@@ -10093,7 +10093,7 @@
                 {
                   "description": "If true, balances are not conductable without fiat/cash cashflows.",
                   "type": "boolean",
-                  "default": true
+                  "default": false
                 },
                 {
                   "type": "null"
