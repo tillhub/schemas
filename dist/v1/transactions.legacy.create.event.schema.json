@@ -40,7 +40,7 @@
     },
     "timestamp": {
       "description": "The date and time event was received by webhooks service",
-      "example": "2025-03-06T12:01:10.381Z",
+      "example": "2025-03-12T23:01:48.907Z",
       "type": "string",
       "format": "date-time"
     },
@@ -499,20 +499,19 @@
                               "type": "string",
                               "description": "Login email of the user",
                               "format": "email",
-                              "example": "m@n.de"
+                              "example": "khg0320@tillhub.de"
                             },
                             {
                               "type": "null"
                             }
                           ]
                         },
-                        "sub_user": {
+                        "organisation": {
                           "oneOf": [
                             {
                               "type": "string",
-                              "description": "Login email of the sub-user",
-                              "format": "email",
-                              "example": "m@n.de"
+                              "description": "Organisation if present",
+                              "example": "klier"
                             },
                             {
                               "type": "null"

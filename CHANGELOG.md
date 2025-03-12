@@ -1,3 +1,10 @@
+# [6.369.0](https://github.com/tillhub/schemas/compare/v6.368.0...v6.369.0) (2025-03-12)
+
+
+### Features
+
+* **common:** device_info ([3a689ff](https://github.com/tillhub/schemas/commit/3a689ff))
+
 # [6.368.0](https://github.com/tillhub/schemas/compare/v6.367.0...v6.368.0) (2025-03-06)
 
 
