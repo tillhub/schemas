@@ -40,7 +40,7 @@
     },
     "timestamp": {
       "description": "The date and time event was received by webhooks service",
-      "example": "2025-03-12T23:01:48.860Z",
+      "example": "2025-03-13T00:08:17.055Z",
       "type": "string",
       "format": "date-time"
     },
@@ -2970,22 +2970,34 @@
                         "user": {
                           "oneOf": [
                             {
-                              "type": "string",
-                              "description": "Login email of the user",
-                              "format": "email",
-                              "example": "khg0320@tillhub.de"
-                            },
-                            {
-                              "type": "null"
-                            }
-                          ]
-                        },
-                        "organisation": {
-                          "oneOf": [
-                            {
-                              "type": "string",
-                              "description": "Organisation if present",
-                              "example": "klier"
+                              "type": "object",
+                              "properties": {
+                                "email": {
+                                  "oneOf": [
+                                    {
+                                      "type": "string",
+                                      "description": "Login email of the user",
+                                      "format": "email",
+                                      "example": "khg0320@tillhub.de"
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "organisation": {
+                                  "oneOf": [
+                                    {
+                                      "type": "string",
+                                      "description": "Organisation if present",
+                                      "example": "klier"
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                }
+                              }
                             },
                             {
                               "type": "null"

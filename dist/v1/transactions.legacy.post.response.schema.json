@@ -494,22 +494,34 @@
                           "user": {
                             "oneOf": [
                               {
-                                "type": "string",
-                                "description": "Login email of the user",
-                                "format": "email",
-                                "example": "khg0320@tillhub.de"
-                              },
-                              {
-                                "type": "null"
-                              }
-                            ]
-                          },
-                          "organisation": {
-                            "oneOf": [
-                              {
-                                "type": "string",
-                                "description": "Organisation if present",
-                                "example": "klier"
+                                "type": "object",
+                                "properties": {
+                                  "email": {
+                                    "oneOf": [
+                                      {
+                                        "type": "string",
+                                        "description": "Login email of the user",
+                                        "format": "email",
+                                        "example": "khg0320@tillhub.de"
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
+                                  },
+                                  "organisation": {
+                                    "oneOf": [
+                                      {
+                                        "type": "string",
+                                        "description": "Organisation if present",
+                                        "example": "klier"
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
+                                  }
+                                }
                               },
                               {
                                 "type": "null"

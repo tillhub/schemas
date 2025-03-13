@@ -1,3 +1,15 @@
+# [6.370.0](https://github.com/tillhub/schemas/compare/v6.369.0...v6.370.0) (2025-03-13)
+
+
+### Bug Fixes
+
+* **common:** device_info ([4c7f5ad](https://github.com/tillhub/schemas/commit/4c7f5ad))
+
+
+### Features
+
+* **common:** device_info ([5db0470](https://github.com/tillhub/schemas/commit/5db0470))
+
 # [6.369.0](https://github.com/tillhub/schemas/compare/v6.368.0...v6.369.0) (2025-03-12)
 
 
