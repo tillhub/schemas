@@ -10,6 +10,7 @@
     "tdd": "NODE_ENV=test DEBUG=api:* nodemon --exec nodemon test/tdd-runner.js",
     "tdd:all": "NODE_ENV=test DEBUG=api:* nodemon --exec nodemon test/tdd-runner.js test/**/*.spec.js",
     "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "semantic-release": "semantic-release",
     "precommit": "npm run lint && git add -A",
     "commit": "npm run precommit && git-cz",
