@@ -1,3 +1,10 @@
+# [6.371.0](https://github.com/tillhub/schemas/compare/v6.370.0...v6.371.0) (2025-03-20)
+
+
+### Features
+
+* **table_layout:** table layout read schemas ([e024bb5](https://github.com/tillhub/schemas/commit/e024bb5))
+
 # [6.370.0](https://github.com/tillhub/schemas/compare/v6.369.0...v6.370.0) (2025-03-13)
 
 
