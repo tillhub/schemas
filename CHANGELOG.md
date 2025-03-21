@@ -1,3 +1,10 @@
+## [6.371.1](https://github.com/tillhub/schemas/compare/v6.371.0...v6.371.1) (2025-03-21)
+
+
+### Bug Fixes
+
+* **table_layout:** fixing version ([#1048](https://github.com/tillhub/schemas/issues/1048)) ([0e7d96f](https://github.com/tillhub/schemas/commit/0e7d96f))
+
 # [6.371.0](https://github.com/tillhub/schemas/compare/v6.370.0...v6.371.0) (2025-03-20)
 
 
