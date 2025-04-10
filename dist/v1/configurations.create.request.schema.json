@@ -3036,6 +3036,59 @@
                             "verbose"
                           ],
                           "default": "info"
+                        },
+                        "caching": {
+                          "oneOf": [
+                            {
+                              "type": "object",
+                              "description": "Defines caching behavior of Orderpro devices - only for for order-creation and modificatiuon - no checkouts",
+                              "properties": {
+                                "enabled": {
+                                  "oneOf": [
+                                    {
+                                      "description": "Specifies if Orderpro should cache orders on failures (e.g. network)",
+                                      "type": "boolean",
+                                      "default": false
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "lifetime": {
+                                  "oneOf": [
+                                    {
+                                      "description": "Lifetime of cached operations in seconds.",
+                                      "type": "integer",
+                                      "minimum": 60,
+                                      "maximum": 86400,
+                                      "default": 3600
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "max_size": {
+                                  "oneOf": [
+                                    {
+                                      "description": "Maximum number of operations to be cached on Orderpro.",
+                                      "type": "integer",
+                                      "minimum": 1,
+                                      "maximum": 100,
+                                      "default": 25
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                }
+                              }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
                         }
                       }
                     },

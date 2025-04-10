@@ -1,3 +1,10 @@
+# [6.373.0](https://github.com/tillhub/schemas/compare/v6.372.0...v6.373.0) (2025-04-10)
+
+
+### Features
+
+* **configurations:** gastro ([98d8b95](https://github.com/tillhub/schemas/commit/98d8b95))
+
 # [6.372.0](https://github.com/tillhub/schemas/compare/v6.371.1...v6.372.0) (2025-04-10)
 
 
