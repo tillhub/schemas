@@ -1,3 +1,10 @@
+# [6.375.0](https://github.com/tillhub/schemas/compare/v6.374.1...v6.375.0) (2025-04-25)
+
+
+### Features
+
+* **action:** update Checkmarx scan workflow to use new CI configuration ([764fa5c](https://github.com/tillhub/schemas/commit/764fa5c))
+
 ## [6.374.1](https://github.com/tillhub/schemas/compare/v6.374.0...v6.374.1) (2025-04-25)
 
 
