@@ -64,6 +64,10 @@
                 "type"
               ],
               "properties": {
+                "id": {
+                  "type": "string",
+                  "format": "uuid"
+                },
                 "name": {
                   "description": "Product name",
                   "type": "string",

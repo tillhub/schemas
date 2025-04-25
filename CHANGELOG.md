@@ -1,3 +1,10 @@
+## [6.374.1](https://github.com/tillhub/schemas/compare/v6.374.0...v6.374.1) (2025-04-25)
+
+
+### Bug Fixes
+
+* **imports:** support ids for products ([#1053](https://github.com/tillhub/schemas/issues/1053)) ([e969f62](https://github.com/tillhub/schemas/commit/e969f62))
+
 # [6.374.0](https://github.com/tillhub/schemas/compare/v6.373.0...v6.374.0) (2025-04-25)
 
 
