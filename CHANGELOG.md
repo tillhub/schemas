@@ -1,3 +1,10 @@
+# [6.374.0](https://github.com/tillhub/schemas/compare/v6.373.0...v6.374.0) (2025-04-25)
+
+
+### Features
+
+* **imports:** support import chunks ([#1052](https://github.com/tillhub/schemas/issues/1052)) ([6438a95](https://github.com/tillhub/schemas/commit/6438a95))
+
 # [6.373.0](https://github.com/tillhub/schemas/compare/v6.372.0...v6.373.0) (2025-04-10)
 
 
