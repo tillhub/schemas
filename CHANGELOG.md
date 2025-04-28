@@ -1,3 +1,10 @@
+# [6.376.0](https://github.com/tillhub/schemas/compare/v6.375.0...v6.376.0) (2025-04-28)
+
+
+### Features
+
+* **configurations:** receipts ([5bc9674](https://github.com/tillhub/schemas/commit/5bc9674))
+
 # [6.375.0](https://github.com/tillhub/schemas/compare/v6.374.1...v6.375.0) (2025-04-25)
 
 

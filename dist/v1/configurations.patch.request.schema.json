@@ -4293,6 +4293,11 @@
                       "maximum": 4096,
                       "default": 100
                     },
+                    "debug_logging": {
+                      "description": "Enables debug logging for kitchen receipts",
+                      "type": "boolean",
+                      "default": false
+                    },
                     "receipts": {
                       "description": "Receipt configurations per printer",
                       "type": "array",
