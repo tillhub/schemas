@@ -1,3 +1,10 @@
+# [6.378.0](https://github.com/tillhub/schemas/compare/v6.377.0...v6.378.0) (2025-05-05)
+
+
+### Features
+
+* **carts:** release trigger ([#1058](https://github.com/tillhub/schemas/issues/1058)) ([3432299](https://github.com/tillhub/schemas/commit/3432299))
+
 # [6.377.0](https://github.com/tillhub/schemas/compare/v6.376.0...v6.377.0) (2025-05-05)
 
 
