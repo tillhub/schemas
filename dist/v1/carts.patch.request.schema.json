@@ -5,6 +5,22 @@
   "additionalProperties": false,
   "required": [],
   "properties": {
+    "type": {
+      "description": "Type of this cart",
+      "example": "cart",
+      "oneOf": [
+        {
+          "type": "string",
+          "enum": [
+            "cart",
+            "order"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "date": {
       "description": "Date of this cart",
       "example": "2022-02-20T19:41:07.736Z",

@@ -1,3 +1,11 @@
+# [6.377.0](https://github.com/tillhub/schemas/compare/v6.376.0...v6.377.0) (2025-05-05)
+
+
+### Features
+
+* **carts:** support type ([#1057](https://github.com/tillhub/schemas/issues/1057)) ([409efe3](https://github.com/tillhub/schemas/commit/409efe3))
+* **imports:** chunk index should start with 1 ([#1056](https://github.com/tillhub/schemas/issues/1056)) ([faae808](https://github.com/tillhub/schemas/commit/faae808))
+
 # [6.376.0](https://github.com/tillhub/schemas/compare/v6.375.0...v6.376.0) (2025-04-28)
 
 

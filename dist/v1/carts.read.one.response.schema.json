@@ -64,6 +64,22 @@
             "example": "2019-03-17T21:12:04.849Z",
             "description": "The date and time entity was updated"
           },
+          "type": {
+            "description": "Type of this cart",
+            "example": "cart",
+            "oneOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "cart",
+                  "order"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
           "date": {
             "description": "Date of this cart",
             "example": "2022-02-20T19:41:07.736Z",

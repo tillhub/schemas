@@ -17,7 +17,8 @@
       "format": "uuid"
     },
     "index": {
-      "type": "integer"
+      "type": "integer",
+      "minimum": 1
     },
     "isDone": {
       "type": "boolean"
