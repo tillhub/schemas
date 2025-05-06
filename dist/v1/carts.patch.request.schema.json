@@ -6,7 +6,7 @@
   "required": [],
   "properties": {
     "type": {
-      "description": "Type of this cart",
+      "description": "Type of the cart",
       "example": "cart",
       "oneOf": [
         {
