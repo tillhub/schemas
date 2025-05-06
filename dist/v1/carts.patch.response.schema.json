@@ -65,7 +65,7 @@
             "description": "The date and time entity was updated"
           },
           "type": {
-            "description": "Type of this cart",
+            "description": "Type of the cart",
             "example": "cart",
             "oneOf": [
               {
