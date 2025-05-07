@@ -1,3 +1,10 @@
+# [6.384.0](https://github.com/tillhub/schemas/compare/v6.383.0...v6.384.0) (2025-05-07)
+
+
+### Features
+
+* **carts:** release trigger ([a9c29f2](https://github.com/tillhub/schemas/commit/a9c29f2))
+
 # [6.383.0](https://github.com/tillhub/schemas/compare/v6.382.0...v6.383.0) (2025-05-07)
 
 
