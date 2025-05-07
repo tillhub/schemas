@@ -1,3 +1,10 @@
+# [6.383.0](https://github.com/tillhub/schemas/compare/v6.382.0...v6.383.0) (2025-05-07)
+
+
+### Features
+
+* **imports:** id-s are mandatory for product imports ([#1060](https://github.com/tillhub/schemas/issues/1060)) ([d7fa547](https://github.com/tillhub/schemas/commit/d7fa547))
+
 # [6.382.0](https://github.com/tillhub/schemas/compare/v6.381.0...v6.382.0) (2025-05-06)
 
 

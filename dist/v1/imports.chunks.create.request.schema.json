@@ -59,16 +59,13 @@
               "type": "object",
               "additionalProperties": false,
               "required": [
+                "id",
                 "name",
                 "account",
                 "tax",
                 "type"
               ],
               "properties": {
-                "id": {
-                  "type": "string",
-                  "format": "uuid"
-                },
                 "name": {
                   "description": "Product name",
                   "type": "string",
@@ -2495,6 +2492,10 @@
                       }
                     }
                   ]
+                },
+                "id": {
+                  "type": "string",
+                  "format": "uuid"
                 },
                 "business_partners": {
                   "oneOf": [
