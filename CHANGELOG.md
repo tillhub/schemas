@@ -1,3 +1,12 @@
+# [6.385.0](https://github.com/tillhub/schemas/compare/v6.384.0...v6.385.0) (2025-05-09)
+
+
+### Features
+
+* **addons:** add addons field to carts, orders and delivery notes ([9c9d2ca](https://github.com/tillhub/schemas/commit/9c9d2ca))
+* **addons:** new fields ([9bd6bcc](https://github.com/tillhub/schemas/commit/9bd6bcc))
+* **carts:** items ([ff85fee](https://github.com/tillhub/schemas/commit/ff85fee))
+
 # [6.384.0](https://github.com/tillhub/schemas/compare/v6.383.0...v6.384.0) (2025-05-07)
 
 

@@ -2276,6 +2276,15 @@
                             "example": "Extra Mushrooms",
                             "minLength": 1,
                             "maxLength": 256
+                          },
+                          "group_name": {
+                            "type": "string",
+                            "description": "Optional name of the addon group this item belongs to.",
+                            "example": "Toppings"
+                          },
+                          "is_add_to_cart": {
+                            "type": "boolean",
+                            "description": "Flag indicating whether this addon was explicitly added to cart."
                           }
                         },
                         "required": [
