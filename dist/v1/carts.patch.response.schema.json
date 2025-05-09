@@ -1129,34 +1129,6 @@
                           "type": "string",
                           "format": "uuid"
                         },
-                        "account": {
-                          "description": "Account ID",
-                          "type": "string",
-                          "format": "uuid"
-                        },
-                        "account_number": {
-                          "description": "Account number. The only one active account with the same number must be defined in the system (does not apply when \"account\" value is present)",
-                          "oneOf": [
-                            {
-                              "type": "string"
-                            },
-                            {
-                              "type": "null"
-                            }
-                          ]
-                        },
-                        "product_group": {
-                          "description": "Product group ID",
-                          "oneOf": [
-                            {
-                              "type": "string",
-                              "format": "uuid"
-                            },
-                            {
-                              "type": "null"
-                            }
-                          ]
-                        },
                         "addons": {
                           "oneOf": [
                             {
@@ -1223,6 +1195,15 @@
                                     "example": "Extra Mushrooms",
                                     "minLength": 1,
                                     "maxLength": 256
+                                  },
+                                  "group_name": {
+                                    "type": "string",
+                                    "description": "Optional name of the addon group this item belongs to.",
+                                    "example": "Toppings"
+                                  },
+                                  "is_add_to_cart": {
+                                    "type": "boolean",
+                                    "description": "Flag indicating whether this addon was explicitly added to cart."
                                   }
                                 },
                                 "required": [
@@ -1233,6 +1214,34 @@
                                   "name"
                                 ]
                               }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "account": {
+                          "description": "Account ID",
+                          "type": "string",
+                          "format": "uuid"
+                        },
+                        "account_number": {
+                          "description": "Account number. The only one active account with the same number must be defined in the system (does not apply when \"account\" value is present)",
+                          "oneOf": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "product_group": {
+                          "description": "Product group ID",
+                          "oneOf": [
+                            {
+                              "type": "string",
+                              "format": "uuid"
                             },
                             {
                               "type": "null"
@@ -1678,7 +1687,7 @@
                         "addons": {
                           "oneOf": [
                             {
-                              "description": "The list of applied addons",
+                              "description": "The list of applied addons.",
                               "type": "array",
                               "items": {
                                 "type": "object",
@@ -1741,6 +1750,15 @@
                                     "example": "Extra Mushrooms",
                                     "minLength": 1,
                                     "maxLength": 256
+                                  },
+                                  "group_name": {
+                                    "type": "string",
+                                    "description": "Optional name of the addon group this item belongs to.",
+                                    "example": "Toppings"
+                                  },
+                                  "is_add_to_cart": {
+                                    "type": "boolean",
+                                    "description": "Flag indicating whether this addon was explicitly added to cart."
                                   }
                                 },
                                 "required": [
@@ -2211,6 +2229,15 @@
                                     "example": "Extra Mushrooms",
                                     "minLength": 1,
                                     "maxLength": 256
+                                  },
+                                  "group_name": {
+                                    "type": "string",
+                                    "description": "Optional name of the addon group this item belongs to.",
+                                    "example": "Toppings"
+                                  },
+                                  "is_add_to_cart": {
+                                    "type": "boolean",
+                                    "description": "Flag indicating whether this addon was explicitly added to cart."
                                   }
                                 },
                                 "required": [

@@ -8837,7 +8837,8 @@
                             "none",
                             "first_name",
                             "last_name"
-                          ]
+                          ],
+                          "default": "name"
                         },
                         {
                           "type": "null"
@@ -8853,7 +8854,8 @@
                             "number",
                             "name",
                             "none"
-                          ]
+                          ],
+                          "default": "none"
                         },
                         {
                           "type": "null"
@@ -8869,7 +8871,8 @@
                             "not_cashier",
                             "always",
                             "never"
-                          ]
+                          ],
+                          "default": "always"
                         },
                         {
                           "type": "null"
