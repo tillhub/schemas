@@ -15,15 +15,11 @@ jobs:
   ci:
     uses: unzercorp/js-tech-toolbox/.github/workflows/backend-ci.yml@main
     with:
-      build-documentation: false
-      build-image: false
       run-prepare: false
       run-sonarqube: false
       run-static-analysis: false
       run-test: false
       run-c1-c2-diagrams: false
-      environment: ${{ github.event.inputs.environment }}
-      node-version: 22.5
     secrets:
       inherit
 

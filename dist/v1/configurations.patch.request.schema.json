@@ -8909,7 +8909,10 @@
                               "customer",
                               "order"
                             ]
-                          }
+                          },
+                          "default": [
+                            "order"
+                          ]
                         },
                         {
                           "type": "null"
