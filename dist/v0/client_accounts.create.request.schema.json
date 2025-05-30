@@ -285,6 +285,11 @@
           "type": "boolean",
           "default": false
         },
+        "floor_layouts": {
+          "description": "enables visual table layouts instead of just a grid on the POS - depends on gastro_tables",
+          "type": "boolean",
+          "default": false
+        },
         "takeaway": {
           "type": "boolean",
           "default": false

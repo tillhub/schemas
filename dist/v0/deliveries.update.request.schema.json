@@ -145,21 +145,20 @@
         {
           "type": "object",
           "additionalProperties": false,
+          "description": "Downstream delivery of a date.",
           "required": [
-            "lines",
             "street",
             "locality",
             "region",
             "postal_code",
-            "country",
-            "type"
+            "country"
           ],
           "properties": {
             "lines": {
-              "description": "Address details",
-              "example": "Penthouse",
               "oneOf": [
                 {
+                  "description": "Address details",
+                  "example": "Penthouse",
                   "type": "array",
                   "minItems": 1,
                   "maxItems": 4,
@@ -174,10 +173,10 @@
               ]
             },
             "street": {
-              "description": "Street name",
-              "example": "Genthiner Str.",
               "oneOf": [
                 {
+                  "description": "Street name",
+                  "example": "Genthiner Str.",
                   "type": "string"
                 },
                 {
@@ -186,10 +185,10 @@
               ]
             },
             "street_number": {
-              "description": "Building number",
-              "example": "34",
               "oneOf": [
                 {
+                  "description": "Building number",
+                  "example": "34",
                   "type": "string"
                 },
                 {
@@ -198,10 +197,10 @@
               ]
             },
             "locality": {
-              "description": "Locality name (city, village, etc.)",
-              "example": "Berlin",
               "oneOf": [
                 {
+                  "description": "Locality name (city, village, etc.)",
+                  "example": "Berlin",
                   "type": "string"
                 },
                 {
@@ -210,10 +209,10 @@
               ]
             },
             "region": {
-              "description": "Region name",
-              "example": "Branderburg",
               "oneOf": [
                 {
+                  "description": "Region name",
+                  "example": "Branderburg",
                   "type": "string"
                 },
                 {
@@ -222,10 +221,10 @@
               ]
             },
             "postal_code": {
-              "description": "Postal code",
-              "example": "10785",
               "oneOf": [
                 {
+                  "description": "Postal code",
+                  "example": "10785",
                   "type": "string",
                   "maxLength": 10
                 },
@@ -235,10 +234,10 @@
               ]
             },
             "country": {
-              "description": "Country",
-              "example": "Germany",
               "oneOf": [
                 {
+                  "description": "A country as ISO Alpha-2 code.",
+                  "example": "DE",
                   "type": "string",
                   "minLength": 2,
                   "maxLength": 2,
@@ -247,20 +246,34 @@
                 {
                   "type": "null"
                 }
-              ],
-              "default": null
+              ]
             },
             "type": {
-              "description": "Address type",
-              "example": "delivery",
               "oneOf": [
                 {
+                  "description": "Address type",
+                  "example": "delivery",
                   "type": "string",
                   "enum": [
                     "local",
                     "delivery",
-                    "billing"
+                    "billing",
+                    "home",
+                    "work"
                   ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "reservations_google_maps_address": {
+              "oneOf": [
+                {
+                  "description": "The location of the branch on Google Maps",
+                  "example": "https://maps.app.goo.gl/tpF7EMsEC7Wy5hmd6",
+                  "pattern": "^https:\\/\\/maps\\.app\\.goo\\.gl\\/[A-Za-z0-9]*$",
+                  "type": "string"
                 },
                 {
                   "type": "null"
@@ -279,21 +292,20 @@
         {
           "type": "object",
           "additionalProperties": false,
+          "description": "Downstream delivery of a date.",
           "required": [
-            "lines",
             "street",
             "locality",
             "region",
             "postal_code",
-            "country",
-            "type"
+            "country"
           ],
           "properties": {
             "lines": {
-              "description": "Address details",
-              "example": "Penthouse",
               "oneOf": [
                 {
+                  "description": "Address details",
+                  "example": "Penthouse",
                   "type": "array",
                   "minItems": 1,
                   "maxItems": 4,
@@ -308,10 +320,10 @@
               ]
             },
             "street": {
-              "description": "Street name",
-              "example": "Genthiner Str.",
               "oneOf": [
                 {
+                  "description": "Street name",
+                  "example": "Genthiner Str.",
                   "type": "string"
                 },
                 {
@@ -320,10 +332,10 @@
               ]
             },
             "street_number": {
-              "description": "Building number",
-              "example": "34",
               "oneOf": [
                 {
+                  "description": "Building number",
+                  "example": "34",
                   "type": "string"
                 },
                 {
@@ -332,10 +344,10 @@
               ]
             },
             "locality": {
-              "description": "Locality name (city, village, etc.)",
-              "example": "Berlin",
               "oneOf": [
                 {
+                  "description": "Locality name (city, village, etc.)",
+                  "example": "Berlin",
                   "type": "string"
                 },
                 {
@@ -344,10 +356,10 @@
               ]
             },
             "region": {
-              "description": "Region name",
-              "example": "Branderburg",
               "oneOf": [
                 {
+                  "description": "Region name",
+                  "example": "Branderburg",
                   "type": "string"
                 },
                 {
@@ -356,10 +368,10 @@
               ]
             },
             "postal_code": {
-              "description": "Postal code",
-              "example": "10785",
               "oneOf": [
                 {
+                  "description": "Postal code",
+                  "example": "10785",
                   "type": "string",
                   "maxLength": 10
                 },
@@ -369,10 +381,10 @@
               ]
             },
             "country": {
-              "description": "Country",
-              "example": "Germany",
               "oneOf": [
                 {
+                  "description": "A country as ISO Alpha-2 code.",
+                  "example": "DE",
                   "type": "string",
                   "minLength": 2,
                   "maxLength": 2,
@@ -381,20 +393,34 @@
                 {
                   "type": "null"
                 }
-              ],
-              "default": null
+              ]
             },
             "type": {
-              "description": "Address type",
-              "example": "delivery",
               "oneOf": [
                 {
+                  "description": "Address type",
+                  "example": "delivery",
                   "type": "string",
                   "enum": [
                     "local",
                     "delivery",
-                    "billing"
+                    "billing",
+                    "home",
+                    "work"
                   ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "reservations_google_maps_address": {
+              "oneOf": [
+                {
+                  "description": "The location of the branch on Google Maps",
+                  "example": "https://maps.app.goo.gl/tpF7EMsEC7Wy5hmd6",
+                  "pattern": "^https:\\/\\/maps\\.app\\.goo\\.gl\\/[A-Za-z0-9]*$",
+                  "type": "string"
                 },
                 {
                   "type": "null"

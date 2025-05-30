@@ -1,0 +1,119 @@
+# Prebuild => Run all the steps before the build step
+# INFO
+# It will run npm run build:NAME_OF_SELECTED_ENVIRONMENT:gh (npm run build:integration:gh)
+## If not found it will run npm run build:NAME_OF_SELECTED_ENVIROMENT (npm run build:integration)
+## If not found it will run npm run build
+## Procure that the package.json has for each environment a build or it will default to just npm run build for any environment
+name: Prebuild
+concurrency: backend-build
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  ci:
+    uses: unzercorp/js-tech-toolbox/.github/workflows/backend-ci.yml@main
+    with:
+      run-prepare: false
+      run-sonarqube: false
+      run-static-analysis: false
+      run-test: false
+      run-c1-c2-diagrams: false
+    secrets:
+      inherit
+
+#  inputs:
+#       build-documentation:
+#         description: Defines if the step to update the documentation should be run.
+#         required: false
+#         default: false
+#         type: boolean
+#       build-image:
+#         description: Defines if the step to build a new image should be run.
+#         required: false
+#         default: false
+#         type: boolean
+#       build-image-gcp:
+#         description: Defines if the step to build a new image in new GCP repository should be run.
+#         required: false
+#         default: false
+#         type: boolean
+#      run-sonarqube:
+#         description: Defines if the step to run SonarQube should be run.
+#         required: false
+#         default: true
+#         type: boolean
+#      run-checkmarx:
+#         description: Defines if the step to run Checkmarx One Scan should be run.
+#         required: false
+#         default: true
+#         type: boolean
+#      run-prepare:
+#         description: Defines if the step Prepare should be run.
+#         required: false
+#         default: true
+#         type: boolean
+#      run-static-analysis:
+#         description: Defines if the step to run Static Analysis should be run.
+#         required: false
+#         default: true
+#         type: boolean
+#      run-test:
+#         description: Defines if the step to run Test should be run.
+#         required: false
+#         default: true
+#         type: boolean 
+#      run-c1-c2-diagrams:
+#         description: Defines if the step to run C1 and C2 diagrams should be run.
+#         required: false
+#         default: true
+#         type: boolean
+#       environment:
+#         description: Defines the environment (integration/testing/production) where we want to deploy the image, this will also affect which script for building will run (npm run build:integration:gh). Will also form part of the image naming, check env `BUILD_IMAGE_SUFFIX`.
+#         required: false
+#         default: staging
+#         type: string
+#       node-version:
+#         description: The number version of the node that will run in each step of the job.
+#         required: true
+#         type: string
+#       postgres-version:
+#         description: The number version of Postgresql DB that will be used for testing purposes.
+#         required: false
+#         default: '15'
+#         type: string
+#       postgres-user:
+#         description: The user name of Postgresql DB that will be used for testing purposes.
+#         required: false
+#         default: postgres
+#         type: string
+#       legacy-project:
+#         description: Boolean to imply if the project is legacy, this will infer that the tests to be runned will be legacy and also the documentation update will be legacy.
+#         required: false
+#         default: false
+#         type: boolean
+#       legacy-test-supported:
+#         description: An array with the legacy type of tests to be runned. Supported '["integration:tape", "integration", "opsec"]'. The naming will be what is runned as script, for example `npm run test:integration:tape:ci`
+#         required: false
+#         type: string
+#       test-shards:
+#         description: Number of parallel test to be run per test script.
+#         required: false
+#         default: '[1]'
+#         type: string
+#       test-shards-distribution:
+#         description: Number of parallel test to be run per test script, but defining specifically for each test. Supported for non legacy tests.
+#         required: false
+#         default: '{"unit": 1, "integration": 1, "e2e": 1, "tape": 1, "opsec": 1}'
+#         type: string
+#       version-bump:
+#         description: If defined, it will create a new commit with the new version, depending on the value passed (patch, minor or major). If none, this step will be skipped.
+#         required: false
+#         default: none
+#         type: string
+#       gh-runner:
+#         description: The name of the github action runner.
+#         required: false
+#         default: tillhub-org-runner
+#         type: string

@@ -1,6 +1,6 @@
 {
   "name": "@tillhub/schemas",
-  "version": "6.355.0",
+  "version": "6.387.0",
   "private": false,
   "description": "All Tillhub API OpenAPI 3 compatible JSON Schemas.",
   "main": "./lib/index.js",
@@ -10,6 +10,7 @@
     "tdd": "NODE_ENV=test DEBUG=api:* nodemon --exec nodemon test/tdd-runner.js",
     "tdd:all": "NODE_ENV=test DEBUG=api:* nodemon --exec nodemon test/tdd-runner.js test/**/*.spec.js",
     "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "semantic-release": "semantic-release",
     "precommit": "npm run lint && git add -A",
     "commit": "npm run precommit && git-cz",

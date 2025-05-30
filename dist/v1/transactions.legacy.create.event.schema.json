@@ -40,7 +40,7 @@
     },
     "timestamp": {
       "description": "The date and time event was received by webhooks service",
-      "example": "2025-02-04T14:16:33.799Z",
+      "example": "2025-05-09T13:29:49.034Z",
       "type": "string",
       "format": "date-time"
     },
@@ -496,23 +496,34 @@
                         "user": {
                           "oneOf": [
                             {
-                              "type": "string",
-                              "description": "Login email of the user",
-                              "format": "email",
-                              "example": "m@n.de"
-                            },
-                            {
-                              "type": "null"
-                            }
-                          ]
-                        },
-                        "sub_user": {
-                          "oneOf": [
-                            {
-                              "type": "string",
-                              "description": "Login email of the sub-user",
-                              "format": "email",
-                              "example": "m@n.de"
+                              "type": "object",
+                              "properties": {
+                                "email": {
+                                  "oneOf": [
+                                    {
+                                      "type": "string",
+                                      "description": "Login email of the user",
+                                      "format": "email",
+                                      "example": "khg0320@tillhub.de"
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "organisation": {
+                                  "oneOf": [
+                                    {
+                                      "type": "string",
+                                      "description": "Organisation if present",
+                                      "example": "klier"
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                }
+                              }
                             },
                             {
                               "type": "null"
@@ -2267,6 +2278,15 @@
                           "example": "Extra Mushrooms",
                           "minLength": 1,
                           "maxLength": 256
+                        },
+                        "group_name": {
+                          "type": "string",
+                          "description": "Optional name of the addon group this item belongs to.",
+                          "example": "Toppings"
+                        },
+                        "is_add_to_cart": {
+                          "type": "boolean",
+                          "description": "Flag indicating whether this addon was explicitly added to cart."
                         }
                       },
                       "required": [
@@ -3527,6 +3547,19 @@
                                 ]
                               }
                             }
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "link_id": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "format": "uuid",
+                            "description": "Inheritable/copyable identifier in context of order incarnations until a transaction",
+                            "example": "a5380b42-6025-49de-bb1d-c9357df96506"
                           },
                           {
                             "type": "null"

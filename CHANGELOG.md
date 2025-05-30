@@ -1,3 +1,266 @@
+# [6.387.0](https://github.com/tillhub/schemas/compare/v6.386.0...v6.387.0) (2025-05-09)
+
+
+### Features
+
+* **configurations:** receipts ([eb5315f](https://github.com/tillhub/schemas/commit/eb5315f))
+
+# [6.386.0](https://github.com/tillhub/schemas/compare/v6.385.0...v6.386.0) (2025-05-09)
+
+
+### Features
+
+* **configurations:** receipts ([80c2e8a](https://github.com/tillhub/schemas/commit/80c2e8a))
+
+# [6.385.0](https://github.com/tillhub/schemas/compare/v6.384.0...v6.385.0) (2025-05-09)
+
+
+### Features
+
+* **addons:** add addons field to carts, orders and delivery notes ([9c9d2ca](https://github.com/tillhub/schemas/commit/9c9d2ca))
+* **addons:** new fields ([9bd6bcc](https://github.com/tillhub/schemas/commit/9bd6bcc))
+* **carts:** items ([ff85fee](https://github.com/tillhub/schemas/commit/ff85fee))
+
+# [6.384.0](https://github.com/tillhub/schemas/compare/v6.383.0...v6.384.0) (2025-05-07)
+
+
+### Features
+
+* **carts:** release trigger ([a9c29f2](https://github.com/tillhub/schemas/commit/a9c29f2))
+
+# [6.383.0](https://github.com/tillhub/schemas/compare/v6.382.0...v6.383.0) (2025-05-07)
+
+
+### Features
+
+* **imports:** id-s are mandatory for product imports ([#1060](https://github.com/tillhub/schemas/issues/1060)) ([d7fa547](https://github.com/tillhub/schemas/commit/d7fa547))
+
+# [6.382.0](https://github.com/tillhub/schemas/compare/v6.381.0...v6.382.0) (2025-05-06)
+
+
+### Features
+
+* **carts:** release trigger ([361dbf3](https://github.com/tillhub/schemas/commit/361dbf3))
+
+# [6.381.0](https://github.com/tillhub/schemas/compare/v6.380.0...v6.381.0) (2025-05-06)
+
+
+### Features
+
+* **carts:** release trigger ([d81f433](https://github.com/tillhub/schemas/commit/d81f433))
+
+# [6.380.0](https://github.com/tillhub/schemas/compare/v6.379.0...v6.380.0) (2025-05-06)
+
+
+### Features
+
+* **carts:** release trigger ([5bb8c18](https://github.com/tillhub/schemas/commit/5bb8c18))
+
+# [6.379.0](https://github.com/tillhub/schemas/compare/v6.378.0...v6.379.0) (2025-05-05)
+
+
+### Features
+
+* **carts:** release trigger ([#1059](https://github.com/tillhub/schemas/issues/1059)) ([f2ac789](https://github.com/tillhub/schemas/commit/f2ac789))
+
+# [6.378.0](https://github.com/tillhub/schemas/compare/v6.377.0...v6.378.0) (2025-05-05)
+
+
+### Features
+
+* **carts:** release trigger ([#1058](https://github.com/tillhub/schemas/issues/1058)) ([3432299](https://github.com/tillhub/schemas/commit/3432299))
+
+# [6.377.0](https://github.com/tillhub/schemas/compare/v6.376.0...v6.377.0) (2025-05-05)
+
+
+### Features
+
+* **carts:** support type ([#1057](https://github.com/tillhub/schemas/issues/1057)) ([409efe3](https://github.com/tillhub/schemas/commit/409efe3))
+* **imports:** chunk index should start with 1 ([#1056](https://github.com/tillhub/schemas/issues/1056)) ([faae808](https://github.com/tillhub/schemas/commit/faae808))
+
+# [6.376.0](https://github.com/tillhub/schemas/compare/v6.375.0...v6.376.0) (2025-04-28)
+
+
+### Features
+
+* **configurations:** receipts ([5bc9674](https://github.com/tillhub/schemas/commit/5bc9674))
+
+# [6.375.0](https://github.com/tillhub/schemas/compare/v6.374.1...v6.375.0) (2025-04-25)
+
+
+### Features
+
+* **action:** update Checkmarx scan workflow to use new CI configuration ([764fa5c](https://github.com/tillhub/schemas/commit/764fa5c))
+
+## [6.374.1](https://github.com/tillhub/schemas/compare/v6.374.0...v6.374.1) (2025-04-25)
+
+
+### Bug Fixes
+
+* **imports:** support ids for products ([#1053](https://github.com/tillhub/schemas/issues/1053)) ([e969f62](https://github.com/tillhub/schemas/commit/e969f62))
+
+# [6.374.0](https://github.com/tillhub/schemas/compare/v6.373.0...v6.374.0) (2025-04-25)
+
+
+### Features
+
+* **imports:** support import chunks ([#1052](https://github.com/tillhub/schemas/issues/1052)) ([6438a95](https://github.com/tillhub/schemas/commit/6438a95))
+
+# [6.373.0](https://github.com/tillhub/schemas/compare/v6.372.0...v6.373.0) (2025-04-10)
+
+
+### Features
+
+* **configurations:** gastro ([98d8b95](https://github.com/tillhub/schemas/commit/98d8b95))
+
+# [6.372.0](https://github.com/tillhub/schemas/compare/v6.371.1...v6.372.0) (2025-04-10)
+
+
+### Features
+
+* **configurations:** gastro ([1a560ba](https://github.com/tillhub/schemas/commit/1a560ba))
+* **configurations:** gastro ([591ba46](https://github.com/tillhub/schemas/commit/591ba46))
+
+## [6.371.1](https://github.com/tillhub/schemas/compare/v6.371.0...v6.371.1) (2025-03-21)
+
+
+### Bug Fixes
+
+* **table_layout:** fixing version ([#1048](https://github.com/tillhub/schemas/issues/1048)) ([0e7d96f](https://github.com/tillhub/schemas/commit/0e7d96f))
+
+# [6.371.0](https://github.com/tillhub/schemas/compare/v6.370.0...v6.371.0) (2025-03-20)
+
+
+### Features
+
+* **table_layout:** table layout read schemas ([e024bb5](https://github.com/tillhub/schemas/commit/e024bb5))
+
+# [6.370.0](https://github.com/tillhub/schemas/compare/v6.369.0...v6.370.0) (2025-03-13)
+
+
+### Bug Fixes
+
+* **common:** device_info ([4c7f5ad](https://github.com/tillhub/schemas/commit/4c7f5ad))
+
+
+### Features
+
+* **common:** device_info ([5db0470](https://github.com/tillhub/schemas/commit/5db0470))
+
+# [6.369.0](https://github.com/tillhub/schemas/compare/v6.368.0...v6.369.0) (2025-03-12)
+
+
+### Features
+
+* **common:** device_info ([3a689ff](https://github.com/tillhub/schemas/commit/3a689ff))
+
+# [6.368.0](https://github.com/tillhub/schemas/compare/v6.367.0...v6.368.0) (2025-03-06)
+
+
+### Features
+
+* **configurations:** balances ([d170680](https://github.com/tillhub/schemas/commit/d170680))
+
+# [6.367.0](https://github.com/tillhub/schemas/compare/v6.366.0...v6.367.0) (2025-03-01)
+
+
+### Features
+
+* **configurations:** gastro ([7693c6b](https://github.com/tillhub/schemas/commit/7693c6b))
+
+# [6.366.0](https://github.com/tillhub/schemas/compare/v6.365.0...v6.366.0) (2025-03-01)
+
+
+### Features
+
+* **carts:** items ([67be002](https://github.com/tillhub/schemas/commit/67be002))
+
+# [6.365.0](https://github.com/tillhub/schemas/compare/v6.364.0...v6.365.0) (2025-02-28)
+
+
+### Features
+
+* **client_accounts:** features ([10f0de5](https://github.com/tillhub/schemas/commit/10f0de5))
+
+# [6.364.0](https://github.com/tillhub/schemas/compare/v6.363.0...v6.364.0) (2025-02-28)
+
+
+### Features
+
+* **gastro-order-locks:** hash fix ([#1040](https://github.com/tillhub/schemas/issues/1040)) ([f8411de](https://github.com/tillhub/schemas/commit/f8411de))
+
+# [6.363.0](https://github.com/tillhub/schemas/compare/v6.362.0...v6.363.0) (2025-02-28)
+
+
+### Features
+
+* **gastro-order-locks:** replace revision with hash ([#1039](https://github.com/tillhub/schemas/issues/1039)) ([2cd270e](https://github.com/tillhub/schemas/commit/2cd270e))
+
+# [6.362.0](https://github.com/tillhub/schemas/compare/v6.361.0...v6.362.0) (2025-02-25)
+
+
+### Features
+
+* **configurations:** gastro ([b5736a9](https://github.com/tillhub/schemas/commit/b5736a9))
+
+# [6.361.0](https://github.com/tillhub/schemas/compare/v6.360.0...v6.361.0) (2025-02-21)
+
+
+### Features
+
+* **configurations:** vouchers ([c1451c5](https://github.com/tillhub/schemas/commit/c1451c5))
+* **registers:** device_configuration ([29096d8](https://github.com/tillhub/schemas/commit/29096d8))
+
+# [6.360.0](https://github.com/tillhub/schemas/compare/v6.359.0...v6.360.0) (2025-02-19)
+
+
+### Features
+
+* **products:** price condition fix ([#1036](https://github.com/tillhub/schemas/issues/1036)) ([2bbbe98](https://github.com/tillhub/schemas/commit/2bbbe98))
+
+# [6.359.0](https://github.com/tillhub/schemas/compare/v6.358.0...v6.359.0) (2025-02-19)
+
+
+### Features
+
+* **products:** correct validation for bulk editing for prices ([#1035](https://github.com/tillhub/schemas/issues/1035)) ([4c56c3e](https://github.com/tillhub/schemas/commit/4c56c3e))
+
+# [6.358.0](https://github.com/tillhub/schemas/compare/v6.357.1...v6.358.0) (2025-02-19)
+
+
+### Features
+
+* **products:** gross price validation for bulk edit ([#1034](https://github.com/tillhub/schemas/issues/1034)) ([20116d1](https://github.com/tillhub/schemas/commit/20116d1))
+
+## [6.357.1](https://github.com/tillhub/schemas/compare/v6.357.0...v6.357.1) (2025-02-18)
+
+
+### Bug Fixes
+
+* **common:** addresses ([44a00b3](https://github.com/tillhub/schemas/commit/44a00b3))
+
+# [6.357.0](https://github.com/tillhub/schemas/compare/v6.356.1...v6.357.0) (2025-02-12)
+
+
+### Features
+
+* **common:** addresses ([66e2c2d](https://github.com/tillhub/schemas/commit/66e2c2d))
+* **products:** if sellable is false, we should't reuqire gross price ([#1032](https://github.com/tillhub/schemas/issues/1032)) ([6f7500c](https://github.com/tillhub/schemas/commit/6f7500c))
+
+## [6.356.1](https://github.com/tillhub/schemas/compare/v6.356.0...v6.356.1) (2025-02-10)
+
+
+### Bug Fixes
+
+* **table_layout_v1:** adding the missing schema for duplicate ([#1030](https://github.com/tillhub/schemas/issues/1030)) ([b167480](https://github.com/tillhub/schemas/commit/b167480))
+
+# [6.356.0](https://github.com/tillhub/schemas/compare/v6.355.0...v6.356.0) (2025-02-05)
+
+
+### Features
+
+* **table_layout:** table_layout_v1 added ([#1027](https://github.com/tillhub/schemas/issues/1027)) ([5b2267e](https://github.com/tillhub/schemas/commit/5b2267e))
+
 # [6.355.0](https://github.com/tillhub/schemas/compare/v6.354.0...v6.355.0) (2025-02-04)
 
 

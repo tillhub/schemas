@@ -243,7 +243,7 @@
                 {
                   "type": "string",
                   "description": "The Apple Push Notification Service (APNS) token that can be used to send push notifications to the device",
-                  "example": "da6f9c820ca73df7680675134b64641f46520a0ee0e93b15b25cf131cb2e29f6"
+                  "example": "eb6f9c820ac73df7680675134b64641f46520a0ee0e93b15b25cf131cb2e29f6"
                 },
                 {
                   "type": "null"
@@ -269,14 +269,18 @@
                   "additionalProperties": false,
                   "properties": {
                     "ip": {
-                      "type": "string",
-                      "description": "The local IP-address of the client application",
-                      "example": "192.168.1.147"
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "description": "The local IP-address of the client application",
+                          "example": "192.168.1.147"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
                     }
-                  },
-                  "required": [
-                    "ip"
-                  ]
+                  }
                 },
                 {
                   "type": "null"
@@ -417,12 +421,12 @@
                     "api_key": {
                       "type": "string",
                       "description": "Per fiskaly account: key for their API",
-                      "example": "test_dttfadyyenial79q8yga9ww0k_tillhub"
+                      "example": "test_7w38468236aksjobf8yga9wwz_tillhub"
                     },
                     "api_secret": {
                       "type": "string",
                       "description": "Per fiskaly account: secret for their API",
-                      "example": "QmSgQtMNfm0uZjVedM1BvqGRIQ3D9wjclLYDZcXPZve"
+                      "example": "67askjdhfg76k34j5hsdfg87r34jclLYDZcXPZve"
                     },
                     "api_version": {
                       "oneOf": [
@@ -512,7 +516,7 @@
                         {
                           "type": "string",
                           "description": "ID of the signing unit (Epson.serialNumber) - should be updated after client is initialized",
-                          "example": "soTFFH9xiZP9JYWCPRgvpw6xhZ3ttbWDjfS4ky4AMEk="
+                          "example": "soTFasd9xasdYWCPskfhw6xhZ3ttbWDjfS4ky4AMEk="
                         },
                         {
                           "type": "null"

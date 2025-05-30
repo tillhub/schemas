@@ -64,6 +64,22 @@
             "example": "2019-03-17T21:12:04.849Z",
             "description": "The date and time entity was updated"
           },
+          "type": {
+            "description": "Type of this cart",
+            "example": "cart",
+            "oneOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "cart",
+                  "order"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
           "date": {
             "description": "Date of this cart",
             "example": "2022-02-20T19:41:07.736Z",
@@ -1116,34 +1132,6 @@
                           "type": "string",
                           "format": "uuid"
                         },
-                        "account": {
-                          "description": "Account ID",
-                          "type": "string",
-                          "format": "uuid"
-                        },
-                        "account_number": {
-                          "description": "Account number. The only one active account with the same number must be defined in the system (does not apply when \"account\" value is present)",
-                          "oneOf": [
-                            {
-                              "type": "string"
-                            },
-                            {
-                              "type": "null"
-                            }
-                          ]
-                        },
-                        "product_group": {
-                          "description": "Product group ID",
-                          "oneOf": [
-                            {
-                              "type": "string",
-                              "format": "uuid"
-                            },
-                            {
-                              "type": "null"
-                            }
-                          ]
-                        },
                         "addons": {
                           "oneOf": [
                             {
@@ -1210,6 +1198,15 @@
                                     "example": "Extra Mushrooms",
                                     "minLength": 1,
                                     "maxLength": 256
+                                  },
+                                  "group_name": {
+                                    "type": "string",
+                                    "description": "Optional name of the addon group this item belongs to.",
+                                    "example": "Toppings"
+                                  },
+                                  "is_add_to_cart": {
+                                    "type": "boolean",
+                                    "description": "Flag indicating whether this addon was explicitly added to cart."
                                   }
                                 },
                                 "required": [
@@ -1220,6 +1217,34 @@
                                   "name"
                                 ]
                               }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "account": {
+                          "description": "Account ID",
+                          "type": "string",
+                          "format": "uuid"
+                        },
+                        "account_number": {
+                          "description": "Account number. The only one active account with the same number must be defined in the system (does not apply when \"account\" value is present)",
+                          "oneOf": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "product_group": {
+                          "description": "Product group ID",
+                          "oneOf": [
+                            {
+                              "type": "string",
+                              "format": "uuid"
                             },
                             {
                               "type": "null"
@@ -1443,6 +1468,85 @@
                               "type": "null"
                             }
                           ]
+                        },
+                        "configuration": {
+                          "oneOf": [
+                            {
+                              "type": "object",
+                              "description": "Item property changes triggered by a user decision.",
+                              "properties": {
+                                "tax_switched": {
+                                  "oneOf": [
+                                    {
+                                      "type": "boolean"
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "action": {
+                                  "oneOf": [
+                                    {
+                                      "type": "object",
+                                      "properties": {
+                                        "tax": {
+                                          "oneOf": [
+                                            {
+                                              "type": "string",
+                                              "format": "uuid"
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        },
+                                        "default": {
+                                          "oneOf": [
+                                            {
+                                              "type": "boolean"
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        },
+                                        "name": {
+                                          "oneOf": [
+                                            {
+                                              "type": "string"
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "link_id": {
+                                  "oneOf": [
+                                    {
+                                      "type": "string",
+                                      "format": "uuid",
+                                      "description": "Inheritable/copyable identifier in context of order incarnations until a transaction",
+                                      "example": "a5380b42-6025-49de-bb1d-c9357df96506"
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                }
+                              }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
                         }
                       },
                       "anyOf": [
@@ -1586,7 +1690,7 @@
                         "addons": {
                           "oneOf": [
                             {
-                              "description": "The list of applied addons",
+                              "description": "The list of applied addons.",
                               "type": "array",
                               "items": {
                                 "type": "object",
@@ -1649,6 +1753,15 @@
                                     "example": "Extra Mushrooms",
                                     "minLength": 1,
                                     "maxLength": 256
+                                  },
+                                  "group_name": {
+                                    "type": "string",
+                                    "description": "Optional name of the addon group this item belongs to.",
+                                    "example": "Toppings"
+                                  },
+                                  "is_add_to_cart": {
+                                    "type": "boolean",
+                                    "description": "Flag indicating whether this addon was explicitly added to cart."
                                   }
                                 },
                                 "required": [
@@ -2119,6 +2232,15 @@
                                     "example": "Extra Mushrooms",
                                     "minLength": 1,
                                     "maxLength": 256
+                                  },
+                                  "group_name": {
+                                    "type": "string",
+                                    "description": "Optional name of the addon group this item belongs to.",
+                                    "example": "Toppings"
+                                  },
+                                  "is_add_to_cart": {
+                                    "type": "boolean",
+                                    "description": "Flag indicating whether this addon was explicitly added to cart."
                                   }
                                 },
                                 "required": [
