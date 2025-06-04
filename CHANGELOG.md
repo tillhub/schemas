@@ -1,3 +1,10 @@
+# [6.388.0](https://github.com/tillhub/schemas/compare/v6.387.0...v6.388.0) (2025-06-02)
+
+
+### Features
+
+* **table_layout:** enhance schema with new table management fields ([#1066](https://github.com/tillhub/schemas/issues/1066)) ([732015c](https://github.com/tillhub/schemas/commit/732015c))
+
 # [6.387.0](https://github.com/tillhub/schemas/compare/v6.386.0...v6.387.0) (2025-05-09)
 
 

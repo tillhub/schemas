@@ -70,10 +70,6 @@
             "type": "string",
             "format": "uuid"
           },
-          "tables_count": {
-            "type": "integer",
-            "minimum": 0
-          },
           "active": {
             "type": "boolean",
             "default": true
@@ -82,6 +78,45 @@
             "type": "object",
             "additionalProperties": true,
             "default": {}
+          },
+          "combinations": {
+            "type": "array",
+            "additionalProperties": true,
+            "minItems": 0,
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "min_party_size": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "max_party_size": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "is_bookable_externally": {
+                  "type": "boolean"
+                },
+                "tables": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                }
+              },
+              "required": [
+                "id",
+                "min_party_size",
+                "max_party_size",
+                "is_bookable_externally",
+                "tables"
+              ]
+            }
           }
         }
       }
