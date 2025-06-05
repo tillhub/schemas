@@ -1,3 +1,10 @@
+# [6.390.0](https://github.com/tillhub/schemas/compare/v6.389.0...v6.390.0) (2025-06-05)
+
+
+### Features
+
+* **table_layout:** triggering build ([#1069](https://github.com/tillhub/schemas/issues/1069)) ([7741187](https://github.com/tillhub/schemas/commit/7741187))
+
 # [6.389.0](https://github.com/tillhub/schemas/compare/v6.388.0...v6.389.0) (2025-06-05)
 
 
