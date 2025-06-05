@@ -1,3 +1,10 @@
+# [6.389.0](https://github.com/tillhub/schemas/compare/v6.388.0...v6.389.0) (2025-06-05)
+
+
+### Features
+
+* **table_layout:** fix eslint ([#1068](https://github.com/tillhub/schemas/issues/1068)) ([3f71149](https://github.com/tillhub/schemas/commit/3f71149))
+
 # [6.388.0](https://github.com/tillhub/schemas/compare/v6.387.0...v6.388.0) (2025-06-02)
 
 
