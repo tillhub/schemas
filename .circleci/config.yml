@@ -4,6 +4,7 @@ jobs:
     branches:
       only:
         - master
+        - detached
     docker:
       - image: 'circleci/node:latest'
     steps:
