@@ -1,3 +1,10 @@
+## [6.390.1](https://github.com/tillhub/schemas/compare/v6.390.0...v6.390.1) (2025-06-18)
+
+
+### Bug Fixes
+
+* **UNTIL-14219:** allow table count prop for table layout v1 ([#1071](https://github.com/tillhub/schemas/issues/1071)) ([460ea09](https://github.com/tillhub/schemas/commit/460ea09))
+
 # [6.390.0](https://github.com/tillhub/schemas/compare/v6.389.0...v6.390.0) (2025-06-05)
 
 
