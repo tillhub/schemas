@@ -1,3 +1,11 @@
+# [6.391.0](https://github.com/tillhub/schemas/compare/v6.390.1...v6.391.0) (2025-06-18)
+
+
+### Features
+
+* **table-reservation:** enhance the schema ([5b67e2b](https://github.com/tillhub/schemas/commit/5b67e2b))
+* **table-reservation:** enhance the schema ([#1073](https://github.com/tillhub/schemas/issues/1073)) ([cf22b9a](https://github.com/tillhub/schemas/commit/cf22b9a))
+
 ## [6.390.1](https://github.com/tillhub/schemas/compare/v6.390.0...v6.390.1) (2025-06-18)
 
 

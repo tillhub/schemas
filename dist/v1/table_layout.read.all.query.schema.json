@@ -9,13 +9,13 @@
   ],
   "properties": {
     "start": {
-      "description": "The start date to filter entities by \"updated_at\" field value",
-      "example": "2022-02-01T00:00:00.000Z",
+      "description": "The start date and time of the period to query",
+      "example": "2025-01-01T00:00:00Z",
       "type": "string",
       "format": "date-time"
     },
     "active": {
-      "description": "Filter entities by \"active\" field value",
+      "description": "The active status of the layout",
       "example": "true",
       "type": "string",
       "enum": [
@@ -48,6 +48,15 @@
         "format": "uuid"
       }
     },
+    "include_layout": {
+      "description": "The option to include or omit the layout field from the response",
+      "example": "true",
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
     "page": {
       "description": "The page number (for paginated output)",
       "example": 3,
@@ -64,15 +73,6 @@
       "description": "Cursor field and direction for sorting query by",
       "example": "+name",
       "type": "string"
-    },
-    "include_layout": {
-      "description": "The option to include or omit the layout field from the response",
-      "example": "true",
-      "type": "string",
-      "enum": [
-        "true",
-        "false"
-      ]
     }
   }
 }
