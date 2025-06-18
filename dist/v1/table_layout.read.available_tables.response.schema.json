@@ -79,6 +79,10 @@
             "additionalProperties": true,
             "default": {}
           },
+          "table_count": {
+            "type": "number",
+            "minimum": 0
+          },
           "combinations": {
             "type": "array",
             "additionalProperties": true,
