@@ -1,3 +1,10 @@
+# [6.393.0](https://github.com/tillhub/schemas/compare/v6.392.0...v6.393.0) (2025-06-19)
+
+
+### Features
+
+* **table-layout:** update schema to allow additional properties ([#1075](https://github.com/tillhub/schemas/issues/1075)) ([5b93713](https://github.com/tillhub/schemas/commit/5b93713))
+
 # [6.392.0](https://github.com/tillhub/schemas/compare/v6.391.0...v6.392.0) (2025-06-19)
 
 
