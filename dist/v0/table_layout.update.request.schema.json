@@ -10,46 +10,156 @@
       "format": "uuid"
     },
     "name": {
-      "type": "string",
-      "minLength": 1
+      "type": "string"
     },
     "location": {
       "type": "string",
       "format": "uuid"
     },
+    "gridColumnCount": {
+      "type": "number",
+      "default": 5
+    },
     "active": {
       "type": "boolean",
-      "default": true
+      "default": false
     },
     "layout": {
       "type": "object",
-      "additionalProperties": true,
-      "default": {}
-    },
-    "table_count": {
-      "type": "number",
-      "minimum": 0
+      "default": {},
+      "properties": {
+        "scene": {
+          "type": "object",
+          "properties": {
+            "color": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "pattern": "^#[0-9A-Fa-f]{6}$"
+                },
+                {
+                  "type": "string",
+                  "maxLength": 0
+                }
+              ]
+            },
+            "width": {
+              "type": "number"
+            },
+            "height": {
+              "type": "number"
+            }
+          },
+          "additionalProperties": false
+        },
+        "entities": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "format": "uuid"
+              },
+              "sortOrder": {
+                "type": "number"
+              },
+              "type": {
+                "type": "string"
+              },
+              "kind": {
+                "type": "string"
+              },
+              "text": {
+                "type": "string"
+              },
+              "fontSize": {
+                "type": "number"
+              },
+              "image": {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": "string"
+                  }
+                }
+              },
+              "width": {
+                "type": "number"
+              },
+              "height": {
+                "type": "number"
+              },
+              "x": {
+                "type": "number"
+              },
+              "y": {
+                "type": "number"
+              },
+              "rotation": {
+                "type": "number"
+              },
+              "name": {
+                "type": "string"
+              },
+              "color": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "pattern": "^#[0-9A-Fa-f]{6}$"
+                  },
+                  {
+                    "type": "string",
+                    "maxLength": 0
+                  }
+                ]
+              },
+              "minPartySize": {
+                "type": "number"
+              },
+              "maxPartySize": {
+                "type": "number"
+              },
+              "isBookableExternally": {
+                "type": "boolean"
+              }
+            },
+            "additionalProperties": false
+          },
+          "required": [
+            "id",
+            "type",
+            "x",
+            "y",
+            "width",
+            "height"
+          ]
+        }
+      },
+      "additionalProperties": false
     },
     "combinations": {
       "type": "array",
-      "additionalProperties": true,
+      "additionalProperties": false,
       "minItems": 0,
       "items": {
+        "additionalProperties": false,
         "type": "object",
         "properties": {
           "id": {
             "type": "string",
             "format": "uuid"
           },
-          "min_party_size": {
-            "type": "number",
-            "minimum": 0
+          "minPartySize": {
+            "type": "number"
           },
-          "max_party_size": {
-            "type": "number",
-            "minimum": 0
+          "maxPartySize": {
+            "type": "number"
           },
-          "is_bookable_externally": {
+          "isBookableExternally": {
             "type": "boolean"
           },
           "tables": {
@@ -59,15 +169,9 @@
               "format": "uuid"
             }
           }
-        },
-        "required": [
-          "id",
-          "min_party_size",
-          "max_party_size",
-          "is_bookable_externally",
-          "tables"
-        ]
-      }
+        }
+      },
+      "default": []
     }
   }
 }

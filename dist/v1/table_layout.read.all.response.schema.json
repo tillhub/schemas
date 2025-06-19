@@ -47,8 +47,10 @@
         "additionalProperties": false,
         "properties": {
           "id": {
+            "description": "Unique entity ID",
             "type": "string",
-            "format": "uuid"
+            "format": "uuid",
+            "example": "936835f7-2d75-41d2-9001-38ed6e458328"
           },
           "created_at": {
             "type": "string",
@@ -70,57 +72,24 @@
             "type": "string",
             "format": "uuid"
           },
+          "gridColumnCount": {
+            "type": "number"
+          },
           "active": {
             "type": "boolean",
-            "default": true
+            "default": false
           },
-          "layout": {
-            "type": "object",
-            "additionalProperties": true,
-            "default": {}
+          "tablesCount": {
+            "type": "number"
           },
-          "table_count": {
-            "type": "number",
-            "minimum": 0
+          "combinationsCount": {
+            "type": "number"
           },
-          "combinations": {
-            "type": "array",
-            "additionalProperties": true,
-            "minItems": 0,
-            "items": {
-              "type": "object",
-              "properties": {
-                "id": {
-                  "type": "string",
-                  "format": "uuid"
-                },
-                "min_party_size": {
-                  "type": "number",
-                  "minimum": 0
-                },
-                "max_party_size": {
-                  "type": "number",
-                  "minimum": 0
-                },
-                "is_bookable_externally": {
-                  "type": "boolean"
-                },
-                "tables": {
-                  "type": "array",
-                  "items": {
-                    "type": "string",
-                    "format": "uuid"
-                  }
-                }
-              },
-              "required": [
-                "id",
-                "min_party_size",
-                "max_party_size",
-                "is_bookable_externally",
-                "tables"
-              ]
-            }
+          "bookableTablesCount": {
+            "type": "number"
+          },
+          "bookableCombinationsCount": {
+            "type": "number"
           }
         }
       }

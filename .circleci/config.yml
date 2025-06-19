@@ -1,11 +1,9 @@
-version: 2
+version: 2.1
+
 jobs:
   build:
-    branches:
-      only:
-        - master
     docker:
-      - image: 'circleci/node:latest'
+      - image: circleci/node:latest
     steps:
       - checkout
       - run:
@@ -25,6 +23,23 @@ jobs:
       #     command: npm test
       # - run: npm run coverage
       # - run: git describe --exact-match --tags HEAD && npm run docs && npm run deploy-docs
+
+      - run:
+          name: Create service account creds
+          command: |
+            echo "$FIREBASE_SERVICE_ACCOUNT_CREDS_JSON" > "${HOME}/gcloud-service-key.json"
+            echo 'export GOOGLE_APPLICATION_CREDENTIALS="$HOME/gcloud-service-key.json"' >> "$BASH_ENV"
+
       - run:
           name: release
           command: npm run semantic-release || true
+
+workflows:
+  version: 2
+  build-and-release:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only:
+                - master

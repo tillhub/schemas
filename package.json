@@ -1,6 +1,6 @@
 {
   "name": "@tillhub/schemas",
-  "version": "6.390.1",
+  "version": "6.392.0",
   "private": false,
   "description": "All Tillhub API OpenAPI 3 compatible JSON Schemas.",
   "main": "./lib/index.js",
@@ -72,12 +72,11 @@
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-react": "^7.12.4",
     "eslint-plugin-standard": "^4.0.0",
-    "firebase-tools": "^7.11.0",
+    "firebase-tools": "^11.30.0",
     "gh-pages": "^1.2.0",
     "glob": "^7.1.2",
     "jsdoc": "^3.6.5",
     "jsdoc-to-markdown": "^4.0.1",
-    "node": "^10.22.0",
     "nodemon": "^1.18.3",
     "nyc": "^12.0.2",
     "proxyquire": "^2.1.0",
@@ -152,7 +151,7 @@
     "publish": [
       {
         "path": "@semantic-release/exec",
-        "cmd": "npm run deploy:static -- --token \"$FIREBASE_TOKEN\""
+        "cmd": "npm run deploy:static"
       },
       "@semantic-release/npm",
       "@semantic-release/github"

@@ -1,3 +1,19 @@
+# [6.392.0](https://github.com/tillhub/schemas/compare/v6.391.0...v6.392.0) (2025-06-19)
+
+
+### Features
+
+* **UNTIL-14137:** fixing linting ([73e4c7b](https://github.com/tillhub/schemas/commit/73e4c7b))
+* **UNTIL-14137:** upgrading circleci pipeline to work with service account ([1ab0798](https://github.com/tillhub/schemas/commit/1ab0798))
+
+# [6.391.0](https://github.com/tillhub/schemas/compare/v6.390.1...v6.391.0) (2025-06-18)
+
+
+### Features
+
+* **table-reservation:** enhance the schema ([5b67e2b](https://github.com/tillhub/schemas/commit/5b67e2b))
+* **table-reservation:** enhance the schema ([#1073](https://github.com/tillhub/schemas/issues/1073)) ([cf22b9a](https://github.com/tillhub/schemas/commit/cf22b9a))
+
 ## [6.390.1](https://github.com/tillhub/schemas/compare/v6.390.0...v6.390.1) (2025-06-18)
 
 
