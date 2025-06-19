@@ -1,3 +1,11 @@
+# [6.392.0](https://github.com/tillhub/schemas/compare/v6.391.0...v6.392.0) (2025-06-19)
+
+
+### Features
+
+* **UNTIL-14137:** fixing linting ([73e4c7b](https://github.com/tillhub/schemas/commit/73e4c7b))
+* **UNTIL-14137:** upgrading circleci pipeline to work with service account ([1ab0798](https://github.com/tillhub/schemas/commit/1ab0798))
+
 # [6.391.0](https://github.com/tillhub/schemas/compare/v6.390.1...v6.391.0) (2025-06-18)
 
 
