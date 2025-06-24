@@ -1,3 +1,10 @@
+## [6.394.1](https://github.com/tillhub/schemas/compare/v6.394.0...v6.394.1) (2025-06-24)
+
+
+### Bug Fixes
+
+* **table-reservation:** fix sortOrder to support null ([#1077](https://github.com/tillhub/schemas/issues/1077)) ([132a3bb](https://github.com/tillhub/schemas/commit/132a3bb))
+
 # [6.394.0](https://github.com/tillhub/schemas/compare/v6.393.0...v6.394.0) (2025-06-23)
 
 

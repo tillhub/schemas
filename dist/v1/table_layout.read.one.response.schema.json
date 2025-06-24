@@ -148,7 +148,14 @@
                       "format": "uuid"
                     },
                     "sortOrder": {
-                      "type": "number"
+                      "oneOf": [
+                        {
+                          "type": "number"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
                     },
                     "type": {
                       "type": "string"
