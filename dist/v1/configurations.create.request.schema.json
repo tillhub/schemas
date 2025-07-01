@@ -3089,6 +3089,31 @@
                               "type": "null"
                             }
                           ]
+                        },
+                        "history": {
+                          "oneOf": [
+                            {
+                              "type": "object",
+                              "description": "Defines data on the Orderpro history view",
+                              "properties": {
+                                "transactions": {
+                                  "oneOf": [
+                                    {
+                                      "description": "Specifies if Orderpro should fetch transactions to potentially process cancellations and refunds",
+                                      "type": "boolean",
+                                      "default": false
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                }
+                              }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
                         }
                       }
                     },
