@@ -1,3 +1,10 @@
+# [6.396.0](https://github.com/tillhub/schemas/compare/v6.395.0...v6.396.0) (2025-07-23)
+
+
+### Features
+
+* **device_info:** user should extended to accept string ([8c08dce](https://github.com/tillhub/schemas/commit/8c08dce))
+
 # [6.395.0](https://github.com/tillhub/schemas/compare/v6.394.1...v6.395.0) (2025-07-01)
 
 
