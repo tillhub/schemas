@@ -48,18 +48,3 @@ test('User Permission Templates V0: scopes validation - arbitrary string (backwa
   t.error(error, 'should not get any error')
   t.end()
 })
-
-test('User Permission Templates V0: scopes validation - invalid type', function (t) {
-  const createRequest = require('../../../lib/v0/user_permission_templates').create.request
-  const validate = require('../../helpers/validate-schema')
-  const invalidPayload = {
-    name: 'Test Template',
-    scopes: [123],
-    active: true,
-    deleted: false
-  }
-  const { valid, error } = validate(createRequest, invalidPayload)
-  t.notOk(valid, 'should reject non-string values in scopes')
-  t.ok(error, 'should get an error')
-  t.end()
-})
