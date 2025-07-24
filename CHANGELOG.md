@@ -1,3 +1,10 @@
+# [6.397.0](https://github.com/tillhub/schemas/compare/v6.396.0...v6.397.0) (2025-07-24)
+
+
+### Features
+
+* **UNTIL-12873:** add stricter validation for user scopes ([#1079](https://github.com/tillhub/schemas/issues/1079)) ([9eb8c77](https://github.com/tillhub/schemas/commit/9eb8c77))
+
 # [6.396.0](https://github.com/tillhub/schemas/compare/v6.395.0...v6.396.0) (2025-07-23)
 
 
