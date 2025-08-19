@@ -2638,6 +2638,33 @@
                           "type": "null"
                         }
                       ]
+                    },
+                    "coop": {
+                      "oneOf": [
+                        {
+                          "description": "Coop specific settings",
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "base_url": {
+                              "oneOf": [
+                                {
+                                  "description": "The URL of the cloudfunction to be used for online validation",
+                                  "type": "string",
+                                  "format": "uri",
+                                  "example": "https://europe-west3-unzer-gcp-shared-prod.cloudfunctions.net/tillhub-external-rewards-microservice-prod-api"
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            }
+                          }
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
                     }
                   }
                 },
