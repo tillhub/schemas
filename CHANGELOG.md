@@ -1,3 +1,10 @@
+# [6.400.0](https://github.com/tillhub/schemas/compare/v6.399.0...v6.400.0) (2025-09-16)
+
+
+### Features
+
+* **permissions:** reservations ([b925c6a](https://github.com/tillhub/schemas/commit/b925c6a))
+
 # [6.399.0](https://github.com/tillhub/schemas/compare/v6.398.0...v6.399.0) (2025-09-08)
 
 

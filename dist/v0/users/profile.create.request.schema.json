@@ -424,7 +424,10 @@
                   "staff:staff:wallets:assign",
                   "staff:staff:wallets:transfer",
                   "staff:staff:wallets:discrepancy",
-                  "staff:staff:wallets:activation"
+                  "staff:staff:wallets:activation",
+                  "staff:staff:reservations:create",
+                  "staff:staff:reservations:update",
+                  "staff:staff:reservations:delete"
                 ]
               },
               {
