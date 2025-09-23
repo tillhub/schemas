@@ -1,3 +1,10 @@
+## [6.400.1](https://github.com/tillhub/schemas/compare/v6.400.0...v6.400.1) (2025-09-23)
+
+
+### Bug Fixes
+
+* **common:** permissions ([bfaef63](https://github.com/tillhub/schemas/commit/bfaef63))
+
 # [6.400.0](https://github.com/tillhub/schemas/compare/v6.399.0...v6.400.0) (2025-09-16)
 
 

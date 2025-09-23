@@ -340,9 +340,10 @@
                   "staff:staff:wallets:transfer",
                   "staff:staff:wallets:discrepancy",
                   "staff:staff:wallets:activation",
-                  "staff:staff:reservations:create",
-                  "staff:staff:reservations:update",
-                  "staff:staff:reservations:delete"
+                  "staff:staff:gastro:reservations",
+                  "staff:staff:gastro:reservations:create",
+                  "staff:staff:gastro:reservations:update",
+                  "staff:staff:gastro:reservations:cancel"
                 ]
               },
               {
