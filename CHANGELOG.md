@@ -1,3 +1,10 @@
+# [6.401.0](https://github.com/tillhub/schemas/compare/v6.400.1...v6.401.0) (2025-10-06)
+
+
+### Features
+
+* **UNTIL-15267:** add questionnaire feature ([#1084](https://github.com/tillhub/schemas/issues/1084)) ([1ac5b62](https://github.com/tillhub/schemas/commit/1ac5b62))
+
 ## [6.400.1](https://github.com/tillhub/schemas/compare/v6.400.0...v6.400.1) (2025-09-23)
 
 
