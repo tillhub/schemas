@@ -1,3 +1,10 @@
+# [6.402.0](https://github.com/tillhub/schemas/compare/v6.401.0...v6.402.0) (2025-10-07)
+
+
+### Features
+
+* **UNTIL-15266:** add bulk fetch and bulk update request schemas ([#1085](https://github.com/tillhub/schemas/issues/1085)) ([e38ee7d](https://github.com/tillhub/schemas/commit/e38ee7d))
+
 # [6.401.0](https://github.com/tillhub/schemas/compare/v6.400.1...v6.401.0) (2025-10-06)
 
 
