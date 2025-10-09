@@ -1,3 +1,10 @@
+# [6.403.0](https://github.com/tillhub/schemas/compare/v6.402.0...v6.403.0) (2025-10-09)
+
+
+### Features
+
+* **settings:** adding new property - keep_unlocked: boolean ([547ab86](https://github.com/tillhub/schemas/commit/547ab86))
+
 # [6.402.0](https://github.com/tillhub/schemas/compare/v6.401.0...v6.402.0) (2025-10-07)
 
 

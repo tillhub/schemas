@@ -958,6 +958,18 @@
                 }
               ]
             },
+            "keep_unlocked": {
+              "oneOf": [
+                {
+                  "description": "Keeps POS devices unlocked after cashiers enter their PIN code",
+                  "type": "boolean",
+                  "default": false
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
             "third_party": {
               "deprecated": true,
               "description": "Third party app links - Only for locally installed/installable applications - not for any random webpage!\n\nSince the 3rd party scheme also must be registered within the POS app we should rather limit this to prepared apps with just being enabled or not",
