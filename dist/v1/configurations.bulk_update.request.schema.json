@@ -12,150 +12,81 @@
       "minItems": 1,
       "items": {
         "type": "object",
-        "additionalProperties": false,
+        "additionalProperties": {
+          "type": "object"
+        },
+        "propertyNames": {
+          "enum": [
+            "id",
+            "owner",
+            "configurations",
+            "vouchers",
+            "scan_prefixes",
+            "voucher_actions",
+            "expenses_deposits",
+            "countings",
+            "time_tracking",
+            "settings",
+            "hooks",
+            "themes",
+            "metadata",
+            "registers",
+            "branches",
+            "franchise",
+            "staff",
+            "financials",
+            "features",
+            "gastro",
+            "stock",
+            "transactions",
+            "products",
+            "customers",
+            "saved_cart",
+            "crm",
+            "datev",
+            "label_printer",
+            "delivery_note",
+            "shore",
+            "togo",
+            "receipts",
+            "orders",
+            "carts",
+            "tips",
+            "emails",
+            "communications",
+            "taxes",
+            "analytics",
+            "interfaces",
+            "custom_dashboards",
+            "deliveries",
+            "validations",
+            "payments",
+            "balances",
+            "integrations",
+            "discounts",
+            "clients",
+            "widgets",
+            "reservations",
+            "searches",
+            "custom_properties",
+            "ui_configurations",
+            "warehub",
+            "tenant",
+            "onboarding",
+            "reports"
+          ]
+        },
         "required": [
-          "id",
-          "patch"
+          "id"
         ],
         "properties": {
           "id": {
-            "type": "string"
+            "type": "string",
+            "format": "uuid"
           },
-          "patch": {
-            "$id": "https://schemas.tillhub.com/common/patch.request.schema.json",
-            "$schema": "http://json-schema.org/draft-07/schema#",
-            "additionalProperties": false,
-            "type": "array",
-            "items": {
-              "description": "one JSON Patch operation",
-              "allOf": [
-                {
-                  "description": "Members common to all operations",
-                  "type": "object",
-                  "required": [
-                    "op",
-                    "path"
-                  ],
-                  "properties": {
-                    "path": {
-                      "$ref": "#/definitions/jsonPointer"
-                    }
-                  }
-                },
-                {
-                  "$ref": "#/definitions/oneOperation"
-                }
-              ]
-            },
-            "definitions": {
-              "jsonPointer": {
-                "type": "string",
-                "pattern": "^(/[^/~]*(~[01][^/~]*)*)*$"
-              },
-              "add": {
-                "description": "add operation. Value can be any JSON value.",
-                "properties": {
-                  "op": {
-                    "enum": [
-                      "add"
-                    ]
-                  }
-                },
-                "required": [
-                  "value"
-                ]
-              },
-              "remove": {
-                "description": "remove operation. Only a path is specified.",
-                "properties": {
-                  "op": {
-                    "enum": [
-                      "remove"
-                    ]
-                  }
-                }
-              },
-              "replace": {
-                "description": "replace operation. Value can be any JSON value.",
-                "properties": {
-                  "op": {
-                    "enum": [
-                      "replace"
-                    ]
-                  }
-                },
-                "required": [
-                  "value"
-                ]
-              },
-              "move": {
-                "description": "move operation. 'from' is a JSON Pointer.",
-                "properties": {
-                  "op": {
-                    "enum": [
-                      "move"
-                    ]
-                  },
-                  "from": {
-                    "$ref": "#/definitions/jsonPointer"
-                  }
-                },
-                "required": [
-                  "from"
-                ]
-              },
-              "copy": {
-                "description": "copy operation. 'from' is a JSON Pointer.",
-                "properties": {
-                  "op": {
-                    "enum": [
-                      "copy"
-                    ]
-                  },
-                  "from": {
-                    "$ref": "#/definitions/jsonPointer"
-                  }
-                },
-                "required": [
-                  "from"
-                ]
-              },
-              "test": {
-                "description": "test operation. Value can be any JSON value.",
-                "properties": {
-                  "op": {
-                    "enum": [
-                      "test"
-                    ]
-                  }
-                },
-                "required": [
-                  "value"
-                ]
-              },
-              "oneOperation": {
-                "oneOf": [
-                  {
-                    "$ref": "#/definitions/add"
-                  },
-                  {
-                    "$ref": "#/definitions/remove"
-                  },
-                  {
-                    "$ref": "#/definitions/replace"
-                  },
-                  {
-                    "$ref": "#/definitions/move"
-                  },
-                  {
-                    "$ref": "#/definitions/copy"
-                  },
-                  {
-                    "$ref": "#/definitions/test"
-                  }
-                ]
-              }
-            }
+          "owner": {
+            "type": "string",
+            "format": "uuid"
           }
         }
       }

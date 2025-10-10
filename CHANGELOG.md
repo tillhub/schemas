@@ -1,3 +1,10 @@
+# [6.404.0](https://github.com/tillhub/schemas/compare/v6.403.0...v6.404.0) (2025-10-10)
+
+
+### Features
+
+* **UNTIL-15266:** refine schema to restrict section keys and enhance validation ([#1086](https://github.com/tillhub/schemas/issues/1086)) ([024e15a](https://github.com/tillhub/schemas/commit/024e15a))
+
 # [6.403.0](https://github.com/tillhub/schemas/compare/v6.402.0...v6.403.0) (2025-10-09)
 
 
