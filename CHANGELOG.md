@@ -1,3 +1,10 @@
+# [6.405.0](https://github.com/tillhub/schemas/compare/v6.404.0...v6.405.0) (2025-10-14)
+
+
+### Features
+
+* **UNTIL-15268:** add questionnaire query schema and update exports ([#1087](https://github.com/tillhub/schemas/issues/1087)) ([c08f684](https://github.com/tillhub/schemas/commit/c08f684))
+
 # [6.404.0](https://github.com/tillhub/schemas/compare/v6.403.0...v6.404.0) (2025-10-10)
 
 
