@@ -302,6 +302,18 @@
                 }
               }
             },
+            "reservation_id": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "format": "uuid",
+                  "description": "The identifier of the respective reservation object"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
             "device": {
               "oneOf": [
                 {

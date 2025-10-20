@@ -1,3 +1,11 @@
+# [6.406.0](https://github.com/tillhub/schemas/compare/v6.405.0...v6.406.0) (2025-10-20)
+
+
+### Features
+
+* **transactions:** legacy ([385403c](https://github.com/tillhub/schemas/commit/385403c))
+* **transactions:** legacy ([209ed04](https://github.com/tillhub/schemas/commit/209ed04))
+
 # [6.405.0](https://github.com/tillhub/schemas/compare/v6.404.0...v6.405.0) (2025-10-14)
 
 
