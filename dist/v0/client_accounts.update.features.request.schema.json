@@ -112,6 +112,21 @@
     "flat_pos": {
       "type": "boolean",
       "default": false
+    },
+    "gastro_basic": {
+      "description": "indicates usage of table managemnt and availability of v1 gastro tables",
+      "type": "boolean",
+      "default": false
+    },
+    "gastro_table_reservations": {
+      "description": "enables gastro table reservations and triggers gastro basic and the required migrations to v1 tables",
+      "type": "boolean",
+      "default": false
+    },
+    "gastro_table_reservations_sms_reminders": {
+      "description": "enables sms reminders for gastro table reservations",
+      "type": "boolean",
+      "default": false
     }
   },
   "type": "object"

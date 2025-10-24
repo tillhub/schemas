@@ -1,3 +1,10 @@
+# [6.407.0](https://github.com/tillhub/schemas/compare/v6.406.0...v6.407.0) (2025-10-24)
+
+
+### Features
+
+* **client_accounts:** feature flags ([8550c57](https://github.com/tillhub/schemas/commit/8550c57))
+
 # [6.406.0](https://github.com/tillhub/schemas/compare/v6.405.0...v6.406.0) (2025-10-20)
 
 
