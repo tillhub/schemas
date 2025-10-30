@@ -1,3 +1,11 @@
+# [6.408.0](https://github.com/tillhub/schemas/compare/v6.407.0...v6.408.0) (2025-10-30)
+
+
+### Features
+
+* **PAYODEV-15411:** add payment link branding schema ([7e4c296](https://github.com/tillhub/schemas/commit/7e4c296))
+* **PAYODEV-15411:** add payment link branding schema ([d376aab](https://github.com/tillhub/schemas/commit/d376aab))
+
 # [6.407.0](https://github.com/tillhub/schemas/compare/v6.406.0...v6.407.0) (2025-10-24)
 
 
