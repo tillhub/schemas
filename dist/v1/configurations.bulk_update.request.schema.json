@@ -73,8 +73,7 @@
             "warehub",
             "tenant",
             "onboarding",
-            "reports",
-            "payment_link_branding"
+            "reports"
           ]
         },
         "required": [
