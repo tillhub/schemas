@@ -1,3 +1,10 @@
+# [6.410.0](https://github.com/tillhub/schemas/compare/v6.409.0...v6.410.0) (2025-11-03)
+
+
+### Features
+
+* **PAYODEV-15411:** extend payment link branding schema with url fields ([8ac549e](https://github.com/tillhub/schemas/commit/8ac549e))
+
 # [6.409.0](https://github.com/tillhub/schemas/compare/v6.408.0...v6.409.0) (2025-10-31)
 
 
