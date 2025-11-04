@@ -1,3 +1,10 @@
+# [6.411.0](https://github.com/tillhub/schemas/compare/v6.410.0...v6.411.0) (2025-11-04)
+
+
+### Features
+
+* **configurations:** add hide_empty_fields setting to support hiding empty field values ([362c4e8](https://github.com/tillhub/schemas/commit/362c4e8))
+
 # [6.410.0](https://github.com/tillhub/schemas/compare/v6.409.0...v6.410.0) (2025-11-03)
 
 
