@@ -72,9 +72,6 @@
             "type": "string",
             "format": "uuid"
           },
-          "gridColumnCount": {
-            "type": "number"
-          },
           "active": {
             "type": "boolean",
             "default": false

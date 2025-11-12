@@ -1,3 +1,10 @@
+# [6.412.0](https://github.com/tillhub/schemas/compare/v6.411.0...v6.412.0) (2025-11-12)
+
+
+### Features
+
+* **release:** triggre release ([#1095](https://github.com/tillhub/schemas/issues/1095)) ([11bea18](https://github.com/tillhub/schemas/commit/11bea18))
+
 # [6.411.0](https://github.com/tillhub/schemas/compare/v6.410.0...v6.411.0) (2025-11-04)
 
 

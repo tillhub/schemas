@@ -1,7 +1,7 @@
 {
   "$id": "https://schemas.tillhub.com/v0/table_layout.update.request.schema.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "additionalProperties": true,
+  "additionalProperties": false,
   "type": "object",
   "required": [],
   "properties": {
@@ -15,10 +15,6 @@
     "location": {
       "type": "string",
       "format": "uuid"
-    },
-    "gridColumnCount": {
-      "type": "number",
-      "default": 5
     },
     "active": {
       "type": "boolean",
@@ -134,16 +130,35 @@
                 "type": "boolean"
               }
             },
-            "additionalProperties": false
-          },
-          "required": [
-            "id",
-            "type",
-            "x",
-            "y",
-            "width",
-            "height"
-          ]
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "type",
+              "x",
+              "y",
+              "width",
+              "height"
+            ],
+            "if": {
+              "properties": {
+                "type": {
+                  "enum": [
+                    "table",
+                    "stool"
+                  ]
+                }
+              }
+            },
+            "then": {
+              "required": [
+                "sortOrder",
+                "name",
+                "minPartySize",
+                "maxPartySize",
+                "isBookableExternally"
+              ]
+            }
+          }
         }
       },
       "additionalProperties": false
@@ -176,13 +191,16 @@
               "format": "uuid"
             }
           }
-        }
+        },
+        "required": [
+          "id",
+          "minPartySize",
+          "maxPartySize",
+          "isBookableExternally",
+          "tables"
+        ]
       },
       "default": []
-    },
-    "tables_count": {
-      "type": "number",
-      "default": 0
     }
   }
 }

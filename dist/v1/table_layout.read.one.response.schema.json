@@ -72,9 +72,6 @@
             "type": "string",
             "format": "uuid"
           },
-          "gridColumnCount": {
-            "type": "number"
-          },
           "active": {
             "type": "boolean",
             "default": false
@@ -107,7 +104,14 @@
                     "format": "uuid"
                   }
                 }
-              }
+              },
+              "required": [
+                "id",
+                "minPartySize",
+                "maxPartySize",
+                "isBookableExternally",
+                "tables"
+              ]
             }
           },
           "layout": {
@@ -220,16 +224,35 @@
                       "type": "boolean"
                     }
                   },
-                  "additionalProperties": false
-                },
-                "required": [
-                  "id",
-                  "type",
-                  "x",
-                  "y",
-                  "width",
-                  "height"
-                ]
+                  "additionalProperties": false,
+                  "required": [
+                    "id",
+                    "type",
+                    "x",
+                    "y",
+                    "width",
+                    "height"
+                  ],
+                  "if": {
+                    "properties": {
+                      "type": {
+                        "enum": [
+                          "table",
+                          "stool"
+                        ]
+                      }
+                    }
+                  },
+                  "then": {
+                    "required": [
+                      "sortOrder",
+                      "name",
+                      "minPartySize",
+                      "maxPartySize",
+                      "isBookableExternally"
+                    ]
+                  }
+                }
               }
             },
             "additionalProperties": false
