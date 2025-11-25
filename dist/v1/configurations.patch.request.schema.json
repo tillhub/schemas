@@ -11470,7 +11470,44 @@
                       "type": "string"
                     },
                     "logo": {
-                      "oneOf": [
+                      "description": "Images object with URLs of various types of images",
+                      "anyOf": [
+                        {
+                          "type": "object",
+                          "additionalProperties": true,
+                          "properties": {
+                            "1x": {
+                              "description": "Image transformed to predefined small size",
+                              "example": "https://my-storage.io/images/f5a3cc72-7fb5-4d2c-bda5-9b2983c7e879_1x.png",
+                              "type": "string",
+                              "format": "uri"
+                            },
+                            "2x": {
+                              "description": "Image transformed to predefined medium size",
+                              "example": "https://my-storage.io/images/f5a3cc72-7fb5-4d2c-bda5-9b2983c7e879_2x.png",
+                              "type": "string",
+                              "format": "uri"
+                            },
+                            "3x": {
+                              "description": "Image transformed to predefined big size",
+                              "example": "https://my-storage.io/images/f5a3cc72-7fb5-4d2c-bda5-9b2983c7e879_1x.png",
+                              "type": "string",
+                              "format": "uri"
+                            },
+                            "avatar": {
+                              "description": "Image transformed to predefined size to use as \"avatar\"",
+                              "example": "https://my-storage.io/images/f5a3cc72-7fb5-4d2c-bda5-9b2983c7e879_avatar.png",
+                              "type": "string",
+                              "format": "uri"
+                            },
+                            "original": {
+                              "description": "Original image",
+                              "example": "https://my-storage.io/images/f5a3cc72-7fb5-4d2c-bda5-9b2983c7e879.png",
+                              "type": "string",
+                              "format": "uri"
+                            }
+                          }
+                        },
                         {
                           "type": "null"
                         },
@@ -11503,29 +11540,46 @@
                       ]
                     },
                     "header_background_image": {
-                      "oneOf": [
-                        {
-                          "type": "null"
-                        },
+                      "description": "Images object with URLs of various types of images",
+                      "anyOf": [
                         {
                           "type": "object",
+                          "additionalProperties": true,
                           "properties": {
-                            "original": {
-                              "type": "string"
-                            },
-                            "avatar": {
-                              "type": "string"
-                            },
                             "1x": {
-                              "type": "string"
+                              "description": "Image transformed to predefined small size",
+                              "example": "https://my-storage.io/images/f5a3cc72-7fb5-4d2c-bda5-9b2983c7e879_1x.png",
+                              "type": "string",
+                              "format": "uri"
                             },
                             "2x": {
-                              "type": "string"
+                              "description": "Image transformed to predefined medium size",
+                              "example": "https://my-storage.io/images/f5a3cc72-7fb5-4d2c-bda5-9b2983c7e879_2x.png",
+                              "type": "string",
+                              "format": "uri"
                             },
                             "3x": {
-                              "type": "string"
+                              "description": "Image transformed to predefined big size",
+                              "example": "https://my-storage.io/images/f5a3cc72-7fb5-4d2c-bda5-9b2983c7e879_1x.png",
+                              "type": "string",
+                              "format": "uri"
+                            },
+                            "avatar": {
+                              "description": "Image transformed to predefined size to use as \"avatar\"",
+                              "example": "https://my-storage.io/images/f5a3cc72-7fb5-4d2c-bda5-9b2983c7e879_avatar.png",
+                              "type": "string",
+                              "format": "uri"
+                            },
+                            "original": {
+                              "description": "Original image",
+                              "example": "https://my-storage.io/images/f5a3cc72-7fb5-4d2c-bda5-9b2983c7e879.png",
+                              "type": "string",
+                              "format": "uri"
                             }
                           }
+                        },
+                        {
+                          "type": "null"
                         }
                       ]
                     }

@@ -1,3 +1,11 @@
+# [6.413.0](https://github.com/tillhub/schemas/compare/v6.412.0...v6.413.0) (2025-11-25)
+
+
+### Features
+
+* **UNTIL-17786:** argument is necessary ([#1098](https://github.com/tillhub/schemas/issues/1098)) ([83bd793](https://github.com/tillhub/schemas/commit/83bd793))
+* **UNTIL-17786:** Extend reservation configuration logo with stored image schema ([678b01a](https://github.com/tillhub/schemas/commit/678b01a))
+
 # [6.412.0](https://github.com/tillhub/schemas/compare/v6.411.0...v6.412.0) (2025-11-12)
 
 
