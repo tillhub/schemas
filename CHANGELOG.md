@@ -1,3 +1,10 @@
+# [6.414.0](https://github.com/tillhub/schemas/compare/v6.413.0...v6.414.0) (2025-11-28)
+
+
+### Features
+
+* **payment_options:** types ([58e97fd](https://github.com/tillhub/schemas/commit/58e97fd))
+
 # [6.413.0](https://github.com/tillhub/schemas/compare/v6.412.0...v6.413.0) (2025-11-25)
 
 

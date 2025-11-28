@@ -29,7 +29,9 @@
         "undefined",
         "voucher",
         "sumup",
-        "buy_now_pay_later"
+        "buy_now_pay_later",
+        "unzer_installment",
+        "unzer_invoice"
       ]
     },
     "metadata": {
