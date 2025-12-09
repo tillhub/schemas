@@ -1,3 +1,10 @@
+# [6.415.0](https://github.com/tillhub/schemas/compare/v6.414.0...v6.415.0) (2025-12-09)
+
+
+### Features
+
+* **UNTIL-17787:** branch selection schema ([#1101](https://github.com/tillhub/schemas/issues/1101)) ([1a458e5](https://github.com/tillhub/schemas/commit/1a458e5))
+
 # [6.414.0](https://github.com/tillhub/schemas/compare/v6.413.0...v6.414.0) (2025-11-28)
 
 
