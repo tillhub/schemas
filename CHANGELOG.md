@@ -1,3 +1,16 @@
+# [6.416.0](https://github.com/tillhub/schemas/compare/v6.415.0...v6.416.0) (2025-12-16)
+
+
+### Bug Fixes
+
+* **configuration:** increase maxLength for string type from 32 to 64 ([#1102](https://github.com/tillhub/schemas/issues/1102)) ([3e37806](https://github.com/tillhub/schemas/commit/3e37806))
+
+
+### Features
+
+* **configuration:** increase maxLength for string type from 32 to 64 ([#1104](https://github.com/tillhub/schemas/issues/1104)) ([ff23446](https://github.com/tillhub/schemas/commit/ff23446))
+* **configuration:** trigger ([#1105](https://github.com/tillhub/schemas/issues/1105)) ([02bf9b9](https://github.com/tillhub/schemas/commit/02bf9b9))
+
 # [6.415.0](https://github.com/tillhub/schemas/compare/v6.414.0...v6.415.0) (2025-12-09)
 
 
