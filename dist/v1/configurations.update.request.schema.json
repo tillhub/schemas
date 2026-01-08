@@ -2070,6 +2070,9 @@
             },
             "colors": {
               "type": "object"
+            },
+            "branding": {
+              "type": "string"
             }
           },
           "required": [
@@ -2091,7 +2094,7 @@
         },
         {
           "type": "string",
-          "maxLength": 32
+          "maxLength": 64
         }
       ]
     },

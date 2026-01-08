@@ -1,7 +1,8 @@
 {
-  "$id": "https://schemas.tillhub.com/v1/branches.read.all.response.schema.json",
-  "type": "object",
+  "$id": "https://schemas.tillhub.com/v1/branches.selection.response.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "additionalProperties": false,
+  "type": "object",
   "properties": {
     "msg": {
       "type": "string",
@@ -36,7 +37,7 @@
     "count": {
       "type": "number",
       "description": "the length of the results array.",
-      "example": 10
+      "example": 1
     },
     "results": {
       "type": "array",
@@ -824,34 +825,6 @@
             "example": "UZ4453975",
             "type": "string"
           }
-        }
-      }
-    },
-    "cursor": {
-      "type": "object",
-      "description": "Optional cursor in paginated API calls. The cursor next field must be called as fully quantifiable URI in order to hit the next if available.",
-      "additionalProperties": false,
-      "required": [
-        "self"
-      ],
-      "properties": {
-        "next": {
-          "type": "string",
-          "format": "uri",
-          "description": "The URI pointing to the next page.",
-          "example": "https://api.tillhub.com/api/v1/products/061f91a3-eba2-40b8-9a76-115189d6741e?cursor=2018-07-02T21%3A47%3A44.382Z&size=10&cursor_field=updated_at"
-        },
-        "first": {
-          "type": "string",
-          "format": "uri",
-          "description": "The URI pointing to the the first page.",
-          "example": "https://api.tillhub.com/api/v1/products/061f91a3-eba2-40b8-9a76-115189d6741e?cursor=2018-07-02T21%3A47%3A44.382Z&size=10&cursor_field=updated_at"
-        },
-        "self": {
-          "type": "string",
-          "format": "uri",
-          "description": "The URI pointing to this page.",
-          "example": "https://api.tillhub.com/api/v1/products/061f91a3-eba2-40b8-9a76-115189d6741e?cursor=2018-07-02T21%3A47%3A44.382Z&size=10&cursor_field=updated_at"
         }
       }
     }

@@ -1,3 +1,37 @@
+# [6.417.0](https://github.com/tillhub/schemas/compare/v6.416.0...v6.417.0) (2026-01-08)
+
+
+### Features
+
+* **configuration:** add themes.dashboard.branding to configuration ([#1106](https://github.com/tillhub/schemas/issues/1106)) ([86be0b0](https://github.com/tillhub/schemas/commit/86be0b0))
+
+# [6.416.0](https://github.com/tillhub/schemas/compare/v6.415.0...v6.416.0) (2025-12-16)
+
+
+### Bug Fixes
+
+* **configuration:** increase maxLength for string type from 32 to 64 ([#1102](https://github.com/tillhub/schemas/issues/1102)) ([3e37806](https://github.com/tillhub/schemas/commit/3e37806))
+
+
+### Features
+
+* **configuration:** increase maxLength for string type from 32 to 64 ([#1104](https://github.com/tillhub/schemas/issues/1104)) ([ff23446](https://github.com/tillhub/schemas/commit/ff23446))
+* **configuration:** trigger ([#1105](https://github.com/tillhub/schemas/issues/1105)) ([02bf9b9](https://github.com/tillhub/schemas/commit/02bf9b9))
+
+# [6.415.0](https://github.com/tillhub/schemas/compare/v6.414.0...v6.415.0) (2025-12-09)
+
+
+### Features
+
+* **UNTIL-17787:** branch selection schema ([#1101](https://github.com/tillhub/schemas/issues/1101)) ([1a458e5](https://github.com/tillhub/schemas/commit/1a458e5))
+
+# [6.414.0](https://github.com/tillhub/schemas/compare/v6.413.0...v6.414.0) (2025-11-28)
+
+
+### Features
+
+* **payment_options:** types ([58e97fd](https://github.com/tillhub/schemas/commit/58e97fd))
+
 # [6.413.0](https://github.com/tillhub/schemas/compare/v6.412.0...v6.413.0) (2025-11-25)
 
 
