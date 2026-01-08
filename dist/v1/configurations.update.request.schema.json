@@ -2070,6 +2070,9 @@
             },
             "colors": {
               "type": "object"
+            },
+            "branding": {
+              "type": "string"
             }
           },
           "required": [

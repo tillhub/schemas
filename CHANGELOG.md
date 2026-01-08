@@ -1,3 +1,10 @@
+# [6.417.0](https://github.com/tillhub/schemas/compare/v6.416.0...v6.417.0) (2026-01-08)
+
+
+### Features
+
+* **configuration:** add themes.dashboard.branding to configuration ([#1106](https://github.com/tillhub/schemas/issues/1106)) ([86be0b0](https://github.com/tillhub/schemas/commit/86be0b0))
+
 # [6.416.0](https://github.com/tillhub/schemas/compare/v6.415.0...v6.416.0) (2025-12-16)
 
 
