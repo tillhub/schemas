@@ -1,3 +1,10 @@
+## [6.418.1](https://github.com/tillhub/schemas/compare/v6.418.0...v6.418.1) (2026-01-15)
+
+
+### Bug Fixes
+
+* **registers:** increase allowed length for registers' name ([#1107](https://github.com/tillhub/schemas/issues/1107)) ([2a38e60](https://github.com/tillhub/schemas/commit/2a38e60))
+
 # [6.418.0](https://github.com/tillhub/schemas/compare/v6.417.0...v6.418.0) (2026-01-15)
 
 

@@ -9,7 +9,7 @@
       "anyOf": [
         {
           "type": "string",
-          "maxLength": 32,
+          "maxLength": 256,
           "minLength": 1
         },
         {
