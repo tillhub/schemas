@@ -1,3 +1,11 @@
+# [6.418.0](https://github.com/tillhub/schemas/compare/v6.417.0...v6.418.0) (2026-01-15)
+
+
+### Features
+
+* **configurations:** base ([7ae4d63](https://github.com/tillhub/schemas/commit/7ae4d63))
+* **configurations:** simplify base ([8ac2c45](https://github.com/tillhub/schemas/commit/8ac2c45))
+
 # [6.417.0](https://github.com/tillhub/schemas/compare/v6.416.0...v6.417.0) (2026-01-08)
 
 

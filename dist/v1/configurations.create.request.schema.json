@@ -1307,7 +1307,8 @@
                           "enum": [
                             "none",
                             "required"
-                          ]
+                          ],
+                          "default": "none"
                         },
                         {
                           "type": "null"
@@ -1328,7 +1329,8 @@
                           "enum": [
                             "none",
                             "required"
-                          ]
+                          ],
+                          "default": "required"
                         },
                         {
                           "type": "null"
@@ -2958,7 +2960,7 @@
             "split_receipt": {
               "oneOf": [
                 {
-                  "description": "Restaurant case: split bill between a group of guests",
+                  "description": "Restaurant case: split bill by order items",
                   "type": "object",
                   "additionalProperties": false,
                   "properties": {
@@ -10450,7 +10452,22 @@
       ]
     },
     "deliveries": {
-      "type": "object"
+      "oneOf": [
+        {
+          "description": "Allow creation of deliveries",
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "description": "Specifies if the feature is available.",
+              "type": "boolean",
+              "default": false
+            }
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "validations": {
       "oneOf": [
@@ -10678,18 +10695,192 @@
     "payments": {
       "oneOf": [
         {
-          "type": "null"
+          "type": "object",
+          "properties": {
+            "card_mapping_warnings": {
+              "oneOf": [
+                {
+                  "description": "If true, notifies the user about failed automatic mapping of card-circuits to a different payment-option.",
+                  "default": false,
+                  "type": "boolean"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "allow_disconnected_terminals": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "never",
+                    "once",
+                    "always"
+                  ],
+                  "default": "never"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "blacklisted_payment_types": {
+              "oneOf": [
+                {
+                  "description": "Hides the payment options that match the blacklisted types from payment screen",
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "cash",
+                      "card",
+                      "invoice",
+                      "gift_card",
+                      "terminal_gift_card"
+                    ]
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "blacklisted_payment_options": {
+              "oneOf": [
+                {
+                  "description": "Hides the payment options that match the blacklisted uuids from payment screen",
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "allow_split_by_person": {
+              "oneOf": [
+                {
+                  "description": "If true, allows split by person",
+                  "default": false,
+                  "type": "boolean"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "allow_refund_split": {
+              "oneOf": [
+                {
+                  "description": "If true, allows multiple payments on negative cart totals, e.g. undefined + cash (e.g. health insurance case).",
+                  "default": false,
+                  "type": "boolean"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "allow_change_on_cards": {
+              "oneOf": [
+                {
+                  "description": "If true, allows entering values for split payments that are higher than the remaining price - thus potentially handing back cash (legacy behavior).",
+                  "default": false,
+                  "type": "boolean"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "show_foreign_currencies": {
+              "oneOf": [
+                {
+                  "description": "If true, show also payment options outside the currently used one. This still will ot have any effect on payments!",
+                  "default": false,
+                  "type": "boolean"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "allow_change_on_undefined": {
+              "oneOf": [
+                {
+                  "description": "If true, allows entering values for split payments that are higher than the remaining price - thus potentially handing back cash (legacy behavior).",
+                  "default": false,
+                  "type": "boolean"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "trigger_amount_on_undefined": {
+              "oneOf": [
+                {
+                  "description": "If true, will ask for the amount on undefined payment types (rather than setting the total price of the cart).",
+                  "default": false,
+                  "type": "boolean"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "buy_now_pay_later": {
+              "oneOf": [
+                {
+                  "description": "Settings for Unzer BNPL",
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "secret": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "description": "Configured secret for the Unzer BNPL API",
+                          "example": "QmSgQtMNfm0uZjVedM1BvqGRIQ3D9wjclLYDZcXPZve"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "success_url": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "description": "Configured success url, customers will be redirected to it after finishing the pay-later flow",
+                          "default": "https://bnpl.tillhub.com/?data=",
+                          "example": "https://bnpl.tillhub.com/?data=BNPL-{CART_UUID}"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
         },
         {
-          "type": "object"
+          "type": "null"
         }
       ]
     },
     "balances": {
       "oneOf": [
-        {
-          "type": "null"
-        },
         {
           "type": "object",
           "properties": {
@@ -10980,6 +11171,9 @@
               ]
             }
           }
+        },
+        {
+          "type": "null"
         }
       ]
     },
@@ -11034,9 +11228,6 @@
     },
     "discounts": {
       "oneOf": [
-        {
-          "type": "null"
-        },
         {
           "type": "object",
           "additionalProperties": false,
@@ -11405,6 +11596,9 @@
               ]
             }
           }
+        },
+        {
+          "type": "null"
         }
       ]
     },
@@ -11435,9 +11629,6 @@
     },
     "reservations": {
       "oneOf": [
-        {
-          "type": "null"
-        },
         {
           "type": "object",
           "properties": {
@@ -11710,274 +11901,270 @@
               }
             }
           }
+        },
+        {
+          "type": "null"
         }
       ]
     },
     "searches": {
-      "oneOf": [
-        {
-          "type": "null"
-        },
-        {
+      "type": "object",
+      "properties": {
+        "search_view": {
+          "description": "Scan view, should be limited to products/offlineFirst",
           "type": "object",
           "properties": {
-            "search_view": {
-              "description": "Scan view, should be limited to products/offlineFirst",
-              "type": "object",
-              "properties": {
-                "trigger_action": {
-                  "description": "Trigger a context specific action (e.g. addToCart, refundSale) on a result condition",
-                  "type": "string",
-                  "enum": [
-                    "on_first",
-                    "on_unique",
-                    "on_none"
-                  ]
-                },
-                "no_result_action": {
-                  "description": "Trigger a specific behavior if the search ended without results",
-                  "type": "string",
-                  "enum": [
-                    "none",
-                    "toast",
-                    "modal"
-                  ]
-                },
-                "no_result_sound": {
-                  "description": "If true - triggers a specific sound if the search ended without results",
-                  "type": "boolean",
-                  "default": false
-                },
-                "timeout": {
-                  "description": "Timeout (in seconds) to end a search if there are no results",
-                  "type": "number",
-                  "minimum": 0,
-                  "default": 60
-                },
-                "search_entities": {
-                  "description": "Entities that should be searched in a specific context. Searches will be performed in parallel (within an entity per defined behavior).",
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "properties": {
-                      "type": {
-                        "description": "Searchable entities within the iOS client app",
-                        "type": "string",
-                        "enum": [
-                          "transactions",
-                          "products",
-                          "customers",
-                          "vouchers",
-                          "loyalty_cards",
-                          "hooks"
-                        ]
-                      },
-                      "behavior": {
-                        "description": "Search behavior within a single entity, limited by availability (e.g. vouchers: only online_first)",
-                        "type": "string",
-                        "default": "online_first",
-                        "enum": [
-                          "online_first",
-                          "offline_first",
-                          "online_only",
-                          "offline_only",
-                          "race"
-                        ]
-                      }
-                    }
-                  }
-                }
-              }
-            },
-            "stock_adjustment": {
-              "description": "Stock adjustment view",
-              "type": "object",
-              "properties": {
-                "trigger_action": {
-                  "description": "Trigger a context specific action (e.g. addToCart, refundSale) on a result condition",
-                  "type": "string",
-                  "enum": [
-                    "on_first",
-                    "on_unique",
-                    "on_none"
-                  ]
-                },
-                "no_result_action": {
-                  "description": "Trigger a specific behavior if the search ended without results",
-                  "type": "string",
-                  "enum": [
-                    "none",
-                    "toast",
-                    "modal"
-                  ]
-                },
-                "no_result_sound": {
-                  "description": "If true - triggers a specific sound if the search ended without results",
-                  "type": "boolean",
-                  "default": false
-                },
-                "timeout": {
-                  "description": "Timeout (in seconds) to end a search if there are no results",
-                  "type": "number",
-                  "minimum": 0,
-                  "default": 60
-                },
-                "search_entities": {
-                  "description": "Entities that should be searched in a specific context. Searches will be performed in parallel (within an entity per defined behavior).",
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "properties": {
-                      "type": {
-                        "description": "Searchable entities within the iOS client app",
-                        "type": "string",
-                        "enum": [
-                          "transactions",
-                          "products",
-                          "customers",
-                          "vouchers",
-                          "loyalty_cards",
-                          "hooks"
-                        ]
-                      },
-                      "behavior": {
-                        "description": "Search behavior within a single entity, limited by availability (e.g. vouchers: only online_first)",
-                        "type": "string",
-                        "default": "online_first",
-                        "enum": [
-                          "online_first",
-                          "offline_first",
-                          "online_only",
-                          "offline_only",
-                          "race"
-                        ]
-                      }
-                    }
-                  }
-                }
-              }
-            },
-            "tile_view": {
-              "description": "Tile view, no limitations, probably account requirements dependent",
-              "type": "object",
-              "properties": {
-                "trigger_action": {
-                  "description": "Trigger a context specific action (e.g. addToCart, refundSale) on a result condition",
-                  "type": "string",
-                  "enum": [
-                    "on_first",
-                    "on_unique",
-                    "on_none"
-                  ]
-                },
-                "no_result_action": {
-                  "description": "Trigger a specific behavior if the search ended without results",
-                  "type": "string",
-                  "enum": [
-                    "none",
-                    "toast",
-                    "modal"
-                  ]
-                },
-                "no_result_sound": {
-                  "description": "If true - triggers a specific sound if the search ended without results",
-                  "type": "boolean",
-                  "default": false
-                },
-                "timeout": {
-                  "description": "Timeout (in seconds) to end a search if there are no results",
-                  "type": "number",
-                  "minimum": 0,
-                  "default": 60
-                },
-                "search_entities": {
-                  "description": "Entities that should be searched in a specific context. Searches will be performed in parallel (within an entity per defined behavior).",
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "properties": {
-                      "type": {
-                        "description": "Searchable entities within the iOS client app",
-                        "type": "string",
-                        "enum": [
-                          "transactions",
-                          "products",
-                          "customers",
-                          "vouchers",
-                          "loyalty_cards",
-                          "hooks"
-                        ]
-                      },
-                      "behavior": {
-                        "description": "Search behavior within a single entity, limited by availability (e.g. vouchers: only online_first)",
-                        "type": "string",
-                        "default": "online_first",
-                        "enum": [
-                          "online_first",
-                          "offline_first",
-                          "online_only",
-                          "offline_only",
-                          "race"
-                        ]
-                      }
-                    }
-                  }
-                }
-              }
-            },
-            "history": {
-              "oneOf": [
-                {
-                  "description": "Transaction history view",
-                  "type": "object",
-                  "properties": {
-                    "search_field": {
-                      "oneOf": [
-                        {
-                          "description": "Search text field for the full list",
-                          "type": "object",
-                          "properties": {
-                            "transaction_number": {
-                              "oneOf": [
-                                {
-                                  "description": "If true and the search text qualifies as an integer number - search for transactions with that transaction number",
-                                  "type": "boolean",
-                                  "default": true
-                                },
-                                {
-                                  "type": "null"
-                                }
-                              ]
-                            },
-                            "transaction_total": {
-                              "oneOf": [
-                                {
-                                  "description": "If true and the search text qualifies as a decimal number - search for transactions with that total amount",
-                                  "type": "boolean",
-                                  "default": false
-                                },
-                                {
-                                  "type": "null"
-                                }
-                              ]
-                            }
-                          }
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ]
-                    }
-                  }
-                },
-                {
-                  "type": "null"
-                }
+            "trigger_action": {
+              "description": "Trigger a context specific action (e.g. addToCart, refundSale) on a result condition",
+              "type": "string",
+              "enum": [
+                "on_first",
+                "on_unique",
+                "on_none"
               ]
+            },
+            "no_result_action": {
+              "description": "Trigger a specific behavior if the search ended without results",
+              "type": "string",
+              "enum": [
+                "none",
+                "toast",
+                "modal"
+              ]
+            },
+            "no_result_sound": {
+              "description": "If true - triggers a specific sound if the search ended without results",
+              "type": "boolean",
+              "default": false
+            },
+            "timeout": {
+              "description": "Timeout (in seconds) to end a search if there are no results",
+              "type": "number",
+              "minimum": 0,
+              "default": 60
+            },
+            "search_entities": {
+              "description": "Entities that should be searched in a specific context. Searches will be performed in parallel (within an entity per defined behavior).",
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "description": "Searchable entities within the iOS client app",
+                    "type": "string",
+                    "enum": [
+                      "transactions",
+                      "products",
+                      "customers",
+                      "vouchers",
+                      "loyalty_cards",
+                      "hooks"
+                    ]
+                  },
+                  "behavior": {
+                    "description": "Search behavior within a single entity, limited by availability (e.g. vouchers: only online_first)",
+                    "type": "string",
+                    "default": "online_first",
+                    "enum": [
+                      "online_first",
+                      "offline_first",
+                      "online_only",
+                      "offline_only",
+                      "race"
+                    ]
+                  }
+                }
+              }
             }
           }
+        },
+        "stock_adjustment": {
+          "description": "Stock adjustment view",
+          "type": "object",
+          "properties": {
+            "trigger_action": {
+              "description": "Trigger a context specific action (e.g. addToCart, refundSale) on a result condition",
+              "type": "string",
+              "enum": [
+                "on_first",
+                "on_unique",
+                "on_none"
+              ]
+            },
+            "no_result_action": {
+              "description": "Trigger a specific behavior if the search ended without results",
+              "type": "string",
+              "enum": [
+                "none",
+                "toast",
+                "modal"
+              ]
+            },
+            "no_result_sound": {
+              "description": "If true - triggers a specific sound if the search ended without results",
+              "type": "boolean",
+              "default": false
+            },
+            "timeout": {
+              "description": "Timeout (in seconds) to end a search if there are no results",
+              "type": "number",
+              "minimum": 0,
+              "default": 60
+            },
+            "search_entities": {
+              "description": "Entities that should be searched in a specific context. Searches will be performed in parallel (within an entity per defined behavior).",
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "description": "Searchable entities within the iOS client app",
+                    "type": "string",
+                    "enum": [
+                      "transactions",
+                      "products",
+                      "customers",
+                      "vouchers",
+                      "loyalty_cards",
+                      "hooks"
+                    ]
+                  },
+                  "behavior": {
+                    "description": "Search behavior within a single entity, limited by availability (e.g. vouchers: only online_first)",
+                    "type": "string",
+                    "default": "online_first",
+                    "enum": [
+                      "online_first",
+                      "offline_first",
+                      "online_only",
+                      "offline_only",
+                      "race"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tile_view": {
+          "description": "Tile view, no limitations, probably account requirements dependent",
+          "type": "object",
+          "properties": {
+            "trigger_action": {
+              "description": "Trigger a context specific action (e.g. addToCart, refundSale) on a result condition",
+              "type": "string",
+              "enum": [
+                "on_first",
+                "on_unique",
+                "on_none"
+              ]
+            },
+            "no_result_action": {
+              "description": "Trigger a specific behavior if the search ended without results",
+              "type": "string",
+              "enum": [
+                "none",
+                "toast",
+                "modal"
+              ]
+            },
+            "no_result_sound": {
+              "description": "If true - triggers a specific sound if the search ended without results",
+              "type": "boolean",
+              "default": false
+            },
+            "timeout": {
+              "description": "Timeout (in seconds) to end a search if there are no results",
+              "type": "number",
+              "minimum": 0,
+              "default": 60
+            },
+            "search_entities": {
+              "description": "Entities that should be searched in a specific context. Searches will be performed in parallel (within an entity per defined behavior).",
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "description": "Searchable entities within the iOS client app",
+                    "type": "string",
+                    "enum": [
+                      "transactions",
+                      "products",
+                      "customers",
+                      "vouchers",
+                      "loyalty_cards",
+                      "hooks"
+                    ]
+                  },
+                  "behavior": {
+                    "description": "Search behavior within a single entity, limited by availability (e.g. vouchers: only online_first)",
+                    "type": "string",
+                    "default": "online_first",
+                    "enum": [
+                      "online_first",
+                      "offline_first",
+                      "online_only",
+                      "offline_only",
+                      "race"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "history": {
+          "oneOf": [
+            {
+              "description": "Transaction history view",
+              "type": "object",
+              "properties": {
+                "search_field": {
+                  "oneOf": [
+                    {
+                      "description": "Search text field for the full list",
+                      "type": "object",
+                      "properties": {
+                        "transaction_number": {
+                          "oneOf": [
+                            {
+                              "description": "If true and the search text qualifies as an integer number - search for transactions with that transaction number",
+                              "type": "boolean",
+                              "default": true
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "transaction_total": {
+                          "oneOf": [
+                            {
+                              "description": "If true and the search text qualifies as a decimal number - search for transactions with that total amount",
+                              "type": "boolean",
+                              "default": false
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
         }
-      ]
+      }
     },
     "custom_properties": {
       "oneOf": [
